@@ -247,6 +247,42 @@ exports.Prisma.GameHubTournamentPlayerScalarFieldEnum = {
   joinedAt: 'joinedAt'
 };
 
+exports.Prisma.UserHealthTrackerScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ScheduleHealthTrackerScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  type: 'type',
+  title: 'title',
+  dateTime: 'dateTime',
+  notes: 'notes',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.RecordHealthTrackerScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  type: 'type',
+  description: 'description',
+  date: 'date',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ClinicHealthTrackerScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  location: 'location',
+  availableSlots: 'availableSlots',
+  contact: 'contact',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -255,6 +291,11 @@ exports.Prisma.SortOrder = {
 exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
+};
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
 };
 
 
@@ -272,7 +313,11 @@ exports.Prisma.ModelName = {
   GameHubUser: 'GameHubUser',
   GameHubPlayer: 'GameHubPlayer',
   GameHubTournament: 'GameHubTournament',
-  GameHubTournamentPlayer: 'GameHubTournamentPlayer'
+  GameHubTournamentPlayer: 'GameHubTournamentPlayer',
+  UserHealthTracker: 'UserHealthTracker',
+  ScheduleHealthTracker: 'ScheduleHealthTracker',
+  RecordHealthTracker: 'RecordHealthTracker',
+  ClinicHealthTracker: 'ClinicHealthTracker'
 };
 
 /**
