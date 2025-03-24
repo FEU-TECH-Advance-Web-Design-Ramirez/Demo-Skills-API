@@ -216,7 +216,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "D:\\Codes\\Demo-Skills\\prisma\\generated\\postgresql2",
+      "value": "C:\\Users\\ramir\\OneDrive\\Code\\NextJS\\Demo-Skills\\prisma\\generated\\postgresql2",
       "fromEnvVar": null
     },
     "config": {
@@ -234,7 +234,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\Codes\\Demo-Skills\\prisma\\postgresql2\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\ramir\\OneDrive\\Code\\NextJS\\Demo-Skills\\prisma\\postgresql2\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

@@ -158,6 +158,21 @@ export type ElderlyCareCompanionRecord = $Result.DefaultSelection<Prisma.$Elderl
  * 
  */
 export type ElderlyCareCompanionMedicationTracking = $Result.DefaultSelection<Prisma.$ElderlyCareCompanionMedicationTrackingPayload>
+/**
+ * Model UserEduSeeker
+ * 
+ */
+export type UserEduSeeker = $Result.DefaultSelection<Prisma.$UserEduSeekerPayload>
+/**
+ * Model PlatformEduSeeker
+ * 
+ */
+export type PlatformEduSeeker = $Result.DefaultSelection<Prisma.$PlatformEduSeekerPayload>
+/**
+ * Model ReviewEduSeeker
+ * 
+ */
+export type ReviewEduSeeker = $Result.DefaultSelection<Prisma.$ReviewEduSeekerPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -573,6 +588,36 @@ export class PrismaClient<
     * ```
     */
   get elderlyCareCompanionMedicationTracking(): Prisma.ElderlyCareCompanionMedicationTrackingDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userEduSeeker`: Exposes CRUD operations for the **UserEduSeeker** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserEduSeekers
+    * const userEduSeekers = await prisma.userEduSeeker.findMany()
+    * ```
+    */
+  get userEduSeeker(): Prisma.UserEduSeekerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.platformEduSeeker`: Exposes CRUD operations for the **PlatformEduSeeker** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PlatformEduSeekers
+    * const platformEduSeekers = await prisma.platformEduSeeker.findMany()
+    * ```
+    */
+  get platformEduSeeker(): Prisma.PlatformEduSeekerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.reviewEduSeeker`: Exposes CRUD operations for the **ReviewEduSeeker** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReviewEduSeekers
+    * const reviewEduSeekers = await prisma.reviewEduSeeker.findMany()
+    * ```
+    */
+  get reviewEduSeeker(): Prisma.ReviewEduSeekerDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -1041,7 +1086,10 @@ export namespace Prisma {
     ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
     ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',
     ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord',
-    ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking'
+    ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking',
+    UserEduSeeker: 'UserEduSeeker',
+    PlatformEduSeeker: 'PlatformEduSeeker',
+    ReviewEduSeeker: 'ReviewEduSeeker'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -1060,7 +1108,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "elderlyCareCompanionMedicationTracking"
+      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "elderlyCareCompanionMedicationTracking" | "userEduSeeker" | "platformEduSeeker" | "reviewEduSeeker"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -3210,6 +3258,228 @@ export namespace Prisma {
           }
         }
       }
+      UserEduSeeker: {
+        payload: Prisma.$UserEduSeekerPayload<ExtArgs>
+        fields: Prisma.UserEduSeekerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserEduSeekerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserEduSeekerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>
+          }
+          findFirst: {
+            args: Prisma.UserEduSeekerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserEduSeekerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>
+          }
+          findMany: {
+            args: Prisma.UserEduSeekerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>[]
+          }
+          create: {
+            args: Prisma.UserEduSeekerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>
+          }
+          createMany: {
+            args: Prisma.UserEduSeekerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserEduSeekerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>[]
+          }
+          delete: {
+            args: Prisma.UserEduSeekerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>
+          }
+          update: {
+            args: Prisma.UserEduSeekerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserEduSeekerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserEduSeekerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserEduSeekerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserEduSeekerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserEduSeekerPayload>
+          }
+          aggregate: {
+            args: Prisma.UserEduSeekerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserEduSeeker>
+          }
+          groupBy: {
+            args: Prisma.UserEduSeekerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserEduSeekerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserEduSeekerCountArgs<ExtArgs>
+            result: $Utils.Optional<UserEduSeekerCountAggregateOutputType> | number
+          }
+        }
+      }
+      PlatformEduSeeker: {
+        payload: Prisma.$PlatformEduSeekerPayload<ExtArgs>
+        fields: Prisma.PlatformEduSeekerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.PlatformEduSeekerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.PlatformEduSeekerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>
+          }
+          findFirst: {
+            args: Prisma.PlatformEduSeekerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.PlatformEduSeekerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>
+          }
+          findMany: {
+            args: Prisma.PlatformEduSeekerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>[]
+          }
+          create: {
+            args: Prisma.PlatformEduSeekerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>
+          }
+          createMany: {
+            args: Prisma.PlatformEduSeekerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.PlatformEduSeekerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>[]
+          }
+          delete: {
+            args: Prisma.PlatformEduSeekerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>
+          }
+          update: {
+            args: Prisma.PlatformEduSeekerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>
+          }
+          deleteMany: {
+            args: Prisma.PlatformEduSeekerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.PlatformEduSeekerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.PlatformEduSeekerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>[]
+          }
+          upsert: {
+            args: Prisma.PlatformEduSeekerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PlatformEduSeekerPayload>
+          }
+          aggregate: {
+            args: Prisma.PlatformEduSeekerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePlatformEduSeeker>
+          }
+          groupBy: {
+            args: Prisma.PlatformEduSeekerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PlatformEduSeekerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.PlatformEduSeekerCountArgs<ExtArgs>
+            result: $Utils.Optional<PlatformEduSeekerCountAggregateOutputType> | number
+          }
+        }
+      }
+      ReviewEduSeeker: {
+        payload: Prisma.$ReviewEduSeekerPayload<ExtArgs>
+        fields: Prisma.ReviewEduSeekerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ReviewEduSeekerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ReviewEduSeekerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>
+          }
+          findFirst: {
+            args: Prisma.ReviewEduSeekerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ReviewEduSeekerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>
+          }
+          findMany: {
+            args: Prisma.ReviewEduSeekerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>[]
+          }
+          create: {
+            args: Prisma.ReviewEduSeekerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>
+          }
+          createMany: {
+            args: Prisma.ReviewEduSeekerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ReviewEduSeekerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>[]
+          }
+          delete: {
+            args: Prisma.ReviewEduSeekerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>
+          }
+          update: {
+            args: Prisma.ReviewEduSeekerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>
+          }
+          deleteMany: {
+            args: Prisma.ReviewEduSeekerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ReviewEduSeekerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ReviewEduSeekerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>[]
+          }
+          upsert: {
+            args: Prisma.ReviewEduSeekerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewEduSeekerPayload>
+          }
+          aggregate: {
+            args: Prisma.ReviewEduSeekerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReviewEduSeeker>
+          }
+          groupBy: {
+            args: Prisma.ReviewEduSeekerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReviewEduSeekerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ReviewEduSeekerCountArgs<ExtArgs>
+            result: $Utils.Optional<ReviewEduSeekerCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -3323,6 +3593,9 @@ export namespace Prisma {
     elderlyCareCompanionStore?: ElderlyCareCompanionStoreOmit
     elderlyCareCompanionRecord?: ElderlyCareCompanionRecordOmit
     elderlyCareCompanionMedicationTracking?: ElderlyCareCompanionMedicationTrackingOmit
+    userEduSeeker?: UserEduSeekerOmit
+    platformEduSeeker?: PlatformEduSeekerOmit
+    reviewEduSeeker?: ReviewEduSeekerOmit
   }
 
   /* Types for Logging */
@@ -3988,6 +4261,77 @@ export namespace Prisma {
    */
   export type ElderlyCareCompanionAppointmentCountOutputTypeCountMedicationLogsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ElderlyCareCompanionMedicationTrackingWhereInput
+  }
+
+
+  /**
+   * Count Type UserEduSeekerCountOutputType
+   */
+
+  export type UserEduSeekerCountOutputType = {
+    platforms: number
+    reviews: number
+  }
+
+  export type UserEduSeekerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platforms?: boolean | UserEduSeekerCountOutputTypeCountPlatformsArgs
+    reviews?: boolean | UserEduSeekerCountOutputTypeCountReviewsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * UserEduSeekerCountOutputType without action
+   */
+  export type UserEduSeekerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeekerCountOutputType
+     */
+    select?: UserEduSeekerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * UserEduSeekerCountOutputType without action
+   */
+  export type UserEduSeekerCountOutputTypeCountPlatformsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlatformEduSeekerWhereInput
+  }
+
+  /**
+   * UserEduSeekerCountOutputType without action
+   */
+  export type UserEduSeekerCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewEduSeekerWhereInput
+  }
+
+
+  /**
+   * Count Type PlatformEduSeekerCountOutputType
+   */
+
+  export type PlatformEduSeekerCountOutputType = {
+    reviews: number
+  }
+
+  export type PlatformEduSeekerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reviews?: boolean | PlatformEduSeekerCountOutputTypeCountReviewsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * PlatformEduSeekerCountOutputType without action
+   */
+  export type PlatformEduSeekerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeekerCountOutputType
+     */
+    select?: PlatformEduSeekerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * PlatformEduSeekerCountOutputType without action
+   */
+  export type PlatformEduSeekerCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewEduSeekerWhereInput
   }
 
 
@@ -35919,6 +36263,3357 @@ export namespace Prisma {
 
 
   /**
+   * Model UserEduSeeker
+   */
+
+  export type AggregateUserEduSeeker = {
+    _count: UserEduSeekerCountAggregateOutputType | null
+    _min: UserEduSeekerMinAggregateOutputType | null
+    _max: UserEduSeekerMaxAggregateOutputType | null
+  }
+
+  export type UserEduSeekerMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserEduSeekerMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserEduSeekerCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type UserEduSeekerMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserEduSeekerMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserEduSeekerCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type UserEduSeekerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserEduSeeker to aggregate.
+     */
+    where?: UserEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserEduSeekers to fetch.
+     */
+    orderBy?: UserEduSeekerOrderByWithRelationInput | UserEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserEduSeekers
+    **/
+    _count?: true | UserEduSeekerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserEduSeekerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserEduSeekerMaxAggregateInputType
+  }
+
+  export type GetUserEduSeekerAggregateType<T extends UserEduSeekerAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserEduSeeker]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserEduSeeker[P]>
+      : GetScalarType<T[P], AggregateUserEduSeeker[P]>
+  }
+
+
+
+
+  export type UserEduSeekerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserEduSeekerWhereInput
+    orderBy?: UserEduSeekerOrderByWithAggregationInput | UserEduSeekerOrderByWithAggregationInput[]
+    by: UserEduSeekerScalarFieldEnum[] | UserEduSeekerScalarFieldEnum
+    having?: UserEduSeekerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserEduSeekerCountAggregateInputType | true
+    _min?: UserEduSeekerMinAggregateInputType
+    _max?: UserEduSeekerMaxAggregateInputType
+  }
+
+  export type UserEduSeekerGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    createdAt: Date
+    _count: UserEduSeekerCountAggregateOutputType | null
+    _min: UserEduSeekerMinAggregateOutputType | null
+    _max: UserEduSeekerMaxAggregateOutputType | null
+  }
+
+  type GetUserEduSeekerGroupByPayload<T extends UserEduSeekerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserEduSeekerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserEduSeekerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserEduSeekerGroupByOutputType[P]>
+            : GetScalarType<T[P], UserEduSeekerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserEduSeekerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+    platforms?: boolean | UserEduSeeker$platformsArgs<ExtArgs>
+    reviews?: boolean | UserEduSeeker$reviewsArgs<ExtArgs>
+    _count?: boolean | UserEduSeekerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userEduSeeker"]>
+
+  export type UserEduSeekerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userEduSeeker"]>
+
+  export type UserEduSeekerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userEduSeeker"]>
+
+  export type UserEduSeekerSelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }
+
+  export type UserEduSeekerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "createdAt", ExtArgs["result"]["userEduSeeker"]>
+  export type UserEduSeekerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platforms?: boolean | UserEduSeeker$platformsArgs<ExtArgs>
+    reviews?: boolean | UserEduSeeker$reviewsArgs<ExtArgs>
+    _count?: boolean | UserEduSeekerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserEduSeekerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserEduSeekerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $UserEduSeekerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserEduSeeker"
+    objects: {
+      platforms: Prisma.$PlatformEduSeekerPayload<ExtArgs>[]
+      reviews: Prisma.$ReviewEduSeekerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      createdAt: Date
+    }, ExtArgs["result"]["userEduSeeker"]>
+    composites: {}
+  }
+
+  type UserEduSeekerGetPayload<S extends boolean | null | undefined | UserEduSeekerDefaultArgs> = $Result.GetResult<Prisma.$UserEduSeekerPayload, S>
+
+  type UserEduSeekerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserEduSeekerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserEduSeekerCountAggregateInputType | true
+    }
+
+  export interface UserEduSeekerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserEduSeeker'], meta: { name: 'UserEduSeeker' } }
+    /**
+     * Find zero or one UserEduSeeker that matches the filter.
+     * @param {UserEduSeekerFindUniqueArgs} args - Arguments to find a UserEduSeeker
+     * @example
+     * // Get one UserEduSeeker
+     * const userEduSeeker = await prisma.userEduSeeker.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserEduSeekerFindUniqueArgs>(args: SelectSubset<T, UserEduSeekerFindUniqueArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserEduSeeker that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserEduSeekerFindUniqueOrThrowArgs} args - Arguments to find a UserEduSeeker
+     * @example
+     * // Get one UserEduSeeker
+     * const userEduSeeker = await prisma.userEduSeeker.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserEduSeekerFindUniqueOrThrowArgs>(args: SelectSubset<T, UserEduSeekerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserEduSeeker that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserEduSeekerFindFirstArgs} args - Arguments to find a UserEduSeeker
+     * @example
+     * // Get one UserEduSeeker
+     * const userEduSeeker = await prisma.userEduSeeker.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserEduSeekerFindFirstArgs>(args?: SelectSubset<T, UserEduSeekerFindFirstArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserEduSeeker that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserEduSeekerFindFirstOrThrowArgs} args - Arguments to find a UserEduSeeker
+     * @example
+     * // Get one UserEduSeeker
+     * const userEduSeeker = await prisma.userEduSeeker.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserEduSeekerFindFirstOrThrowArgs>(args?: SelectSubset<T, UserEduSeekerFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserEduSeekers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserEduSeekerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserEduSeekers
+     * const userEduSeekers = await prisma.userEduSeeker.findMany()
+     * 
+     * // Get first 10 UserEduSeekers
+     * const userEduSeekers = await prisma.userEduSeeker.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userEduSeekerWithIdOnly = await prisma.userEduSeeker.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserEduSeekerFindManyArgs>(args?: SelectSubset<T, UserEduSeekerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserEduSeeker.
+     * @param {UserEduSeekerCreateArgs} args - Arguments to create a UserEduSeeker.
+     * @example
+     * // Create one UserEduSeeker
+     * const UserEduSeeker = await prisma.userEduSeeker.create({
+     *   data: {
+     *     // ... data to create a UserEduSeeker
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserEduSeekerCreateArgs>(args: SelectSubset<T, UserEduSeekerCreateArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserEduSeekers.
+     * @param {UserEduSeekerCreateManyArgs} args - Arguments to create many UserEduSeekers.
+     * @example
+     * // Create many UserEduSeekers
+     * const userEduSeeker = await prisma.userEduSeeker.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserEduSeekerCreateManyArgs>(args?: SelectSubset<T, UserEduSeekerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserEduSeekers and returns the data saved in the database.
+     * @param {UserEduSeekerCreateManyAndReturnArgs} args - Arguments to create many UserEduSeekers.
+     * @example
+     * // Create many UserEduSeekers
+     * const userEduSeeker = await prisma.userEduSeeker.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserEduSeekers and only return the `id`
+     * const userEduSeekerWithIdOnly = await prisma.userEduSeeker.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserEduSeekerCreateManyAndReturnArgs>(args?: SelectSubset<T, UserEduSeekerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserEduSeeker.
+     * @param {UserEduSeekerDeleteArgs} args - Arguments to delete one UserEduSeeker.
+     * @example
+     * // Delete one UserEduSeeker
+     * const UserEduSeeker = await prisma.userEduSeeker.delete({
+     *   where: {
+     *     // ... filter to delete one UserEduSeeker
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserEduSeekerDeleteArgs>(args: SelectSubset<T, UserEduSeekerDeleteArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserEduSeeker.
+     * @param {UserEduSeekerUpdateArgs} args - Arguments to update one UserEduSeeker.
+     * @example
+     * // Update one UserEduSeeker
+     * const userEduSeeker = await prisma.userEduSeeker.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserEduSeekerUpdateArgs>(args: SelectSubset<T, UserEduSeekerUpdateArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserEduSeekers.
+     * @param {UserEduSeekerDeleteManyArgs} args - Arguments to filter UserEduSeekers to delete.
+     * @example
+     * // Delete a few UserEduSeekers
+     * const { count } = await prisma.userEduSeeker.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserEduSeekerDeleteManyArgs>(args?: SelectSubset<T, UserEduSeekerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserEduSeekers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserEduSeekerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserEduSeekers
+     * const userEduSeeker = await prisma.userEduSeeker.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserEduSeekerUpdateManyArgs>(args: SelectSubset<T, UserEduSeekerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserEduSeekers and returns the data updated in the database.
+     * @param {UserEduSeekerUpdateManyAndReturnArgs} args - Arguments to update many UserEduSeekers.
+     * @example
+     * // Update many UserEduSeekers
+     * const userEduSeeker = await prisma.userEduSeeker.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserEduSeekers and only return the `id`
+     * const userEduSeekerWithIdOnly = await prisma.userEduSeeker.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserEduSeekerUpdateManyAndReturnArgs>(args: SelectSubset<T, UserEduSeekerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserEduSeeker.
+     * @param {UserEduSeekerUpsertArgs} args - Arguments to update or create a UserEduSeeker.
+     * @example
+     * // Update or create a UserEduSeeker
+     * const userEduSeeker = await prisma.userEduSeeker.upsert({
+     *   create: {
+     *     // ... data to create a UserEduSeeker
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserEduSeeker we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserEduSeekerUpsertArgs>(args: SelectSubset<T, UserEduSeekerUpsertArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserEduSeekers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserEduSeekerCountArgs} args - Arguments to filter UserEduSeekers to count.
+     * @example
+     * // Count the number of UserEduSeekers
+     * const count = await prisma.userEduSeeker.count({
+     *   where: {
+     *     // ... the filter for the UserEduSeekers we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserEduSeekerCountArgs>(
+      args?: Subset<T, UserEduSeekerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserEduSeekerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserEduSeeker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserEduSeekerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserEduSeekerAggregateArgs>(args: Subset<T, UserEduSeekerAggregateArgs>): Prisma.PrismaPromise<GetUserEduSeekerAggregateType<T>>
+
+    /**
+     * Group by UserEduSeeker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserEduSeekerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserEduSeekerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserEduSeekerGroupByArgs['orderBy'] }
+        : { orderBy?: UserEduSeekerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserEduSeekerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserEduSeekerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserEduSeeker model
+   */
+  readonly fields: UserEduSeekerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserEduSeeker.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserEduSeekerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    platforms<T extends UserEduSeeker$platformsArgs<ExtArgs> = {}>(args?: Subset<T, UserEduSeeker$platformsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reviews<T extends UserEduSeeker$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, UserEduSeeker$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserEduSeeker model
+   */ 
+  interface UserEduSeekerFieldRefs {
+    readonly id: FieldRef<"UserEduSeeker", 'String'>
+    readonly email: FieldRef<"UserEduSeeker", 'String'>
+    readonly name: FieldRef<"UserEduSeeker", 'String'>
+    readonly password: FieldRef<"UserEduSeeker", 'String'>
+    readonly createdAt: FieldRef<"UserEduSeeker", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserEduSeeker findUnique
+   */
+  export type UserEduSeekerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserEduSeeker to fetch.
+     */
+    where: UserEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * UserEduSeeker findUniqueOrThrow
+   */
+  export type UserEduSeekerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserEduSeeker to fetch.
+     */
+    where: UserEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * UserEduSeeker findFirst
+   */
+  export type UserEduSeekerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserEduSeeker to fetch.
+     */
+    where?: UserEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserEduSeekers to fetch.
+     */
+    orderBy?: UserEduSeekerOrderByWithRelationInput | UserEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserEduSeekers.
+     */
+    cursor?: UserEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserEduSeekers.
+     */
+    distinct?: UserEduSeekerScalarFieldEnum | UserEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * UserEduSeeker findFirstOrThrow
+   */
+  export type UserEduSeekerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserEduSeeker to fetch.
+     */
+    where?: UserEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserEduSeekers to fetch.
+     */
+    orderBy?: UserEduSeekerOrderByWithRelationInput | UserEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserEduSeekers.
+     */
+    cursor?: UserEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserEduSeekers.
+     */
+    distinct?: UserEduSeekerScalarFieldEnum | UserEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * UserEduSeeker findMany
+   */
+  export type UserEduSeekerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserEduSeekers to fetch.
+     */
+    where?: UserEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserEduSeekers to fetch.
+     */
+    orderBy?: UserEduSeekerOrderByWithRelationInput | UserEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserEduSeekers.
+     */
+    cursor?: UserEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserEduSeekers.
+     */
+    skip?: number
+    distinct?: UserEduSeekerScalarFieldEnum | UserEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * UserEduSeeker create
+   */
+  export type UserEduSeekerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserEduSeeker.
+     */
+    data: XOR<UserEduSeekerCreateInput, UserEduSeekerUncheckedCreateInput>
+  }
+
+  /**
+   * UserEduSeeker createMany
+   */
+  export type UserEduSeekerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserEduSeekers.
+     */
+    data: UserEduSeekerCreateManyInput | UserEduSeekerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserEduSeeker createManyAndReturn
+   */
+  export type UserEduSeekerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserEduSeekers.
+     */
+    data: UserEduSeekerCreateManyInput | UserEduSeekerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserEduSeeker update
+   */
+  export type UserEduSeekerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserEduSeeker.
+     */
+    data: XOR<UserEduSeekerUpdateInput, UserEduSeekerUncheckedUpdateInput>
+    /**
+     * Choose, which UserEduSeeker to update.
+     */
+    where: UserEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * UserEduSeeker updateMany
+   */
+  export type UserEduSeekerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserEduSeekers.
+     */
+    data: XOR<UserEduSeekerUpdateManyMutationInput, UserEduSeekerUncheckedUpdateManyInput>
+    /**
+     * Filter which UserEduSeekers to update
+     */
+    where?: UserEduSeekerWhereInput
+    /**
+     * Limit how many UserEduSeekers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserEduSeeker updateManyAndReturn
+   */
+  export type UserEduSeekerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * The data used to update UserEduSeekers.
+     */
+    data: XOR<UserEduSeekerUpdateManyMutationInput, UserEduSeekerUncheckedUpdateManyInput>
+    /**
+     * Filter which UserEduSeekers to update
+     */
+    where?: UserEduSeekerWhereInput
+    /**
+     * Limit how many UserEduSeekers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserEduSeeker upsert
+   */
+  export type UserEduSeekerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserEduSeeker to update in case it exists.
+     */
+    where: UserEduSeekerWhereUniqueInput
+    /**
+     * In case the UserEduSeeker found by the `where` argument doesn't exist, create a new UserEduSeeker with this data.
+     */
+    create: XOR<UserEduSeekerCreateInput, UserEduSeekerUncheckedCreateInput>
+    /**
+     * In case the UserEduSeeker was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserEduSeekerUpdateInput, UserEduSeekerUncheckedUpdateInput>
+  }
+
+  /**
+   * UserEduSeeker delete
+   */
+  export type UserEduSeekerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter which UserEduSeeker to delete.
+     */
+    where: UserEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * UserEduSeeker deleteMany
+   */
+  export type UserEduSeekerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserEduSeekers to delete
+     */
+    where?: UserEduSeekerWhereInput
+    /**
+     * Limit how many UserEduSeekers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserEduSeeker.platforms
+   */
+  export type UserEduSeeker$platformsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    where?: PlatformEduSeekerWhereInput
+    orderBy?: PlatformEduSeekerOrderByWithRelationInput | PlatformEduSeekerOrderByWithRelationInput[]
+    cursor?: PlatformEduSeekerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: PlatformEduSeekerScalarFieldEnum | PlatformEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * UserEduSeeker.reviews
+   */
+  export type UserEduSeeker$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    where?: ReviewEduSeekerWhereInput
+    orderBy?: ReviewEduSeekerOrderByWithRelationInput | ReviewEduSeekerOrderByWithRelationInput[]
+    cursor?: ReviewEduSeekerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewEduSeekerScalarFieldEnum | ReviewEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * UserEduSeeker without action
+   */
+  export type UserEduSeekerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserEduSeeker
+     */
+    select?: UserEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserEduSeeker
+     */
+    omit?: UserEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserEduSeekerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model PlatformEduSeeker
+   */
+
+  export type AggregatePlatformEduSeeker = {
+    _count: PlatformEduSeekerCountAggregateOutputType | null
+    _min: PlatformEduSeekerMinAggregateOutputType | null
+    _max: PlatformEduSeekerMaxAggregateOutputType | null
+  }
+
+  export type PlatformEduSeekerMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    description: string | null
+    category: string | null
+    url: string | null
+    submittedBy: string | null
+    createdAt: Date | null
+    validated: boolean | null
+  }
+
+  export type PlatformEduSeekerMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    description: string | null
+    category: string | null
+    url: string | null
+    submittedBy: string | null
+    createdAt: Date | null
+    validated: boolean | null
+  }
+
+  export type PlatformEduSeekerCountAggregateOutputType = {
+    id: number
+    name: number
+    description: number
+    category: number
+    url: number
+    submittedBy: number
+    createdAt: number
+    validated: number
+    _all: number
+  }
+
+
+  export type PlatformEduSeekerMinAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    category?: true
+    url?: true
+    submittedBy?: true
+    createdAt?: true
+    validated?: true
+  }
+
+  export type PlatformEduSeekerMaxAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    category?: true
+    url?: true
+    submittedBy?: true
+    createdAt?: true
+    validated?: true
+  }
+
+  export type PlatformEduSeekerCountAggregateInputType = {
+    id?: true
+    name?: true
+    description?: true
+    category?: true
+    url?: true
+    submittedBy?: true
+    createdAt?: true
+    validated?: true
+    _all?: true
+  }
+
+  export type PlatformEduSeekerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlatformEduSeeker to aggregate.
+     */
+    where?: PlatformEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlatformEduSeekers to fetch.
+     */
+    orderBy?: PlatformEduSeekerOrderByWithRelationInput | PlatformEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: PlatformEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlatformEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlatformEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned PlatformEduSeekers
+    **/
+    _count?: true | PlatformEduSeekerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: PlatformEduSeekerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: PlatformEduSeekerMaxAggregateInputType
+  }
+
+  export type GetPlatformEduSeekerAggregateType<T extends PlatformEduSeekerAggregateArgs> = {
+        [P in keyof T & keyof AggregatePlatformEduSeeker]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregatePlatformEduSeeker[P]>
+      : GetScalarType<T[P], AggregatePlatformEduSeeker[P]>
+  }
+
+
+
+
+  export type PlatformEduSeekerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PlatformEduSeekerWhereInput
+    orderBy?: PlatformEduSeekerOrderByWithAggregationInput | PlatformEduSeekerOrderByWithAggregationInput[]
+    by: PlatformEduSeekerScalarFieldEnum[] | PlatformEduSeekerScalarFieldEnum
+    having?: PlatformEduSeekerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: PlatformEduSeekerCountAggregateInputType | true
+    _min?: PlatformEduSeekerMinAggregateInputType
+    _max?: PlatformEduSeekerMaxAggregateInputType
+  }
+
+  export type PlatformEduSeekerGroupByOutputType = {
+    id: string
+    name: string
+    description: string
+    category: string
+    url: string
+    submittedBy: string
+    createdAt: Date
+    validated: boolean
+    _count: PlatformEduSeekerCountAggregateOutputType | null
+    _min: PlatformEduSeekerMinAggregateOutputType | null
+    _max: PlatformEduSeekerMaxAggregateOutputType | null
+  }
+
+  type GetPlatformEduSeekerGroupByPayload<T extends PlatformEduSeekerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<PlatformEduSeekerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof PlatformEduSeekerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], PlatformEduSeekerGroupByOutputType[P]>
+            : GetScalarType<T[P], PlatformEduSeekerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type PlatformEduSeekerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    description?: boolean
+    category?: boolean
+    url?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+    validated?: boolean
+    submitter?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+    reviews?: boolean | PlatformEduSeeker$reviewsArgs<ExtArgs>
+    _count?: boolean | PlatformEduSeekerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["platformEduSeeker"]>
+
+  export type PlatformEduSeekerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    description?: boolean
+    category?: boolean
+    url?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+    validated?: boolean
+    submitter?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["platformEduSeeker"]>
+
+  export type PlatformEduSeekerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    description?: boolean
+    category?: boolean
+    url?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+    validated?: boolean
+    submitter?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["platformEduSeeker"]>
+
+  export type PlatformEduSeekerSelectScalar = {
+    id?: boolean
+    name?: boolean
+    description?: boolean
+    category?: boolean
+    url?: boolean
+    submittedBy?: boolean
+    createdAt?: boolean
+    validated?: boolean
+  }
+
+  export type PlatformEduSeekerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "category" | "url" | "submittedBy" | "createdAt" | "validated", ExtArgs["result"]["platformEduSeeker"]>
+  export type PlatformEduSeekerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    submitter?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+    reviews?: boolean | PlatformEduSeeker$reviewsArgs<ExtArgs>
+    _count?: boolean | PlatformEduSeekerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type PlatformEduSeekerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    submitter?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }
+  export type PlatformEduSeekerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    submitter?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }
+
+  export type $PlatformEduSeekerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PlatformEduSeeker"
+    objects: {
+      submitter: Prisma.$UserEduSeekerPayload<ExtArgs>
+      reviews: Prisma.$ReviewEduSeekerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      description: string
+      category: string
+      url: string
+      submittedBy: string
+      createdAt: Date
+      validated: boolean
+    }, ExtArgs["result"]["platformEduSeeker"]>
+    composites: {}
+  }
+
+  type PlatformEduSeekerGetPayload<S extends boolean | null | undefined | PlatformEduSeekerDefaultArgs> = $Result.GetResult<Prisma.$PlatformEduSeekerPayload, S>
+
+  type PlatformEduSeekerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PlatformEduSeekerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PlatformEduSeekerCountAggregateInputType | true
+    }
+
+  export interface PlatformEduSeekerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PlatformEduSeeker'], meta: { name: 'PlatformEduSeeker' } }
+    /**
+     * Find zero or one PlatformEduSeeker that matches the filter.
+     * @param {PlatformEduSeekerFindUniqueArgs} args - Arguments to find a PlatformEduSeeker
+     * @example
+     * // Get one PlatformEduSeeker
+     * const platformEduSeeker = await prisma.platformEduSeeker.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends PlatformEduSeekerFindUniqueArgs>(args: SelectSubset<T, PlatformEduSeekerFindUniqueArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one PlatformEduSeeker that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {PlatformEduSeekerFindUniqueOrThrowArgs} args - Arguments to find a PlatformEduSeeker
+     * @example
+     * // Get one PlatformEduSeeker
+     * const platformEduSeeker = await prisma.platformEduSeeker.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends PlatformEduSeekerFindUniqueOrThrowArgs>(args: SelectSubset<T, PlatformEduSeekerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlatformEduSeeker that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlatformEduSeekerFindFirstArgs} args - Arguments to find a PlatformEduSeeker
+     * @example
+     * // Get one PlatformEduSeeker
+     * const platformEduSeeker = await prisma.platformEduSeeker.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends PlatformEduSeekerFindFirstArgs>(args?: SelectSubset<T, PlatformEduSeekerFindFirstArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PlatformEduSeeker that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlatformEduSeekerFindFirstOrThrowArgs} args - Arguments to find a PlatformEduSeeker
+     * @example
+     * // Get one PlatformEduSeeker
+     * const platformEduSeeker = await prisma.platformEduSeeker.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends PlatformEduSeekerFindFirstOrThrowArgs>(args?: SelectSubset<T, PlatformEduSeekerFindFirstOrThrowArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more PlatformEduSeekers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlatformEduSeekerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all PlatformEduSeekers
+     * const platformEduSeekers = await prisma.platformEduSeeker.findMany()
+     * 
+     * // Get first 10 PlatformEduSeekers
+     * const platformEduSeekers = await prisma.platformEduSeeker.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const platformEduSeekerWithIdOnly = await prisma.platformEduSeeker.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends PlatformEduSeekerFindManyArgs>(args?: SelectSubset<T, PlatformEduSeekerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a PlatformEduSeeker.
+     * @param {PlatformEduSeekerCreateArgs} args - Arguments to create a PlatformEduSeeker.
+     * @example
+     * // Create one PlatformEduSeeker
+     * const PlatformEduSeeker = await prisma.platformEduSeeker.create({
+     *   data: {
+     *     // ... data to create a PlatformEduSeeker
+     *   }
+     * })
+     * 
+     */
+    create<T extends PlatformEduSeekerCreateArgs>(args: SelectSubset<T, PlatformEduSeekerCreateArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many PlatformEduSeekers.
+     * @param {PlatformEduSeekerCreateManyArgs} args - Arguments to create many PlatformEduSeekers.
+     * @example
+     * // Create many PlatformEduSeekers
+     * const platformEduSeeker = await prisma.platformEduSeeker.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends PlatformEduSeekerCreateManyArgs>(args?: SelectSubset<T, PlatformEduSeekerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many PlatformEduSeekers and returns the data saved in the database.
+     * @param {PlatformEduSeekerCreateManyAndReturnArgs} args - Arguments to create many PlatformEduSeekers.
+     * @example
+     * // Create many PlatformEduSeekers
+     * const platformEduSeeker = await prisma.platformEduSeeker.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many PlatformEduSeekers and only return the `id`
+     * const platformEduSeekerWithIdOnly = await prisma.platformEduSeeker.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends PlatformEduSeekerCreateManyAndReturnArgs>(args?: SelectSubset<T, PlatformEduSeekerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a PlatformEduSeeker.
+     * @param {PlatformEduSeekerDeleteArgs} args - Arguments to delete one PlatformEduSeeker.
+     * @example
+     * // Delete one PlatformEduSeeker
+     * const PlatformEduSeeker = await prisma.platformEduSeeker.delete({
+     *   where: {
+     *     // ... filter to delete one PlatformEduSeeker
+     *   }
+     * })
+     * 
+     */
+    delete<T extends PlatformEduSeekerDeleteArgs>(args: SelectSubset<T, PlatformEduSeekerDeleteArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one PlatformEduSeeker.
+     * @param {PlatformEduSeekerUpdateArgs} args - Arguments to update one PlatformEduSeeker.
+     * @example
+     * // Update one PlatformEduSeeker
+     * const platformEduSeeker = await prisma.platformEduSeeker.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends PlatformEduSeekerUpdateArgs>(args: SelectSubset<T, PlatformEduSeekerUpdateArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more PlatformEduSeekers.
+     * @param {PlatformEduSeekerDeleteManyArgs} args - Arguments to filter PlatformEduSeekers to delete.
+     * @example
+     * // Delete a few PlatformEduSeekers
+     * const { count } = await prisma.platformEduSeeker.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends PlatformEduSeekerDeleteManyArgs>(args?: SelectSubset<T, PlatformEduSeekerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PlatformEduSeekers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlatformEduSeekerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many PlatformEduSeekers
+     * const platformEduSeeker = await prisma.platformEduSeeker.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends PlatformEduSeekerUpdateManyArgs>(args: SelectSubset<T, PlatformEduSeekerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PlatformEduSeekers and returns the data updated in the database.
+     * @param {PlatformEduSeekerUpdateManyAndReturnArgs} args - Arguments to update many PlatformEduSeekers.
+     * @example
+     * // Update many PlatformEduSeekers
+     * const platformEduSeeker = await prisma.platformEduSeeker.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more PlatformEduSeekers and only return the `id`
+     * const platformEduSeekerWithIdOnly = await prisma.platformEduSeeker.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends PlatformEduSeekerUpdateManyAndReturnArgs>(args: SelectSubset<T, PlatformEduSeekerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one PlatformEduSeeker.
+     * @param {PlatformEduSeekerUpsertArgs} args - Arguments to update or create a PlatformEduSeeker.
+     * @example
+     * // Update or create a PlatformEduSeeker
+     * const platformEduSeeker = await prisma.platformEduSeeker.upsert({
+     *   create: {
+     *     // ... data to create a PlatformEduSeeker
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the PlatformEduSeeker we want to update
+     *   }
+     * })
+     */
+    upsert<T extends PlatformEduSeekerUpsertArgs>(args: SelectSubset<T, PlatformEduSeekerUpsertArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of PlatformEduSeekers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlatformEduSeekerCountArgs} args - Arguments to filter PlatformEduSeekers to count.
+     * @example
+     * // Count the number of PlatformEduSeekers
+     * const count = await prisma.platformEduSeeker.count({
+     *   where: {
+     *     // ... the filter for the PlatformEduSeekers we want to count
+     *   }
+     * })
+    **/
+    count<T extends PlatformEduSeekerCountArgs>(
+      args?: Subset<T, PlatformEduSeekerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], PlatformEduSeekerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a PlatformEduSeeker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlatformEduSeekerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends PlatformEduSeekerAggregateArgs>(args: Subset<T, PlatformEduSeekerAggregateArgs>): Prisma.PrismaPromise<GetPlatformEduSeekerAggregateType<T>>
+
+    /**
+     * Group by PlatformEduSeeker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PlatformEduSeekerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends PlatformEduSeekerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: PlatformEduSeekerGroupByArgs['orderBy'] }
+        : { orderBy?: PlatformEduSeekerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, PlatformEduSeekerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPlatformEduSeekerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the PlatformEduSeeker model
+   */
+  readonly fields: PlatformEduSeekerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for PlatformEduSeeker.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__PlatformEduSeekerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    submitter<T extends UserEduSeekerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserEduSeekerDefaultArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reviews<T extends PlatformEduSeeker$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, PlatformEduSeeker$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the PlatformEduSeeker model
+   */ 
+  interface PlatformEduSeekerFieldRefs {
+    readonly id: FieldRef<"PlatformEduSeeker", 'String'>
+    readonly name: FieldRef<"PlatformEduSeeker", 'String'>
+    readonly description: FieldRef<"PlatformEduSeeker", 'String'>
+    readonly category: FieldRef<"PlatformEduSeeker", 'String'>
+    readonly url: FieldRef<"PlatformEduSeeker", 'String'>
+    readonly submittedBy: FieldRef<"PlatformEduSeeker", 'String'>
+    readonly createdAt: FieldRef<"PlatformEduSeeker", 'DateTime'>
+    readonly validated: FieldRef<"PlatformEduSeeker", 'Boolean'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * PlatformEduSeeker findUnique
+   */
+  export type PlatformEduSeekerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlatformEduSeeker to fetch.
+     */
+    where: PlatformEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * PlatformEduSeeker findUniqueOrThrow
+   */
+  export type PlatformEduSeekerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlatformEduSeeker to fetch.
+     */
+    where: PlatformEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * PlatformEduSeeker findFirst
+   */
+  export type PlatformEduSeekerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlatformEduSeeker to fetch.
+     */
+    where?: PlatformEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlatformEduSeekers to fetch.
+     */
+    orderBy?: PlatformEduSeekerOrderByWithRelationInput | PlatformEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlatformEduSeekers.
+     */
+    cursor?: PlatformEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlatformEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlatformEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlatformEduSeekers.
+     */
+    distinct?: PlatformEduSeekerScalarFieldEnum | PlatformEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * PlatformEduSeeker findFirstOrThrow
+   */
+  export type PlatformEduSeekerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlatformEduSeeker to fetch.
+     */
+    where?: PlatformEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlatformEduSeekers to fetch.
+     */
+    orderBy?: PlatformEduSeekerOrderByWithRelationInput | PlatformEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PlatformEduSeekers.
+     */
+    cursor?: PlatformEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlatformEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlatformEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PlatformEduSeekers.
+     */
+    distinct?: PlatformEduSeekerScalarFieldEnum | PlatformEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * PlatformEduSeeker findMany
+   */
+  export type PlatformEduSeekerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which PlatformEduSeekers to fetch.
+     */
+    where?: PlatformEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PlatformEduSeekers to fetch.
+     */
+    orderBy?: PlatformEduSeekerOrderByWithRelationInput | PlatformEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing PlatformEduSeekers.
+     */
+    cursor?: PlatformEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PlatformEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PlatformEduSeekers.
+     */
+    skip?: number
+    distinct?: PlatformEduSeekerScalarFieldEnum | PlatformEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * PlatformEduSeeker create
+   */
+  export type PlatformEduSeekerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a PlatformEduSeeker.
+     */
+    data: XOR<PlatformEduSeekerCreateInput, PlatformEduSeekerUncheckedCreateInput>
+  }
+
+  /**
+   * PlatformEduSeeker createMany
+   */
+  export type PlatformEduSeekerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many PlatformEduSeekers.
+     */
+    data: PlatformEduSeekerCreateManyInput | PlatformEduSeekerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * PlatformEduSeeker createManyAndReturn
+   */
+  export type PlatformEduSeekerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * The data used to create many PlatformEduSeekers.
+     */
+    data: PlatformEduSeekerCreateManyInput | PlatformEduSeekerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PlatformEduSeeker update
+   */
+  export type PlatformEduSeekerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a PlatformEduSeeker.
+     */
+    data: XOR<PlatformEduSeekerUpdateInput, PlatformEduSeekerUncheckedUpdateInput>
+    /**
+     * Choose, which PlatformEduSeeker to update.
+     */
+    where: PlatformEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * PlatformEduSeeker updateMany
+   */
+  export type PlatformEduSeekerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update PlatformEduSeekers.
+     */
+    data: XOR<PlatformEduSeekerUpdateManyMutationInput, PlatformEduSeekerUncheckedUpdateManyInput>
+    /**
+     * Filter which PlatformEduSeekers to update
+     */
+    where?: PlatformEduSeekerWhereInput
+    /**
+     * Limit how many PlatformEduSeekers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlatformEduSeeker updateManyAndReturn
+   */
+  export type PlatformEduSeekerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * The data used to update PlatformEduSeekers.
+     */
+    data: XOR<PlatformEduSeekerUpdateManyMutationInput, PlatformEduSeekerUncheckedUpdateManyInput>
+    /**
+     * Filter which PlatformEduSeekers to update
+     */
+    where?: PlatformEduSeekerWhereInput
+    /**
+     * Limit how many PlatformEduSeekers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PlatformEduSeeker upsert
+   */
+  export type PlatformEduSeekerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the PlatformEduSeeker to update in case it exists.
+     */
+    where: PlatformEduSeekerWhereUniqueInput
+    /**
+     * In case the PlatformEduSeeker found by the `where` argument doesn't exist, create a new PlatformEduSeeker with this data.
+     */
+    create: XOR<PlatformEduSeekerCreateInput, PlatformEduSeekerUncheckedCreateInput>
+    /**
+     * In case the PlatformEduSeeker was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<PlatformEduSeekerUpdateInput, PlatformEduSeekerUncheckedUpdateInput>
+  }
+
+  /**
+   * PlatformEduSeeker delete
+   */
+  export type PlatformEduSeekerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter which PlatformEduSeeker to delete.
+     */
+    where: PlatformEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * PlatformEduSeeker deleteMany
+   */
+  export type PlatformEduSeekerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PlatformEduSeekers to delete
+     */
+    where?: PlatformEduSeekerWhereInput
+    /**
+     * Limit how many PlatformEduSeekers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * PlatformEduSeeker.reviews
+   */
+  export type PlatformEduSeeker$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    where?: ReviewEduSeekerWhereInput
+    orderBy?: ReviewEduSeekerOrderByWithRelationInput | ReviewEduSeekerOrderByWithRelationInput[]
+    cursor?: ReviewEduSeekerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewEduSeekerScalarFieldEnum | ReviewEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * PlatformEduSeeker without action
+   */
+  export type PlatformEduSeekerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PlatformEduSeeker
+     */
+    select?: PlatformEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PlatformEduSeeker
+     */
+    omit?: PlatformEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PlatformEduSeekerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ReviewEduSeeker
+   */
+
+  export type AggregateReviewEduSeeker = {
+    _count: ReviewEduSeekerCountAggregateOutputType | null
+    _avg: ReviewEduSeekerAvgAggregateOutputType | null
+    _sum: ReviewEduSeekerSumAggregateOutputType | null
+    _min: ReviewEduSeekerMinAggregateOutputType | null
+    _max: ReviewEduSeekerMaxAggregateOutputType | null
+  }
+
+  export type ReviewEduSeekerAvgAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewEduSeekerSumAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewEduSeekerMinAggregateOutputType = {
+    id: string | null
+    platformId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ReviewEduSeekerMaxAggregateOutputType = {
+    id: string | null
+    platformId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ReviewEduSeekerCountAggregateOutputType = {
+    id: number
+    platformId: number
+    userId: number
+    rating: number
+    comment: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ReviewEduSeekerAvgAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewEduSeekerSumAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewEduSeekerMinAggregateInputType = {
+    id?: true
+    platformId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ReviewEduSeekerMaxAggregateInputType = {
+    id?: true
+    platformId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ReviewEduSeekerCountAggregateInputType = {
+    id?: true
+    platformId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ReviewEduSeekerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewEduSeeker to aggregate.
+     */
+    where?: ReviewEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewEduSeekers to fetch.
+     */
+    orderBy?: ReviewEduSeekerOrderByWithRelationInput | ReviewEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ReviewEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ReviewEduSeekers
+    **/
+    _count?: true | ReviewEduSeekerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ReviewEduSeekerAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ReviewEduSeekerSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ReviewEduSeekerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ReviewEduSeekerMaxAggregateInputType
+  }
+
+  export type GetReviewEduSeekerAggregateType<T extends ReviewEduSeekerAggregateArgs> = {
+        [P in keyof T & keyof AggregateReviewEduSeeker]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateReviewEduSeeker[P]>
+      : GetScalarType<T[P], AggregateReviewEduSeeker[P]>
+  }
+
+
+
+
+  export type ReviewEduSeekerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewEduSeekerWhereInput
+    orderBy?: ReviewEduSeekerOrderByWithAggregationInput | ReviewEduSeekerOrderByWithAggregationInput[]
+    by: ReviewEduSeekerScalarFieldEnum[] | ReviewEduSeekerScalarFieldEnum
+    having?: ReviewEduSeekerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ReviewEduSeekerCountAggregateInputType | true
+    _avg?: ReviewEduSeekerAvgAggregateInputType
+    _sum?: ReviewEduSeekerSumAggregateInputType
+    _min?: ReviewEduSeekerMinAggregateInputType
+    _max?: ReviewEduSeekerMaxAggregateInputType
+  }
+
+  export type ReviewEduSeekerGroupByOutputType = {
+    id: string
+    platformId: string
+    userId: string
+    rating: number
+    comment: string
+    validated: boolean
+    createdAt: Date
+    _count: ReviewEduSeekerCountAggregateOutputType | null
+    _avg: ReviewEduSeekerAvgAggregateOutputType | null
+    _sum: ReviewEduSeekerSumAggregateOutputType | null
+    _min: ReviewEduSeekerMinAggregateOutputType | null
+    _max: ReviewEduSeekerMaxAggregateOutputType | null
+  }
+
+  type GetReviewEduSeekerGroupByPayload<T extends ReviewEduSeekerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ReviewEduSeekerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ReviewEduSeekerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ReviewEduSeekerGroupByOutputType[P]>
+            : GetScalarType<T[P], ReviewEduSeekerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ReviewEduSeekerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    platform?: boolean | PlatformEduSeekerDefaultArgs<ExtArgs>
+    user?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewEduSeeker"]>
+
+  export type ReviewEduSeekerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    platform?: boolean | PlatformEduSeekerDefaultArgs<ExtArgs>
+    user?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewEduSeeker"]>
+
+  export type ReviewEduSeekerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    platform?: boolean | PlatformEduSeekerDefaultArgs<ExtArgs>
+    user?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewEduSeeker"]>
+
+  export type ReviewEduSeekerSelectScalar = {
+    id?: boolean
+    platformId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type ReviewEduSeekerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "platformId" | "userId" | "rating" | "comment" | "validated" | "createdAt", ExtArgs["result"]["reviewEduSeeker"]>
+  export type ReviewEduSeekerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platform?: boolean | PlatformEduSeekerDefaultArgs<ExtArgs>
+    user?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }
+  export type ReviewEduSeekerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platform?: boolean | PlatformEduSeekerDefaultArgs<ExtArgs>
+    user?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }
+  export type ReviewEduSeekerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    platform?: boolean | PlatformEduSeekerDefaultArgs<ExtArgs>
+    user?: boolean | UserEduSeekerDefaultArgs<ExtArgs>
+  }
+
+  export type $ReviewEduSeekerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReviewEduSeeker"
+    objects: {
+      platform: Prisma.$PlatformEduSeekerPayload<ExtArgs>
+      user: Prisma.$UserEduSeekerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      platformId: string
+      userId: string
+      rating: number
+      comment: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["reviewEduSeeker"]>
+    composites: {}
+  }
+
+  type ReviewEduSeekerGetPayload<S extends boolean | null | undefined | ReviewEduSeekerDefaultArgs> = $Result.GetResult<Prisma.$ReviewEduSeekerPayload, S>
+
+  type ReviewEduSeekerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReviewEduSeekerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReviewEduSeekerCountAggregateInputType | true
+    }
+
+  export interface ReviewEduSeekerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReviewEduSeeker'], meta: { name: 'ReviewEduSeeker' } }
+    /**
+     * Find zero or one ReviewEduSeeker that matches the filter.
+     * @param {ReviewEduSeekerFindUniqueArgs} args - Arguments to find a ReviewEduSeeker
+     * @example
+     * // Get one ReviewEduSeeker
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ReviewEduSeekerFindUniqueArgs>(args: SelectSubset<T, ReviewEduSeekerFindUniqueArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ReviewEduSeeker that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ReviewEduSeekerFindUniqueOrThrowArgs} args - Arguments to find a ReviewEduSeeker
+     * @example
+     * // Get one ReviewEduSeeker
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ReviewEduSeekerFindUniqueOrThrowArgs>(args: SelectSubset<T, ReviewEduSeekerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewEduSeeker that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewEduSeekerFindFirstArgs} args - Arguments to find a ReviewEduSeeker
+     * @example
+     * // Get one ReviewEduSeeker
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ReviewEduSeekerFindFirstArgs>(args?: SelectSubset<T, ReviewEduSeekerFindFirstArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewEduSeeker that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewEduSeekerFindFirstOrThrowArgs} args - Arguments to find a ReviewEduSeeker
+     * @example
+     * // Get one ReviewEduSeeker
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ReviewEduSeekerFindFirstOrThrowArgs>(args?: SelectSubset<T, ReviewEduSeekerFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ReviewEduSeekers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewEduSeekerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ReviewEduSeekers
+     * const reviewEduSeekers = await prisma.reviewEduSeeker.findMany()
+     * 
+     * // Get first 10 ReviewEduSeekers
+     * const reviewEduSeekers = await prisma.reviewEduSeeker.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const reviewEduSeekerWithIdOnly = await prisma.reviewEduSeeker.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ReviewEduSeekerFindManyArgs>(args?: SelectSubset<T, ReviewEduSeekerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ReviewEduSeeker.
+     * @param {ReviewEduSeekerCreateArgs} args - Arguments to create a ReviewEduSeeker.
+     * @example
+     * // Create one ReviewEduSeeker
+     * const ReviewEduSeeker = await prisma.reviewEduSeeker.create({
+     *   data: {
+     *     // ... data to create a ReviewEduSeeker
+     *   }
+     * })
+     * 
+     */
+    create<T extends ReviewEduSeekerCreateArgs>(args: SelectSubset<T, ReviewEduSeekerCreateArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ReviewEduSeekers.
+     * @param {ReviewEduSeekerCreateManyArgs} args - Arguments to create many ReviewEduSeekers.
+     * @example
+     * // Create many ReviewEduSeekers
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ReviewEduSeekerCreateManyArgs>(args?: SelectSubset<T, ReviewEduSeekerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ReviewEduSeekers and returns the data saved in the database.
+     * @param {ReviewEduSeekerCreateManyAndReturnArgs} args - Arguments to create many ReviewEduSeekers.
+     * @example
+     * // Create many ReviewEduSeekers
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ReviewEduSeekers and only return the `id`
+     * const reviewEduSeekerWithIdOnly = await prisma.reviewEduSeeker.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ReviewEduSeekerCreateManyAndReturnArgs>(args?: SelectSubset<T, ReviewEduSeekerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ReviewEduSeeker.
+     * @param {ReviewEduSeekerDeleteArgs} args - Arguments to delete one ReviewEduSeeker.
+     * @example
+     * // Delete one ReviewEduSeeker
+     * const ReviewEduSeeker = await prisma.reviewEduSeeker.delete({
+     *   where: {
+     *     // ... filter to delete one ReviewEduSeeker
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ReviewEduSeekerDeleteArgs>(args: SelectSubset<T, ReviewEduSeekerDeleteArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ReviewEduSeeker.
+     * @param {ReviewEduSeekerUpdateArgs} args - Arguments to update one ReviewEduSeeker.
+     * @example
+     * // Update one ReviewEduSeeker
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ReviewEduSeekerUpdateArgs>(args: SelectSubset<T, ReviewEduSeekerUpdateArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ReviewEduSeekers.
+     * @param {ReviewEduSeekerDeleteManyArgs} args - Arguments to filter ReviewEduSeekers to delete.
+     * @example
+     * // Delete a few ReviewEduSeekers
+     * const { count } = await prisma.reviewEduSeeker.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ReviewEduSeekerDeleteManyArgs>(args?: SelectSubset<T, ReviewEduSeekerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewEduSeekers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewEduSeekerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ReviewEduSeekers
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ReviewEduSeekerUpdateManyArgs>(args: SelectSubset<T, ReviewEduSeekerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewEduSeekers and returns the data updated in the database.
+     * @param {ReviewEduSeekerUpdateManyAndReturnArgs} args - Arguments to update many ReviewEduSeekers.
+     * @example
+     * // Update many ReviewEduSeekers
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ReviewEduSeekers and only return the `id`
+     * const reviewEduSeekerWithIdOnly = await prisma.reviewEduSeeker.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ReviewEduSeekerUpdateManyAndReturnArgs>(args: SelectSubset<T, ReviewEduSeekerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ReviewEduSeeker.
+     * @param {ReviewEduSeekerUpsertArgs} args - Arguments to update or create a ReviewEduSeeker.
+     * @example
+     * // Update or create a ReviewEduSeeker
+     * const reviewEduSeeker = await prisma.reviewEduSeeker.upsert({
+     *   create: {
+     *     // ... data to create a ReviewEduSeeker
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ReviewEduSeeker we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ReviewEduSeekerUpsertArgs>(args: SelectSubset<T, ReviewEduSeekerUpsertArgs<ExtArgs>>): Prisma__ReviewEduSeekerClient<$Result.GetResult<Prisma.$ReviewEduSeekerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ReviewEduSeekers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewEduSeekerCountArgs} args - Arguments to filter ReviewEduSeekers to count.
+     * @example
+     * // Count the number of ReviewEduSeekers
+     * const count = await prisma.reviewEduSeeker.count({
+     *   where: {
+     *     // ... the filter for the ReviewEduSeekers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ReviewEduSeekerCountArgs>(
+      args?: Subset<T, ReviewEduSeekerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ReviewEduSeekerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ReviewEduSeeker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewEduSeekerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ReviewEduSeekerAggregateArgs>(args: Subset<T, ReviewEduSeekerAggregateArgs>): Prisma.PrismaPromise<GetReviewEduSeekerAggregateType<T>>
+
+    /**
+     * Group by ReviewEduSeeker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewEduSeekerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ReviewEduSeekerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ReviewEduSeekerGroupByArgs['orderBy'] }
+        : { orderBy?: ReviewEduSeekerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ReviewEduSeekerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReviewEduSeekerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ReviewEduSeeker model
+   */
+  readonly fields: ReviewEduSeekerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ReviewEduSeeker.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ReviewEduSeekerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    platform<T extends PlatformEduSeekerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PlatformEduSeekerDefaultArgs<ExtArgs>>): Prisma__PlatformEduSeekerClient<$Result.GetResult<Prisma.$PlatformEduSeekerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    user<T extends UserEduSeekerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserEduSeekerDefaultArgs<ExtArgs>>): Prisma__UserEduSeekerClient<$Result.GetResult<Prisma.$UserEduSeekerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ReviewEduSeeker model
+   */ 
+  interface ReviewEduSeekerFieldRefs {
+    readonly id: FieldRef<"ReviewEduSeeker", 'String'>
+    readonly platformId: FieldRef<"ReviewEduSeeker", 'String'>
+    readonly userId: FieldRef<"ReviewEduSeeker", 'String'>
+    readonly rating: FieldRef<"ReviewEduSeeker", 'Int'>
+    readonly comment: FieldRef<"ReviewEduSeeker", 'String'>
+    readonly validated: FieldRef<"ReviewEduSeeker", 'Boolean'>
+    readonly createdAt: FieldRef<"ReviewEduSeeker", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ReviewEduSeeker findUnique
+   */
+  export type ReviewEduSeekerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewEduSeeker to fetch.
+     */
+    where: ReviewEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * ReviewEduSeeker findUniqueOrThrow
+   */
+  export type ReviewEduSeekerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewEduSeeker to fetch.
+     */
+    where: ReviewEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * ReviewEduSeeker findFirst
+   */
+  export type ReviewEduSeekerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewEduSeeker to fetch.
+     */
+    where?: ReviewEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewEduSeekers to fetch.
+     */
+    orderBy?: ReviewEduSeekerOrderByWithRelationInput | ReviewEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewEduSeekers.
+     */
+    cursor?: ReviewEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewEduSeekers.
+     */
+    distinct?: ReviewEduSeekerScalarFieldEnum | ReviewEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewEduSeeker findFirstOrThrow
+   */
+  export type ReviewEduSeekerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewEduSeeker to fetch.
+     */
+    where?: ReviewEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewEduSeekers to fetch.
+     */
+    orderBy?: ReviewEduSeekerOrderByWithRelationInput | ReviewEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewEduSeekers.
+     */
+    cursor?: ReviewEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewEduSeekers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewEduSeekers.
+     */
+    distinct?: ReviewEduSeekerScalarFieldEnum | ReviewEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewEduSeeker findMany
+   */
+  export type ReviewEduSeekerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewEduSeekers to fetch.
+     */
+    where?: ReviewEduSeekerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewEduSeekers to fetch.
+     */
+    orderBy?: ReviewEduSeekerOrderByWithRelationInput | ReviewEduSeekerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ReviewEduSeekers.
+     */
+    cursor?: ReviewEduSeekerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewEduSeekers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewEduSeekers.
+     */
+    skip?: number
+    distinct?: ReviewEduSeekerScalarFieldEnum | ReviewEduSeekerScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewEduSeeker create
+   */
+  export type ReviewEduSeekerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ReviewEduSeeker.
+     */
+    data: XOR<ReviewEduSeekerCreateInput, ReviewEduSeekerUncheckedCreateInput>
+  }
+
+  /**
+   * ReviewEduSeeker createMany
+   */
+  export type ReviewEduSeekerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ReviewEduSeekers.
+     */
+    data: ReviewEduSeekerCreateManyInput | ReviewEduSeekerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ReviewEduSeeker createManyAndReturn
+   */
+  export type ReviewEduSeekerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * The data used to create many ReviewEduSeekers.
+     */
+    data: ReviewEduSeekerCreateManyInput | ReviewEduSeekerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewEduSeeker update
+   */
+  export type ReviewEduSeekerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ReviewEduSeeker.
+     */
+    data: XOR<ReviewEduSeekerUpdateInput, ReviewEduSeekerUncheckedUpdateInput>
+    /**
+     * Choose, which ReviewEduSeeker to update.
+     */
+    where: ReviewEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * ReviewEduSeeker updateMany
+   */
+  export type ReviewEduSeekerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ReviewEduSeekers.
+     */
+    data: XOR<ReviewEduSeekerUpdateManyMutationInput, ReviewEduSeekerUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewEduSeekers to update
+     */
+    where?: ReviewEduSeekerWhereInput
+    /**
+     * Limit how many ReviewEduSeekers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewEduSeeker updateManyAndReturn
+   */
+  export type ReviewEduSeekerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * The data used to update ReviewEduSeekers.
+     */
+    data: XOR<ReviewEduSeekerUpdateManyMutationInput, ReviewEduSeekerUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewEduSeekers to update
+     */
+    where?: ReviewEduSeekerWhereInput
+    /**
+     * Limit how many ReviewEduSeekers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewEduSeeker upsert
+   */
+  export type ReviewEduSeekerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ReviewEduSeeker to update in case it exists.
+     */
+    where: ReviewEduSeekerWhereUniqueInput
+    /**
+     * In case the ReviewEduSeeker found by the `where` argument doesn't exist, create a new ReviewEduSeeker with this data.
+     */
+    create: XOR<ReviewEduSeekerCreateInput, ReviewEduSeekerUncheckedCreateInput>
+    /**
+     * In case the ReviewEduSeeker was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ReviewEduSeekerUpdateInput, ReviewEduSeekerUncheckedUpdateInput>
+  }
+
+  /**
+   * ReviewEduSeeker delete
+   */
+  export type ReviewEduSeekerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+    /**
+     * Filter which ReviewEduSeeker to delete.
+     */
+    where: ReviewEduSeekerWhereUniqueInput
+  }
+
+  /**
+   * ReviewEduSeeker deleteMany
+   */
+  export type ReviewEduSeekerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewEduSeekers to delete
+     */
+    where?: ReviewEduSeekerWhereInput
+    /**
+     * Limit how many ReviewEduSeekers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewEduSeeker without action
+   */
+  export type ReviewEduSeekerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewEduSeeker
+     */
+    select?: ReviewEduSeekerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewEduSeeker
+     */
+    omit?: ReviewEduSeekerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewEduSeekerInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -36268,6 +39963,44 @@ export namespace Prisma {
   };
 
   export type ElderlyCareCompanionMedicationTrackingScalarFieldEnum = (typeof ElderlyCareCompanionMedicationTrackingScalarFieldEnum)[keyof typeof ElderlyCareCompanionMedicationTrackingScalarFieldEnum]
+
+
+  export const UserEduSeekerScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    createdAt: 'createdAt'
+  };
+
+  export type UserEduSeekerScalarFieldEnum = (typeof UserEduSeekerScalarFieldEnum)[keyof typeof UserEduSeekerScalarFieldEnum]
+
+
+  export const PlatformEduSeekerScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    description: 'description',
+    category: 'category',
+    url: 'url',
+    submittedBy: 'submittedBy',
+    createdAt: 'createdAt',
+    validated: 'validated'
+  };
+
+  export type PlatformEduSeekerScalarFieldEnum = (typeof PlatformEduSeekerScalarFieldEnum)[keyof typeof PlatformEduSeekerScalarFieldEnum]
+
+
+  export const ReviewEduSeekerScalarFieldEnum: {
+    id: 'id',
+    platformId: 'platformId',
+    userId: 'userId',
+    rating: 'rating',
+    comment: 'comment',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type ReviewEduSeekerScalarFieldEnum = (typeof ReviewEduSeekerScalarFieldEnum)[keyof typeof ReviewEduSeekerScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -38191,6 +41924,207 @@ export namespace Prisma {
     dateTime?: DateTimeWithAggregatesFilter<"ElderlyCareCompanionMedicationTracking"> | Date | string
   }
 
+  export type UserEduSeekerWhereInput = {
+    AND?: UserEduSeekerWhereInput | UserEduSeekerWhereInput[]
+    OR?: UserEduSeekerWhereInput[]
+    NOT?: UserEduSeekerWhereInput | UserEduSeekerWhereInput[]
+    id?: StringFilter<"UserEduSeeker"> | string
+    email?: StringFilter<"UserEduSeeker"> | string
+    name?: StringFilter<"UserEduSeeker"> | string
+    password?: StringFilter<"UserEduSeeker"> | string
+    createdAt?: DateTimeFilter<"UserEduSeeker"> | Date | string
+    platforms?: PlatformEduSeekerListRelationFilter
+    reviews?: ReviewEduSeekerListRelationFilter
+  }
+
+  export type UserEduSeekerOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    platforms?: PlatformEduSeekerOrderByRelationAggregateInput
+    reviews?: ReviewEduSeekerOrderByRelationAggregateInput
+  }
+
+  export type UserEduSeekerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: UserEduSeekerWhereInput | UserEduSeekerWhereInput[]
+    OR?: UserEduSeekerWhereInput[]
+    NOT?: UserEduSeekerWhereInput | UserEduSeekerWhereInput[]
+    name?: StringFilter<"UserEduSeeker"> | string
+    password?: StringFilter<"UserEduSeeker"> | string
+    createdAt?: DateTimeFilter<"UserEduSeeker"> | Date | string
+    platforms?: PlatformEduSeekerListRelationFilter
+    reviews?: ReviewEduSeekerListRelationFilter
+  }, "id" | "email">
+
+  export type UserEduSeekerOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    _count?: UserEduSeekerCountOrderByAggregateInput
+    _max?: UserEduSeekerMaxOrderByAggregateInput
+    _min?: UserEduSeekerMinOrderByAggregateInput
+  }
+
+  export type UserEduSeekerScalarWhereWithAggregatesInput = {
+    AND?: UserEduSeekerScalarWhereWithAggregatesInput | UserEduSeekerScalarWhereWithAggregatesInput[]
+    OR?: UserEduSeekerScalarWhereWithAggregatesInput[]
+    NOT?: UserEduSeekerScalarWhereWithAggregatesInput | UserEduSeekerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserEduSeeker"> | string
+    email?: StringWithAggregatesFilter<"UserEduSeeker"> | string
+    name?: StringWithAggregatesFilter<"UserEduSeeker"> | string
+    password?: StringWithAggregatesFilter<"UserEduSeeker"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"UserEduSeeker"> | Date | string
+  }
+
+  export type PlatformEduSeekerWhereInput = {
+    AND?: PlatformEduSeekerWhereInput | PlatformEduSeekerWhereInput[]
+    OR?: PlatformEduSeekerWhereInput[]
+    NOT?: PlatformEduSeekerWhereInput | PlatformEduSeekerWhereInput[]
+    id?: StringFilter<"PlatformEduSeeker"> | string
+    name?: StringFilter<"PlatformEduSeeker"> | string
+    description?: StringFilter<"PlatformEduSeeker"> | string
+    category?: StringFilter<"PlatformEduSeeker"> | string
+    url?: StringFilter<"PlatformEduSeeker"> | string
+    submittedBy?: StringFilter<"PlatformEduSeeker"> | string
+    createdAt?: DateTimeFilter<"PlatformEduSeeker"> | Date | string
+    validated?: BoolFilter<"PlatformEduSeeker"> | boolean
+    submitter?: XOR<UserEduSeekerScalarRelationFilter, UserEduSeekerWhereInput>
+    reviews?: ReviewEduSeekerListRelationFilter
+  }
+
+  export type PlatformEduSeekerOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    category?: SortOrder
+    url?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+    submitter?: UserEduSeekerOrderByWithRelationInput
+    reviews?: ReviewEduSeekerOrderByRelationAggregateInput
+  }
+
+  export type PlatformEduSeekerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: PlatformEduSeekerWhereInput | PlatformEduSeekerWhereInput[]
+    OR?: PlatformEduSeekerWhereInput[]
+    NOT?: PlatformEduSeekerWhereInput | PlatformEduSeekerWhereInput[]
+    name?: StringFilter<"PlatformEduSeeker"> | string
+    description?: StringFilter<"PlatformEduSeeker"> | string
+    category?: StringFilter<"PlatformEduSeeker"> | string
+    url?: StringFilter<"PlatformEduSeeker"> | string
+    submittedBy?: StringFilter<"PlatformEduSeeker"> | string
+    createdAt?: DateTimeFilter<"PlatformEduSeeker"> | Date | string
+    validated?: BoolFilter<"PlatformEduSeeker"> | boolean
+    submitter?: XOR<UserEduSeekerScalarRelationFilter, UserEduSeekerWhereInput>
+    reviews?: ReviewEduSeekerListRelationFilter
+  }, "id">
+
+  export type PlatformEduSeekerOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    category?: SortOrder
+    url?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+    _count?: PlatformEduSeekerCountOrderByAggregateInput
+    _max?: PlatformEduSeekerMaxOrderByAggregateInput
+    _min?: PlatformEduSeekerMinOrderByAggregateInput
+  }
+
+  export type PlatformEduSeekerScalarWhereWithAggregatesInput = {
+    AND?: PlatformEduSeekerScalarWhereWithAggregatesInput | PlatformEduSeekerScalarWhereWithAggregatesInput[]
+    OR?: PlatformEduSeekerScalarWhereWithAggregatesInput[]
+    NOT?: PlatformEduSeekerScalarWhereWithAggregatesInput | PlatformEduSeekerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"PlatformEduSeeker"> | string
+    name?: StringWithAggregatesFilter<"PlatformEduSeeker"> | string
+    description?: StringWithAggregatesFilter<"PlatformEduSeeker"> | string
+    category?: StringWithAggregatesFilter<"PlatformEduSeeker"> | string
+    url?: StringWithAggregatesFilter<"PlatformEduSeeker"> | string
+    submittedBy?: StringWithAggregatesFilter<"PlatformEduSeeker"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"PlatformEduSeeker"> | Date | string
+    validated?: BoolWithAggregatesFilter<"PlatformEduSeeker"> | boolean
+  }
+
+  export type ReviewEduSeekerWhereInput = {
+    AND?: ReviewEduSeekerWhereInput | ReviewEduSeekerWhereInput[]
+    OR?: ReviewEduSeekerWhereInput[]
+    NOT?: ReviewEduSeekerWhereInput | ReviewEduSeekerWhereInput[]
+    id?: StringFilter<"ReviewEduSeeker"> | string
+    platformId?: StringFilter<"ReviewEduSeeker"> | string
+    userId?: StringFilter<"ReviewEduSeeker"> | string
+    rating?: IntFilter<"ReviewEduSeeker"> | number
+    comment?: StringFilter<"ReviewEduSeeker"> | string
+    validated?: BoolFilter<"ReviewEduSeeker"> | boolean
+    createdAt?: DateTimeFilter<"ReviewEduSeeker"> | Date | string
+    platform?: XOR<PlatformEduSeekerScalarRelationFilter, PlatformEduSeekerWhereInput>
+    user?: XOR<UserEduSeekerScalarRelationFilter, UserEduSeekerWhereInput>
+  }
+
+  export type ReviewEduSeekerOrderByWithRelationInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    platform?: PlatformEduSeekerOrderByWithRelationInput
+    user?: UserEduSeekerOrderByWithRelationInput
+  }
+
+  export type ReviewEduSeekerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ReviewEduSeekerWhereInput | ReviewEduSeekerWhereInput[]
+    OR?: ReviewEduSeekerWhereInput[]
+    NOT?: ReviewEduSeekerWhereInput | ReviewEduSeekerWhereInput[]
+    platformId?: StringFilter<"ReviewEduSeeker"> | string
+    userId?: StringFilter<"ReviewEduSeeker"> | string
+    rating?: IntFilter<"ReviewEduSeeker"> | number
+    comment?: StringFilter<"ReviewEduSeeker"> | string
+    validated?: BoolFilter<"ReviewEduSeeker"> | boolean
+    createdAt?: DateTimeFilter<"ReviewEduSeeker"> | Date | string
+    platform?: XOR<PlatformEduSeekerScalarRelationFilter, PlatformEduSeekerWhereInput>
+    user?: XOR<UserEduSeekerScalarRelationFilter, UserEduSeekerWhereInput>
+  }, "id">
+
+  export type ReviewEduSeekerOrderByWithAggregationInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: ReviewEduSeekerCountOrderByAggregateInput
+    _avg?: ReviewEduSeekerAvgOrderByAggregateInput
+    _max?: ReviewEduSeekerMaxOrderByAggregateInput
+    _min?: ReviewEduSeekerMinOrderByAggregateInput
+    _sum?: ReviewEduSeekerSumOrderByAggregateInput
+  }
+
+  export type ReviewEduSeekerScalarWhereWithAggregatesInput = {
+    AND?: ReviewEduSeekerScalarWhereWithAggregatesInput | ReviewEduSeekerScalarWhereWithAggregatesInput[]
+    OR?: ReviewEduSeekerScalarWhereWithAggregatesInput[]
+    NOT?: ReviewEduSeekerScalarWhereWithAggregatesInput | ReviewEduSeekerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReviewEduSeeker"> | string
+    platformId?: StringWithAggregatesFilter<"ReviewEduSeeker"> | string
+    userId?: StringWithAggregatesFilter<"ReviewEduSeeker"> | string
+    rating?: IntWithAggregatesFilter<"ReviewEduSeeker"> | number
+    comment?: StringWithAggregatesFilter<"ReviewEduSeeker"> | string
+    validated?: BoolWithAggregatesFilter<"ReviewEduSeeker"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"ReviewEduSeeker"> | Date | string
+  }
+
   export type UserDIYHomesCreateInput = {
     id?: string
     email: string
@@ -40053,6 +43987,218 @@ export namespace Prisma {
     dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserEduSeekerCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    platforms?: PlatformEduSeekerCreateNestedManyWithoutSubmitterInput
+    reviews?: ReviewEduSeekerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserEduSeekerUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    platforms?: PlatformEduSeekerUncheckedCreateNestedManyWithoutSubmitterInput
+    reviews?: ReviewEduSeekerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserEduSeekerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platforms?: PlatformEduSeekerUpdateManyWithoutSubmitterNestedInput
+    reviews?: ReviewEduSeekerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserEduSeekerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platforms?: PlatformEduSeekerUncheckedUpdateManyWithoutSubmitterNestedInput
+    reviews?: ReviewEduSeekerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserEduSeekerCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+  }
+
+  export type UserEduSeekerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserEduSeekerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlatformEduSeekerCreateInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    createdAt?: Date | string
+    validated?: boolean
+    submitter: UserEduSeekerCreateNestedOneWithoutPlatformsInput
+    reviews?: ReviewEduSeekerCreateNestedManyWithoutPlatformInput
+  }
+
+  export type PlatformEduSeekerUncheckedCreateInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    submittedBy: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewEduSeekerUncheckedCreateNestedManyWithoutPlatformInput
+  }
+
+  export type PlatformEduSeekerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    submitter?: UserEduSeekerUpdateOneRequiredWithoutPlatformsNestedInput
+    reviews?: ReviewEduSeekerUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type PlatformEduSeekerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewEduSeekerUncheckedUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type PlatformEduSeekerCreateManyInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    submittedBy: string
+    createdAt?: Date | string
+    validated?: boolean
+  }
+
+  export type PlatformEduSeekerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type PlatformEduSeekerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type ReviewEduSeekerCreateInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    platform: PlatformEduSeekerCreateNestedOneWithoutReviewsInput
+    user: UserEduSeekerCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewEduSeekerUncheckedCreateInput = {
+    id?: string
+    platformId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewEduSeekerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platform?: PlatformEduSeekerUpdateOneRequiredWithoutReviewsNestedInput
+    user?: UserEduSeekerUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewEduSeekerCreateManyInput = {
+    id?: string
+    platformId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewEduSeekerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -41292,6 +45438,131 @@ export namespace Prisma {
     medicationId?: SortOrder
     status?: SortOrder
     dateTime?: SortOrder
+  }
+
+  export type PlatformEduSeekerListRelationFilter = {
+    every?: PlatformEduSeekerWhereInput
+    some?: PlatformEduSeekerWhereInput
+    none?: PlatformEduSeekerWhereInput
+  }
+
+  export type ReviewEduSeekerListRelationFilter = {
+    every?: ReviewEduSeekerWhereInput
+    some?: ReviewEduSeekerWhereInput
+    none?: ReviewEduSeekerWhereInput
+  }
+
+  export type PlatformEduSeekerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ReviewEduSeekerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserEduSeekerCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserEduSeekerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserEduSeekerMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserEduSeekerScalarRelationFilter = {
+    is?: UserEduSeekerWhereInput
+    isNot?: UserEduSeekerWhereInput
+  }
+
+  export type PlatformEduSeekerCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    category?: SortOrder
+    url?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+  }
+
+  export type PlatformEduSeekerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    category?: SortOrder
+    url?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+  }
+
+  export type PlatformEduSeekerMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    description?: SortOrder
+    category?: SortOrder
+    url?: SortOrder
+    submittedBy?: SortOrder
+    createdAt?: SortOrder
+    validated?: SortOrder
+  }
+
+  export type PlatformEduSeekerScalarRelationFilter = {
+    is?: PlatformEduSeekerWhereInput
+    isNot?: PlatformEduSeekerWhereInput
+  }
+
+  export type ReviewEduSeekerCountOrderByAggregateInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewEduSeekerAvgOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type ReviewEduSeekerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewEduSeekerMinOrderByAggregateInput = {
+    id?: SortOrder
+    platformId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewEduSeekerSumOrderByAggregateInput = {
+    rating?: SortOrder
   }
 
   export type PostDIYHomesCreateNestedManyWithoutUserInput = {
@@ -43288,6 +47559,174 @@ export namespace Prisma {
     upsert?: ElderlyCareCompanionAppointmentUpsertWithoutMedicationLogsInput
     connect?: ElderlyCareCompanionAppointmentWhereUniqueInput
     update?: XOR<XOR<ElderlyCareCompanionAppointmentUpdateToOneWithWhereWithoutMedicationLogsInput, ElderlyCareCompanionAppointmentUpdateWithoutMedicationLogsInput>, ElderlyCareCompanionAppointmentUncheckedUpdateWithoutMedicationLogsInput>
+  }
+
+  export type PlatformEduSeekerCreateNestedManyWithoutSubmitterInput = {
+    create?: XOR<PlatformEduSeekerCreateWithoutSubmitterInput, PlatformEduSeekerUncheckedCreateWithoutSubmitterInput> | PlatformEduSeekerCreateWithoutSubmitterInput[] | PlatformEduSeekerUncheckedCreateWithoutSubmitterInput[]
+    connectOrCreate?: PlatformEduSeekerCreateOrConnectWithoutSubmitterInput | PlatformEduSeekerCreateOrConnectWithoutSubmitterInput[]
+    createMany?: PlatformEduSeekerCreateManySubmitterInputEnvelope
+    connect?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+  }
+
+  export type ReviewEduSeekerCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutUserInput, ReviewEduSeekerUncheckedCreateWithoutUserInput> | ReviewEduSeekerCreateWithoutUserInput[] | ReviewEduSeekerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutUserInput | ReviewEduSeekerCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewEduSeekerCreateManyUserInputEnvelope
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+  }
+
+  export type PlatformEduSeekerUncheckedCreateNestedManyWithoutSubmitterInput = {
+    create?: XOR<PlatformEduSeekerCreateWithoutSubmitterInput, PlatformEduSeekerUncheckedCreateWithoutSubmitterInput> | PlatformEduSeekerCreateWithoutSubmitterInput[] | PlatformEduSeekerUncheckedCreateWithoutSubmitterInput[]
+    connectOrCreate?: PlatformEduSeekerCreateOrConnectWithoutSubmitterInput | PlatformEduSeekerCreateOrConnectWithoutSubmitterInput[]
+    createMany?: PlatformEduSeekerCreateManySubmitterInputEnvelope
+    connect?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+  }
+
+  export type ReviewEduSeekerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutUserInput, ReviewEduSeekerUncheckedCreateWithoutUserInput> | ReviewEduSeekerCreateWithoutUserInput[] | ReviewEduSeekerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutUserInput | ReviewEduSeekerCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewEduSeekerCreateManyUserInputEnvelope
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+  }
+
+  export type PlatformEduSeekerUpdateManyWithoutSubmitterNestedInput = {
+    create?: XOR<PlatformEduSeekerCreateWithoutSubmitterInput, PlatformEduSeekerUncheckedCreateWithoutSubmitterInput> | PlatformEduSeekerCreateWithoutSubmitterInput[] | PlatformEduSeekerUncheckedCreateWithoutSubmitterInput[]
+    connectOrCreate?: PlatformEduSeekerCreateOrConnectWithoutSubmitterInput | PlatformEduSeekerCreateOrConnectWithoutSubmitterInput[]
+    upsert?: PlatformEduSeekerUpsertWithWhereUniqueWithoutSubmitterInput | PlatformEduSeekerUpsertWithWhereUniqueWithoutSubmitterInput[]
+    createMany?: PlatformEduSeekerCreateManySubmitterInputEnvelope
+    set?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    disconnect?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    delete?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    connect?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    update?: PlatformEduSeekerUpdateWithWhereUniqueWithoutSubmitterInput | PlatformEduSeekerUpdateWithWhereUniqueWithoutSubmitterInput[]
+    updateMany?: PlatformEduSeekerUpdateManyWithWhereWithoutSubmitterInput | PlatformEduSeekerUpdateManyWithWhereWithoutSubmitterInput[]
+    deleteMany?: PlatformEduSeekerScalarWhereInput | PlatformEduSeekerScalarWhereInput[]
+  }
+
+  export type ReviewEduSeekerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutUserInput, ReviewEduSeekerUncheckedCreateWithoutUserInput> | ReviewEduSeekerCreateWithoutUserInput[] | ReviewEduSeekerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutUserInput | ReviewEduSeekerCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewEduSeekerUpsertWithWhereUniqueWithoutUserInput | ReviewEduSeekerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewEduSeekerCreateManyUserInputEnvelope
+    set?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    disconnect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    delete?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    update?: ReviewEduSeekerUpdateWithWhereUniqueWithoutUserInput | ReviewEduSeekerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewEduSeekerUpdateManyWithWhereWithoutUserInput | ReviewEduSeekerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewEduSeekerScalarWhereInput | ReviewEduSeekerScalarWhereInput[]
+  }
+
+  export type PlatformEduSeekerUncheckedUpdateManyWithoutSubmitterNestedInput = {
+    create?: XOR<PlatformEduSeekerCreateWithoutSubmitterInput, PlatformEduSeekerUncheckedCreateWithoutSubmitterInput> | PlatformEduSeekerCreateWithoutSubmitterInput[] | PlatformEduSeekerUncheckedCreateWithoutSubmitterInput[]
+    connectOrCreate?: PlatformEduSeekerCreateOrConnectWithoutSubmitterInput | PlatformEduSeekerCreateOrConnectWithoutSubmitterInput[]
+    upsert?: PlatformEduSeekerUpsertWithWhereUniqueWithoutSubmitterInput | PlatformEduSeekerUpsertWithWhereUniqueWithoutSubmitterInput[]
+    createMany?: PlatformEduSeekerCreateManySubmitterInputEnvelope
+    set?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    disconnect?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    delete?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    connect?: PlatformEduSeekerWhereUniqueInput | PlatformEduSeekerWhereUniqueInput[]
+    update?: PlatformEduSeekerUpdateWithWhereUniqueWithoutSubmitterInput | PlatformEduSeekerUpdateWithWhereUniqueWithoutSubmitterInput[]
+    updateMany?: PlatformEduSeekerUpdateManyWithWhereWithoutSubmitterInput | PlatformEduSeekerUpdateManyWithWhereWithoutSubmitterInput[]
+    deleteMany?: PlatformEduSeekerScalarWhereInput | PlatformEduSeekerScalarWhereInput[]
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutUserInput, ReviewEduSeekerUncheckedCreateWithoutUserInput> | ReviewEduSeekerCreateWithoutUserInput[] | ReviewEduSeekerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutUserInput | ReviewEduSeekerCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewEduSeekerUpsertWithWhereUniqueWithoutUserInput | ReviewEduSeekerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewEduSeekerCreateManyUserInputEnvelope
+    set?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    disconnect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    delete?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    update?: ReviewEduSeekerUpdateWithWhereUniqueWithoutUserInput | ReviewEduSeekerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewEduSeekerUpdateManyWithWhereWithoutUserInput | ReviewEduSeekerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewEduSeekerScalarWhereInput | ReviewEduSeekerScalarWhereInput[]
+  }
+
+  export type UserEduSeekerCreateNestedOneWithoutPlatformsInput = {
+    create?: XOR<UserEduSeekerCreateWithoutPlatformsInput, UserEduSeekerUncheckedCreateWithoutPlatformsInput>
+    connectOrCreate?: UserEduSeekerCreateOrConnectWithoutPlatformsInput
+    connect?: UserEduSeekerWhereUniqueInput
+  }
+
+  export type ReviewEduSeekerCreateNestedManyWithoutPlatformInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutPlatformInput, ReviewEduSeekerUncheckedCreateWithoutPlatformInput> | ReviewEduSeekerCreateWithoutPlatformInput[] | ReviewEduSeekerUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutPlatformInput | ReviewEduSeekerCreateOrConnectWithoutPlatformInput[]
+    createMany?: ReviewEduSeekerCreateManyPlatformInputEnvelope
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+  }
+
+  export type ReviewEduSeekerUncheckedCreateNestedManyWithoutPlatformInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutPlatformInput, ReviewEduSeekerUncheckedCreateWithoutPlatformInput> | ReviewEduSeekerCreateWithoutPlatformInput[] | ReviewEduSeekerUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutPlatformInput | ReviewEduSeekerCreateOrConnectWithoutPlatformInput[]
+    createMany?: ReviewEduSeekerCreateManyPlatformInputEnvelope
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+  }
+
+  export type UserEduSeekerUpdateOneRequiredWithoutPlatformsNestedInput = {
+    create?: XOR<UserEduSeekerCreateWithoutPlatformsInput, UserEduSeekerUncheckedCreateWithoutPlatformsInput>
+    connectOrCreate?: UserEduSeekerCreateOrConnectWithoutPlatformsInput
+    upsert?: UserEduSeekerUpsertWithoutPlatformsInput
+    connect?: UserEduSeekerWhereUniqueInput
+    update?: XOR<XOR<UserEduSeekerUpdateToOneWithWhereWithoutPlatformsInput, UserEduSeekerUpdateWithoutPlatformsInput>, UserEduSeekerUncheckedUpdateWithoutPlatformsInput>
+  }
+
+  export type ReviewEduSeekerUpdateManyWithoutPlatformNestedInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutPlatformInput, ReviewEduSeekerUncheckedCreateWithoutPlatformInput> | ReviewEduSeekerCreateWithoutPlatformInput[] | ReviewEduSeekerUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutPlatformInput | ReviewEduSeekerCreateOrConnectWithoutPlatformInput[]
+    upsert?: ReviewEduSeekerUpsertWithWhereUniqueWithoutPlatformInput | ReviewEduSeekerUpsertWithWhereUniqueWithoutPlatformInput[]
+    createMany?: ReviewEduSeekerCreateManyPlatformInputEnvelope
+    set?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    disconnect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    delete?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    update?: ReviewEduSeekerUpdateWithWhereUniqueWithoutPlatformInput | ReviewEduSeekerUpdateWithWhereUniqueWithoutPlatformInput[]
+    updateMany?: ReviewEduSeekerUpdateManyWithWhereWithoutPlatformInput | ReviewEduSeekerUpdateManyWithWhereWithoutPlatformInput[]
+    deleteMany?: ReviewEduSeekerScalarWhereInput | ReviewEduSeekerScalarWhereInput[]
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateManyWithoutPlatformNestedInput = {
+    create?: XOR<ReviewEduSeekerCreateWithoutPlatformInput, ReviewEduSeekerUncheckedCreateWithoutPlatformInput> | ReviewEduSeekerCreateWithoutPlatformInput[] | ReviewEduSeekerUncheckedCreateWithoutPlatformInput[]
+    connectOrCreate?: ReviewEduSeekerCreateOrConnectWithoutPlatformInput | ReviewEduSeekerCreateOrConnectWithoutPlatformInput[]
+    upsert?: ReviewEduSeekerUpsertWithWhereUniqueWithoutPlatformInput | ReviewEduSeekerUpsertWithWhereUniqueWithoutPlatformInput[]
+    createMany?: ReviewEduSeekerCreateManyPlatformInputEnvelope
+    set?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    disconnect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    delete?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    connect?: ReviewEduSeekerWhereUniqueInput | ReviewEduSeekerWhereUniqueInput[]
+    update?: ReviewEduSeekerUpdateWithWhereUniqueWithoutPlatformInput | ReviewEduSeekerUpdateWithWhereUniqueWithoutPlatformInput[]
+    updateMany?: ReviewEduSeekerUpdateManyWithWhereWithoutPlatformInput | ReviewEduSeekerUpdateManyWithWhereWithoutPlatformInput[]
+    deleteMany?: ReviewEduSeekerScalarWhereInput | ReviewEduSeekerScalarWhereInput[]
+  }
+
+  export type PlatformEduSeekerCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<PlatformEduSeekerCreateWithoutReviewsInput, PlatformEduSeekerUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: PlatformEduSeekerCreateOrConnectWithoutReviewsInput
+    connect?: PlatformEduSeekerWhereUniqueInput
+  }
+
+  export type UserEduSeekerCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<UserEduSeekerCreateWithoutReviewsInput, UserEduSeekerUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: UserEduSeekerCreateOrConnectWithoutReviewsInput
+    connect?: UserEduSeekerWhereUniqueInput
+  }
+
+  export type PlatformEduSeekerUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<PlatformEduSeekerCreateWithoutReviewsInput, PlatformEduSeekerUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: PlatformEduSeekerCreateOrConnectWithoutReviewsInput
+    upsert?: PlatformEduSeekerUpsertWithoutReviewsInput
+    connect?: PlatformEduSeekerWhereUniqueInput
+    update?: XOR<XOR<PlatformEduSeekerUpdateToOneWithWhereWithoutReviewsInput, PlatformEduSeekerUpdateWithoutReviewsInput>, PlatformEduSeekerUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type UserEduSeekerUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<UserEduSeekerCreateWithoutReviewsInput, UserEduSeekerUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: UserEduSeekerCreateOrConnectWithoutReviewsInput
+    upsert?: UserEduSeekerUpsertWithoutReviewsInput
+    connect?: UserEduSeekerWhereUniqueInput
+    update?: XOR<XOR<UserEduSeekerUpdateToOneWithWhereWithoutReviewsInput, UserEduSeekerUpdateWithoutReviewsInput>, UserEduSeekerUncheckedUpdateWithoutReviewsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -47381,6 +51820,333 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type PlatformEduSeekerCreateWithoutSubmitterInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewEduSeekerCreateNestedManyWithoutPlatformInput
+  }
+
+  export type PlatformEduSeekerUncheckedCreateWithoutSubmitterInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    createdAt?: Date | string
+    validated?: boolean
+    reviews?: ReviewEduSeekerUncheckedCreateNestedManyWithoutPlatformInput
+  }
+
+  export type PlatformEduSeekerCreateOrConnectWithoutSubmitterInput = {
+    where: PlatformEduSeekerWhereUniqueInput
+    create: XOR<PlatformEduSeekerCreateWithoutSubmitterInput, PlatformEduSeekerUncheckedCreateWithoutSubmitterInput>
+  }
+
+  export type PlatformEduSeekerCreateManySubmitterInputEnvelope = {
+    data: PlatformEduSeekerCreateManySubmitterInput | PlatformEduSeekerCreateManySubmitterInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReviewEduSeekerCreateWithoutUserInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    platform: PlatformEduSeekerCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewEduSeekerUncheckedCreateWithoutUserInput = {
+    id?: string
+    platformId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewEduSeekerCreateOrConnectWithoutUserInput = {
+    where: ReviewEduSeekerWhereUniqueInput
+    create: XOR<ReviewEduSeekerCreateWithoutUserInput, ReviewEduSeekerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewEduSeekerCreateManyUserInputEnvelope = {
+    data: ReviewEduSeekerCreateManyUserInput | ReviewEduSeekerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type PlatformEduSeekerUpsertWithWhereUniqueWithoutSubmitterInput = {
+    where: PlatformEduSeekerWhereUniqueInput
+    update: XOR<PlatformEduSeekerUpdateWithoutSubmitterInput, PlatformEduSeekerUncheckedUpdateWithoutSubmitterInput>
+    create: XOR<PlatformEduSeekerCreateWithoutSubmitterInput, PlatformEduSeekerUncheckedCreateWithoutSubmitterInput>
+  }
+
+  export type PlatformEduSeekerUpdateWithWhereUniqueWithoutSubmitterInput = {
+    where: PlatformEduSeekerWhereUniqueInput
+    data: XOR<PlatformEduSeekerUpdateWithoutSubmitterInput, PlatformEduSeekerUncheckedUpdateWithoutSubmitterInput>
+  }
+
+  export type PlatformEduSeekerUpdateManyWithWhereWithoutSubmitterInput = {
+    where: PlatformEduSeekerScalarWhereInput
+    data: XOR<PlatformEduSeekerUpdateManyMutationInput, PlatformEduSeekerUncheckedUpdateManyWithoutSubmitterInput>
+  }
+
+  export type PlatformEduSeekerScalarWhereInput = {
+    AND?: PlatformEduSeekerScalarWhereInput | PlatformEduSeekerScalarWhereInput[]
+    OR?: PlatformEduSeekerScalarWhereInput[]
+    NOT?: PlatformEduSeekerScalarWhereInput | PlatformEduSeekerScalarWhereInput[]
+    id?: StringFilter<"PlatformEduSeeker"> | string
+    name?: StringFilter<"PlatformEduSeeker"> | string
+    description?: StringFilter<"PlatformEduSeeker"> | string
+    category?: StringFilter<"PlatformEduSeeker"> | string
+    url?: StringFilter<"PlatformEduSeeker"> | string
+    submittedBy?: StringFilter<"PlatformEduSeeker"> | string
+    createdAt?: DateTimeFilter<"PlatformEduSeeker"> | Date | string
+    validated?: BoolFilter<"PlatformEduSeeker"> | boolean
+  }
+
+  export type ReviewEduSeekerUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReviewEduSeekerWhereUniqueInput
+    update: XOR<ReviewEduSeekerUpdateWithoutUserInput, ReviewEduSeekerUncheckedUpdateWithoutUserInput>
+    create: XOR<ReviewEduSeekerCreateWithoutUserInput, ReviewEduSeekerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewEduSeekerUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReviewEduSeekerWhereUniqueInput
+    data: XOR<ReviewEduSeekerUpdateWithoutUserInput, ReviewEduSeekerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ReviewEduSeekerUpdateManyWithWhereWithoutUserInput = {
+    where: ReviewEduSeekerScalarWhereInput
+    data: XOR<ReviewEduSeekerUpdateManyMutationInput, ReviewEduSeekerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ReviewEduSeekerScalarWhereInput = {
+    AND?: ReviewEduSeekerScalarWhereInput | ReviewEduSeekerScalarWhereInput[]
+    OR?: ReviewEduSeekerScalarWhereInput[]
+    NOT?: ReviewEduSeekerScalarWhereInput | ReviewEduSeekerScalarWhereInput[]
+    id?: StringFilter<"ReviewEduSeeker"> | string
+    platformId?: StringFilter<"ReviewEduSeeker"> | string
+    userId?: StringFilter<"ReviewEduSeeker"> | string
+    rating?: IntFilter<"ReviewEduSeeker"> | number
+    comment?: StringFilter<"ReviewEduSeeker"> | string
+    validated?: BoolFilter<"ReviewEduSeeker"> | boolean
+    createdAt?: DateTimeFilter<"ReviewEduSeeker"> | Date | string
+  }
+
+  export type UserEduSeekerCreateWithoutPlatformsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    reviews?: ReviewEduSeekerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserEduSeekerUncheckedCreateWithoutPlatformsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    reviews?: ReviewEduSeekerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserEduSeekerCreateOrConnectWithoutPlatformsInput = {
+    where: UserEduSeekerWhereUniqueInput
+    create: XOR<UserEduSeekerCreateWithoutPlatformsInput, UserEduSeekerUncheckedCreateWithoutPlatformsInput>
+  }
+
+  export type ReviewEduSeekerCreateWithoutPlatformInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserEduSeekerCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewEduSeekerUncheckedCreateWithoutPlatformInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewEduSeekerCreateOrConnectWithoutPlatformInput = {
+    where: ReviewEduSeekerWhereUniqueInput
+    create: XOR<ReviewEduSeekerCreateWithoutPlatformInput, ReviewEduSeekerUncheckedCreateWithoutPlatformInput>
+  }
+
+  export type ReviewEduSeekerCreateManyPlatformInputEnvelope = {
+    data: ReviewEduSeekerCreateManyPlatformInput | ReviewEduSeekerCreateManyPlatformInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserEduSeekerUpsertWithoutPlatformsInput = {
+    update: XOR<UserEduSeekerUpdateWithoutPlatformsInput, UserEduSeekerUncheckedUpdateWithoutPlatformsInput>
+    create: XOR<UserEduSeekerCreateWithoutPlatformsInput, UserEduSeekerUncheckedCreateWithoutPlatformsInput>
+    where?: UserEduSeekerWhereInput
+  }
+
+  export type UserEduSeekerUpdateToOneWithWhereWithoutPlatformsInput = {
+    where?: UserEduSeekerWhereInput
+    data: XOR<UserEduSeekerUpdateWithoutPlatformsInput, UserEduSeekerUncheckedUpdateWithoutPlatformsInput>
+  }
+
+  export type UserEduSeekerUpdateWithoutPlatformsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewEduSeekerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserEduSeekerUncheckedUpdateWithoutPlatformsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewEduSeekerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ReviewEduSeekerUpsertWithWhereUniqueWithoutPlatformInput = {
+    where: ReviewEduSeekerWhereUniqueInput
+    update: XOR<ReviewEduSeekerUpdateWithoutPlatformInput, ReviewEduSeekerUncheckedUpdateWithoutPlatformInput>
+    create: XOR<ReviewEduSeekerCreateWithoutPlatformInput, ReviewEduSeekerUncheckedCreateWithoutPlatformInput>
+  }
+
+  export type ReviewEduSeekerUpdateWithWhereUniqueWithoutPlatformInput = {
+    where: ReviewEduSeekerWhereUniqueInput
+    data: XOR<ReviewEduSeekerUpdateWithoutPlatformInput, ReviewEduSeekerUncheckedUpdateWithoutPlatformInput>
+  }
+
+  export type ReviewEduSeekerUpdateManyWithWhereWithoutPlatformInput = {
+    where: ReviewEduSeekerScalarWhereInput
+    data: XOR<ReviewEduSeekerUpdateManyMutationInput, ReviewEduSeekerUncheckedUpdateManyWithoutPlatformInput>
+  }
+
+  export type PlatformEduSeekerCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    createdAt?: Date | string
+    validated?: boolean
+    submitter: UserEduSeekerCreateNestedOneWithoutPlatformsInput
+  }
+
+  export type PlatformEduSeekerUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    submittedBy: string
+    createdAt?: Date | string
+    validated?: boolean
+  }
+
+  export type PlatformEduSeekerCreateOrConnectWithoutReviewsInput = {
+    where: PlatformEduSeekerWhereUniqueInput
+    create: XOR<PlatformEduSeekerCreateWithoutReviewsInput, PlatformEduSeekerUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type UserEduSeekerCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    platforms?: PlatformEduSeekerCreateNestedManyWithoutSubmitterInput
+  }
+
+  export type UserEduSeekerUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    platforms?: PlatformEduSeekerUncheckedCreateNestedManyWithoutSubmitterInput
+  }
+
+  export type UserEduSeekerCreateOrConnectWithoutReviewsInput = {
+    where: UserEduSeekerWhereUniqueInput
+    create: XOR<UserEduSeekerCreateWithoutReviewsInput, UserEduSeekerUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type PlatformEduSeekerUpsertWithoutReviewsInput = {
+    update: XOR<PlatformEduSeekerUpdateWithoutReviewsInput, PlatformEduSeekerUncheckedUpdateWithoutReviewsInput>
+    create: XOR<PlatformEduSeekerCreateWithoutReviewsInput, PlatformEduSeekerUncheckedCreateWithoutReviewsInput>
+    where?: PlatformEduSeekerWhereInput
+  }
+
+  export type PlatformEduSeekerUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: PlatformEduSeekerWhereInput
+    data: XOR<PlatformEduSeekerUpdateWithoutReviewsInput, PlatformEduSeekerUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type PlatformEduSeekerUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    submitter?: UserEduSeekerUpdateOneRequiredWithoutPlatformsNestedInput
+  }
+
+  export type PlatformEduSeekerUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type UserEduSeekerUpsertWithoutReviewsInput = {
+    update: XOR<UserEduSeekerUpdateWithoutReviewsInput, UserEduSeekerUncheckedUpdateWithoutReviewsInput>
+    create: XOR<UserEduSeekerCreateWithoutReviewsInput, UserEduSeekerUncheckedCreateWithoutReviewsInput>
+    where?: UserEduSeekerWhereInput
+  }
+
+  export type UserEduSeekerUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: UserEduSeekerWhereInput
+    data: XOR<UserEduSeekerUpdateWithoutReviewsInput, UserEduSeekerUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type UserEduSeekerUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platforms?: PlatformEduSeekerUpdateManyWithoutSubmitterNestedInput
+  }
+
+  export type UserEduSeekerUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platforms?: PlatformEduSeekerUncheckedUpdateManyWithoutSubmitterNestedInput
+  }
+
   export type PostDIYHomesCreateManyUserInput = {
     id?: string
     title: string
@@ -48495,6 +53261,120 @@ export namespace Prisma {
     userId?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PlatformEduSeekerCreateManySubmitterInput = {
+    id?: string
+    name: string
+    description: string
+    category: string
+    url: string
+    createdAt?: Date | string
+    validated?: boolean
+  }
+
+  export type ReviewEduSeekerCreateManyUserInput = {
+    id?: string
+    platformId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type PlatformEduSeekerUpdateWithoutSubmitterInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewEduSeekerUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type PlatformEduSeekerUncheckedUpdateWithoutSubmitterInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    reviews?: ReviewEduSeekerUncheckedUpdateManyWithoutPlatformNestedInput
+  }
+
+  export type PlatformEduSeekerUncheckedUpdateManyWithoutSubmitterInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    url?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type ReviewEduSeekerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    platform?: PlatformEduSeekerUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platformId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewEduSeekerCreateManyPlatformInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewEduSeekerUpdateWithoutPlatformInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserEduSeekerUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateWithoutPlatformInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewEduSeekerUncheckedUpdateManyWithoutPlatformInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 
