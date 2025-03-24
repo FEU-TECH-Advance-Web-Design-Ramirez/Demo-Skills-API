@@ -210,6 +210,43 @@ exports.Prisma.LanguageLearnerUserVoteScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.GameHubUserScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  role: 'role',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.GameHubPlayerScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  userId: 'userId',
+  rank: 'rank',
+  mainGame: 'mainGame',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.GameHubTournamentScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  game: 'game',
+  date: 'date',
+  rules: 'rules',
+  organizerId: 'organizerId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.GameHubTournamentPlayerScalarFieldEnum = {
+  id: 'id',
+  tournamentId: 'tournamentId',
+  playerId: 'playerId',
+  joinedAt: 'joinedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -231,7 +268,11 @@ exports.Prisma.ModelName = {
   LanguageLearnerPlatform: 'LanguageLearnerPlatform',
   LanguageLearnerReview: 'LanguageLearnerReview',
   LanguageLearnerReviewLike: 'LanguageLearnerReviewLike',
-  LanguageLearnerUserVote: 'LanguageLearnerUserVote'
+  LanguageLearnerUserVote: 'LanguageLearnerUserVote',
+  GameHubUser: 'GameHubUser',
+  GameHubPlayer: 'GameHubPlayer',
+  GameHubTournament: 'GameHubTournament',
+  GameHubTournamentPlayer: 'GameHubTournamentPlayer'
 };
 
 /**

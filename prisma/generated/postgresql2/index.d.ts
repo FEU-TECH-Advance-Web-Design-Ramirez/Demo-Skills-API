@@ -63,6 +63,26 @@ export type LanguageLearnerReviewLike = $Result.DefaultSelection<Prisma.$Languag
  * 
  */
 export type LanguageLearnerUserVote = $Result.DefaultSelection<Prisma.$LanguageLearnerUserVotePayload>
+/**
+ * Model GameHubUser
+ * 
+ */
+export type GameHubUser = $Result.DefaultSelection<Prisma.$GameHubUserPayload>
+/**
+ * Model GameHubPlayer
+ * 
+ */
+export type GameHubPlayer = $Result.DefaultSelection<Prisma.$GameHubPlayerPayload>
+/**
+ * Model GameHubTournament
+ * 
+ */
+export type GameHubTournament = $Result.DefaultSelection<Prisma.$GameHubTournamentPayload>
+/**
+ * Model GameHubTournamentPlayer
+ * 
+ */
+export type GameHubTournamentPlayer = $Result.DefaultSelection<Prisma.$GameHubTournamentPlayerPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -288,6 +308,46 @@ export class PrismaClient<
     * ```
     */
   get languageLearnerUserVote(): Prisma.LanguageLearnerUserVoteDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.gameHubUser`: Exposes CRUD operations for the **GameHubUser** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GameHubUsers
+    * const gameHubUsers = await prisma.gameHubUser.findMany()
+    * ```
+    */
+  get gameHubUser(): Prisma.GameHubUserDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.gameHubPlayer`: Exposes CRUD operations for the **GameHubPlayer** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GameHubPlayers
+    * const gameHubPlayers = await prisma.gameHubPlayer.findMany()
+    * ```
+    */
+  get gameHubPlayer(): Prisma.GameHubPlayerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.gameHubTournament`: Exposes CRUD operations for the **GameHubTournament** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GameHubTournaments
+    * const gameHubTournaments = await prisma.gameHubTournament.findMany()
+    * ```
+    */
+  get gameHubTournament(): Prisma.GameHubTournamentDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.gameHubTournamentPlayer`: Exposes CRUD operations for the **GameHubTournamentPlayer** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GameHubTournamentPlayers
+    * const gameHubTournamentPlayers = await prisma.gameHubTournamentPlayer.findMany()
+    * ```
+    */
+  get gameHubTournamentPlayer(): Prisma.GameHubTournamentPlayerDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -737,7 +797,11 @@ export namespace Prisma {
     LanguageLearnerPlatform: 'LanguageLearnerPlatform',
     LanguageLearnerReview: 'LanguageLearnerReview',
     LanguageLearnerReviewLike: 'LanguageLearnerReviewLike',
-    LanguageLearnerUserVote: 'LanguageLearnerUserVote'
+    LanguageLearnerUserVote: 'LanguageLearnerUserVote',
+    GameHubUser: 'GameHubUser',
+    GameHubPlayer: 'GameHubPlayer',
+    GameHubTournament: 'GameHubTournament',
+    GameHubTournamentPlayer: 'GameHubTournamentPlayer'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -756,7 +820,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote"
+      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote" | "gameHubUser" | "gameHubPlayer" | "gameHubTournament" | "gameHubTournamentPlayer"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1500,6 +1564,302 @@ export namespace Prisma {
           }
         }
       }
+      GameHubUser: {
+        payload: Prisma.$GameHubUserPayload<ExtArgs>
+        fields: Prisma.GameHubUserFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GameHubUserFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GameHubUserFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>
+          }
+          findFirst: {
+            args: Prisma.GameHubUserFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GameHubUserFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>
+          }
+          findMany: {
+            args: Prisma.GameHubUserFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>[]
+          }
+          create: {
+            args: Prisma.GameHubUserCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>
+          }
+          createMany: {
+            args: Prisma.GameHubUserCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GameHubUserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>[]
+          }
+          delete: {
+            args: Prisma.GameHubUserDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>
+          }
+          update: {
+            args: Prisma.GameHubUserUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>
+          }
+          deleteMany: {
+            args: Prisma.GameHubUserDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GameHubUserUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GameHubUserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>[]
+          }
+          upsert: {
+            args: Prisma.GameHubUserUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubUserPayload>
+          }
+          aggregate: {
+            args: Prisma.GameHubUserAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGameHubUser>
+          }
+          groupBy: {
+            args: Prisma.GameHubUserGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GameHubUserGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GameHubUserCountArgs<ExtArgs>
+            result: $Utils.Optional<GameHubUserCountAggregateOutputType> | number
+          }
+        }
+      }
+      GameHubPlayer: {
+        payload: Prisma.$GameHubPlayerPayload<ExtArgs>
+        fields: Prisma.GameHubPlayerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GameHubPlayerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GameHubPlayerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>
+          }
+          findFirst: {
+            args: Prisma.GameHubPlayerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GameHubPlayerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>
+          }
+          findMany: {
+            args: Prisma.GameHubPlayerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>[]
+          }
+          create: {
+            args: Prisma.GameHubPlayerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>
+          }
+          createMany: {
+            args: Prisma.GameHubPlayerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GameHubPlayerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>[]
+          }
+          delete: {
+            args: Prisma.GameHubPlayerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>
+          }
+          update: {
+            args: Prisma.GameHubPlayerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>
+          }
+          deleteMany: {
+            args: Prisma.GameHubPlayerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GameHubPlayerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GameHubPlayerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>[]
+          }
+          upsert: {
+            args: Prisma.GameHubPlayerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubPlayerPayload>
+          }
+          aggregate: {
+            args: Prisma.GameHubPlayerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGameHubPlayer>
+          }
+          groupBy: {
+            args: Prisma.GameHubPlayerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GameHubPlayerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GameHubPlayerCountArgs<ExtArgs>
+            result: $Utils.Optional<GameHubPlayerCountAggregateOutputType> | number
+          }
+        }
+      }
+      GameHubTournament: {
+        payload: Prisma.$GameHubTournamentPayload<ExtArgs>
+        fields: Prisma.GameHubTournamentFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GameHubTournamentFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GameHubTournamentFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>
+          }
+          findFirst: {
+            args: Prisma.GameHubTournamentFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GameHubTournamentFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>
+          }
+          findMany: {
+            args: Prisma.GameHubTournamentFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>[]
+          }
+          create: {
+            args: Prisma.GameHubTournamentCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>
+          }
+          createMany: {
+            args: Prisma.GameHubTournamentCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GameHubTournamentCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>[]
+          }
+          delete: {
+            args: Prisma.GameHubTournamentDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>
+          }
+          update: {
+            args: Prisma.GameHubTournamentUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>
+          }
+          deleteMany: {
+            args: Prisma.GameHubTournamentDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GameHubTournamentUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GameHubTournamentUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>[]
+          }
+          upsert: {
+            args: Prisma.GameHubTournamentUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPayload>
+          }
+          aggregate: {
+            args: Prisma.GameHubTournamentAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGameHubTournament>
+          }
+          groupBy: {
+            args: Prisma.GameHubTournamentGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GameHubTournamentGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GameHubTournamentCountArgs<ExtArgs>
+            result: $Utils.Optional<GameHubTournamentCountAggregateOutputType> | number
+          }
+        }
+      }
+      GameHubTournamentPlayer: {
+        payload: Prisma.$GameHubTournamentPlayerPayload<ExtArgs>
+        fields: Prisma.GameHubTournamentPlayerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GameHubTournamentPlayerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GameHubTournamentPlayerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>
+          }
+          findFirst: {
+            args: Prisma.GameHubTournamentPlayerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GameHubTournamentPlayerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>
+          }
+          findMany: {
+            args: Prisma.GameHubTournamentPlayerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>[]
+          }
+          create: {
+            args: Prisma.GameHubTournamentPlayerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>
+          }
+          createMany: {
+            args: Prisma.GameHubTournamentPlayerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GameHubTournamentPlayerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>[]
+          }
+          delete: {
+            args: Prisma.GameHubTournamentPlayerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>
+          }
+          update: {
+            args: Prisma.GameHubTournamentPlayerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>
+          }
+          deleteMany: {
+            args: Prisma.GameHubTournamentPlayerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GameHubTournamentPlayerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GameHubTournamentPlayerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>[]
+          }
+          upsert: {
+            args: Prisma.GameHubTournamentPlayerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GameHubTournamentPlayerPayload>
+          }
+          aggregate: {
+            args: Prisma.GameHubTournamentPlayerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGameHubTournamentPlayer>
+          }
+          groupBy: {
+            args: Prisma.GameHubTournamentPlayerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GameHubTournamentPlayerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GameHubTournamentPlayerCountArgs<ExtArgs>
+            result: $Utils.Optional<GameHubTournamentPlayerCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -1594,6 +1954,10 @@ export namespace Prisma {
     languageLearnerReview?: LanguageLearnerReviewOmit
     languageLearnerReviewLike?: LanguageLearnerReviewLikeOmit
     languageLearnerUserVote?: LanguageLearnerUserVoteOmit
+    gameHubUser?: GameHubUserOmit
+    gameHubPlayer?: GameHubPlayerOmit
+    gameHubTournament?: GameHubTournamentOmit
+    gameHubTournamentPlayer?: GameHubTournamentPlayerOmit
   }
 
   /* Types for Logging */
@@ -1867,6 +2231,108 @@ export namespace Prisma {
    */
   export type LanguageLearnerReviewCountOutputTypeCountLikesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: LanguageLearnerReviewLikeWhereInput
+  }
+
+
+  /**
+   * Count Type GameHubUserCountOutputType
+   */
+
+  export type GameHubUserCountOutputType = {
+    players: number
+    tournaments: number
+  }
+
+  export type GameHubUserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    players?: boolean | GameHubUserCountOutputTypeCountPlayersArgs
+    tournaments?: boolean | GameHubUserCountOutputTypeCountTournamentsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * GameHubUserCountOutputType without action
+   */
+  export type GameHubUserCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUserCountOutputType
+     */
+    select?: GameHubUserCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * GameHubUserCountOutputType without action
+   */
+  export type GameHubUserCountOutputTypeCountPlayersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubPlayerWhereInput
+  }
+
+  /**
+   * GameHubUserCountOutputType without action
+   */
+  export type GameHubUserCountOutputTypeCountTournamentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubTournamentWhereInput
+  }
+
+
+  /**
+   * Count Type GameHubPlayerCountOutputType
+   */
+
+  export type GameHubPlayerCountOutputType = {
+    tournaments: number
+  }
+
+  export type GameHubPlayerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    tournaments?: boolean | GameHubPlayerCountOutputTypeCountTournamentsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * GameHubPlayerCountOutputType without action
+   */
+  export type GameHubPlayerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayerCountOutputType
+     */
+    select?: GameHubPlayerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * GameHubPlayerCountOutputType without action
+   */
+  export type GameHubPlayerCountOutputTypeCountTournamentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubTournamentPlayerWhereInput
+  }
+
+
+  /**
+   * Count Type GameHubTournamentCountOutputType
+   */
+
+  export type GameHubTournamentCountOutputType = {
+    players: number
+  }
+
+  export type GameHubTournamentCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    players?: boolean | GameHubTournamentCountOutputTypeCountPlayersArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * GameHubTournamentCountOutputType without action
+   */
+  export type GameHubTournamentCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentCountOutputType
+     */
+    select?: GameHubTournamentCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * GameHubTournamentCountOutputType without action
+   */
+  export type GameHubTournamentCountOutputTypeCountPlayersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubTournamentPlayerWhereInput
   }
 
 
@@ -12996,6 +13462,4411 @@ export namespace Prisma {
 
 
   /**
+   * Model GameHubUser
+   */
+
+  export type AggregateGameHubUser = {
+    _count: GameHubUserCountAggregateOutputType | null
+    _min: GameHubUserMinAggregateOutputType | null
+    _max: GameHubUserMaxAggregateOutputType | null
+  }
+
+  export type GameHubUserMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    role: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type GameHubUserMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    role: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type GameHubUserCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    role: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type GameHubUserMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    role?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type GameHubUserMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    role?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type GameHubUserCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    role?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type GameHubUserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubUser to aggregate.
+     */
+    where?: GameHubUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubUsers to fetch.
+     */
+    orderBy?: GameHubUserOrderByWithRelationInput | GameHubUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GameHubUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubUsers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GameHubUsers
+    **/
+    _count?: true | GameHubUserCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GameHubUserMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GameHubUserMaxAggregateInputType
+  }
+
+  export type GetGameHubUserAggregateType<T extends GameHubUserAggregateArgs> = {
+        [P in keyof T & keyof AggregateGameHubUser]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGameHubUser[P]>
+      : GetScalarType<T[P], AggregateGameHubUser[P]>
+  }
+
+
+
+
+  export type GameHubUserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubUserWhereInput
+    orderBy?: GameHubUserOrderByWithAggregationInput | GameHubUserOrderByWithAggregationInput[]
+    by: GameHubUserScalarFieldEnum[] | GameHubUserScalarFieldEnum
+    having?: GameHubUserScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GameHubUserCountAggregateInputType | true
+    _min?: GameHubUserMinAggregateInputType
+    _max?: GameHubUserMaxAggregateInputType
+  }
+
+  export type GameHubUserGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    role: string
+    validated: boolean
+    createdAt: Date
+    _count: GameHubUserCountAggregateOutputType | null
+    _min: GameHubUserMinAggregateOutputType | null
+    _max: GameHubUserMaxAggregateOutputType | null
+  }
+
+  type GetGameHubUserGroupByPayload<T extends GameHubUserGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GameHubUserGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GameHubUserGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GameHubUserGroupByOutputType[P]>
+            : GetScalarType<T[P], GameHubUserGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GameHubUserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    players?: boolean | GameHubUser$playersArgs<ExtArgs>
+    tournaments?: boolean | GameHubUser$tournamentsArgs<ExtArgs>
+    _count?: boolean | GameHubUserCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubUser"]>
+
+  export type GameHubUserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["gameHubUser"]>
+
+  export type GameHubUserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["gameHubUser"]>
+
+  export type GameHubUserSelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    role?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type GameHubUserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "role" | "validated" | "createdAt", ExtArgs["result"]["gameHubUser"]>
+  export type GameHubUserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    players?: boolean | GameHubUser$playersArgs<ExtArgs>
+    tournaments?: boolean | GameHubUser$tournamentsArgs<ExtArgs>
+    _count?: boolean | GameHubUserCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type GameHubUserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type GameHubUserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $GameHubUserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GameHubUser"
+    objects: {
+      players: Prisma.$GameHubPlayerPayload<ExtArgs>[]
+      tournaments: Prisma.$GameHubTournamentPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      role: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["gameHubUser"]>
+    composites: {}
+  }
+
+  type GameHubUserGetPayload<S extends boolean | null | undefined | GameHubUserDefaultArgs> = $Result.GetResult<Prisma.$GameHubUserPayload, S>
+
+  type GameHubUserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GameHubUserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GameHubUserCountAggregateInputType | true
+    }
+
+  export interface GameHubUserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GameHubUser'], meta: { name: 'GameHubUser' } }
+    /**
+     * Find zero or one GameHubUser that matches the filter.
+     * @param {GameHubUserFindUniqueArgs} args - Arguments to find a GameHubUser
+     * @example
+     * // Get one GameHubUser
+     * const gameHubUser = await prisma.gameHubUser.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GameHubUserFindUniqueArgs>(args: SelectSubset<T, GameHubUserFindUniqueArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GameHubUser that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GameHubUserFindUniqueOrThrowArgs} args - Arguments to find a GameHubUser
+     * @example
+     * // Get one GameHubUser
+     * const gameHubUser = await prisma.gameHubUser.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GameHubUserFindUniqueOrThrowArgs>(args: SelectSubset<T, GameHubUserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubUser that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubUserFindFirstArgs} args - Arguments to find a GameHubUser
+     * @example
+     * // Get one GameHubUser
+     * const gameHubUser = await prisma.gameHubUser.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GameHubUserFindFirstArgs>(args?: SelectSubset<T, GameHubUserFindFirstArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubUser that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubUserFindFirstOrThrowArgs} args - Arguments to find a GameHubUser
+     * @example
+     * // Get one GameHubUser
+     * const gameHubUser = await prisma.gameHubUser.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GameHubUserFindFirstOrThrowArgs>(args?: SelectSubset<T, GameHubUserFindFirstOrThrowArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GameHubUsers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubUserFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GameHubUsers
+     * const gameHubUsers = await prisma.gameHubUser.findMany()
+     * 
+     * // Get first 10 GameHubUsers
+     * const gameHubUsers = await prisma.gameHubUser.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const gameHubUserWithIdOnly = await prisma.gameHubUser.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GameHubUserFindManyArgs>(args?: SelectSubset<T, GameHubUserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GameHubUser.
+     * @param {GameHubUserCreateArgs} args - Arguments to create a GameHubUser.
+     * @example
+     * // Create one GameHubUser
+     * const GameHubUser = await prisma.gameHubUser.create({
+     *   data: {
+     *     // ... data to create a GameHubUser
+     *   }
+     * })
+     * 
+     */
+    create<T extends GameHubUserCreateArgs>(args: SelectSubset<T, GameHubUserCreateArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GameHubUsers.
+     * @param {GameHubUserCreateManyArgs} args - Arguments to create many GameHubUsers.
+     * @example
+     * // Create many GameHubUsers
+     * const gameHubUser = await prisma.gameHubUser.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GameHubUserCreateManyArgs>(args?: SelectSubset<T, GameHubUserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GameHubUsers and returns the data saved in the database.
+     * @param {GameHubUserCreateManyAndReturnArgs} args - Arguments to create many GameHubUsers.
+     * @example
+     * // Create many GameHubUsers
+     * const gameHubUser = await prisma.gameHubUser.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GameHubUsers and only return the `id`
+     * const gameHubUserWithIdOnly = await prisma.gameHubUser.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GameHubUserCreateManyAndReturnArgs>(args?: SelectSubset<T, GameHubUserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GameHubUser.
+     * @param {GameHubUserDeleteArgs} args - Arguments to delete one GameHubUser.
+     * @example
+     * // Delete one GameHubUser
+     * const GameHubUser = await prisma.gameHubUser.delete({
+     *   where: {
+     *     // ... filter to delete one GameHubUser
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GameHubUserDeleteArgs>(args: SelectSubset<T, GameHubUserDeleteArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GameHubUser.
+     * @param {GameHubUserUpdateArgs} args - Arguments to update one GameHubUser.
+     * @example
+     * // Update one GameHubUser
+     * const gameHubUser = await prisma.gameHubUser.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GameHubUserUpdateArgs>(args: SelectSubset<T, GameHubUserUpdateArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GameHubUsers.
+     * @param {GameHubUserDeleteManyArgs} args - Arguments to filter GameHubUsers to delete.
+     * @example
+     * // Delete a few GameHubUsers
+     * const { count } = await prisma.gameHubUser.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GameHubUserDeleteManyArgs>(args?: SelectSubset<T, GameHubUserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubUsers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubUserUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GameHubUsers
+     * const gameHubUser = await prisma.gameHubUser.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GameHubUserUpdateManyArgs>(args: SelectSubset<T, GameHubUserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubUsers and returns the data updated in the database.
+     * @param {GameHubUserUpdateManyAndReturnArgs} args - Arguments to update many GameHubUsers.
+     * @example
+     * // Update many GameHubUsers
+     * const gameHubUser = await prisma.gameHubUser.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GameHubUsers and only return the `id`
+     * const gameHubUserWithIdOnly = await prisma.gameHubUser.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GameHubUserUpdateManyAndReturnArgs>(args: SelectSubset<T, GameHubUserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GameHubUser.
+     * @param {GameHubUserUpsertArgs} args - Arguments to update or create a GameHubUser.
+     * @example
+     * // Update or create a GameHubUser
+     * const gameHubUser = await prisma.gameHubUser.upsert({
+     *   create: {
+     *     // ... data to create a GameHubUser
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GameHubUser we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GameHubUserUpsertArgs>(args: SelectSubset<T, GameHubUserUpsertArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GameHubUsers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubUserCountArgs} args - Arguments to filter GameHubUsers to count.
+     * @example
+     * // Count the number of GameHubUsers
+     * const count = await prisma.gameHubUser.count({
+     *   where: {
+     *     // ... the filter for the GameHubUsers we want to count
+     *   }
+     * })
+    **/
+    count<T extends GameHubUserCountArgs>(
+      args?: Subset<T, GameHubUserCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GameHubUserCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GameHubUser.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubUserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GameHubUserAggregateArgs>(args: Subset<T, GameHubUserAggregateArgs>): Prisma.PrismaPromise<GetGameHubUserAggregateType<T>>
+
+    /**
+     * Group by GameHubUser.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubUserGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GameHubUserGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GameHubUserGroupByArgs['orderBy'] }
+        : { orderBy?: GameHubUserGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GameHubUserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGameHubUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GameHubUser model
+   */
+  readonly fields: GameHubUserFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GameHubUser.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GameHubUserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    players<T extends GameHubUser$playersArgs<ExtArgs> = {}>(args?: Subset<T, GameHubUser$playersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    tournaments<T extends GameHubUser$tournamentsArgs<ExtArgs> = {}>(args?: Subset<T, GameHubUser$tournamentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GameHubUser model
+   */ 
+  interface GameHubUserFieldRefs {
+    readonly id: FieldRef<"GameHubUser", 'String'>
+    readonly email: FieldRef<"GameHubUser", 'String'>
+    readonly name: FieldRef<"GameHubUser", 'String'>
+    readonly password: FieldRef<"GameHubUser", 'String'>
+    readonly role: FieldRef<"GameHubUser", 'String'>
+    readonly validated: FieldRef<"GameHubUser", 'Boolean'>
+    readonly createdAt: FieldRef<"GameHubUser", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GameHubUser findUnique
+   */
+  export type GameHubUserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubUser to fetch.
+     */
+    where: GameHubUserWhereUniqueInput
+  }
+
+  /**
+   * GameHubUser findUniqueOrThrow
+   */
+  export type GameHubUserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubUser to fetch.
+     */
+    where: GameHubUserWhereUniqueInput
+  }
+
+  /**
+   * GameHubUser findFirst
+   */
+  export type GameHubUserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubUser to fetch.
+     */
+    where?: GameHubUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubUsers to fetch.
+     */
+    orderBy?: GameHubUserOrderByWithRelationInput | GameHubUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubUsers.
+     */
+    cursor?: GameHubUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubUsers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubUsers.
+     */
+    distinct?: GameHubUserScalarFieldEnum | GameHubUserScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubUser findFirstOrThrow
+   */
+  export type GameHubUserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubUser to fetch.
+     */
+    where?: GameHubUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubUsers to fetch.
+     */
+    orderBy?: GameHubUserOrderByWithRelationInput | GameHubUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubUsers.
+     */
+    cursor?: GameHubUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubUsers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubUsers.
+     */
+    distinct?: GameHubUserScalarFieldEnum | GameHubUserScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubUser findMany
+   */
+  export type GameHubUserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubUsers to fetch.
+     */
+    where?: GameHubUserWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubUsers to fetch.
+     */
+    orderBy?: GameHubUserOrderByWithRelationInput | GameHubUserOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GameHubUsers.
+     */
+    cursor?: GameHubUserWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubUsers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubUsers.
+     */
+    skip?: number
+    distinct?: GameHubUserScalarFieldEnum | GameHubUserScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubUser create
+   */
+  export type GameHubUserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GameHubUser.
+     */
+    data: XOR<GameHubUserCreateInput, GameHubUserUncheckedCreateInput>
+  }
+
+  /**
+   * GameHubUser createMany
+   */
+  export type GameHubUserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GameHubUsers.
+     */
+    data: GameHubUserCreateManyInput | GameHubUserCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GameHubUser createManyAndReturn
+   */
+  export type GameHubUserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * The data used to create many GameHubUsers.
+     */
+    data: GameHubUserCreateManyInput | GameHubUserCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GameHubUser update
+   */
+  export type GameHubUserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GameHubUser.
+     */
+    data: XOR<GameHubUserUpdateInput, GameHubUserUncheckedUpdateInput>
+    /**
+     * Choose, which GameHubUser to update.
+     */
+    where: GameHubUserWhereUniqueInput
+  }
+
+  /**
+   * GameHubUser updateMany
+   */
+  export type GameHubUserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GameHubUsers.
+     */
+    data: XOR<GameHubUserUpdateManyMutationInput, GameHubUserUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubUsers to update
+     */
+    where?: GameHubUserWhereInput
+    /**
+     * Limit how many GameHubUsers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubUser updateManyAndReturn
+   */
+  export type GameHubUserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * The data used to update GameHubUsers.
+     */
+    data: XOR<GameHubUserUpdateManyMutationInput, GameHubUserUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubUsers to update
+     */
+    where?: GameHubUserWhereInput
+    /**
+     * Limit how many GameHubUsers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubUser upsert
+   */
+  export type GameHubUserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GameHubUser to update in case it exists.
+     */
+    where: GameHubUserWhereUniqueInput
+    /**
+     * In case the GameHubUser found by the `where` argument doesn't exist, create a new GameHubUser with this data.
+     */
+    create: XOR<GameHubUserCreateInput, GameHubUserUncheckedCreateInput>
+    /**
+     * In case the GameHubUser was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GameHubUserUpdateInput, GameHubUserUncheckedUpdateInput>
+  }
+
+  /**
+   * GameHubUser delete
+   */
+  export type GameHubUserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+    /**
+     * Filter which GameHubUser to delete.
+     */
+    where: GameHubUserWhereUniqueInput
+  }
+
+  /**
+   * GameHubUser deleteMany
+   */
+  export type GameHubUserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubUsers to delete
+     */
+    where?: GameHubUserWhereInput
+    /**
+     * Limit how many GameHubUsers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubUser.players
+   */
+  export type GameHubUser$playersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    where?: GameHubPlayerWhereInput
+    orderBy?: GameHubPlayerOrderByWithRelationInput | GameHubPlayerOrderByWithRelationInput[]
+    cursor?: GameHubPlayerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GameHubPlayerScalarFieldEnum | GameHubPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubUser.tournaments
+   */
+  export type GameHubUser$tournamentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    where?: GameHubTournamentWhereInput
+    orderBy?: GameHubTournamentOrderByWithRelationInput | GameHubTournamentOrderByWithRelationInput[]
+    cursor?: GameHubTournamentWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GameHubTournamentScalarFieldEnum | GameHubTournamentScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubUser without action
+   */
+  export type GameHubUserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubUser
+     */
+    select?: GameHubUserSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubUser
+     */
+    omit?: GameHubUserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubUserInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model GameHubPlayer
+   */
+
+  export type AggregateGameHubPlayer = {
+    _count: GameHubPlayerCountAggregateOutputType | null
+    _min: GameHubPlayerMinAggregateOutputType | null
+    _max: GameHubPlayerMaxAggregateOutputType | null
+  }
+
+  export type GameHubPlayerMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    userId: string | null
+    rank: string | null
+    mainGame: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type GameHubPlayerMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    userId: string | null
+    rank: string | null
+    mainGame: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type GameHubPlayerCountAggregateOutputType = {
+    id: number
+    name: number
+    userId: number
+    rank: number
+    mainGame: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type GameHubPlayerMinAggregateInputType = {
+    id?: true
+    name?: true
+    userId?: true
+    rank?: true
+    mainGame?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type GameHubPlayerMaxAggregateInputType = {
+    id?: true
+    name?: true
+    userId?: true
+    rank?: true
+    mainGame?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type GameHubPlayerCountAggregateInputType = {
+    id?: true
+    name?: true
+    userId?: true
+    rank?: true
+    mainGame?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type GameHubPlayerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubPlayer to aggregate.
+     */
+    where?: GameHubPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubPlayers to fetch.
+     */
+    orderBy?: GameHubPlayerOrderByWithRelationInput | GameHubPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GameHubPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubPlayers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GameHubPlayers
+    **/
+    _count?: true | GameHubPlayerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GameHubPlayerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GameHubPlayerMaxAggregateInputType
+  }
+
+  export type GetGameHubPlayerAggregateType<T extends GameHubPlayerAggregateArgs> = {
+        [P in keyof T & keyof AggregateGameHubPlayer]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGameHubPlayer[P]>
+      : GetScalarType<T[P], AggregateGameHubPlayer[P]>
+  }
+
+
+
+
+  export type GameHubPlayerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubPlayerWhereInput
+    orderBy?: GameHubPlayerOrderByWithAggregationInput | GameHubPlayerOrderByWithAggregationInput[]
+    by: GameHubPlayerScalarFieldEnum[] | GameHubPlayerScalarFieldEnum
+    having?: GameHubPlayerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GameHubPlayerCountAggregateInputType | true
+    _min?: GameHubPlayerMinAggregateInputType
+    _max?: GameHubPlayerMaxAggregateInputType
+  }
+
+  export type GameHubPlayerGroupByOutputType = {
+    id: string
+    name: string
+    userId: string
+    rank: string
+    mainGame: string
+    validated: boolean
+    createdAt: Date
+    _count: GameHubPlayerCountAggregateOutputType | null
+    _min: GameHubPlayerMinAggregateOutputType | null
+    _max: GameHubPlayerMaxAggregateOutputType | null
+  }
+
+  type GetGameHubPlayerGroupByPayload<T extends GameHubPlayerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GameHubPlayerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GameHubPlayerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GameHubPlayerGroupByOutputType[P]>
+            : GetScalarType<T[P], GameHubPlayerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GameHubPlayerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    userId?: boolean
+    rank?: boolean
+    mainGame?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | GameHubUserDefaultArgs<ExtArgs>
+    tournaments?: boolean | GameHubPlayer$tournamentsArgs<ExtArgs>
+    _count?: boolean | GameHubPlayerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubPlayer"]>
+
+  export type GameHubPlayerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    userId?: boolean
+    rank?: boolean
+    mainGame?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubPlayer"]>
+
+  export type GameHubPlayerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    userId?: boolean
+    rank?: boolean
+    mainGame?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubPlayer"]>
+
+  export type GameHubPlayerSelectScalar = {
+    id?: boolean
+    name?: boolean
+    userId?: boolean
+    rank?: boolean
+    mainGame?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type GameHubPlayerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "userId" | "rank" | "mainGame" | "validated" | "createdAt", ExtArgs["result"]["gameHubPlayer"]>
+  export type GameHubPlayerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | GameHubUserDefaultArgs<ExtArgs>
+    tournaments?: boolean | GameHubPlayer$tournamentsArgs<ExtArgs>
+    _count?: boolean | GameHubPlayerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type GameHubPlayerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }
+  export type GameHubPlayerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }
+
+  export type $GameHubPlayerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GameHubPlayer"
+    objects: {
+      user: Prisma.$GameHubUserPayload<ExtArgs>
+      tournaments: Prisma.$GameHubTournamentPlayerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      userId: string
+      rank: string
+      mainGame: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["gameHubPlayer"]>
+    composites: {}
+  }
+
+  type GameHubPlayerGetPayload<S extends boolean | null | undefined | GameHubPlayerDefaultArgs> = $Result.GetResult<Prisma.$GameHubPlayerPayload, S>
+
+  type GameHubPlayerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GameHubPlayerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GameHubPlayerCountAggregateInputType | true
+    }
+
+  export interface GameHubPlayerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GameHubPlayer'], meta: { name: 'GameHubPlayer' } }
+    /**
+     * Find zero or one GameHubPlayer that matches the filter.
+     * @param {GameHubPlayerFindUniqueArgs} args - Arguments to find a GameHubPlayer
+     * @example
+     * // Get one GameHubPlayer
+     * const gameHubPlayer = await prisma.gameHubPlayer.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GameHubPlayerFindUniqueArgs>(args: SelectSubset<T, GameHubPlayerFindUniqueArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GameHubPlayer that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GameHubPlayerFindUniqueOrThrowArgs} args - Arguments to find a GameHubPlayer
+     * @example
+     * // Get one GameHubPlayer
+     * const gameHubPlayer = await prisma.gameHubPlayer.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GameHubPlayerFindUniqueOrThrowArgs>(args: SelectSubset<T, GameHubPlayerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubPlayer that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubPlayerFindFirstArgs} args - Arguments to find a GameHubPlayer
+     * @example
+     * // Get one GameHubPlayer
+     * const gameHubPlayer = await prisma.gameHubPlayer.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GameHubPlayerFindFirstArgs>(args?: SelectSubset<T, GameHubPlayerFindFirstArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubPlayer that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubPlayerFindFirstOrThrowArgs} args - Arguments to find a GameHubPlayer
+     * @example
+     * // Get one GameHubPlayer
+     * const gameHubPlayer = await prisma.gameHubPlayer.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GameHubPlayerFindFirstOrThrowArgs>(args?: SelectSubset<T, GameHubPlayerFindFirstOrThrowArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GameHubPlayers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubPlayerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GameHubPlayers
+     * const gameHubPlayers = await prisma.gameHubPlayer.findMany()
+     * 
+     * // Get first 10 GameHubPlayers
+     * const gameHubPlayers = await prisma.gameHubPlayer.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const gameHubPlayerWithIdOnly = await prisma.gameHubPlayer.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GameHubPlayerFindManyArgs>(args?: SelectSubset<T, GameHubPlayerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GameHubPlayer.
+     * @param {GameHubPlayerCreateArgs} args - Arguments to create a GameHubPlayer.
+     * @example
+     * // Create one GameHubPlayer
+     * const GameHubPlayer = await prisma.gameHubPlayer.create({
+     *   data: {
+     *     // ... data to create a GameHubPlayer
+     *   }
+     * })
+     * 
+     */
+    create<T extends GameHubPlayerCreateArgs>(args: SelectSubset<T, GameHubPlayerCreateArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GameHubPlayers.
+     * @param {GameHubPlayerCreateManyArgs} args - Arguments to create many GameHubPlayers.
+     * @example
+     * // Create many GameHubPlayers
+     * const gameHubPlayer = await prisma.gameHubPlayer.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GameHubPlayerCreateManyArgs>(args?: SelectSubset<T, GameHubPlayerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GameHubPlayers and returns the data saved in the database.
+     * @param {GameHubPlayerCreateManyAndReturnArgs} args - Arguments to create many GameHubPlayers.
+     * @example
+     * // Create many GameHubPlayers
+     * const gameHubPlayer = await prisma.gameHubPlayer.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GameHubPlayers and only return the `id`
+     * const gameHubPlayerWithIdOnly = await prisma.gameHubPlayer.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GameHubPlayerCreateManyAndReturnArgs>(args?: SelectSubset<T, GameHubPlayerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GameHubPlayer.
+     * @param {GameHubPlayerDeleteArgs} args - Arguments to delete one GameHubPlayer.
+     * @example
+     * // Delete one GameHubPlayer
+     * const GameHubPlayer = await prisma.gameHubPlayer.delete({
+     *   where: {
+     *     // ... filter to delete one GameHubPlayer
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GameHubPlayerDeleteArgs>(args: SelectSubset<T, GameHubPlayerDeleteArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GameHubPlayer.
+     * @param {GameHubPlayerUpdateArgs} args - Arguments to update one GameHubPlayer.
+     * @example
+     * // Update one GameHubPlayer
+     * const gameHubPlayer = await prisma.gameHubPlayer.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GameHubPlayerUpdateArgs>(args: SelectSubset<T, GameHubPlayerUpdateArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GameHubPlayers.
+     * @param {GameHubPlayerDeleteManyArgs} args - Arguments to filter GameHubPlayers to delete.
+     * @example
+     * // Delete a few GameHubPlayers
+     * const { count } = await prisma.gameHubPlayer.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GameHubPlayerDeleteManyArgs>(args?: SelectSubset<T, GameHubPlayerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubPlayers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubPlayerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GameHubPlayers
+     * const gameHubPlayer = await prisma.gameHubPlayer.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GameHubPlayerUpdateManyArgs>(args: SelectSubset<T, GameHubPlayerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubPlayers and returns the data updated in the database.
+     * @param {GameHubPlayerUpdateManyAndReturnArgs} args - Arguments to update many GameHubPlayers.
+     * @example
+     * // Update many GameHubPlayers
+     * const gameHubPlayer = await prisma.gameHubPlayer.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GameHubPlayers and only return the `id`
+     * const gameHubPlayerWithIdOnly = await prisma.gameHubPlayer.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GameHubPlayerUpdateManyAndReturnArgs>(args: SelectSubset<T, GameHubPlayerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GameHubPlayer.
+     * @param {GameHubPlayerUpsertArgs} args - Arguments to update or create a GameHubPlayer.
+     * @example
+     * // Update or create a GameHubPlayer
+     * const gameHubPlayer = await prisma.gameHubPlayer.upsert({
+     *   create: {
+     *     // ... data to create a GameHubPlayer
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GameHubPlayer we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GameHubPlayerUpsertArgs>(args: SelectSubset<T, GameHubPlayerUpsertArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GameHubPlayers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubPlayerCountArgs} args - Arguments to filter GameHubPlayers to count.
+     * @example
+     * // Count the number of GameHubPlayers
+     * const count = await prisma.gameHubPlayer.count({
+     *   where: {
+     *     // ... the filter for the GameHubPlayers we want to count
+     *   }
+     * })
+    **/
+    count<T extends GameHubPlayerCountArgs>(
+      args?: Subset<T, GameHubPlayerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GameHubPlayerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GameHubPlayer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubPlayerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GameHubPlayerAggregateArgs>(args: Subset<T, GameHubPlayerAggregateArgs>): Prisma.PrismaPromise<GetGameHubPlayerAggregateType<T>>
+
+    /**
+     * Group by GameHubPlayer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubPlayerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GameHubPlayerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GameHubPlayerGroupByArgs['orderBy'] }
+        : { orderBy?: GameHubPlayerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GameHubPlayerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGameHubPlayerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GameHubPlayer model
+   */
+  readonly fields: GameHubPlayerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GameHubPlayer.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GameHubPlayerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends GameHubUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, GameHubUserDefaultArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    tournaments<T extends GameHubPlayer$tournamentsArgs<ExtArgs> = {}>(args?: Subset<T, GameHubPlayer$tournamentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GameHubPlayer model
+   */ 
+  interface GameHubPlayerFieldRefs {
+    readonly id: FieldRef<"GameHubPlayer", 'String'>
+    readonly name: FieldRef<"GameHubPlayer", 'String'>
+    readonly userId: FieldRef<"GameHubPlayer", 'String'>
+    readonly rank: FieldRef<"GameHubPlayer", 'String'>
+    readonly mainGame: FieldRef<"GameHubPlayer", 'String'>
+    readonly validated: FieldRef<"GameHubPlayer", 'Boolean'>
+    readonly createdAt: FieldRef<"GameHubPlayer", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GameHubPlayer findUnique
+   */
+  export type GameHubPlayerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubPlayer to fetch.
+     */
+    where: GameHubPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubPlayer findUniqueOrThrow
+   */
+  export type GameHubPlayerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubPlayer to fetch.
+     */
+    where: GameHubPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubPlayer findFirst
+   */
+  export type GameHubPlayerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubPlayer to fetch.
+     */
+    where?: GameHubPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubPlayers to fetch.
+     */
+    orderBy?: GameHubPlayerOrderByWithRelationInput | GameHubPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubPlayers.
+     */
+    cursor?: GameHubPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubPlayers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubPlayers.
+     */
+    distinct?: GameHubPlayerScalarFieldEnum | GameHubPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubPlayer findFirstOrThrow
+   */
+  export type GameHubPlayerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubPlayer to fetch.
+     */
+    where?: GameHubPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubPlayers to fetch.
+     */
+    orderBy?: GameHubPlayerOrderByWithRelationInput | GameHubPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubPlayers.
+     */
+    cursor?: GameHubPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubPlayers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubPlayers.
+     */
+    distinct?: GameHubPlayerScalarFieldEnum | GameHubPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubPlayer findMany
+   */
+  export type GameHubPlayerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubPlayers to fetch.
+     */
+    where?: GameHubPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubPlayers to fetch.
+     */
+    orderBy?: GameHubPlayerOrderByWithRelationInput | GameHubPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GameHubPlayers.
+     */
+    cursor?: GameHubPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubPlayers.
+     */
+    skip?: number
+    distinct?: GameHubPlayerScalarFieldEnum | GameHubPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubPlayer create
+   */
+  export type GameHubPlayerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GameHubPlayer.
+     */
+    data: XOR<GameHubPlayerCreateInput, GameHubPlayerUncheckedCreateInput>
+  }
+
+  /**
+   * GameHubPlayer createMany
+   */
+  export type GameHubPlayerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GameHubPlayers.
+     */
+    data: GameHubPlayerCreateManyInput | GameHubPlayerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GameHubPlayer createManyAndReturn
+   */
+  export type GameHubPlayerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * The data used to create many GameHubPlayers.
+     */
+    data: GameHubPlayerCreateManyInput | GameHubPlayerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GameHubPlayer update
+   */
+  export type GameHubPlayerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GameHubPlayer.
+     */
+    data: XOR<GameHubPlayerUpdateInput, GameHubPlayerUncheckedUpdateInput>
+    /**
+     * Choose, which GameHubPlayer to update.
+     */
+    where: GameHubPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubPlayer updateMany
+   */
+  export type GameHubPlayerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GameHubPlayers.
+     */
+    data: XOR<GameHubPlayerUpdateManyMutationInput, GameHubPlayerUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubPlayers to update
+     */
+    where?: GameHubPlayerWhereInput
+    /**
+     * Limit how many GameHubPlayers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubPlayer updateManyAndReturn
+   */
+  export type GameHubPlayerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * The data used to update GameHubPlayers.
+     */
+    data: XOR<GameHubPlayerUpdateManyMutationInput, GameHubPlayerUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubPlayers to update
+     */
+    where?: GameHubPlayerWhereInput
+    /**
+     * Limit how many GameHubPlayers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GameHubPlayer upsert
+   */
+  export type GameHubPlayerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GameHubPlayer to update in case it exists.
+     */
+    where: GameHubPlayerWhereUniqueInput
+    /**
+     * In case the GameHubPlayer found by the `where` argument doesn't exist, create a new GameHubPlayer with this data.
+     */
+    create: XOR<GameHubPlayerCreateInput, GameHubPlayerUncheckedCreateInput>
+    /**
+     * In case the GameHubPlayer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GameHubPlayerUpdateInput, GameHubPlayerUncheckedUpdateInput>
+  }
+
+  /**
+   * GameHubPlayer delete
+   */
+  export type GameHubPlayerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+    /**
+     * Filter which GameHubPlayer to delete.
+     */
+    where: GameHubPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubPlayer deleteMany
+   */
+  export type GameHubPlayerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubPlayers to delete
+     */
+    where?: GameHubPlayerWhereInput
+    /**
+     * Limit how many GameHubPlayers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubPlayer.tournaments
+   */
+  export type GameHubPlayer$tournamentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    where?: GameHubTournamentPlayerWhereInput
+    orderBy?: GameHubTournamentPlayerOrderByWithRelationInput | GameHubTournamentPlayerOrderByWithRelationInput[]
+    cursor?: GameHubTournamentPlayerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GameHubTournamentPlayerScalarFieldEnum | GameHubTournamentPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubPlayer without action
+   */
+  export type GameHubPlayerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubPlayer
+     */
+    select?: GameHubPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubPlayer
+     */
+    omit?: GameHubPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubPlayerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model GameHubTournament
+   */
+
+  export type AggregateGameHubTournament = {
+    _count: GameHubTournamentCountAggregateOutputType | null
+    _min: GameHubTournamentMinAggregateOutputType | null
+    _max: GameHubTournamentMaxAggregateOutputType | null
+  }
+
+  export type GameHubTournamentMinAggregateOutputType = {
+    id: string | null
+    title: string | null
+    game: string | null
+    date: Date | null
+    rules: string | null
+    organizerId: string | null
+    createdAt: Date | null
+  }
+
+  export type GameHubTournamentMaxAggregateOutputType = {
+    id: string | null
+    title: string | null
+    game: string | null
+    date: Date | null
+    rules: string | null
+    organizerId: string | null
+    createdAt: Date | null
+  }
+
+  export type GameHubTournamentCountAggregateOutputType = {
+    id: number
+    title: number
+    game: number
+    date: number
+    rules: number
+    organizerId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type GameHubTournamentMinAggregateInputType = {
+    id?: true
+    title?: true
+    game?: true
+    date?: true
+    rules?: true
+    organizerId?: true
+    createdAt?: true
+  }
+
+  export type GameHubTournamentMaxAggregateInputType = {
+    id?: true
+    title?: true
+    game?: true
+    date?: true
+    rules?: true
+    organizerId?: true
+    createdAt?: true
+  }
+
+  export type GameHubTournamentCountAggregateInputType = {
+    id?: true
+    title?: true
+    game?: true
+    date?: true
+    rules?: true
+    organizerId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type GameHubTournamentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubTournament to aggregate.
+     */
+    where?: GameHubTournamentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournaments to fetch.
+     */
+    orderBy?: GameHubTournamentOrderByWithRelationInput | GameHubTournamentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GameHubTournamentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournaments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournaments.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GameHubTournaments
+    **/
+    _count?: true | GameHubTournamentCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GameHubTournamentMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GameHubTournamentMaxAggregateInputType
+  }
+
+  export type GetGameHubTournamentAggregateType<T extends GameHubTournamentAggregateArgs> = {
+        [P in keyof T & keyof AggregateGameHubTournament]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGameHubTournament[P]>
+      : GetScalarType<T[P], AggregateGameHubTournament[P]>
+  }
+
+
+
+
+  export type GameHubTournamentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubTournamentWhereInput
+    orderBy?: GameHubTournamentOrderByWithAggregationInput | GameHubTournamentOrderByWithAggregationInput[]
+    by: GameHubTournamentScalarFieldEnum[] | GameHubTournamentScalarFieldEnum
+    having?: GameHubTournamentScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GameHubTournamentCountAggregateInputType | true
+    _min?: GameHubTournamentMinAggregateInputType
+    _max?: GameHubTournamentMaxAggregateInputType
+  }
+
+  export type GameHubTournamentGroupByOutputType = {
+    id: string
+    title: string
+    game: string
+    date: Date
+    rules: string
+    organizerId: string
+    createdAt: Date
+    _count: GameHubTournamentCountAggregateOutputType | null
+    _min: GameHubTournamentMinAggregateOutputType | null
+    _max: GameHubTournamentMaxAggregateOutputType | null
+  }
+
+  type GetGameHubTournamentGroupByPayload<T extends GameHubTournamentGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GameHubTournamentGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GameHubTournamentGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GameHubTournamentGroupByOutputType[P]>
+            : GetScalarType<T[P], GameHubTournamentGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GameHubTournamentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    game?: boolean
+    date?: boolean
+    rules?: boolean
+    organizerId?: boolean
+    createdAt?: boolean
+    organizer?: boolean | GameHubUserDefaultArgs<ExtArgs>
+    players?: boolean | GameHubTournament$playersArgs<ExtArgs>
+    _count?: boolean | GameHubTournamentCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubTournament"]>
+
+  export type GameHubTournamentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    game?: boolean
+    date?: boolean
+    rules?: boolean
+    organizerId?: boolean
+    createdAt?: boolean
+    organizer?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubTournament"]>
+
+  export type GameHubTournamentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    game?: boolean
+    date?: boolean
+    rules?: boolean
+    organizerId?: boolean
+    createdAt?: boolean
+    organizer?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubTournament"]>
+
+  export type GameHubTournamentSelectScalar = {
+    id?: boolean
+    title?: boolean
+    game?: boolean
+    date?: boolean
+    rules?: boolean
+    organizerId?: boolean
+    createdAt?: boolean
+  }
+
+  export type GameHubTournamentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "game" | "date" | "rules" | "organizerId" | "createdAt", ExtArgs["result"]["gameHubTournament"]>
+  export type GameHubTournamentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    organizer?: boolean | GameHubUserDefaultArgs<ExtArgs>
+    players?: boolean | GameHubTournament$playersArgs<ExtArgs>
+    _count?: boolean | GameHubTournamentCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type GameHubTournamentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    organizer?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }
+  export type GameHubTournamentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    organizer?: boolean | GameHubUserDefaultArgs<ExtArgs>
+  }
+
+  export type $GameHubTournamentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GameHubTournament"
+    objects: {
+      organizer: Prisma.$GameHubUserPayload<ExtArgs>
+      players: Prisma.$GameHubTournamentPlayerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      title: string
+      game: string
+      date: Date
+      rules: string
+      organizerId: string
+      createdAt: Date
+    }, ExtArgs["result"]["gameHubTournament"]>
+    composites: {}
+  }
+
+  type GameHubTournamentGetPayload<S extends boolean | null | undefined | GameHubTournamentDefaultArgs> = $Result.GetResult<Prisma.$GameHubTournamentPayload, S>
+
+  type GameHubTournamentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GameHubTournamentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GameHubTournamentCountAggregateInputType | true
+    }
+
+  export interface GameHubTournamentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GameHubTournament'], meta: { name: 'GameHubTournament' } }
+    /**
+     * Find zero or one GameHubTournament that matches the filter.
+     * @param {GameHubTournamentFindUniqueArgs} args - Arguments to find a GameHubTournament
+     * @example
+     * // Get one GameHubTournament
+     * const gameHubTournament = await prisma.gameHubTournament.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GameHubTournamentFindUniqueArgs>(args: SelectSubset<T, GameHubTournamentFindUniqueArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GameHubTournament that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GameHubTournamentFindUniqueOrThrowArgs} args - Arguments to find a GameHubTournament
+     * @example
+     * // Get one GameHubTournament
+     * const gameHubTournament = await prisma.gameHubTournament.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GameHubTournamentFindUniqueOrThrowArgs>(args: SelectSubset<T, GameHubTournamentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubTournament that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentFindFirstArgs} args - Arguments to find a GameHubTournament
+     * @example
+     * // Get one GameHubTournament
+     * const gameHubTournament = await prisma.gameHubTournament.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GameHubTournamentFindFirstArgs>(args?: SelectSubset<T, GameHubTournamentFindFirstArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubTournament that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentFindFirstOrThrowArgs} args - Arguments to find a GameHubTournament
+     * @example
+     * // Get one GameHubTournament
+     * const gameHubTournament = await prisma.gameHubTournament.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GameHubTournamentFindFirstOrThrowArgs>(args?: SelectSubset<T, GameHubTournamentFindFirstOrThrowArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GameHubTournaments that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GameHubTournaments
+     * const gameHubTournaments = await prisma.gameHubTournament.findMany()
+     * 
+     * // Get first 10 GameHubTournaments
+     * const gameHubTournaments = await prisma.gameHubTournament.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const gameHubTournamentWithIdOnly = await prisma.gameHubTournament.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GameHubTournamentFindManyArgs>(args?: SelectSubset<T, GameHubTournamentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GameHubTournament.
+     * @param {GameHubTournamentCreateArgs} args - Arguments to create a GameHubTournament.
+     * @example
+     * // Create one GameHubTournament
+     * const GameHubTournament = await prisma.gameHubTournament.create({
+     *   data: {
+     *     // ... data to create a GameHubTournament
+     *   }
+     * })
+     * 
+     */
+    create<T extends GameHubTournamentCreateArgs>(args: SelectSubset<T, GameHubTournamentCreateArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GameHubTournaments.
+     * @param {GameHubTournamentCreateManyArgs} args - Arguments to create many GameHubTournaments.
+     * @example
+     * // Create many GameHubTournaments
+     * const gameHubTournament = await prisma.gameHubTournament.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GameHubTournamentCreateManyArgs>(args?: SelectSubset<T, GameHubTournamentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GameHubTournaments and returns the data saved in the database.
+     * @param {GameHubTournamentCreateManyAndReturnArgs} args - Arguments to create many GameHubTournaments.
+     * @example
+     * // Create many GameHubTournaments
+     * const gameHubTournament = await prisma.gameHubTournament.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GameHubTournaments and only return the `id`
+     * const gameHubTournamentWithIdOnly = await prisma.gameHubTournament.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GameHubTournamentCreateManyAndReturnArgs>(args?: SelectSubset<T, GameHubTournamentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GameHubTournament.
+     * @param {GameHubTournamentDeleteArgs} args - Arguments to delete one GameHubTournament.
+     * @example
+     * // Delete one GameHubTournament
+     * const GameHubTournament = await prisma.gameHubTournament.delete({
+     *   where: {
+     *     // ... filter to delete one GameHubTournament
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GameHubTournamentDeleteArgs>(args: SelectSubset<T, GameHubTournamentDeleteArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GameHubTournament.
+     * @param {GameHubTournamentUpdateArgs} args - Arguments to update one GameHubTournament.
+     * @example
+     * // Update one GameHubTournament
+     * const gameHubTournament = await prisma.gameHubTournament.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GameHubTournamentUpdateArgs>(args: SelectSubset<T, GameHubTournamentUpdateArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GameHubTournaments.
+     * @param {GameHubTournamentDeleteManyArgs} args - Arguments to filter GameHubTournaments to delete.
+     * @example
+     * // Delete a few GameHubTournaments
+     * const { count } = await prisma.gameHubTournament.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GameHubTournamentDeleteManyArgs>(args?: SelectSubset<T, GameHubTournamentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubTournaments.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GameHubTournaments
+     * const gameHubTournament = await prisma.gameHubTournament.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GameHubTournamentUpdateManyArgs>(args: SelectSubset<T, GameHubTournamentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubTournaments and returns the data updated in the database.
+     * @param {GameHubTournamentUpdateManyAndReturnArgs} args - Arguments to update many GameHubTournaments.
+     * @example
+     * // Update many GameHubTournaments
+     * const gameHubTournament = await prisma.gameHubTournament.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GameHubTournaments and only return the `id`
+     * const gameHubTournamentWithIdOnly = await prisma.gameHubTournament.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GameHubTournamentUpdateManyAndReturnArgs>(args: SelectSubset<T, GameHubTournamentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GameHubTournament.
+     * @param {GameHubTournamentUpsertArgs} args - Arguments to update or create a GameHubTournament.
+     * @example
+     * // Update or create a GameHubTournament
+     * const gameHubTournament = await prisma.gameHubTournament.upsert({
+     *   create: {
+     *     // ... data to create a GameHubTournament
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GameHubTournament we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GameHubTournamentUpsertArgs>(args: SelectSubset<T, GameHubTournamentUpsertArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GameHubTournaments.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentCountArgs} args - Arguments to filter GameHubTournaments to count.
+     * @example
+     * // Count the number of GameHubTournaments
+     * const count = await prisma.gameHubTournament.count({
+     *   where: {
+     *     // ... the filter for the GameHubTournaments we want to count
+     *   }
+     * })
+    **/
+    count<T extends GameHubTournamentCountArgs>(
+      args?: Subset<T, GameHubTournamentCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GameHubTournamentCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GameHubTournament.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GameHubTournamentAggregateArgs>(args: Subset<T, GameHubTournamentAggregateArgs>): Prisma.PrismaPromise<GetGameHubTournamentAggregateType<T>>
+
+    /**
+     * Group by GameHubTournament.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GameHubTournamentGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GameHubTournamentGroupByArgs['orderBy'] }
+        : { orderBy?: GameHubTournamentGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GameHubTournamentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGameHubTournamentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GameHubTournament model
+   */
+  readonly fields: GameHubTournamentFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GameHubTournament.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GameHubTournamentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    organizer<T extends GameHubUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, GameHubUserDefaultArgs<ExtArgs>>): Prisma__GameHubUserClient<$Result.GetResult<Prisma.$GameHubUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    players<T extends GameHubTournament$playersArgs<ExtArgs> = {}>(args?: Subset<T, GameHubTournament$playersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GameHubTournament model
+   */ 
+  interface GameHubTournamentFieldRefs {
+    readonly id: FieldRef<"GameHubTournament", 'String'>
+    readonly title: FieldRef<"GameHubTournament", 'String'>
+    readonly game: FieldRef<"GameHubTournament", 'String'>
+    readonly date: FieldRef<"GameHubTournament", 'DateTime'>
+    readonly rules: FieldRef<"GameHubTournament", 'String'>
+    readonly organizerId: FieldRef<"GameHubTournament", 'String'>
+    readonly createdAt: FieldRef<"GameHubTournament", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GameHubTournament findUnique
+   */
+  export type GameHubTournamentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournament to fetch.
+     */
+    where: GameHubTournamentWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournament findUniqueOrThrow
+   */
+  export type GameHubTournamentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournament to fetch.
+     */
+    where: GameHubTournamentWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournament findFirst
+   */
+  export type GameHubTournamentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournament to fetch.
+     */
+    where?: GameHubTournamentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournaments to fetch.
+     */
+    orderBy?: GameHubTournamentOrderByWithRelationInput | GameHubTournamentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubTournaments.
+     */
+    cursor?: GameHubTournamentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournaments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournaments.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubTournaments.
+     */
+    distinct?: GameHubTournamentScalarFieldEnum | GameHubTournamentScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubTournament findFirstOrThrow
+   */
+  export type GameHubTournamentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournament to fetch.
+     */
+    where?: GameHubTournamentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournaments to fetch.
+     */
+    orderBy?: GameHubTournamentOrderByWithRelationInput | GameHubTournamentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubTournaments.
+     */
+    cursor?: GameHubTournamentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournaments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournaments.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubTournaments.
+     */
+    distinct?: GameHubTournamentScalarFieldEnum | GameHubTournamentScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubTournament findMany
+   */
+  export type GameHubTournamentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournaments to fetch.
+     */
+    where?: GameHubTournamentWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournaments to fetch.
+     */
+    orderBy?: GameHubTournamentOrderByWithRelationInput | GameHubTournamentOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GameHubTournaments.
+     */
+    cursor?: GameHubTournamentWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournaments from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournaments.
+     */
+    skip?: number
+    distinct?: GameHubTournamentScalarFieldEnum | GameHubTournamentScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubTournament create
+   */
+  export type GameHubTournamentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GameHubTournament.
+     */
+    data: XOR<GameHubTournamentCreateInput, GameHubTournamentUncheckedCreateInput>
+  }
+
+  /**
+   * GameHubTournament createMany
+   */
+  export type GameHubTournamentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GameHubTournaments.
+     */
+    data: GameHubTournamentCreateManyInput | GameHubTournamentCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GameHubTournament createManyAndReturn
+   */
+  export type GameHubTournamentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * The data used to create many GameHubTournaments.
+     */
+    data: GameHubTournamentCreateManyInput | GameHubTournamentCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GameHubTournament update
+   */
+  export type GameHubTournamentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GameHubTournament.
+     */
+    data: XOR<GameHubTournamentUpdateInput, GameHubTournamentUncheckedUpdateInput>
+    /**
+     * Choose, which GameHubTournament to update.
+     */
+    where: GameHubTournamentWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournament updateMany
+   */
+  export type GameHubTournamentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GameHubTournaments.
+     */
+    data: XOR<GameHubTournamentUpdateManyMutationInput, GameHubTournamentUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubTournaments to update
+     */
+    where?: GameHubTournamentWhereInput
+    /**
+     * Limit how many GameHubTournaments to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubTournament updateManyAndReturn
+   */
+  export type GameHubTournamentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * The data used to update GameHubTournaments.
+     */
+    data: XOR<GameHubTournamentUpdateManyMutationInput, GameHubTournamentUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubTournaments to update
+     */
+    where?: GameHubTournamentWhereInput
+    /**
+     * Limit how many GameHubTournaments to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GameHubTournament upsert
+   */
+  export type GameHubTournamentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GameHubTournament to update in case it exists.
+     */
+    where: GameHubTournamentWhereUniqueInput
+    /**
+     * In case the GameHubTournament found by the `where` argument doesn't exist, create a new GameHubTournament with this data.
+     */
+    create: XOR<GameHubTournamentCreateInput, GameHubTournamentUncheckedCreateInput>
+    /**
+     * In case the GameHubTournament was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GameHubTournamentUpdateInput, GameHubTournamentUncheckedUpdateInput>
+  }
+
+  /**
+   * GameHubTournament delete
+   */
+  export type GameHubTournamentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+    /**
+     * Filter which GameHubTournament to delete.
+     */
+    where: GameHubTournamentWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournament deleteMany
+   */
+  export type GameHubTournamentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubTournaments to delete
+     */
+    where?: GameHubTournamentWhereInput
+    /**
+     * Limit how many GameHubTournaments to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubTournament.players
+   */
+  export type GameHubTournament$playersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    where?: GameHubTournamentPlayerWhereInput
+    orderBy?: GameHubTournamentPlayerOrderByWithRelationInput | GameHubTournamentPlayerOrderByWithRelationInput[]
+    cursor?: GameHubTournamentPlayerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GameHubTournamentPlayerScalarFieldEnum | GameHubTournamentPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubTournament without action
+   */
+  export type GameHubTournamentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournament
+     */
+    select?: GameHubTournamentSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournament
+     */
+    omit?: GameHubTournamentOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model GameHubTournamentPlayer
+   */
+
+  export type AggregateGameHubTournamentPlayer = {
+    _count: GameHubTournamentPlayerCountAggregateOutputType | null
+    _min: GameHubTournamentPlayerMinAggregateOutputType | null
+    _max: GameHubTournamentPlayerMaxAggregateOutputType | null
+  }
+
+  export type GameHubTournamentPlayerMinAggregateOutputType = {
+    id: string | null
+    tournamentId: string | null
+    playerId: string | null
+    joinedAt: Date | null
+  }
+
+  export type GameHubTournamentPlayerMaxAggregateOutputType = {
+    id: string | null
+    tournamentId: string | null
+    playerId: string | null
+    joinedAt: Date | null
+  }
+
+  export type GameHubTournamentPlayerCountAggregateOutputType = {
+    id: number
+    tournamentId: number
+    playerId: number
+    joinedAt: number
+    _all: number
+  }
+
+
+  export type GameHubTournamentPlayerMinAggregateInputType = {
+    id?: true
+    tournamentId?: true
+    playerId?: true
+    joinedAt?: true
+  }
+
+  export type GameHubTournamentPlayerMaxAggregateInputType = {
+    id?: true
+    tournamentId?: true
+    playerId?: true
+    joinedAt?: true
+  }
+
+  export type GameHubTournamentPlayerCountAggregateInputType = {
+    id?: true
+    tournamentId?: true
+    playerId?: true
+    joinedAt?: true
+    _all?: true
+  }
+
+  export type GameHubTournamentPlayerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubTournamentPlayer to aggregate.
+     */
+    where?: GameHubTournamentPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournamentPlayers to fetch.
+     */
+    orderBy?: GameHubTournamentPlayerOrderByWithRelationInput | GameHubTournamentPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GameHubTournamentPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournamentPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournamentPlayers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GameHubTournamentPlayers
+    **/
+    _count?: true | GameHubTournamentPlayerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GameHubTournamentPlayerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GameHubTournamentPlayerMaxAggregateInputType
+  }
+
+  export type GetGameHubTournamentPlayerAggregateType<T extends GameHubTournamentPlayerAggregateArgs> = {
+        [P in keyof T & keyof AggregateGameHubTournamentPlayer]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGameHubTournamentPlayer[P]>
+      : GetScalarType<T[P], AggregateGameHubTournamentPlayer[P]>
+  }
+
+
+
+
+  export type GameHubTournamentPlayerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GameHubTournamentPlayerWhereInput
+    orderBy?: GameHubTournamentPlayerOrderByWithAggregationInput | GameHubTournamentPlayerOrderByWithAggregationInput[]
+    by: GameHubTournamentPlayerScalarFieldEnum[] | GameHubTournamentPlayerScalarFieldEnum
+    having?: GameHubTournamentPlayerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GameHubTournamentPlayerCountAggregateInputType | true
+    _min?: GameHubTournamentPlayerMinAggregateInputType
+    _max?: GameHubTournamentPlayerMaxAggregateInputType
+  }
+
+  export type GameHubTournamentPlayerGroupByOutputType = {
+    id: string
+    tournamentId: string
+    playerId: string
+    joinedAt: Date
+    _count: GameHubTournamentPlayerCountAggregateOutputType | null
+    _min: GameHubTournamentPlayerMinAggregateOutputType | null
+    _max: GameHubTournamentPlayerMaxAggregateOutputType | null
+  }
+
+  type GetGameHubTournamentPlayerGroupByPayload<T extends GameHubTournamentPlayerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GameHubTournamentPlayerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GameHubTournamentPlayerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GameHubTournamentPlayerGroupByOutputType[P]>
+            : GetScalarType<T[P], GameHubTournamentPlayerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GameHubTournamentPlayerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    tournamentId?: boolean
+    playerId?: boolean
+    joinedAt?: boolean
+    tournament?: boolean | GameHubTournamentDefaultArgs<ExtArgs>
+    player?: boolean | GameHubPlayerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubTournamentPlayer"]>
+
+  export type GameHubTournamentPlayerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    tournamentId?: boolean
+    playerId?: boolean
+    joinedAt?: boolean
+    tournament?: boolean | GameHubTournamentDefaultArgs<ExtArgs>
+    player?: boolean | GameHubPlayerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubTournamentPlayer"]>
+
+  export type GameHubTournamentPlayerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    tournamentId?: boolean
+    playerId?: boolean
+    joinedAt?: boolean
+    tournament?: boolean | GameHubTournamentDefaultArgs<ExtArgs>
+    player?: boolean | GameHubPlayerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gameHubTournamentPlayer"]>
+
+  export type GameHubTournamentPlayerSelectScalar = {
+    id?: boolean
+    tournamentId?: boolean
+    playerId?: boolean
+    joinedAt?: boolean
+  }
+
+  export type GameHubTournamentPlayerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "tournamentId" | "playerId" | "joinedAt", ExtArgs["result"]["gameHubTournamentPlayer"]>
+  export type GameHubTournamentPlayerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    tournament?: boolean | GameHubTournamentDefaultArgs<ExtArgs>
+    player?: boolean | GameHubPlayerDefaultArgs<ExtArgs>
+  }
+  export type GameHubTournamentPlayerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    tournament?: boolean | GameHubTournamentDefaultArgs<ExtArgs>
+    player?: boolean | GameHubPlayerDefaultArgs<ExtArgs>
+  }
+  export type GameHubTournamentPlayerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    tournament?: boolean | GameHubTournamentDefaultArgs<ExtArgs>
+    player?: boolean | GameHubPlayerDefaultArgs<ExtArgs>
+  }
+
+  export type $GameHubTournamentPlayerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GameHubTournamentPlayer"
+    objects: {
+      tournament: Prisma.$GameHubTournamentPayload<ExtArgs>
+      player: Prisma.$GameHubPlayerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      tournamentId: string
+      playerId: string
+      joinedAt: Date
+    }, ExtArgs["result"]["gameHubTournamentPlayer"]>
+    composites: {}
+  }
+
+  type GameHubTournamentPlayerGetPayload<S extends boolean | null | undefined | GameHubTournamentPlayerDefaultArgs> = $Result.GetResult<Prisma.$GameHubTournamentPlayerPayload, S>
+
+  type GameHubTournamentPlayerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GameHubTournamentPlayerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GameHubTournamentPlayerCountAggregateInputType | true
+    }
+
+  export interface GameHubTournamentPlayerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GameHubTournamentPlayer'], meta: { name: 'GameHubTournamentPlayer' } }
+    /**
+     * Find zero or one GameHubTournamentPlayer that matches the filter.
+     * @param {GameHubTournamentPlayerFindUniqueArgs} args - Arguments to find a GameHubTournamentPlayer
+     * @example
+     * // Get one GameHubTournamentPlayer
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GameHubTournamentPlayerFindUniqueArgs>(args: SelectSubset<T, GameHubTournamentPlayerFindUniqueArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GameHubTournamentPlayer that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GameHubTournamentPlayerFindUniqueOrThrowArgs} args - Arguments to find a GameHubTournamentPlayer
+     * @example
+     * // Get one GameHubTournamentPlayer
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GameHubTournamentPlayerFindUniqueOrThrowArgs>(args: SelectSubset<T, GameHubTournamentPlayerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubTournamentPlayer that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentPlayerFindFirstArgs} args - Arguments to find a GameHubTournamentPlayer
+     * @example
+     * // Get one GameHubTournamentPlayer
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GameHubTournamentPlayerFindFirstArgs>(args?: SelectSubset<T, GameHubTournamentPlayerFindFirstArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GameHubTournamentPlayer that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentPlayerFindFirstOrThrowArgs} args - Arguments to find a GameHubTournamentPlayer
+     * @example
+     * // Get one GameHubTournamentPlayer
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GameHubTournamentPlayerFindFirstOrThrowArgs>(args?: SelectSubset<T, GameHubTournamentPlayerFindFirstOrThrowArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GameHubTournamentPlayers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentPlayerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GameHubTournamentPlayers
+     * const gameHubTournamentPlayers = await prisma.gameHubTournamentPlayer.findMany()
+     * 
+     * // Get first 10 GameHubTournamentPlayers
+     * const gameHubTournamentPlayers = await prisma.gameHubTournamentPlayer.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const gameHubTournamentPlayerWithIdOnly = await prisma.gameHubTournamentPlayer.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GameHubTournamentPlayerFindManyArgs>(args?: SelectSubset<T, GameHubTournamentPlayerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GameHubTournamentPlayer.
+     * @param {GameHubTournamentPlayerCreateArgs} args - Arguments to create a GameHubTournamentPlayer.
+     * @example
+     * // Create one GameHubTournamentPlayer
+     * const GameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.create({
+     *   data: {
+     *     // ... data to create a GameHubTournamentPlayer
+     *   }
+     * })
+     * 
+     */
+    create<T extends GameHubTournamentPlayerCreateArgs>(args: SelectSubset<T, GameHubTournamentPlayerCreateArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GameHubTournamentPlayers.
+     * @param {GameHubTournamentPlayerCreateManyArgs} args - Arguments to create many GameHubTournamentPlayers.
+     * @example
+     * // Create many GameHubTournamentPlayers
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GameHubTournamentPlayerCreateManyArgs>(args?: SelectSubset<T, GameHubTournamentPlayerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GameHubTournamentPlayers and returns the data saved in the database.
+     * @param {GameHubTournamentPlayerCreateManyAndReturnArgs} args - Arguments to create many GameHubTournamentPlayers.
+     * @example
+     * // Create many GameHubTournamentPlayers
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GameHubTournamentPlayers and only return the `id`
+     * const gameHubTournamentPlayerWithIdOnly = await prisma.gameHubTournamentPlayer.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GameHubTournamentPlayerCreateManyAndReturnArgs>(args?: SelectSubset<T, GameHubTournamentPlayerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GameHubTournamentPlayer.
+     * @param {GameHubTournamentPlayerDeleteArgs} args - Arguments to delete one GameHubTournamentPlayer.
+     * @example
+     * // Delete one GameHubTournamentPlayer
+     * const GameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.delete({
+     *   where: {
+     *     // ... filter to delete one GameHubTournamentPlayer
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GameHubTournamentPlayerDeleteArgs>(args: SelectSubset<T, GameHubTournamentPlayerDeleteArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GameHubTournamentPlayer.
+     * @param {GameHubTournamentPlayerUpdateArgs} args - Arguments to update one GameHubTournamentPlayer.
+     * @example
+     * // Update one GameHubTournamentPlayer
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GameHubTournamentPlayerUpdateArgs>(args: SelectSubset<T, GameHubTournamentPlayerUpdateArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GameHubTournamentPlayers.
+     * @param {GameHubTournamentPlayerDeleteManyArgs} args - Arguments to filter GameHubTournamentPlayers to delete.
+     * @example
+     * // Delete a few GameHubTournamentPlayers
+     * const { count } = await prisma.gameHubTournamentPlayer.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GameHubTournamentPlayerDeleteManyArgs>(args?: SelectSubset<T, GameHubTournamentPlayerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubTournamentPlayers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentPlayerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GameHubTournamentPlayers
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GameHubTournamentPlayerUpdateManyArgs>(args: SelectSubset<T, GameHubTournamentPlayerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GameHubTournamentPlayers and returns the data updated in the database.
+     * @param {GameHubTournamentPlayerUpdateManyAndReturnArgs} args - Arguments to update many GameHubTournamentPlayers.
+     * @example
+     * // Update many GameHubTournamentPlayers
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GameHubTournamentPlayers and only return the `id`
+     * const gameHubTournamentPlayerWithIdOnly = await prisma.gameHubTournamentPlayer.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GameHubTournamentPlayerUpdateManyAndReturnArgs>(args: SelectSubset<T, GameHubTournamentPlayerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GameHubTournamentPlayer.
+     * @param {GameHubTournamentPlayerUpsertArgs} args - Arguments to update or create a GameHubTournamentPlayer.
+     * @example
+     * // Update or create a GameHubTournamentPlayer
+     * const gameHubTournamentPlayer = await prisma.gameHubTournamentPlayer.upsert({
+     *   create: {
+     *     // ... data to create a GameHubTournamentPlayer
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GameHubTournamentPlayer we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GameHubTournamentPlayerUpsertArgs>(args: SelectSubset<T, GameHubTournamentPlayerUpsertArgs<ExtArgs>>): Prisma__GameHubTournamentPlayerClient<$Result.GetResult<Prisma.$GameHubTournamentPlayerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GameHubTournamentPlayers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentPlayerCountArgs} args - Arguments to filter GameHubTournamentPlayers to count.
+     * @example
+     * // Count the number of GameHubTournamentPlayers
+     * const count = await prisma.gameHubTournamentPlayer.count({
+     *   where: {
+     *     // ... the filter for the GameHubTournamentPlayers we want to count
+     *   }
+     * })
+    **/
+    count<T extends GameHubTournamentPlayerCountArgs>(
+      args?: Subset<T, GameHubTournamentPlayerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GameHubTournamentPlayerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GameHubTournamentPlayer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentPlayerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GameHubTournamentPlayerAggregateArgs>(args: Subset<T, GameHubTournamentPlayerAggregateArgs>): Prisma.PrismaPromise<GetGameHubTournamentPlayerAggregateType<T>>
+
+    /**
+     * Group by GameHubTournamentPlayer.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GameHubTournamentPlayerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GameHubTournamentPlayerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GameHubTournamentPlayerGroupByArgs['orderBy'] }
+        : { orderBy?: GameHubTournamentPlayerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GameHubTournamentPlayerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGameHubTournamentPlayerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GameHubTournamentPlayer model
+   */
+  readonly fields: GameHubTournamentPlayerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GameHubTournamentPlayer.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GameHubTournamentPlayerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    tournament<T extends GameHubTournamentDefaultArgs<ExtArgs> = {}>(args?: Subset<T, GameHubTournamentDefaultArgs<ExtArgs>>): Prisma__GameHubTournamentClient<$Result.GetResult<Prisma.$GameHubTournamentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    player<T extends GameHubPlayerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, GameHubPlayerDefaultArgs<ExtArgs>>): Prisma__GameHubPlayerClient<$Result.GetResult<Prisma.$GameHubPlayerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GameHubTournamentPlayer model
+   */ 
+  interface GameHubTournamentPlayerFieldRefs {
+    readonly id: FieldRef<"GameHubTournamentPlayer", 'String'>
+    readonly tournamentId: FieldRef<"GameHubTournamentPlayer", 'String'>
+    readonly playerId: FieldRef<"GameHubTournamentPlayer", 'String'>
+    readonly joinedAt: FieldRef<"GameHubTournamentPlayer", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GameHubTournamentPlayer findUnique
+   */
+  export type GameHubTournamentPlayerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournamentPlayer to fetch.
+     */
+    where: GameHubTournamentPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournamentPlayer findUniqueOrThrow
+   */
+  export type GameHubTournamentPlayerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournamentPlayer to fetch.
+     */
+    where: GameHubTournamentPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournamentPlayer findFirst
+   */
+  export type GameHubTournamentPlayerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournamentPlayer to fetch.
+     */
+    where?: GameHubTournamentPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournamentPlayers to fetch.
+     */
+    orderBy?: GameHubTournamentPlayerOrderByWithRelationInput | GameHubTournamentPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubTournamentPlayers.
+     */
+    cursor?: GameHubTournamentPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournamentPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournamentPlayers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubTournamentPlayers.
+     */
+    distinct?: GameHubTournamentPlayerScalarFieldEnum | GameHubTournamentPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubTournamentPlayer findFirstOrThrow
+   */
+  export type GameHubTournamentPlayerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournamentPlayer to fetch.
+     */
+    where?: GameHubTournamentPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournamentPlayers to fetch.
+     */
+    orderBy?: GameHubTournamentPlayerOrderByWithRelationInput | GameHubTournamentPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GameHubTournamentPlayers.
+     */
+    cursor?: GameHubTournamentPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournamentPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournamentPlayers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GameHubTournamentPlayers.
+     */
+    distinct?: GameHubTournamentPlayerScalarFieldEnum | GameHubTournamentPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubTournamentPlayer findMany
+   */
+  export type GameHubTournamentPlayerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * Filter, which GameHubTournamentPlayers to fetch.
+     */
+    where?: GameHubTournamentPlayerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GameHubTournamentPlayers to fetch.
+     */
+    orderBy?: GameHubTournamentPlayerOrderByWithRelationInput | GameHubTournamentPlayerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GameHubTournamentPlayers.
+     */
+    cursor?: GameHubTournamentPlayerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GameHubTournamentPlayers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GameHubTournamentPlayers.
+     */
+    skip?: number
+    distinct?: GameHubTournamentPlayerScalarFieldEnum | GameHubTournamentPlayerScalarFieldEnum[]
+  }
+
+  /**
+   * GameHubTournamentPlayer create
+   */
+  export type GameHubTournamentPlayerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GameHubTournamentPlayer.
+     */
+    data: XOR<GameHubTournamentPlayerCreateInput, GameHubTournamentPlayerUncheckedCreateInput>
+  }
+
+  /**
+   * GameHubTournamentPlayer createMany
+   */
+  export type GameHubTournamentPlayerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GameHubTournamentPlayers.
+     */
+    data: GameHubTournamentPlayerCreateManyInput | GameHubTournamentPlayerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GameHubTournamentPlayer createManyAndReturn
+   */
+  export type GameHubTournamentPlayerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * The data used to create many GameHubTournamentPlayers.
+     */
+    data: GameHubTournamentPlayerCreateManyInput | GameHubTournamentPlayerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GameHubTournamentPlayer update
+   */
+  export type GameHubTournamentPlayerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GameHubTournamentPlayer.
+     */
+    data: XOR<GameHubTournamentPlayerUpdateInput, GameHubTournamentPlayerUncheckedUpdateInput>
+    /**
+     * Choose, which GameHubTournamentPlayer to update.
+     */
+    where: GameHubTournamentPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournamentPlayer updateMany
+   */
+  export type GameHubTournamentPlayerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GameHubTournamentPlayers.
+     */
+    data: XOR<GameHubTournamentPlayerUpdateManyMutationInput, GameHubTournamentPlayerUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubTournamentPlayers to update
+     */
+    where?: GameHubTournamentPlayerWhereInput
+    /**
+     * Limit how many GameHubTournamentPlayers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubTournamentPlayer updateManyAndReturn
+   */
+  export type GameHubTournamentPlayerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * The data used to update GameHubTournamentPlayers.
+     */
+    data: XOR<GameHubTournamentPlayerUpdateManyMutationInput, GameHubTournamentPlayerUncheckedUpdateManyInput>
+    /**
+     * Filter which GameHubTournamentPlayers to update
+     */
+    where?: GameHubTournamentPlayerWhereInput
+    /**
+     * Limit how many GameHubTournamentPlayers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GameHubTournamentPlayer upsert
+   */
+  export type GameHubTournamentPlayerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GameHubTournamentPlayer to update in case it exists.
+     */
+    where: GameHubTournamentPlayerWhereUniqueInput
+    /**
+     * In case the GameHubTournamentPlayer found by the `where` argument doesn't exist, create a new GameHubTournamentPlayer with this data.
+     */
+    create: XOR<GameHubTournamentPlayerCreateInput, GameHubTournamentPlayerUncheckedCreateInput>
+    /**
+     * In case the GameHubTournamentPlayer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GameHubTournamentPlayerUpdateInput, GameHubTournamentPlayerUncheckedUpdateInput>
+  }
+
+  /**
+   * GameHubTournamentPlayer delete
+   */
+  export type GameHubTournamentPlayerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+    /**
+     * Filter which GameHubTournamentPlayer to delete.
+     */
+    where: GameHubTournamentPlayerWhereUniqueInput
+  }
+
+  /**
+   * GameHubTournamentPlayer deleteMany
+   */
+  export type GameHubTournamentPlayerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GameHubTournamentPlayers to delete
+     */
+    where?: GameHubTournamentPlayerWhereInput
+    /**
+     * Limit how many GameHubTournamentPlayers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GameHubTournamentPlayer without action
+   */
+  export type GameHubTournamentPlayerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GameHubTournamentPlayer
+     */
+    select?: GameHubTournamentPlayerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GameHubTournamentPlayer
+     */
+    omit?: GameHubTournamentPlayerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GameHubTournamentPlayerInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -13132,6 +18003,55 @@ export namespace Prisma {
   export type LanguageLearnerUserVoteScalarFieldEnum = (typeof LanguageLearnerUserVoteScalarFieldEnum)[keyof typeof LanguageLearnerUserVoteScalarFieldEnum]
 
 
+  export const GameHubUserScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    role: 'role',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type GameHubUserScalarFieldEnum = (typeof GameHubUserScalarFieldEnum)[keyof typeof GameHubUserScalarFieldEnum]
+
+
+  export const GameHubPlayerScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    userId: 'userId',
+    rank: 'rank',
+    mainGame: 'mainGame',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type GameHubPlayerScalarFieldEnum = (typeof GameHubPlayerScalarFieldEnum)[keyof typeof GameHubPlayerScalarFieldEnum]
+
+
+  export const GameHubTournamentScalarFieldEnum: {
+    id: 'id',
+    title: 'title',
+    game: 'game',
+    date: 'date',
+    rules: 'rules',
+    organizerId: 'organizerId',
+    createdAt: 'createdAt'
+  };
+
+  export type GameHubTournamentScalarFieldEnum = (typeof GameHubTournamentScalarFieldEnum)[keyof typeof GameHubTournamentScalarFieldEnum]
+
+
+  export const GameHubTournamentPlayerScalarFieldEnum: {
+    id: 'id',
+    tournamentId: 'tournamentId',
+    playerId: 'playerId',
+    joinedAt: 'joinedAt'
+  };
+
+  export type GameHubTournamentPlayerScalarFieldEnum = (typeof GameHubTournamentPlayerScalarFieldEnum)[keyof typeof GameHubTournamentPlayerScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -13192,6 +18112,13 @@ export namespace Prisma {
    * Reference to a field of type 'Int[]'
    */
   export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 
@@ -13867,6 +18794,264 @@ export namespace Prisma {
     voterId?: StringWithAggregatesFilter<"LanguageLearnerUserVote"> | string
     voteType?: StringWithAggregatesFilter<"LanguageLearnerUserVote"> | string
     createdAt?: DateTimeWithAggregatesFilter<"LanguageLearnerUserVote"> | Date | string
+  }
+
+  export type GameHubUserWhereInput = {
+    AND?: GameHubUserWhereInput | GameHubUserWhereInput[]
+    OR?: GameHubUserWhereInput[]
+    NOT?: GameHubUserWhereInput | GameHubUserWhereInput[]
+    id?: StringFilter<"GameHubUser"> | string
+    email?: StringFilter<"GameHubUser"> | string
+    name?: StringFilter<"GameHubUser"> | string
+    password?: StringFilter<"GameHubUser"> | string
+    role?: StringFilter<"GameHubUser"> | string
+    validated?: BoolFilter<"GameHubUser"> | boolean
+    createdAt?: DateTimeFilter<"GameHubUser"> | Date | string
+    players?: GameHubPlayerListRelationFilter
+    tournaments?: GameHubTournamentListRelationFilter
+  }
+
+  export type GameHubUserOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    players?: GameHubPlayerOrderByRelationAggregateInput
+    tournaments?: GameHubTournamentOrderByRelationAggregateInput
+  }
+
+  export type GameHubUserWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: GameHubUserWhereInput | GameHubUserWhereInput[]
+    OR?: GameHubUserWhereInput[]
+    NOT?: GameHubUserWhereInput | GameHubUserWhereInput[]
+    name?: StringFilter<"GameHubUser"> | string
+    password?: StringFilter<"GameHubUser"> | string
+    role?: StringFilter<"GameHubUser"> | string
+    validated?: BoolFilter<"GameHubUser"> | boolean
+    createdAt?: DateTimeFilter<"GameHubUser"> | Date | string
+    players?: GameHubPlayerListRelationFilter
+    tournaments?: GameHubTournamentListRelationFilter
+  }, "id" | "email">
+
+  export type GameHubUserOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: GameHubUserCountOrderByAggregateInput
+    _max?: GameHubUserMaxOrderByAggregateInput
+    _min?: GameHubUserMinOrderByAggregateInput
+  }
+
+  export type GameHubUserScalarWhereWithAggregatesInput = {
+    AND?: GameHubUserScalarWhereWithAggregatesInput | GameHubUserScalarWhereWithAggregatesInput[]
+    OR?: GameHubUserScalarWhereWithAggregatesInput[]
+    NOT?: GameHubUserScalarWhereWithAggregatesInput | GameHubUserScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GameHubUser"> | string
+    email?: StringWithAggregatesFilter<"GameHubUser"> | string
+    name?: StringWithAggregatesFilter<"GameHubUser"> | string
+    password?: StringWithAggregatesFilter<"GameHubUser"> | string
+    role?: StringWithAggregatesFilter<"GameHubUser"> | string
+    validated?: BoolWithAggregatesFilter<"GameHubUser"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"GameHubUser"> | Date | string
+  }
+
+  export type GameHubPlayerWhereInput = {
+    AND?: GameHubPlayerWhereInput | GameHubPlayerWhereInput[]
+    OR?: GameHubPlayerWhereInput[]
+    NOT?: GameHubPlayerWhereInput | GameHubPlayerWhereInput[]
+    id?: StringFilter<"GameHubPlayer"> | string
+    name?: StringFilter<"GameHubPlayer"> | string
+    userId?: StringFilter<"GameHubPlayer"> | string
+    rank?: StringFilter<"GameHubPlayer"> | string
+    mainGame?: StringFilter<"GameHubPlayer"> | string
+    validated?: BoolFilter<"GameHubPlayer"> | boolean
+    createdAt?: DateTimeFilter<"GameHubPlayer"> | Date | string
+    user?: XOR<GameHubUserScalarRelationFilter, GameHubUserWhereInput>
+    tournaments?: GameHubTournamentPlayerListRelationFilter
+  }
+
+  export type GameHubPlayerOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    userId?: SortOrder
+    rank?: SortOrder
+    mainGame?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    user?: GameHubUserOrderByWithRelationInput
+    tournaments?: GameHubTournamentPlayerOrderByRelationAggregateInput
+  }
+
+  export type GameHubPlayerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: GameHubPlayerWhereInput | GameHubPlayerWhereInput[]
+    OR?: GameHubPlayerWhereInput[]
+    NOT?: GameHubPlayerWhereInput | GameHubPlayerWhereInput[]
+    name?: StringFilter<"GameHubPlayer"> | string
+    userId?: StringFilter<"GameHubPlayer"> | string
+    rank?: StringFilter<"GameHubPlayer"> | string
+    mainGame?: StringFilter<"GameHubPlayer"> | string
+    validated?: BoolFilter<"GameHubPlayer"> | boolean
+    createdAt?: DateTimeFilter<"GameHubPlayer"> | Date | string
+    user?: XOR<GameHubUserScalarRelationFilter, GameHubUserWhereInput>
+    tournaments?: GameHubTournamentPlayerListRelationFilter
+  }, "id">
+
+  export type GameHubPlayerOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    userId?: SortOrder
+    rank?: SortOrder
+    mainGame?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: GameHubPlayerCountOrderByAggregateInput
+    _max?: GameHubPlayerMaxOrderByAggregateInput
+    _min?: GameHubPlayerMinOrderByAggregateInput
+  }
+
+  export type GameHubPlayerScalarWhereWithAggregatesInput = {
+    AND?: GameHubPlayerScalarWhereWithAggregatesInput | GameHubPlayerScalarWhereWithAggregatesInput[]
+    OR?: GameHubPlayerScalarWhereWithAggregatesInput[]
+    NOT?: GameHubPlayerScalarWhereWithAggregatesInput | GameHubPlayerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GameHubPlayer"> | string
+    name?: StringWithAggregatesFilter<"GameHubPlayer"> | string
+    userId?: StringWithAggregatesFilter<"GameHubPlayer"> | string
+    rank?: StringWithAggregatesFilter<"GameHubPlayer"> | string
+    mainGame?: StringWithAggregatesFilter<"GameHubPlayer"> | string
+    validated?: BoolWithAggregatesFilter<"GameHubPlayer"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"GameHubPlayer"> | Date | string
+  }
+
+  export type GameHubTournamentWhereInput = {
+    AND?: GameHubTournamentWhereInput | GameHubTournamentWhereInput[]
+    OR?: GameHubTournamentWhereInput[]
+    NOT?: GameHubTournamentWhereInput | GameHubTournamentWhereInput[]
+    id?: StringFilter<"GameHubTournament"> | string
+    title?: StringFilter<"GameHubTournament"> | string
+    game?: StringFilter<"GameHubTournament"> | string
+    date?: DateTimeFilter<"GameHubTournament"> | Date | string
+    rules?: StringFilter<"GameHubTournament"> | string
+    organizerId?: StringFilter<"GameHubTournament"> | string
+    createdAt?: DateTimeFilter<"GameHubTournament"> | Date | string
+    organizer?: XOR<GameHubUserScalarRelationFilter, GameHubUserWhereInput>
+    players?: GameHubTournamentPlayerListRelationFilter
+  }
+
+  export type GameHubTournamentOrderByWithRelationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    game?: SortOrder
+    date?: SortOrder
+    rules?: SortOrder
+    organizerId?: SortOrder
+    createdAt?: SortOrder
+    organizer?: GameHubUserOrderByWithRelationInput
+    players?: GameHubTournamentPlayerOrderByRelationAggregateInput
+  }
+
+  export type GameHubTournamentWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: GameHubTournamentWhereInput | GameHubTournamentWhereInput[]
+    OR?: GameHubTournamentWhereInput[]
+    NOT?: GameHubTournamentWhereInput | GameHubTournamentWhereInput[]
+    title?: StringFilter<"GameHubTournament"> | string
+    game?: StringFilter<"GameHubTournament"> | string
+    date?: DateTimeFilter<"GameHubTournament"> | Date | string
+    rules?: StringFilter<"GameHubTournament"> | string
+    organizerId?: StringFilter<"GameHubTournament"> | string
+    createdAt?: DateTimeFilter<"GameHubTournament"> | Date | string
+    organizer?: XOR<GameHubUserScalarRelationFilter, GameHubUserWhereInput>
+    players?: GameHubTournamentPlayerListRelationFilter
+  }, "id">
+
+  export type GameHubTournamentOrderByWithAggregationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    game?: SortOrder
+    date?: SortOrder
+    rules?: SortOrder
+    organizerId?: SortOrder
+    createdAt?: SortOrder
+    _count?: GameHubTournamentCountOrderByAggregateInput
+    _max?: GameHubTournamentMaxOrderByAggregateInput
+    _min?: GameHubTournamentMinOrderByAggregateInput
+  }
+
+  export type GameHubTournamentScalarWhereWithAggregatesInput = {
+    AND?: GameHubTournamentScalarWhereWithAggregatesInput | GameHubTournamentScalarWhereWithAggregatesInput[]
+    OR?: GameHubTournamentScalarWhereWithAggregatesInput[]
+    NOT?: GameHubTournamentScalarWhereWithAggregatesInput | GameHubTournamentScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GameHubTournament"> | string
+    title?: StringWithAggregatesFilter<"GameHubTournament"> | string
+    game?: StringWithAggregatesFilter<"GameHubTournament"> | string
+    date?: DateTimeWithAggregatesFilter<"GameHubTournament"> | Date | string
+    rules?: StringWithAggregatesFilter<"GameHubTournament"> | string
+    organizerId?: StringWithAggregatesFilter<"GameHubTournament"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"GameHubTournament"> | Date | string
+  }
+
+  export type GameHubTournamentPlayerWhereInput = {
+    AND?: GameHubTournamentPlayerWhereInput | GameHubTournamentPlayerWhereInput[]
+    OR?: GameHubTournamentPlayerWhereInput[]
+    NOT?: GameHubTournamentPlayerWhereInput | GameHubTournamentPlayerWhereInput[]
+    id?: StringFilter<"GameHubTournamentPlayer"> | string
+    tournamentId?: StringFilter<"GameHubTournamentPlayer"> | string
+    playerId?: StringFilter<"GameHubTournamentPlayer"> | string
+    joinedAt?: DateTimeFilter<"GameHubTournamentPlayer"> | Date | string
+    tournament?: XOR<GameHubTournamentScalarRelationFilter, GameHubTournamentWhereInput>
+    player?: XOR<GameHubPlayerScalarRelationFilter, GameHubPlayerWhereInput>
+  }
+
+  export type GameHubTournamentPlayerOrderByWithRelationInput = {
+    id?: SortOrder
+    tournamentId?: SortOrder
+    playerId?: SortOrder
+    joinedAt?: SortOrder
+    tournament?: GameHubTournamentOrderByWithRelationInput
+    player?: GameHubPlayerOrderByWithRelationInput
+  }
+
+  export type GameHubTournamentPlayerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    tournamentId_playerId?: GameHubTournamentPlayerTournamentIdPlayerIdCompoundUniqueInput
+    AND?: GameHubTournamentPlayerWhereInput | GameHubTournamentPlayerWhereInput[]
+    OR?: GameHubTournamentPlayerWhereInput[]
+    NOT?: GameHubTournamentPlayerWhereInput | GameHubTournamentPlayerWhereInput[]
+    tournamentId?: StringFilter<"GameHubTournamentPlayer"> | string
+    playerId?: StringFilter<"GameHubTournamentPlayer"> | string
+    joinedAt?: DateTimeFilter<"GameHubTournamentPlayer"> | Date | string
+    tournament?: XOR<GameHubTournamentScalarRelationFilter, GameHubTournamentWhereInput>
+    player?: XOR<GameHubPlayerScalarRelationFilter, GameHubPlayerWhereInput>
+  }, "id" | "tournamentId_playerId">
+
+  export type GameHubTournamentPlayerOrderByWithAggregationInput = {
+    id?: SortOrder
+    tournamentId?: SortOrder
+    playerId?: SortOrder
+    joinedAt?: SortOrder
+    _count?: GameHubTournamentPlayerCountOrderByAggregateInput
+    _max?: GameHubTournamentPlayerMaxOrderByAggregateInput
+    _min?: GameHubTournamentPlayerMinOrderByAggregateInput
+  }
+
+  export type GameHubTournamentPlayerScalarWhereWithAggregatesInput = {
+    AND?: GameHubTournamentPlayerScalarWhereWithAggregatesInput | GameHubTournamentPlayerScalarWhereWithAggregatesInput[]
+    OR?: GameHubTournamentPlayerScalarWhereWithAggregatesInput[]
+    NOT?: GameHubTournamentPlayerScalarWhereWithAggregatesInput | GameHubTournamentPlayerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GameHubTournamentPlayer"> | string
+    tournamentId?: StringWithAggregatesFilter<"GameHubTournamentPlayer"> | string
+    playerId?: StringWithAggregatesFilter<"GameHubTournamentPlayer"> | string
+    joinedAt?: DateTimeWithAggregatesFilter<"GameHubTournamentPlayer"> | Date | string
   }
 
   export type EventOrganizerUserCreateInput = {
@@ -14553,6 +19738,277 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type GameHubUserCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    validated?: boolean
+    createdAt?: Date | string
+    players?: GameHubPlayerCreateNestedManyWithoutUserInput
+    tournaments?: GameHubTournamentCreateNestedManyWithoutOrganizerInput
+  }
+
+  export type GameHubUserUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    validated?: boolean
+    createdAt?: Date | string
+    players?: GameHubPlayerUncheckedCreateNestedManyWithoutUserInput
+    tournaments?: GameHubTournamentUncheckedCreateNestedManyWithoutOrganizerInput
+  }
+
+  export type GameHubUserUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    players?: GameHubPlayerUpdateManyWithoutUserNestedInput
+    tournaments?: GameHubTournamentUpdateManyWithoutOrganizerNestedInput
+  }
+
+  export type GameHubUserUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    players?: GameHubPlayerUncheckedUpdateManyWithoutUserNestedInput
+    tournaments?: GameHubTournamentUncheckedUpdateManyWithoutOrganizerNestedInput
+  }
+
+  export type GameHubUserCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type GameHubUserUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubUserUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubPlayerCreateInput = {
+    id?: string
+    name: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: GameHubUserCreateNestedOneWithoutPlayersInput
+    tournaments?: GameHubTournamentPlayerCreateNestedManyWithoutPlayerInput
+  }
+
+  export type GameHubPlayerUncheckedCreateInput = {
+    id?: string
+    name: string
+    userId: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+    tournaments?: GameHubTournamentPlayerUncheckedCreateNestedManyWithoutPlayerInput
+  }
+
+  export type GameHubPlayerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: GameHubUserUpdateOneRequiredWithoutPlayersNestedInput
+    tournaments?: GameHubTournamentPlayerUpdateManyWithoutPlayerNestedInput
+  }
+
+  export type GameHubPlayerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tournaments?: GameHubTournamentPlayerUncheckedUpdateManyWithoutPlayerNestedInput
+  }
+
+  export type GameHubPlayerCreateManyInput = {
+    id?: string
+    name: string
+    userId: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type GameHubPlayerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubPlayerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentCreateInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    createdAt?: Date | string
+    organizer: GameHubUserCreateNestedOneWithoutTournamentsInput
+    players?: GameHubTournamentPlayerCreateNestedManyWithoutTournamentInput
+  }
+
+  export type GameHubTournamentUncheckedCreateInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    organizerId: string
+    createdAt?: Date | string
+    players?: GameHubTournamentPlayerUncheckedCreateNestedManyWithoutTournamentInput
+  }
+
+  export type GameHubTournamentUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizer?: GameHubUserUpdateOneRequiredWithoutTournamentsNestedInput
+    players?: GameHubTournamentPlayerUpdateManyWithoutTournamentNestedInput
+  }
+
+  export type GameHubTournamentUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    organizerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    players?: GameHubTournamentPlayerUncheckedUpdateManyWithoutTournamentNestedInput
+  }
+
+  export type GameHubTournamentCreateManyInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    organizerId: string
+    createdAt?: Date | string
+  }
+
+  export type GameHubTournamentUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    organizerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentPlayerCreateInput = {
+    id?: string
+    joinedAt?: Date | string
+    tournament: GameHubTournamentCreateNestedOneWithoutPlayersInput
+    player: GameHubPlayerCreateNestedOneWithoutTournamentsInput
+  }
+
+  export type GameHubTournamentPlayerUncheckedCreateInput = {
+    id?: string
+    tournamentId: string
+    playerId: string
+    joinedAt?: Date | string
+  }
+
+  export type GameHubTournamentPlayerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tournament?: GameHubTournamentUpdateOneRequiredWithoutPlayersNestedInput
+    player?: GameHubPlayerUpdateOneRequiredWithoutTournamentsNestedInput
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    tournamentId?: StringFieldUpdateOperationsInput | string
+    playerId?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentPlayerCreateManyInput = {
+    id?: string
+    tournamentId: string
+    playerId: string
+    joinedAt?: Date | string
+  }
+
+  export type GameHubTournamentPlayerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    tournamentId?: StringFieldUpdateOperationsInput | string
+    playerId?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -15041,6 +20497,180 @@ export namespace Prisma {
     voterId?: SortOrder
     voteType?: SortOrder
     createdAt?: SortOrder
+  }
+
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type GameHubPlayerListRelationFilter = {
+    every?: GameHubPlayerWhereInput
+    some?: GameHubPlayerWhereInput
+    none?: GameHubPlayerWhereInput
+  }
+
+  export type GameHubTournamentListRelationFilter = {
+    every?: GameHubTournamentWhereInput
+    some?: GameHubTournamentWhereInput
+    none?: GameHubTournamentWhereInput
+  }
+
+  export type GameHubPlayerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type GameHubTournamentOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type GameHubUserCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubUserMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubUserMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    role?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type GameHubUserScalarRelationFilter = {
+    is?: GameHubUserWhereInput
+    isNot?: GameHubUserWhereInput
+  }
+
+  export type GameHubTournamentPlayerListRelationFilter = {
+    every?: GameHubTournamentPlayerWhereInput
+    some?: GameHubTournamentPlayerWhereInput
+    none?: GameHubTournamentPlayerWhereInput
+  }
+
+  export type GameHubTournamentPlayerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type GameHubPlayerCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    userId?: SortOrder
+    rank?: SortOrder
+    mainGame?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubPlayerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    userId?: SortOrder
+    rank?: SortOrder
+    mainGame?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubPlayerMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    userId?: SortOrder
+    rank?: SortOrder
+    mainGame?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubTournamentCountOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    game?: SortOrder
+    date?: SortOrder
+    rules?: SortOrder
+    organizerId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubTournamentMaxOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    game?: SortOrder
+    date?: SortOrder
+    rules?: SortOrder
+    organizerId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubTournamentMinOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    game?: SortOrder
+    date?: SortOrder
+    rules?: SortOrder
+    organizerId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GameHubTournamentScalarRelationFilter = {
+    is?: GameHubTournamentWhereInput
+    isNot?: GameHubTournamentWhereInput
+  }
+
+  export type GameHubPlayerScalarRelationFilter = {
+    is?: GameHubPlayerWhereInput
+    isNot?: GameHubPlayerWhereInput
+  }
+
+  export type GameHubTournamentPlayerTournamentIdPlayerIdCompoundUniqueInput = {
+    tournamentId: string
+    playerId: string
+  }
+
+  export type GameHubTournamentPlayerCountOrderByAggregateInput = {
+    id?: SortOrder
+    tournamentId?: SortOrder
+    playerId?: SortOrder
+    joinedAt?: SortOrder
+  }
+
+  export type GameHubTournamentPlayerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    tournamentId?: SortOrder
+    playerId?: SortOrder
+    joinedAt?: SortOrder
+  }
+
+  export type GameHubTournamentPlayerMinOrderByAggregateInput = {
+    id?: SortOrder
+    tournamentId?: SortOrder
+    playerId?: SortOrder
+    joinedAt?: SortOrder
   }
 
   export type EventOrganizerTaskCreateNestedManyWithoutUserInput = {
@@ -15675,6 +21305,234 @@ export namespace Prisma {
     update?: XOR<XOR<LanguageLearnerUserUpdateToOneWithWhereWithoutVotesGivenInput, LanguageLearnerUserUpdateWithoutVotesGivenInput>, LanguageLearnerUserUncheckedUpdateWithoutVotesGivenInput>
   }
 
+  export type GameHubPlayerCreateNestedManyWithoutUserInput = {
+    create?: XOR<GameHubPlayerCreateWithoutUserInput, GameHubPlayerUncheckedCreateWithoutUserInput> | GameHubPlayerCreateWithoutUserInput[] | GameHubPlayerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GameHubPlayerCreateOrConnectWithoutUserInput | GameHubPlayerCreateOrConnectWithoutUserInput[]
+    createMany?: GameHubPlayerCreateManyUserInputEnvelope
+    connect?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+  }
+
+  export type GameHubTournamentCreateNestedManyWithoutOrganizerInput = {
+    create?: XOR<GameHubTournamentCreateWithoutOrganizerInput, GameHubTournamentUncheckedCreateWithoutOrganizerInput> | GameHubTournamentCreateWithoutOrganizerInput[] | GameHubTournamentUncheckedCreateWithoutOrganizerInput[]
+    connectOrCreate?: GameHubTournamentCreateOrConnectWithoutOrganizerInput | GameHubTournamentCreateOrConnectWithoutOrganizerInput[]
+    createMany?: GameHubTournamentCreateManyOrganizerInputEnvelope
+    connect?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+  }
+
+  export type GameHubPlayerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<GameHubPlayerCreateWithoutUserInput, GameHubPlayerUncheckedCreateWithoutUserInput> | GameHubPlayerCreateWithoutUserInput[] | GameHubPlayerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GameHubPlayerCreateOrConnectWithoutUserInput | GameHubPlayerCreateOrConnectWithoutUserInput[]
+    createMany?: GameHubPlayerCreateManyUserInputEnvelope
+    connect?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+  }
+
+  export type GameHubTournamentUncheckedCreateNestedManyWithoutOrganizerInput = {
+    create?: XOR<GameHubTournamentCreateWithoutOrganizerInput, GameHubTournamentUncheckedCreateWithoutOrganizerInput> | GameHubTournamentCreateWithoutOrganizerInput[] | GameHubTournamentUncheckedCreateWithoutOrganizerInput[]
+    connectOrCreate?: GameHubTournamentCreateOrConnectWithoutOrganizerInput | GameHubTournamentCreateOrConnectWithoutOrganizerInput[]
+    createMany?: GameHubTournamentCreateManyOrganizerInputEnvelope
+    connect?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+  }
+
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
+  }
+
+  export type GameHubPlayerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<GameHubPlayerCreateWithoutUserInput, GameHubPlayerUncheckedCreateWithoutUserInput> | GameHubPlayerCreateWithoutUserInput[] | GameHubPlayerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GameHubPlayerCreateOrConnectWithoutUserInput | GameHubPlayerCreateOrConnectWithoutUserInput[]
+    upsert?: GameHubPlayerUpsertWithWhereUniqueWithoutUserInput | GameHubPlayerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: GameHubPlayerCreateManyUserInputEnvelope
+    set?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    disconnect?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    delete?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    connect?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    update?: GameHubPlayerUpdateWithWhereUniqueWithoutUserInput | GameHubPlayerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: GameHubPlayerUpdateManyWithWhereWithoutUserInput | GameHubPlayerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: GameHubPlayerScalarWhereInput | GameHubPlayerScalarWhereInput[]
+  }
+
+  export type GameHubTournamentUpdateManyWithoutOrganizerNestedInput = {
+    create?: XOR<GameHubTournamentCreateWithoutOrganizerInput, GameHubTournamentUncheckedCreateWithoutOrganizerInput> | GameHubTournamentCreateWithoutOrganizerInput[] | GameHubTournamentUncheckedCreateWithoutOrganizerInput[]
+    connectOrCreate?: GameHubTournamentCreateOrConnectWithoutOrganizerInput | GameHubTournamentCreateOrConnectWithoutOrganizerInput[]
+    upsert?: GameHubTournamentUpsertWithWhereUniqueWithoutOrganizerInput | GameHubTournamentUpsertWithWhereUniqueWithoutOrganizerInput[]
+    createMany?: GameHubTournamentCreateManyOrganizerInputEnvelope
+    set?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    disconnect?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    delete?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    connect?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    update?: GameHubTournamentUpdateWithWhereUniqueWithoutOrganizerInput | GameHubTournamentUpdateWithWhereUniqueWithoutOrganizerInput[]
+    updateMany?: GameHubTournamentUpdateManyWithWhereWithoutOrganizerInput | GameHubTournamentUpdateManyWithWhereWithoutOrganizerInput[]
+    deleteMany?: GameHubTournamentScalarWhereInput | GameHubTournamentScalarWhereInput[]
+  }
+
+  export type GameHubPlayerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<GameHubPlayerCreateWithoutUserInput, GameHubPlayerUncheckedCreateWithoutUserInput> | GameHubPlayerCreateWithoutUserInput[] | GameHubPlayerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GameHubPlayerCreateOrConnectWithoutUserInput | GameHubPlayerCreateOrConnectWithoutUserInput[]
+    upsert?: GameHubPlayerUpsertWithWhereUniqueWithoutUserInput | GameHubPlayerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: GameHubPlayerCreateManyUserInputEnvelope
+    set?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    disconnect?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    delete?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    connect?: GameHubPlayerWhereUniqueInput | GameHubPlayerWhereUniqueInput[]
+    update?: GameHubPlayerUpdateWithWhereUniqueWithoutUserInput | GameHubPlayerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: GameHubPlayerUpdateManyWithWhereWithoutUserInput | GameHubPlayerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: GameHubPlayerScalarWhereInput | GameHubPlayerScalarWhereInput[]
+  }
+
+  export type GameHubTournamentUncheckedUpdateManyWithoutOrganizerNestedInput = {
+    create?: XOR<GameHubTournamentCreateWithoutOrganizerInput, GameHubTournamentUncheckedCreateWithoutOrganizerInput> | GameHubTournamentCreateWithoutOrganizerInput[] | GameHubTournamentUncheckedCreateWithoutOrganizerInput[]
+    connectOrCreate?: GameHubTournamentCreateOrConnectWithoutOrganizerInput | GameHubTournamentCreateOrConnectWithoutOrganizerInput[]
+    upsert?: GameHubTournamentUpsertWithWhereUniqueWithoutOrganizerInput | GameHubTournamentUpsertWithWhereUniqueWithoutOrganizerInput[]
+    createMany?: GameHubTournamentCreateManyOrganizerInputEnvelope
+    set?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    disconnect?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    delete?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    connect?: GameHubTournamentWhereUniqueInput | GameHubTournamentWhereUniqueInput[]
+    update?: GameHubTournamentUpdateWithWhereUniqueWithoutOrganizerInput | GameHubTournamentUpdateWithWhereUniqueWithoutOrganizerInput[]
+    updateMany?: GameHubTournamentUpdateManyWithWhereWithoutOrganizerInput | GameHubTournamentUpdateManyWithWhereWithoutOrganizerInput[]
+    deleteMany?: GameHubTournamentScalarWhereInput | GameHubTournamentScalarWhereInput[]
+  }
+
+  export type GameHubUserCreateNestedOneWithoutPlayersInput = {
+    create?: XOR<GameHubUserCreateWithoutPlayersInput, GameHubUserUncheckedCreateWithoutPlayersInput>
+    connectOrCreate?: GameHubUserCreateOrConnectWithoutPlayersInput
+    connect?: GameHubUserWhereUniqueInput
+  }
+
+  export type GameHubTournamentPlayerCreateNestedManyWithoutPlayerInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutPlayerInput, GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput> | GameHubTournamentPlayerCreateWithoutPlayerInput[] | GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput | GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput[]
+    createMany?: GameHubTournamentPlayerCreateManyPlayerInputEnvelope
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+  }
+
+  export type GameHubTournamentPlayerUncheckedCreateNestedManyWithoutPlayerInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutPlayerInput, GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput> | GameHubTournamentPlayerCreateWithoutPlayerInput[] | GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput | GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput[]
+    createMany?: GameHubTournamentPlayerCreateManyPlayerInputEnvelope
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+  }
+
+  export type GameHubUserUpdateOneRequiredWithoutPlayersNestedInput = {
+    create?: XOR<GameHubUserCreateWithoutPlayersInput, GameHubUserUncheckedCreateWithoutPlayersInput>
+    connectOrCreate?: GameHubUserCreateOrConnectWithoutPlayersInput
+    upsert?: GameHubUserUpsertWithoutPlayersInput
+    connect?: GameHubUserWhereUniqueInput
+    update?: XOR<XOR<GameHubUserUpdateToOneWithWhereWithoutPlayersInput, GameHubUserUpdateWithoutPlayersInput>, GameHubUserUncheckedUpdateWithoutPlayersInput>
+  }
+
+  export type GameHubTournamentPlayerUpdateManyWithoutPlayerNestedInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutPlayerInput, GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput> | GameHubTournamentPlayerCreateWithoutPlayerInput[] | GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput | GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput[]
+    upsert?: GameHubTournamentPlayerUpsertWithWhereUniqueWithoutPlayerInput | GameHubTournamentPlayerUpsertWithWhereUniqueWithoutPlayerInput[]
+    createMany?: GameHubTournamentPlayerCreateManyPlayerInputEnvelope
+    set?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    disconnect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    delete?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    update?: GameHubTournamentPlayerUpdateWithWhereUniqueWithoutPlayerInput | GameHubTournamentPlayerUpdateWithWhereUniqueWithoutPlayerInput[]
+    updateMany?: GameHubTournamentPlayerUpdateManyWithWhereWithoutPlayerInput | GameHubTournamentPlayerUpdateManyWithWhereWithoutPlayerInput[]
+    deleteMany?: GameHubTournamentPlayerScalarWhereInput | GameHubTournamentPlayerScalarWhereInput[]
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateManyWithoutPlayerNestedInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutPlayerInput, GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput> | GameHubTournamentPlayerCreateWithoutPlayerInput[] | GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput | GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput[]
+    upsert?: GameHubTournamentPlayerUpsertWithWhereUniqueWithoutPlayerInput | GameHubTournamentPlayerUpsertWithWhereUniqueWithoutPlayerInput[]
+    createMany?: GameHubTournamentPlayerCreateManyPlayerInputEnvelope
+    set?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    disconnect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    delete?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    update?: GameHubTournamentPlayerUpdateWithWhereUniqueWithoutPlayerInput | GameHubTournamentPlayerUpdateWithWhereUniqueWithoutPlayerInput[]
+    updateMany?: GameHubTournamentPlayerUpdateManyWithWhereWithoutPlayerInput | GameHubTournamentPlayerUpdateManyWithWhereWithoutPlayerInput[]
+    deleteMany?: GameHubTournamentPlayerScalarWhereInput | GameHubTournamentPlayerScalarWhereInput[]
+  }
+
+  export type GameHubUserCreateNestedOneWithoutTournamentsInput = {
+    create?: XOR<GameHubUserCreateWithoutTournamentsInput, GameHubUserUncheckedCreateWithoutTournamentsInput>
+    connectOrCreate?: GameHubUserCreateOrConnectWithoutTournamentsInput
+    connect?: GameHubUserWhereUniqueInput
+  }
+
+  export type GameHubTournamentPlayerCreateNestedManyWithoutTournamentInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutTournamentInput, GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput> | GameHubTournamentPlayerCreateWithoutTournamentInput[] | GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput | GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput[]
+    createMany?: GameHubTournamentPlayerCreateManyTournamentInputEnvelope
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+  }
+
+  export type GameHubTournamentPlayerUncheckedCreateNestedManyWithoutTournamentInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutTournamentInput, GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput> | GameHubTournamentPlayerCreateWithoutTournamentInput[] | GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput | GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput[]
+    createMany?: GameHubTournamentPlayerCreateManyTournamentInputEnvelope
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+  }
+
+  export type GameHubUserUpdateOneRequiredWithoutTournamentsNestedInput = {
+    create?: XOR<GameHubUserCreateWithoutTournamentsInput, GameHubUserUncheckedCreateWithoutTournamentsInput>
+    connectOrCreate?: GameHubUserCreateOrConnectWithoutTournamentsInput
+    upsert?: GameHubUserUpsertWithoutTournamentsInput
+    connect?: GameHubUserWhereUniqueInput
+    update?: XOR<XOR<GameHubUserUpdateToOneWithWhereWithoutTournamentsInput, GameHubUserUpdateWithoutTournamentsInput>, GameHubUserUncheckedUpdateWithoutTournamentsInput>
+  }
+
+  export type GameHubTournamentPlayerUpdateManyWithoutTournamentNestedInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutTournamentInput, GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput> | GameHubTournamentPlayerCreateWithoutTournamentInput[] | GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput | GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput[]
+    upsert?: GameHubTournamentPlayerUpsertWithWhereUniqueWithoutTournamentInput | GameHubTournamentPlayerUpsertWithWhereUniqueWithoutTournamentInput[]
+    createMany?: GameHubTournamentPlayerCreateManyTournamentInputEnvelope
+    set?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    disconnect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    delete?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    update?: GameHubTournamentPlayerUpdateWithWhereUniqueWithoutTournamentInput | GameHubTournamentPlayerUpdateWithWhereUniqueWithoutTournamentInput[]
+    updateMany?: GameHubTournamentPlayerUpdateManyWithWhereWithoutTournamentInput | GameHubTournamentPlayerUpdateManyWithWhereWithoutTournamentInput[]
+    deleteMany?: GameHubTournamentPlayerScalarWhereInput | GameHubTournamentPlayerScalarWhereInput[]
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateManyWithoutTournamentNestedInput = {
+    create?: XOR<GameHubTournamentPlayerCreateWithoutTournamentInput, GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput> | GameHubTournamentPlayerCreateWithoutTournamentInput[] | GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput[]
+    connectOrCreate?: GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput | GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput[]
+    upsert?: GameHubTournamentPlayerUpsertWithWhereUniqueWithoutTournamentInput | GameHubTournamentPlayerUpsertWithWhereUniqueWithoutTournamentInput[]
+    createMany?: GameHubTournamentPlayerCreateManyTournamentInputEnvelope
+    set?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    disconnect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    delete?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    connect?: GameHubTournamentPlayerWhereUniqueInput | GameHubTournamentPlayerWhereUniqueInput[]
+    update?: GameHubTournamentPlayerUpdateWithWhereUniqueWithoutTournamentInput | GameHubTournamentPlayerUpdateWithWhereUniqueWithoutTournamentInput[]
+    updateMany?: GameHubTournamentPlayerUpdateManyWithWhereWithoutTournamentInput | GameHubTournamentPlayerUpdateManyWithWhereWithoutTournamentInput[]
+    deleteMany?: GameHubTournamentPlayerScalarWhereInput | GameHubTournamentPlayerScalarWhereInput[]
+  }
+
+  export type GameHubTournamentCreateNestedOneWithoutPlayersInput = {
+    create?: XOR<GameHubTournamentCreateWithoutPlayersInput, GameHubTournamentUncheckedCreateWithoutPlayersInput>
+    connectOrCreate?: GameHubTournamentCreateOrConnectWithoutPlayersInput
+    connect?: GameHubTournamentWhereUniqueInput
+  }
+
+  export type GameHubPlayerCreateNestedOneWithoutTournamentsInput = {
+    create?: XOR<GameHubPlayerCreateWithoutTournamentsInput, GameHubPlayerUncheckedCreateWithoutTournamentsInput>
+    connectOrCreate?: GameHubPlayerCreateOrConnectWithoutTournamentsInput
+    connect?: GameHubPlayerWhereUniqueInput
+  }
+
+  export type GameHubTournamentUpdateOneRequiredWithoutPlayersNestedInput = {
+    create?: XOR<GameHubTournamentCreateWithoutPlayersInput, GameHubTournamentUncheckedCreateWithoutPlayersInput>
+    connectOrCreate?: GameHubTournamentCreateOrConnectWithoutPlayersInput
+    upsert?: GameHubTournamentUpsertWithoutPlayersInput
+    connect?: GameHubTournamentWhereUniqueInput
+    update?: XOR<XOR<GameHubTournamentUpdateToOneWithWhereWithoutPlayersInput, GameHubTournamentUpdateWithoutPlayersInput>, GameHubTournamentUncheckedUpdateWithoutPlayersInput>
+  }
+
+  export type GameHubPlayerUpdateOneRequiredWithoutTournamentsNestedInput = {
+    create?: XOR<GameHubPlayerCreateWithoutTournamentsInput, GameHubPlayerUncheckedCreateWithoutTournamentsInput>
+    connectOrCreate?: GameHubPlayerCreateOrConnectWithoutTournamentsInput
+    upsert?: GameHubPlayerUpsertWithoutTournamentsInput
+    connect?: GameHubPlayerWhereUniqueInput
+    update?: XOR<XOR<GameHubPlayerUpdateToOneWithWhereWithoutTournamentsInput, GameHubPlayerUpdateWithoutTournamentsInput>, GameHubPlayerUncheckedUpdateWithoutTournamentsInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -15767,6 +21625,19 @@ export namespace Prisma {
     gt?: number | FloatFieldRefInput<$PrismaModel>
     gte?: number | FloatFieldRefInput<$PrismaModel>
     not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
+  }
+
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type EventOrganizerTaskCreateWithoutUserInput = {
@@ -17037,6 +22908,442 @@ export namespace Prisma {
     likes?: LanguageLearnerReviewLikeUncheckedUpdateManyWithoutUserNestedInput
   }
 
+  export type GameHubPlayerCreateWithoutUserInput = {
+    id?: string
+    name: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+    tournaments?: GameHubTournamentPlayerCreateNestedManyWithoutPlayerInput
+  }
+
+  export type GameHubPlayerUncheckedCreateWithoutUserInput = {
+    id?: string
+    name: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+    tournaments?: GameHubTournamentPlayerUncheckedCreateNestedManyWithoutPlayerInput
+  }
+
+  export type GameHubPlayerCreateOrConnectWithoutUserInput = {
+    where: GameHubPlayerWhereUniqueInput
+    create: XOR<GameHubPlayerCreateWithoutUserInput, GameHubPlayerUncheckedCreateWithoutUserInput>
+  }
+
+  export type GameHubPlayerCreateManyUserInputEnvelope = {
+    data: GameHubPlayerCreateManyUserInput | GameHubPlayerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GameHubTournamentCreateWithoutOrganizerInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    createdAt?: Date | string
+    players?: GameHubTournamentPlayerCreateNestedManyWithoutTournamentInput
+  }
+
+  export type GameHubTournamentUncheckedCreateWithoutOrganizerInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    createdAt?: Date | string
+    players?: GameHubTournamentPlayerUncheckedCreateNestedManyWithoutTournamentInput
+  }
+
+  export type GameHubTournamentCreateOrConnectWithoutOrganizerInput = {
+    where: GameHubTournamentWhereUniqueInput
+    create: XOR<GameHubTournamentCreateWithoutOrganizerInput, GameHubTournamentUncheckedCreateWithoutOrganizerInput>
+  }
+
+  export type GameHubTournamentCreateManyOrganizerInputEnvelope = {
+    data: GameHubTournamentCreateManyOrganizerInput | GameHubTournamentCreateManyOrganizerInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GameHubPlayerUpsertWithWhereUniqueWithoutUserInput = {
+    where: GameHubPlayerWhereUniqueInput
+    update: XOR<GameHubPlayerUpdateWithoutUserInput, GameHubPlayerUncheckedUpdateWithoutUserInput>
+    create: XOR<GameHubPlayerCreateWithoutUserInput, GameHubPlayerUncheckedCreateWithoutUserInput>
+  }
+
+  export type GameHubPlayerUpdateWithWhereUniqueWithoutUserInput = {
+    where: GameHubPlayerWhereUniqueInput
+    data: XOR<GameHubPlayerUpdateWithoutUserInput, GameHubPlayerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type GameHubPlayerUpdateManyWithWhereWithoutUserInput = {
+    where: GameHubPlayerScalarWhereInput
+    data: XOR<GameHubPlayerUpdateManyMutationInput, GameHubPlayerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type GameHubPlayerScalarWhereInput = {
+    AND?: GameHubPlayerScalarWhereInput | GameHubPlayerScalarWhereInput[]
+    OR?: GameHubPlayerScalarWhereInput[]
+    NOT?: GameHubPlayerScalarWhereInput | GameHubPlayerScalarWhereInput[]
+    id?: StringFilter<"GameHubPlayer"> | string
+    name?: StringFilter<"GameHubPlayer"> | string
+    userId?: StringFilter<"GameHubPlayer"> | string
+    rank?: StringFilter<"GameHubPlayer"> | string
+    mainGame?: StringFilter<"GameHubPlayer"> | string
+    validated?: BoolFilter<"GameHubPlayer"> | boolean
+    createdAt?: DateTimeFilter<"GameHubPlayer"> | Date | string
+  }
+
+  export type GameHubTournamentUpsertWithWhereUniqueWithoutOrganizerInput = {
+    where: GameHubTournamentWhereUniqueInput
+    update: XOR<GameHubTournamentUpdateWithoutOrganizerInput, GameHubTournamentUncheckedUpdateWithoutOrganizerInput>
+    create: XOR<GameHubTournamentCreateWithoutOrganizerInput, GameHubTournamentUncheckedCreateWithoutOrganizerInput>
+  }
+
+  export type GameHubTournamentUpdateWithWhereUniqueWithoutOrganizerInput = {
+    where: GameHubTournamentWhereUniqueInput
+    data: XOR<GameHubTournamentUpdateWithoutOrganizerInput, GameHubTournamentUncheckedUpdateWithoutOrganizerInput>
+  }
+
+  export type GameHubTournamentUpdateManyWithWhereWithoutOrganizerInput = {
+    where: GameHubTournamentScalarWhereInput
+    data: XOR<GameHubTournamentUpdateManyMutationInput, GameHubTournamentUncheckedUpdateManyWithoutOrganizerInput>
+  }
+
+  export type GameHubTournamentScalarWhereInput = {
+    AND?: GameHubTournamentScalarWhereInput | GameHubTournamentScalarWhereInput[]
+    OR?: GameHubTournamentScalarWhereInput[]
+    NOT?: GameHubTournamentScalarWhereInput | GameHubTournamentScalarWhereInput[]
+    id?: StringFilter<"GameHubTournament"> | string
+    title?: StringFilter<"GameHubTournament"> | string
+    game?: StringFilter<"GameHubTournament"> | string
+    date?: DateTimeFilter<"GameHubTournament"> | Date | string
+    rules?: StringFilter<"GameHubTournament"> | string
+    organizerId?: StringFilter<"GameHubTournament"> | string
+    createdAt?: DateTimeFilter<"GameHubTournament"> | Date | string
+  }
+
+  export type GameHubUserCreateWithoutPlayersInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    validated?: boolean
+    createdAt?: Date | string
+    tournaments?: GameHubTournamentCreateNestedManyWithoutOrganizerInput
+  }
+
+  export type GameHubUserUncheckedCreateWithoutPlayersInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    validated?: boolean
+    createdAt?: Date | string
+    tournaments?: GameHubTournamentUncheckedCreateNestedManyWithoutOrganizerInput
+  }
+
+  export type GameHubUserCreateOrConnectWithoutPlayersInput = {
+    where: GameHubUserWhereUniqueInput
+    create: XOR<GameHubUserCreateWithoutPlayersInput, GameHubUserUncheckedCreateWithoutPlayersInput>
+  }
+
+  export type GameHubTournamentPlayerCreateWithoutPlayerInput = {
+    id?: string
+    joinedAt?: Date | string
+    tournament: GameHubTournamentCreateNestedOneWithoutPlayersInput
+  }
+
+  export type GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput = {
+    id?: string
+    tournamentId: string
+    joinedAt?: Date | string
+  }
+
+  export type GameHubTournamentPlayerCreateOrConnectWithoutPlayerInput = {
+    where: GameHubTournamentPlayerWhereUniqueInput
+    create: XOR<GameHubTournamentPlayerCreateWithoutPlayerInput, GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput>
+  }
+
+  export type GameHubTournamentPlayerCreateManyPlayerInputEnvelope = {
+    data: GameHubTournamentPlayerCreateManyPlayerInput | GameHubTournamentPlayerCreateManyPlayerInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GameHubUserUpsertWithoutPlayersInput = {
+    update: XOR<GameHubUserUpdateWithoutPlayersInput, GameHubUserUncheckedUpdateWithoutPlayersInput>
+    create: XOR<GameHubUserCreateWithoutPlayersInput, GameHubUserUncheckedCreateWithoutPlayersInput>
+    where?: GameHubUserWhereInput
+  }
+
+  export type GameHubUserUpdateToOneWithWhereWithoutPlayersInput = {
+    where?: GameHubUserWhereInput
+    data: XOR<GameHubUserUpdateWithoutPlayersInput, GameHubUserUncheckedUpdateWithoutPlayersInput>
+  }
+
+  export type GameHubUserUpdateWithoutPlayersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tournaments?: GameHubTournamentUpdateManyWithoutOrganizerNestedInput
+  }
+
+  export type GameHubUserUncheckedUpdateWithoutPlayersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tournaments?: GameHubTournamentUncheckedUpdateManyWithoutOrganizerNestedInput
+  }
+
+  export type GameHubTournamentPlayerUpsertWithWhereUniqueWithoutPlayerInput = {
+    where: GameHubTournamentPlayerWhereUniqueInput
+    update: XOR<GameHubTournamentPlayerUpdateWithoutPlayerInput, GameHubTournamentPlayerUncheckedUpdateWithoutPlayerInput>
+    create: XOR<GameHubTournamentPlayerCreateWithoutPlayerInput, GameHubTournamentPlayerUncheckedCreateWithoutPlayerInput>
+  }
+
+  export type GameHubTournamentPlayerUpdateWithWhereUniqueWithoutPlayerInput = {
+    where: GameHubTournamentPlayerWhereUniqueInput
+    data: XOR<GameHubTournamentPlayerUpdateWithoutPlayerInput, GameHubTournamentPlayerUncheckedUpdateWithoutPlayerInput>
+  }
+
+  export type GameHubTournamentPlayerUpdateManyWithWhereWithoutPlayerInput = {
+    where: GameHubTournamentPlayerScalarWhereInput
+    data: XOR<GameHubTournamentPlayerUpdateManyMutationInput, GameHubTournamentPlayerUncheckedUpdateManyWithoutPlayerInput>
+  }
+
+  export type GameHubTournamentPlayerScalarWhereInput = {
+    AND?: GameHubTournamentPlayerScalarWhereInput | GameHubTournamentPlayerScalarWhereInput[]
+    OR?: GameHubTournamentPlayerScalarWhereInput[]
+    NOT?: GameHubTournamentPlayerScalarWhereInput | GameHubTournamentPlayerScalarWhereInput[]
+    id?: StringFilter<"GameHubTournamentPlayer"> | string
+    tournamentId?: StringFilter<"GameHubTournamentPlayer"> | string
+    playerId?: StringFilter<"GameHubTournamentPlayer"> | string
+    joinedAt?: DateTimeFilter<"GameHubTournamentPlayer"> | Date | string
+  }
+
+  export type GameHubUserCreateWithoutTournamentsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    validated?: boolean
+    createdAt?: Date | string
+    players?: GameHubPlayerCreateNestedManyWithoutUserInput
+  }
+
+  export type GameHubUserUncheckedCreateWithoutTournamentsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    role?: string
+    validated?: boolean
+    createdAt?: Date | string
+    players?: GameHubPlayerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type GameHubUserCreateOrConnectWithoutTournamentsInput = {
+    where: GameHubUserWhereUniqueInput
+    create: XOR<GameHubUserCreateWithoutTournamentsInput, GameHubUserUncheckedCreateWithoutTournamentsInput>
+  }
+
+  export type GameHubTournamentPlayerCreateWithoutTournamentInput = {
+    id?: string
+    joinedAt?: Date | string
+    player: GameHubPlayerCreateNestedOneWithoutTournamentsInput
+  }
+
+  export type GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput = {
+    id?: string
+    playerId: string
+    joinedAt?: Date | string
+  }
+
+  export type GameHubTournamentPlayerCreateOrConnectWithoutTournamentInput = {
+    where: GameHubTournamentPlayerWhereUniqueInput
+    create: XOR<GameHubTournamentPlayerCreateWithoutTournamentInput, GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput>
+  }
+
+  export type GameHubTournamentPlayerCreateManyTournamentInputEnvelope = {
+    data: GameHubTournamentPlayerCreateManyTournamentInput | GameHubTournamentPlayerCreateManyTournamentInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GameHubUserUpsertWithoutTournamentsInput = {
+    update: XOR<GameHubUserUpdateWithoutTournamentsInput, GameHubUserUncheckedUpdateWithoutTournamentsInput>
+    create: XOR<GameHubUserCreateWithoutTournamentsInput, GameHubUserUncheckedCreateWithoutTournamentsInput>
+    where?: GameHubUserWhereInput
+  }
+
+  export type GameHubUserUpdateToOneWithWhereWithoutTournamentsInput = {
+    where?: GameHubUserWhereInput
+    data: XOR<GameHubUserUpdateWithoutTournamentsInput, GameHubUserUncheckedUpdateWithoutTournamentsInput>
+  }
+
+  export type GameHubUserUpdateWithoutTournamentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    players?: GameHubPlayerUpdateManyWithoutUserNestedInput
+  }
+
+  export type GameHubUserUncheckedUpdateWithoutTournamentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    players?: GameHubPlayerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type GameHubTournamentPlayerUpsertWithWhereUniqueWithoutTournamentInput = {
+    where: GameHubTournamentPlayerWhereUniqueInput
+    update: XOR<GameHubTournamentPlayerUpdateWithoutTournamentInput, GameHubTournamentPlayerUncheckedUpdateWithoutTournamentInput>
+    create: XOR<GameHubTournamentPlayerCreateWithoutTournamentInput, GameHubTournamentPlayerUncheckedCreateWithoutTournamentInput>
+  }
+
+  export type GameHubTournamentPlayerUpdateWithWhereUniqueWithoutTournamentInput = {
+    where: GameHubTournamentPlayerWhereUniqueInput
+    data: XOR<GameHubTournamentPlayerUpdateWithoutTournamentInput, GameHubTournamentPlayerUncheckedUpdateWithoutTournamentInput>
+  }
+
+  export type GameHubTournamentPlayerUpdateManyWithWhereWithoutTournamentInput = {
+    where: GameHubTournamentPlayerScalarWhereInput
+    data: XOR<GameHubTournamentPlayerUpdateManyMutationInput, GameHubTournamentPlayerUncheckedUpdateManyWithoutTournamentInput>
+  }
+
+  export type GameHubTournamentCreateWithoutPlayersInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    createdAt?: Date | string
+    organizer: GameHubUserCreateNestedOneWithoutTournamentsInput
+  }
+
+  export type GameHubTournamentUncheckedCreateWithoutPlayersInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    organizerId: string
+    createdAt?: Date | string
+  }
+
+  export type GameHubTournamentCreateOrConnectWithoutPlayersInput = {
+    where: GameHubTournamentWhereUniqueInput
+    create: XOR<GameHubTournamentCreateWithoutPlayersInput, GameHubTournamentUncheckedCreateWithoutPlayersInput>
+  }
+
+  export type GameHubPlayerCreateWithoutTournamentsInput = {
+    id?: string
+    name: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: GameHubUserCreateNestedOneWithoutPlayersInput
+  }
+
+  export type GameHubPlayerUncheckedCreateWithoutTournamentsInput = {
+    id?: string
+    name: string
+    userId: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type GameHubPlayerCreateOrConnectWithoutTournamentsInput = {
+    where: GameHubPlayerWhereUniqueInput
+    create: XOR<GameHubPlayerCreateWithoutTournamentsInput, GameHubPlayerUncheckedCreateWithoutTournamentsInput>
+  }
+
+  export type GameHubTournamentUpsertWithoutPlayersInput = {
+    update: XOR<GameHubTournamentUpdateWithoutPlayersInput, GameHubTournamentUncheckedUpdateWithoutPlayersInput>
+    create: XOR<GameHubTournamentCreateWithoutPlayersInput, GameHubTournamentUncheckedCreateWithoutPlayersInput>
+    where?: GameHubTournamentWhereInput
+  }
+
+  export type GameHubTournamentUpdateToOneWithWhereWithoutPlayersInput = {
+    where?: GameHubTournamentWhereInput
+    data: XOR<GameHubTournamentUpdateWithoutPlayersInput, GameHubTournamentUncheckedUpdateWithoutPlayersInput>
+  }
+
+  export type GameHubTournamentUpdateWithoutPlayersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    organizer?: GameHubUserUpdateOneRequiredWithoutTournamentsNestedInput
+  }
+
+  export type GameHubTournamentUncheckedUpdateWithoutPlayersInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    organizerId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubPlayerUpsertWithoutTournamentsInput = {
+    update: XOR<GameHubPlayerUpdateWithoutTournamentsInput, GameHubPlayerUncheckedUpdateWithoutTournamentsInput>
+    create: XOR<GameHubPlayerCreateWithoutTournamentsInput, GameHubPlayerUncheckedCreateWithoutTournamentsInput>
+    where?: GameHubPlayerWhereInput
+  }
+
+  export type GameHubPlayerUpdateToOneWithWhereWithoutTournamentsInput = {
+    where?: GameHubPlayerWhereInput
+    data: XOR<GameHubPlayerUpdateWithoutTournamentsInput, GameHubPlayerUncheckedUpdateWithoutTournamentsInput>
+  }
+
+  export type GameHubPlayerUpdateWithoutTournamentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: GameHubUserUpdateOneRequiredWithoutPlayersNestedInput
+  }
+
+  export type GameHubPlayerUncheckedUpdateWithoutTournamentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type EventOrganizerTaskCreateManyUserInput = {
     id?: string
     title: string
@@ -17401,6 +23708,130 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubPlayerCreateManyUserInput = {
+    id?: string
+    name: string
+    rank: string
+    mainGame: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type GameHubTournamentCreateManyOrganizerInput = {
+    id?: string
+    title: string
+    game: string
+    date: Date | string
+    rules: string
+    createdAt?: Date | string
+  }
+
+  export type GameHubPlayerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tournaments?: GameHubTournamentPlayerUpdateManyWithoutPlayerNestedInput
+  }
+
+  export type GameHubPlayerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tournaments?: GameHubTournamentPlayerUncheckedUpdateManyWithoutPlayerNestedInput
+  }
+
+  export type GameHubPlayerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    rank?: StringFieldUpdateOperationsInput | string
+    mainGame?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentUpdateWithoutOrganizerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    players?: GameHubTournamentPlayerUpdateManyWithoutTournamentNestedInput
+  }
+
+  export type GameHubTournamentUncheckedUpdateWithoutOrganizerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    players?: GameHubTournamentPlayerUncheckedUpdateManyWithoutTournamentNestedInput
+  }
+
+  export type GameHubTournamentUncheckedUpdateManyWithoutOrganizerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    game?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    rules?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentPlayerCreateManyPlayerInput = {
+    id?: string
+    tournamentId: string
+    joinedAt?: Date | string
+  }
+
+  export type GameHubTournamentPlayerUpdateWithoutPlayerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    tournament?: GameHubTournamentUpdateOneRequiredWithoutPlayersNestedInput
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateWithoutPlayerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    tournamentId?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateManyWithoutPlayerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    tournamentId?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentPlayerCreateManyTournamentInput = {
+    id?: string
+    playerId: string
+    joinedAt?: Date | string
+  }
+
+  export type GameHubTournamentPlayerUpdateWithoutTournamentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    player?: GameHubPlayerUpdateOneRequiredWithoutTournamentsNestedInput
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateWithoutTournamentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    playerId?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GameHubTournamentPlayerUncheckedUpdateManyWithoutTournamentInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    playerId?: StringFieldUpdateOperationsInput | string
+    joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

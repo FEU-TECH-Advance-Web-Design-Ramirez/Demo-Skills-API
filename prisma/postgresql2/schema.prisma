@@ -137,3 +137,54 @@ model LanguageLearnerUserVote {
 
   @@unique([userId, voterId]) // Prevents multiple votes per user
 }
+
+model GameHubUser {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  role      String   @default("user") // "user", "admin"
+  validated Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  players     GameHubPlayer[]
+  tournaments GameHubTournament[]
+}
+
+model GameHubPlayer {
+  id        String   @id @default(uuid())
+  name      String
+  userId    String
+  rank      String
+  mainGame  String
+  validated Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user        GameHubUser               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tournaments GameHubTournamentPlayer[] // Participations
+}
+
+model GameHubTournament {
+  id          String   @id @default(uuid())
+  title       String
+  game        String
+  date        DateTime
+  rules       String
+  organizerId String
+  createdAt   DateTime @default(now())
+
+  organizer GameHubUser               @relation(fields: [organizerId], references: [id], onDelete: Cascade)
+  players   GameHubTournamentPlayer[] // Participations
+}
+
+model GameHubTournamentPlayer {
+  id           String   @id @default(uuid())
+  tournamentId String
+  playerId     String
+  joinedAt     DateTime @default(now())
+
+  tournament GameHubTournament @relation(fields: [tournamentId], references: [id], onDelete: Cascade)
+  player     GameHubPlayer     @relation(fields: [playerId], references: [id], onDelete: Cascade)
+
+  @@unique([tournamentId, playerId]) // Prevent duplicate entries
+}
