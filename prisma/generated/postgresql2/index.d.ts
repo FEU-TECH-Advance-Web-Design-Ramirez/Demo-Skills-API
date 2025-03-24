@@ -83,6 +83,26 @@ export type GameHubTournament = $Result.DefaultSelection<Prisma.$GameHubTourname
  * 
  */
 export type GameHubTournamentPlayer = $Result.DefaultSelection<Prisma.$GameHubTournamentPlayerPayload>
+/**
+ * Model UserHealthTracker
+ * 
+ */
+export type UserHealthTracker = $Result.DefaultSelection<Prisma.$UserHealthTrackerPayload>
+/**
+ * Model ScheduleHealthTracker
+ * 
+ */
+export type ScheduleHealthTracker = $Result.DefaultSelection<Prisma.$ScheduleHealthTrackerPayload>
+/**
+ * Model RecordHealthTracker
+ * 
+ */
+export type RecordHealthTracker = $Result.DefaultSelection<Prisma.$RecordHealthTrackerPayload>
+/**
+ * Model ClinicHealthTracker
+ * 
+ */
+export type ClinicHealthTracker = $Result.DefaultSelection<Prisma.$ClinicHealthTrackerPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -348,6 +368,46 @@ export class PrismaClient<
     * ```
     */
   get gameHubTournamentPlayer(): Prisma.GameHubTournamentPlayerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userHealthTracker`: Exposes CRUD operations for the **UserHealthTracker** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserHealthTrackers
+    * const userHealthTrackers = await prisma.userHealthTracker.findMany()
+    * ```
+    */
+  get userHealthTracker(): Prisma.UserHealthTrackerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.scheduleHealthTracker`: Exposes CRUD operations for the **ScheduleHealthTracker** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ScheduleHealthTrackers
+    * const scheduleHealthTrackers = await prisma.scheduleHealthTracker.findMany()
+    * ```
+    */
+  get scheduleHealthTracker(): Prisma.ScheduleHealthTrackerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.recordHealthTracker`: Exposes CRUD operations for the **RecordHealthTracker** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more RecordHealthTrackers
+    * const recordHealthTrackers = await prisma.recordHealthTracker.findMany()
+    * ```
+    */
+  get recordHealthTracker(): Prisma.RecordHealthTrackerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.clinicHealthTracker`: Exposes CRUD operations for the **ClinicHealthTracker** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ClinicHealthTrackers
+    * const clinicHealthTrackers = await prisma.clinicHealthTracker.findMany()
+    * ```
+    */
+  get clinicHealthTracker(): Prisma.ClinicHealthTrackerDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -801,7 +861,11 @@ export namespace Prisma {
     GameHubUser: 'GameHubUser',
     GameHubPlayer: 'GameHubPlayer',
     GameHubTournament: 'GameHubTournament',
-    GameHubTournamentPlayer: 'GameHubTournamentPlayer'
+    GameHubTournamentPlayer: 'GameHubTournamentPlayer',
+    UserHealthTracker: 'UserHealthTracker',
+    ScheduleHealthTracker: 'ScheduleHealthTracker',
+    RecordHealthTracker: 'RecordHealthTracker',
+    ClinicHealthTracker: 'ClinicHealthTracker'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -820,7 +884,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote" | "gameHubUser" | "gameHubPlayer" | "gameHubTournament" | "gameHubTournamentPlayer"
+      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote" | "gameHubUser" | "gameHubPlayer" | "gameHubTournament" | "gameHubTournamentPlayer" | "userHealthTracker" | "scheduleHealthTracker" | "recordHealthTracker" | "clinicHealthTracker"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1860,6 +1924,302 @@ export namespace Prisma {
           }
         }
       }
+      UserHealthTracker: {
+        payload: Prisma.$UserHealthTrackerPayload<ExtArgs>
+        fields: Prisma.UserHealthTrackerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserHealthTrackerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserHealthTrackerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>
+          }
+          findFirst: {
+            args: Prisma.UserHealthTrackerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserHealthTrackerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>
+          }
+          findMany: {
+            args: Prisma.UserHealthTrackerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>[]
+          }
+          create: {
+            args: Prisma.UserHealthTrackerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>
+          }
+          createMany: {
+            args: Prisma.UserHealthTrackerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserHealthTrackerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>[]
+          }
+          delete: {
+            args: Prisma.UserHealthTrackerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>
+          }
+          update: {
+            args: Prisma.UserHealthTrackerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserHealthTrackerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserHealthTrackerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserHealthTrackerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserHealthTrackerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserHealthTrackerPayload>
+          }
+          aggregate: {
+            args: Prisma.UserHealthTrackerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserHealthTracker>
+          }
+          groupBy: {
+            args: Prisma.UserHealthTrackerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserHealthTrackerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserHealthTrackerCountArgs<ExtArgs>
+            result: $Utils.Optional<UserHealthTrackerCountAggregateOutputType> | number
+          }
+        }
+      }
+      ScheduleHealthTracker: {
+        payload: Prisma.$ScheduleHealthTrackerPayload<ExtArgs>
+        fields: Prisma.ScheduleHealthTrackerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ScheduleHealthTrackerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ScheduleHealthTrackerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>
+          }
+          findFirst: {
+            args: Prisma.ScheduleHealthTrackerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ScheduleHealthTrackerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>
+          }
+          findMany: {
+            args: Prisma.ScheduleHealthTrackerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>[]
+          }
+          create: {
+            args: Prisma.ScheduleHealthTrackerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>
+          }
+          createMany: {
+            args: Prisma.ScheduleHealthTrackerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ScheduleHealthTrackerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>[]
+          }
+          delete: {
+            args: Prisma.ScheduleHealthTrackerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>
+          }
+          update: {
+            args: Prisma.ScheduleHealthTrackerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>
+          }
+          deleteMany: {
+            args: Prisma.ScheduleHealthTrackerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ScheduleHealthTrackerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ScheduleHealthTrackerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>[]
+          }
+          upsert: {
+            args: Prisma.ScheduleHealthTrackerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ScheduleHealthTrackerPayload>
+          }
+          aggregate: {
+            args: Prisma.ScheduleHealthTrackerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateScheduleHealthTracker>
+          }
+          groupBy: {
+            args: Prisma.ScheduleHealthTrackerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ScheduleHealthTrackerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ScheduleHealthTrackerCountArgs<ExtArgs>
+            result: $Utils.Optional<ScheduleHealthTrackerCountAggregateOutputType> | number
+          }
+        }
+      }
+      RecordHealthTracker: {
+        payload: Prisma.$RecordHealthTrackerPayload<ExtArgs>
+        fields: Prisma.RecordHealthTrackerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.RecordHealthTrackerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.RecordHealthTrackerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>
+          }
+          findFirst: {
+            args: Prisma.RecordHealthTrackerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.RecordHealthTrackerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>
+          }
+          findMany: {
+            args: Prisma.RecordHealthTrackerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>[]
+          }
+          create: {
+            args: Prisma.RecordHealthTrackerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>
+          }
+          createMany: {
+            args: Prisma.RecordHealthTrackerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.RecordHealthTrackerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>[]
+          }
+          delete: {
+            args: Prisma.RecordHealthTrackerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>
+          }
+          update: {
+            args: Prisma.RecordHealthTrackerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>
+          }
+          deleteMany: {
+            args: Prisma.RecordHealthTrackerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.RecordHealthTrackerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.RecordHealthTrackerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>[]
+          }
+          upsert: {
+            args: Prisma.RecordHealthTrackerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecordHealthTrackerPayload>
+          }
+          aggregate: {
+            args: Prisma.RecordHealthTrackerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateRecordHealthTracker>
+          }
+          groupBy: {
+            args: Prisma.RecordHealthTrackerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<RecordHealthTrackerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.RecordHealthTrackerCountArgs<ExtArgs>
+            result: $Utils.Optional<RecordHealthTrackerCountAggregateOutputType> | number
+          }
+        }
+      }
+      ClinicHealthTracker: {
+        payload: Prisma.$ClinicHealthTrackerPayload<ExtArgs>
+        fields: Prisma.ClinicHealthTrackerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ClinicHealthTrackerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ClinicHealthTrackerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>
+          }
+          findFirst: {
+            args: Prisma.ClinicHealthTrackerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ClinicHealthTrackerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>
+          }
+          findMany: {
+            args: Prisma.ClinicHealthTrackerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>[]
+          }
+          create: {
+            args: Prisma.ClinicHealthTrackerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>
+          }
+          createMany: {
+            args: Prisma.ClinicHealthTrackerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ClinicHealthTrackerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>[]
+          }
+          delete: {
+            args: Prisma.ClinicHealthTrackerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>
+          }
+          update: {
+            args: Prisma.ClinicHealthTrackerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>
+          }
+          deleteMany: {
+            args: Prisma.ClinicHealthTrackerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ClinicHealthTrackerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ClinicHealthTrackerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>[]
+          }
+          upsert: {
+            args: Prisma.ClinicHealthTrackerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ClinicHealthTrackerPayload>
+          }
+          aggregate: {
+            args: Prisma.ClinicHealthTrackerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateClinicHealthTracker>
+          }
+          groupBy: {
+            args: Prisma.ClinicHealthTrackerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ClinicHealthTrackerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ClinicHealthTrackerCountArgs<ExtArgs>
+            result: $Utils.Optional<ClinicHealthTrackerCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -1958,6 +2318,10 @@ export namespace Prisma {
     gameHubPlayer?: GameHubPlayerOmit
     gameHubTournament?: GameHubTournamentOmit
     gameHubTournamentPlayer?: GameHubTournamentPlayerOmit
+    userHealthTracker?: UserHealthTrackerOmit
+    scheduleHealthTracker?: ScheduleHealthTrackerOmit
+    recordHealthTracker?: RecordHealthTrackerOmit
+    clinicHealthTracker?: ClinicHealthTrackerOmit
   }
 
   /* Types for Logging */
@@ -2333,6 +2697,46 @@ export namespace Prisma {
    */
   export type GameHubTournamentCountOutputTypeCountPlayersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: GameHubTournamentPlayerWhereInput
+  }
+
+
+  /**
+   * Count Type UserHealthTrackerCountOutputType
+   */
+
+  export type UserHealthTrackerCountOutputType = {
+    schedules: number
+    records: number
+  }
+
+  export type UserHealthTrackerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    schedules?: boolean | UserHealthTrackerCountOutputTypeCountSchedulesArgs
+    records?: boolean | UserHealthTrackerCountOutputTypeCountRecordsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * UserHealthTrackerCountOutputType without action
+   */
+  export type UserHealthTrackerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTrackerCountOutputType
+     */
+    select?: UserHealthTrackerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * UserHealthTrackerCountOutputType without action
+   */
+  export type UserHealthTrackerCountOutputTypeCountSchedulesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ScheduleHealthTrackerWhereInput
+  }
+
+  /**
+   * UserHealthTrackerCountOutputType without action
+   */
+  export type UserHealthTrackerCountOutputTypeCountRecordsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: RecordHealthTrackerWhereInput
   }
 
 
@@ -17867,6 +18271,4263 @@ export namespace Prisma {
 
 
   /**
+   * Model UserHealthTracker
+   */
+
+  export type AggregateUserHealthTracker = {
+    _count: UserHealthTrackerCountAggregateOutputType | null
+    _min: UserHealthTrackerMinAggregateOutputType | null
+    _max: UserHealthTrackerMaxAggregateOutputType | null
+  }
+
+  export type UserHealthTrackerMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserHealthTrackerMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserHealthTrackerCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type UserHealthTrackerMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserHealthTrackerMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserHealthTrackerCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type UserHealthTrackerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserHealthTracker to aggregate.
+     */
+    where?: UserHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserHealthTrackers to fetch.
+     */
+    orderBy?: UserHealthTrackerOrderByWithRelationInput | UserHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserHealthTrackers
+    **/
+    _count?: true | UserHealthTrackerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserHealthTrackerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserHealthTrackerMaxAggregateInputType
+  }
+
+  export type GetUserHealthTrackerAggregateType<T extends UserHealthTrackerAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserHealthTracker]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserHealthTracker[P]>
+      : GetScalarType<T[P], AggregateUserHealthTracker[P]>
+  }
+
+
+
+
+  export type UserHealthTrackerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserHealthTrackerWhereInput
+    orderBy?: UserHealthTrackerOrderByWithAggregationInput | UserHealthTrackerOrderByWithAggregationInput[]
+    by: UserHealthTrackerScalarFieldEnum[] | UserHealthTrackerScalarFieldEnum
+    having?: UserHealthTrackerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserHealthTrackerCountAggregateInputType | true
+    _min?: UserHealthTrackerMinAggregateInputType
+    _max?: UserHealthTrackerMaxAggregateInputType
+  }
+
+  export type UserHealthTrackerGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    createdAt: Date
+    _count: UserHealthTrackerCountAggregateOutputType | null
+    _min: UserHealthTrackerMinAggregateOutputType | null
+    _max: UserHealthTrackerMaxAggregateOutputType | null
+  }
+
+  type GetUserHealthTrackerGroupByPayload<T extends UserHealthTrackerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserHealthTrackerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserHealthTrackerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserHealthTrackerGroupByOutputType[P]>
+            : GetScalarType<T[P], UserHealthTrackerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserHealthTrackerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+    schedules?: boolean | UserHealthTracker$schedulesArgs<ExtArgs>
+    records?: boolean | UserHealthTracker$recordsArgs<ExtArgs>
+    _count?: boolean | UserHealthTrackerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userHealthTracker"]>
+
+  export type UserHealthTrackerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userHealthTracker"]>
+
+  export type UserHealthTrackerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userHealthTracker"]>
+
+  export type UserHealthTrackerSelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }
+
+  export type UserHealthTrackerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "createdAt", ExtArgs["result"]["userHealthTracker"]>
+  export type UserHealthTrackerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    schedules?: boolean | UserHealthTracker$schedulesArgs<ExtArgs>
+    records?: boolean | UserHealthTracker$recordsArgs<ExtArgs>
+    _count?: boolean | UserHealthTrackerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserHealthTrackerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserHealthTrackerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $UserHealthTrackerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserHealthTracker"
+    objects: {
+      schedules: Prisma.$ScheduleHealthTrackerPayload<ExtArgs>[]
+      records: Prisma.$RecordHealthTrackerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      createdAt: Date
+    }, ExtArgs["result"]["userHealthTracker"]>
+    composites: {}
+  }
+
+  type UserHealthTrackerGetPayload<S extends boolean | null | undefined | UserHealthTrackerDefaultArgs> = $Result.GetResult<Prisma.$UserHealthTrackerPayload, S>
+
+  type UserHealthTrackerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserHealthTrackerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserHealthTrackerCountAggregateInputType | true
+    }
+
+  export interface UserHealthTrackerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserHealthTracker'], meta: { name: 'UserHealthTracker' } }
+    /**
+     * Find zero or one UserHealthTracker that matches the filter.
+     * @param {UserHealthTrackerFindUniqueArgs} args - Arguments to find a UserHealthTracker
+     * @example
+     * // Get one UserHealthTracker
+     * const userHealthTracker = await prisma.userHealthTracker.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserHealthTrackerFindUniqueArgs>(args: SelectSubset<T, UserHealthTrackerFindUniqueArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserHealthTracker that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserHealthTrackerFindUniqueOrThrowArgs} args - Arguments to find a UserHealthTracker
+     * @example
+     * // Get one UserHealthTracker
+     * const userHealthTracker = await prisma.userHealthTracker.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserHealthTrackerFindUniqueOrThrowArgs>(args: SelectSubset<T, UserHealthTrackerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserHealthTracker that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserHealthTrackerFindFirstArgs} args - Arguments to find a UserHealthTracker
+     * @example
+     * // Get one UserHealthTracker
+     * const userHealthTracker = await prisma.userHealthTracker.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserHealthTrackerFindFirstArgs>(args?: SelectSubset<T, UserHealthTrackerFindFirstArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserHealthTracker that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserHealthTrackerFindFirstOrThrowArgs} args - Arguments to find a UserHealthTracker
+     * @example
+     * // Get one UserHealthTracker
+     * const userHealthTracker = await prisma.userHealthTracker.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserHealthTrackerFindFirstOrThrowArgs>(args?: SelectSubset<T, UserHealthTrackerFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserHealthTrackers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserHealthTrackerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserHealthTrackers
+     * const userHealthTrackers = await prisma.userHealthTracker.findMany()
+     * 
+     * // Get first 10 UserHealthTrackers
+     * const userHealthTrackers = await prisma.userHealthTracker.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userHealthTrackerWithIdOnly = await prisma.userHealthTracker.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserHealthTrackerFindManyArgs>(args?: SelectSubset<T, UserHealthTrackerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserHealthTracker.
+     * @param {UserHealthTrackerCreateArgs} args - Arguments to create a UserHealthTracker.
+     * @example
+     * // Create one UserHealthTracker
+     * const UserHealthTracker = await prisma.userHealthTracker.create({
+     *   data: {
+     *     // ... data to create a UserHealthTracker
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserHealthTrackerCreateArgs>(args: SelectSubset<T, UserHealthTrackerCreateArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserHealthTrackers.
+     * @param {UserHealthTrackerCreateManyArgs} args - Arguments to create many UserHealthTrackers.
+     * @example
+     * // Create many UserHealthTrackers
+     * const userHealthTracker = await prisma.userHealthTracker.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserHealthTrackerCreateManyArgs>(args?: SelectSubset<T, UserHealthTrackerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserHealthTrackers and returns the data saved in the database.
+     * @param {UserHealthTrackerCreateManyAndReturnArgs} args - Arguments to create many UserHealthTrackers.
+     * @example
+     * // Create many UserHealthTrackers
+     * const userHealthTracker = await prisma.userHealthTracker.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserHealthTrackers and only return the `id`
+     * const userHealthTrackerWithIdOnly = await prisma.userHealthTracker.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserHealthTrackerCreateManyAndReturnArgs>(args?: SelectSubset<T, UserHealthTrackerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserHealthTracker.
+     * @param {UserHealthTrackerDeleteArgs} args - Arguments to delete one UserHealthTracker.
+     * @example
+     * // Delete one UserHealthTracker
+     * const UserHealthTracker = await prisma.userHealthTracker.delete({
+     *   where: {
+     *     // ... filter to delete one UserHealthTracker
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserHealthTrackerDeleteArgs>(args: SelectSubset<T, UserHealthTrackerDeleteArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserHealthTracker.
+     * @param {UserHealthTrackerUpdateArgs} args - Arguments to update one UserHealthTracker.
+     * @example
+     * // Update one UserHealthTracker
+     * const userHealthTracker = await prisma.userHealthTracker.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserHealthTrackerUpdateArgs>(args: SelectSubset<T, UserHealthTrackerUpdateArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserHealthTrackers.
+     * @param {UserHealthTrackerDeleteManyArgs} args - Arguments to filter UserHealthTrackers to delete.
+     * @example
+     * // Delete a few UserHealthTrackers
+     * const { count } = await prisma.userHealthTracker.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserHealthTrackerDeleteManyArgs>(args?: SelectSubset<T, UserHealthTrackerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserHealthTrackerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserHealthTrackers
+     * const userHealthTracker = await prisma.userHealthTracker.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserHealthTrackerUpdateManyArgs>(args: SelectSubset<T, UserHealthTrackerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserHealthTrackers and returns the data updated in the database.
+     * @param {UserHealthTrackerUpdateManyAndReturnArgs} args - Arguments to update many UserHealthTrackers.
+     * @example
+     * // Update many UserHealthTrackers
+     * const userHealthTracker = await prisma.userHealthTracker.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserHealthTrackers and only return the `id`
+     * const userHealthTrackerWithIdOnly = await prisma.userHealthTracker.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserHealthTrackerUpdateManyAndReturnArgs>(args: SelectSubset<T, UserHealthTrackerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserHealthTracker.
+     * @param {UserHealthTrackerUpsertArgs} args - Arguments to update or create a UserHealthTracker.
+     * @example
+     * // Update or create a UserHealthTracker
+     * const userHealthTracker = await prisma.userHealthTracker.upsert({
+     *   create: {
+     *     // ... data to create a UserHealthTracker
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserHealthTracker we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserHealthTrackerUpsertArgs>(args: SelectSubset<T, UserHealthTrackerUpsertArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserHealthTrackerCountArgs} args - Arguments to filter UserHealthTrackers to count.
+     * @example
+     * // Count the number of UserHealthTrackers
+     * const count = await prisma.userHealthTracker.count({
+     *   where: {
+     *     // ... the filter for the UserHealthTrackers we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserHealthTrackerCountArgs>(
+      args?: Subset<T, UserHealthTrackerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserHealthTrackerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserHealthTrackerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserHealthTrackerAggregateArgs>(args: Subset<T, UserHealthTrackerAggregateArgs>): Prisma.PrismaPromise<GetUserHealthTrackerAggregateType<T>>
+
+    /**
+     * Group by UserHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserHealthTrackerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserHealthTrackerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserHealthTrackerGroupByArgs['orderBy'] }
+        : { orderBy?: UserHealthTrackerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserHealthTrackerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserHealthTrackerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserHealthTracker model
+   */
+  readonly fields: UserHealthTrackerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserHealthTracker.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserHealthTrackerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    schedules<T extends UserHealthTracker$schedulesArgs<ExtArgs> = {}>(args?: Subset<T, UserHealthTracker$schedulesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    records<T extends UserHealthTracker$recordsArgs<ExtArgs> = {}>(args?: Subset<T, UserHealthTracker$recordsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserHealthTracker model
+   */ 
+  interface UserHealthTrackerFieldRefs {
+    readonly id: FieldRef<"UserHealthTracker", 'String'>
+    readonly email: FieldRef<"UserHealthTracker", 'String'>
+    readonly name: FieldRef<"UserHealthTracker", 'String'>
+    readonly password: FieldRef<"UserHealthTracker", 'String'>
+    readonly createdAt: FieldRef<"UserHealthTracker", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserHealthTracker findUnique
+   */
+  export type UserHealthTrackerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserHealthTracker to fetch.
+     */
+    where: UserHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * UserHealthTracker findUniqueOrThrow
+   */
+  export type UserHealthTrackerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserHealthTracker to fetch.
+     */
+    where: UserHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * UserHealthTracker findFirst
+   */
+  export type UserHealthTrackerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserHealthTracker to fetch.
+     */
+    where?: UserHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserHealthTrackers to fetch.
+     */
+    orderBy?: UserHealthTrackerOrderByWithRelationInput | UserHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserHealthTrackers.
+     */
+    cursor?: UserHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserHealthTrackers.
+     */
+    distinct?: UserHealthTrackerScalarFieldEnum | UserHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * UserHealthTracker findFirstOrThrow
+   */
+  export type UserHealthTrackerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserHealthTracker to fetch.
+     */
+    where?: UserHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserHealthTrackers to fetch.
+     */
+    orderBy?: UserHealthTrackerOrderByWithRelationInput | UserHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserHealthTrackers.
+     */
+    cursor?: UserHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserHealthTrackers.
+     */
+    distinct?: UserHealthTrackerScalarFieldEnum | UserHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * UserHealthTracker findMany
+   */
+  export type UserHealthTrackerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserHealthTrackers to fetch.
+     */
+    where?: UserHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserHealthTrackers to fetch.
+     */
+    orderBy?: UserHealthTrackerOrderByWithRelationInput | UserHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserHealthTrackers.
+     */
+    cursor?: UserHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserHealthTrackers.
+     */
+    skip?: number
+    distinct?: UserHealthTrackerScalarFieldEnum | UserHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * UserHealthTracker create
+   */
+  export type UserHealthTrackerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserHealthTracker.
+     */
+    data: XOR<UserHealthTrackerCreateInput, UserHealthTrackerUncheckedCreateInput>
+  }
+
+  /**
+   * UserHealthTracker createMany
+   */
+  export type UserHealthTrackerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserHealthTrackers.
+     */
+    data: UserHealthTrackerCreateManyInput | UserHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserHealthTracker createManyAndReturn
+   */
+  export type UserHealthTrackerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserHealthTrackers.
+     */
+    data: UserHealthTrackerCreateManyInput | UserHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserHealthTracker update
+   */
+  export type UserHealthTrackerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserHealthTracker.
+     */
+    data: XOR<UserHealthTrackerUpdateInput, UserHealthTrackerUncheckedUpdateInput>
+    /**
+     * Choose, which UserHealthTracker to update.
+     */
+    where: UserHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * UserHealthTracker updateMany
+   */
+  export type UserHealthTrackerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserHealthTrackers.
+     */
+    data: XOR<UserHealthTrackerUpdateManyMutationInput, UserHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which UserHealthTrackers to update
+     */
+    where?: UserHealthTrackerWhereInput
+    /**
+     * Limit how many UserHealthTrackers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserHealthTracker updateManyAndReturn
+   */
+  export type UserHealthTrackerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to update UserHealthTrackers.
+     */
+    data: XOR<UserHealthTrackerUpdateManyMutationInput, UserHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which UserHealthTrackers to update
+     */
+    where?: UserHealthTrackerWhereInput
+    /**
+     * Limit how many UserHealthTrackers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserHealthTracker upsert
+   */
+  export type UserHealthTrackerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserHealthTracker to update in case it exists.
+     */
+    where: UserHealthTrackerWhereUniqueInput
+    /**
+     * In case the UserHealthTracker found by the `where` argument doesn't exist, create a new UserHealthTracker with this data.
+     */
+    create: XOR<UserHealthTrackerCreateInput, UserHealthTrackerUncheckedCreateInput>
+    /**
+     * In case the UserHealthTracker was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserHealthTrackerUpdateInput, UserHealthTrackerUncheckedUpdateInput>
+  }
+
+  /**
+   * UserHealthTracker delete
+   */
+  export type UserHealthTrackerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter which UserHealthTracker to delete.
+     */
+    where: UserHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * UserHealthTracker deleteMany
+   */
+  export type UserHealthTrackerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserHealthTrackers to delete
+     */
+    where?: UserHealthTrackerWhereInput
+    /**
+     * Limit how many UserHealthTrackers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserHealthTracker.schedules
+   */
+  export type UserHealthTracker$schedulesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    where?: ScheduleHealthTrackerWhereInput
+    orderBy?: ScheduleHealthTrackerOrderByWithRelationInput | ScheduleHealthTrackerOrderByWithRelationInput[]
+    cursor?: ScheduleHealthTrackerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ScheduleHealthTrackerScalarFieldEnum | ScheduleHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * UserHealthTracker.records
+   */
+  export type UserHealthTracker$recordsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    where?: RecordHealthTrackerWhereInput
+    orderBy?: RecordHealthTrackerOrderByWithRelationInput | RecordHealthTrackerOrderByWithRelationInput[]
+    cursor?: RecordHealthTrackerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: RecordHealthTrackerScalarFieldEnum | RecordHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * UserHealthTracker without action
+   */
+  export type UserHealthTrackerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserHealthTracker
+     */
+    select?: UserHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserHealthTracker
+     */
+    omit?: UserHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserHealthTrackerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ScheduleHealthTracker
+   */
+
+  export type AggregateScheduleHealthTracker = {
+    _count: ScheduleHealthTrackerCountAggregateOutputType | null
+    _min: ScheduleHealthTrackerMinAggregateOutputType | null
+    _max: ScheduleHealthTrackerMaxAggregateOutputType | null
+  }
+
+  export type ScheduleHealthTrackerMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    type: string | null
+    title: string | null
+    dateTime: Date | null
+    notes: string | null
+    createdAt: Date | null
+  }
+
+  export type ScheduleHealthTrackerMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    type: string | null
+    title: string | null
+    dateTime: Date | null
+    notes: string | null
+    createdAt: Date | null
+  }
+
+  export type ScheduleHealthTrackerCountAggregateOutputType = {
+    id: number
+    userId: number
+    type: number
+    title: number
+    dateTime: number
+    notes: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ScheduleHealthTrackerMinAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    title?: true
+    dateTime?: true
+    notes?: true
+    createdAt?: true
+  }
+
+  export type ScheduleHealthTrackerMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    title?: true
+    dateTime?: true
+    notes?: true
+    createdAt?: true
+  }
+
+  export type ScheduleHealthTrackerCountAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    title?: true
+    dateTime?: true
+    notes?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ScheduleHealthTrackerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ScheduleHealthTracker to aggregate.
+     */
+    where?: ScheduleHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ScheduleHealthTrackers to fetch.
+     */
+    orderBy?: ScheduleHealthTrackerOrderByWithRelationInput | ScheduleHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ScheduleHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ScheduleHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ScheduleHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ScheduleHealthTrackers
+    **/
+    _count?: true | ScheduleHealthTrackerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ScheduleHealthTrackerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ScheduleHealthTrackerMaxAggregateInputType
+  }
+
+  export type GetScheduleHealthTrackerAggregateType<T extends ScheduleHealthTrackerAggregateArgs> = {
+        [P in keyof T & keyof AggregateScheduleHealthTracker]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateScheduleHealthTracker[P]>
+      : GetScalarType<T[P], AggregateScheduleHealthTracker[P]>
+  }
+
+
+
+
+  export type ScheduleHealthTrackerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ScheduleHealthTrackerWhereInput
+    orderBy?: ScheduleHealthTrackerOrderByWithAggregationInput | ScheduleHealthTrackerOrderByWithAggregationInput[]
+    by: ScheduleHealthTrackerScalarFieldEnum[] | ScheduleHealthTrackerScalarFieldEnum
+    having?: ScheduleHealthTrackerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ScheduleHealthTrackerCountAggregateInputType | true
+    _min?: ScheduleHealthTrackerMinAggregateInputType
+    _max?: ScheduleHealthTrackerMaxAggregateInputType
+  }
+
+  export type ScheduleHealthTrackerGroupByOutputType = {
+    id: string
+    userId: string
+    type: string
+    title: string
+    dateTime: Date
+    notes: string | null
+    createdAt: Date
+    _count: ScheduleHealthTrackerCountAggregateOutputType | null
+    _min: ScheduleHealthTrackerMinAggregateOutputType | null
+    _max: ScheduleHealthTrackerMaxAggregateOutputType | null
+  }
+
+  type GetScheduleHealthTrackerGroupByPayload<T extends ScheduleHealthTrackerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ScheduleHealthTrackerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ScheduleHealthTrackerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ScheduleHealthTrackerGroupByOutputType[P]>
+            : GetScalarType<T[P], ScheduleHealthTrackerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ScheduleHealthTrackerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    title?: boolean
+    dateTime?: boolean
+    notes?: boolean
+    createdAt?: boolean
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["scheduleHealthTracker"]>
+
+  export type ScheduleHealthTrackerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    title?: boolean
+    dateTime?: boolean
+    notes?: boolean
+    createdAt?: boolean
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["scheduleHealthTracker"]>
+
+  export type ScheduleHealthTrackerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    title?: boolean
+    dateTime?: boolean
+    notes?: boolean
+    createdAt?: boolean
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["scheduleHealthTracker"]>
+
+  export type ScheduleHealthTrackerSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    title?: boolean
+    dateTime?: boolean
+    notes?: boolean
+    createdAt?: boolean
+  }
+
+  export type ScheduleHealthTrackerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "type" | "title" | "dateTime" | "notes" | "createdAt", ExtArgs["result"]["scheduleHealthTracker"]>
+  export type ScheduleHealthTrackerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }
+  export type ScheduleHealthTrackerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }
+  export type ScheduleHealthTrackerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }
+
+  export type $ScheduleHealthTrackerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ScheduleHealthTracker"
+    objects: {
+      user: Prisma.$UserHealthTrackerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      type: string
+      title: string
+      dateTime: Date
+      notes: string | null
+      createdAt: Date
+    }, ExtArgs["result"]["scheduleHealthTracker"]>
+    composites: {}
+  }
+
+  type ScheduleHealthTrackerGetPayload<S extends boolean | null | undefined | ScheduleHealthTrackerDefaultArgs> = $Result.GetResult<Prisma.$ScheduleHealthTrackerPayload, S>
+
+  type ScheduleHealthTrackerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ScheduleHealthTrackerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ScheduleHealthTrackerCountAggregateInputType | true
+    }
+
+  export interface ScheduleHealthTrackerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ScheduleHealthTracker'], meta: { name: 'ScheduleHealthTracker' } }
+    /**
+     * Find zero or one ScheduleHealthTracker that matches the filter.
+     * @param {ScheduleHealthTrackerFindUniqueArgs} args - Arguments to find a ScheduleHealthTracker
+     * @example
+     * // Get one ScheduleHealthTracker
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ScheduleHealthTrackerFindUniqueArgs>(args: SelectSubset<T, ScheduleHealthTrackerFindUniqueArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ScheduleHealthTracker that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ScheduleHealthTrackerFindUniqueOrThrowArgs} args - Arguments to find a ScheduleHealthTracker
+     * @example
+     * // Get one ScheduleHealthTracker
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ScheduleHealthTrackerFindUniqueOrThrowArgs>(args: SelectSubset<T, ScheduleHealthTrackerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ScheduleHealthTracker that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ScheduleHealthTrackerFindFirstArgs} args - Arguments to find a ScheduleHealthTracker
+     * @example
+     * // Get one ScheduleHealthTracker
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ScheduleHealthTrackerFindFirstArgs>(args?: SelectSubset<T, ScheduleHealthTrackerFindFirstArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ScheduleHealthTracker that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ScheduleHealthTrackerFindFirstOrThrowArgs} args - Arguments to find a ScheduleHealthTracker
+     * @example
+     * // Get one ScheduleHealthTracker
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ScheduleHealthTrackerFindFirstOrThrowArgs>(args?: SelectSubset<T, ScheduleHealthTrackerFindFirstOrThrowArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ScheduleHealthTrackers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ScheduleHealthTrackerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ScheduleHealthTrackers
+     * const scheduleHealthTrackers = await prisma.scheduleHealthTracker.findMany()
+     * 
+     * // Get first 10 ScheduleHealthTrackers
+     * const scheduleHealthTrackers = await prisma.scheduleHealthTracker.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const scheduleHealthTrackerWithIdOnly = await prisma.scheduleHealthTracker.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ScheduleHealthTrackerFindManyArgs>(args?: SelectSubset<T, ScheduleHealthTrackerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ScheduleHealthTracker.
+     * @param {ScheduleHealthTrackerCreateArgs} args - Arguments to create a ScheduleHealthTracker.
+     * @example
+     * // Create one ScheduleHealthTracker
+     * const ScheduleHealthTracker = await prisma.scheduleHealthTracker.create({
+     *   data: {
+     *     // ... data to create a ScheduleHealthTracker
+     *   }
+     * })
+     * 
+     */
+    create<T extends ScheduleHealthTrackerCreateArgs>(args: SelectSubset<T, ScheduleHealthTrackerCreateArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ScheduleHealthTrackers.
+     * @param {ScheduleHealthTrackerCreateManyArgs} args - Arguments to create many ScheduleHealthTrackers.
+     * @example
+     * // Create many ScheduleHealthTrackers
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ScheduleHealthTrackerCreateManyArgs>(args?: SelectSubset<T, ScheduleHealthTrackerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ScheduleHealthTrackers and returns the data saved in the database.
+     * @param {ScheduleHealthTrackerCreateManyAndReturnArgs} args - Arguments to create many ScheduleHealthTrackers.
+     * @example
+     * // Create many ScheduleHealthTrackers
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ScheduleHealthTrackers and only return the `id`
+     * const scheduleHealthTrackerWithIdOnly = await prisma.scheduleHealthTracker.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ScheduleHealthTrackerCreateManyAndReturnArgs>(args?: SelectSubset<T, ScheduleHealthTrackerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ScheduleHealthTracker.
+     * @param {ScheduleHealthTrackerDeleteArgs} args - Arguments to delete one ScheduleHealthTracker.
+     * @example
+     * // Delete one ScheduleHealthTracker
+     * const ScheduleHealthTracker = await prisma.scheduleHealthTracker.delete({
+     *   where: {
+     *     // ... filter to delete one ScheduleHealthTracker
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ScheduleHealthTrackerDeleteArgs>(args: SelectSubset<T, ScheduleHealthTrackerDeleteArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ScheduleHealthTracker.
+     * @param {ScheduleHealthTrackerUpdateArgs} args - Arguments to update one ScheduleHealthTracker.
+     * @example
+     * // Update one ScheduleHealthTracker
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ScheduleHealthTrackerUpdateArgs>(args: SelectSubset<T, ScheduleHealthTrackerUpdateArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ScheduleHealthTrackers.
+     * @param {ScheduleHealthTrackerDeleteManyArgs} args - Arguments to filter ScheduleHealthTrackers to delete.
+     * @example
+     * // Delete a few ScheduleHealthTrackers
+     * const { count } = await prisma.scheduleHealthTracker.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ScheduleHealthTrackerDeleteManyArgs>(args?: SelectSubset<T, ScheduleHealthTrackerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ScheduleHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ScheduleHealthTrackerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ScheduleHealthTrackers
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ScheduleHealthTrackerUpdateManyArgs>(args: SelectSubset<T, ScheduleHealthTrackerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ScheduleHealthTrackers and returns the data updated in the database.
+     * @param {ScheduleHealthTrackerUpdateManyAndReturnArgs} args - Arguments to update many ScheduleHealthTrackers.
+     * @example
+     * // Update many ScheduleHealthTrackers
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ScheduleHealthTrackers and only return the `id`
+     * const scheduleHealthTrackerWithIdOnly = await prisma.scheduleHealthTracker.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ScheduleHealthTrackerUpdateManyAndReturnArgs>(args: SelectSubset<T, ScheduleHealthTrackerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ScheduleHealthTracker.
+     * @param {ScheduleHealthTrackerUpsertArgs} args - Arguments to update or create a ScheduleHealthTracker.
+     * @example
+     * // Update or create a ScheduleHealthTracker
+     * const scheduleHealthTracker = await prisma.scheduleHealthTracker.upsert({
+     *   create: {
+     *     // ... data to create a ScheduleHealthTracker
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ScheduleHealthTracker we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ScheduleHealthTrackerUpsertArgs>(args: SelectSubset<T, ScheduleHealthTrackerUpsertArgs<ExtArgs>>): Prisma__ScheduleHealthTrackerClient<$Result.GetResult<Prisma.$ScheduleHealthTrackerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ScheduleHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ScheduleHealthTrackerCountArgs} args - Arguments to filter ScheduleHealthTrackers to count.
+     * @example
+     * // Count the number of ScheduleHealthTrackers
+     * const count = await prisma.scheduleHealthTracker.count({
+     *   where: {
+     *     // ... the filter for the ScheduleHealthTrackers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ScheduleHealthTrackerCountArgs>(
+      args?: Subset<T, ScheduleHealthTrackerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ScheduleHealthTrackerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ScheduleHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ScheduleHealthTrackerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ScheduleHealthTrackerAggregateArgs>(args: Subset<T, ScheduleHealthTrackerAggregateArgs>): Prisma.PrismaPromise<GetScheduleHealthTrackerAggregateType<T>>
+
+    /**
+     * Group by ScheduleHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ScheduleHealthTrackerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ScheduleHealthTrackerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ScheduleHealthTrackerGroupByArgs['orderBy'] }
+        : { orderBy?: ScheduleHealthTrackerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ScheduleHealthTrackerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetScheduleHealthTrackerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ScheduleHealthTracker model
+   */
+  readonly fields: ScheduleHealthTrackerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ScheduleHealthTracker.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ScheduleHealthTrackerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserHealthTrackerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserHealthTrackerDefaultArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ScheduleHealthTracker model
+   */ 
+  interface ScheduleHealthTrackerFieldRefs {
+    readonly id: FieldRef<"ScheduleHealthTracker", 'String'>
+    readonly userId: FieldRef<"ScheduleHealthTracker", 'String'>
+    readonly type: FieldRef<"ScheduleHealthTracker", 'String'>
+    readonly title: FieldRef<"ScheduleHealthTracker", 'String'>
+    readonly dateTime: FieldRef<"ScheduleHealthTracker", 'DateTime'>
+    readonly notes: FieldRef<"ScheduleHealthTracker", 'String'>
+    readonly createdAt: FieldRef<"ScheduleHealthTracker", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ScheduleHealthTracker findUnique
+   */
+  export type ScheduleHealthTrackerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which ScheduleHealthTracker to fetch.
+     */
+    where: ScheduleHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ScheduleHealthTracker findUniqueOrThrow
+   */
+  export type ScheduleHealthTrackerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which ScheduleHealthTracker to fetch.
+     */
+    where: ScheduleHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ScheduleHealthTracker findFirst
+   */
+  export type ScheduleHealthTrackerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which ScheduleHealthTracker to fetch.
+     */
+    where?: ScheduleHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ScheduleHealthTrackers to fetch.
+     */
+    orderBy?: ScheduleHealthTrackerOrderByWithRelationInput | ScheduleHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ScheduleHealthTrackers.
+     */
+    cursor?: ScheduleHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ScheduleHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ScheduleHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ScheduleHealthTrackers.
+     */
+    distinct?: ScheduleHealthTrackerScalarFieldEnum | ScheduleHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * ScheduleHealthTracker findFirstOrThrow
+   */
+  export type ScheduleHealthTrackerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which ScheduleHealthTracker to fetch.
+     */
+    where?: ScheduleHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ScheduleHealthTrackers to fetch.
+     */
+    orderBy?: ScheduleHealthTrackerOrderByWithRelationInput | ScheduleHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ScheduleHealthTrackers.
+     */
+    cursor?: ScheduleHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ScheduleHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ScheduleHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ScheduleHealthTrackers.
+     */
+    distinct?: ScheduleHealthTrackerScalarFieldEnum | ScheduleHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * ScheduleHealthTracker findMany
+   */
+  export type ScheduleHealthTrackerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which ScheduleHealthTrackers to fetch.
+     */
+    where?: ScheduleHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ScheduleHealthTrackers to fetch.
+     */
+    orderBy?: ScheduleHealthTrackerOrderByWithRelationInput | ScheduleHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ScheduleHealthTrackers.
+     */
+    cursor?: ScheduleHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ScheduleHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ScheduleHealthTrackers.
+     */
+    skip?: number
+    distinct?: ScheduleHealthTrackerScalarFieldEnum | ScheduleHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * ScheduleHealthTracker create
+   */
+  export type ScheduleHealthTrackerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ScheduleHealthTracker.
+     */
+    data: XOR<ScheduleHealthTrackerCreateInput, ScheduleHealthTrackerUncheckedCreateInput>
+  }
+
+  /**
+   * ScheduleHealthTracker createMany
+   */
+  export type ScheduleHealthTrackerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ScheduleHealthTrackers.
+     */
+    data: ScheduleHealthTrackerCreateManyInput | ScheduleHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ScheduleHealthTracker createManyAndReturn
+   */
+  export type ScheduleHealthTrackerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to create many ScheduleHealthTrackers.
+     */
+    data: ScheduleHealthTrackerCreateManyInput | ScheduleHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ScheduleHealthTracker update
+   */
+  export type ScheduleHealthTrackerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ScheduleHealthTracker.
+     */
+    data: XOR<ScheduleHealthTrackerUpdateInput, ScheduleHealthTrackerUncheckedUpdateInput>
+    /**
+     * Choose, which ScheduleHealthTracker to update.
+     */
+    where: ScheduleHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ScheduleHealthTracker updateMany
+   */
+  export type ScheduleHealthTrackerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ScheduleHealthTrackers.
+     */
+    data: XOR<ScheduleHealthTrackerUpdateManyMutationInput, ScheduleHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which ScheduleHealthTrackers to update
+     */
+    where?: ScheduleHealthTrackerWhereInput
+    /**
+     * Limit how many ScheduleHealthTrackers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ScheduleHealthTracker updateManyAndReturn
+   */
+  export type ScheduleHealthTrackerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to update ScheduleHealthTrackers.
+     */
+    data: XOR<ScheduleHealthTrackerUpdateManyMutationInput, ScheduleHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which ScheduleHealthTrackers to update
+     */
+    where?: ScheduleHealthTrackerWhereInput
+    /**
+     * Limit how many ScheduleHealthTrackers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ScheduleHealthTracker upsert
+   */
+  export type ScheduleHealthTrackerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ScheduleHealthTracker to update in case it exists.
+     */
+    where: ScheduleHealthTrackerWhereUniqueInput
+    /**
+     * In case the ScheduleHealthTracker found by the `where` argument doesn't exist, create a new ScheduleHealthTracker with this data.
+     */
+    create: XOR<ScheduleHealthTrackerCreateInput, ScheduleHealthTrackerUncheckedCreateInput>
+    /**
+     * In case the ScheduleHealthTracker was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ScheduleHealthTrackerUpdateInput, ScheduleHealthTrackerUncheckedUpdateInput>
+  }
+
+  /**
+   * ScheduleHealthTracker delete
+   */
+  export type ScheduleHealthTrackerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter which ScheduleHealthTracker to delete.
+     */
+    where: ScheduleHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ScheduleHealthTracker deleteMany
+   */
+  export type ScheduleHealthTrackerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ScheduleHealthTrackers to delete
+     */
+    where?: ScheduleHealthTrackerWhereInput
+    /**
+     * Limit how many ScheduleHealthTrackers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ScheduleHealthTracker without action
+   */
+  export type ScheduleHealthTrackerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ScheduleHealthTracker
+     */
+    select?: ScheduleHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ScheduleHealthTracker
+     */
+    omit?: ScheduleHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ScheduleHealthTrackerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model RecordHealthTracker
+   */
+
+  export type AggregateRecordHealthTracker = {
+    _count: RecordHealthTrackerCountAggregateOutputType | null
+    _min: RecordHealthTrackerMinAggregateOutputType | null
+    _max: RecordHealthTrackerMaxAggregateOutputType | null
+  }
+
+  export type RecordHealthTrackerMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    type: string | null
+    description: string | null
+    date: Date | null
+    createdAt: Date | null
+  }
+
+  export type RecordHealthTrackerMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    type: string | null
+    description: string | null
+    date: Date | null
+    createdAt: Date | null
+  }
+
+  export type RecordHealthTrackerCountAggregateOutputType = {
+    id: number
+    userId: number
+    type: number
+    description: number
+    date: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type RecordHealthTrackerMinAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    description?: true
+    date?: true
+    createdAt?: true
+  }
+
+  export type RecordHealthTrackerMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    description?: true
+    date?: true
+    createdAt?: true
+  }
+
+  export type RecordHealthTrackerCountAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    description?: true
+    date?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type RecordHealthTrackerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which RecordHealthTracker to aggregate.
+     */
+    where?: RecordHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of RecordHealthTrackers to fetch.
+     */
+    orderBy?: RecordHealthTrackerOrderByWithRelationInput | RecordHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: RecordHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` RecordHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` RecordHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned RecordHealthTrackers
+    **/
+    _count?: true | RecordHealthTrackerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: RecordHealthTrackerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: RecordHealthTrackerMaxAggregateInputType
+  }
+
+  export type GetRecordHealthTrackerAggregateType<T extends RecordHealthTrackerAggregateArgs> = {
+        [P in keyof T & keyof AggregateRecordHealthTracker]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateRecordHealthTracker[P]>
+      : GetScalarType<T[P], AggregateRecordHealthTracker[P]>
+  }
+
+
+
+
+  export type RecordHealthTrackerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: RecordHealthTrackerWhereInput
+    orderBy?: RecordHealthTrackerOrderByWithAggregationInput | RecordHealthTrackerOrderByWithAggregationInput[]
+    by: RecordHealthTrackerScalarFieldEnum[] | RecordHealthTrackerScalarFieldEnum
+    having?: RecordHealthTrackerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: RecordHealthTrackerCountAggregateInputType | true
+    _min?: RecordHealthTrackerMinAggregateInputType
+    _max?: RecordHealthTrackerMaxAggregateInputType
+  }
+
+  export type RecordHealthTrackerGroupByOutputType = {
+    id: string
+    userId: string
+    type: string
+    description: string
+    date: Date
+    createdAt: Date
+    _count: RecordHealthTrackerCountAggregateOutputType | null
+    _min: RecordHealthTrackerMinAggregateOutputType | null
+    _max: RecordHealthTrackerMaxAggregateOutputType | null
+  }
+
+  type GetRecordHealthTrackerGroupByPayload<T extends RecordHealthTrackerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<RecordHealthTrackerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof RecordHealthTrackerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], RecordHealthTrackerGroupByOutputType[P]>
+            : GetScalarType<T[P], RecordHealthTrackerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type RecordHealthTrackerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    description?: boolean
+    date?: boolean
+    createdAt?: boolean
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["recordHealthTracker"]>
+
+  export type RecordHealthTrackerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    description?: boolean
+    date?: boolean
+    createdAt?: boolean
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["recordHealthTracker"]>
+
+  export type RecordHealthTrackerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    description?: boolean
+    date?: boolean
+    createdAt?: boolean
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["recordHealthTracker"]>
+
+  export type RecordHealthTrackerSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    description?: boolean
+    date?: boolean
+    createdAt?: boolean
+  }
+
+  export type RecordHealthTrackerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "type" | "description" | "date" | "createdAt", ExtArgs["result"]["recordHealthTracker"]>
+  export type RecordHealthTrackerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }
+  export type RecordHealthTrackerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }
+  export type RecordHealthTrackerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserHealthTrackerDefaultArgs<ExtArgs>
+  }
+
+  export type $RecordHealthTrackerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "RecordHealthTracker"
+    objects: {
+      user: Prisma.$UserHealthTrackerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      type: string
+      description: string
+      date: Date
+      createdAt: Date
+    }, ExtArgs["result"]["recordHealthTracker"]>
+    composites: {}
+  }
+
+  type RecordHealthTrackerGetPayload<S extends boolean | null | undefined | RecordHealthTrackerDefaultArgs> = $Result.GetResult<Prisma.$RecordHealthTrackerPayload, S>
+
+  type RecordHealthTrackerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<RecordHealthTrackerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: RecordHealthTrackerCountAggregateInputType | true
+    }
+
+  export interface RecordHealthTrackerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['RecordHealthTracker'], meta: { name: 'RecordHealthTracker' } }
+    /**
+     * Find zero or one RecordHealthTracker that matches the filter.
+     * @param {RecordHealthTrackerFindUniqueArgs} args - Arguments to find a RecordHealthTracker
+     * @example
+     * // Get one RecordHealthTracker
+     * const recordHealthTracker = await prisma.recordHealthTracker.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends RecordHealthTrackerFindUniqueArgs>(args: SelectSubset<T, RecordHealthTrackerFindUniqueArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one RecordHealthTracker that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {RecordHealthTrackerFindUniqueOrThrowArgs} args - Arguments to find a RecordHealthTracker
+     * @example
+     * // Get one RecordHealthTracker
+     * const recordHealthTracker = await prisma.recordHealthTracker.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends RecordHealthTrackerFindUniqueOrThrowArgs>(args: SelectSubset<T, RecordHealthTrackerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first RecordHealthTracker that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {RecordHealthTrackerFindFirstArgs} args - Arguments to find a RecordHealthTracker
+     * @example
+     * // Get one RecordHealthTracker
+     * const recordHealthTracker = await prisma.recordHealthTracker.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends RecordHealthTrackerFindFirstArgs>(args?: SelectSubset<T, RecordHealthTrackerFindFirstArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first RecordHealthTracker that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {RecordHealthTrackerFindFirstOrThrowArgs} args - Arguments to find a RecordHealthTracker
+     * @example
+     * // Get one RecordHealthTracker
+     * const recordHealthTracker = await prisma.recordHealthTracker.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends RecordHealthTrackerFindFirstOrThrowArgs>(args?: SelectSubset<T, RecordHealthTrackerFindFirstOrThrowArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more RecordHealthTrackers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {RecordHealthTrackerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all RecordHealthTrackers
+     * const recordHealthTrackers = await prisma.recordHealthTracker.findMany()
+     * 
+     * // Get first 10 RecordHealthTrackers
+     * const recordHealthTrackers = await prisma.recordHealthTracker.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const recordHealthTrackerWithIdOnly = await prisma.recordHealthTracker.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends RecordHealthTrackerFindManyArgs>(args?: SelectSubset<T, RecordHealthTrackerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a RecordHealthTracker.
+     * @param {RecordHealthTrackerCreateArgs} args - Arguments to create a RecordHealthTracker.
+     * @example
+     * // Create one RecordHealthTracker
+     * const RecordHealthTracker = await prisma.recordHealthTracker.create({
+     *   data: {
+     *     // ... data to create a RecordHealthTracker
+     *   }
+     * })
+     * 
+     */
+    create<T extends RecordHealthTrackerCreateArgs>(args: SelectSubset<T, RecordHealthTrackerCreateArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many RecordHealthTrackers.
+     * @param {RecordHealthTrackerCreateManyArgs} args - Arguments to create many RecordHealthTrackers.
+     * @example
+     * // Create many RecordHealthTrackers
+     * const recordHealthTracker = await prisma.recordHealthTracker.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends RecordHealthTrackerCreateManyArgs>(args?: SelectSubset<T, RecordHealthTrackerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many RecordHealthTrackers and returns the data saved in the database.
+     * @param {RecordHealthTrackerCreateManyAndReturnArgs} args - Arguments to create many RecordHealthTrackers.
+     * @example
+     * // Create many RecordHealthTrackers
+     * const recordHealthTracker = await prisma.recordHealthTracker.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many RecordHealthTrackers and only return the `id`
+     * const recordHealthTrackerWithIdOnly = await prisma.recordHealthTracker.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends RecordHealthTrackerCreateManyAndReturnArgs>(args?: SelectSubset<T, RecordHealthTrackerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a RecordHealthTracker.
+     * @param {RecordHealthTrackerDeleteArgs} args - Arguments to delete one RecordHealthTracker.
+     * @example
+     * // Delete one RecordHealthTracker
+     * const RecordHealthTracker = await prisma.recordHealthTracker.delete({
+     *   where: {
+     *     // ... filter to delete one RecordHealthTracker
+     *   }
+     * })
+     * 
+     */
+    delete<T extends RecordHealthTrackerDeleteArgs>(args: SelectSubset<T, RecordHealthTrackerDeleteArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one RecordHealthTracker.
+     * @param {RecordHealthTrackerUpdateArgs} args - Arguments to update one RecordHealthTracker.
+     * @example
+     * // Update one RecordHealthTracker
+     * const recordHealthTracker = await prisma.recordHealthTracker.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends RecordHealthTrackerUpdateArgs>(args: SelectSubset<T, RecordHealthTrackerUpdateArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more RecordHealthTrackers.
+     * @param {RecordHealthTrackerDeleteManyArgs} args - Arguments to filter RecordHealthTrackers to delete.
+     * @example
+     * // Delete a few RecordHealthTrackers
+     * const { count } = await prisma.recordHealthTracker.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends RecordHealthTrackerDeleteManyArgs>(args?: SelectSubset<T, RecordHealthTrackerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more RecordHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {RecordHealthTrackerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many RecordHealthTrackers
+     * const recordHealthTracker = await prisma.recordHealthTracker.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends RecordHealthTrackerUpdateManyArgs>(args: SelectSubset<T, RecordHealthTrackerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more RecordHealthTrackers and returns the data updated in the database.
+     * @param {RecordHealthTrackerUpdateManyAndReturnArgs} args - Arguments to update many RecordHealthTrackers.
+     * @example
+     * // Update many RecordHealthTrackers
+     * const recordHealthTracker = await prisma.recordHealthTracker.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more RecordHealthTrackers and only return the `id`
+     * const recordHealthTrackerWithIdOnly = await prisma.recordHealthTracker.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends RecordHealthTrackerUpdateManyAndReturnArgs>(args: SelectSubset<T, RecordHealthTrackerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one RecordHealthTracker.
+     * @param {RecordHealthTrackerUpsertArgs} args - Arguments to update or create a RecordHealthTracker.
+     * @example
+     * // Update or create a RecordHealthTracker
+     * const recordHealthTracker = await prisma.recordHealthTracker.upsert({
+     *   create: {
+     *     // ... data to create a RecordHealthTracker
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the RecordHealthTracker we want to update
+     *   }
+     * })
+     */
+    upsert<T extends RecordHealthTrackerUpsertArgs>(args: SelectSubset<T, RecordHealthTrackerUpsertArgs<ExtArgs>>): Prisma__RecordHealthTrackerClient<$Result.GetResult<Prisma.$RecordHealthTrackerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of RecordHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {RecordHealthTrackerCountArgs} args - Arguments to filter RecordHealthTrackers to count.
+     * @example
+     * // Count the number of RecordHealthTrackers
+     * const count = await prisma.recordHealthTracker.count({
+     *   where: {
+     *     // ... the filter for the RecordHealthTrackers we want to count
+     *   }
+     * })
+    **/
+    count<T extends RecordHealthTrackerCountArgs>(
+      args?: Subset<T, RecordHealthTrackerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], RecordHealthTrackerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a RecordHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {RecordHealthTrackerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends RecordHealthTrackerAggregateArgs>(args: Subset<T, RecordHealthTrackerAggregateArgs>): Prisma.PrismaPromise<GetRecordHealthTrackerAggregateType<T>>
+
+    /**
+     * Group by RecordHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {RecordHealthTrackerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends RecordHealthTrackerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: RecordHealthTrackerGroupByArgs['orderBy'] }
+        : { orderBy?: RecordHealthTrackerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, RecordHealthTrackerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetRecordHealthTrackerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the RecordHealthTracker model
+   */
+  readonly fields: RecordHealthTrackerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for RecordHealthTracker.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__RecordHealthTrackerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserHealthTrackerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserHealthTrackerDefaultArgs<ExtArgs>>): Prisma__UserHealthTrackerClient<$Result.GetResult<Prisma.$UserHealthTrackerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the RecordHealthTracker model
+   */ 
+  interface RecordHealthTrackerFieldRefs {
+    readonly id: FieldRef<"RecordHealthTracker", 'String'>
+    readonly userId: FieldRef<"RecordHealthTracker", 'String'>
+    readonly type: FieldRef<"RecordHealthTracker", 'String'>
+    readonly description: FieldRef<"RecordHealthTracker", 'String'>
+    readonly date: FieldRef<"RecordHealthTracker", 'DateTime'>
+    readonly createdAt: FieldRef<"RecordHealthTracker", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * RecordHealthTracker findUnique
+   */
+  export type RecordHealthTrackerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which RecordHealthTracker to fetch.
+     */
+    where: RecordHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * RecordHealthTracker findUniqueOrThrow
+   */
+  export type RecordHealthTrackerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which RecordHealthTracker to fetch.
+     */
+    where: RecordHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * RecordHealthTracker findFirst
+   */
+  export type RecordHealthTrackerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which RecordHealthTracker to fetch.
+     */
+    where?: RecordHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of RecordHealthTrackers to fetch.
+     */
+    orderBy?: RecordHealthTrackerOrderByWithRelationInput | RecordHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for RecordHealthTrackers.
+     */
+    cursor?: RecordHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` RecordHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` RecordHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of RecordHealthTrackers.
+     */
+    distinct?: RecordHealthTrackerScalarFieldEnum | RecordHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * RecordHealthTracker findFirstOrThrow
+   */
+  export type RecordHealthTrackerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which RecordHealthTracker to fetch.
+     */
+    where?: RecordHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of RecordHealthTrackers to fetch.
+     */
+    orderBy?: RecordHealthTrackerOrderByWithRelationInput | RecordHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for RecordHealthTrackers.
+     */
+    cursor?: RecordHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` RecordHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` RecordHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of RecordHealthTrackers.
+     */
+    distinct?: RecordHealthTrackerScalarFieldEnum | RecordHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * RecordHealthTracker findMany
+   */
+  export type RecordHealthTrackerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter, which RecordHealthTrackers to fetch.
+     */
+    where?: RecordHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of RecordHealthTrackers to fetch.
+     */
+    orderBy?: RecordHealthTrackerOrderByWithRelationInput | RecordHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing RecordHealthTrackers.
+     */
+    cursor?: RecordHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` RecordHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` RecordHealthTrackers.
+     */
+    skip?: number
+    distinct?: RecordHealthTrackerScalarFieldEnum | RecordHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * RecordHealthTracker create
+   */
+  export type RecordHealthTrackerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a RecordHealthTracker.
+     */
+    data: XOR<RecordHealthTrackerCreateInput, RecordHealthTrackerUncheckedCreateInput>
+  }
+
+  /**
+   * RecordHealthTracker createMany
+   */
+  export type RecordHealthTrackerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many RecordHealthTrackers.
+     */
+    data: RecordHealthTrackerCreateManyInput | RecordHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * RecordHealthTracker createManyAndReturn
+   */
+  export type RecordHealthTrackerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to create many RecordHealthTrackers.
+     */
+    data: RecordHealthTrackerCreateManyInput | RecordHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * RecordHealthTracker update
+   */
+  export type RecordHealthTrackerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a RecordHealthTracker.
+     */
+    data: XOR<RecordHealthTrackerUpdateInput, RecordHealthTrackerUncheckedUpdateInput>
+    /**
+     * Choose, which RecordHealthTracker to update.
+     */
+    where: RecordHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * RecordHealthTracker updateMany
+   */
+  export type RecordHealthTrackerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update RecordHealthTrackers.
+     */
+    data: XOR<RecordHealthTrackerUpdateManyMutationInput, RecordHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which RecordHealthTrackers to update
+     */
+    where?: RecordHealthTrackerWhereInput
+    /**
+     * Limit how many RecordHealthTrackers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * RecordHealthTracker updateManyAndReturn
+   */
+  export type RecordHealthTrackerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to update RecordHealthTrackers.
+     */
+    data: XOR<RecordHealthTrackerUpdateManyMutationInput, RecordHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which RecordHealthTrackers to update
+     */
+    where?: RecordHealthTrackerWhereInput
+    /**
+     * Limit how many RecordHealthTrackers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * RecordHealthTracker upsert
+   */
+  export type RecordHealthTrackerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the RecordHealthTracker to update in case it exists.
+     */
+    where: RecordHealthTrackerWhereUniqueInput
+    /**
+     * In case the RecordHealthTracker found by the `where` argument doesn't exist, create a new RecordHealthTracker with this data.
+     */
+    create: XOR<RecordHealthTrackerCreateInput, RecordHealthTrackerUncheckedCreateInput>
+    /**
+     * In case the RecordHealthTracker was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<RecordHealthTrackerUpdateInput, RecordHealthTrackerUncheckedUpdateInput>
+  }
+
+  /**
+   * RecordHealthTracker delete
+   */
+  export type RecordHealthTrackerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+    /**
+     * Filter which RecordHealthTracker to delete.
+     */
+    where: RecordHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * RecordHealthTracker deleteMany
+   */
+  export type RecordHealthTrackerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which RecordHealthTrackers to delete
+     */
+    where?: RecordHealthTrackerWhereInput
+    /**
+     * Limit how many RecordHealthTrackers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * RecordHealthTracker without action
+   */
+  export type RecordHealthTrackerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the RecordHealthTracker
+     */
+    select?: RecordHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the RecordHealthTracker
+     */
+    omit?: RecordHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecordHealthTrackerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ClinicHealthTracker
+   */
+
+  export type AggregateClinicHealthTracker = {
+    _count: ClinicHealthTrackerCountAggregateOutputType | null
+    _min: ClinicHealthTrackerMinAggregateOutputType | null
+    _max: ClinicHealthTrackerMaxAggregateOutputType | null
+  }
+
+  export type ClinicHealthTrackerMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    location: string | null
+    contact: string | null
+    createdAt: Date | null
+  }
+
+  export type ClinicHealthTrackerMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    location: string | null
+    contact: string | null
+    createdAt: Date | null
+  }
+
+  export type ClinicHealthTrackerCountAggregateOutputType = {
+    id: number
+    name: number
+    location: number
+    availableSlots: number
+    contact: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ClinicHealthTrackerMinAggregateInputType = {
+    id?: true
+    name?: true
+    location?: true
+    contact?: true
+    createdAt?: true
+  }
+
+  export type ClinicHealthTrackerMaxAggregateInputType = {
+    id?: true
+    name?: true
+    location?: true
+    contact?: true
+    createdAt?: true
+  }
+
+  export type ClinicHealthTrackerCountAggregateInputType = {
+    id?: true
+    name?: true
+    location?: true
+    availableSlots?: true
+    contact?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ClinicHealthTrackerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ClinicHealthTracker to aggregate.
+     */
+    where?: ClinicHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicHealthTrackers to fetch.
+     */
+    orderBy?: ClinicHealthTrackerOrderByWithRelationInput | ClinicHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ClinicHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ClinicHealthTrackers
+    **/
+    _count?: true | ClinicHealthTrackerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ClinicHealthTrackerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ClinicHealthTrackerMaxAggregateInputType
+  }
+
+  export type GetClinicHealthTrackerAggregateType<T extends ClinicHealthTrackerAggregateArgs> = {
+        [P in keyof T & keyof AggregateClinicHealthTracker]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateClinicHealthTracker[P]>
+      : GetScalarType<T[P], AggregateClinicHealthTracker[P]>
+  }
+
+
+
+
+  export type ClinicHealthTrackerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ClinicHealthTrackerWhereInput
+    orderBy?: ClinicHealthTrackerOrderByWithAggregationInput | ClinicHealthTrackerOrderByWithAggregationInput[]
+    by: ClinicHealthTrackerScalarFieldEnum[] | ClinicHealthTrackerScalarFieldEnum
+    having?: ClinicHealthTrackerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ClinicHealthTrackerCountAggregateInputType | true
+    _min?: ClinicHealthTrackerMinAggregateInputType
+    _max?: ClinicHealthTrackerMaxAggregateInputType
+  }
+
+  export type ClinicHealthTrackerGroupByOutputType = {
+    id: string
+    name: string
+    location: string
+    availableSlots: string[]
+    contact: string
+    createdAt: Date
+    _count: ClinicHealthTrackerCountAggregateOutputType | null
+    _min: ClinicHealthTrackerMinAggregateOutputType | null
+    _max: ClinicHealthTrackerMaxAggregateOutputType | null
+  }
+
+  type GetClinicHealthTrackerGroupByPayload<T extends ClinicHealthTrackerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ClinicHealthTrackerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ClinicHealthTrackerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ClinicHealthTrackerGroupByOutputType[P]>
+            : GetScalarType<T[P], ClinicHealthTrackerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ClinicHealthTrackerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    availableSlots?: boolean
+    contact?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["clinicHealthTracker"]>
+
+  export type ClinicHealthTrackerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    availableSlots?: boolean
+    contact?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["clinicHealthTracker"]>
+
+  export type ClinicHealthTrackerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    availableSlots?: boolean
+    contact?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["clinicHealthTracker"]>
+
+  export type ClinicHealthTrackerSelectScalar = {
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    availableSlots?: boolean
+    contact?: boolean
+    createdAt?: boolean
+  }
+
+  export type ClinicHealthTrackerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "location" | "availableSlots" | "contact" | "createdAt", ExtArgs["result"]["clinicHealthTracker"]>
+
+  export type $ClinicHealthTrackerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ClinicHealthTracker"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      location: string
+      availableSlots: string[]
+      contact: string
+      createdAt: Date
+    }, ExtArgs["result"]["clinicHealthTracker"]>
+    composites: {}
+  }
+
+  type ClinicHealthTrackerGetPayload<S extends boolean | null | undefined | ClinicHealthTrackerDefaultArgs> = $Result.GetResult<Prisma.$ClinicHealthTrackerPayload, S>
+
+  type ClinicHealthTrackerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ClinicHealthTrackerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ClinicHealthTrackerCountAggregateInputType | true
+    }
+
+  export interface ClinicHealthTrackerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ClinicHealthTracker'], meta: { name: 'ClinicHealthTracker' } }
+    /**
+     * Find zero or one ClinicHealthTracker that matches the filter.
+     * @param {ClinicHealthTrackerFindUniqueArgs} args - Arguments to find a ClinicHealthTracker
+     * @example
+     * // Get one ClinicHealthTracker
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ClinicHealthTrackerFindUniqueArgs>(args: SelectSubset<T, ClinicHealthTrackerFindUniqueArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ClinicHealthTracker that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ClinicHealthTrackerFindUniqueOrThrowArgs} args - Arguments to find a ClinicHealthTracker
+     * @example
+     * // Get one ClinicHealthTracker
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ClinicHealthTrackerFindUniqueOrThrowArgs>(args: SelectSubset<T, ClinicHealthTrackerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ClinicHealthTracker that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicHealthTrackerFindFirstArgs} args - Arguments to find a ClinicHealthTracker
+     * @example
+     * // Get one ClinicHealthTracker
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ClinicHealthTrackerFindFirstArgs>(args?: SelectSubset<T, ClinicHealthTrackerFindFirstArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ClinicHealthTracker that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicHealthTrackerFindFirstOrThrowArgs} args - Arguments to find a ClinicHealthTracker
+     * @example
+     * // Get one ClinicHealthTracker
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ClinicHealthTrackerFindFirstOrThrowArgs>(args?: SelectSubset<T, ClinicHealthTrackerFindFirstOrThrowArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ClinicHealthTrackers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicHealthTrackerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ClinicHealthTrackers
+     * const clinicHealthTrackers = await prisma.clinicHealthTracker.findMany()
+     * 
+     * // Get first 10 ClinicHealthTrackers
+     * const clinicHealthTrackers = await prisma.clinicHealthTracker.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const clinicHealthTrackerWithIdOnly = await prisma.clinicHealthTracker.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ClinicHealthTrackerFindManyArgs>(args?: SelectSubset<T, ClinicHealthTrackerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ClinicHealthTracker.
+     * @param {ClinicHealthTrackerCreateArgs} args - Arguments to create a ClinicHealthTracker.
+     * @example
+     * // Create one ClinicHealthTracker
+     * const ClinicHealthTracker = await prisma.clinicHealthTracker.create({
+     *   data: {
+     *     // ... data to create a ClinicHealthTracker
+     *   }
+     * })
+     * 
+     */
+    create<T extends ClinicHealthTrackerCreateArgs>(args: SelectSubset<T, ClinicHealthTrackerCreateArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ClinicHealthTrackers.
+     * @param {ClinicHealthTrackerCreateManyArgs} args - Arguments to create many ClinicHealthTrackers.
+     * @example
+     * // Create many ClinicHealthTrackers
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ClinicHealthTrackerCreateManyArgs>(args?: SelectSubset<T, ClinicHealthTrackerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ClinicHealthTrackers and returns the data saved in the database.
+     * @param {ClinicHealthTrackerCreateManyAndReturnArgs} args - Arguments to create many ClinicHealthTrackers.
+     * @example
+     * // Create many ClinicHealthTrackers
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ClinicHealthTrackers and only return the `id`
+     * const clinicHealthTrackerWithIdOnly = await prisma.clinicHealthTracker.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ClinicHealthTrackerCreateManyAndReturnArgs>(args?: SelectSubset<T, ClinicHealthTrackerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ClinicHealthTracker.
+     * @param {ClinicHealthTrackerDeleteArgs} args - Arguments to delete one ClinicHealthTracker.
+     * @example
+     * // Delete one ClinicHealthTracker
+     * const ClinicHealthTracker = await prisma.clinicHealthTracker.delete({
+     *   where: {
+     *     // ... filter to delete one ClinicHealthTracker
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ClinicHealthTrackerDeleteArgs>(args: SelectSubset<T, ClinicHealthTrackerDeleteArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ClinicHealthTracker.
+     * @param {ClinicHealthTrackerUpdateArgs} args - Arguments to update one ClinicHealthTracker.
+     * @example
+     * // Update one ClinicHealthTracker
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ClinicHealthTrackerUpdateArgs>(args: SelectSubset<T, ClinicHealthTrackerUpdateArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ClinicHealthTrackers.
+     * @param {ClinicHealthTrackerDeleteManyArgs} args - Arguments to filter ClinicHealthTrackers to delete.
+     * @example
+     * // Delete a few ClinicHealthTrackers
+     * const { count } = await prisma.clinicHealthTracker.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ClinicHealthTrackerDeleteManyArgs>(args?: SelectSubset<T, ClinicHealthTrackerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ClinicHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicHealthTrackerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ClinicHealthTrackers
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ClinicHealthTrackerUpdateManyArgs>(args: SelectSubset<T, ClinicHealthTrackerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ClinicHealthTrackers and returns the data updated in the database.
+     * @param {ClinicHealthTrackerUpdateManyAndReturnArgs} args - Arguments to update many ClinicHealthTrackers.
+     * @example
+     * // Update many ClinicHealthTrackers
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ClinicHealthTrackers and only return the `id`
+     * const clinicHealthTrackerWithIdOnly = await prisma.clinicHealthTracker.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ClinicHealthTrackerUpdateManyAndReturnArgs>(args: SelectSubset<T, ClinicHealthTrackerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ClinicHealthTracker.
+     * @param {ClinicHealthTrackerUpsertArgs} args - Arguments to update or create a ClinicHealthTracker.
+     * @example
+     * // Update or create a ClinicHealthTracker
+     * const clinicHealthTracker = await prisma.clinicHealthTracker.upsert({
+     *   create: {
+     *     // ... data to create a ClinicHealthTracker
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ClinicHealthTracker we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ClinicHealthTrackerUpsertArgs>(args: SelectSubset<T, ClinicHealthTrackerUpsertArgs<ExtArgs>>): Prisma__ClinicHealthTrackerClient<$Result.GetResult<Prisma.$ClinicHealthTrackerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ClinicHealthTrackers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicHealthTrackerCountArgs} args - Arguments to filter ClinicHealthTrackers to count.
+     * @example
+     * // Count the number of ClinicHealthTrackers
+     * const count = await prisma.clinicHealthTracker.count({
+     *   where: {
+     *     // ... the filter for the ClinicHealthTrackers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ClinicHealthTrackerCountArgs>(
+      args?: Subset<T, ClinicHealthTrackerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ClinicHealthTrackerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ClinicHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicHealthTrackerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ClinicHealthTrackerAggregateArgs>(args: Subset<T, ClinicHealthTrackerAggregateArgs>): Prisma.PrismaPromise<GetClinicHealthTrackerAggregateType<T>>
+
+    /**
+     * Group by ClinicHealthTracker.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ClinicHealthTrackerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ClinicHealthTrackerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ClinicHealthTrackerGroupByArgs['orderBy'] }
+        : { orderBy?: ClinicHealthTrackerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ClinicHealthTrackerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetClinicHealthTrackerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ClinicHealthTracker model
+   */
+  readonly fields: ClinicHealthTrackerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ClinicHealthTracker.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ClinicHealthTrackerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ClinicHealthTracker model
+   */ 
+  interface ClinicHealthTrackerFieldRefs {
+    readonly id: FieldRef<"ClinicHealthTracker", 'String'>
+    readonly name: FieldRef<"ClinicHealthTracker", 'String'>
+    readonly location: FieldRef<"ClinicHealthTracker", 'String'>
+    readonly availableSlots: FieldRef<"ClinicHealthTracker", 'String[]'>
+    readonly contact: FieldRef<"ClinicHealthTracker", 'String'>
+    readonly createdAt: FieldRef<"ClinicHealthTracker", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ClinicHealthTracker findUnique
+   */
+  export type ClinicHealthTrackerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicHealthTracker to fetch.
+     */
+    where: ClinicHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ClinicHealthTracker findUniqueOrThrow
+   */
+  export type ClinicHealthTrackerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicHealthTracker to fetch.
+     */
+    where: ClinicHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ClinicHealthTracker findFirst
+   */
+  export type ClinicHealthTrackerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicHealthTracker to fetch.
+     */
+    where?: ClinicHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicHealthTrackers to fetch.
+     */
+    orderBy?: ClinicHealthTrackerOrderByWithRelationInput | ClinicHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ClinicHealthTrackers.
+     */
+    cursor?: ClinicHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ClinicHealthTrackers.
+     */
+    distinct?: ClinicHealthTrackerScalarFieldEnum | ClinicHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * ClinicHealthTracker findFirstOrThrow
+   */
+  export type ClinicHealthTrackerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicHealthTracker to fetch.
+     */
+    where?: ClinicHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicHealthTrackers to fetch.
+     */
+    orderBy?: ClinicHealthTrackerOrderByWithRelationInput | ClinicHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ClinicHealthTrackers.
+     */
+    cursor?: ClinicHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicHealthTrackers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ClinicHealthTrackers.
+     */
+    distinct?: ClinicHealthTrackerScalarFieldEnum | ClinicHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * ClinicHealthTracker findMany
+   */
+  export type ClinicHealthTrackerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Filter, which ClinicHealthTrackers to fetch.
+     */
+    where?: ClinicHealthTrackerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ClinicHealthTrackers to fetch.
+     */
+    orderBy?: ClinicHealthTrackerOrderByWithRelationInput | ClinicHealthTrackerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ClinicHealthTrackers.
+     */
+    cursor?: ClinicHealthTrackerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ClinicHealthTrackers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ClinicHealthTrackers.
+     */
+    skip?: number
+    distinct?: ClinicHealthTrackerScalarFieldEnum | ClinicHealthTrackerScalarFieldEnum[]
+  }
+
+  /**
+   * ClinicHealthTracker create
+   */
+  export type ClinicHealthTrackerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data needed to create a ClinicHealthTracker.
+     */
+    data: XOR<ClinicHealthTrackerCreateInput, ClinicHealthTrackerUncheckedCreateInput>
+  }
+
+  /**
+   * ClinicHealthTracker createMany
+   */
+  export type ClinicHealthTrackerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ClinicHealthTrackers.
+     */
+    data: ClinicHealthTrackerCreateManyInput | ClinicHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ClinicHealthTracker createManyAndReturn
+   */
+  export type ClinicHealthTrackerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to create many ClinicHealthTrackers.
+     */
+    data: ClinicHealthTrackerCreateManyInput | ClinicHealthTrackerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ClinicHealthTracker update
+   */
+  export type ClinicHealthTrackerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data needed to update a ClinicHealthTracker.
+     */
+    data: XOR<ClinicHealthTrackerUpdateInput, ClinicHealthTrackerUncheckedUpdateInput>
+    /**
+     * Choose, which ClinicHealthTracker to update.
+     */
+    where: ClinicHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ClinicHealthTracker updateMany
+   */
+  export type ClinicHealthTrackerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ClinicHealthTrackers.
+     */
+    data: XOR<ClinicHealthTrackerUpdateManyMutationInput, ClinicHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which ClinicHealthTrackers to update
+     */
+    where?: ClinicHealthTrackerWhereInput
+    /**
+     * Limit how many ClinicHealthTrackers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ClinicHealthTracker updateManyAndReturn
+   */
+  export type ClinicHealthTrackerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The data used to update ClinicHealthTrackers.
+     */
+    data: XOR<ClinicHealthTrackerUpdateManyMutationInput, ClinicHealthTrackerUncheckedUpdateManyInput>
+    /**
+     * Filter which ClinicHealthTrackers to update
+     */
+    where?: ClinicHealthTrackerWhereInput
+    /**
+     * Limit how many ClinicHealthTrackers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ClinicHealthTracker upsert
+   */
+  export type ClinicHealthTrackerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * The filter to search for the ClinicHealthTracker to update in case it exists.
+     */
+    where: ClinicHealthTrackerWhereUniqueInput
+    /**
+     * In case the ClinicHealthTracker found by the `where` argument doesn't exist, create a new ClinicHealthTracker with this data.
+     */
+    create: XOR<ClinicHealthTrackerCreateInput, ClinicHealthTrackerUncheckedCreateInput>
+    /**
+     * In case the ClinicHealthTracker was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ClinicHealthTrackerUpdateInput, ClinicHealthTrackerUncheckedUpdateInput>
+  }
+
+  /**
+   * ClinicHealthTracker delete
+   */
+  export type ClinicHealthTrackerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+    /**
+     * Filter which ClinicHealthTracker to delete.
+     */
+    where: ClinicHealthTrackerWhereUniqueInput
+  }
+
+  /**
+   * ClinicHealthTracker deleteMany
+   */
+  export type ClinicHealthTrackerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ClinicHealthTrackers to delete
+     */
+    where?: ClinicHealthTrackerWhereInput
+    /**
+     * Limit how many ClinicHealthTrackers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ClinicHealthTracker without action
+   */
+  export type ClinicHealthTrackerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ClinicHealthTracker
+     */
+    select?: ClinicHealthTrackerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ClinicHealthTracker
+     */
+    omit?: ClinicHealthTrackerOmit<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -18052,6 +22713,54 @@ export namespace Prisma {
   export type GameHubTournamentPlayerScalarFieldEnum = (typeof GameHubTournamentPlayerScalarFieldEnum)[keyof typeof GameHubTournamentPlayerScalarFieldEnum]
 
 
+  export const UserHealthTrackerScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    createdAt: 'createdAt'
+  };
+
+  export type UserHealthTrackerScalarFieldEnum = (typeof UserHealthTrackerScalarFieldEnum)[keyof typeof UserHealthTrackerScalarFieldEnum]
+
+
+  export const ScheduleHealthTrackerScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    type: 'type',
+    title: 'title',
+    dateTime: 'dateTime',
+    notes: 'notes',
+    createdAt: 'createdAt'
+  };
+
+  export type ScheduleHealthTrackerScalarFieldEnum = (typeof ScheduleHealthTrackerScalarFieldEnum)[keyof typeof ScheduleHealthTrackerScalarFieldEnum]
+
+
+  export const RecordHealthTrackerScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    type: 'type',
+    description: 'description',
+    date: 'date',
+    createdAt: 'createdAt'
+  };
+
+  export type RecordHealthTrackerScalarFieldEnum = (typeof RecordHealthTrackerScalarFieldEnum)[keyof typeof RecordHealthTrackerScalarFieldEnum]
+
+
+  export const ClinicHealthTrackerScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    location: 'location',
+    availableSlots: 'availableSlots',
+    contact: 'contact',
+    createdAt: 'createdAt'
+  };
+
+  export type ClinicHealthTrackerScalarFieldEnum = (typeof ClinicHealthTrackerScalarFieldEnum)[keyof typeof ClinicHealthTrackerScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -18066,6 +22775,14 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+  export const NullsOrder: {
+    first: 'first',
+    last: 'last'
+  };
+
+  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -19054,6 +23771,246 @@ export namespace Prisma {
     joinedAt?: DateTimeWithAggregatesFilter<"GameHubTournamentPlayer"> | Date | string
   }
 
+  export type UserHealthTrackerWhereInput = {
+    AND?: UserHealthTrackerWhereInput | UserHealthTrackerWhereInput[]
+    OR?: UserHealthTrackerWhereInput[]
+    NOT?: UserHealthTrackerWhereInput | UserHealthTrackerWhereInput[]
+    id?: StringFilter<"UserHealthTracker"> | string
+    email?: StringFilter<"UserHealthTracker"> | string
+    name?: StringFilter<"UserHealthTracker"> | string
+    password?: StringFilter<"UserHealthTracker"> | string
+    createdAt?: DateTimeFilter<"UserHealthTracker"> | Date | string
+    schedules?: ScheduleHealthTrackerListRelationFilter
+    records?: RecordHealthTrackerListRelationFilter
+  }
+
+  export type UserHealthTrackerOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    schedules?: ScheduleHealthTrackerOrderByRelationAggregateInput
+    records?: RecordHealthTrackerOrderByRelationAggregateInput
+  }
+
+  export type UserHealthTrackerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: UserHealthTrackerWhereInput | UserHealthTrackerWhereInput[]
+    OR?: UserHealthTrackerWhereInput[]
+    NOT?: UserHealthTrackerWhereInput | UserHealthTrackerWhereInput[]
+    name?: StringFilter<"UserHealthTracker"> | string
+    password?: StringFilter<"UserHealthTracker"> | string
+    createdAt?: DateTimeFilter<"UserHealthTracker"> | Date | string
+    schedules?: ScheduleHealthTrackerListRelationFilter
+    records?: RecordHealthTrackerListRelationFilter
+  }, "id" | "email">
+
+  export type UserHealthTrackerOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    _count?: UserHealthTrackerCountOrderByAggregateInput
+    _max?: UserHealthTrackerMaxOrderByAggregateInput
+    _min?: UserHealthTrackerMinOrderByAggregateInput
+  }
+
+  export type UserHealthTrackerScalarWhereWithAggregatesInput = {
+    AND?: UserHealthTrackerScalarWhereWithAggregatesInput | UserHealthTrackerScalarWhereWithAggregatesInput[]
+    OR?: UserHealthTrackerScalarWhereWithAggregatesInput[]
+    NOT?: UserHealthTrackerScalarWhereWithAggregatesInput | UserHealthTrackerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserHealthTracker"> | string
+    email?: StringWithAggregatesFilter<"UserHealthTracker"> | string
+    name?: StringWithAggregatesFilter<"UserHealthTracker"> | string
+    password?: StringWithAggregatesFilter<"UserHealthTracker"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"UserHealthTracker"> | Date | string
+  }
+
+  export type ScheduleHealthTrackerWhereInput = {
+    AND?: ScheduleHealthTrackerWhereInput | ScheduleHealthTrackerWhereInput[]
+    OR?: ScheduleHealthTrackerWhereInput[]
+    NOT?: ScheduleHealthTrackerWhereInput | ScheduleHealthTrackerWhereInput[]
+    id?: StringFilter<"ScheduleHealthTracker"> | string
+    userId?: StringFilter<"ScheduleHealthTracker"> | string
+    type?: StringFilter<"ScheduleHealthTracker"> | string
+    title?: StringFilter<"ScheduleHealthTracker"> | string
+    dateTime?: DateTimeFilter<"ScheduleHealthTracker"> | Date | string
+    notes?: StringNullableFilter<"ScheduleHealthTracker"> | string | null
+    createdAt?: DateTimeFilter<"ScheduleHealthTracker"> | Date | string
+    user?: XOR<UserHealthTrackerScalarRelationFilter, UserHealthTrackerWhereInput>
+  }
+
+  export type ScheduleHealthTrackerOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    title?: SortOrder
+    dateTime?: SortOrder
+    notes?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    user?: UserHealthTrackerOrderByWithRelationInput
+  }
+
+  export type ScheduleHealthTrackerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ScheduleHealthTrackerWhereInput | ScheduleHealthTrackerWhereInput[]
+    OR?: ScheduleHealthTrackerWhereInput[]
+    NOT?: ScheduleHealthTrackerWhereInput | ScheduleHealthTrackerWhereInput[]
+    userId?: StringFilter<"ScheduleHealthTracker"> | string
+    type?: StringFilter<"ScheduleHealthTracker"> | string
+    title?: StringFilter<"ScheduleHealthTracker"> | string
+    dateTime?: DateTimeFilter<"ScheduleHealthTracker"> | Date | string
+    notes?: StringNullableFilter<"ScheduleHealthTracker"> | string | null
+    createdAt?: DateTimeFilter<"ScheduleHealthTracker"> | Date | string
+    user?: XOR<UserHealthTrackerScalarRelationFilter, UserHealthTrackerWhereInput>
+  }, "id">
+
+  export type ScheduleHealthTrackerOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    title?: SortOrder
+    dateTime?: SortOrder
+    notes?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    _count?: ScheduleHealthTrackerCountOrderByAggregateInput
+    _max?: ScheduleHealthTrackerMaxOrderByAggregateInput
+    _min?: ScheduleHealthTrackerMinOrderByAggregateInput
+  }
+
+  export type ScheduleHealthTrackerScalarWhereWithAggregatesInput = {
+    AND?: ScheduleHealthTrackerScalarWhereWithAggregatesInput | ScheduleHealthTrackerScalarWhereWithAggregatesInput[]
+    OR?: ScheduleHealthTrackerScalarWhereWithAggregatesInput[]
+    NOT?: ScheduleHealthTrackerScalarWhereWithAggregatesInput | ScheduleHealthTrackerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ScheduleHealthTracker"> | string
+    userId?: StringWithAggregatesFilter<"ScheduleHealthTracker"> | string
+    type?: StringWithAggregatesFilter<"ScheduleHealthTracker"> | string
+    title?: StringWithAggregatesFilter<"ScheduleHealthTracker"> | string
+    dateTime?: DateTimeWithAggregatesFilter<"ScheduleHealthTracker"> | Date | string
+    notes?: StringNullableWithAggregatesFilter<"ScheduleHealthTracker"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"ScheduleHealthTracker"> | Date | string
+  }
+
+  export type RecordHealthTrackerWhereInput = {
+    AND?: RecordHealthTrackerWhereInput | RecordHealthTrackerWhereInput[]
+    OR?: RecordHealthTrackerWhereInput[]
+    NOT?: RecordHealthTrackerWhereInput | RecordHealthTrackerWhereInput[]
+    id?: StringFilter<"RecordHealthTracker"> | string
+    userId?: StringFilter<"RecordHealthTracker"> | string
+    type?: StringFilter<"RecordHealthTracker"> | string
+    description?: StringFilter<"RecordHealthTracker"> | string
+    date?: DateTimeFilter<"RecordHealthTracker"> | Date | string
+    createdAt?: DateTimeFilter<"RecordHealthTracker"> | Date | string
+    user?: XOR<UserHealthTrackerScalarRelationFilter, UserHealthTrackerWhereInput>
+  }
+
+  export type RecordHealthTrackerOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    createdAt?: SortOrder
+    user?: UserHealthTrackerOrderByWithRelationInput
+  }
+
+  export type RecordHealthTrackerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: RecordHealthTrackerWhereInput | RecordHealthTrackerWhereInput[]
+    OR?: RecordHealthTrackerWhereInput[]
+    NOT?: RecordHealthTrackerWhereInput | RecordHealthTrackerWhereInput[]
+    userId?: StringFilter<"RecordHealthTracker"> | string
+    type?: StringFilter<"RecordHealthTracker"> | string
+    description?: StringFilter<"RecordHealthTracker"> | string
+    date?: DateTimeFilter<"RecordHealthTracker"> | Date | string
+    createdAt?: DateTimeFilter<"RecordHealthTracker"> | Date | string
+    user?: XOR<UserHealthTrackerScalarRelationFilter, UserHealthTrackerWhereInput>
+  }, "id">
+
+  export type RecordHealthTrackerOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    createdAt?: SortOrder
+    _count?: RecordHealthTrackerCountOrderByAggregateInput
+    _max?: RecordHealthTrackerMaxOrderByAggregateInput
+    _min?: RecordHealthTrackerMinOrderByAggregateInput
+  }
+
+  export type RecordHealthTrackerScalarWhereWithAggregatesInput = {
+    AND?: RecordHealthTrackerScalarWhereWithAggregatesInput | RecordHealthTrackerScalarWhereWithAggregatesInput[]
+    OR?: RecordHealthTrackerScalarWhereWithAggregatesInput[]
+    NOT?: RecordHealthTrackerScalarWhereWithAggregatesInput | RecordHealthTrackerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"RecordHealthTracker"> | string
+    userId?: StringWithAggregatesFilter<"RecordHealthTracker"> | string
+    type?: StringWithAggregatesFilter<"RecordHealthTracker"> | string
+    description?: StringWithAggregatesFilter<"RecordHealthTracker"> | string
+    date?: DateTimeWithAggregatesFilter<"RecordHealthTracker"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"RecordHealthTracker"> | Date | string
+  }
+
+  export type ClinicHealthTrackerWhereInput = {
+    AND?: ClinicHealthTrackerWhereInput | ClinicHealthTrackerWhereInput[]
+    OR?: ClinicHealthTrackerWhereInput[]
+    NOT?: ClinicHealthTrackerWhereInput | ClinicHealthTrackerWhereInput[]
+    id?: StringFilter<"ClinicHealthTracker"> | string
+    name?: StringFilter<"ClinicHealthTracker"> | string
+    location?: StringFilter<"ClinicHealthTracker"> | string
+    availableSlots?: StringNullableListFilter<"ClinicHealthTracker">
+    contact?: StringFilter<"ClinicHealthTracker"> | string
+    createdAt?: DateTimeFilter<"ClinicHealthTracker"> | Date | string
+  }
+
+  export type ClinicHealthTrackerOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    availableSlots?: SortOrder
+    contact?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ClinicHealthTrackerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ClinicHealthTrackerWhereInput | ClinicHealthTrackerWhereInput[]
+    OR?: ClinicHealthTrackerWhereInput[]
+    NOT?: ClinicHealthTrackerWhereInput | ClinicHealthTrackerWhereInput[]
+    name?: StringFilter<"ClinicHealthTracker"> | string
+    location?: StringFilter<"ClinicHealthTracker"> | string
+    availableSlots?: StringNullableListFilter<"ClinicHealthTracker">
+    contact?: StringFilter<"ClinicHealthTracker"> | string
+    createdAt?: DateTimeFilter<"ClinicHealthTracker"> | Date | string
+  }, "id">
+
+  export type ClinicHealthTrackerOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    availableSlots?: SortOrder
+    contact?: SortOrder
+    createdAt?: SortOrder
+    _count?: ClinicHealthTrackerCountOrderByAggregateInput
+    _max?: ClinicHealthTrackerMaxOrderByAggregateInput
+    _min?: ClinicHealthTrackerMinOrderByAggregateInput
+  }
+
+  export type ClinicHealthTrackerScalarWhereWithAggregatesInput = {
+    AND?: ClinicHealthTrackerScalarWhereWithAggregatesInput | ClinicHealthTrackerScalarWhereWithAggregatesInput[]
+    OR?: ClinicHealthTrackerScalarWhereWithAggregatesInput[]
+    NOT?: ClinicHealthTrackerScalarWhereWithAggregatesInput | ClinicHealthTrackerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ClinicHealthTracker"> | string
+    name?: StringWithAggregatesFilter<"ClinicHealthTracker"> | string
+    location?: StringWithAggregatesFilter<"ClinicHealthTracker"> | string
+    availableSlots?: StringNullableListFilter<"ClinicHealthTracker">
+    contact?: StringWithAggregatesFilter<"ClinicHealthTracker"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ClinicHealthTracker"> | Date | string
+  }
+
   export type EventOrganizerUserCreateInput = {
     id?: string
     email: string
@@ -20009,6 +24966,264 @@ export namespace Prisma {
     joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserHealthTrackerCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    schedules?: ScheduleHealthTrackerCreateNestedManyWithoutUserInput
+    records?: RecordHealthTrackerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserHealthTrackerUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    schedules?: ScheduleHealthTrackerUncheckedCreateNestedManyWithoutUserInput
+    records?: RecordHealthTrackerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserHealthTrackerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    schedules?: ScheduleHealthTrackerUpdateManyWithoutUserNestedInput
+    records?: RecordHealthTrackerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserHealthTrackerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    schedules?: ScheduleHealthTrackerUncheckedUpdateManyWithoutUserNestedInput
+    records?: RecordHealthTrackerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserHealthTrackerCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+  }
+
+  export type UserHealthTrackerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserHealthTrackerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ScheduleHealthTrackerCreateInput = {
+    id?: string
+    type: string
+    title: string
+    dateTime: Date | string
+    notes?: string | null
+    createdAt?: Date | string
+    user: UserHealthTrackerCreateNestedOneWithoutSchedulesInput
+  }
+
+  export type ScheduleHealthTrackerUncheckedCreateInput = {
+    id?: string
+    userId: string
+    type: string
+    title: string
+    dateTime: Date | string
+    notes?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ScheduleHealthTrackerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserHealthTrackerUpdateOneRequiredWithoutSchedulesNestedInput
+  }
+
+  export type ScheduleHealthTrackerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ScheduleHealthTrackerCreateManyInput = {
+    id?: string
+    userId: string
+    type: string
+    title: string
+    dateTime: Date | string
+    notes?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ScheduleHealthTrackerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ScheduleHealthTrackerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type RecordHealthTrackerCreateInput = {
+    id?: string
+    type: string
+    description: string
+    date: Date | string
+    createdAt?: Date | string
+    user: UserHealthTrackerCreateNestedOneWithoutRecordsInput
+  }
+
+  export type RecordHealthTrackerUncheckedCreateInput = {
+    id?: string
+    userId: string
+    type: string
+    description: string
+    date: Date | string
+    createdAt?: Date | string
+  }
+
+  export type RecordHealthTrackerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserHealthTrackerUpdateOneRequiredWithoutRecordsNestedInput
+  }
+
+  export type RecordHealthTrackerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type RecordHealthTrackerCreateManyInput = {
+    id?: string
+    userId: string
+    type: string
+    description: string
+    date: Date | string
+    createdAt?: Date | string
+  }
+
+  export type RecordHealthTrackerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type RecordHealthTrackerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicHealthTrackerCreateInput = {
+    id?: string
+    name: string
+    location: string
+    availableSlots?: ClinicHealthTrackerCreateavailableSlotsInput | string[]
+    contact: string
+    createdAt?: Date | string
+  }
+
+  export type ClinicHealthTrackerUncheckedCreateInput = {
+    id?: string
+    name: string
+    location: string
+    availableSlots?: ClinicHealthTrackerCreateavailableSlotsInput | string[]
+    contact: string
+    createdAt?: Date | string
+  }
+
+  export type ClinicHealthTrackerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    availableSlots?: ClinicHealthTrackerUpdateavailableSlotsInput | string[]
+    contact?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicHealthTrackerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    availableSlots?: ClinicHealthTrackerUpdateavailableSlotsInput | string[]
+    contact?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicHealthTrackerCreateManyInput = {
+    id?: string
+    name: string
+    location: string
+    availableSlots?: ClinicHealthTrackerCreateavailableSlotsInput | string[]
+    contact: string
+    createdAt?: Date | string
+  }
+
+  export type ClinicHealthTrackerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    availableSlots?: ClinicHealthTrackerUpdateavailableSlotsInput | string[]
+    contact?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ClinicHealthTrackerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    availableSlots?: ClinicHealthTrackerUpdateavailableSlotsInput | string[]
+    contact?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -20671,6 +25886,183 @@ export namespace Prisma {
     tournamentId?: SortOrder
     playerId?: SortOrder
     joinedAt?: SortOrder
+  }
+
+  export type ScheduleHealthTrackerListRelationFilter = {
+    every?: ScheduleHealthTrackerWhereInput
+    some?: ScheduleHealthTrackerWhereInput
+    none?: ScheduleHealthTrackerWhereInput
+  }
+
+  export type RecordHealthTrackerListRelationFilter = {
+    every?: RecordHealthTrackerWhereInput
+    some?: RecordHealthTrackerWhereInput
+    none?: RecordHealthTrackerWhereInput
+  }
+
+  export type ScheduleHealthTrackerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type RecordHealthTrackerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserHealthTrackerCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserHealthTrackerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserHealthTrackerMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type UserHealthTrackerScalarRelationFilter = {
+    is?: UserHealthTrackerWhereInput
+    isNot?: UserHealthTrackerWhereInput
+  }
+
+  export type SortOrderInput = {
+    sort: SortOrder
+    nulls?: NullsOrder
+  }
+
+  export type ScheduleHealthTrackerCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    title?: SortOrder
+    dateTime?: SortOrder
+    notes?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ScheduleHealthTrackerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    title?: SortOrder
+    dateTime?: SortOrder
+    notes?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ScheduleHealthTrackerMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    title?: SortOrder
+    dateTime?: SortOrder
+    notes?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type RecordHealthTrackerCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type RecordHealthTrackerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type RecordHealthTrackerMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StringNullableListFilter<$PrismaModel = never> = {
+    equals?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    has?: string | StringFieldRefInput<$PrismaModel> | null
+    hasEvery?: string[] | ListStringFieldRefInput<$PrismaModel>
+    hasSome?: string[] | ListStringFieldRefInput<$PrismaModel>
+    isEmpty?: boolean
+  }
+
+  export type ClinicHealthTrackerCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    availableSlots?: SortOrder
+    contact?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ClinicHealthTrackerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    contact?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ClinicHealthTrackerMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    contact?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type EventOrganizerTaskCreateNestedManyWithoutUserInput = {
@@ -21533,6 +26925,131 @@ export namespace Prisma {
     update?: XOR<XOR<GameHubPlayerUpdateToOneWithWhereWithoutTournamentsInput, GameHubPlayerUpdateWithoutTournamentsInput>, GameHubPlayerUncheckedUpdateWithoutTournamentsInput>
   }
 
+  export type ScheduleHealthTrackerCreateNestedManyWithoutUserInput = {
+    create?: XOR<ScheduleHealthTrackerCreateWithoutUserInput, ScheduleHealthTrackerUncheckedCreateWithoutUserInput> | ScheduleHealthTrackerCreateWithoutUserInput[] | ScheduleHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ScheduleHealthTrackerCreateOrConnectWithoutUserInput | ScheduleHealthTrackerCreateOrConnectWithoutUserInput[]
+    createMany?: ScheduleHealthTrackerCreateManyUserInputEnvelope
+    connect?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+  }
+
+  export type RecordHealthTrackerCreateNestedManyWithoutUserInput = {
+    create?: XOR<RecordHealthTrackerCreateWithoutUserInput, RecordHealthTrackerUncheckedCreateWithoutUserInput> | RecordHealthTrackerCreateWithoutUserInput[] | RecordHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: RecordHealthTrackerCreateOrConnectWithoutUserInput | RecordHealthTrackerCreateOrConnectWithoutUserInput[]
+    createMany?: RecordHealthTrackerCreateManyUserInputEnvelope
+    connect?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+  }
+
+  export type ScheduleHealthTrackerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ScheduleHealthTrackerCreateWithoutUserInput, ScheduleHealthTrackerUncheckedCreateWithoutUserInput> | ScheduleHealthTrackerCreateWithoutUserInput[] | ScheduleHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ScheduleHealthTrackerCreateOrConnectWithoutUserInput | ScheduleHealthTrackerCreateOrConnectWithoutUserInput[]
+    createMany?: ScheduleHealthTrackerCreateManyUserInputEnvelope
+    connect?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+  }
+
+  export type RecordHealthTrackerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<RecordHealthTrackerCreateWithoutUserInput, RecordHealthTrackerUncheckedCreateWithoutUserInput> | RecordHealthTrackerCreateWithoutUserInput[] | RecordHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: RecordHealthTrackerCreateOrConnectWithoutUserInput | RecordHealthTrackerCreateOrConnectWithoutUserInput[]
+    createMany?: RecordHealthTrackerCreateManyUserInputEnvelope
+    connect?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+  }
+
+  export type ScheduleHealthTrackerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ScheduleHealthTrackerCreateWithoutUserInput, ScheduleHealthTrackerUncheckedCreateWithoutUserInput> | ScheduleHealthTrackerCreateWithoutUserInput[] | ScheduleHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ScheduleHealthTrackerCreateOrConnectWithoutUserInput | ScheduleHealthTrackerCreateOrConnectWithoutUserInput[]
+    upsert?: ScheduleHealthTrackerUpsertWithWhereUniqueWithoutUserInput | ScheduleHealthTrackerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ScheduleHealthTrackerCreateManyUserInputEnvelope
+    set?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    disconnect?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    delete?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    connect?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    update?: ScheduleHealthTrackerUpdateWithWhereUniqueWithoutUserInput | ScheduleHealthTrackerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ScheduleHealthTrackerUpdateManyWithWhereWithoutUserInput | ScheduleHealthTrackerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ScheduleHealthTrackerScalarWhereInput | ScheduleHealthTrackerScalarWhereInput[]
+  }
+
+  export type RecordHealthTrackerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<RecordHealthTrackerCreateWithoutUserInput, RecordHealthTrackerUncheckedCreateWithoutUserInput> | RecordHealthTrackerCreateWithoutUserInput[] | RecordHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: RecordHealthTrackerCreateOrConnectWithoutUserInput | RecordHealthTrackerCreateOrConnectWithoutUserInput[]
+    upsert?: RecordHealthTrackerUpsertWithWhereUniqueWithoutUserInput | RecordHealthTrackerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: RecordHealthTrackerCreateManyUserInputEnvelope
+    set?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    disconnect?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    delete?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    connect?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    update?: RecordHealthTrackerUpdateWithWhereUniqueWithoutUserInput | RecordHealthTrackerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: RecordHealthTrackerUpdateManyWithWhereWithoutUserInput | RecordHealthTrackerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: RecordHealthTrackerScalarWhereInput | RecordHealthTrackerScalarWhereInput[]
+  }
+
+  export type ScheduleHealthTrackerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ScheduleHealthTrackerCreateWithoutUserInput, ScheduleHealthTrackerUncheckedCreateWithoutUserInput> | ScheduleHealthTrackerCreateWithoutUserInput[] | ScheduleHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ScheduleHealthTrackerCreateOrConnectWithoutUserInput | ScheduleHealthTrackerCreateOrConnectWithoutUserInput[]
+    upsert?: ScheduleHealthTrackerUpsertWithWhereUniqueWithoutUserInput | ScheduleHealthTrackerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ScheduleHealthTrackerCreateManyUserInputEnvelope
+    set?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    disconnect?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    delete?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    connect?: ScheduleHealthTrackerWhereUniqueInput | ScheduleHealthTrackerWhereUniqueInput[]
+    update?: ScheduleHealthTrackerUpdateWithWhereUniqueWithoutUserInput | ScheduleHealthTrackerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ScheduleHealthTrackerUpdateManyWithWhereWithoutUserInput | ScheduleHealthTrackerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ScheduleHealthTrackerScalarWhereInput | ScheduleHealthTrackerScalarWhereInput[]
+  }
+
+  export type RecordHealthTrackerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<RecordHealthTrackerCreateWithoutUserInput, RecordHealthTrackerUncheckedCreateWithoutUserInput> | RecordHealthTrackerCreateWithoutUserInput[] | RecordHealthTrackerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: RecordHealthTrackerCreateOrConnectWithoutUserInput | RecordHealthTrackerCreateOrConnectWithoutUserInput[]
+    upsert?: RecordHealthTrackerUpsertWithWhereUniqueWithoutUserInput | RecordHealthTrackerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: RecordHealthTrackerCreateManyUserInputEnvelope
+    set?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    disconnect?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    delete?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    connect?: RecordHealthTrackerWhereUniqueInput | RecordHealthTrackerWhereUniqueInput[]
+    update?: RecordHealthTrackerUpdateWithWhereUniqueWithoutUserInput | RecordHealthTrackerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: RecordHealthTrackerUpdateManyWithWhereWithoutUserInput | RecordHealthTrackerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: RecordHealthTrackerScalarWhereInput | RecordHealthTrackerScalarWhereInput[]
+  }
+
+  export type UserHealthTrackerCreateNestedOneWithoutSchedulesInput = {
+    create?: XOR<UserHealthTrackerCreateWithoutSchedulesInput, UserHealthTrackerUncheckedCreateWithoutSchedulesInput>
+    connectOrCreate?: UserHealthTrackerCreateOrConnectWithoutSchedulesInput
+    connect?: UserHealthTrackerWhereUniqueInput
+  }
+
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
+  export type UserHealthTrackerUpdateOneRequiredWithoutSchedulesNestedInput = {
+    create?: XOR<UserHealthTrackerCreateWithoutSchedulesInput, UserHealthTrackerUncheckedCreateWithoutSchedulesInput>
+    connectOrCreate?: UserHealthTrackerCreateOrConnectWithoutSchedulesInput
+    upsert?: UserHealthTrackerUpsertWithoutSchedulesInput
+    connect?: UserHealthTrackerWhereUniqueInput
+    update?: XOR<XOR<UserHealthTrackerUpdateToOneWithWhereWithoutSchedulesInput, UserHealthTrackerUpdateWithoutSchedulesInput>, UserHealthTrackerUncheckedUpdateWithoutSchedulesInput>
+  }
+
+  export type UserHealthTrackerCreateNestedOneWithoutRecordsInput = {
+    create?: XOR<UserHealthTrackerCreateWithoutRecordsInput, UserHealthTrackerUncheckedCreateWithoutRecordsInput>
+    connectOrCreate?: UserHealthTrackerCreateOrConnectWithoutRecordsInput
+    connect?: UserHealthTrackerWhereUniqueInput
+  }
+
+  export type UserHealthTrackerUpdateOneRequiredWithoutRecordsNestedInput = {
+    create?: XOR<UserHealthTrackerCreateWithoutRecordsInput, UserHealthTrackerUncheckedCreateWithoutRecordsInput>
+    connectOrCreate?: UserHealthTrackerCreateOrConnectWithoutRecordsInput
+    upsert?: UserHealthTrackerUpsertWithoutRecordsInput
+    connect?: UserHealthTrackerWhereUniqueInput
+    update?: XOR<XOR<UserHealthTrackerUpdateToOneWithWhereWithoutRecordsInput, UserHealthTrackerUpdateWithoutRecordsInput>, UserHealthTrackerUncheckedUpdateWithoutRecordsInput>
+  }
+
+  export type ClinicHealthTrackerCreateavailableSlotsInput = {
+    set: string[]
+  }
+
+  export type ClinicHealthTrackerUpdateavailableSlotsInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -21638,6 +27155,48 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedBoolFilter<$PrismaModel>
     _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type EventOrganizerTaskCreateWithoutUserInput = {
@@ -23344,6 +28903,221 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type ScheduleHealthTrackerCreateWithoutUserInput = {
+    id?: string
+    type: string
+    title: string
+    dateTime: Date | string
+    notes?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ScheduleHealthTrackerUncheckedCreateWithoutUserInput = {
+    id?: string
+    type: string
+    title: string
+    dateTime: Date | string
+    notes?: string | null
+    createdAt?: Date | string
+  }
+
+  export type ScheduleHealthTrackerCreateOrConnectWithoutUserInput = {
+    where: ScheduleHealthTrackerWhereUniqueInput
+    create: XOR<ScheduleHealthTrackerCreateWithoutUserInput, ScheduleHealthTrackerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ScheduleHealthTrackerCreateManyUserInputEnvelope = {
+    data: ScheduleHealthTrackerCreateManyUserInput | ScheduleHealthTrackerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type RecordHealthTrackerCreateWithoutUserInput = {
+    id?: string
+    type: string
+    description: string
+    date: Date | string
+    createdAt?: Date | string
+  }
+
+  export type RecordHealthTrackerUncheckedCreateWithoutUserInput = {
+    id?: string
+    type: string
+    description: string
+    date: Date | string
+    createdAt?: Date | string
+  }
+
+  export type RecordHealthTrackerCreateOrConnectWithoutUserInput = {
+    where: RecordHealthTrackerWhereUniqueInput
+    create: XOR<RecordHealthTrackerCreateWithoutUserInput, RecordHealthTrackerUncheckedCreateWithoutUserInput>
+  }
+
+  export type RecordHealthTrackerCreateManyUserInputEnvelope = {
+    data: RecordHealthTrackerCreateManyUserInput | RecordHealthTrackerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ScheduleHealthTrackerUpsertWithWhereUniqueWithoutUserInput = {
+    where: ScheduleHealthTrackerWhereUniqueInput
+    update: XOR<ScheduleHealthTrackerUpdateWithoutUserInput, ScheduleHealthTrackerUncheckedUpdateWithoutUserInput>
+    create: XOR<ScheduleHealthTrackerCreateWithoutUserInput, ScheduleHealthTrackerUncheckedCreateWithoutUserInput>
+  }
+
+  export type ScheduleHealthTrackerUpdateWithWhereUniqueWithoutUserInput = {
+    where: ScheduleHealthTrackerWhereUniqueInput
+    data: XOR<ScheduleHealthTrackerUpdateWithoutUserInput, ScheduleHealthTrackerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ScheduleHealthTrackerUpdateManyWithWhereWithoutUserInput = {
+    where: ScheduleHealthTrackerScalarWhereInput
+    data: XOR<ScheduleHealthTrackerUpdateManyMutationInput, ScheduleHealthTrackerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ScheduleHealthTrackerScalarWhereInput = {
+    AND?: ScheduleHealthTrackerScalarWhereInput | ScheduleHealthTrackerScalarWhereInput[]
+    OR?: ScheduleHealthTrackerScalarWhereInput[]
+    NOT?: ScheduleHealthTrackerScalarWhereInput | ScheduleHealthTrackerScalarWhereInput[]
+    id?: StringFilter<"ScheduleHealthTracker"> | string
+    userId?: StringFilter<"ScheduleHealthTracker"> | string
+    type?: StringFilter<"ScheduleHealthTracker"> | string
+    title?: StringFilter<"ScheduleHealthTracker"> | string
+    dateTime?: DateTimeFilter<"ScheduleHealthTracker"> | Date | string
+    notes?: StringNullableFilter<"ScheduleHealthTracker"> | string | null
+    createdAt?: DateTimeFilter<"ScheduleHealthTracker"> | Date | string
+  }
+
+  export type RecordHealthTrackerUpsertWithWhereUniqueWithoutUserInput = {
+    where: RecordHealthTrackerWhereUniqueInput
+    update: XOR<RecordHealthTrackerUpdateWithoutUserInput, RecordHealthTrackerUncheckedUpdateWithoutUserInput>
+    create: XOR<RecordHealthTrackerCreateWithoutUserInput, RecordHealthTrackerUncheckedCreateWithoutUserInput>
+  }
+
+  export type RecordHealthTrackerUpdateWithWhereUniqueWithoutUserInput = {
+    where: RecordHealthTrackerWhereUniqueInput
+    data: XOR<RecordHealthTrackerUpdateWithoutUserInput, RecordHealthTrackerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type RecordHealthTrackerUpdateManyWithWhereWithoutUserInput = {
+    where: RecordHealthTrackerScalarWhereInput
+    data: XOR<RecordHealthTrackerUpdateManyMutationInput, RecordHealthTrackerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type RecordHealthTrackerScalarWhereInput = {
+    AND?: RecordHealthTrackerScalarWhereInput | RecordHealthTrackerScalarWhereInput[]
+    OR?: RecordHealthTrackerScalarWhereInput[]
+    NOT?: RecordHealthTrackerScalarWhereInput | RecordHealthTrackerScalarWhereInput[]
+    id?: StringFilter<"RecordHealthTracker"> | string
+    userId?: StringFilter<"RecordHealthTracker"> | string
+    type?: StringFilter<"RecordHealthTracker"> | string
+    description?: StringFilter<"RecordHealthTracker"> | string
+    date?: DateTimeFilter<"RecordHealthTracker"> | Date | string
+    createdAt?: DateTimeFilter<"RecordHealthTracker"> | Date | string
+  }
+
+  export type UserHealthTrackerCreateWithoutSchedulesInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    records?: RecordHealthTrackerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserHealthTrackerUncheckedCreateWithoutSchedulesInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    records?: RecordHealthTrackerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserHealthTrackerCreateOrConnectWithoutSchedulesInput = {
+    where: UserHealthTrackerWhereUniqueInput
+    create: XOR<UserHealthTrackerCreateWithoutSchedulesInput, UserHealthTrackerUncheckedCreateWithoutSchedulesInput>
+  }
+
+  export type UserHealthTrackerUpsertWithoutSchedulesInput = {
+    update: XOR<UserHealthTrackerUpdateWithoutSchedulesInput, UserHealthTrackerUncheckedUpdateWithoutSchedulesInput>
+    create: XOR<UserHealthTrackerCreateWithoutSchedulesInput, UserHealthTrackerUncheckedCreateWithoutSchedulesInput>
+    where?: UserHealthTrackerWhereInput
+  }
+
+  export type UserHealthTrackerUpdateToOneWithWhereWithoutSchedulesInput = {
+    where?: UserHealthTrackerWhereInput
+    data: XOR<UserHealthTrackerUpdateWithoutSchedulesInput, UserHealthTrackerUncheckedUpdateWithoutSchedulesInput>
+  }
+
+  export type UserHealthTrackerUpdateWithoutSchedulesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    records?: RecordHealthTrackerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserHealthTrackerUncheckedUpdateWithoutSchedulesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    records?: RecordHealthTrackerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserHealthTrackerCreateWithoutRecordsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    schedules?: ScheduleHealthTrackerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserHealthTrackerUncheckedCreateWithoutRecordsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    schedules?: ScheduleHealthTrackerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserHealthTrackerCreateOrConnectWithoutRecordsInput = {
+    where: UserHealthTrackerWhereUniqueInput
+    create: XOR<UserHealthTrackerCreateWithoutRecordsInput, UserHealthTrackerUncheckedCreateWithoutRecordsInput>
+  }
+
+  export type UserHealthTrackerUpsertWithoutRecordsInput = {
+    update: XOR<UserHealthTrackerUpdateWithoutRecordsInput, UserHealthTrackerUncheckedUpdateWithoutRecordsInput>
+    create: XOR<UserHealthTrackerCreateWithoutRecordsInput, UserHealthTrackerUncheckedCreateWithoutRecordsInput>
+    where?: UserHealthTrackerWhereInput
+  }
+
+  export type UserHealthTrackerUpdateToOneWithWhereWithoutRecordsInput = {
+    where?: UserHealthTrackerWhereInput
+    data: XOR<UserHealthTrackerUpdateWithoutRecordsInput, UserHealthTrackerUncheckedUpdateWithoutRecordsInput>
+  }
+
+  export type UserHealthTrackerUpdateWithoutRecordsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    schedules?: ScheduleHealthTrackerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserHealthTrackerUncheckedUpdateWithoutRecordsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    schedules?: ScheduleHealthTrackerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
   export type EventOrganizerTaskCreateManyUserInput = {
     id?: string
     title: string
@@ -23832,6 +29606,74 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     playerId?: StringFieldUpdateOperationsInput | string
     joinedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ScheduleHealthTrackerCreateManyUserInput = {
+    id?: string
+    type: string
+    title: string
+    dateTime: Date | string
+    notes?: string | null
+    createdAt?: Date | string
+  }
+
+  export type RecordHealthTrackerCreateManyUserInput = {
+    id?: string
+    type: string
+    description: string
+    date: Date | string
+    createdAt?: Date | string
+  }
+
+  export type ScheduleHealthTrackerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ScheduleHealthTrackerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ScheduleHealthTrackerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    dateTime?: DateTimeFieldUpdateOperationsInput | Date | string
+    notes?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type RecordHealthTrackerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type RecordHealthTrackerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type RecordHealthTrackerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

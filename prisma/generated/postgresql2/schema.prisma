@@ -188,3 +188,46 @@ model GameHubTournamentPlayer {
 
   @@unique([tournamentId, playerId]) // Prevent duplicate entries
 }
+
+model UserHealthTracker {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  schedules ScheduleHealthTracker[]
+  records   RecordHealthTracker[]
+}
+
+model ScheduleHealthTracker {
+  id        String   @id @default(uuid())
+  userId    String
+  type      String // "appointment" | "medication"
+  title     String
+  dateTime  DateTime
+  notes     String?
+  createdAt DateTime @default(now())
+
+  user UserHealthTracker @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model RecordHealthTracker {
+  id          String   @id @default(uuid())
+  userId      String
+  type        String // "symptom" | "log"
+  description String
+  date        DateTime
+  createdAt   DateTime @default(now())
+
+  user UserHealthTracker @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ClinicHealthTracker {
+  id             String   @id @default(uuid())
+  name           String
+  location       String
+  availableSlots String[] // ISO datetime strings
+  contact        String
+  createdAt      DateTime @default(now())
+}
