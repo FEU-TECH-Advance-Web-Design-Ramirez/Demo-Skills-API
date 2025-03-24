@@ -427,9 +427,64 @@ exports.Prisma.GoalFinanceManagerScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserMentalWellnessScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.JournalMentalWellnessScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  mood: 'mood',
+  entryText: 'entryText',
+  tags: 'tags',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.AssessmentMentalWellnessScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  responses: 'responses',
+  result: 'result',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.MeditationScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  audioUrl: 'audioUrl',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.MeditationFeedbackScalarFieldEnum = {
+  id: 'id',
+  meditationId: 'meditationId',
+  userId: 'userId',
+  rating: 'rating',
+  comment: 'comment',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.HospitalMentalWellnessScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  location: 'location',
+  contactInfo: 'contactInfo',
+  type: 'type',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
+};
+
+exports.Prisma.JsonNullValueInput = {
+  JsonNull: Prisma.JsonNull
 };
 
 exports.Prisma.QueryMode = {
@@ -440,6 +495,12 @@ exports.Prisma.QueryMode = {
 exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
+};
+
+exports.Prisma.JsonNullValueFilter = {
+  DbNull: Prisma.DbNull,
+  JsonNull: Prisma.JsonNull,
+  AnyNull: Prisma.AnyNull
 };
 
 
@@ -478,7 +539,13 @@ exports.Prisma.ModelName = {
   ReviewEduSeeker: 'ReviewEduSeeker',
   UserFinanceManager: 'UserFinanceManager',
   TransactionFinanceManager: 'TransactionFinanceManager',
-  GoalFinanceManager: 'GoalFinanceManager'
+  GoalFinanceManager: 'GoalFinanceManager',
+  UserMentalWellness: 'UserMentalWellness',
+  JournalMentalWellness: 'JournalMentalWellness',
+  AssessmentMentalWellness: 'AssessmentMentalWellness',
+  Meditation: 'Meditation',
+  MeditationFeedback: 'MeditationFeedback',
+  HospitalMentalWellness: 'HospitalMentalWellness'
 };
 
 /**

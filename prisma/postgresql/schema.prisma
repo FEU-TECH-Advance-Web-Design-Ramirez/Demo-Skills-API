@@ -434,3 +434,67 @@ model GoalFinanceManager {
 
   user UserFinanceManager @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
+model UserMentalWellness {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  journals    JournalMentalWellness[]
+  assessments AssessmentMentalWellness[]
+  feedbacks   MeditationFeedback[]
+}
+
+model JournalMentalWellness {
+  id        String   @id @default(uuid())
+  userId    String
+  mood      String
+  entryText String
+  tags      String[] // storing as array of strings
+  createdAt DateTime @default(now())
+
+  user UserMentalWellness @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model AssessmentMentalWellness {
+  id        String   @id @default(uuid())
+  userId    String
+  responses Json // store the question/answer structure
+  result    String
+  createdAt DateTime @default(now())
+
+  user UserMentalWellness @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Meditation {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  audioUrl    String
+  createdAt   DateTime @default(now())
+
+  feedbacks MeditationFeedback[]
+}
+
+model MeditationFeedback {
+  id           String   @id @default(uuid())
+  meditationId String
+  userId       String
+  rating       Int
+  comment      String
+  createdAt    DateTime @default(now())
+
+  user       UserMentalWellness @relation(fields: [userId], references: [id], onDelete: Cascade)
+  meditation Meditation         @relation(fields: [meditationId], references: [id], onDelete: Cascade)
+}
+
+model HospitalMentalWellness {
+  id          String   @id @default(uuid())
+  name        String
+  location    String
+  contactInfo String
+  type        String
+  createdAt   DateTime @default(now())
+}
