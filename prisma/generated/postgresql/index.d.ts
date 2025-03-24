@@ -188,6 +188,36 @@ export type TransactionFinanceManager = $Result.DefaultSelection<Prisma.$Transac
  * 
  */
 export type GoalFinanceManager = $Result.DefaultSelection<Prisma.$GoalFinanceManagerPayload>
+/**
+ * Model UserMentalWellness
+ * 
+ */
+export type UserMentalWellness = $Result.DefaultSelection<Prisma.$UserMentalWellnessPayload>
+/**
+ * Model JournalMentalWellness
+ * 
+ */
+export type JournalMentalWellness = $Result.DefaultSelection<Prisma.$JournalMentalWellnessPayload>
+/**
+ * Model AssessmentMentalWellness
+ * 
+ */
+export type AssessmentMentalWellness = $Result.DefaultSelection<Prisma.$AssessmentMentalWellnessPayload>
+/**
+ * Model Meditation
+ * 
+ */
+export type Meditation = $Result.DefaultSelection<Prisma.$MeditationPayload>
+/**
+ * Model MeditationFeedback
+ * 
+ */
+export type MeditationFeedback = $Result.DefaultSelection<Prisma.$MeditationFeedbackPayload>
+/**
+ * Model HospitalMentalWellness
+ * 
+ */
+export type HospitalMentalWellness = $Result.DefaultSelection<Prisma.$HospitalMentalWellnessPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -663,6 +693,66 @@ export class PrismaClient<
     * ```
     */
   get goalFinanceManager(): Prisma.GoalFinanceManagerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userMentalWellness`: Exposes CRUD operations for the **UserMentalWellness** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserMentalWellnesses
+    * const userMentalWellnesses = await prisma.userMentalWellness.findMany()
+    * ```
+    */
+  get userMentalWellness(): Prisma.UserMentalWellnessDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.journalMentalWellness`: Exposes CRUD operations for the **JournalMentalWellness** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more JournalMentalWellnesses
+    * const journalMentalWellnesses = await prisma.journalMentalWellness.findMany()
+    * ```
+    */
+  get journalMentalWellness(): Prisma.JournalMentalWellnessDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.assessmentMentalWellness`: Exposes CRUD operations for the **AssessmentMentalWellness** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more AssessmentMentalWellnesses
+    * const assessmentMentalWellnesses = await prisma.assessmentMentalWellness.findMany()
+    * ```
+    */
+  get assessmentMentalWellness(): Prisma.AssessmentMentalWellnessDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.meditation`: Exposes CRUD operations for the **Meditation** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Meditations
+    * const meditations = await prisma.meditation.findMany()
+    * ```
+    */
+  get meditation(): Prisma.MeditationDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.meditationFeedback`: Exposes CRUD operations for the **MeditationFeedback** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more MeditationFeedbacks
+    * const meditationFeedbacks = await prisma.meditationFeedback.findMany()
+    * ```
+    */
+  get meditationFeedback(): Prisma.MeditationFeedbackDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.hospitalMentalWellness`: Exposes CRUD operations for the **HospitalMentalWellness** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more HospitalMentalWellnesses
+    * const hospitalMentalWellnesses = await prisma.hospitalMentalWellness.findMany()
+    * ```
+    */
+  get hospitalMentalWellness(): Prisma.HospitalMentalWellnessDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -1137,7 +1227,13 @@ export namespace Prisma {
     ReviewEduSeeker: 'ReviewEduSeeker',
     UserFinanceManager: 'UserFinanceManager',
     TransactionFinanceManager: 'TransactionFinanceManager',
-    GoalFinanceManager: 'GoalFinanceManager'
+    GoalFinanceManager: 'GoalFinanceManager',
+    UserMentalWellness: 'UserMentalWellness',
+    JournalMentalWellness: 'JournalMentalWellness',
+    AssessmentMentalWellness: 'AssessmentMentalWellness',
+    Meditation: 'Meditation',
+    MeditationFeedback: 'MeditationFeedback',
+    HospitalMentalWellness: 'HospitalMentalWellness'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -1156,7 +1252,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "elderlyCareCompanionMedicationTracking" | "userEduSeeker" | "platformEduSeeker" | "reviewEduSeeker" | "userFinanceManager" | "transactionFinanceManager" | "goalFinanceManager"
+      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "elderlyCareCompanionMedicationTracking" | "userEduSeeker" | "platformEduSeeker" | "reviewEduSeeker" | "userFinanceManager" | "transactionFinanceManager" | "goalFinanceManager" | "userMentalWellness" | "journalMentalWellness" | "assessmentMentalWellness" | "meditation" | "meditationFeedback" | "hospitalMentalWellness"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -3750,6 +3846,450 @@ export namespace Prisma {
           }
         }
       }
+      UserMentalWellness: {
+        payload: Prisma.$UserMentalWellnessPayload<ExtArgs>
+        fields: Prisma.UserMentalWellnessFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserMentalWellnessFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserMentalWellnessFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>
+          }
+          findFirst: {
+            args: Prisma.UserMentalWellnessFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserMentalWellnessFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>
+          }
+          findMany: {
+            args: Prisma.UserMentalWellnessFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>[]
+          }
+          create: {
+            args: Prisma.UserMentalWellnessCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>
+          }
+          createMany: {
+            args: Prisma.UserMentalWellnessCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserMentalWellnessCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>[]
+          }
+          delete: {
+            args: Prisma.UserMentalWellnessDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>
+          }
+          update: {
+            args: Prisma.UserMentalWellnessUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserMentalWellnessDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserMentalWellnessUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserMentalWellnessUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserMentalWellnessUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMentalWellnessPayload>
+          }
+          aggregate: {
+            args: Prisma.UserMentalWellnessAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserMentalWellness>
+          }
+          groupBy: {
+            args: Prisma.UserMentalWellnessGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserMentalWellnessGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserMentalWellnessCountArgs<ExtArgs>
+            result: $Utils.Optional<UserMentalWellnessCountAggregateOutputType> | number
+          }
+        }
+      }
+      JournalMentalWellness: {
+        payload: Prisma.$JournalMentalWellnessPayload<ExtArgs>
+        fields: Prisma.JournalMentalWellnessFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.JournalMentalWellnessFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.JournalMentalWellnessFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>
+          }
+          findFirst: {
+            args: Prisma.JournalMentalWellnessFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.JournalMentalWellnessFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>
+          }
+          findMany: {
+            args: Prisma.JournalMentalWellnessFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>[]
+          }
+          create: {
+            args: Prisma.JournalMentalWellnessCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>
+          }
+          createMany: {
+            args: Prisma.JournalMentalWellnessCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.JournalMentalWellnessCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>[]
+          }
+          delete: {
+            args: Prisma.JournalMentalWellnessDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>
+          }
+          update: {
+            args: Prisma.JournalMentalWellnessUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>
+          }
+          deleteMany: {
+            args: Prisma.JournalMentalWellnessDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.JournalMentalWellnessUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.JournalMentalWellnessUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>[]
+          }
+          upsert: {
+            args: Prisma.JournalMentalWellnessUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$JournalMentalWellnessPayload>
+          }
+          aggregate: {
+            args: Prisma.JournalMentalWellnessAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateJournalMentalWellness>
+          }
+          groupBy: {
+            args: Prisma.JournalMentalWellnessGroupByArgs<ExtArgs>
+            result: $Utils.Optional<JournalMentalWellnessGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.JournalMentalWellnessCountArgs<ExtArgs>
+            result: $Utils.Optional<JournalMentalWellnessCountAggregateOutputType> | number
+          }
+        }
+      }
+      AssessmentMentalWellness: {
+        payload: Prisma.$AssessmentMentalWellnessPayload<ExtArgs>
+        fields: Prisma.AssessmentMentalWellnessFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.AssessmentMentalWellnessFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.AssessmentMentalWellnessFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>
+          }
+          findFirst: {
+            args: Prisma.AssessmentMentalWellnessFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.AssessmentMentalWellnessFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>
+          }
+          findMany: {
+            args: Prisma.AssessmentMentalWellnessFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>[]
+          }
+          create: {
+            args: Prisma.AssessmentMentalWellnessCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>
+          }
+          createMany: {
+            args: Prisma.AssessmentMentalWellnessCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.AssessmentMentalWellnessCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>[]
+          }
+          delete: {
+            args: Prisma.AssessmentMentalWellnessDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>
+          }
+          update: {
+            args: Prisma.AssessmentMentalWellnessUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>
+          }
+          deleteMany: {
+            args: Prisma.AssessmentMentalWellnessDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.AssessmentMentalWellnessUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.AssessmentMentalWellnessUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>[]
+          }
+          upsert: {
+            args: Prisma.AssessmentMentalWellnessUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AssessmentMentalWellnessPayload>
+          }
+          aggregate: {
+            args: Prisma.AssessmentMentalWellnessAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAssessmentMentalWellness>
+          }
+          groupBy: {
+            args: Prisma.AssessmentMentalWellnessGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AssessmentMentalWellnessGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.AssessmentMentalWellnessCountArgs<ExtArgs>
+            result: $Utils.Optional<AssessmentMentalWellnessCountAggregateOutputType> | number
+          }
+        }
+      }
+      Meditation: {
+        payload: Prisma.$MeditationPayload<ExtArgs>
+        fields: Prisma.MeditationFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.MeditationFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.MeditationFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>
+          }
+          findFirst: {
+            args: Prisma.MeditationFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.MeditationFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>
+          }
+          findMany: {
+            args: Prisma.MeditationFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>[]
+          }
+          create: {
+            args: Prisma.MeditationCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>
+          }
+          createMany: {
+            args: Prisma.MeditationCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.MeditationCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>[]
+          }
+          delete: {
+            args: Prisma.MeditationDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>
+          }
+          update: {
+            args: Prisma.MeditationUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>
+          }
+          deleteMany: {
+            args: Prisma.MeditationDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.MeditationUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.MeditationUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>[]
+          }
+          upsert: {
+            args: Prisma.MeditationUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationPayload>
+          }
+          aggregate: {
+            args: Prisma.MeditationAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMeditation>
+          }
+          groupBy: {
+            args: Prisma.MeditationGroupByArgs<ExtArgs>
+            result: $Utils.Optional<MeditationGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.MeditationCountArgs<ExtArgs>
+            result: $Utils.Optional<MeditationCountAggregateOutputType> | number
+          }
+        }
+      }
+      MeditationFeedback: {
+        payload: Prisma.$MeditationFeedbackPayload<ExtArgs>
+        fields: Prisma.MeditationFeedbackFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.MeditationFeedbackFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.MeditationFeedbackFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>
+          }
+          findFirst: {
+            args: Prisma.MeditationFeedbackFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.MeditationFeedbackFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>
+          }
+          findMany: {
+            args: Prisma.MeditationFeedbackFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>[]
+          }
+          create: {
+            args: Prisma.MeditationFeedbackCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>
+          }
+          createMany: {
+            args: Prisma.MeditationFeedbackCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.MeditationFeedbackCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>[]
+          }
+          delete: {
+            args: Prisma.MeditationFeedbackDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>
+          }
+          update: {
+            args: Prisma.MeditationFeedbackUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>
+          }
+          deleteMany: {
+            args: Prisma.MeditationFeedbackDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.MeditationFeedbackUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.MeditationFeedbackUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>[]
+          }
+          upsert: {
+            args: Prisma.MeditationFeedbackUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$MeditationFeedbackPayload>
+          }
+          aggregate: {
+            args: Prisma.MeditationFeedbackAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateMeditationFeedback>
+          }
+          groupBy: {
+            args: Prisma.MeditationFeedbackGroupByArgs<ExtArgs>
+            result: $Utils.Optional<MeditationFeedbackGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.MeditationFeedbackCountArgs<ExtArgs>
+            result: $Utils.Optional<MeditationFeedbackCountAggregateOutputType> | number
+          }
+        }
+      }
+      HospitalMentalWellness: {
+        payload: Prisma.$HospitalMentalWellnessPayload<ExtArgs>
+        fields: Prisma.HospitalMentalWellnessFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.HospitalMentalWellnessFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.HospitalMentalWellnessFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>
+          }
+          findFirst: {
+            args: Prisma.HospitalMentalWellnessFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.HospitalMentalWellnessFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>
+          }
+          findMany: {
+            args: Prisma.HospitalMentalWellnessFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>[]
+          }
+          create: {
+            args: Prisma.HospitalMentalWellnessCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>
+          }
+          createMany: {
+            args: Prisma.HospitalMentalWellnessCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.HospitalMentalWellnessCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>[]
+          }
+          delete: {
+            args: Prisma.HospitalMentalWellnessDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>
+          }
+          update: {
+            args: Prisma.HospitalMentalWellnessUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>
+          }
+          deleteMany: {
+            args: Prisma.HospitalMentalWellnessDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.HospitalMentalWellnessUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.HospitalMentalWellnessUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>[]
+          }
+          upsert: {
+            args: Prisma.HospitalMentalWellnessUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$HospitalMentalWellnessPayload>
+          }
+          aggregate: {
+            args: Prisma.HospitalMentalWellnessAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateHospitalMentalWellness>
+          }
+          groupBy: {
+            args: Prisma.HospitalMentalWellnessGroupByArgs<ExtArgs>
+            result: $Utils.Optional<HospitalMentalWellnessGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.HospitalMentalWellnessCountArgs<ExtArgs>
+            result: $Utils.Optional<HospitalMentalWellnessCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -3869,6 +4409,12 @@ export namespace Prisma {
     userFinanceManager?: UserFinanceManagerOmit
     transactionFinanceManager?: TransactionFinanceManagerOmit
     goalFinanceManager?: GoalFinanceManagerOmit
+    userMentalWellness?: UserMentalWellnessOmit
+    journalMentalWellness?: JournalMentalWellnessOmit
+    assessmentMentalWellness?: AssessmentMentalWellnessOmit
+    meditation?: MeditationOmit
+    meditationFeedback?: MeditationFeedbackOmit
+    hospitalMentalWellness?: HospitalMentalWellnessOmit
   }
 
   /* Types for Logging */
@@ -4645,6 +5191,86 @@ export namespace Prisma {
    */
   export type UserFinanceManagerCountOutputTypeCountGoalsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: GoalFinanceManagerWhereInput
+  }
+
+
+  /**
+   * Count Type UserMentalWellnessCountOutputType
+   */
+
+  export type UserMentalWellnessCountOutputType = {
+    journals: number
+    assessments: number
+    feedbacks: number
+  }
+
+  export type UserMentalWellnessCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    journals?: boolean | UserMentalWellnessCountOutputTypeCountJournalsArgs
+    assessments?: boolean | UserMentalWellnessCountOutputTypeCountAssessmentsArgs
+    feedbacks?: boolean | UserMentalWellnessCountOutputTypeCountFeedbacksArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * UserMentalWellnessCountOutputType without action
+   */
+  export type UserMentalWellnessCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellnessCountOutputType
+     */
+    select?: UserMentalWellnessCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * UserMentalWellnessCountOutputType without action
+   */
+  export type UserMentalWellnessCountOutputTypeCountJournalsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: JournalMentalWellnessWhereInput
+  }
+
+  /**
+   * UserMentalWellnessCountOutputType without action
+   */
+  export type UserMentalWellnessCountOutputTypeCountAssessmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AssessmentMentalWellnessWhereInput
+  }
+
+  /**
+   * UserMentalWellnessCountOutputType without action
+   */
+  export type UserMentalWellnessCountOutputTypeCountFeedbacksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MeditationFeedbackWhereInput
+  }
+
+
+  /**
+   * Count Type MeditationCountOutputType
+   */
+
+  export type MeditationCountOutputType = {
+    feedbacks: number
+  }
+
+  export type MeditationCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    feedbacks?: boolean | MeditationCountOutputTypeCountFeedbacksArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * MeditationCountOutputType without action
+   */
+  export type MeditationCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationCountOutputType
+     */
+    select?: MeditationCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * MeditationCountOutputType without action
+   */
+  export type MeditationCountOutputTypeCountFeedbacksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MeditationFeedbackWhereInput
   }
 
 
@@ -43287,6 +43913,6444 @@ export namespace Prisma {
 
 
   /**
+   * Model UserMentalWellness
+   */
+
+  export type AggregateUserMentalWellness = {
+    _count: UserMentalWellnessCountAggregateOutputType | null
+    _min: UserMentalWellnessMinAggregateOutputType | null
+    _max: UserMentalWellnessMaxAggregateOutputType | null
+  }
+
+  export type UserMentalWellnessMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserMentalWellnessMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserMentalWellnessCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type UserMentalWellnessMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserMentalWellnessMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserMentalWellnessCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type UserMentalWellnessAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserMentalWellness to aggregate.
+     */
+    where?: UserMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMentalWellnesses to fetch.
+     */
+    orderBy?: UserMentalWellnessOrderByWithRelationInput | UserMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserMentalWellnesses
+    **/
+    _count?: true | UserMentalWellnessCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserMentalWellnessMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserMentalWellnessMaxAggregateInputType
+  }
+
+  export type GetUserMentalWellnessAggregateType<T extends UserMentalWellnessAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserMentalWellness]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserMentalWellness[P]>
+      : GetScalarType<T[P], AggregateUserMentalWellness[P]>
+  }
+
+
+
+
+  export type UserMentalWellnessGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserMentalWellnessWhereInput
+    orderBy?: UserMentalWellnessOrderByWithAggregationInput | UserMentalWellnessOrderByWithAggregationInput[]
+    by: UserMentalWellnessScalarFieldEnum[] | UserMentalWellnessScalarFieldEnum
+    having?: UserMentalWellnessScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserMentalWellnessCountAggregateInputType | true
+    _min?: UserMentalWellnessMinAggregateInputType
+    _max?: UserMentalWellnessMaxAggregateInputType
+  }
+
+  export type UserMentalWellnessGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    createdAt: Date
+    _count: UserMentalWellnessCountAggregateOutputType | null
+    _min: UserMentalWellnessMinAggregateOutputType | null
+    _max: UserMentalWellnessMaxAggregateOutputType | null
+  }
+
+  type GetUserMentalWellnessGroupByPayload<T extends UserMentalWellnessGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserMentalWellnessGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserMentalWellnessGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserMentalWellnessGroupByOutputType[P]>
+            : GetScalarType<T[P], UserMentalWellnessGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserMentalWellnessSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+    journals?: boolean | UserMentalWellness$journalsArgs<ExtArgs>
+    assessments?: boolean | UserMentalWellness$assessmentsArgs<ExtArgs>
+    feedbacks?: boolean | UserMentalWellness$feedbacksArgs<ExtArgs>
+    _count?: boolean | UserMentalWellnessCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userMentalWellness"]>
+
+  export type UserMentalWellnessSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userMentalWellness"]>
+
+  export type UserMentalWellnessSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userMentalWellness"]>
+
+  export type UserMentalWellnessSelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }
+
+  export type UserMentalWellnessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "createdAt", ExtArgs["result"]["userMentalWellness"]>
+  export type UserMentalWellnessInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    journals?: boolean | UserMentalWellness$journalsArgs<ExtArgs>
+    assessments?: boolean | UserMentalWellness$assessmentsArgs<ExtArgs>
+    feedbacks?: boolean | UserMentalWellness$feedbacksArgs<ExtArgs>
+    _count?: boolean | UserMentalWellnessCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserMentalWellnessIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserMentalWellnessIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $UserMentalWellnessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserMentalWellness"
+    objects: {
+      journals: Prisma.$JournalMentalWellnessPayload<ExtArgs>[]
+      assessments: Prisma.$AssessmentMentalWellnessPayload<ExtArgs>[]
+      feedbacks: Prisma.$MeditationFeedbackPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      createdAt: Date
+    }, ExtArgs["result"]["userMentalWellness"]>
+    composites: {}
+  }
+
+  type UserMentalWellnessGetPayload<S extends boolean | null | undefined | UserMentalWellnessDefaultArgs> = $Result.GetResult<Prisma.$UserMentalWellnessPayload, S>
+
+  type UserMentalWellnessCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserMentalWellnessFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserMentalWellnessCountAggregateInputType | true
+    }
+
+  export interface UserMentalWellnessDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserMentalWellness'], meta: { name: 'UserMentalWellness' } }
+    /**
+     * Find zero or one UserMentalWellness that matches the filter.
+     * @param {UserMentalWellnessFindUniqueArgs} args - Arguments to find a UserMentalWellness
+     * @example
+     * // Get one UserMentalWellness
+     * const userMentalWellness = await prisma.userMentalWellness.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserMentalWellnessFindUniqueArgs>(args: SelectSubset<T, UserMentalWellnessFindUniqueArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserMentalWellness that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserMentalWellnessFindUniqueOrThrowArgs} args - Arguments to find a UserMentalWellness
+     * @example
+     * // Get one UserMentalWellness
+     * const userMentalWellness = await prisma.userMentalWellness.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserMentalWellnessFindUniqueOrThrowArgs>(args: SelectSubset<T, UserMentalWellnessFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserMentalWellness that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMentalWellnessFindFirstArgs} args - Arguments to find a UserMentalWellness
+     * @example
+     * // Get one UserMentalWellness
+     * const userMentalWellness = await prisma.userMentalWellness.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserMentalWellnessFindFirstArgs>(args?: SelectSubset<T, UserMentalWellnessFindFirstArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserMentalWellness that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMentalWellnessFindFirstOrThrowArgs} args - Arguments to find a UserMentalWellness
+     * @example
+     * // Get one UserMentalWellness
+     * const userMentalWellness = await prisma.userMentalWellness.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserMentalWellnessFindFirstOrThrowArgs>(args?: SelectSubset<T, UserMentalWellnessFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserMentalWellnesses that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMentalWellnessFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserMentalWellnesses
+     * const userMentalWellnesses = await prisma.userMentalWellness.findMany()
+     * 
+     * // Get first 10 UserMentalWellnesses
+     * const userMentalWellnesses = await prisma.userMentalWellness.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userMentalWellnessWithIdOnly = await prisma.userMentalWellness.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserMentalWellnessFindManyArgs>(args?: SelectSubset<T, UserMentalWellnessFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserMentalWellness.
+     * @param {UserMentalWellnessCreateArgs} args - Arguments to create a UserMentalWellness.
+     * @example
+     * // Create one UserMentalWellness
+     * const UserMentalWellness = await prisma.userMentalWellness.create({
+     *   data: {
+     *     // ... data to create a UserMentalWellness
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserMentalWellnessCreateArgs>(args: SelectSubset<T, UserMentalWellnessCreateArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserMentalWellnesses.
+     * @param {UserMentalWellnessCreateManyArgs} args - Arguments to create many UserMentalWellnesses.
+     * @example
+     * // Create many UserMentalWellnesses
+     * const userMentalWellness = await prisma.userMentalWellness.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserMentalWellnessCreateManyArgs>(args?: SelectSubset<T, UserMentalWellnessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserMentalWellnesses and returns the data saved in the database.
+     * @param {UserMentalWellnessCreateManyAndReturnArgs} args - Arguments to create many UserMentalWellnesses.
+     * @example
+     * // Create many UserMentalWellnesses
+     * const userMentalWellness = await prisma.userMentalWellness.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserMentalWellnesses and only return the `id`
+     * const userMentalWellnessWithIdOnly = await prisma.userMentalWellness.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserMentalWellnessCreateManyAndReturnArgs>(args?: SelectSubset<T, UserMentalWellnessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserMentalWellness.
+     * @param {UserMentalWellnessDeleteArgs} args - Arguments to delete one UserMentalWellness.
+     * @example
+     * // Delete one UserMentalWellness
+     * const UserMentalWellness = await prisma.userMentalWellness.delete({
+     *   where: {
+     *     // ... filter to delete one UserMentalWellness
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserMentalWellnessDeleteArgs>(args: SelectSubset<T, UserMentalWellnessDeleteArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserMentalWellness.
+     * @param {UserMentalWellnessUpdateArgs} args - Arguments to update one UserMentalWellness.
+     * @example
+     * // Update one UserMentalWellness
+     * const userMentalWellness = await prisma.userMentalWellness.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserMentalWellnessUpdateArgs>(args: SelectSubset<T, UserMentalWellnessUpdateArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserMentalWellnesses.
+     * @param {UserMentalWellnessDeleteManyArgs} args - Arguments to filter UserMentalWellnesses to delete.
+     * @example
+     * // Delete a few UserMentalWellnesses
+     * const { count } = await prisma.userMentalWellness.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserMentalWellnessDeleteManyArgs>(args?: SelectSubset<T, UserMentalWellnessDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMentalWellnessUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserMentalWellnesses
+     * const userMentalWellness = await prisma.userMentalWellness.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserMentalWellnessUpdateManyArgs>(args: SelectSubset<T, UserMentalWellnessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserMentalWellnesses and returns the data updated in the database.
+     * @param {UserMentalWellnessUpdateManyAndReturnArgs} args - Arguments to update many UserMentalWellnesses.
+     * @example
+     * // Update many UserMentalWellnesses
+     * const userMentalWellness = await prisma.userMentalWellness.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserMentalWellnesses and only return the `id`
+     * const userMentalWellnessWithIdOnly = await prisma.userMentalWellness.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserMentalWellnessUpdateManyAndReturnArgs>(args: SelectSubset<T, UserMentalWellnessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserMentalWellness.
+     * @param {UserMentalWellnessUpsertArgs} args - Arguments to update or create a UserMentalWellness.
+     * @example
+     * // Update or create a UserMentalWellness
+     * const userMentalWellness = await prisma.userMentalWellness.upsert({
+     *   create: {
+     *     // ... data to create a UserMentalWellness
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserMentalWellness we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserMentalWellnessUpsertArgs>(args: SelectSubset<T, UserMentalWellnessUpsertArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMentalWellnessCountArgs} args - Arguments to filter UserMentalWellnesses to count.
+     * @example
+     * // Count the number of UserMentalWellnesses
+     * const count = await prisma.userMentalWellness.count({
+     *   where: {
+     *     // ... the filter for the UserMentalWellnesses we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserMentalWellnessCountArgs>(
+      args?: Subset<T, UserMentalWellnessCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserMentalWellnessCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMentalWellnessAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserMentalWellnessAggregateArgs>(args: Subset<T, UserMentalWellnessAggregateArgs>): Prisma.PrismaPromise<GetUserMentalWellnessAggregateType<T>>
+
+    /**
+     * Group by UserMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMentalWellnessGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserMentalWellnessGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserMentalWellnessGroupByArgs['orderBy'] }
+        : { orderBy?: UserMentalWellnessGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserMentalWellnessGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserMentalWellnessGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserMentalWellness model
+   */
+  readonly fields: UserMentalWellnessFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserMentalWellness.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserMentalWellnessClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    journals<T extends UserMentalWellness$journalsArgs<ExtArgs> = {}>(args?: Subset<T, UserMentalWellness$journalsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    assessments<T extends UserMentalWellness$assessmentsArgs<ExtArgs> = {}>(args?: Subset<T, UserMentalWellness$assessmentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    feedbacks<T extends UserMentalWellness$feedbacksArgs<ExtArgs> = {}>(args?: Subset<T, UserMentalWellness$feedbacksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserMentalWellness model
+   */ 
+  interface UserMentalWellnessFieldRefs {
+    readonly id: FieldRef<"UserMentalWellness", 'String'>
+    readonly email: FieldRef<"UserMentalWellness", 'String'>
+    readonly name: FieldRef<"UserMentalWellness", 'String'>
+    readonly password: FieldRef<"UserMentalWellness", 'String'>
+    readonly createdAt: FieldRef<"UserMentalWellness", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserMentalWellness findUnique
+   */
+  export type UserMentalWellnessFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMentalWellness to fetch.
+     */
+    where: UserMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * UserMentalWellness findUniqueOrThrow
+   */
+  export type UserMentalWellnessFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMentalWellness to fetch.
+     */
+    where: UserMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * UserMentalWellness findFirst
+   */
+  export type UserMentalWellnessFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMentalWellness to fetch.
+     */
+    where?: UserMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMentalWellnesses to fetch.
+     */
+    orderBy?: UserMentalWellnessOrderByWithRelationInput | UserMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserMentalWellnesses.
+     */
+    cursor?: UserMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserMentalWellnesses.
+     */
+    distinct?: UserMentalWellnessScalarFieldEnum | UserMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * UserMentalWellness findFirstOrThrow
+   */
+  export type UserMentalWellnessFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMentalWellness to fetch.
+     */
+    where?: UserMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMentalWellnesses to fetch.
+     */
+    orderBy?: UserMentalWellnessOrderByWithRelationInput | UserMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserMentalWellnesses.
+     */
+    cursor?: UserMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserMentalWellnesses.
+     */
+    distinct?: UserMentalWellnessScalarFieldEnum | UserMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * UserMentalWellness findMany
+   */
+  export type UserMentalWellnessFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMentalWellnesses to fetch.
+     */
+    where?: UserMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMentalWellnesses to fetch.
+     */
+    orderBy?: UserMentalWellnessOrderByWithRelationInput | UserMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserMentalWellnesses.
+     */
+    cursor?: UserMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMentalWellnesses.
+     */
+    skip?: number
+    distinct?: UserMentalWellnessScalarFieldEnum | UserMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * UserMentalWellness create
+   */
+  export type UserMentalWellnessCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserMentalWellness.
+     */
+    data: XOR<UserMentalWellnessCreateInput, UserMentalWellnessUncheckedCreateInput>
+  }
+
+  /**
+   * UserMentalWellness createMany
+   */
+  export type UserMentalWellnessCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserMentalWellnesses.
+     */
+    data: UserMentalWellnessCreateManyInput | UserMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserMentalWellness createManyAndReturn
+   */
+  export type UserMentalWellnessCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserMentalWellnesses.
+     */
+    data: UserMentalWellnessCreateManyInput | UserMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserMentalWellness update
+   */
+  export type UserMentalWellnessUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserMentalWellness.
+     */
+    data: XOR<UserMentalWellnessUpdateInput, UserMentalWellnessUncheckedUpdateInput>
+    /**
+     * Choose, which UserMentalWellness to update.
+     */
+    where: UserMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * UserMentalWellness updateMany
+   */
+  export type UserMentalWellnessUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserMentalWellnesses.
+     */
+    data: XOR<UserMentalWellnessUpdateManyMutationInput, UserMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which UserMentalWellnesses to update
+     */
+    where?: UserMentalWellnessWhereInput
+    /**
+     * Limit how many UserMentalWellnesses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserMentalWellness updateManyAndReturn
+   */
+  export type UserMentalWellnessUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to update UserMentalWellnesses.
+     */
+    data: XOR<UserMentalWellnessUpdateManyMutationInput, UserMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which UserMentalWellnesses to update
+     */
+    where?: UserMentalWellnessWhereInput
+    /**
+     * Limit how many UserMentalWellnesses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserMentalWellness upsert
+   */
+  export type UserMentalWellnessUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserMentalWellness to update in case it exists.
+     */
+    where: UserMentalWellnessWhereUniqueInput
+    /**
+     * In case the UserMentalWellness found by the `where` argument doesn't exist, create a new UserMentalWellness with this data.
+     */
+    create: XOR<UserMentalWellnessCreateInput, UserMentalWellnessUncheckedCreateInput>
+    /**
+     * In case the UserMentalWellness was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserMentalWellnessUpdateInput, UserMentalWellnessUncheckedUpdateInput>
+  }
+
+  /**
+   * UserMentalWellness delete
+   */
+  export type UserMentalWellnessDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter which UserMentalWellness to delete.
+     */
+    where: UserMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * UserMentalWellness deleteMany
+   */
+  export type UserMentalWellnessDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserMentalWellnesses to delete
+     */
+    where?: UserMentalWellnessWhereInput
+    /**
+     * Limit how many UserMentalWellnesses to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserMentalWellness.journals
+   */
+  export type UserMentalWellness$journalsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    where?: JournalMentalWellnessWhereInput
+    orderBy?: JournalMentalWellnessOrderByWithRelationInput | JournalMentalWellnessOrderByWithRelationInput[]
+    cursor?: JournalMentalWellnessWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: JournalMentalWellnessScalarFieldEnum | JournalMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * UserMentalWellness.assessments
+   */
+  export type UserMentalWellness$assessmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    where?: AssessmentMentalWellnessWhereInput
+    orderBy?: AssessmentMentalWellnessOrderByWithRelationInput | AssessmentMentalWellnessOrderByWithRelationInput[]
+    cursor?: AssessmentMentalWellnessWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: AssessmentMentalWellnessScalarFieldEnum | AssessmentMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * UserMentalWellness.feedbacks
+   */
+  export type UserMentalWellness$feedbacksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    where?: MeditationFeedbackWhereInput
+    orderBy?: MeditationFeedbackOrderByWithRelationInput | MeditationFeedbackOrderByWithRelationInput[]
+    cursor?: MeditationFeedbackWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: MeditationFeedbackScalarFieldEnum | MeditationFeedbackScalarFieldEnum[]
+  }
+
+  /**
+   * UserMentalWellness without action
+   */
+  export type UserMentalWellnessDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMentalWellness
+     */
+    select?: UserMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMentalWellness
+     */
+    omit?: UserMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMentalWellnessInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model JournalMentalWellness
+   */
+
+  export type AggregateJournalMentalWellness = {
+    _count: JournalMentalWellnessCountAggregateOutputType | null
+    _min: JournalMentalWellnessMinAggregateOutputType | null
+    _max: JournalMentalWellnessMaxAggregateOutputType | null
+  }
+
+  export type JournalMentalWellnessMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    mood: string | null
+    entryText: string | null
+    createdAt: Date | null
+  }
+
+  export type JournalMentalWellnessMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    mood: string | null
+    entryText: string | null
+    createdAt: Date | null
+  }
+
+  export type JournalMentalWellnessCountAggregateOutputType = {
+    id: number
+    userId: number
+    mood: number
+    entryText: number
+    tags: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type JournalMentalWellnessMinAggregateInputType = {
+    id?: true
+    userId?: true
+    mood?: true
+    entryText?: true
+    createdAt?: true
+  }
+
+  export type JournalMentalWellnessMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    mood?: true
+    entryText?: true
+    createdAt?: true
+  }
+
+  export type JournalMentalWellnessCountAggregateInputType = {
+    id?: true
+    userId?: true
+    mood?: true
+    entryText?: true
+    tags?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type JournalMentalWellnessAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which JournalMentalWellness to aggregate.
+     */
+    where?: JournalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of JournalMentalWellnesses to fetch.
+     */
+    orderBy?: JournalMentalWellnessOrderByWithRelationInput | JournalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: JournalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` JournalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` JournalMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned JournalMentalWellnesses
+    **/
+    _count?: true | JournalMentalWellnessCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: JournalMentalWellnessMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: JournalMentalWellnessMaxAggregateInputType
+  }
+
+  export type GetJournalMentalWellnessAggregateType<T extends JournalMentalWellnessAggregateArgs> = {
+        [P in keyof T & keyof AggregateJournalMentalWellness]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateJournalMentalWellness[P]>
+      : GetScalarType<T[P], AggregateJournalMentalWellness[P]>
+  }
+
+
+
+
+  export type JournalMentalWellnessGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: JournalMentalWellnessWhereInput
+    orderBy?: JournalMentalWellnessOrderByWithAggregationInput | JournalMentalWellnessOrderByWithAggregationInput[]
+    by: JournalMentalWellnessScalarFieldEnum[] | JournalMentalWellnessScalarFieldEnum
+    having?: JournalMentalWellnessScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: JournalMentalWellnessCountAggregateInputType | true
+    _min?: JournalMentalWellnessMinAggregateInputType
+    _max?: JournalMentalWellnessMaxAggregateInputType
+  }
+
+  export type JournalMentalWellnessGroupByOutputType = {
+    id: string
+    userId: string
+    mood: string
+    entryText: string
+    tags: string[]
+    createdAt: Date
+    _count: JournalMentalWellnessCountAggregateOutputType | null
+    _min: JournalMentalWellnessMinAggregateOutputType | null
+    _max: JournalMentalWellnessMaxAggregateOutputType | null
+  }
+
+  type GetJournalMentalWellnessGroupByPayload<T extends JournalMentalWellnessGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<JournalMentalWellnessGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof JournalMentalWellnessGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], JournalMentalWellnessGroupByOutputType[P]>
+            : GetScalarType<T[P], JournalMentalWellnessGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type JournalMentalWellnessSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    mood?: boolean
+    entryText?: boolean
+    tags?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["journalMentalWellness"]>
+
+  export type JournalMentalWellnessSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    mood?: boolean
+    entryText?: boolean
+    tags?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["journalMentalWellness"]>
+
+  export type JournalMentalWellnessSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    mood?: boolean
+    entryText?: boolean
+    tags?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["journalMentalWellness"]>
+
+  export type JournalMentalWellnessSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    mood?: boolean
+    entryText?: boolean
+    tags?: boolean
+    createdAt?: boolean
+  }
+
+  export type JournalMentalWellnessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "mood" | "entryText" | "tags" | "createdAt", ExtArgs["result"]["journalMentalWellness"]>
+  export type JournalMentalWellnessInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }
+  export type JournalMentalWellnessIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }
+  export type JournalMentalWellnessIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }
+
+  export type $JournalMentalWellnessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "JournalMentalWellness"
+    objects: {
+      user: Prisma.$UserMentalWellnessPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      mood: string
+      entryText: string
+      tags: string[]
+      createdAt: Date
+    }, ExtArgs["result"]["journalMentalWellness"]>
+    composites: {}
+  }
+
+  type JournalMentalWellnessGetPayload<S extends boolean | null | undefined | JournalMentalWellnessDefaultArgs> = $Result.GetResult<Prisma.$JournalMentalWellnessPayload, S>
+
+  type JournalMentalWellnessCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<JournalMentalWellnessFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: JournalMentalWellnessCountAggregateInputType | true
+    }
+
+  export interface JournalMentalWellnessDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['JournalMentalWellness'], meta: { name: 'JournalMentalWellness' } }
+    /**
+     * Find zero or one JournalMentalWellness that matches the filter.
+     * @param {JournalMentalWellnessFindUniqueArgs} args - Arguments to find a JournalMentalWellness
+     * @example
+     * // Get one JournalMentalWellness
+     * const journalMentalWellness = await prisma.journalMentalWellness.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends JournalMentalWellnessFindUniqueArgs>(args: SelectSubset<T, JournalMentalWellnessFindUniqueArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one JournalMentalWellness that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {JournalMentalWellnessFindUniqueOrThrowArgs} args - Arguments to find a JournalMentalWellness
+     * @example
+     * // Get one JournalMentalWellness
+     * const journalMentalWellness = await prisma.journalMentalWellness.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends JournalMentalWellnessFindUniqueOrThrowArgs>(args: SelectSubset<T, JournalMentalWellnessFindUniqueOrThrowArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first JournalMentalWellness that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {JournalMentalWellnessFindFirstArgs} args - Arguments to find a JournalMentalWellness
+     * @example
+     * // Get one JournalMentalWellness
+     * const journalMentalWellness = await prisma.journalMentalWellness.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends JournalMentalWellnessFindFirstArgs>(args?: SelectSubset<T, JournalMentalWellnessFindFirstArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first JournalMentalWellness that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {JournalMentalWellnessFindFirstOrThrowArgs} args - Arguments to find a JournalMentalWellness
+     * @example
+     * // Get one JournalMentalWellness
+     * const journalMentalWellness = await prisma.journalMentalWellness.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends JournalMentalWellnessFindFirstOrThrowArgs>(args?: SelectSubset<T, JournalMentalWellnessFindFirstOrThrowArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more JournalMentalWellnesses that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {JournalMentalWellnessFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all JournalMentalWellnesses
+     * const journalMentalWellnesses = await prisma.journalMentalWellness.findMany()
+     * 
+     * // Get first 10 JournalMentalWellnesses
+     * const journalMentalWellnesses = await prisma.journalMentalWellness.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const journalMentalWellnessWithIdOnly = await prisma.journalMentalWellness.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends JournalMentalWellnessFindManyArgs>(args?: SelectSubset<T, JournalMentalWellnessFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a JournalMentalWellness.
+     * @param {JournalMentalWellnessCreateArgs} args - Arguments to create a JournalMentalWellness.
+     * @example
+     * // Create one JournalMentalWellness
+     * const JournalMentalWellness = await prisma.journalMentalWellness.create({
+     *   data: {
+     *     // ... data to create a JournalMentalWellness
+     *   }
+     * })
+     * 
+     */
+    create<T extends JournalMentalWellnessCreateArgs>(args: SelectSubset<T, JournalMentalWellnessCreateArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many JournalMentalWellnesses.
+     * @param {JournalMentalWellnessCreateManyArgs} args - Arguments to create many JournalMentalWellnesses.
+     * @example
+     * // Create many JournalMentalWellnesses
+     * const journalMentalWellness = await prisma.journalMentalWellness.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends JournalMentalWellnessCreateManyArgs>(args?: SelectSubset<T, JournalMentalWellnessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many JournalMentalWellnesses and returns the data saved in the database.
+     * @param {JournalMentalWellnessCreateManyAndReturnArgs} args - Arguments to create many JournalMentalWellnesses.
+     * @example
+     * // Create many JournalMentalWellnesses
+     * const journalMentalWellness = await prisma.journalMentalWellness.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many JournalMentalWellnesses and only return the `id`
+     * const journalMentalWellnessWithIdOnly = await prisma.journalMentalWellness.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends JournalMentalWellnessCreateManyAndReturnArgs>(args?: SelectSubset<T, JournalMentalWellnessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a JournalMentalWellness.
+     * @param {JournalMentalWellnessDeleteArgs} args - Arguments to delete one JournalMentalWellness.
+     * @example
+     * // Delete one JournalMentalWellness
+     * const JournalMentalWellness = await prisma.journalMentalWellness.delete({
+     *   where: {
+     *     // ... filter to delete one JournalMentalWellness
+     *   }
+     * })
+     * 
+     */
+    delete<T extends JournalMentalWellnessDeleteArgs>(args: SelectSubset<T, JournalMentalWellnessDeleteArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one JournalMentalWellness.
+     * @param {JournalMentalWellnessUpdateArgs} args - Arguments to update one JournalMentalWellness.
+     * @example
+     * // Update one JournalMentalWellness
+     * const journalMentalWellness = await prisma.journalMentalWellness.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends JournalMentalWellnessUpdateArgs>(args: SelectSubset<T, JournalMentalWellnessUpdateArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more JournalMentalWellnesses.
+     * @param {JournalMentalWellnessDeleteManyArgs} args - Arguments to filter JournalMentalWellnesses to delete.
+     * @example
+     * // Delete a few JournalMentalWellnesses
+     * const { count } = await prisma.journalMentalWellness.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends JournalMentalWellnessDeleteManyArgs>(args?: SelectSubset<T, JournalMentalWellnessDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more JournalMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {JournalMentalWellnessUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many JournalMentalWellnesses
+     * const journalMentalWellness = await prisma.journalMentalWellness.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends JournalMentalWellnessUpdateManyArgs>(args: SelectSubset<T, JournalMentalWellnessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more JournalMentalWellnesses and returns the data updated in the database.
+     * @param {JournalMentalWellnessUpdateManyAndReturnArgs} args - Arguments to update many JournalMentalWellnesses.
+     * @example
+     * // Update many JournalMentalWellnesses
+     * const journalMentalWellness = await prisma.journalMentalWellness.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more JournalMentalWellnesses and only return the `id`
+     * const journalMentalWellnessWithIdOnly = await prisma.journalMentalWellness.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends JournalMentalWellnessUpdateManyAndReturnArgs>(args: SelectSubset<T, JournalMentalWellnessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one JournalMentalWellness.
+     * @param {JournalMentalWellnessUpsertArgs} args - Arguments to update or create a JournalMentalWellness.
+     * @example
+     * // Update or create a JournalMentalWellness
+     * const journalMentalWellness = await prisma.journalMentalWellness.upsert({
+     *   create: {
+     *     // ... data to create a JournalMentalWellness
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the JournalMentalWellness we want to update
+     *   }
+     * })
+     */
+    upsert<T extends JournalMentalWellnessUpsertArgs>(args: SelectSubset<T, JournalMentalWellnessUpsertArgs<ExtArgs>>): Prisma__JournalMentalWellnessClient<$Result.GetResult<Prisma.$JournalMentalWellnessPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of JournalMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {JournalMentalWellnessCountArgs} args - Arguments to filter JournalMentalWellnesses to count.
+     * @example
+     * // Count the number of JournalMentalWellnesses
+     * const count = await prisma.journalMentalWellness.count({
+     *   where: {
+     *     // ... the filter for the JournalMentalWellnesses we want to count
+     *   }
+     * })
+    **/
+    count<T extends JournalMentalWellnessCountArgs>(
+      args?: Subset<T, JournalMentalWellnessCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], JournalMentalWellnessCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a JournalMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {JournalMentalWellnessAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends JournalMentalWellnessAggregateArgs>(args: Subset<T, JournalMentalWellnessAggregateArgs>): Prisma.PrismaPromise<GetJournalMentalWellnessAggregateType<T>>
+
+    /**
+     * Group by JournalMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {JournalMentalWellnessGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends JournalMentalWellnessGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: JournalMentalWellnessGroupByArgs['orderBy'] }
+        : { orderBy?: JournalMentalWellnessGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, JournalMentalWellnessGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetJournalMentalWellnessGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the JournalMentalWellness model
+   */
+  readonly fields: JournalMentalWellnessFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for JournalMentalWellness.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__JournalMentalWellnessClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserMentalWellnessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserMentalWellnessDefaultArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the JournalMentalWellness model
+   */ 
+  interface JournalMentalWellnessFieldRefs {
+    readonly id: FieldRef<"JournalMentalWellness", 'String'>
+    readonly userId: FieldRef<"JournalMentalWellness", 'String'>
+    readonly mood: FieldRef<"JournalMentalWellness", 'String'>
+    readonly entryText: FieldRef<"JournalMentalWellness", 'String'>
+    readonly tags: FieldRef<"JournalMentalWellness", 'String[]'>
+    readonly createdAt: FieldRef<"JournalMentalWellness", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * JournalMentalWellness findUnique
+   */
+  export type JournalMentalWellnessFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which JournalMentalWellness to fetch.
+     */
+    where: JournalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * JournalMentalWellness findUniqueOrThrow
+   */
+  export type JournalMentalWellnessFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which JournalMentalWellness to fetch.
+     */
+    where: JournalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * JournalMentalWellness findFirst
+   */
+  export type JournalMentalWellnessFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which JournalMentalWellness to fetch.
+     */
+    where?: JournalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of JournalMentalWellnesses to fetch.
+     */
+    orderBy?: JournalMentalWellnessOrderByWithRelationInput | JournalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for JournalMentalWellnesses.
+     */
+    cursor?: JournalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` JournalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` JournalMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of JournalMentalWellnesses.
+     */
+    distinct?: JournalMentalWellnessScalarFieldEnum | JournalMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * JournalMentalWellness findFirstOrThrow
+   */
+  export type JournalMentalWellnessFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which JournalMentalWellness to fetch.
+     */
+    where?: JournalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of JournalMentalWellnesses to fetch.
+     */
+    orderBy?: JournalMentalWellnessOrderByWithRelationInput | JournalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for JournalMentalWellnesses.
+     */
+    cursor?: JournalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` JournalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` JournalMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of JournalMentalWellnesses.
+     */
+    distinct?: JournalMentalWellnessScalarFieldEnum | JournalMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * JournalMentalWellness findMany
+   */
+  export type JournalMentalWellnessFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which JournalMentalWellnesses to fetch.
+     */
+    where?: JournalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of JournalMentalWellnesses to fetch.
+     */
+    orderBy?: JournalMentalWellnessOrderByWithRelationInput | JournalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing JournalMentalWellnesses.
+     */
+    cursor?: JournalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` JournalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` JournalMentalWellnesses.
+     */
+    skip?: number
+    distinct?: JournalMentalWellnessScalarFieldEnum | JournalMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * JournalMentalWellness create
+   */
+  export type JournalMentalWellnessCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The data needed to create a JournalMentalWellness.
+     */
+    data: XOR<JournalMentalWellnessCreateInput, JournalMentalWellnessUncheckedCreateInput>
+  }
+
+  /**
+   * JournalMentalWellness createMany
+   */
+  export type JournalMentalWellnessCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many JournalMentalWellnesses.
+     */
+    data: JournalMentalWellnessCreateManyInput | JournalMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * JournalMentalWellness createManyAndReturn
+   */
+  export type JournalMentalWellnessCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to create many JournalMentalWellnesses.
+     */
+    data: JournalMentalWellnessCreateManyInput | JournalMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * JournalMentalWellness update
+   */
+  export type JournalMentalWellnessUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The data needed to update a JournalMentalWellness.
+     */
+    data: XOR<JournalMentalWellnessUpdateInput, JournalMentalWellnessUncheckedUpdateInput>
+    /**
+     * Choose, which JournalMentalWellness to update.
+     */
+    where: JournalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * JournalMentalWellness updateMany
+   */
+  export type JournalMentalWellnessUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update JournalMentalWellnesses.
+     */
+    data: XOR<JournalMentalWellnessUpdateManyMutationInput, JournalMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which JournalMentalWellnesses to update
+     */
+    where?: JournalMentalWellnessWhereInput
+    /**
+     * Limit how many JournalMentalWellnesses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * JournalMentalWellness updateManyAndReturn
+   */
+  export type JournalMentalWellnessUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to update JournalMentalWellnesses.
+     */
+    data: XOR<JournalMentalWellnessUpdateManyMutationInput, JournalMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which JournalMentalWellnesses to update
+     */
+    where?: JournalMentalWellnessWhereInput
+    /**
+     * Limit how many JournalMentalWellnesses to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * JournalMentalWellness upsert
+   */
+  export type JournalMentalWellnessUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The filter to search for the JournalMentalWellness to update in case it exists.
+     */
+    where: JournalMentalWellnessWhereUniqueInput
+    /**
+     * In case the JournalMentalWellness found by the `where` argument doesn't exist, create a new JournalMentalWellness with this data.
+     */
+    create: XOR<JournalMentalWellnessCreateInput, JournalMentalWellnessUncheckedCreateInput>
+    /**
+     * In case the JournalMentalWellness was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<JournalMentalWellnessUpdateInput, JournalMentalWellnessUncheckedUpdateInput>
+  }
+
+  /**
+   * JournalMentalWellness delete
+   */
+  export type JournalMentalWellnessDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter which JournalMentalWellness to delete.
+     */
+    where: JournalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * JournalMentalWellness deleteMany
+   */
+  export type JournalMentalWellnessDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which JournalMentalWellnesses to delete
+     */
+    where?: JournalMentalWellnessWhereInput
+    /**
+     * Limit how many JournalMentalWellnesses to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * JournalMentalWellness without action
+   */
+  export type JournalMentalWellnessDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the JournalMentalWellness
+     */
+    select?: JournalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the JournalMentalWellness
+     */
+    omit?: JournalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: JournalMentalWellnessInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model AssessmentMentalWellness
+   */
+
+  export type AggregateAssessmentMentalWellness = {
+    _count: AssessmentMentalWellnessCountAggregateOutputType | null
+    _min: AssessmentMentalWellnessMinAggregateOutputType | null
+    _max: AssessmentMentalWellnessMaxAggregateOutputType | null
+  }
+
+  export type AssessmentMentalWellnessMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    result: string | null
+    createdAt: Date | null
+  }
+
+  export type AssessmentMentalWellnessMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    result: string | null
+    createdAt: Date | null
+  }
+
+  export type AssessmentMentalWellnessCountAggregateOutputType = {
+    id: number
+    userId: number
+    responses: number
+    result: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type AssessmentMentalWellnessMinAggregateInputType = {
+    id?: true
+    userId?: true
+    result?: true
+    createdAt?: true
+  }
+
+  export type AssessmentMentalWellnessMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    result?: true
+    createdAt?: true
+  }
+
+  export type AssessmentMentalWellnessCountAggregateInputType = {
+    id?: true
+    userId?: true
+    responses?: true
+    result?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type AssessmentMentalWellnessAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which AssessmentMentalWellness to aggregate.
+     */
+    where?: AssessmentMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AssessmentMentalWellnesses to fetch.
+     */
+    orderBy?: AssessmentMentalWellnessOrderByWithRelationInput | AssessmentMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: AssessmentMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AssessmentMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AssessmentMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned AssessmentMentalWellnesses
+    **/
+    _count?: true | AssessmentMentalWellnessCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: AssessmentMentalWellnessMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: AssessmentMentalWellnessMaxAggregateInputType
+  }
+
+  export type GetAssessmentMentalWellnessAggregateType<T extends AssessmentMentalWellnessAggregateArgs> = {
+        [P in keyof T & keyof AggregateAssessmentMentalWellness]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateAssessmentMentalWellness[P]>
+      : GetScalarType<T[P], AggregateAssessmentMentalWellness[P]>
+  }
+
+
+
+
+  export type AssessmentMentalWellnessGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AssessmentMentalWellnessWhereInput
+    orderBy?: AssessmentMentalWellnessOrderByWithAggregationInput | AssessmentMentalWellnessOrderByWithAggregationInput[]
+    by: AssessmentMentalWellnessScalarFieldEnum[] | AssessmentMentalWellnessScalarFieldEnum
+    having?: AssessmentMentalWellnessScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: AssessmentMentalWellnessCountAggregateInputType | true
+    _min?: AssessmentMentalWellnessMinAggregateInputType
+    _max?: AssessmentMentalWellnessMaxAggregateInputType
+  }
+
+  export type AssessmentMentalWellnessGroupByOutputType = {
+    id: string
+    userId: string
+    responses: JsonValue
+    result: string
+    createdAt: Date
+    _count: AssessmentMentalWellnessCountAggregateOutputType | null
+    _min: AssessmentMentalWellnessMinAggregateOutputType | null
+    _max: AssessmentMentalWellnessMaxAggregateOutputType | null
+  }
+
+  type GetAssessmentMentalWellnessGroupByPayload<T extends AssessmentMentalWellnessGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<AssessmentMentalWellnessGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof AssessmentMentalWellnessGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], AssessmentMentalWellnessGroupByOutputType[P]>
+            : GetScalarType<T[P], AssessmentMentalWellnessGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type AssessmentMentalWellnessSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    responses?: boolean
+    result?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["assessmentMentalWellness"]>
+
+  export type AssessmentMentalWellnessSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    responses?: boolean
+    result?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["assessmentMentalWellness"]>
+
+  export type AssessmentMentalWellnessSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    responses?: boolean
+    result?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["assessmentMentalWellness"]>
+
+  export type AssessmentMentalWellnessSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    responses?: boolean
+    result?: boolean
+    createdAt?: boolean
+  }
+
+  export type AssessmentMentalWellnessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "responses" | "result" | "createdAt", ExtArgs["result"]["assessmentMentalWellness"]>
+  export type AssessmentMentalWellnessInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }
+  export type AssessmentMentalWellnessIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }
+  export type AssessmentMentalWellnessIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+  }
+
+  export type $AssessmentMentalWellnessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "AssessmentMentalWellness"
+    objects: {
+      user: Prisma.$UserMentalWellnessPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      responses: Prisma.JsonValue
+      result: string
+      createdAt: Date
+    }, ExtArgs["result"]["assessmentMentalWellness"]>
+    composites: {}
+  }
+
+  type AssessmentMentalWellnessGetPayload<S extends boolean | null | undefined | AssessmentMentalWellnessDefaultArgs> = $Result.GetResult<Prisma.$AssessmentMentalWellnessPayload, S>
+
+  type AssessmentMentalWellnessCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AssessmentMentalWellnessFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AssessmentMentalWellnessCountAggregateInputType | true
+    }
+
+  export interface AssessmentMentalWellnessDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AssessmentMentalWellness'], meta: { name: 'AssessmentMentalWellness' } }
+    /**
+     * Find zero or one AssessmentMentalWellness that matches the filter.
+     * @param {AssessmentMentalWellnessFindUniqueArgs} args - Arguments to find a AssessmentMentalWellness
+     * @example
+     * // Get one AssessmentMentalWellness
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends AssessmentMentalWellnessFindUniqueArgs>(args: SelectSubset<T, AssessmentMentalWellnessFindUniqueArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one AssessmentMentalWellness that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {AssessmentMentalWellnessFindUniqueOrThrowArgs} args - Arguments to find a AssessmentMentalWellness
+     * @example
+     * // Get one AssessmentMentalWellness
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends AssessmentMentalWellnessFindUniqueOrThrowArgs>(args: SelectSubset<T, AssessmentMentalWellnessFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first AssessmentMentalWellness that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AssessmentMentalWellnessFindFirstArgs} args - Arguments to find a AssessmentMentalWellness
+     * @example
+     * // Get one AssessmentMentalWellness
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends AssessmentMentalWellnessFindFirstArgs>(args?: SelectSubset<T, AssessmentMentalWellnessFindFirstArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first AssessmentMentalWellness that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AssessmentMentalWellnessFindFirstOrThrowArgs} args - Arguments to find a AssessmentMentalWellness
+     * @example
+     * // Get one AssessmentMentalWellness
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends AssessmentMentalWellnessFindFirstOrThrowArgs>(args?: SelectSubset<T, AssessmentMentalWellnessFindFirstOrThrowArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more AssessmentMentalWellnesses that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AssessmentMentalWellnessFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all AssessmentMentalWellnesses
+     * const assessmentMentalWellnesses = await prisma.assessmentMentalWellness.findMany()
+     * 
+     * // Get first 10 AssessmentMentalWellnesses
+     * const assessmentMentalWellnesses = await prisma.assessmentMentalWellness.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const assessmentMentalWellnessWithIdOnly = await prisma.assessmentMentalWellness.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends AssessmentMentalWellnessFindManyArgs>(args?: SelectSubset<T, AssessmentMentalWellnessFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a AssessmentMentalWellness.
+     * @param {AssessmentMentalWellnessCreateArgs} args - Arguments to create a AssessmentMentalWellness.
+     * @example
+     * // Create one AssessmentMentalWellness
+     * const AssessmentMentalWellness = await prisma.assessmentMentalWellness.create({
+     *   data: {
+     *     // ... data to create a AssessmentMentalWellness
+     *   }
+     * })
+     * 
+     */
+    create<T extends AssessmentMentalWellnessCreateArgs>(args: SelectSubset<T, AssessmentMentalWellnessCreateArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many AssessmentMentalWellnesses.
+     * @param {AssessmentMentalWellnessCreateManyArgs} args - Arguments to create many AssessmentMentalWellnesses.
+     * @example
+     * // Create many AssessmentMentalWellnesses
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends AssessmentMentalWellnessCreateManyArgs>(args?: SelectSubset<T, AssessmentMentalWellnessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many AssessmentMentalWellnesses and returns the data saved in the database.
+     * @param {AssessmentMentalWellnessCreateManyAndReturnArgs} args - Arguments to create many AssessmentMentalWellnesses.
+     * @example
+     * // Create many AssessmentMentalWellnesses
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many AssessmentMentalWellnesses and only return the `id`
+     * const assessmentMentalWellnessWithIdOnly = await prisma.assessmentMentalWellness.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends AssessmentMentalWellnessCreateManyAndReturnArgs>(args?: SelectSubset<T, AssessmentMentalWellnessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a AssessmentMentalWellness.
+     * @param {AssessmentMentalWellnessDeleteArgs} args - Arguments to delete one AssessmentMentalWellness.
+     * @example
+     * // Delete one AssessmentMentalWellness
+     * const AssessmentMentalWellness = await prisma.assessmentMentalWellness.delete({
+     *   where: {
+     *     // ... filter to delete one AssessmentMentalWellness
+     *   }
+     * })
+     * 
+     */
+    delete<T extends AssessmentMentalWellnessDeleteArgs>(args: SelectSubset<T, AssessmentMentalWellnessDeleteArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one AssessmentMentalWellness.
+     * @param {AssessmentMentalWellnessUpdateArgs} args - Arguments to update one AssessmentMentalWellness.
+     * @example
+     * // Update one AssessmentMentalWellness
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends AssessmentMentalWellnessUpdateArgs>(args: SelectSubset<T, AssessmentMentalWellnessUpdateArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more AssessmentMentalWellnesses.
+     * @param {AssessmentMentalWellnessDeleteManyArgs} args - Arguments to filter AssessmentMentalWellnesses to delete.
+     * @example
+     * // Delete a few AssessmentMentalWellnesses
+     * const { count } = await prisma.assessmentMentalWellness.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends AssessmentMentalWellnessDeleteManyArgs>(args?: SelectSubset<T, AssessmentMentalWellnessDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more AssessmentMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AssessmentMentalWellnessUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many AssessmentMentalWellnesses
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends AssessmentMentalWellnessUpdateManyArgs>(args: SelectSubset<T, AssessmentMentalWellnessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more AssessmentMentalWellnesses and returns the data updated in the database.
+     * @param {AssessmentMentalWellnessUpdateManyAndReturnArgs} args - Arguments to update many AssessmentMentalWellnesses.
+     * @example
+     * // Update many AssessmentMentalWellnesses
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more AssessmentMentalWellnesses and only return the `id`
+     * const assessmentMentalWellnessWithIdOnly = await prisma.assessmentMentalWellness.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends AssessmentMentalWellnessUpdateManyAndReturnArgs>(args: SelectSubset<T, AssessmentMentalWellnessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one AssessmentMentalWellness.
+     * @param {AssessmentMentalWellnessUpsertArgs} args - Arguments to update or create a AssessmentMentalWellness.
+     * @example
+     * // Update or create a AssessmentMentalWellness
+     * const assessmentMentalWellness = await prisma.assessmentMentalWellness.upsert({
+     *   create: {
+     *     // ... data to create a AssessmentMentalWellness
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the AssessmentMentalWellness we want to update
+     *   }
+     * })
+     */
+    upsert<T extends AssessmentMentalWellnessUpsertArgs>(args: SelectSubset<T, AssessmentMentalWellnessUpsertArgs<ExtArgs>>): Prisma__AssessmentMentalWellnessClient<$Result.GetResult<Prisma.$AssessmentMentalWellnessPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of AssessmentMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AssessmentMentalWellnessCountArgs} args - Arguments to filter AssessmentMentalWellnesses to count.
+     * @example
+     * // Count the number of AssessmentMentalWellnesses
+     * const count = await prisma.assessmentMentalWellness.count({
+     *   where: {
+     *     // ... the filter for the AssessmentMentalWellnesses we want to count
+     *   }
+     * })
+    **/
+    count<T extends AssessmentMentalWellnessCountArgs>(
+      args?: Subset<T, AssessmentMentalWellnessCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], AssessmentMentalWellnessCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a AssessmentMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AssessmentMentalWellnessAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends AssessmentMentalWellnessAggregateArgs>(args: Subset<T, AssessmentMentalWellnessAggregateArgs>): Prisma.PrismaPromise<GetAssessmentMentalWellnessAggregateType<T>>
+
+    /**
+     * Group by AssessmentMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AssessmentMentalWellnessGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends AssessmentMentalWellnessGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: AssessmentMentalWellnessGroupByArgs['orderBy'] }
+        : { orderBy?: AssessmentMentalWellnessGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, AssessmentMentalWellnessGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAssessmentMentalWellnessGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the AssessmentMentalWellness model
+   */
+  readonly fields: AssessmentMentalWellnessFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for AssessmentMentalWellness.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__AssessmentMentalWellnessClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserMentalWellnessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserMentalWellnessDefaultArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the AssessmentMentalWellness model
+   */ 
+  interface AssessmentMentalWellnessFieldRefs {
+    readonly id: FieldRef<"AssessmentMentalWellness", 'String'>
+    readonly userId: FieldRef<"AssessmentMentalWellness", 'String'>
+    readonly responses: FieldRef<"AssessmentMentalWellness", 'Json'>
+    readonly result: FieldRef<"AssessmentMentalWellness", 'String'>
+    readonly createdAt: FieldRef<"AssessmentMentalWellness", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * AssessmentMentalWellness findUnique
+   */
+  export type AssessmentMentalWellnessFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which AssessmentMentalWellness to fetch.
+     */
+    where: AssessmentMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * AssessmentMentalWellness findUniqueOrThrow
+   */
+  export type AssessmentMentalWellnessFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which AssessmentMentalWellness to fetch.
+     */
+    where: AssessmentMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * AssessmentMentalWellness findFirst
+   */
+  export type AssessmentMentalWellnessFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which AssessmentMentalWellness to fetch.
+     */
+    where?: AssessmentMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AssessmentMentalWellnesses to fetch.
+     */
+    orderBy?: AssessmentMentalWellnessOrderByWithRelationInput | AssessmentMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for AssessmentMentalWellnesses.
+     */
+    cursor?: AssessmentMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AssessmentMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AssessmentMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of AssessmentMentalWellnesses.
+     */
+    distinct?: AssessmentMentalWellnessScalarFieldEnum | AssessmentMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * AssessmentMentalWellness findFirstOrThrow
+   */
+  export type AssessmentMentalWellnessFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which AssessmentMentalWellness to fetch.
+     */
+    where?: AssessmentMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AssessmentMentalWellnesses to fetch.
+     */
+    orderBy?: AssessmentMentalWellnessOrderByWithRelationInput | AssessmentMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for AssessmentMentalWellnesses.
+     */
+    cursor?: AssessmentMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AssessmentMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AssessmentMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of AssessmentMentalWellnesses.
+     */
+    distinct?: AssessmentMentalWellnessScalarFieldEnum | AssessmentMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * AssessmentMentalWellness findMany
+   */
+  export type AssessmentMentalWellnessFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter, which AssessmentMentalWellnesses to fetch.
+     */
+    where?: AssessmentMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of AssessmentMentalWellnesses to fetch.
+     */
+    orderBy?: AssessmentMentalWellnessOrderByWithRelationInput | AssessmentMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing AssessmentMentalWellnesses.
+     */
+    cursor?: AssessmentMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` AssessmentMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` AssessmentMentalWellnesses.
+     */
+    skip?: number
+    distinct?: AssessmentMentalWellnessScalarFieldEnum | AssessmentMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * AssessmentMentalWellness create
+   */
+  export type AssessmentMentalWellnessCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The data needed to create a AssessmentMentalWellness.
+     */
+    data: XOR<AssessmentMentalWellnessCreateInput, AssessmentMentalWellnessUncheckedCreateInput>
+  }
+
+  /**
+   * AssessmentMentalWellness createMany
+   */
+  export type AssessmentMentalWellnessCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many AssessmentMentalWellnesses.
+     */
+    data: AssessmentMentalWellnessCreateManyInput | AssessmentMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * AssessmentMentalWellness createManyAndReturn
+   */
+  export type AssessmentMentalWellnessCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to create many AssessmentMentalWellnesses.
+     */
+    data: AssessmentMentalWellnessCreateManyInput | AssessmentMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * AssessmentMentalWellness update
+   */
+  export type AssessmentMentalWellnessUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The data needed to update a AssessmentMentalWellness.
+     */
+    data: XOR<AssessmentMentalWellnessUpdateInput, AssessmentMentalWellnessUncheckedUpdateInput>
+    /**
+     * Choose, which AssessmentMentalWellness to update.
+     */
+    where: AssessmentMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * AssessmentMentalWellness updateMany
+   */
+  export type AssessmentMentalWellnessUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update AssessmentMentalWellnesses.
+     */
+    data: XOR<AssessmentMentalWellnessUpdateManyMutationInput, AssessmentMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which AssessmentMentalWellnesses to update
+     */
+    where?: AssessmentMentalWellnessWhereInput
+    /**
+     * Limit how many AssessmentMentalWellnesses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * AssessmentMentalWellness updateManyAndReturn
+   */
+  export type AssessmentMentalWellnessUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to update AssessmentMentalWellnesses.
+     */
+    data: XOR<AssessmentMentalWellnessUpdateManyMutationInput, AssessmentMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which AssessmentMentalWellnesses to update
+     */
+    where?: AssessmentMentalWellnessWhereInput
+    /**
+     * Limit how many AssessmentMentalWellnesses to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * AssessmentMentalWellness upsert
+   */
+  export type AssessmentMentalWellnessUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * The filter to search for the AssessmentMentalWellness to update in case it exists.
+     */
+    where: AssessmentMentalWellnessWhereUniqueInput
+    /**
+     * In case the AssessmentMentalWellness found by the `where` argument doesn't exist, create a new AssessmentMentalWellness with this data.
+     */
+    create: XOR<AssessmentMentalWellnessCreateInput, AssessmentMentalWellnessUncheckedCreateInput>
+    /**
+     * In case the AssessmentMentalWellness was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<AssessmentMentalWellnessUpdateInput, AssessmentMentalWellnessUncheckedUpdateInput>
+  }
+
+  /**
+   * AssessmentMentalWellness delete
+   */
+  export type AssessmentMentalWellnessDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+    /**
+     * Filter which AssessmentMentalWellness to delete.
+     */
+    where: AssessmentMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * AssessmentMentalWellness deleteMany
+   */
+  export type AssessmentMentalWellnessDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which AssessmentMentalWellnesses to delete
+     */
+    where?: AssessmentMentalWellnessWhereInput
+    /**
+     * Limit how many AssessmentMentalWellnesses to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * AssessmentMentalWellness without action
+   */
+  export type AssessmentMentalWellnessDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the AssessmentMentalWellness
+     */
+    select?: AssessmentMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the AssessmentMentalWellness
+     */
+    omit?: AssessmentMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AssessmentMentalWellnessInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model Meditation
+   */
+
+  export type AggregateMeditation = {
+    _count: MeditationCountAggregateOutputType | null
+    _min: MeditationMinAggregateOutputType | null
+    _max: MeditationMaxAggregateOutputType | null
+  }
+
+  export type MeditationMinAggregateOutputType = {
+    id: string | null
+    title: string | null
+    description: string | null
+    audioUrl: string | null
+    createdAt: Date | null
+  }
+
+  export type MeditationMaxAggregateOutputType = {
+    id: string | null
+    title: string | null
+    description: string | null
+    audioUrl: string | null
+    createdAt: Date | null
+  }
+
+  export type MeditationCountAggregateOutputType = {
+    id: number
+    title: number
+    description: number
+    audioUrl: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type MeditationMinAggregateInputType = {
+    id?: true
+    title?: true
+    description?: true
+    audioUrl?: true
+    createdAt?: true
+  }
+
+  export type MeditationMaxAggregateInputType = {
+    id?: true
+    title?: true
+    description?: true
+    audioUrl?: true
+    createdAt?: true
+  }
+
+  export type MeditationCountAggregateInputType = {
+    id?: true
+    title?: true
+    description?: true
+    audioUrl?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type MeditationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Meditation to aggregate.
+     */
+    where?: MeditationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Meditations to fetch.
+     */
+    orderBy?: MeditationOrderByWithRelationInput | MeditationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: MeditationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Meditations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Meditations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Meditations
+    **/
+    _count?: true | MeditationCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: MeditationMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: MeditationMaxAggregateInputType
+  }
+
+  export type GetMeditationAggregateType<T extends MeditationAggregateArgs> = {
+        [P in keyof T & keyof AggregateMeditation]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateMeditation[P]>
+      : GetScalarType<T[P], AggregateMeditation[P]>
+  }
+
+
+
+
+  export type MeditationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MeditationWhereInput
+    orderBy?: MeditationOrderByWithAggregationInput | MeditationOrderByWithAggregationInput[]
+    by: MeditationScalarFieldEnum[] | MeditationScalarFieldEnum
+    having?: MeditationScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: MeditationCountAggregateInputType | true
+    _min?: MeditationMinAggregateInputType
+    _max?: MeditationMaxAggregateInputType
+  }
+
+  export type MeditationGroupByOutputType = {
+    id: string
+    title: string
+    description: string
+    audioUrl: string
+    createdAt: Date
+    _count: MeditationCountAggregateOutputType | null
+    _min: MeditationMinAggregateOutputType | null
+    _max: MeditationMaxAggregateOutputType | null
+  }
+
+  type GetMeditationGroupByPayload<T extends MeditationGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<MeditationGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof MeditationGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], MeditationGroupByOutputType[P]>
+            : GetScalarType<T[P], MeditationGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type MeditationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    audioUrl?: boolean
+    createdAt?: boolean
+    feedbacks?: boolean | Meditation$feedbacksArgs<ExtArgs>
+    _count?: boolean | MeditationCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["meditation"]>
+
+  export type MeditationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    audioUrl?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["meditation"]>
+
+  export type MeditationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    audioUrl?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["meditation"]>
+
+  export type MeditationSelectScalar = {
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    audioUrl?: boolean
+    createdAt?: boolean
+  }
+
+  export type MeditationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "audioUrl" | "createdAt", ExtArgs["result"]["meditation"]>
+  export type MeditationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    feedbacks?: boolean | Meditation$feedbacksArgs<ExtArgs>
+    _count?: boolean | MeditationCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type MeditationIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type MeditationIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $MeditationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Meditation"
+    objects: {
+      feedbacks: Prisma.$MeditationFeedbackPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      title: string
+      description: string
+      audioUrl: string
+      createdAt: Date
+    }, ExtArgs["result"]["meditation"]>
+    composites: {}
+  }
+
+  type MeditationGetPayload<S extends boolean | null | undefined | MeditationDefaultArgs> = $Result.GetResult<Prisma.$MeditationPayload, S>
+
+  type MeditationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<MeditationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: MeditationCountAggregateInputType | true
+    }
+
+  export interface MeditationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Meditation'], meta: { name: 'Meditation' } }
+    /**
+     * Find zero or one Meditation that matches the filter.
+     * @param {MeditationFindUniqueArgs} args - Arguments to find a Meditation
+     * @example
+     * // Get one Meditation
+     * const meditation = await prisma.meditation.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends MeditationFindUniqueArgs>(args: SelectSubset<T, MeditationFindUniqueArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Meditation that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {MeditationFindUniqueOrThrowArgs} args - Arguments to find a Meditation
+     * @example
+     * // Get one Meditation
+     * const meditation = await prisma.meditation.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends MeditationFindUniqueOrThrowArgs>(args: SelectSubset<T, MeditationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Meditation that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFindFirstArgs} args - Arguments to find a Meditation
+     * @example
+     * // Get one Meditation
+     * const meditation = await prisma.meditation.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends MeditationFindFirstArgs>(args?: SelectSubset<T, MeditationFindFirstArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Meditation that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFindFirstOrThrowArgs} args - Arguments to find a Meditation
+     * @example
+     * // Get one Meditation
+     * const meditation = await prisma.meditation.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends MeditationFindFirstOrThrowArgs>(args?: SelectSubset<T, MeditationFindFirstOrThrowArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Meditations that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Meditations
+     * const meditations = await prisma.meditation.findMany()
+     * 
+     * // Get first 10 Meditations
+     * const meditations = await prisma.meditation.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const meditationWithIdOnly = await prisma.meditation.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends MeditationFindManyArgs>(args?: SelectSubset<T, MeditationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Meditation.
+     * @param {MeditationCreateArgs} args - Arguments to create a Meditation.
+     * @example
+     * // Create one Meditation
+     * const Meditation = await prisma.meditation.create({
+     *   data: {
+     *     // ... data to create a Meditation
+     *   }
+     * })
+     * 
+     */
+    create<T extends MeditationCreateArgs>(args: SelectSubset<T, MeditationCreateArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Meditations.
+     * @param {MeditationCreateManyArgs} args - Arguments to create many Meditations.
+     * @example
+     * // Create many Meditations
+     * const meditation = await prisma.meditation.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends MeditationCreateManyArgs>(args?: SelectSubset<T, MeditationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many Meditations and returns the data saved in the database.
+     * @param {MeditationCreateManyAndReturnArgs} args - Arguments to create many Meditations.
+     * @example
+     * // Create many Meditations
+     * const meditation = await prisma.meditation.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Meditations and only return the `id`
+     * const meditationWithIdOnly = await prisma.meditation.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends MeditationCreateManyAndReturnArgs>(args?: SelectSubset<T, MeditationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a Meditation.
+     * @param {MeditationDeleteArgs} args - Arguments to delete one Meditation.
+     * @example
+     * // Delete one Meditation
+     * const Meditation = await prisma.meditation.delete({
+     *   where: {
+     *     // ... filter to delete one Meditation
+     *   }
+     * })
+     * 
+     */
+    delete<T extends MeditationDeleteArgs>(args: SelectSubset<T, MeditationDeleteArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Meditation.
+     * @param {MeditationUpdateArgs} args - Arguments to update one Meditation.
+     * @example
+     * // Update one Meditation
+     * const meditation = await prisma.meditation.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends MeditationUpdateArgs>(args: SelectSubset<T, MeditationUpdateArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Meditations.
+     * @param {MeditationDeleteManyArgs} args - Arguments to filter Meditations to delete.
+     * @example
+     * // Delete a few Meditations
+     * const { count } = await prisma.meditation.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends MeditationDeleteManyArgs>(args?: SelectSubset<T, MeditationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Meditations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Meditations
+     * const meditation = await prisma.meditation.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends MeditationUpdateManyArgs>(args: SelectSubset<T, MeditationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Meditations and returns the data updated in the database.
+     * @param {MeditationUpdateManyAndReturnArgs} args - Arguments to update many Meditations.
+     * @example
+     * // Update many Meditations
+     * const meditation = await prisma.meditation.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Meditations and only return the `id`
+     * const meditationWithIdOnly = await prisma.meditation.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends MeditationUpdateManyAndReturnArgs>(args: SelectSubset<T, MeditationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one Meditation.
+     * @param {MeditationUpsertArgs} args - Arguments to update or create a Meditation.
+     * @example
+     * // Update or create a Meditation
+     * const meditation = await prisma.meditation.upsert({
+     *   create: {
+     *     // ... data to create a Meditation
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Meditation we want to update
+     *   }
+     * })
+     */
+    upsert<T extends MeditationUpsertArgs>(args: SelectSubset<T, MeditationUpsertArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Meditations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationCountArgs} args - Arguments to filter Meditations to count.
+     * @example
+     * // Count the number of Meditations
+     * const count = await prisma.meditation.count({
+     *   where: {
+     *     // ... the filter for the Meditations we want to count
+     *   }
+     * })
+    **/
+    count<T extends MeditationCountArgs>(
+      args?: Subset<T, MeditationCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], MeditationCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Meditation.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends MeditationAggregateArgs>(args: Subset<T, MeditationAggregateArgs>): Prisma.PrismaPromise<GetMeditationAggregateType<T>>
+
+    /**
+     * Group by Meditation.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends MeditationGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: MeditationGroupByArgs['orderBy'] }
+        : { orderBy?: MeditationGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, MeditationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMeditationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Meditation model
+   */
+  readonly fields: MeditationFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Meditation.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__MeditationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    feedbacks<T extends Meditation$feedbacksArgs<ExtArgs> = {}>(args?: Subset<T, Meditation$feedbacksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Meditation model
+   */ 
+  interface MeditationFieldRefs {
+    readonly id: FieldRef<"Meditation", 'String'>
+    readonly title: FieldRef<"Meditation", 'String'>
+    readonly description: FieldRef<"Meditation", 'String'>
+    readonly audioUrl: FieldRef<"Meditation", 'String'>
+    readonly createdAt: FieldRef<"Meditation", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Meditation findUnique
+   */
+  export type MeditationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * Filter, which Meditation to fetch.
+     */
+    where: MeditationWhereUniqueInput
+  }
+
+  /**
+   * Meditation findUniqueOrThrow
+   */
+  export type MeditationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * Filter, which Meditation to fetch.
+     */
+    where: MeditationWhereUniqueInput
+  }
+
+  /**
+   * Meditation findFirst
+   */
+  export type MeditationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * Filter, which Meditation to fetch.
+     */
+    where?: MeditationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Meditations to fetch.
+     */
+    orderBy?: MeditationOrderByWithRelationInput | MeditationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Meditations.
+     */
+    cursor?: MeditationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Meditations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Meditations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Meditations.
+     */
+    distinct?: MeditationScalarFieldEnum | MeditationScalarFieldEnum[]
+  }
+
+  /**
+   * Meditation findFirstOrThrow
+   */
+  export type MeditationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * Filter, which Meditation to fetch.
+     */
+    where?: MeditationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Meditations to fetch.
+     */
+    orderBy?: MeditationOrderByWithRelationInput | MeditationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Meditations.
+     */
+    cursor?: MeditationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Meditations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Meditations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Meditations.
+     */
+    distinct?: MeditationScalarFieldEnum | MeditationScalarFieldEnum[]
+  }
+
+  /**
+   * Meditation findMany
+   */
+  export type MeditationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * Filter, which Meditations to fetch.
+     */
+    where?: MeditationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Meditations to fetch.
+     */
+    orderBy?: MeditationOrderByWithRelationInput | MeditationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Meditations.
+     */
+    cursor?: MeditationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Meditations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Meditations.
+     */
+    skip?: number
+    distinct?: MeditationScalarFieldEnum | MeditationScalarFieldEnum[]
+  }
+
+  /**
+   * Meditation create
+   */
+  export type MeditationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Meditation.
+     */
+    data: XOR<MeditationCreateInput, MeditationUncheckedCreateInput>
+  }
+
+  /**
+   * Meditation createMany
+   */
+  export type MeditationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Meditations.
+     */
+    data: MeditationCreateManyInput | MeditationCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Meditation createManyAndReturn
+   */
+  export type MeditationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * The data used to create many Meditations.
+     */
+    data: MeditationCreateManyInput | MeditationCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Meditation update
+   */
+  export type MeditationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Meditation.
+     */
+    data: XOR<MeditationUpdateInput, MeditationUncheckedUpdateInput>
+    /**
+     * Choose, which Meditation to update.
+     */
+    where: MeditationWhereUniqueInput
+  }
+
+  /**
+   * Meditation updateMany
+   */
+  export type MeditationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Meditations.
+     */
+    data: XOR<MeditationUpdateManyMutationInput, MeditationUncheckedUpdateManyInput>
+    /**
+     * Filter which Meditations to update
+     */
+    where?: MeditationWhereInput
+    /**
+     * Limit how many Meditations to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Meditation updateManyAndReturn
+   */
+  export type MeditationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * The data used to update Meditations.
+     */
+    data: XOR<MeditationUpdateManyMutationInput, MeditationUncheckedUpdateManyInput>
+    /**
+     * Filter which Meditations to update
+     */
+    where?: MeditationWhereInput
+    /**
+     * Limit how many Meditations to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Meditation upsert
+   */
+  export type MeditationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Meditation to update in case it exists.
+     */
+    where: MeditationWhereUniqueInput
+    /**
+     * In case the Meditation found by the `where` argument doesn't exist, create a new Meditation with this data.
+     */
+    create: XOR<MeditationCreateInput, MeditationUncheckedCreateInput>
+    /**
+     * In case the Meditation was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<MeditationUpdateInput, MeditationUncheckedUpdateInput>
+  }
+
+  /**
+   * Meditation delete
+   */
+  export type MeditationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+    /**
+     * Filter which Meditation to delete.
+     */
+    where: MeditationWhereUniqueInput
+  }
+
+  /**
+   * Meditation deleteMany
+   */
+  export type MeditationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Meditations to delete
+     */
+    where?: MeditationWhereInput
+    /**
+     * Limit how many Meditations to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Meditation.feedbacks
+   */
+  export type Meditation$feedbacksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    where?: MeditationFeedbackWhereInput
+    orderBy?: MeditationFeedbackOrderByWithRelationInput | MeditationFeedbackOrderByWithRelationInput[]
+    cursor?: MeditationFeedbackWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: MeditationFeedbackScalarFieldEnum | MeditationFeedbackScalarFieldEnum[]
+  }
+
+  /**
+   * Meditation without action
+   */
+  export type MeditationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Meditation
+     */
+    select?: MeditationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Meditation
+     */
+    omit?: MeditationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model MeditationFeedback
+   */
+
+  export type AggregateMeditationFeedback = {
+    _count: MeditationFeedbackCountAggregateOutputType | null
+    _avg: MeditationFeedbackAvgAggregateOutputType | null
+    _sum: MeditationFeedbackSumAggregateOutputType | null
+    _min: MeditationFeedbackMinAggregateOutputType | null
+    _max: MeditationFeedbackMaxAggregateOutputType | null
+  }
+
+  export type MeditationFeedbackAvgAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type MeditationFeedbackSumAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type MeditationFeedbackMinAggregateOutputType = {
+    id: string | null
+    meditationId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    createdAt: Date | null
+  }
+
+  export type MeditationFeedbackMaxAggregateOutputType = {
+    id: string | null
+    meditationId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    createdAt: Date | null
+  }
+
+  export type MeditationFeedbackCountAggregateOutputType = {
+    id: number
+    meditationId: number
+    userId: number
+    rating: number
+    comment: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type MeditationFeedbackAvgAggregateInputType = {
+    rating?: true
+  }
+
+  export type MeditationFeedbackSumAggregateInputType = {
+    rating?: true
+  }
+
+  export type MeditationFeedbackMinAggregateInputType = {
+    id?: true
+    meditationId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    createdAt?: true
+  }
+
+  export type MeditationFeedbackMaxAggregateInputType = {
+    id?: true
+    meditationId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    createdAt?: true
+  }
+
+  export type MeditationFeedbackCountAggregateInputType = {
+    id?: true
+    meditationId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type MeditationFeedbackAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MeditationFeedback to aggregate.
+     */
+    where?: MeditationFeedbackWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MeditationFeedbacks to fetch.
+     */
+    orderBy?: MeditationFeedbackOrderByWithRelationInput | MeditationFeedbackOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: MeditationFeedbackWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MeditationFeedbacks from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MeditationFeedbacks.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned MeditationFeedbacks
+    **/
+    _count?: true | MeditationFeedbackCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: MeditationFeedbackAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: MeditationFeedbackSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: MeditationFeedbackMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: MeditationFeedbackMaxAggregateInputType
+  }
+
+  export type GetMeditationFeedbackAggregateType<T extends MeditationFeedbackAggregateArgs> = {
+        [P in keyof T & keyof AggregateMeditationFeedback]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateMeditationFeedback[P]>
+      : GetScalarType<T[P], AggregateMeditationFeedback[P]>
+  }
+
+
+
+
+  export type MeditationFeedbackGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MeditationFeedbackWhereInput
+    orderBy?: MeditationFeedbackOrderByWithAggregationInput | MeditationFeedbackOrderByWithAggregationInput[]
+    by: MeditationFeedbackScalarFieldEnum[] | MeditationFeedbackScalarFieldEnum
+    having?: MeditationFeedbackScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: MeditationFeedbackCountAggregateInputType | true
+    _avg?: MeditationFeedbackAvgAggregateInputType
+    _sum?: MeditationFeedbackSumAggregateInputType
+    _min?: MeditationFeedbackMinAggregateInputType
+    _max?: MeditationFeedbackMaxAggregateInputType
+  }
+
+  export type MeditationFeedbackGroupByOutputType = {
+    id: string
+    meditationId: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt: Date
+    _count: MeditationFeedbackCountAggregateOutputType | null
+    _avg: MeditationFeedbackAvgAggregateOutputType | null
+    _sum: MeditationFeedbackSumAggregateOutputType | null
+    _min: MeditationFeedbackMinAggregateOutputType | null
+    _max: MeditationFeedbackMaxAggregateOutputType | null
+  }
+
+  type GetMeditationFeedbackGroupByPayload<T extends MeditationFeedbackGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<MeditationFeedbackGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof MeditationFeedbackGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], MeditationFeedbackGroupByOutputType[P]>
+            : GetScalarType<T[P], MeditationFeedbackGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type MeditationFeedbackSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    meditationId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+    meditation?: boolean | MeditationDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["meditationFeedback"]>
+
+  export type MeditationFeedbackSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    meditationId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+    meditation?: boolean | MeditationDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["meditationFeedback"]>
+
+  export type MeditationFeedbackSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    meditationId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+    meditation?: boolean | MeditationDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["meditationFeedback"]>
+
+  export type MeditationFeedbackSelectScalar = {
+    id?: boolean
+    meditationId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    createdAt?: boolean
+  }
+
+  export type MeditationFeedbackOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "meditationId" | "userId" | "rating" | "comment" | "createdAt", ExtArgs["result"]["meditationFeedback"]>
+  export type MeditationFeedbackInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+    meditation?: boolean | MeditationDefaultArgs<ExtArgs>
+  }
+  export type MeditationFeedbackIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+    meditation?: boolean | MeditationDefaultArgs<ExtArgs>
+  }
+  export type MeditationFeedbackIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMentalWellnessDefaultArgs<ExtArgs>
+    meditation?: boolean | MeditationDefaultArgs<ExtArgs>
+  }
+
+  export type $MeditationFeedbackPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "MeditationFeedback"
+    objects: {
+      user: Prisma.$UserMentalWellnessPayload<ExtArgs>
+      meditation: Prisma.$MeditationPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      meditationId: string
+      userId: string
+      rating: number
+      comment: string
+      createdAt: Date
+    }, ExtArgs["result"]["meditationFeedback"]>
+    composites: {}
+  }
+
+  type MeditationFeedbackGetPayload<S extends boolean | null | undefined | MeditationFeedbackDefaultArgs> = $Result.GetResult<Prisma.$MeditationFeedbackPayload, S>
+
+  type MeditationFeedbackCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<MeditationFeedbackFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: MeditationFeedbackCountAggregateInputType | true
+    }
+
+  export interface MeditationFeedbackDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MeditationFeedback'], meta: { name: 'MeditationFeedback' } }
+    /**
+     * Find zero or one MeditationFeedback that matches the filter.
+     * @param {MeditationFeedbackFindUniqueArgs} args - Arguments to find a MeditationFeedback
+     * @example
+     * // Get one MeditationFeedback
+     * const meditationFeedback = await prisma.meditationFeedback.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends MeditationFeedbackFindUniqueArgs>(args: SelectSubset<T, MeditationFeedbackFindUniqueArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one MeditationFeedback that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {MeditationFeedbackFindUniqueOrThrowArgs} args - Arguments to find a MeditationFeedback
+     * @example
+     * // Get one MeditationFeedback
+     * const meditationFeedback = await prisma.meditationFeedback.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends MeditationFeedbackFindUniqueOrThrowArgs>(args: SelectSubset<T, MeditationFeedbackFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first MeditationFeedback that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFeedbackFindFirstArgs} args - Arguments to find a MeditationFeedback
+     * @example
+     * // Get one MeditationFeedback
+     * const meditationFeedback = await prisma.meditationFeedback.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends MeditationFeedbackFindFirstArgs>(args?: SelectSubset<T, MeditationFeedbackFindFirstArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first MeditationFeedback that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFeedbackFindFirstOrThrowArgs} args - Arguments to find a MeditationFeedback
+     * @example
+     * // Get one MeditationFeedback
+     * const meditationFeedback = await prisma.meditationFeedback.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends MeditationFeedbackFindFirstOrThrowArgs>(args?: SelectSubset<T, MeditationFeedbackFindFirstOrThrowArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more MeditationFeedbacks that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFeedbackFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all MeditationFeedbacks
+     * const meditationFeedbacks = await prisma.meditationFeedback.findMany()
+     * 
+     * // Get first 10 MeditationFeedbacks
+     * const meditationFeedbacks = await prisma.meditationFeedback.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const meditationFeedbackWithIdOnly = await prisma.meditationFeedback.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends MeditationFeedbackFindManyArgs>(args?: SelectSubset<T, MeditationFeedbackFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a MeditationFeedback.
+     * @param {MeditationFeedbackCreateArgs} args - Arguments to create a MeditationFeedback.
+     * @example
+     * // Create one MeditationFeedback
+     * const MeditationFeedback = await prisma.meditationFeedback.create({
+     *   data: {
+     *     // ... data to create a MeditationFeedback
+     *   }
+     * })
+     * 
+     */
+    create<T extends MeditationFeedbackCreateArgs>(args: SelectSubset<T, MeditationFeedbackCreateArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many MeditationFeedbacks.
+     * @param {MeditationFeedbackCreateManyArgs} args - Arguments to create many MeditationFeedbacks.
+     * @example
+     * // Create many MeditationFeedbacks
+     * const meditationFeedback = await prisma.meditationFeedback.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends MeditationFeedbackCreateManyArgs>(args?: SelectSubset<T, MeditationFeedbackCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many MeditationFeedbacks and returns the data saved in the database.
+     * @param {MeditationFeedbackCreateManyAndReturnArgs} args - Arguments to create many MeditationFeedbacks.
+     * @example
+     * // Create many MeditationFeedbacks
+     * const meditationFeedback = await prisma.meditationFeedback.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many MeditationFeedbacks and only return the `id`
+     * const meditationFeedbackWithIdOnly = await prisma.meditationFeedback.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends MeditationFeedbackCreateManyAndReturnArgs>(args?: SelectSubset<T, MeditationFeedbackCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a MeditationFeedback.
+     * @param {MeditationFeedbackDeleteArgs} args - Arguments to delete one MeditationFeedback.
+     * @example
+     * // Delete one MeditationFeedback
+     * const MeditationFeedback = await prisma.meditationFeedback.delete({
+     *   where: {
+     *     // ... filter to delete one MeditationFeedback
+     *   }
+     * })
+     * 
+     */
+    delete<T extends MeditationFeedbackDeleteArgs>(args: SelectSubset<T, MeditationFeedbackDeleteArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one MeditationFeedback.
+     * @param {MeditationFeedbackUpdateArgs} args - Arguments to update one MeditationFeedback.
+     * @example
+     * // Update one MeditationFeedback
+     * const meditationFeedback = await prisma.meditationFeedback.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends MeditationFeedbackUpdateArgs>(args: SelectSubset<T, MeditationFeedbackUpdateArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more MeditationFeedbacks.
+     * @param {MeditationFeedbackDeleteManyArgs} args - Arguments to filter MeditationFeedbacks to delete.
+     * @example
+     * // Delete a few MeditationFeedbacks
+     * const { count } = await prisma.meditationFeedback.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends MeditationFeedbackDeleteManyArgs>(args?: SelectSubset<T, MeditationFeedbackDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more MeditationFeedbacks.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFeedbackUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many MeditationFeedbacks
+     * const meditationFeedback = await prisma.meditationFeedback.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends MeditationFeedbackUpdateManyArgs>(args: SelectSubset<T, MeditationFeedbackUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more MeditationFeedbacks and returns the data updated in the database.
+     * @param {MeditationFeedbackUpdateManyAndReturnArgs} args - Arguments to update many MeditationFeedbacks.
+     * @example
+     * // Update many MeditationFeedbacks
+     * const meditationFeedback = await prisma.meditationFeedback.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more MeditationFeedbacks and only return the `id`
+     * const meditationFeedbackWithIdOnly = await prisma.meditationFeedback.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends MeditationFeedbackUpdateManyAndReturnArgs>(args: SelectSubset<T, MeditationFeedbackUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one MeditationFeedback.
+     * @param {MeditationFeedbackUpsertArgs} args - Arguments to update or create a MeditationFeedback.
+     * @example
+     * // Update or create a MeditationFeedback
+     * const meditationFeedback = await prisma.meditationFeedback.upsert({
+     *   create: {
+     *     // ... data to create a MeditationFeedback
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the MeditationFeedback we want to update
+     *   }
+     * })
+     */
+    upsert<T extends MeditationFeedbackUpsertArgs>(args: SelectSubset<T, MeditationFeedbackUpsertArgs<ExtArgs>>): Prisma__MeditationFeedbackClient<$Result.GetResult<Prisma.$MeditationFeedbackPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of MeditationFeedbacks.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFeedbackCountArgs} args - Arguments to filter MeditationFeedbacks to count.
+     * @example
+     * // Count the number of MeditationFeedbacks
+     * const count = await prisma.meditationFeedback.count({
+     *   where: {
+     *     // ... the filter for the MeditationFeedbacks we want to count
+     *   }
+     * })
+    **/
+    count<T extends MeditationFeedbackCountArgs>(
+      args?: Subset<T, MeditationFeedbackCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], MeditationFeedbackCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a MeditationFeedback.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFeedbackAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends MeditationFeedbackAggregateArgs>(args: Subset<T, MeditationFeedbackAggregateArgs>): Prisma.PrismaPromise<GetMeditationFeedbackAggregateType<T>>
+
+    /**
+     * Group by MeditationFeedback.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {MeditationFeedbackGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends MeditationFeedbackGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: MeditationFeedbackGroupByArgs['orderBy'] }
+        : { orderBy?: MeditationFeedbackGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, MeditationFeedbackGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMeditationFeedbackGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the MeditationFeedback model
+   */
+  readonly fields: MeditationFeedbackFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for MeditationFeedback.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__MeditationFeedbackClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserMentalWellnessDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserMentalWellnessDefaultArgs<ExtArgs>>): Prisma__UserMentalWellnessClient<$Result.GetResult<Prisma.$UserMentalWellnessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    meditation<T extends MeditationDefaultArgs<ExtArgs> = {}>(args?: Subset<T, MeditationDefaultArgs<ExtArgs>>): Prisma__MeditationClient<$Result.GetResult<Prisma.$MeditationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the MeditationFeedback model
+   */ 
+  interface MeditationFeedbackFieldRefs {
+    readonly id: FieldRef<"MeditationFeedback", 'String'>
+    readonly meditationId: FieldRef<"MeditationFeedback", 'String'>
+    readonly userId: FieldRef<"MeditationFeedback", 'String'>
+    readonly rating: FieldRef<"MeditationFeedback", 'Int'>
+    readonly comment: FieldRef<"MeditationFeedback", 'String'>
+    readonly createdAt: FieldRef<"MeditationFeedback", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * MeditationFeedback findUnique
+   */
+  export type MeditationFeedbackFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * Filter, which MeditationFeedback to fetch.
+     */
+    where: MeditationFeedbackWhereUniqueInput
+  }
+
+  /**
+   * MeditationFeedback findUniqueOrThrow
+   */
+  export type MeditationFeedbackFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * Filter, which MeditationFeedback to fetch.
+     */
+    where: MeditationFeedbackWhereUniqueInput
+  }
+
+  /**
+   * MeditationFeedback findFirst
+   */
+  export type MeditationFeedbackFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * Filter, which MeditationFeedback to fetch.
+     */
+    where?: MeditationFeedbackWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MeditationFeedbacks to fetch.
+     */
+    orderBy?: MeditationFeedbackOrderByWithRelationInput | MeditationFeedbackOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MeditationFeedbacks.
+     */
+    cursor?: MeditationFeedbackWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MeditationFeedbacks from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MeditationFeedbacks.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MeditationFeedbacks.
+     */
+    distinct?: MeditationFeedbackScalarFieldEnum | MeditationFeedbackScalarFieldEnum[]
+  }
+
+  /**
+   * MeditationFeedback findFirstOrThrow
+   */
+  export type MeditationFeedbackFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * Filter, which MeditationFeedback to fetch.
+     */
+    where?: MeditationFeedbackWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MeditationFeedbacks to fetch.
+     */
+    orderBy?: MeditationFeedbackOrderByWithRelationInput | MeditationFeedbackOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for MeditationFeedbacks.
+     */
+    cursor?: MeditationFeedbackWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MeditationFeedbacks from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MeditationFeedbacks.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of MeditationFeedbacks.
+     */
+    distinct?: MeditationFeedbackScalarFieldEnum | MeditationFeedbackScalarFieldEnum[]
+  }
+
+  /**
+   * MeditationFeedback findMany
+   */
+  export type MeditationFeedbackFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * Filter, which MeditationFeedbacks to fetch.
+     */
+    where?: MeditationFeedbackWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of MeditationFeedbacks to fetch.
+     */
+    orderBy?: MeditationFeedbackOrderByWithRelationInput | MeditationFeedbackOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing MeditationFeedbacks.
+     */
+    cursor?: MeditationFeedbackWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` MeditationFeedbacks from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` MeditationFeedbacks.
+     */
+    skip?: number
+    distinct?: MeditationFeedbackScalarFieldEnum | MeditationFeedbackScalarFieldEnum[]
+  }
+
+  /**
+   * MeditationFeedback create
+   */
+  export type MeditationFeedbackCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * The data needed to create a MeditationFeedback.
+     */
+    data: XOR<MeditationFeedbackCreateInput, MeditationFeedbackUncheckedCreateInput>
+  }
+
+  /**
+   * MeditationFeedback createMany
+   */
+  export type MeditationFeedbackCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many MeditationFeedbacks.
+     */
+    data: MeditationFeedbackCreateManyInput | MeditationFeedbackCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * MeditationFeedback createManyAndReturn
+   */
+  export type MeditationFeedbackCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * The data used to create many MeditationFeedbacks.
+     */
+    data: MeditationFeedbackCreateManyInput | MeditationFeedbackCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * MeditationFeedback update
+   */
+  export type MeditationFeedbackUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * The data needed to update a MeditationFeedback.
+     */
+    data: XOR<MeditationFeedbackUpdateInput, MeditationFeedbackUncheckedUpdateInput>
+    /**
+     * Choose, which MeditationFeedback to update.
+     */
+    where: MeditationFeedbackWhereUniqueInput
+  }
+
+  /**
+   * MeditationFeedback updateMany
+   */
+  export type MeditationFeedbackUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update MeditationFeedbacks.
+     */
+    data: XOR<MeditationFeedbackUpdateManyMutationInput, MeditationFeedbackUncheckedUpdateManyInput>
+    /**
+     * Filter which MeditationFeedbacks to update
+     */
+    where?: MeditationFeedbackWhereInput
+    /**
+     * Limit how many MeditationFeedbacks to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * MeditationFeedback updateManyAndReturn
+   */
+  export type MeditationFeedbackUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * The data used to update MeditationFeedbacks.
+     */
+    data: XOR<MeditationFeedbackUpdateManyMutationInput, MeditationFeedbackUncheckedUpdateManyInput>
+    /**
+     * Filter which MeditationFeedbacks to update
+     */
+    where?: MeditationFeedbackWhereInput
+    /**
+     * Limit how many MeditationFeedbacks to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * MeditationFeedback upsert
+   */
+  export type MeditationFeedbackUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * The filter to search for the MeditationFeedback to update in case it exists.
+     */
+    where: MeditationFeedbackWhereUniqueInput
+    /**
+     * In case the MeditationFeedback found by the `where` argument doesn't exist, create a new MeditationFeedback with this data.
+     */
+    create: XOR<MeditationFeedbackCreateInput, MeditationFeedbackUncheckedCreateInput>
+    /**
+     * In case the MeditationFeedback was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<MeditationFeedbackUpdateInput, MeditationFeedbackUncheckedUpdateInput>
+  }
+
+  /**
+   * MeditationFeedback delete
+   */
+  export type MeditationFeedbackDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+    /**
+     * Filter which MeditationFeedback to delete.
+     */
+    where: MeditationFeedbackWhereUniqueInput
+  }
+
+  /**
+   * MeditationFeedback deleteMany
+   */
+  export type MeditationFeedbackDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which MeditationFeedbacks to delete
+     */
+    where?: MeditationFeedbackWhereInput
+    /**
+     * Limit how many MeditationFeedbacks to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * MeditationFeedback without action
+   */
+  export type MeditationFeedbackDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the MeditationFeedback
+     */
+    select?: MeditationFeedbackSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the MeditationFeedback
+     */
+    omit?: MeditationFeedbackOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: MeditationFeedbackInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model HospitalMentalWellness
+   */
+
+  export type AggregateHospitalMentalWellness = {
+    _count: HospitalMentalWellnessCountAggregateOutputType | null
+    _min: HospitalMentalWellnessMinAggregateOutputType | null
+    _max: HospitalMentalWellnessMaxAggregateOutputType | null
+  }
+
+  export type HospitalMentalWellnessMinAggregateOutputType = {
+    id: string | null
+    name: string | null
+    location: string | null
+    contactInfo: string | null
+    type: string | null
+    createdAt: Date | null
+  }
+
+  export type HospitalMentalWellnessMaxAggregateOutputType = {
+    id: string | null
+    name: string | null
+    location: string | null
+    contactInfo: string | null
+    type: string | null
+    createdAt: Date | null
+  }
+
+  export type HospitalMentalWellnessCountAggregateOutputType = {
+    id: number
+    name: number
+    location: number
+    contactInfo: number
+    type: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type HospitalMentalWellnessMinAggregateInputType = {
+    id?: true
+    name?: true
+    location?: true
+    contactInfo?: true
+    type?: true
+    createdAt?: true
+  }
+
+  export type HospitalMentalWellnessMaxAggregateInputType = {
+    id?: true
+    name?: true
+    location?: true
+    contactInfo?: true
+    type?: true
+    createdAt?: true
+  }
+
+  export type HospitalMentalWellnessCountAggregateInputType = {
+    id?: true
+    name?: true
+    location?: true
+    contactInfo?: true
+    type?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type HospitalMentalWellnessAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which HospitalMentalWellness to aggregate.
+     */
+    where?: HospitalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of HospitalMentalWellnesses to fetch.
+     */
+    orderBy?: HospitalMentalWellnessOrderByWithRelationInput | HospitalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: HospitalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` HospitalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` HospitalMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned HospitalMentalWellnesses
+    **/
+    _count?: true | HospitalMentalWellnessCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: HospitalMentalWellnessMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: HospitalMentalWellnessMaxAggregateInputType
+  }
+
+  export type GetHospitalMentalWellnessAggregateType<T extends HospitalMentalWellnessAggregateArgs> = {
+        [P in keyof T & keyof AggregateHospitalMentalWellness]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateHospitalMentalWellness[P]>
+      : GetScalarType<T[P], AggregateHospitalMentalWellness[P]>
+  }
+
+
+
+
+  export type HospitalMentalWellnessGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: HospitalMentalWellnessWhereInput
+    orderBy?: HospitalMentalWellnessOrderByWithAggregationInput | HospitalMentalWellnessOrderByWithAggregationInput[]
+    by: HospitalMentalWellnessScalarFieldEnum[] | HospitalMentalWellnessScalarFieldEnum
+    having?: HospitalMentalWellnessScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: HospitalMentalWellnessCountAggregateInputType | true
+    _min?: HospitalMentalWellnessMinAggregateInputType
+    _max?: HospitalMentalWellnessMaxAggregateInputType
+  }
+
+  export type HospitalMentalWellnessGroupByOutputType = {
+    id: string
+    name: string
+    location: string
+    contactInfo: string
+    type: string
+    createdAt: Date
+    _count: HospitalMentalWellnessCountAggregateOutputType | null
+    _min: HospitalMentalWellnessMinAggregateOutputType | null
+    _max: HospitalMentalWellnessMaxAggregateOutputType | null
+  }
+
+  type GetHospitalMentalWellnessGroupByPayload<T extends HospitalMentalWellnessGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<HospitalMentalWellnessGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof HospitalMentalWellnessGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], HospitalMentalWellnessGroupByOutputType[P]>
+            : GetScalarType<T[P], HospitalMentalWellnessGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type HospitalMentalWellnessSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    contactInfo?: boolean
+    type?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["hospitalMentalWellness"]>
+
+  export type HospitalMentalWellnessSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    contactInfo?: boolean
+    type?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["hospitalMentalWellness"]>
+
+  export type HospitalMentalWellnessSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    contactInfo?: boolean
+    type?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["hospitalMentalWellness"]>
+
+  export type HospitalMentalWellnessSelectScalar = {
+    id?: boolean
+    name?: boolean
+    location?: boolean
+    contactInfo?: boolean
+    type?: boolean
+    createdAt?: boolean
+  }
+
+  export type HospitalMentalWellnessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "location" | "contactInfo" | "type" | "createdAt", ExtArgs["result"]["hospitalMentalWellness"]>
+
+  export type $HospitalMentalWellnessPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "HospitalMentalWellness"
+    objects: {}
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      name: string
+      location: string
+      contactInfo: string
+      type: string
+      createdAt: Date
+    }, ExtArgs["result"]["hospitalMentalWellness"]>
+    composites: {}
+  }
+
+  type HospitalMentalWellnessGetPayload<S extends boolean | null | undefined | HospitalMentalWellnessDefaultArgs> = $Result.GetResult<Prisma.$HospitalMentalWellnessPayload, S>
+
+  type HospitalMentalWellnessCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<HospitalMentalWellnessFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: HospitalMentalWellnessCountAggregateInputType | true
+    }
+
+  export interface HospitalMentalWellnessDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['HospitalMentalWellness'], meta: { name: 'HospitalMentalWellness' } }
+    /**
+     * Find zero or one HospitalMentalWellness that matches the filter.
+     * @param {HospitalMentalWellnessFindUniqueArgs} args - Arguments to find a HospitalMentalWellness
+     * @example
+     * // Get one HospitalMentalWellness
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends HospitalMentalWellnessFindUniqueArgs>(args: SelectSubset<T, HospitalMentalWellnessFindUniqueArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one HospitalMentalWellness that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {HospitalMentalWellnessFindUniqueOrThrowArgs} args - Arguments to find a HospitalMentalWellness
+     * @example
+     * // Get one HospitalMentalWellness
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends HospitalMentalWellnessFindUniqueOrThrowArgs>(args: SelectSubset<T, HospitalMentalWellnessFindUniqueOrThrowArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first HospitalMentalWellness that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {HospitalMentalWellnessFindFirstArgs} args - Arguments to find a HospitalMentalWellness
+     * @example
+     * // Get one HospitalMentalWellness
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends HospitalMentalWellnessFindFirstArgs>(args?: SelectSubset<T, HospitalMentalWellnessFindFirstArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first HospitalMentalWellness that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {HospitalMentalWellnessFindFirstOrThrowArgs} args - Arguments to find a HospitalMentalWellness
+     * @example
+     * // Get one HospitalMentalWellness
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends HospitalMentalWellnessFindFirstOrThrowArgs>(args?: SelectSubset<T, HospitalMentalWellnessFindFirstOrThrowArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more HospitalMentalWellnesses that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {HospitalMentalWellnessFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all HospitalMentalWellnesses
+     * const hospitalMentalWellnesses = await prisma.hospitalMentalWellness.findMany()
+     * 
+     * // Get first 10 HospitalMentalWellnesses
+     * const hospitalMentalWellnesses = await prisma.hospitalMentalWellness.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const hospitalMentalWellnessWithIdOnly = await prisma.hospitalMentalWellness.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends HospitalMentalWellnessFindManyArgs>(args?: SelectSubset<T, HospitalMentalWellnessFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a HospitalMentalWellness.
+     * @param {HospitalMentalWellnessCreateArgs} args - Arguments to create a HospitalMentalWellness.
+     * @example
+     * // Create one HospitalMentalWellness
+     * const HospitalMentalWellness = await prisma.hospitalMentalWellness.create({
+     *   data: {
+     *     // ... data to create a HospitalMentalWellness
+     *   }
+     * })
+     * 
+     */
+    create<T extends HospitalMentalWellnessCreateArgs>(args: SelectSubset<T, HospitalMentalWellnessCreateArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many HospitalMentalWellnesses.
+     * @param {HospitalMentalWellnessCreateManyArgs} args - Arguments to create many HospitalMentalWellnesses.
+     * @example
+     * // Create many HospitalMentalWellnesses
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends HospitalMentalWellnessCreateManyArgs>(args?: SelectSubset<T, HospitalMentalWellnessCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many HospitalMentalWellnesses and returns the data saved in the database.
+     * @param {HospitalMentalWellnessCreateManyAndReturnArgs} args - Arguments to create many HospitalMentalWellnesses.
+     * @example
+     * // Create many HospitalMentalWellnesses
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many HospitalMentalWellnesses and only return the `id`
+     * const hospitalMentalWellnessWithIdOnly = await prisma.hospitalMentalWellness.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends HospitalMentalWellnessCreateManyAndReturnArgs>(args?: SelectSubset<T, HospitalMentalWellnessCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a HospitalMentalWellness.
+     * @param {HospitalMentalWellnessDeleteArgs} args - Arguments to delete one HospitalMentalWellness.
+     * @example
+     * // Delete one HospitalMentalWellness
+     * const HospitalMentalWellness = await prisma.hospitalMentalWellness.delete({
+     *   where: {
+     *     // ... filter to delete one HospitalMentalWellness
+     *   }
+     * })
+     * 
+     */
+    delete<T extends HospitalMentalWellnessDeleteArgs>(args: SelectSubset<T, HospitalMentalWellnessDeleteArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one HospitalMentalWellness.
+     * @param {HospitalMentalWellnessUpdateArgs} args - Arguments to update one HospitalMentalWellness.
+     * @example
+     * // Update one HospitalMentalWellness
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends HospitalMentalWellnessUpdateArgs>(args: SelectSubset<T, HospitalMentalWellnessUpdateArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more HospitalMentalWellnesses.
+     * @param {HospitalMentalWellnessDeleteManyArgs} args - Arguments to filter HospitalMentalWellnesses to delete.
+     * @example
+     * // Delete a few HospitalMentalWellnesses
+     * const { count } = await prisma.hospitalMentalWellness.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends HospitalMentalWellnessDeleteManyArgs>(args?: SelectSubset<T, HospitalMentalWellnessDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more HospitalMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {HospitalMentalWellnessUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many HospitalMentalWellnesses
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends HospitalMentalWellnessUpdateManyArgs>(args: SelectSubset<T, HospitalMentalWellnessUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more HospitalMentalWellnesses and returns the data updated in the database.
+     * @param {HospitalMentalWellnessUpdateManyAndReturnArgs} args - Arguments to update many HospitalMentalWellnesses.
+     * @example
+     * // Update many HospitalMentalWellnesses
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more HospitalMentalWellnesses and only return the `id`
+     * const hospitalMentalWellnessWithIdOnly = await prisma.hospitalMentalWellness.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends HospitalMentalWellnessUpdateManyAndReturnArgs>(args: SelectSubset<T, HospitalMentalWellnessUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one HospitalMentalWellness.
+     * @param {HospitalMentalWellnessUpsertArgs} args - Arguments to update or create a HospitalMentalWellness.
+     * @example
+     * // Update or create a HospitalMentalWellness
+     * const hospitalMentalWellness = await prisma.hospitalMentalWellness.upsert({
+     *   create: {
+     *     // ... data to create a HospitalMentalWellness
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the HospitalMentalWellness we want to update
+     *   }
+     * })
+     */
+    upsert<T extends HospitalMentalWellnessUpsertArgs>(args: SelectSubset<T, HospitalMentalWellnessUpsertArgs<ExtArgs>>): Prisma__HospitalMentalWellnessClient<$Result.GetResult<Prisma.$HospitalMentalWellnessPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of HospitalMentalWellnesses.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {HospitalMentalWellnessCountArgs} args - Arguments to filter HospitalMentalWellnesses to count.
+     * @example
+     * // Count the number of HospitalMentalWellnesses
+     * const count = await prisma.hospitalMentalWellness.count({
+     *   where: {
+     *     // ... the filter for the HospitalMentalWellnesses we want to count
+     *   }
+     * })
+    **/
+    count<T extends HospitalMentalWellnessCountArgs>(
+      args?: Subset<T, HospitalMentalWellnessCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], HospitalMentalWellnessCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a HospitalMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {HospitalMentalWellnessAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends HospitalMentalWellnessAggregateArgs>(args: Subset<T, HospitalMentalWellnessAggregateArgs>): Prisma.PrismaPromise<GetHospitalMentalWellnessAggregateType<T>>
+
+    /**
+     * Group by HospitalMentalWellness.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {HospitalMentalWellnessGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends HospitalMentalWellnessGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: HospitalMentalWellnessGroupByArgs['orderBy'] }
+        : { orderBy?: HospitalMentalWellnessGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, HospitalMentalWellnessGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetHospitalMentalWellnessGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the HospitalMentalWellness model
+   */
+  readonly fields: HospitalMentalWellnessFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for HospitalMentalWellness.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__HospitalMentalWellnessClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the HospitalMentalWellness model
+   */ 
+  interface HospitalMentalWellnessFieldRefs {
+    readonly id: FieldRef<"HospitalMentalWellness", 'String'>
+    readonly name: FieldRef<"HospitalMentalWellness", 'String'>
+    readonly location: FieldRef<"HospitalMentalWellness", 'String'>
+    readonly contactInfo: FieldRef<"HospitalMentalWellness", 'String'>
+    readonly type: FieldRef<"HospitalMentalWellness", 'String'>
+    readonly createdAt: FieldRef<"HospitalMentalWellness", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * HospitalMentalWellness findUnique
+   */
+  export type HospitalMentalWellnessFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Filter, which HospitalMentalWellness to fetch.
+     */
+    where: HospitalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * HospitalMentalWellness findUniqueOrThrow
+   */
+  export type HospitalMentalWellnessFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Filter, which HospitalMentalWellness to fetch.
+     */
+    where: HospitalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * HospitalMentalWellness findFirst
+   */
+  export type HospitalMentalWellnessFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Filter, which HospitalMentalWellness to fetch.
+     */
+    where?: HospitalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of HospitalMentalWellnesses to fetch.
+     */
+    orderBy?: HospitalMentalWellnessOrderByWithRelationInput | HospitalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for HospitalMentalWellnesses.
+     */
+    cursor?: HospitalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` HospitalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` HospitalMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of HospitalMentalWellnesses.
+     */
+    distinct?: HospitalMentalWellnessScalarFieldEnum | HospitalMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * HospitalMentalWellness findFirstOrThrow
+   */
+  export type HospitalMentalWellnessFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Filter, which HospitalMentalWellness to fetch.
+     */
+    where?: HospitalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of HospitalMentalWellnesses to fetch.
+     */
+    orderBy?: HospitalMentalWellnessOrderByWithRelationInput | HospitalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for HospitalMentalWellnesses.
+     */
+    cursor?: HospitalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` HospitalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` HospitalMentalWellnesses.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of HospitalMentalWellnesses.
+     */
+    distinct?: HospitalMentalWellnessScalarFieldEnum | HospitalMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * HospitalMentalWellness findMany
+   */
+  export type HospitalMentalWellnessFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Filter, which HospitalMentalWellnesses to fetch.
+     */
+    where?: HospitalMentalWellnessWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of HospitalMentalWellnesses to fetch.
+     */
+    orderBy?: HospitalMentalWellnessOrderByWithRelationInput | HospitalMentalWellnessOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing HospitalMentalWellnesses.
+     */
+    cursor?: HospitalMentalWellnessWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` HospitalMentalWellnesses from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` HospitalMentalWellnesses.
+     */
+    skip?: number
+    distinct?: HospitalMentalWellnessScalarFieldEnum | HospitalMentalWellnessScalarFieldEnum[]
+  }
+
+  /**
+   * HospitalMentalWellness create
+   */
+  export type HospitalMentalWellnessCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data needed to create a HospitalMentalWellness.
+     */
+    data: XOR<HospitalMentalWellnessCreateInput, HospitalMentalWellnessUncheckedCreateInput>
+  }
+
+  /**
+   * HospitalMentalWellness createMany
+   */
+  export type HospitalMentalWellnessCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many HospitalMentalWellnesses.
+     */
+    data: HospitalMentalWellnessCreateManyInput | HospitalMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * HospitalMentalWellness createManyAndReturn
+   */
+  export type HospitalMentalWellnessCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to create many HospitalMentalWellnesses.
+     */
+    data: HospitalMentalWellnessCreateManyInput | HospitalMentalWellnessCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * HospitalMentalWellness update
+   */
+  export type HospitalMentalWellnessUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data needed to update a HospitalMentalWellness.
+     */
+    data: XOR<HospitalMentalWellnessUpdateInput, HospitalMentalWellnessUncheckedUpdateInput>
+    /**
+     * Choose, which HospitalMentalWellness to update.
+     */
+    where: HospitalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * HospitalMentalWellness updateMany
+   */
+  export type HospitalMentalWellnessUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update HospitalMentalWellnesses.
+     */
+    data: XOR<HospitalMentalWellnessUpdateManyMutationInput, HospitalMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which HospitalMentalWellnesses to update
+     */
+    where?: HospitalMentalWellnessWhereInput
+    /**
+     * Limit how many HospitalMentalWellnesses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * HospitalMentalWellness updateManyAndReturn
+   */
+  export type HospitalMentalWellnessUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The data used to update HospitalMentalWellnesses.
+     */
+    data: XOR<HospitalMentalWellnessUpdateManyMutationInput, HospitalMentalWellnessUncheckedUpdateManyInput>
+    /**
+     * Filter which HospitalMentalWellnesses to update
+     */
+    where?: HospitalMentalWellnessWhereInput
+    /**
+     * Limit how many HospitalMentalWellnesses to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * HospitalMentalWellness upsert
+   */
+  export type HospitalMentalWellnessUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * The filter to search for the HospitalMentalWellness to update in case it exists.
+     */
+    where: HospitalMentalWellnessWhereUniqueInput
+    /**
+     * In case the HospitalMentalWellness found by the `where` argument doesn't exist, create a new HospitalMentalWellness with this data.
+     */
+    create: XOR<HospitalMentalWellnessCreateInput, HospitalMentalWellnessUncheckedCreateInput>
+    /**
+     * In case the HospitalMentalWellness was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<HospitalMentalWellnessUpdateInput, HospitalMentalWellnessUncheckedUpdateInput>
+  }
+
+  /**
+   * HospitalMentalWellness delete
+   */
+  export type HospitalMentalWellnessDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+    /**
+     * Filter which HospitalMentalWellness to delete.
+     */
+    where: HospitalMentalWellnessWhereUniqueInput
+  }
+
+  /**
+   * HospitalMentalWellness deleteMany
+   */
+  export type HospitalMentalWellnessDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which HospitalMentalWellnesses to delete
+     */
+    where?: HospitalMentalWellnessWhereInput
+    /**
+     * Limit how many HospitalMentalWellnesses to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * HospitalMentalWellness without action
+   */
+  export type HospitalMentalWellnessDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the HospitalMentalWellness
+     */
+    select?: HospitalMentalWellnessSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the HospitalMentalWellness
+     */
+    omit?: HospitalMentalWellnessOmit<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -43715,12 +50779,88 @@ export namespace Prisma {
   export type GoalFinanceManagerScalarFieldEnum = (typeof GoalFinanceManagerScalarFieldEnum)[keyof typeof GoalFinanceManagerScalarFieldEnum]
 
 
+  export const UserMentalWellnessScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    createdAt: 'createdAt'
+  };
+
+  export type UserMentalWellnessScalarFieldEnum = (typeof UserMentalWellnessScalarFieldEnum)[keyof typeof UserMentalWellnessScalarFieldEnum]
+
+
+  export const JournalMentalWellnessScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    mood: 'mood',
+    entryText: 'entryText',
+    tags: 'tags',
+    createdAt: 'createdAt'
+  };
+
+  export type JournalMentalWellnessScalarFieldEnum = (typeof JournalMentalWellnessScalarFieldEnum)[keyof typeof JournalMentalWellnessScalarFieldEnum]
+
+
+  export const AssessmentMentalWellnessScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    responses: 'responses',
+    result: 'result',
+    createdAt: 'createdAt'
+  };
+
+  export type AssessmentMentalWellnessScalarFieldEnum = (typeof AssessmentMentalWellnessScalarFieldEnum)[keyof typeof AssessmentMentalWellnessScalarFieldEnum]
+
+
+  export const MeditationScalarFieldEnum: {
+    id: 'id',
+    title: 'title',
+    description: 'description',
+    audioUrl: 'audioUrl',
+    createdAt: 'createdAt'
+  };
+
+  export type MeditationScalarFieldEnum = (typeof MeditationScalarFieldEnum)[keyof typeof MeditationScalarFieldEnum]
+
+
+  export const MeditationFeedbackScalarFieldEnum: {
+    id: 'id',
+    meditationId: 'meditationId',
+    userId: 'userId',
+    rating: 'rating',
+    comment: 'comment',
+    createdAt: 'createdAt'
+  };
+
+  export type MeditationFeedbackScalarFieldEnum = (typeof MeditationFeedbackScalarFieldEnum)[keyof typeof MeditationFeedbackScalarFieldEnum]
+
+
+  export const HospitalMentalWellnessScalarFieldEnum: {
+    id: 'id',
+    name: 'name',
+    location: 'location',
+    contactInfo: 'contactInfo',
+    type: 'type',
+    createdAt: 'createdAt'
+  };
+
+  export type HospitalMentalWellnessScalarFieldEnum = (typeof HospitalMentalWellnessScalarFieldEnum)[keyof typeof HospitalMentalWellnessScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
   };
 
   export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
+
+
+  export const JsonNullValueInput: {
+    JsonNull: typeof JsonNull
+  };
+
+  export type JsonNullValueInput = (typeof JsonNullValueInput)[keyof typeof JsonNullValueInput]
 
 
   export const QueryMode: {
@@ -43737,6 +50877,15 @@ export namespace Prisma {
   };
 
   export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
+
+
+  export const JsonNullValueFilter: {
+    DbNull: typeof DbNull,
+    JsonNull: typeof JsonNull,
+    AnyNull: typeof AnyNull
+  };
+
+  export type JsonNullValueFilter = (typeof JsonNullValueFilter)[keyof typeof JsonNullValueFilter]
 
 
   /**
@@ -43804,6 +50953,20 @@ export namespace Prisma {
    * Reference to a field of type 'Decimal[]'
    */
   export type ListDecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Decimal[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'Json'
+   */
+  export type JsonFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Json'>
+    
+
+
+  /**
+   * Reference to a field of type 'QueryMode'
+   */
+  export type EnumQueryModeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'QueryMode'>
     
 
 
@@ -46051,6 +53214,359 @@ export namespace Prisma {
     deadline?: DateTimeWithAggregatesFilter<"GoalFinanceManager"> | Date | string
     description?: StringWithAggregatesFilter<"GoalFinanceManager"> | string
     createdAt?: DateTimeWithAggregatesFilter<"GoalFinanceManager"> | Date | string
+  }
+
+  export type UserMentalWellnessWhereInput = {
+    AND?: UserMentalWellnessWhereInput | UserMentalWellnessWhereInput[]
+    OR?: UserMentalWellnessWhereInput[]
+    NOT?: UserMentalWellnessWhereInput | UserMentalWellnessWhereInput[]
+    id?: StringFilter<"UserMentalWellness"> | string
+    email?: StringFilter<"UserMentalWellness"> | string
+    name?: StringFilter<"UserMentalWellness"> | string
+    password?: StringFilter<"UserMentalWellness"> | string
+    createdAt?: DateTimeFilter<"UserMentalWellness"> | Date | string
+    journals?: JournalMentalWellnessListRelationFilter
+    assessments?: AssessmentMentalWellnessListRelationFilter
+    feedbacks?: MeditationFeedbackListRelationFilter
+  }
+
+  export type UserMentalWellnessOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    journals?: JournalMentalWellnessOrderByRelationAggregateInput
+    assessments?: AssessmentMentalWellnessOrderByRelationAggregateInput
+    feedbacks?: MeditationFeedbackOrderByRelationAggregateInput
+  }
+
+  export type UserMentalWellnessWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: UserMentalWellnessWhereInput | UserMentalWellnessWhereInput[]
+    OR?: UserMentalWellnessWhereInput[]
+    NOT?: UserMentalWellnessWhereInput | UserMentalWellnessWhereInput[]
+    name?: StringFilter<"UserMentalWellness"> | string
+    password?: StringFilter<"UserMentalWellness"> | string
+    createdAt?: DateTimeFilter<"UserMentalWellness"> | Date | string
+    journals?: JournalMentalWellnessListRelationFilter
+    assessments?: AssessmentMentalWellnessListRelationFilter
+    feedbacks?: MeditationFeedbackListRelationFilter
+  }, "id" | "email">
+
+  export type UserMentalWellnessOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    _count?: UserMentalWellnessCountOrderByAggregateInput
+    _max?: UserMentalWellnessMaxOrderByAggregateInput
+    _min?: UserMentalWellnessMinOrderByAggregateInput
+  }
+
+  export type UserMentalWellnessScalarWhereWithAggregatesInput = {
+    AND?: UserMentalWellnessScalarWhereWithAggregatesInput | UserMentalWellnessScalarWhereWithAggregatesInput[]
+    OR?: UserMentalWellnessScalarWhereWithAggregatesInput[]
+    NOT?: UserMentalWellnessScalarWhereWithAggregatesInput | UserMentalWellnessScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserMentalWellness"> | string
+    email?: StringWithAggregatesFilter<"UserMentalWellness"> | string
+    name?: StringWithAggregatesFilter<"UserMentalWellness"> | string
+    password?: StringWithAggregatesFilter<"UserMentalWellness"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"UserMentalWellness"> | Date | string
+  }
+
+  export type JournalMentalWellnessWhereInput = {
+    AND?: JournalMentalWellnessWhereInput | JournalMentalWellnessWhereInput[]
+    OR?: JournalMentalWellnessWhereInput[]
+    NOT?: JournalMentalWellnessWhereInput | JournalMentalWellnessWhereInput[]
+    id?: StringFilter<"JournalMentalWellness"> | string
+    userId?: StringFilter<"JournalMentalWellness"> | string
+    mood?: StringFilter<"JournalMentalWellness"> | string
+    entryText?: StringFilter<"JournalMentalWellness"> | string
+    tags?: StringNullableListFilter<"JournalMentalWellness">
+    createdAt?: DateTimeFilter<"JournalMentalWellness"> | Date | string
+    user?: XOR<UserMentalWellnessScalarRelationFilter, UserMentalWellnessWhereInput>
+  }
+
+  export type JournalMentalWellnessOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    mood?: SortOrder
+    entryText?: SortOrder
+    tags?: SortOrder
+    createdAt?: SortOrder
+    user?: UserMentalWellnessOrderByWithRelationInput
+  }
+
+  export type JournalMentalWellnessWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: JournalMentalWellnessWhereInput | JournalMentalWellnessWhereInput[]
+    OR?: JournalMentalWellnessWhereInput[]
+    NOT?: JournalMentalWellnessWhereInput | JournalMentalWellnessWhereInput[]
+    userId?: StringFilter<"JournalMentalWellness"> | string
+    mood?: StringFilter<"JournalMentalWellness"> | string
+    entryText?: StringFilter<"JournalMentalWellness"> | string
+    tags?: StringNullableListFilter<"JournalMentalWellness">
+    createdAt?: DateTimeFilter<"JournalMentalWellness"> | Date | string
+    user?: XOR<UserMentalWellnessScalarRelationFilter, UserMentalWellnessWhereInput>
+  }, "id">
+
+  export type JournalMentalWellnessOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    mood?: SortOrder
+    entryText?: SortOrder
+    tags?: SortOrder
+    createdAt?: SortOrder
+    _count?: JournalMentalWellnessCountOrderByAggregateInput
+    _max?: JournalMentalWellnessMaxOrderByAggregateInput
+    _min?: JournalMentalWellnessMinOrderByAggregateInput
+  }
+
+  export type JournalMentalWellnessScalarWhereWithAggregatesInput = {
+    AND?: JournalMentalWellnessScalarWhereWithAggregatesInput | JournalMentalWellnessScalarWhereWithAggregatesInput[]
+    OR?: JournalMentalWellnessScalarWhereWithAggregatesInput[]
+    NOT?: JournalMentalWellnessScalarWhereWithAggregatesInput | JournalMentalWellnessScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"JournalMentalWellness"> | string
+    userId?: StringWithAggregatesFilter<"JournalMentalWellness"> | string
+    mood?: StringWithAggregatesFilter<"JournalMentalWellness"> | string
+    entryText?: StringWithAggregatesFilter<"JournalMentalWellness"> | string
+    tags?: StringNullableListFilter<"JournalMentalWellness">
+    createdAt?: DateTimeWithAggregatesFilter<"JournalMentalWellness"> | Date | string
+  }
+
+  export type AssessmentMentalWellnessWhereInput = {
+    AND?: AssessmentMentalWellnessWhereInput | AssessmentMentalWellnessWhereInput[]
+    OR?: AssessmentMentalWellnessWhereInput[]
+    NOT?: AssessmentMentalWellnessWhereInput | AssessmentMentalWellnessWhereInput[]
+    id?: StringFilter<"AssessmentMentalWellness"> | string
+    userId?: StringFilter<"AssessmentMentalWellness"> | string
+    responses?: JsonFilter<"AssessmentMentalWellness">
+    result?: StringFilter<"AssessmentMentalWellness"> | string
+    createdAt?: DateTimeFilter<"AssessmentMentalWellness"> | Date | string
+    user?: XOR<UserMentalWellnessScalarRelationFilter, UserMentalWellnessWhereInput>
+  }
+
+  export type AssessmentMentalWellnessOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    responses?: SortOrder
+    result?: SortOrder
+    createdAt?: SortOrder
+    user?: UserMentalWellnessOrderByWithRelationInput
+  }
+
+  export type AssessmentMentalWellnessWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: AssessmentMentalWellnessWhereInput | AssessmentMentalWellnessWhereInput[]
+    OR?: AssessmentMentalWellnessWhereInput[]
+    NOT?: AssessmentMentalWellnessWhereInput | AssessmentMentalWellnessWhereInput[]
+    userId?: StringFilter<"AssessmentMentalWellness"> | string
+    responses?: JsonFilter<"AssessmentMentalWellness">
+    result?: StringFilter<"AssessmentMentalWellness"> | string
+    createdAt?: DateTimeFilter<"AssessmentMentalWellness"> | Date | string
+    user?: XOR<UserMentalWellnessScalarRelationFilter, UserMentalWellnessWhereInput>
+  }, "id">
+
+  export type AssessmentMentalWellnessOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    responses?: SortOrder
+    result?: SortOrder
+    createdAt?: SortOrder
+    _count?: AssessmentMentalWellnessCountOrderByAggregateInput
+    _max?: AssessmentMentalWellnessMaxOrderByAggregateInput
+    _min?: AssessmentMentalWellnessMinOrderByAggregateInput
+  }
+
+  export type AssessmentMentalWellnessScalarWhereWithAggregatesInput = {
+    AND?: AssessmentMentalWellnessScalarWhereWithAggregatesInput | AssessmentMentalWellnessScalarWhereWithAggregatesInput[]
+    OR?: AssessmentMentalWellnessScalarWhereWithAggregatesInput[]
+    NOT?: AssessmentMentalWellnessScalarWhereWithAggregatesInput | AssessmentMentalWellnessScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"AssessmentMentalWellness"> | string
+    userId?: StringWithAggregatesFilter<"AssessmentMentalWellness"> | string
+    responses?: JsonWithAggregatesFilter<"AssessmentMentalWellness">
+    result?: StringWithAggregatesFilter<"AssessmentMentalWellness"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"AssessmentMentalWellness"> | Date | string
+  }
+
+  export type MeditationWhereInput = {
+    AND?: MeditationWhereInput | MeditationWhereInput[]
+    OR?: MeditationWhereInput[]
+    NOT?: MeditationWhereInput | MeditationWhereInput[]
+    id?: StringFilter<"Meditation"> | string
+    title?: StringFilter<"Meditation"> | string
+    description?: StringFilter<"Meditation"> | string
+    audioUrl?: StringFilter<"Meditation"> | string
+    createdAt?: DateTimeFilter<"Meditation"> | Date | string
+    feedbacks?: MeditationFeedbackListRelationFilter
+  }
+
+  export type MeditationOrderByWithRelationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    audioUrl?: SortOrder
+    createdAt?: SortOrder
+    feedbacks?: MeditationFeedbackOrderByRelationAggregateInput
+  }
+
+  export type MeditationWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: MeditationWhereInput | MeditationWhereInput[]
+    OR?: MeditationWhereInput[]
+    NOT?: MeditationWhereInput | MeditationWhereInput[]
+    title?: StringFilter<"Meditation"> | string
+    description?: StringFilter<"Meditation"> | string
+    audioUrl?: StringFilter<"Meditation"> | string
+    createdAt?: DateTimeFilter<"Meditation"> | Date | string
+    feedbacks?: MeditationFeedbackListRelationFilter
+  }, "id">
+
+  export type MeditationOrderByWithAggregationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    audioUrl?: SortOrder
+    createdAt?: SortOrder
+    _count?: MeditationCountOrderByAggregateInput
+    _max?: MeditationMaxOrderByAggregateInput
+    _min?: MeditationMinOrderByAggregateInput
+  }
+
+  export type MeditationScalarWhereWithAggregatesInput = {
+    AND?: MeditationScalarWhereWithAggregatesInput | MeditationScalarWhereWithAggregatesInput[]
+    OR?: MeditationScalarWhereWithAggregatesInput[]
+    NOT?: MeditationScalarWhereWithAggregatesInput | MeditationScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Meditation"> | string
+    title?: StringWithAggregatesFilter<"Meditation"> | string
+    description?: StringWithAggregatesFilter<"Meditation"> | string
+    audioUrl?: StringWithAggregatesFilter<"Meditation"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"Meditation"> | Date | string
+  }
+
+  export type MeditationFeedbackWhereInput = {
+    AND?: MeditationFeedbackWhereInput | MeditationFeedbackWhereInput[]
+    OR?: MeditationFeedbackWhereInput[]
+    NOT?: MeditationFeedbackWhereInput | MeditationFeedbackWhereInput[]
+    id?: StringFilter<"MeditationFeedback"> | string
+    meditationId?: StringFilter<"MeditationFeedback"> | string
+    userId?: StringFilter<"MeditationFeedback"> | string
+    rating?: IntFilter<"MeditationFeedback"> | number
+    comment?: StringFilter<"MeditationFeedback"> | string
+    createdAt?: DateTimeFilter<"MeditationFeedback"> | Date | string
+    user?: XOR<UserMentalWellnessScalarRelationFilter, UserMentalWellnessWhereInput>
+    meditation?: XOR<MeditationScalarRelationFilter, MeditationWhereInput>
+  }
+
+  export type MeditationFeedbackOrderByWithRelationInput = {
+    id?: SortOrder
+    meditationId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+    user?: UserMentalWellnessOrderByWithRelationInput
+    meditation?: MeditationOrderByWithRelationInput
+  }
+
+  export type MeditationFeedbackWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: MeditationFeedbackWhereInput | MeditationFeedbackWhereInput[]
+    OR?: MeditationFeedbackWhereInput[]
+    NOT?: MeditationFeedbackWhereInput | MeditationFeedbackWhereInput[]
+    meditationId?: StringFilter<"MeditationFeedback"> | string
+    userId?: StringFilter<"MeditationFeedback"> | string
+    rating?: IntFilter<"MeditationFeedback"> | number
+    comment?: StringFilter<"MeditationFeedback"> | string
+    createdAt?: DateTimeFilter<"MeditationFeedback"> | Date | string
+    user?: XOR<UserMentalWellnessScalarRelationFilter, UserMentalWellnessWhereInput>
+    meditation?: XOR<MeditationScalarRelationFilter, MeditationWhereInput>
+  }, "id">
+
+  export type MeditationFeedbackOrderByWithAggregationInput = {
+    id?: SortOrder
+    meditationId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+    _count?: MeditationFeedbackCountOrderByAggregateInput
+    _avg?: MeditationFeedbackAvgOrderByAggregateInput
+    _max?: MeditationFeedbackMaxOrderByAggregateInput
+    _min?: MeditationFeedbackMinOrderByAggregateInput
+    _sum?: MeditationFeedbackSumOrderByAggregateInput
+  }
+
+  export type MeditationFeedbackScalarWhereWithAggregatesInput = {
+    AND?: MeditationFeedbackScalarWhereWithAggregatesInput | MeditationFeedbackScalarWhereWithAggregatesInput[]
+    OR?: MeditationFeedbackScalarWhereWithAggregatesInput[]
+    NOT?: MeditationFeedbackScalarWhereWithAggregatesInput | MeditationFeedbackScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"MeditationFeedback"> | string
+    meditationId?: StringWithAggregatesFilter<"MeditationFeedback"> | string
+    userId?: StringWithAggregatesFilter<"MeditationFeedback"> | string
+    rating?: IntWithAggregatesFilter<"MeditationFeedback"> | number
+    comment?: StringWithAggregatesFilter<"MeditationFeedback"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"MeditationFeedback"> | Date | string
+  }
+
+  export type HospitalMentalWellnessWhereInput = {
+    AND?: HospitalMentalWellnessWhereInput | HospitalMentalWellnessWhereInput[]
+    OR?: HospitalMentalWellnessWhereInput[]
+    NOT?: HospitalMentalWellnessWhereInput | HospitalMentalWellnessWhereInput[]
+    id?: StringFilter<"HospitalMentalWellness"> | string
+    name?: StringFilter<"HospitalMentalWellness"> | string
+    location?: StringFilter<"HospitalMentalWellness"> | string
+    contactInfo?: StringFilter<"HospitalMentalWellness"> | string
+    type?: StringFilter<"HospitalMentalWellness"> | string
+    createdAt?: DateTimeFilter<"HospitalMentalWellness"> | Date | string
+  }
+
+  export type HospitalMentalWellnessOrderByWithRelationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    contactInfo?: SortOrder
+    type?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type HospitalMentalWellnessWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: HospitalMentalWellnessWhereInput | HospitalMentalWellnessWhereInput[]
+    OR?: HospitalMentalWellnessWhereInput[]
+    NOT?: HospitalMentalWellnessWhereInput | HospitalMentalWellnessWhereInput[]
+    name?: StringFilter<"HospitalMentalWellness"> | string
+    location?: StringFilter<"HospitalMentalWellness"> | string
+    contactInfo?: StringFilter<"HospitalMentalWellness"> | string
+    type?: StringFilter<"HospitalMentalWellness"> | string
+    createdAt?: DateTimeFilter<"HospitalMentalWellness"> | Date | string
+  }, "id">
+
+  export type HospitalMentalWellnessOrderByWithAggregationInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    contactInfo?: SortOrder
+    type?: SortOrder
+    createdAt?: SortOrder
+    _count?: HospitalMentalWellnessCountOrderByAggregateInput
+    _max?: HospitalMentalWellnessMaxOrderByAggregateInput
+    _min?: HospitalMentalWellnessMinOrderByAggregateInput
+  }
+
+  export type HospitalMentalWellnessScalarWhereWithAggregatesInput = {
+    AND?: HospitalMentalWellnessScalarWhereWithAggregatesInput | HospitalMentalWellnessScalarWhereWithAggregatesInput[]
+    OR?: HospitalMentalWellnessScalarWhereWithAggregatesInput[]
+    NOT?: HospitalMentalWellnessScalarWhereWithAggregatesInput | HospitalMentalWellnessScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"HospitalMentalWellness"> | string
+    name?: StringWithAggregatesFilter<"HospitalMentalWellness"> | string
+    location?: StringWithAggregatesFilter<"HospitalMentalWellness"> | string
+    contactInfo?: StringWithAggregatesFilter<"HospitalMentalWellness"> | string
+    type?: StringWithAggregatesFilter<"HospitalMentalWellness"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"HospitalMentalWellness"> | Date | string
   }
 
   export type UserDIYHomesCreateInput = {
@@ -48343,6 +55859,375 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserMentalWellnessCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    journals?: JournalMentalWellnessCreateNestedManyWithoutUserInput
+    assessments?: AssessmentMentalWellnessCreateNestedManyWithoutUserInput
+    feedbacks?: MeditationFeedbackCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    journals?: JournalMentalWellnessUncheckedCreateNestedManyWithoutUserInput
+    assessments?: AssessmentMentalWellnessUncheckedCreateNestedManyWithoutUserInput
+    feedbacks?: MeditationFeedbackUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    journals?: JournalMentalWellnessUpdateManyWithoutUserNestedInput
+    assessments?: AssessmentMentalWellnessUpdateManyWithoutUserNestedInput
+    feedbacks?: MeditationFeedbackUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMentalWellnessUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    journals?: JournalMentalWellnessUncheckedUpdateManyWithoutUserNestedInput
+    assessments?: AssessmentMentalWellnessUncheckedUpdateManyWithoutUserNestedInput
+    feedbacks?: MeditationFeedbackUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMentalWellnessCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+  }
+
+  export type UserMentalWellnessUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserMentalWellnessUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type JournalMentalWellnessCreateInput = {
+    id?: string
+    mood: string
+    entryText: string
+    tags?: JournalMentalWellnessCreatetagsInput | string[]
+    createdAt?: Date | string
+    user: UserMentalWellnessCreateNestedOneWithoutJournalsInput
+  }
+
+  export type JournalMentalWellnessUncheckedCreateInput = {
+    id?: string
+    userId: string
+    mood: string
+    entryText: string
+    tags?: JournalMentalWellnessCreatetagsInput | string[]
+    createdAt?: Date | string
+  }
+
+  export type JournalMentalWellnessUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    mood?: StringFieldUpdateOperationsInput | string
+    entryText?: StringFieldUpdateOperationsInput | string
+    tags?: JournalMentalWellnessUpdatetagsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMentalWellnessUpdateOneRequiredWithoutJournalsNestedInput
+  }
+
+  export type JournalMentalWellnessUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    mood?: StringFieldUpdateOperationsInput | string
+    entryText?: StringFieldUpdateOperationsInput | string
+    tags?: JournalMentalWellnessUpdatetagsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type JournalMentalWellnessCreateManyInput = {
+    id?: string
+    userId: string
+    mood: string
+    entryText: string
+    tags?: JournalMentalWellnessCreatetagsInput | string[]
+    createdAt?: Date | string
+  }
+
+  export type JournalMentalWellnessUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    mood?: StringFieldUpdateOperationsInput | string
+    entryText?: StringFieldUpdateOperationsInput | string
+    tags?: JournalMentalWellnessUpdatetagsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type JournalMentalWellnessUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    mood?: StringFieldUpdateOperationsInput | string
+    entryText?: StringFieldUpdateOperationsInput | string
+    tags?: JournalMentalWellnessUpdatetagsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AssessmentMentalWellnessCreateInput = {
+    id?: string
+    responses: JsonNullValueInput | InputJsonValue
+    result: string
+    createdAt?: Date | string
+    user: UserMentalWellnessCreateNestedOneWithoutAssessmentsInput
+  }
+
+  export type AssessmentMentalWellnessUncheckedCreateInput = {
+    id?: string
+    userId: string
+    responses: JsonNullValueInput | InputJsonValue
+    result: string
+    createdAt?: Date | string
+  }
+
+  export type AssessmentMentalWellnessUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    responses?: JsonNullValueInput | InputJsonValue
+    result?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMentalWellnessUpdateOneRequiredWithoutAssessmentsNestedInput
+  }
+
+  export type AssessmentMentalWellnessUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    responses?: JsonNullValueInput | InputJsonValue
+    result?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AssessmentMentalWellnessCreateManyInput = {
+    id?: string
+    userId: string
+    responses: JsonNullValueInput | InputJsonValue
+    result: string
+    createdAt?: Date | string
+  }
+
+  export type AssessmentMentalWellnessUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    responses?: JsonNullValueInput | InputJsonValue
+    result?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AssessmentMentalWellnessUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    responses?: JsonNullValueInput | InputJsonValue
+    result?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationCreateInput = {
+    id?: string
+    title: string
+    description: string
+    audioUrl: string
+    createdAt?: Date | string
+    feedbacks?: MeditationFeedbackCreateNestedManyWithoutMeditationInput
+  }
+
+  export type MeditationUncheckedCreateInput = {
+    id?: string
+    title: string
+    description: string
+    audioUrl: string
+    createdAt?: Date | string
+    feedbacks?: MeditationFeedbackUncheckedCreateNestedManyWithoutMeditationInput
+  }
+
+  export type MeditationUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    feedbacks?: MeditationFeedbackUpdateManyWithoutMeditationNestedInput
+  }
+
+  export type MeditationUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    feedbacks?: MeditationFeedbackUncheckedUpdateManyWithoutMeditationNestedInput
+  }
+
+  export type MeditationCreateManyInput = {
+    id?: string
+    title: string
+    description: string
+    audioUrl: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationFeedbackCreateInput = {
+    id?: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    user: UserMentalWellnessCreateNestedOneWithoutFeedbacksInput
+    meditation: MeditationCreateNestedOneWithoutFeedbacksInput
+  }
+
+  export type MeditationFeedbackUncheckedCreateInput = {
+    id?: string
+    meditationId: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationFeedbackUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMentalWellnessUpdateOneRequiredWithoutFeedbacksNestedInput
+    meditation?: MeditationUpdateOneRequiredWithoutFeedbacksNestedInput
+  }
+
+  export type MeditationFeedbackUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    meditationId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationFeedbackCreateManyInput = {
+    id?: string
+    meditationId: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationFeedbackUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationFeedbackUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    meditationId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type HospitalMentalWellnessCreateInput = {
+    id?: string
+    name: string
+    location: string
+    contactInfo: string
+    type: string
+    createdAt?: Date | string
+  }
+
+  export type HospitalMentalWellnessUncheckedCreateInput = {
+    id?: string
+    name: string
+    location: string
+    contactInfo: string
+    type: string
+    createdAt?: Date | string
+  }
+
+  export type HospitalMentalWellnessUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    contactInfo?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type HospitalMentalWellnessUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    contactInfo?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type HospitalMentalWellnessCreateManyInput = {
+    id?: string
+    name: string
+    location: string
+    contactInfo: string
+    type: string
+    createdAt?: Date | string
+  }
+
+  export type HospitalMentalWellnessUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    contactInfo?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type HospitalMentalWellnessUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    location?: StringFieldUpdateOperationsInput | string
+    contactInfo?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -49865,6 +57750,260 @@ export namespace Prisma {
 
   export type GoalFinanceManagerSumOrderByAggregateInput = {
     targetAmount?: SortOrder
+  }
+
+  export type JournalMentalWellnessListRelationFilter = {
+    every?: JournalMentalWellnessWhereInput
+    some?: JournalMentalWellnessWhereInput
+    none?: JournalMentalWellnessWhereInput
+  }
+
+  export type AssessmentMentalWellnessListRelationFilter = {
+    every?: AssessmentMentalWellnessWhereInput
+    some?: AssessmentMentalWellnessWhereInput
+    none?: AssessmentMentalWellnessWhereInput
+  }
+
+  export type MeditationFeedbackListRelationFilter = {
+    every?: MeditationFeedbackWhereInput
+    some?: MeditationFeedbackWhereInput
+    none?: MeditationFeedbackWhereInput
+  }
+
+  export type JournalMentalWellnessOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type AssessmentMentalWellnessOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type MeditationFeedbackOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserMentalWellnessCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserMentalWellnessMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserMentalWellnessMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type StringNullableListFilter<$PrismaModel = never> = {
+    equals?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    has?: string | StringFieldRefInput<$PrismaModel> | null
+    hasEvery?: string[] | ListStringFieldRefInput<$PrismaModel>
+    hasSome?: string[] | ListStringFieldRefInput<$PrismaModel>
+    isEmpty?: boolean
+  }
+
+  export type UserMentalWellnessScalarRelationFilter = {
+    is?: UserMentalWellnessWhereInput
+    isNot?: UserMentalWellnessWhereInput
+  }
+
+  export type JournalMentalWellnessCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    mood?: SortOrder
+    entryText?: SortOrder
+    tags?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type JournalMentalWellnessMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    mood?: SortOrder
+    entryText?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type JournalMentalWellnessMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    mood?: SortOrder
+    entryText?: SortOrder
+    createdAt?: SortOrder
+  }
+  export type JsonFilter<$PrismaModel = never> = 
+    | PatchUndefined<
+        Either<Required<JsonFilterBase<$PrismaModel>>, Exclude<keyof Required<JsonFilterBase<$PrismaModel>>, 'path'>>,
+        Required<JsonFilterBase<$PrismaModel>>
+      >
+    | OptionalFlat<Omit<Required<JsonFilterBase<$PrismaModel>>, 'path'>>
+
+  export type JsonFilterBase<$PrismaModel = never> = {
+    equals?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    path?: string[]
+    mode?: QueryMode | EnumQueryModeFieldRefInput<$PrismaModel>
+    string_contains?: string | StringFieldRefInput<$PrismaModel>
+    string_starts_with?: string | StringFieldRefInput<$PrismaModel>
+    string_ends_with?: string | StringFieldRefInput<$PrismaModel>
+    array_starts_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_ends_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_contains?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    lt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    lte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+  }
+
+  export type AssessmentMentalWellnessCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    responses?: SortOrder
+    result?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type AssessmentMentalWellnessMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    result?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type AssessmentMentalWellnessMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    result?: SortOrder
+    createdAt?: SortOrder
+  }
+  export type JsonWithAggregatesFilter<$PrismaModel = never> = 
+    | PatchUndefined<
+        Either<Required<JsonWithAggregatesFilterBase<$PrismaModel>>, Exclude<keyof Required<JsonWithAggregatesFilterBase<$PrismaModel>>, 'path'>>,
+        Required<JsonWithAggregatesFilterBase<$PrismaModel>>
+      >
+    | OptionalFlat<Omit<Required<JsonWithAggregatesFilterBase<$PrismaModel>>, 'path'>>
+
+  export type JsonWithAggregatesFilterBase<$PrismaModel = never> = {
+    equals?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    path?: string[]
+    mode?: QueryMode | EnumQueryModeFieldRefInput<$PrismaModel>
+    string_contains?: string | StringFieldRefInput<$PrismaModel>
+    string_starts_with?: string | StringFieldRefInput<$PrismaModel>
+    string_ends_with?: string | StringFieldRefInput<$PrismaModel>
+    array_starts_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_ends_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_contains?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    lt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    lte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedJsonFilter<$PrismaModel>
+    _max?: NestedJsonFilter<$PrismaModel>
+  }
+
+  export type MeditationCountOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    audioUrl?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MeditationMaxOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    audioUrl?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MeditationMinOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    audioUrl?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MeditationScalarRelationFilter = {
+    is?: MeditationWhereInput
+    isNot?: MeditationWhereInput
+  }
+
+  export type MeditationFeedbackCountOrderByAggregateInput = {
+    id?: SortOrder
+    meditationId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MeditationFeedbackAvgOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type MeditationFeedbackMaxOrderByAggregateInput = {
+    id?: SortOrder
+    meditationId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MeditationFeedbackMinOrderByAggregateInput = {
+    id?: SortOrder
+    meditationId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type MeditationFeedbackSumOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type HospitalMentalWellnessCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    contactInfo?: SortOrder
+    type?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type HospitalMentalWellnessMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    contactInfo?: SortOrder
+    type?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type HospitalMentalWellnessMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    location?: SortOrder
+    contactInfo?: SortOrder
+    type?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type PostDIYHomesCreateNestedManyWithoutUserInput = {
@@ -52151,6 +60290,239 @@ export namespace Prisma {
     update?: XOR<XOR<UserFinanceManagerUpdateToOneWithWhereWithoutGoalsInput, UserFinanceManagerUpdateWithoutGoalsInput>, UserFinanceManagerUncheckedUpdateWithoutGoalsInput>
   }
 
+  export type JournalMentalWellnessCreateNestedManyWithoutUserInput = {
+    create?: XOR<JournalMentalWellnessCreateWithoutUserInput, JournalMentalWellnessUncheckedCreateWithoutUserInput> | JournalMentalWellnessCreateWithoutUserInput[] | JournalMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: JournalMentalWellnessCreateOrConnectWithoutUserInput | JournalMentalWellnessCreateOrConnectWithoutUserInput[]
+    createMany?: JournalMentalWellnessCreateManyUserInputEnvelope
+    connect?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+  }
+
+  export type AssessmentMentalWellnessCreateNestedManyWithoutUserInput = {
+    create?: XOR<AssessmentMentalWellnessCreateWithoutUserInput, AssessmentMentalWellnessUncheckedCreateWithoutUserInput> | AssessmentMentalWellnessCreateWithoutUserInput[] | AssessmentMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AssessmentMentalWellnessCreateOrConnectWithoutUserInput | AssessmentMentalWellnessCreateOrConnectWithoutUserInput[]
+    createMany?: AssessmentMentalWellnessCreateManyUserInputEnvelope
+    connect?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+  }
+
+  export type MeditationFeedbackCreateNestedManyWithoutUserInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutUserInput, MeditationFeedbackUncheckedCreateWithoutUserInput> | MeditationFeedbackCreateWithoutUserInput[] | MeditationFeedbackUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutUserInput | MeditationFeedbackCreateOrConnectWithoutUserInput[]
+    createMany?: MeditationFeedbackCreateManyUserInputEnvelope
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+  }
+
+  export type JournalMentalWellnessUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<JournalMentalWellnessCreateWithoutUserInput, JournalMentalWellnessUncheckedCreateWithoutUserInput> | JournalMentalWellnessCreateWithoutUserInput[] | JournalMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: JournalMentalWellnessCreateOrConnectWithoutUserInput | JournalMentalWellnessCreateOrConnectWithoutUserInput[]
+    createMany?: JournalMentalWellnessCreateManyUserInputEnvelope
+    connect?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+  }
+
+  export type AssessmentMentalWellnessUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<AssessmentMentalWellnessCreateWithoutUserInput, AssessmentMentalWellnessUncheckedCreateWithoutUserInput> | AssessmentMentalWellnessCreateWithoutUserInput[] | AssessmentMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AssessmentMentalWellnessCreateOrConnectWithoutUserInput | AssessmentMentalWellnessCreateOrConnectWithoutUserInput[]
+    createMany?: AssessmentMentalWellnessCreateManyUserInputEnvelope
+    connect?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+  }
+
+  export type MeditationFeedbackUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutUserInput, MeditationFeedbackUncheckedCreateWithoutUserInput> | MeditationFeedbackCreateWithoutUserInput[] | MeditationFeedbackUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutUserInput | MeditationFeedbackCreateOrConnectWithoutUserInput[]
+    createMany?: MeditationFeedbackCreateManyUserInputEnvelope
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+  }
+
+  export type JournalMentalWellnessUpdateManyWithoutUserNestedInput = {
+    create?: XOR<JournalMentalWellnessCreateWithoutUserInput, JournalMentalWellnessUncheckedCreateWithoutUserInput> | JournalMentalWellnessCreateWithoutUserInput[] | JournalMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: JournalMentalWellnessCreateOrConnectWithoutUserInput | JournalMentalWellnessCreateOrConnectWithoutUserInput[]
+    upsert?: JournalMentalWellnessUpsertWithWhereUniqueWithoutUserInput | JournalMentalWellnessUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: JournalMentalWellnessCreateManyUserInputEnvelope
+    set?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    disconnect?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    delete?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    connect?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    update?: JournalMentalWellnessUpdateWithWhereUniqueWithoutUserInput | JournalMentalWellnessUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: JournalMentalWellnessUpdateManyWithWhereWithoutUserInput | JournalMentalWellnessUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: JournalMentalWellnessScalarWhereInput | JournalMentalWellnessScalarWhereInput[]
+  }
+
+  export type AssessmentMentalWellnessUpdateManyWithoutUserNestedInput = {
+    create?: XOR<AssessmentMentalWellnessCreateWithoutUserInput, AssessmentMentalWellnessUncheckedCreateWithoutUserInput> | AssessmentMentalWellnessCreateWithoutUserInput[] | AssessmentMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AssessmentMentalWellnessCreateOrConnectWithoutUserInput | AssessmentMentalWellnessCreateOrConnectWithoutUserInput[]
+    upsert?: AssessmentMentalWellnessUpsertWithWhereUniqueWithoutUserInput | AssessmentMentalWellnessUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: AssessmentMentalWellnessCreateManyUserInputEnvelope
+    set?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    disconnect?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    delete?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    connect?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    update?: AssessmentMentalWellnessUpdateWithWhereUniqueWithoutUserInput | AssessmentMentalWellnessUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: AssessmentMentalWellnessUpdateManyWithWhereWithoutUserInput | AssessmentMentalWellnessUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: AssessmentMentalWellnessScalarWhereInput | AssessmentMentalWellnessScalarWhereInput[]
+  }
+
+  export type MeditationFeedbackUpdateManyWithoutUserNestedInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutUserInput, MeditationFeedbackUncheckedCreateWithoutUserInput> | MeditationFeedbackCreateWithoutUserInput[] | MeditationFeedbackUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutUserInput | MeditationFeedbackCreateOrConnectWithoutUserInput[]
+    upsert?: MeditationFeedbackUpsertWithWhereUniqueWithoutUserInput | MeditationFeedbackUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: MeditationFeedbackCreateManyUserInputEnvelope
+    set?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    disconnect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    delete?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    update?: MeditationFeedbackUpdateWithWhereUniqueWithoutUserInput | MeditationFeedbackUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: MeditationFeedbackUpdateManyWithWhereWithoutUserInput | MeditationFeedbackUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: MeditationFeedbackScalarWhereInput | MeditationFeedbackScalarWhereInput[]
+  }
+
+  export type JournalMentalWellnessUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<JournalMentalWellnessCreateWithoutUserInput, JournalMentalWellnessUncheckedCreateWithoutUserInput> | JournalMentalWellnessCreateWithoutUserInput[] | JournalMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: JournalMentalWellnessCreateOrConnectWithoutUserInput | JournalMentalWellnessCreateOrConnectWithoutUserInput[]
+    upsert?: JournalMentalWellnessUpsertWithWhereUniqueWithoutUserInput | JournalMentalWellnessUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: JournalMentalWellnessCreateManyUserInputEnvelope
+    set?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    disconnect?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    delete?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    connect?: JournalMentalWellnessWhereUniqueInput | JournalMentalWellnessWhereUniqueInput[]
+    update?: JournalMentalWellnessUpdateWithWhereUniqueWithoutUserInput | JournalMentalWellnessUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: JournalMentalWellnessUpdateManyWithWhereWithoutUserInput | JournalMentalWellnessUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: JournalMentalWellnessScalarWhereInput | JournalMentalWellnessScalarWhereInput[]
+  }
+
+  export type AssessmentMentalWellnessUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<AssessmentMentalWellnessCreateWithoutUserInput, AssessmentMentalWellnessUncheckedCreateWithoutUserInput> | AssessmentMentalWellnessCreateWithoutUserInput[] | AssessmentMentalWellnessUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: AssessmentMentalWellnessCreateOrConnectWithoutUserInput | AssessmentMentalWellnessCreateOrConnectWithoutUserInput[]
+    upsert?: AssessmentMentalWellnessUpsertWithWhereUniqueWithoutUserInput | AssessmentMentalWellnessUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: AssessmentMentalWellnessCreateManyUserInputEnvelope
+    set?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    disconnect?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    delete?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    connect?: AssessmentMentalWellnessWhereUniqueInput | AssessmentMentalWellnessWhereUniqueInput[]
+    update?: AssessmentMentalWellnessUpdateWithWhereUniqueWithoutUserInput | AssessmentMentalWellnessUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: AssessmentMentalWellnessUpdateManyWithWhereWithoutUserInput | AssessmentMentalWellnessUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: AssessmentMentalWellnessScalarWhereInput | AssessmentMentalWellnessScalarWhereInput[]
+  }
+
+  export type MeditationFeedbackUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutUserInput, MeditationFeedbackUncheckedCreateWithoutUserInput> | MeditationFeedbackCreateWithoutUserInput[] | MeditationFeedbackUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutUserInput | MeditationFeedbackCreateOrConnectWithoutUserInput[]
+    upsert?: MeditationFeedbackUpsertWithWhereUniqueWithoutUserInput | MeditationFeedbackUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: MeditationFeedbackCreateManyUserInputEnvelope
+    set?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    disconnect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    delete?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    update?: MeditationFeedbackUpdateWithWhereUniqueWithoutUserInput | MeditationFeedbackUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: MeditationFeedbackUpdateManyWithWhereWithoutUserInput | MeditationFeedbackUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: MeditationFeedbackScalarWhereInput | MeditationFeedbackScalarWhereInput[]
+  }
+
+  export type JournalMentalWellnessCreatetagsInput = {
+    set: string[]
+  }
+
+  export type UserMentalWellnessCreateNestedOneWithoutJournalsInput = {
+    create?: XOR<UserMentalWellnessCreateWithoutJournalsInput, UserMentalWellnessUncheckedCreateWithoutJournalsInput>
+    connectOrCreate?: UserMentalWellnessCreateOrConnectWithoutJournalsInput
+    connect?: UserMentalWellnessWhereUniqueInput
+  }
+
+  export type JournalMentalWellnessUpdatetagsInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type UserMentalWellnessUpdateOneRequiredWithoutJournalsNestedInput = {
+    create?: XOR<UserMentalWellnessCreateWithoutJournalsInput, UserMentalWellnessUncheckedCreateWithoutJournalsInput>
+    connectOrCreate?: UserMentalWellnessCreateOrConnectWithoutJournalsInput
+    upsert?: UserMentalWellnessUpsertWithoutJournalsInput
+    connect?: UserMentalWellnessWhereUniqueInput
+    update?: XOR<XOR<UserMentalWellnessUpdateToOneWithWhereWithoutJournalsInput, UserMentalWellnessUpdateWithoutJournalsInput>, UserMentalWellnessUncheckedUpdateWithoutJournalsInput>
+  }
+
+  export type UserMentalWellnessCreateNestedOneWithoutAssessmentsInput = {
+    create?: XOR<UserMentalWellnessCreateWithoutAssessmentsInput, UserMentalWellnessUncheckedCreateWithoutAssessmentsInput>
+    connectOrCreate?: UserMentalWellnessCreateOrConnectWithoutAssessmentsInput
+    connect?: UserMentalWellnessWhereUniqueInput
+  }
+
+  export type UserMentalWellnessUpdateOneRequiredWithoutAssessmentsNestedInput = {
+    create?: XOR<UserMentalWellnessCreateWithoutAssessmentsInput, UserMentalWellnessUncheckedCreateWithoutAssessmentsInput>
+    connectOrCreate?: UserMentalWellnessCreateOrConnectWithoutAssessmentsInput
+    upsert?: UserMentalWellnessUpsertWithoutAssessmentsInput
+    connect?: UserMentalWellnessWhereUniqueInput
+    update?: XOR<XOR<UserMentalWellnessUpdateToOneWithWhereWithoutAssessmentsInput, UserMentalWellnessUpdateWithoutAssessmentsInput>, UserMentalWellnessUncheckedUpdateWithoutAssessmentsInput>
+  }
+
+  export type MeditationFeedbackCreateNestedManyWithoutMeditationInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutMeditationInput, MeditationFeedbackUncheckedCreateWithoutMeditationInput> | MeditationFeedbackCreateWithoutMeditationInput[] | MeditationFeedbackUncheckedCreateWithoutMeditationInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutMeditationInput | MeditationFeedbackCreateOrConnectWithoutMeditationInput[]
+    createMany?: MeditationFeedbackCreateManyMeditationInputEnvelope
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+  }
+
+  export type MeditationFeedbackUncheckedCreateNestedManyWithoutMeditationInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutMeditationInput, MeditationFeedbackUncheckedCreateWithoutMeditationInput> | MeditationFeedbackCreateWithoutMeditationInput[] | MeditationFeedbackUncheckedCreateWithoutMeditationInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutMeditationInput | MeditationFeedbackCreateOrConnectWithoutMeditationInput[]
+    createMany?: MeditationFeedbackCreateManyMeditationInputEnvelope
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+  }
+
+  export type MeditationFeedbackUpdateManyWithoutMeditationNestedInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutMeditationInput, MeditationFeedbackUncheckedCreateWithoutMeditationInput> | MeditationFeedbackCreateWithoutMeditationInput[] | MeditationFeedbackUncheckedCreateWithoutMeditationInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutMeditationInput | MeditationFeedbackCreateOrConnectWithoutMeditationInput[]
+    upsert?: MeditationFeedbackUpsertWithWhereUniqueWithoutMeditationInput | MeditationFeedbackUpsertWithWhereUniqueWithoutMeditationInput[]
+    createMany?: MeditationFeedbackCreateManyMeditationInputEnvelope
+    set?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    disconnect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    delete?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    update?: MeditationFeedbackUpdateWithWhereUniqueWithoutMeditationInput | MeditationFeedbackUpdateWithWhereUniqueWithoutMeditationInput[]
+    updateMany?: MeditationFeedbackUpdateManyWithWhereWithoutMeditationInput | MeditationFeedbackUpdateManyWithWhereWithoutMeditationInput[]
+    deleteMany?: MeditationFeedbackScalarWhereInput | MeditationFeedbackScalarWhereInput[]
+  }
+
+  export type MeditationFeedbackUncheckedUpdateManyWithoutMeditationNestedInput = {
+    create?: XOR<MeditationFeedbackCreateWithoutMeditationInput, MeditationFeedbackUncheckedCreateWithoutMeditationInput> | MeditationFeedbackCreateWithoutMeditationInput[] | MeditationFeedbackUncheckedCreateWithoutMeditationInput[]
+    connectOrCreate?: MeditationFeedbackCreateOrConnectWithoutMeditationInput | MeditationFeedbackCreateOrConnectWithoutMeditationInput[]
+    upsert?: MeditationFeedbackUpsertWithWhereUniqueWithoutMeditationInput | MeditationFeedbackUpsertWithWhereUniqueWithoutMeditationInput[]
+    createMany?: MeditationFeedbackCreateManyMeditationInputEnvelope
+    set?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    disconnect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    delete?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    connect?: MeditationFeedbackWhereUniqueInput | MeditationFeedbackWhereUniqueInput[]
+    update?: MeditationFeedbackUpdateWithWhereUniqueWithoutMeditationInput | MeditationFeedbackUpdateWithWhereUniqueWithoutMeditationInput[]
+    updateMany?: MeditationFeedbackUpdateManyWithWhereWithoutMeditationInput | MeditationFeedbackUpdateManyWithWhereWithoutMeditationInput[]
+    deleteMany?: MeditationFeedbackScalarWhereInput | MeditationFeedbackScalarWhereInput[]
+  }
+
+  export type UserMentalWellnessCreateNestedOneWithoutFeedbacksInput = {
+    create?: XOR<UserMentalWellnessCreateWithoutFeedbacksInput, UserMentalWellnessUncheckedCreateWithoutFeedbacksInput>
+    connectOrCreate?: UserMentalWellnessCreateOrConnectWithoutFeedbacksInput
+    connect?: UserMentalWellnessWhereUniqueInput
+  }
+
+  export type MeditationCreateNestedOneWithoutFeedbacksInput = {
+    create?: XOR<MeditationCreateWithoutFeedbacksInput, MeditationUncheckedCreateWithoutFeedbacksInput>
+    connectOrCreate?: MeditationCreateOrConnectWithoutFeedbacksInput
+    connect?: MeditationWhereUniqueInput
+  }
+
+  export type UserMentalWellnessUpdateOneRequiredWithoutFeedbacksNestedInput = {
+    create?: XOR<UserMentalWellnessCreateWithoutFeedbacksInput, UserMentalWellnessUncheckedCreateWithoutFeedbacksInput>
+    connectOrCreate?: UserMentalWellnessCreateOrConnectWithoutFeedbacksInput
+    upsert?: UserMentalWellnessUpsertWithoutFeedbacksInput
+    connect?: UserMentalWellnessWhereUniqueInput
+    update?: XOR<XOR<UserMentalWellnessUpdateToOneWithWhereWithoutFeedbacksInput, UserMentalWellnessUpdateWithoutFeedbacksInput>, UserMentalWellnessUncheckedUpdateWithoutFeedbacksInput>
+  }
+
+  export type MeditationUpdateOneRequiredWithoutFeedbacksNestedInput = {
+    create?: XOR<MeditationCreateWithoutFeedbacksInput, MeditationUncheckedCreateWithoutFeedbacksInput>
+    connectOrCreate?: MeditationCreateOrConnectWithoutFeedbacksInput
+    upsert?: MeditationUpsertWithoutFeedbacksInput
+    connect?: MeditationWhereUniqueInput
+    update?: XOR<XOR<MeditationUpdateToOneWithWhereWithoutFeedbacksInput, MeditationUpdateWithoutFeedbacksInput>, MeditationUncheckedUpdateWithoutFeedbacksInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -52350,6 +60722,29 @@ export namespace Prisma {
     _sum?: NestedDecimalFilter<$PrismaModel>
     _min?: NestedDecimalFilter<$PrismaModel>
     _max?: NestedDecimalFilter<$PrismaModel>
+  }
+  export type NestedJsonFilter<$PrismaModel = never> = 
+    | PatchUndefined<
+        Either<Required<NestedJsonFilterBase<$PrismaModel>>, Exclude<keyof Required<NestedJsonFilterBase<$PrismaModel>>, 'path'>>,
+        Required<NestedJsonFilterBase<$PrismaModel>>
+      >
+    | OptionalFlat<Omit<Required<NestedJsonFilterBase<$PrismaModel>>, 'path'>>
+
+  export type NestedJsonFilterBase<$PrismaModel = never> = {
+    equals?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
+    path?: string[]
+    mode?: QueryMode | EnumQueryModeFieldRefInput<$PrismaModel>
+    string_contains?: string | StringFieldRefInput<$PrismaModel>
+    string_starts_with?: string | StringFieldRefInput<$PrismaModel>
+    string_ends_with?: string | StringFieldRefInput<$PrismaModel>
+    array_starts_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_ends_with?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    array_contains?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | null
+    lt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    lte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gt?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    gte?: InputJsonValue | JsonFieldRefInput<$PrismaModel>
+    not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
   }
 
   export type PostDIYHomesCreateWithoutUserInput = {
@@ -56820,6 +65215,423 @@ export namespace Prisma {
     transactions?: TransactionFinanceManagerUncheckedUpdateManyWithoutUserNestedInput
   }
 
+  export type JournalMentalWellnessCreateWithoutUserInput = {
+    id?: string
+    mood: string
+    entryText: string
+    tags?: JournalMentalWellnessCreatetagsInput | string[]
+    createdAt?: Date | string
+  }
+
+  export type JournalMentalWellnessUncheckedCreateWithoutUserInput = {
+    id?: string
+    mood: string
+    entryText: string
+    tags?: JournalMentalWellnessCreatetagsInput | string[]
+    createdAt?: Date | string
+  }
+
+  export type JournalMentalWellnessCreateOrConnectWithoutUserInput = {
+    where: JournalMentalWellnessWhereUniqueInput
+    create: XOR<JournalMentalWellnessCreateWithoutUserInput, JournalMentalWellnessUncheckedCreateWithoutUserInput>
+  }
+
+  export type JournalMentalWellnessCreateManyUserInputEnvelope = {
+    data: JournalMentalWellnessCreateManyUserInput | JournalMentalWellnessCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AssessmentMentalWellnessCreateWithoutUserInput = {
+    id?: string
+    responses: JsonNullValueInput | InputJsonValue
+    result: string
+    createdAt?: Date | string
+  }
+
+  export type AssessmentMentalWellnessUncheckedCreateWithoutUserInput = {
+    id?: string
+    responses: JsonNullValueInput | InputJsonValue
+    result: string
+    createdAt?: Date | string
+  }
+
+  export type AssessmentMentalWellnessCreateOrConnectWithoutUserInput = {
+    where: AssessmentMentalWellnessWhereUniqueInput
+    create: XOR<AssessmentMentalWellnessCreateWithoutUserInput, AssessmentMentalWellnessUncheckedCreateWithoutUserInput>
+  }
+
+  export type AssessmentMentalWellnessCreateManyUserInputEnvelope = {
+    data: AssessmentMentalWellnessCreateManyUserInput | AssessmentMentalWellnessCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type MeditationFeedbackCreateWithoutUserInput = {
+    id?: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    meditation: MeditationCreateNestedOneWithoutFeedbacksInput
+  }
+
+  export type MeditationFeedbackUncheckedCreateWithoutUserInput = {
+    id?: string
+    meditationId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationFeedbackCreateOrConnectWithoutUserInput = {
+    where: MeditationFeedbackWhereUniqueInput
+    create: XOR<MeditationFeedbackCreateWithoutUserInput, MeditationFeedbackUncheckedCreateWithoutUserInput>
+  }
+
+  export type MeditationFeedbackCreateManyUserInputEnvelope = {
+    data: MeditationFeedbackCreateManyUserInput | MeditationFeedbackCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type JournalMentalWellnessUpsertWithWhereUniqueWithoutUserInput = {
+    where: JournalMentalWellnessWhereUniqueInput
+    update: XOR<JournalMentalWellnessUpdateWithoutUserInput, JournalMentalWellnessUncheckedUpdateWithoutUserInput>
+    create: XOR<JournalMentalWellnessCreateWithoutUserInput, JournalMentalWellnessUncheckedCreateWithoutUserInput>
+  }
+
+  export type JournalMentalWellnessUpdateWithWhereUniqueWithoutUserInput = {
+    where: JournalMentalWellnessWhereUniqueInput
+    data: XOR<JournalMentalWellnessUpdateWithoutUserInput, JournalMentalWellnessUncheckedUpdateWithoutUserInput>
+  }
+
+  export type JournalMentalWellnessUpdateManyWithWhereWithoutUserInput = {
+    where: JournalMentalWellnessScalarWhereInput
+    data: XOR<JournalMentalWellnessUpdateManyMutationInput, JournalMentalWellnessUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type JournalMentalWellnessScalarWhereInput = {
+    AND?: JournalMentalWellnessScalarWhereInput | JournalMentalWellnessScalarWhereInput[]
+    OR?: JournalMentalWellnessScalarWhereInput[]
+    NOT?: JournalMentalWellnessScalarWhereInput | JournalMentalWellnessScalarWhereInput[]
+    id?: StringFilter<"JournalMentalWellness"> | string
+    userId?: StringFilter<"JournalMentalWellness"> | string
+    mood?: StringFilter<"JournalMentalWellness"> | string
+    entryText?: StringFilter<"JournalMentalWellness"> | string
+    tags?: StringNullableListFilter<"JournalMentalWellness">
+    createdAt?: DateTimeFilter<"JournalMentalWellness"> | Date | string
+  }
+
+  export type AssessmentMentalWellnessUpsertWithWhereUniqueWithoutUserInput = {
+    where: AssessmentMentalWellnessWhereUniqueInput
+    update: XOR<AssessmentMentalWellnessUpdateWithoutUserInput, AssessmentMentalWellnessUncheckedUpdateWithoutUserInput>
+    create: XOR<AssessmentMentalWellnessCreateWithoutUserInput, AssessmentMentalWellnessUncheckedCreateWithoutUserInput>
+  }
+
+  export type AssessmentMentalWellnessUpdateWithWhereUniqueWithoutUserInput = {
+    where: AssessmentMentalWellnessWhereUniqueInput
+    data: XOR<AssessmentMentalWellnessUpdateWithoutUserInput, AssessmentMentalWellnessUncheckedUpdateWithoutUserInput>
+  }
+
+  export type AssessmentMentalWellnessUpdateManyWithWhereWithoutUserInput = {
+    where: AssessmentMentalWellnessScalarWhereInput
+    data: XOR<AssessmentMentalWellnessUpdateManyMutationInput, AssessmentMentalWellnessUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type AssessmentMentalWellnessScalarWhereInput = {
+    AND?: AssessmentMentalWellnessScalarWhereInput | AssessmentMentalWellnessScalarWhereInput[]
+    OR?: AssessmentMentalWellnessScalarWhereInput[]
+    NOT?: AssessmentMentalWellnessScalarWhereInput | AssessmentMentalWellnessScalarWhereInput[]
+    id?: StringFilter<"AssessmentMentalWellness"> | string
+    userId?: StringFilter<"AssessmentMentalWellness"> | string
+    responses?: JsonFilter<"AssessmentMentalWellness">
+    result?: StringFilter<"AssessmentMentalWellness"> | string
+    createdAt?: DateTimeFilter<"AssessmentMentalWellness"> | Date | string
+  }
+
+  export type MeditationFeedbackUpsertWithWhereUniqueWithoutUserInput = {
+    where: MeditationFeedbackWhereUniqueInput
+    update: XOR<MeditationFeedbackUpdateWithoutUserInput, MeditationFeedbackUncheckedUpdateWithoutUserInput>
+    create: XOR<MeditationFeedbackCreateWithoutUserInput, MeditationFeedbackUncheckedCreateWithoutUserInput>
+  }
+
+  export type MeditationFeedbackUpdateWithWhereUniqueWithoutUserInput = {
+    where: MeditationFeedbackWhereUniqueInput
+    data: XOR<MeditationFeedbackUpdateWithoutUserInput, MeditationFeedbackUncheckedUpdateWithoutUserInput>
+  }
+
+  export type MeditationFeedbackUpdateManyWithWhereWithoutUserInput = {
+    where: MeditationFeedbackScalarWhereInput
+    data: XOR<MeditationFeedbackUpdateManyMutationInput, MeditationFeedbackUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type MeditationFeedbackScalarWhereInput = {
+    AND?: MeditationFeedbackScalarWhereInput | MeditationFeedbackScalarWhereInput[]
+    OR?: MeditationFeedbackScalarWhereInput[]
+    NOT?: MeditationFeedbackScalarWhereInput | MeditationFeedbackScalarWhereInput[]
+    id?: StringFilter<"MeditationFeedback"> | string
+    meditationId?: StringFilter<"MeditationFeedback"> | string
+    userId?: StringFilter<"MeditationFeedback"> | string
+    rating?: IntFilter<"MeditationFeedback"> | number
+    comment?: StringFilter<"MeditationFeedback"> | string
+    createdAt?: DateTimeFilter<"MeditationFeedback"> | Date | string
+  }
+
+  export type UserMentalWellnessCreateWithoutJournalsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    assessments?: AssessmentMentalWellnessCreateNestedManyWithoutUserInput
+    feedbacks?: MeditationFeedbackCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessUncheckedCreateWithoutJournalsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    assessments?: AssessmentMentalWellnessUncheckedCreateNestedManyWithoutUserInput
+    feedbacks?: MeditationFeedbackUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessCreateOrConnectWithoutJournalsInput = {
+    where: UserMentalWellnessWhereUniqueInput
+    create: XOR<UserMentalWellnessCreateWithoutJournalsInput, UserMentalWellnessUncheckedCreateWithoutJournalsInput>
+  }
+
+  export type UserMentalWellnessUpsertWithoutJournalsInput = {
+    update: XOR<UserMentalWellnessUpdateWithoutJournalsInput, UserMentalWellnessUncheckedUpdateWithoutJournalsInput>
+    create: XOR<UserMentalWellnessCreateWithoutJournalsInput, UserMentalWellnessUncheckedCreateWithoutJournalsInput>
+    where?: UserMentalWellnessWhereInput
+  }
+
+  export type UserMentalWellnessUpdateToOneWithWhereWithoutJournalsInput = {
+    where?: UserMentalWellnessWhereInput
+    data: XOR<UserMentalWellnessUpdateWithoutJournalsInput, UserMentalWellnessUncheckedUpdateWithoutJournalsInput>
+  }
+
+  export type UserMentalWellnessUpdateWithoutJournalsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    assessments?: AssessmentMentalWellnessUpdateManyWithoutUserNestedInput
+    feedbacks?: MeditationFeedbackUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMentalWellnessUncheckedUpdateWithoutJournalsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    assessments?: AssessmentMentalWellnessUncheckedUpdateManyWithoutUserNestedInput
+    feedbacks?: MeditationFeedbackUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMentalWellnessCreateWithoutAssessmentsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    journals?: JournalMentalWellnessCreateNestedManyWithoutUserInput
+    feedbacks?: MeditationFeedbackCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessUncheckedCreateWithoutAssessmentsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    journals?: JournalMentalWellnessUncheckedCreateNestedManyWithoutUserInput
+    feedbacks?: MeditationFeedbackUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessCreateOrConnectWithoutAssessmentsInput = {
+    where: UserMentalWellnessWhereUniqueInput
+    create: XOR<UserMentalWellnessCreateWithoutAssessmentsInput, UserMentalWellnessUncheckedCreateWithoutAssessmentsInput>
+  }
+
+  export type UserMentalWellnessUpsertWithoutAssessmentsInput = {
+    update: XOR<UserMentalWellnessUpdateWithoutAssessmentsInput, UserMentalWellnessUncheckedUpdateWithoutAssessmentsInput>
+    create: XOR<UserMentalWellnessCreateWithoutAssessmentsInput, UserMentalWellnessUncheckedCreateWithoutAssessmentsInput>
+    where?: UserMentalWellnessWhereInput
+  }
+
+  export type UserMentalWellnessUpdateToOneWithWhereWithoutAssessmentsInput = {
+    where?: UserMentalWellnessWhereInput
+    data: XOR<UserMentalWellnessUpdateWithoutAssessmentsInput, UserMentalWellnessUncheckedUpdateWithoutAssessmentsInput>
+  }
+
+  export type UserMentalWellnessUpdateWithoutAssessmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    journals?: JournalMentalWellnessUpdateManyWithoutUserNestedInput
+    feedbacks?: MeditationFeedbackUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMentalWellnessUncheckedUpdateWithoutAssessmentsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    journals?: JournalMentalWellnessUncheckedUpdateManyWithoutUserNestedInput
+    feedbacks?: MeditationFeedbackUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type MeditationFeedbackCreateWithoutMeditationInput = {
+    id?: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+    user: UserMentalWellnessCreateNestedOneWithoutFeedbacksInput
+  }
+
+  export type MeditationFeedbackUncheckedCreateWithoutMeditationInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationFeedbackCreateOrConnectWithoutMeditationInput = {
+    where: MeditationFeedbackWhereUniqueInput
+    create: XOR<MeditationFeedbackCreateWithoutMeditationInput, MeditationFeedbackUncheckedCreateWithoutMeditationInput>
+  }
+
+  export type MeditationFeedbackCreateManyMeditationInputEnvelope = {
+    data: MeditationFeedbackCreateManyMeditationInput | MeditationFeedbackCreateManyMeditationInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type MeditationFeedbackUpsertWithWhereUniqueWithoutMeditationInput = {
+    where: MeditationFeedbackWhereUniqueInput
+    update: XOR<MeditationFeedbackUpdateWithoutMeditationInput, MeditationFeedbackUncheckedUpdateWithoutMeditationInput>
+    create: XOR<MeditationFeedbackCreateWithoutMeditationInput, MeditationFeedbackUncheckedCreateWithoutMeditationInput>
+  }
+
+  export type MeditationFeedbackUpdateWithWhereUniqueWithoutMeditationInput = {
+    where: MeditationFeedbackWhereUniqueInput
+    data: XOR<MeditationFeedbackUpdateWithoutMeditationInput, MeditationFeedbackUncheckedUpdateWithoutMeditationInput>
+  }
+
+  export type MeditationFeedbackUpdateManyWithWhereWithoutMeditationInput = {
+    where: MeditationFeedbackScalarWhereInput
+    data: XOR<MeditationFeedbackUpdateManyMutationInput, MeditationFeedbackUncheckedUpdateManyWithoutMeditationInput>
+  }
+
+  export type UserMentalWellnessCreateWithoutFeedbacksInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    journals?: JournalMentalWellnessCreateNestedManyWithoutUserInput
+    assessments?: AssessmentMentalWellnessCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessUncheckedCreateWithoutFeedbacksInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    journals?: JournalMentalWellnessUncheckedCreateNestedManyWithoutUserInput
+    assessments?: AssessmentMentalWellnessUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMentalWellnessCreateOrConnectWithoutFeedbacksInput = {
+    where: UserMentalWellnessWhereUniqueInput
+    create: XOR<UserMentalWellnessCreateWithoutFeedbacksInput, UserMentalWellnessUncheckedCreateWithoutFeedbacksInput>
+  }
+
+  export type MeditationCreateWithoutFeedbacksInput = {
+    id?: string
+    title: string
+    description: string
+    audioUrl: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationUncheckedCreateWithoutFeedbacksInput = {
+    id?: string
+    title: string
+    description: string
+    audioUrl: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationCreateOrConnectWithoutFeedbacksInput = {
+    where: MeditationWhereUniqueInput
+    create: XOR<MeditationCreateWithoutFeedbacksInput, MeditationUncheckedCreateWithoutFeedbacksInput>
+  }
+
+  export type UserMentalWellnessUpsertWithoutFeedbacksInput = {
+    update: XOR<UserMentalWellnessUpdateWithoutFeedbacksInput, UserMentalWellnessUncheckedUpdateWithoutFeedbacksInput>
+    create: XOR<UserMentalWellnessCreateWithoutFeedbacksInput, UserMentalWellnessUncheckedCreateWithoutFeedbacksInput>
+    where?: UserMentalWellnessWhereInput
+  }
+
+  export type UserMentalWellnessUpdateToOneWithWhereWithoutFeedbacksInput = {
+    where?: UserMentalWellnessWhereInput
+    data: XOR<UserMentalWellnessUpdateWithoutFeedbacksInput, UserMentalWellnessUncheckedUpdateWithoutFeedbacksInput>
+  }
+
+  export type UserMentalWellnessUpdateWithoutFeedbacksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    journals?: JournalMentalWellnessUpdateManyWithoutUserNestedInput
+    assessments?: AssessmentMentalWellnessUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMentalWellnessUncheckedUpdateWithoutFeedbacksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    journals?: JournalMentalWellnessUncheckedUpdateManyWithoutUserNestedInput
+    assessments?: AssessmentMentalWellnessUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type MeditationUpsertWithoutFeedbacksInput = {
+    update: XOR<MeditationUpdateWithoutFeedbacksInput, MeditationUncheckedUpdateWithoutFeedbacksInput>
+    create: XOR<MeditationCreateWithoutFeedbacksInput, MeditationUncheckedCreateWithoutFeedbacksInput>
+    where?: MeditationWhereInput
+  }
+
+  export type MeditationUpdateToOneWithWhereWithoutFeedbacksInput = {
+    where?: MeditationWhereInput
+    data: XOR<MeditationUpdateWithoutFeedbacksInput, MeditationUncheckedUpdateWithoutFeedbacksInput>
+  }
+
+  export type MeditationUpdateWithoutFeedbacksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationUncheckedUpdateWithoutFeedbacksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    audioUrl?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type PostDIYHomesCreateManyUserInput = {
     id?: string
     title: string
@@ -58127,6 +66939,130 @@ export namespace Prisma {
     targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
     description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type JournalMentalWellnessCreateManyUserInput = {
+    id?: string
+    mood: string
+    entryText: string
+    tags?: JournalMentalWellnessCreatetagsInput | string[]
+    createdAt?: Date | string
+  }
+
+  export type AssessmentMentalWellnessCreateManyUserInput = {
+    id?: string
+    responses: JsonNullValueInput | InputJsonValue
+    result: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationFeedbackCreateManyUserInput = {
+    id?: string
+    meditationId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type JournalMentalWellnessUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    mood?: StringFieldUpdateOperationsInput | string
+    entryText?: StringFieldUpdateOperationsInput | string
+    tags?: JournalMentalWellnessUpdatetagsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type JournalMentalWellnessUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    mood?: StringFieldUpdateOperationsInput | string
+    entryText?: StringFieldUpdateOperationsInput | string
+    tags?: JournalMentalWellnessUpdatetagsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type JournalMentalWellnessUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    mood?: StringFieldUpdateOperationsInput | string
+    entryText?: StringFieldUpdateOperationsInput | string
+    tags?: JournalMentalWellnessUpdatetagsInput | string[]
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AssessmentMentalWellnessUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    responses?: JsonNullValueInput | InputJsonValue
+    result?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AssessmentMentalWellnessUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    responses?: JsonNullValueInput | InputJsonValue
+    result?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type AssessmentMentalWellnessUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    responses?: JsonNullValueInput | InputJsonValue
+    result?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationFeedbackUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    meditation?: MeditationUpdateOneRequiredWithoutFeedbacksNestedInput
+  }
+
+  export type MeditationFeedbackUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    meditationId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationFeedbackUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    meditationId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationFeedbackCreateManyMeditationInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    createdAt?: Date | string
+  }
+
+  export type MeditationFeedbackUpdateWithoutMeditationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMentalWellnessUpdateOneRequiredWithoutFeedbacksNestedInput
+  }
+
+  export type MeditationFeedbackUncheckedUpdateWithoutMeditationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type MeditationFeedbackUncheckedUpdateManyWithoutMeditationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
