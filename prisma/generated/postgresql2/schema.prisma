@@ -231,3 +231,41 @@ model ClinicHealthTracker {
   contact        String
   createdAt      DateTime @default(now())
 }
+
+model UserMusicLover {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  concerts ConcertMusicLover[]
+  reviews  ReviewMusicLover[]
+}
+
+model ConcertMusicLover {
+  id          String   @id @default(uuid())
+  title       String
+  date        DateTime
+  venue       String
+  genre       String
+  submittedBy String
+  validated   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  user    UserMusicLover     @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
+  reviews ReviewMusicLover[]
+}
+
+model ReviewMusicLover {
+  id        String   @id @default(uuid())
+  concertId String
+  userId    String
+  rating    Int
+  comment   String
+  validated Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user    UserMusicLover    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  concert ConcertMusicLover @relation(fields: [concertId], references: [id], onDelete: Cascade)
+}

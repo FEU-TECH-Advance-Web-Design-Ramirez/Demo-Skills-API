@@ -103,6 +103,21 @@ export type RecordHealthTracker = $Result.DefaultSelection<Prisma.$RecordHealthT
  * 
  */
 export type ClinicHealthTracker = $Result.DefaultSelection<Prisma.$ClinicHealthTrackerPayload>
+/**
+ * Model UserMusicLover
+ * 
+ */
+export type UserMusicLover = $Result.DefaultSelection<Prisma.$UserMusicLoverPayload>
+/**
+ * Model ConcertMusicLover
+ * 
+ */
+export type ConcertMusicLover = $Result.DefaultSelection<Prisma.$ConcertMusicLoverPayload>
+/**
+ * Model ReviewMusicLover
+ * 
+ */
+export type ReviewMusicLover = $Result.DefaultSelection<Prisma.$ReviewMusicLoverPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -408,6 +423,36 @@ export class PrismaClient<
     * ```
     */
   get clinicHealthTracker(): Prisma.ClinicHealthTrackerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userMusicLover`: Exposes CRUD operations for the **UserMusicLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserMusicLovers
+    * const userMusicLovers = await prisma.userMusicLover.findMany()
+    * ```
+    */
+  get userMusicLover(): Prisma.UserMusicLoverDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.concertMusicLover`: Exposes CRUD operations for the **ConcertMusicLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ConcertMusicLovers
+    * const concertMusicLovers = await prisma.concertMusicLover.findMany()
+    * ```
+    */
+  get concertMusicLover(): Prisma.ConcertMusicLoverDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.reviewMusicLover`: Exposes CRUD operations for the **ReviewMusicLover** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReviewMusicLovers
+    * const reviewMusicLovers = await prisma.reviewMusicLover.findMany()
+    * ```
+    */
+  get reviewMusicLover(): Prisma.ReviewMusicLoverDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -865,7 +910,10 @@ export namespace Prisma {
     UserHealthTracker: 'UserHealthTracker',
     ScheduleHealthTracker: 'ScheduleHealthTracker',
     RecordHealthTracker: 'RecordHealthTracker',
-    ClinicHealthTracker: 'ClinicHealthTracker'
+    ClinicHealthTracker: 'ClinicHealthTracker',
+    UserMusicLover: 'UserMusicLover',
+    ConcertMusicLover: 'ConcertMusicLover',
+    ReviewMusicLover: 'ReviewMusicLover'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -884,7 +932,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote" | "gameHubUser" | "gameHubPlayer" | "gameHubTournament" | "gameHubTournamentPlayer" | "userHealthTracker" | "scheduleHealthTracker" | "recordHealthTracker" | "clinicHealthTracker"
+      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote" | "gameHubUser" | "gameHubPlayer" | "gameHubTournament" | "gameHubTournamentPlayer" | "userHealthTracker" | "scheduleHealthTracker" | "recordHealthTracker" | "clinicHealthTracker" | "userMusicLover" | "concertMusicLover" | "reviewMusicLover"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -2220,6 +2268,228 @@ export namespace Prisma {
           }
         }
       }
+      UserMusicLover: {
+        payload: Prisma.$UserMusicLoverPayload<ExtArgs>
+        fields: Prisma.UserMusicLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserMusicLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserMusicLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.UserMusicLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserMusicLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>
+          }
+          findMany: {
+            args: Prisma.UserMusicLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>[]
+          }
+          create: {
+            args: Prisma.UserMusicLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>
+          }
+          createMany: {
+            args: Prisma.UserMusicLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserMusicLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.UserMusicLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>
+          }
+          update: {
+            args: Prisma.UserMusicLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserMusicLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserMusicLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserMusicLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserMusicLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserMusicLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.UserMusicLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserMusicLover>
+          }
+          groupBy: {
+            args: Prisma.UserMusicLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserMusicLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserMusicLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<UserMusicLoverCountAggregateOutputType> | number
+          }
+        }
+      }
+      ConcertMusicLover: {
+        payload: Prisma.$ConcertMusicLoverPayload<ExtArgs>
+        fields: Prisma.ConcertMusicLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ConcertMusicLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ConcertMusicLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.ConcertMusicLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ConcertMusicLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>
+          }
+          findMany: {
+            args: Prisma.ConcertMusicLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>[]
+          }
+          create: {
+            args: Prisma.ConcertMusicLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>
+          }
+          createMany: {
+            args: Prisma.ConcertMusicLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ConcertMusicLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.ConcertMusicLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>
+          }
+          update: {
+            args: Prisma.ConcertMusicLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.ConcertMusicLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ConcertMusicLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ConcertMusicLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.ConcertMusicLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ConcertMusicLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.ConcertMusicLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateConcertMusicLover>
+          }
+          groupBy: {
+            args: Prisma.ConcertMusicLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ConcertMusicLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ConcertMusicLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<ConcertMusicLoverCountAggregateOutputType> | number
+          }
+        }
+      }
+      ReviewMusicLover: {
+        payload: Prisma.$ReviewMusicLoverPayload<ExtArgs>
+        fields: Prisma.ReviewMusicLoverFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ReviewMusicLoverFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ReviewMusicLoverFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>
+          }
+          findFirst: {
+            args: Prisma.ReviewMusicLoverFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ReviewMusicLoverFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>
+          }
+          findMany: {
+            args: Prisma.ReviewMusicLoverFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>[]
+          }
+          create: {
+            args: Prisma.ReviewMusicLoverCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>
+          }
+          createMany: {
+            args: Prisma.ReviewMusicLoverCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ReviewMusicLoverCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>[]
+          }
+          delete: {
+            args: Prisma.ReviewMusicLoverDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>
+          }
+          update: {
+            args: Prisma.ReviewMusicLoverUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>
+          }
+          deleteMany: {
+            args: Prisma.ReviewMusicLoverDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ReviewMusicLoverUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ReviewMusicLoverUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>[]
+          }
+          upsert: {
+            args: Prisma.ReviewMusicLoverUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewMusicLoverPayload>
+          }
+          aggregate: {
+            args: Prisma.ReviewMusicLoverAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReviewMusicLover>
+          }
+          groupBy: {
+            args: Prisma.ReviewMusicLoverGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReviewMusicLoverGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ReviewMusicLoverCountArgs<ExtArgs>
+            result: $Utils.Optional<ReviewMusicLoverCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -2322,6 +2592,9 @@ export namespace Prisma {
     scheduleHealthTracker?: ScheduleHealthTrackerOmit
     recordHealthTracker?: RecordHealthTrackerOmit
     clinicHealthTracker?: ClinicHealthTrackerOmit
+    userMusicLover?: UserMusicLoverOmit
+    concertMusicLover?: ConcertMusicLoverOmit
+    reviewMusicLover?: ReviewMusicLoverOmit
   }
 
   /* Types for Logging */
@@ -2737,6 +3010,77 @@ export namespace Prisma {
    */
   export type UserHealthTrackerCountOutputTypeCountRecordsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: RecordHealthTrackerWhereInput
+  }
+
+
+  /**
+   * Count Type UserMusicLoverCountOutputType
+   */
+
+  export type UserMusicLoverCountOutputType = {
+    concerts: number
+    reviews: number
+  }
+
+  export type UserMusicLoverCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    concerts?: boolean | UserMusicLoverCountOutputTypeCountConcertsArgs
+    reviews?: boolean | UserMusicLoverCountOutputTypeCountReviewsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * UserMusicLoverCountOutputType without action
+   */
+  export type UserMusicLoverCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLoverCountOutputType
+     */
+    select?: UserMusicLoverCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * UserMusicLoverCountOutputType without action
+   */
+  export type UserMusicLoverCountOutputTypeCountConcertsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ConcertMusicLoverWhereInput
+  }
+
+  /**
+   * UserMusicLoverCountOutputType without action
+   */
+  export type UserMusicLoverCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewMusicLoverWhereInput
+  }
+
+
+  /**
+   * Count Type ConcertMusicLoverCountOutputType
+   */
+
+  export type ConcertMusicLoverCountOutputType = {
+    reviews: number
+  }
+
+  export type ConcertMusicLoverCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reviews?: boolean | ConcertMusicLoverCountOutputTypeCountReviewsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ConcertMusicLoverCountOutputType without action
+   */
+  export type ConcertMusicLoverCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLoverCountOutputType
+     */
+    select?: ConcertMusicLoverCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ConcertMusicLoverCountOutputType without action
+   */
+  export type ConcertMusicLoverCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewMusicLoverWhereInput
   }
 
 
@@ -22528,6 +22872,3357 @@ export namespace Prisma {
 
 
   /**
+   * Model UserMusicLover
+   */
+
+  export type AggregateUserMusicLover = {
+    _count: UserMusicLoverCountAggregateOutputType | null
+    _min: UserMusicLoverMinAggregateOutputType | null
+    _max: UserMusicLoverMaxAggregateOutputType | null
+  }
+
+  export type UserMusicLoverMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserMusicLoverMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserMusicLoverCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type UserMusicLoverMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserMusicLoverMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserMusicLoverCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type UserMusicLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserMusicLover to aggregate.
+     */
+    where?: UserMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMusicLovers to fetch.
+     */
+    orderBy?: UserMusicLoverOrderByWithRelationInput | UserMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserMusicLovers
+    **/
+    _count?: true | UserMusicLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserMusicLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserMusicLoverMaxAggregateInputType
+  }
+
+  export type GetUserMusicLoverAggregateType<T extends UserMusicLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserMusicLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserMusicLover[P]>
+      : GetScalarType<T[P], AggregateUserMusicLover[P]>
+  }
+
+
+
+
+  export type UserMusicLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserMusicLoverWhereInput
+    orderBy?: UserMusicLoverOrderByWithAggregationInput | UserMusicLoverOrderByWithAggregationInput[]
+    by: UserMusicLoverScalarFieldEnum[] | UserMusicLoverScalarFieldEnum
+    having?: UserMusicLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserMusicLoverCountAggregateInputType | true
+    _min?: UserMusicLoverMinAggregateInputType
+    _max?: UserMusicLoverMaxAggregateInputType
+  }
+
+  export type UserMusicLoverGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    createdAt: Date
+    _count: UserMusicLoverCountAggregateOutputType | null
+    _min: UserMusicLoverMinAggregateOutputType | null
+    _max: UserMusicLoverMaxAggregateOutputType | null
+  }
+
+  type GetUserMusicLoverGroupByPayload<T extends UserMusicLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserMusicLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserMusicLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserMusicLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], UserMusicLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserMusicLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+    concerts?: boolean | UserMusicLover$concertsArgs<ExtArgs>
+    reviews?: boolean | UserMusicLover$reviewsArgs<ExtArgs>
+    _count?: boolean | UserMusicLoverCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userMusicLover"]>
+
+  export type UserMusicLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userMusicLover"]>
+
+  export type UserMusicLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userMusicLover"]>
+
+  export type UserMusicLoverSelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }
+
+  export type UserMusicLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "createdAt", ExtArgs["result"]["userMusicLover"]>
+  export type UserMusicLoverInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    concerts?: boolean | UserMusicLover$concertsArgs<ExtArgs>
+    reviews?: boolean | UserMusicLover$reviewsArgs<ExtArgs>
+    _count?: boolean | UserMusicLoverCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserMusicLoverIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserMusicLoverIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $UserMusicLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserMusicLover"
+    objects: {
+      concerts: Prisma.$ConcertMusicLoverPayload<ExtArgs>[]
+      reviews: Prisma.$ReviewMusicLoverPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      createdAt: Date
+    }, ExtArgs["result"]["userMusicLover"]>
+    composites: {}
+  }
+
+  type UserMusicLoverGetPayload<S extends boolean | null | undefined | UserMusicLoverDefaultArgs> = $Result.GetResult<Prisma.$UserMusicLoverPayload, S>
+
+  type UserMusicLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserMusicLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserMusicLoverCountAggregateInputType | true
+    }
+
+  export interface UserMusicLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserMusicLover'], meta: { name: 'UserMusicLover' } }
+    /**
+     * Find zero or one UserMusicLover that matches the filter.
+     * @param {UserMusicLoverFindUniqueArgs} args - Arguments to find a UserMusicLover
+     * @example
+     * // Get one UserMusicLover
+     * const userMusicLover = await prisma.userMusicLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserMusicLoverFindUniqueArgs>(args: SelectSubset<T, UserMusicLoverFindUniqueArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserMusicLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserMusicLoverFindUniqueOrThrowArgs} args - Arguments to find a UserMusicLover
+     * @example
+     * // Get one UserMusicLover
+     * const userMusicLover = await prisma.userMusicLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserMusicLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, UserMusicLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserMusicLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMusicLoverFindFirstArgs} args - Arguments to find a UserMusicLover
+     * @example
+     * // Get one UserMusicLover
+     * const userMusicLover = await prisma.userMusicLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserMusicLoverFindFirstArgs>(args?: SelectSubset<T, UserMusicLoverFindFirstArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserMusicLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMusicLoverFindFirstOrThrowArgs} args - Arguments to find a UserMusicLover
+     * @example
+     * // Get one UserMusicLover
+     * const userMusicLover = await prisma.userMusicLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserMusicLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, UserMusicLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserMusicLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMusicLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserMusicLovers
+     * const userMusicLovers = await prisma.userMusicLover.findMany()
+     * 
+     * // Get first 10 UserMusicLovers
+     * const userMusicLovers = await prisma.userMusicLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userMusicLoverWithIdOnly = await prisma.userMusicLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserMusicLoverFindManyArgs>(args?: SelectSubset<T, UserMusicLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserMusicLover.
+     * @param {UserMusicLoverCreateArgs} args - Arguments to create a UserMusicLover.
+     * @example
+     * // Create one UserMusicLover
+     * const UserMusicLover = await prisma.userMusicLover.create({
+     *   data: {
+     *     // ... data to create a UserMusicLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserMusicLoverCreateArgs>(args: SelectSubset<T, UserMusicLoverCreateArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserMusicLovers.
+     * @param {UserMusicLoverCreateManyArgs} args - Arguments to create many UserMusicLovers.
+     * @example
+     * // Create many UserMusicLovers
+     * const userMusicLover = await prisma.userMusicLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserMusicLoverCreateManyArgs>(args?: SelectSubset<T, UserMusicLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserMusicLovers and returns the data saved in the database.
+     * @param {UserMusicLoverCreateManyAndReturnArgs} args - Arguments to create many UserMusicLovers.
+     * @example
+     * // Create many UserMusicLovers
+     * const userMusicLover = await prisma.userMusicLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserMusicLovers and only return the `id`
+     * const userMusicLoverWithIdOnly = await prisma.userMusicLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserMusicLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, UserMusicLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserMusicLover.
+     * @param {UserMusicLoverDeleteArgs} args - Arguments to delete one UserMusicLover.
+     * @example
+     * // Delete one UserMusicLover
+     * const UserMusicLover = await prisma.userMusicLover.delete({
+     *   where: {
+     *     // ... filter to delete one UserMusicLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserMusicLoverDeleteArgs>(args: SelectSubset<T, UserMusicLoverDeleteArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserMusicLover.
+     * @param {UserMusicLoverUpdateArgs} args - Arguments to update one UserMusicLover.
+     * @example
+     * // Update one UserMusicLover
+     * const userMusicLover = await prisma.userMusicLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserMusicLoverUpdateArgs>(args: SelectSubset<T, UserMusicLoverUpdateArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserMusicLovers.
+     * @param {UserMusicLoverDeleteManyArgs} args - Arguments to filter UserMusicLovers to delete.
+     * @example
+     * // Delete a few UserMusicLovers
+     * const { count } = await prisma.userMusicLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserMusicLoverDeleteManyArgs>(args?: SelectSubset<T, UserMusicLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserMusicLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMusicLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserMusicLovers
+     * const userMusicLover = await prisma.userMusicLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserMusicLoverUpdateManyArgs>(args: SelectSubset<T, UserMusicLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserMusicLovers and returns the data updated in the database.
+     * @param {UserMusicLoverUpdateManyAndReturnArgs} args - Arguments to update many UserMusicLovers.
+     * @example
+     * // Update many UserMusicLovers
+     * const userMusicLover = await prisma.userMusicLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserMusicLovers and only return the `id`
+     * const userMusicLoverWithIdOnly = await prisma.userMusicLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserMusicLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, UserMusicLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserMusicLover.
+     * @param {UserMusicLoverUpsertArgs} args - Arguments to update or create a UserMusicLover.
+     * @example
+     * // Update or create a UserMusicLover
+     * const userMusicLover = await prisma.userMusicLover.upsert({
+     *   create: {
+     *     // ... data to create a UserMusicLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserMusicLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserMusicLoverUpsertArgs>(args: SelectSubset<T, UserMusicLoverUpsertArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserMusicLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMusicLoverCountArgs} args - Arguments to filter UserMusicLovers to count.
+     * @example
+     * // Count the number of UserMusicLovers
+     * const count = await prisma.userMusicLover.count({
+     *   where: {
+     *     // ... the filter for the UserMusicLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserMusicLoverCountArgs>(
+      args?: Subset<T, UserMusicLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserMusicLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserMusicLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMusicLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserMusicLoverAggregateArgs>(args: Subset<T, UserMusicLoverAggregateArgs>): Prisma.PrismaPromise<GetUserMusicLoverAggregateType<T>>
+
+    /**
+     * Group by UserMusicLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserMusicLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserMusicLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserMusicLoverGroupByArgs['orderBy'] }
+        : { orderBy?: UserMusicLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserMusicLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserMusicLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserMusicLover model
+   */
+  readonly fields: UserMusicLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserMusicLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserMusicLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    concerts<T extends UserMusicLover$concertsArgs<ExtArgs> = {}>(args?: Subset<T, UserMusicLover$concertsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reviews<T extends UserMusicLover$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, UserMusicLover$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserMusicLover model
+   */ 
+  interface UserMusicLoverFieldRefs {
+    readonly id: FieldRef<"UserMusicLover", 'String'>
+    readonly email: FieldRef<"UserMusicLover", 'String'>
+    readonly name: FieldRef<"UserMusicLover", 'String'>
+    readonly password: FieldRef<"UserMusicLover", 'String'>
+    readonly createdAt: FieldRef<"UserMusicLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserMusicLover findUnique
+   */
+  export type UserMusicLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMusicLover to fetch.
+     */
+    where: UserMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * UserMusicLover findUniqueOrThrow
+   */
+  export type UserMusicLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMusicLover to fetch.
+     */
+    where: UserMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * UserMusicLover findFirst
+   */
+  export type UserMusicLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMusicLover to fetch.
+     */
+    where?: UserMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMusicLovers to fetch.
+     */
+    orderBy?: UserMusicLoverOrderByWithRelationInput | UserMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserMusicLovers.
+     */
+    cursor?: UserMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserMusicLovers.
+     */
+    distinct?: UserMusicLoverScalarFieldEnum | UserMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * UserMusicLover findFirstOrThrow
+   */
+  export type UserMusicLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMusicLover to fetch.
+     */
+    where?: UserMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMusicLovers to fetch.
+     */
+    orderBy?: UserMusicLoverOrderByWithRelationInput | UserMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserMusicLovers.
+     */
+    cursor?: UserMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserMusicLovers.
+     */
+    distinct?: UserMusicLoverScalarFieldEnum | UserMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * UserMusicLover findMany
+   */
+  export type UserMusicLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which UserMusicLovers to fetch.
+     */
+    where?: UserMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserMusicLovers to fetch.
+     */
+    orderBy?: UserMusicLoverOrderByWithRelationInput | UserMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserMusicLovers.
+     */
+    cursor?: UserMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserMusicLovers.
+     */
+    skip?: number
+    distinct?: UserMusicLoverScalarFieldEnum | UserMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * UserMusicLover create
+   */
+  export type UserMusicLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserMusicLover.
+     */
+    data: XOR<UserMusicLoverCreateInput, UserMusicLoverUncheckedCreateInput>
+  }
+
+  /**
+   * UserMusicLover createMany
+   */
+  export type UserMusicLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserMusicLovers.
+     */
+    data: UserMusicLoverCreateManyInput | UserMusicLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserMusicLover createManyAndReturn
+   */
+  export type UserMusicLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserMusicLovers.
+     */
+    data: UserMusicLoverCreateManyInput | UserMusicLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserMusicLover update
+   */
+  export type UserMusicLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserMusicLover.
+     */
+    data: XOR<UserMusicLoverUpdateInput, UserMusicLoverUncheckedUpdateInput>
+    /**
+     * Choose, which UserMusicLover to update.
+     */
+    where: UserMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * UserMusicLover updateMany
+   */
+  export type UserMusicLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserMusicLovers.
+     */
+    data: XOR<UserMusicLoverUpdateManyMutationInput, UserMusicLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which UserMusicLovers to update
+     */
+    where?: UserMusicLoverWhereInput
+    /**
+     * Limit how many UserMusicLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserMusicLover updateManyAndReturn
+   */
+  export type UserMusicLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update UserMusicLovers.
+     */
+    data: XOR<UserMusicLoverUpdateManyMutationInput, UserMusicLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which UserMusicLovers to update
+     */
+    where?: UserMusicLoverWhereInput
+    /**
+     * Limit how many UserMusicLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserMusicLover upsert
+   */
+  export type UserMusicLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserMusicLover to update in case it exists.
+     */
+    where: UserMusicLoverWhereUniqueInput
+    /**
+     * In case the UserMusicLover found by the `where` argument doesn't exist, create a new UserMusicLover with this data.
+     */
+    create: XOR<UserMusicLoverCreateInput, UserMusicLoverUncheckedCreateInput>
+    /**
+     * In case the UserMusicLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserMusicLoverUpdateInput, UserMusicLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * UserMusicLover delete
+   */
+  export type UserMusicLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter which UserMusicLover to delete.
+     */
+    where: UserMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * UserMusicLover deleteMany
+   */
+  export type UserMusicLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserMusicLovers to delete
+     */
+    where?: UserMusicLoverWhereInput
+    /**
+     * Limit how many UserMusicLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserMusicLover.concerts
+   */
+  export type UserMusicLover$concertsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    where?: ConcertMusicLoverWhereInput
+    orderBy?: ConcertMusicLoverOrderByWithRelationInput | ConcertMusicLoverOrderByWithRelationInput[]
+    cursor?: ConcertMusicLoverWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ConcertMusicLoverScalarFieldEnum | ConcertMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * UserMusicLover.reviews
+   */
+  export type UserMusicLover$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    where?: ReviewMusicLoverWhereInput
+    orderBy?: ReviewMusicLoverOrderByWithRelationInput | ReviewMusicLoverOrderByWithRelationInput[]
+    cursor?: ReviewMusicLoverWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewMusicLoverScalarFieldEnum | ReviewMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * UserMusicLover without action
+   */
+  export type UserMusicLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserMusicLover
+     */
+    select?: UserMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserMusicLover
+     */
+    omit?: UserMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserMusicLoverInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ConcertMusicLover
+   */
+
+  export type AggregateConcertMusicLover = {
+    _count: ConcertMusicLoverCountAggregateOutputType | null
+    _min: ConcertMusicLoverMinAggregateOutputType | null
+    _max: ConcertMusicLoverMaxAggregateOutputType | null
+  }
+
+  export type ConcertMusicLoverMinAggregateOutputType = {
+    id: string | null
+    title: string | null
+    date: Date | null
+    venue: string | null
+    genre: string | null
+    submittedBy: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ConcertMusicLoverMaxAggregateOutputType = {
+    id: string | null
+    title: string | null
+    date: Date | null
+    venue: string | null
+    genre: string | null
+    submittedBy: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ConcertMusicLoverCountAggregateOutputType = {
+    id: number
+    title: number
+    date: number
+    venue: number
+    genre: number
+    submittedBy: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ConcertMusicLoverMinAggregateInputType = {
+    id?: true
+    title?: true
+    date?: true
+    venue?: true
+    genre?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ConcertMusicLoverMaxAggregateInputType = {
+    id?: true
+    title?: true
+    date?: true
+    venue?: true
+    genre?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ConcertMusicLoverCountAggregateInputType = {
+    id?: true
+    title?: true
+    date?: true
+    venue?: true
+    genre?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ConcertMusicLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ConcertMusicLover to aggregate.
+     */
+    where?: ConcertMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ConcertMusicLovers to fetch.
+     */
+    orderBy?: ConcertMusicLoverOrderByWithRelationInput | ConcertMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ConcertMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ConcertMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ConcertMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ConcertMusicLovers
+    **/
+    _count?: true | ConcertMusicLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ConcertMusicLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ConcertMusicLoverMaxAggregateInputType
+  }
+
+  export type GetConcertMusicLoverAggregateType<T extends ConcertMusicLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregateConcertMusicLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateConcertMusicLover[P]>
+      : GetScalarType<T[P], AggregateConcertMusicLover[P]>
+  }
+
+
+
+
+  export type ConcertMusicLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ConcertMusicLoverWhereInput
+    orderBy?: ConcertMusicLoverOrderByWithAggregationInput | ConcertMusicLoverOrderByWithAggregationInput[]
+    by: ConcertMusicLoverScalarFieldEnum[] | ConcertMusicLoverScalarFieldEnum
+    having?: ConcertMusicLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ConcertMusicLoverCountAggregateInputType | true
+    _min?: ConcertMusicLoverMinAggregateInputType
+    _max?: ConcertMusicLoverMaxAggregateInputType
+  }
+
+  export type ConcertMusicLoverGroupByOutputType = {
+    id: string
+    title: string
+    date: Date
+    venue: string
+    genre: string
+    submittedBy: string
+    validated: boolean
+    createdAt: Date
+    _count: ConcertMusicLoverCountAggregateOutputType | null
+    _min: ConcertMusicLoverMinAggregateOutputType | null
+    _max: ConcertMusicLoverMaxAggregateOutputType | null
+  }
+
+  type GetConcertMusicLoverGroupByPayload<T extends ConcertMusicLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ConcertMusicLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ConcertMusicLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ConcertMusicLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], ConcertMusicLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ConcertMusicLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    date?: boolean
+    venue?: boolean
+    genre?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    reviews?: boolean | ConcertMusicLover$reviewsArgs<ExtArgs>
+    _count?: boolean | ConcertMusicLoverCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["concertMusicLover"]>
+
+  export type ConcertMusicLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    date?: boolean
+    venue?: boolean
+    genre?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["concertMusicLover"]>
+
+  export type ConcertMusicLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    date?: boolean
+    venue?: boolean
+    genre?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["concertMusicLover"]>
+
+  export type ConcertMusicLoverSelectScalar = {
+    id?: boolean
+    title?: boolean
+    date?: boolean
+    venue?: boolean
+    genre?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type ConcertMusicLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "date" | "venue" | "genre" | "submittedBy" | "validated" | "createdAt", ExtArgs["result"]["concertMusicLover"]>
+  export type ConcertMusicLoverInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    reviews?: boolean | ConcertMusicLover$reviewsArgs<ExtArgs>
+    _count?: boolean | ConcertMusicLoverCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ConcertMusicLoverIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+  }
+  export type ConcertMusicLoverIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+  }
+
+  export type $ConcertMusicLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ConcertMusicLover"
+    objects: {
+      user: Prisma.$UserMusicLoverPayload<ExtArgs>
+      reviews: Prisma.$ReviewMusicLoverPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      title: string
+      date: Date
+      venue: string
+      genre: string
+      submittedBy: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["concertMusicLover"]>
+    composites: {}
+  }
+
+  type ConcertMusicLoverGetPayload<S extends boolean | null | undefined | ConcertMusicLoverDefaultArgs> = $Result.GetResult<Prisma.$ConcertMusicLoverPayload, S>
+
+  type ConcertMusicLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ConcertMusicLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ConcertMusicLoverCountAggregateInputType | true
+    }
+
+  export interface ConcertMusicLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ConcertMusicLover'], meta: { name: 'ConcertMusicLover' } }
+    /**
+     * Find zero or one ConcertMusicLover that matches the filter.
+     * @param {ConcertMusicLoverFindUniqueArgs} args - Arguments to find a ConcertMusicLover
+     * @example
+     * // Get one ConcertMusicLover
+     * const concertMusicLover = await prisma.concertMusicLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ConcertMusicLoverFindUniqueArgs>(args: SelectSubset<T, ConcertMusicLoverFindUniqueArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ConcertMusicLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ConcertMusicLoverFindUniqueOrThrowArgs} args - Arguments to find a ConcertMusicLover
+     * @example
+     * // Get one ConcertMusicLover
+     * const concertMusicLover = await prisma.concertMusicLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ConcertMusicLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, ConcertMusicLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ConcertMusicLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ConcertMusicLoverFindFirstArgs} args - Arguments to find a ConcertMusicLover
+     * @example
+     * // Get one ConcertMusicLover
+     * const concertMusicLover = await prisma.concertMusicLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ConcertMusicLoverFindFirstArgs>(args?: SelectSubset<T, ConcertMusicLoverFindFirstArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ConcertMusicLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ConcertMusicLoverFindFirstOrThrowArgs} args - Arguments to find a ConcertMusicLover
+     * @example
+     * // Get one ConcertMusicLover
+     * const concertMusicLover = await prisma.concertMusicLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ConcertMusicLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, ConcertMusicLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ConcertMusicLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ConcertMusicLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ConcertMusicLovers
+     * const concertMusicLovers = await prisma.concertMusicLover.findMany()
+     * 
+     * // Get first 10 ConcertMusicLovers
+     * const concertMusicLovers = await prisma.concertMusicLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const concertMusicLoverWithIdOnly = await prisma.concertMusicLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ConcertMusicLoverFindManyArgs>(args?: SelectSubset<T, ConcertMusicLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ConcertMusicLover.
+     * @param {ConcertMusicLoverCreateArgs} args - Arguments to create a ConcertMusicLover.
+     * @example
+     * // Create one ConcertMusicLover
+     * const ConcertMusicLover = await prisma.concertMusicLover.create({
+     *   data: {
+     *     // ... data to create a ConcertMusicLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends ConcertMusicLoverCreateArgs>(args: SelectSubset<T, ConcertMusicLoverCreateArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ConcertMusicLovers.
+     * @param {ConcertMusicLoverCreateManyArgs} args - Arguments to create many ConcertMusicLovers.
+     * @example
+     * // Create many ConcertMusicLovers
+     * const concertMusicLover = await prisma.concertMusicLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ConcertMusicLoverCreateManyArgs>(args?: SelectSubset<T, ConcertMusicLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ConcertMusicLovers and returns the data saved in the database.
+     * @param {ConcertMusicLoverCreateManyAndReturnArgs} args - Arguments to create many ConcertMusicLovers.
+     * @example
+     * // Create many ConcertMusicLovers
+     * const concertMusicLover = await prisma.concertMusicLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ConcertMusicLovers and only return the `id`
+     * const concertMusicLoverWithIdOnly = await prisma.concertMusicLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ConcertMusicLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, ConcertMusicLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ConcertMusicLover.
+     * @param {ConcertMusicLoverDeleteArgs} args - Arguments to delete one ConcertMusicLover.
+     * @example
+     * // Delete one ConcertMusicLover
+     * const ConcertMusicLover = await prisma.concertMusicLover.delete({
+     *   where: {
+     *     // ... filter to delete one ConcertMusicLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ConcertMusicLoverDeleteArgs>(args: SelectSubset<T, ConcertMusicLoverDeleteArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ConcertMusicLover.
+     * @param {ConcertMusicLoverUpdateArgs} args - Arguments to update one ConcertMusicLover.
+     * @example
+     * // Update one ConcertMusicLover
+     * const concertMusicLover = await prisma.concertMusicLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ConcertMusicLoverUpdateArgs>(args: SelectSubset<T, ConcertMusicLoverUpdateArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ConcertMusicLovers.
+     * @param {ConcertMusicLoverDeleteManyArgs} args - Arguments to filter ConcertMusicLovers to delete.
+     * @example
+     * // Delete a few ConcertMusicLovers
+     * const { count } = await prisma.concertMusicLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ConcertMusicLoverDeleteManyArgs>(args?: SelectSubset<T, ConcertMusicLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ConcertMusicLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ConcertMusicLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ConcertMusicLovers
+     * const concertMusicLover = await prisma.concertMusicLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ConcertMusicLoverUpdateManyArgs>(args: SelectSubset<T, ConcertMusicLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ConcertMusicLovers and returns the data updated in the database.
+     * @param {ConcertMusicLoverUpdateManyAndReturnArgs} args - Arguments to update many ConcertMusicLovers.
+     * @example
+     * // Update many ConcertMusicLovers
+     * const concertMusicLover = await prisma.concertMusicLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ConcertMusicLovers and only return the `id`
+     * const concertMusicLoverWithIdOnly = await prisma.concertMusicLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ConcertMusicLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, ConcertMusicLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ConcertMusicLover.
+     * @param {ConcertMusicLoverUpsertArgs} args - Arguments to update or create a ConcertMusicLover.
+     * @example
+     * // Update or create a ConcertMusicLover
+     * const concertMusicLover = await prisma.concertMusicLover.upsert({
+     *   create: {
+     *     // ... data to create a ConcertMusicLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ConcertMusicLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ConcertMusicLoverUpsertArgs>(args: SelectSubset<T, ConcertMusicLoverUpsertArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ConcertMusicLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ConcertMusicLoverCountArgs} args - Arguments to filter ConcertMusicLovers to count.
+     * @example
+     * // Count the number of ConcertMusicLovers
+     * const count = await prisma.concertMusicLover.count({
+     *   where: {
+     *     // ... the filter for the ConcertMusicLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ConcertMusicLoverCountArgs>(
+      args?: Subset<T, ConcertMusicLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ConcertMusicLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ConcertMusicLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ConcertMusicLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ConcertMusicLoverAggregateArgs>(args: Subset<T, ConcertMusicLoverAggregateArgs>): Prisma.PrismaPromise<GetConcertMusicLoverAggregateType<T>>
+
+    /**
+     * Group by ConcertMusicLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ConcertMusicLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ConcertMusicLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ConcertMusicLoverGroupByArgs['orderBy'] }
+        : { orderBy?: ConcertMusicLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ConcertMusicLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetConcertMusicLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ConcertMusicLover model
+   */
+  readonly fields: ConcertMusicLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ConcertMusicLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ConcertMusicLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserMusicLoverDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserMusicLoverDefaultArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reviews<T extends ConcertMusicLover$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, ConcertMusicLover$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ConcertMusicLover model
+   */ 
+  interface ConcertMusicLoverFieldRefs {
+    readonly id: FieldRef<"ConcertMusicLover", 'String'>
+    readonly title: FieldRef<"ConcertMusicLover", 'String'>
+    readonly date: FieldRef<"ConcertMusicLover", 'DateTime'>
+    readonly venue: FieldRef<"ConcertMusicLover", 'String'>
+    readonly genre: FieldRef<"ConcertMusicLover", 'String'>
+    readonly submittedBy: FieldRef<"ConcertMusicLover", 'String'>
+    readonly validated: FieldRef<"ConcertMusicLover", 'Boolean'>
+    readonly createdAt: FieldRef<"ConcertMusicLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ConcertMusicLover findUnique
+   */
+  export type ConcertMusicLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ConcertMusicLover to fetch.
+     */
+    where: ConcertMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ConcertMusicLover findUniqueOrThrow
+   */
+  export type ConcertMusicLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ConcertMusicLover to fetch.
+     */
+    where: ConcertMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ConcertMusicLover findFirst
+   */
+  export type ConcertMusicLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ConcertMusicLover to fetch.
+     */
+    where?: ConcertMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ConcertMusicLovers to fetch.
+     */
+    orderBy?: ConcertMusicLoverOrderByWithRelationInput | ConcertMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ConcertMusicLovers.
+     */
+    cursor?: ConcertMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ConcertMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ConcertMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ConcertMusicLovers.
+     */
+    distinct?: ConcertMusicLoverScalarFieldEnum | ConcertMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ConcertMusicLover findFirstOrThrow
+   */
+  export type ConcertMusicLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ConcertMusicLover to fetch.
+     */
+    where?: ConcertMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ConcertMusicLovers to fetch.
+     */
+    orderBy?: ConcertMusicLoverOrderByWithRelationInput | ConcertMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ConcertMusicLovers.
+     */
+    cursor?: ConcertMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ConcertMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ConcertMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ConcertMusicLovers.
+     */
+    distinct?: ConcertMusicLoverScalarFieldEnum | ConcertMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ConcertMusicLover findMany
+   */
+  export type ConcertMusicLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ConcertMusicLovers to fetch.
+     */
+    where?: ConcertMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ConcertMusicLovers to fetch.
+     */
+    orderBy?: ConcertMusicLoverOrderByWithRelationInput | ConcertMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ConcertMusicLovers.
+     */
+    cursor?: ConcertMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ConcertMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ConcertMusicLovers.
+     */
+    skip?: number
+    distinct?: ConcertMusicLoverScalarFieldEnum | ConcertMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ConcertMusicLover create
+   */
+  export type ConcertMusicLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ConcertMusicLover.
+     */
+    data: XOR<ConcertMusicLoverCreateInput, ConcertMusicLoverUncheckedCreateInput>
+  }
+
+  /**
+   * ConcertMusicLover createMany
+   */
+  export type ConcertMusicLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ConcertMusicLovers.
+     */
+    data: ConcertMusicLoverCreateManyInput | ConcertMusicLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ConcertMusicLover createManyAndReturn
+   */
+  export type ConcertMusicLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many ConcertMusicLovers.
+     */
+    data: ConcertMusicLoverCreateManyInput | ConcertMusicLoverCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ConcertMusicLover update
+   */
+  export type ConcertMusicLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ConcertMusicLover.
+     */
+    data: XOR<ConcertMusicLoverUpdateInput, ConcertMusicLoverUncheckedUpdateInput>
+    /**
+     * Choose, which ConcertMusicLover to update.
+     */
+    where: ConcertMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ConcertMusicLover updateMany
+   */
+  export type ConcertMusicLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ConcertMusicLovers.
+     */
+    data: XOR<ConcertMusicLoverUpdateManyMutationInput, ConcertMusicLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which ConcertMusicLovers to update
+     */
+    where?: ConcertMusicLoverWhereInput
+    /**
+     * Limit how many ConcertMusicLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ConcertMusicLover updateManyAndReturn
+   */
+  export type ConcertMusicLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update ConcertMusicLovers.
+     */
+    data: XOR<ConcertMusicLoverUpdateManyMutationInput, ConcertMusicLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which ConcertMusicLovers to update
+     */
+    where?: ConcertMusicLoverWhereInput
+    /**
+     * Limit how many ConcertMusicLovers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ConcertMusicLover upsert
+   */
+  export type ConcertMusicLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ConcertMusicLover to update in case it exists.
+     */
+    where: ConcertMusicLoverWhereUniqueInput
+    /**
+     * In case the ConcertMusicLover found by the `where` argument doesn't exist, create a new ConcertMusicLover with this data.
+     */
+    create: XOR<ConcertMusicLoverCreateInput, ConcertMusicLoverUncheckedCreateInput>
+    /**
+     * In case the ConcertMusicLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ConcertMusicLoverUpdateInput, ConcertMusicLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * ConcertMusicLover delete
+   */
+  export type ConcertMusicLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter which ConcertMusicLover to delete.
+     */
+    where: ConcertMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ConcertMusicLover deleteMany
+   */
+  export type ConcertMusicLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ConcertMusicLovers to delete
+     */
+    where?: ConcertMusicLoverWhereInput
+    /**
+     * Limit how many ConcertMusicLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ConcertMusicLover.reviews
+   */
+  export type ConcertMusicLover$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    where?: ReviewMusicLoverWhereInput
+    orderBy?: ReviewMusicLoverOrderByWithRelationInput | ReviewMusicLoverOrderByWithRelationInput[]
+    cursor?: ReviewMusicLoverWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewMusicLoverScalarFieldEnum | ReviewMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ConcertMusicLover without action
+   */
+  export type ConcertMusicLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ConcertMusicLover
+     */
+    select?: ConcertMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ConcertMusicLover
+     */
+    omit?: ConcertMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ConcertMusicLoverInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ReviewMusicLover
+   */
+
+  export type AggregateReviewMusicLover = {
+    _count: ReviewMusicLoverCountAggregateOutputType | null
+    _avg: ReviewMusicLoverAvgAggregateOutputType | null
+    _sum: ReviewMusicLoverSumAggregateOutputType | null
+    _min: ReviewMusicLoverMinAggregateOutputType | null
+    _max: ReviewMusicLoverMaxAggregateOutputType | null
+  }
+
+  export type ReviewMusicLoverAvgAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewMusicLoverSumAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewMusicLoverMinAggregateOutputType = {
+    id: string | null
+    concertId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ReviewMusicLoverMaxAggregateOutputType = {
+    id: string | null
+    concertId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ReviewMusicLoverCountAggregateOutputType = {
+    id: number
+    concertId: number
+    userId: number
+    rating: number
+    comment: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ReviewMusicLoverAvgAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewMusicLoverSumAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewMusicLoverMinAggregateInputType = {
+    id?: true
+    concertId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ReviewMusicLoverMaxAggregateInputType = {
+    id?: true
+    concertId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ReviewMusicLoverCountAggregateInputType = {
+    id?: true
+    concertId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ReviewMusicLoverAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewMusicLover to aggregate.
+     */
+    where?: ReviewMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewMusicLovers to fetch.
+     */
+    orderBy?: ReviewMusicLoverOrderByWithRelationInput | ReviewMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ReviewMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ReviewMusicLovers
+    **/
+    _count?: true | ReviewMusicLoverCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ReviewMusicLoverAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ReviewMusicLoverSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ReviewMusicLoverMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ReviewMusicLoverMaxAggregateInputType
+  }
+
+  export type GetReviewMusicLoverAggregateType<T extends ReviewMusicLoverAggregateArgs> = {
+        [P in keyof T & keyof AggregateReviewMusicLover]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateReviewMusicLover[P]>
+      : GetScalarType<T[P], AggregateReviewMusicLover[P]>
+  }
+
+
+
+
+  export type ReviewMusicLoverGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewMusicLoverWhereInput
+    orderBy?: ReviewMusicLoverOrderByWithAggregationInput | ReviewMusicLoverOrderByWithAggregationInput[]
+    by: ReviewMusicLoverScalarFieldEnum[] | ReviewMusicLoverScalarFieldEnum
+    having?: ReviewMusicLoverScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ReviewMusicLoverCountAggregateInputType | true
+    _avg?: ReviewMusicLoverAvgAggregateInputType
+    _sum?: ReviewMusicLoverSumAggregateInputType
+    _min?: ReviewMusicLoverMinAggregateInputType
+    _max?: ReviewMusicLoverMaxAggregateInputType
+  }
+
+  export type ReviewMusicLoverGroupByOutputType = {
+    id: string
+    concertId: string
+    userId: string
+    rating: number
+    comment: string
+    validated: boolean
+    createdAt: Date
+    _count: ReviewMusicLoverCountAggregateOutputType | null
+    _avg: ReviewMusicLoverAvgAggregateOutputType | null
+    _sum: ReviewMusicLoverSumAggregateOutputType | null
+    _min: ReviewMusicLoverMinAggregateOutputType | null
+    _max: ReviewMusicLoverMaxAggregateOutputType | null
+  }
+
+  type GetReviewMusicLoverGroupByPayload<T extends ReviewMusicLoverGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ReviewMusicLoverGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ReviewMusicLoverGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ReviewMusicLoverGroupByOutputType[P]>
+            : GetScalarType<T[P], ReviewMusicLoverGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ReviewMusicLoverSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    concertId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    concert?: boolean | ConcertMusicLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewMusicLover"]>
+
+  export type ReviewMusicLoverSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    concertId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    concert?: boolean | ConcertMusicLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewMusicLover"]>
+
+  export type ReviewMusicLoverSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    concertId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    concert?: boolean | ConcertMusicLoverDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewMusicLover"]>
+
+  export type ReviewMusicLoverSelectScalar = {
+    id?: boolean
+    concertId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type ReviewMusicLoverOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "concertId" | "userId" | "rating" | "comment" | "validated" | "createdAt", ExtArgs["result"]["reviewMusicLover"]>
+  export type ReviewMusicLoverInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    concert?: boolean | ConcertMusicLoverDefaultArgs<ExtArgs>
+  }
+  export type ReviewMusicLoverIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    concert?: boolean | ConcertMusicLoverDefaultArgs<ExtArgs>
+  }
+  export type ReviewMusicLoverIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserMusicLoverDefaultArgs<ExtArgs>
+    concert?: boolean | ConcertMusicLoverDefaultArgs<ExtArgs>
+  }
+
+  export type $ReviewMusicLoverPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReviewMusicLover"
+    objects: {
+      user: Prisma.$UserMusicLoverPayload<ExtArgs>
+      concert: Prisma.$ConcertMusicLoverPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      concertId: string
+      userId: string
+      rating: number
+      comment: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["reviewMusicLover"]>
+    composites: {}
+  }
+
+  type ReviewMusicLoverGetPayload<S extends boolean | null | undefined | ReviewMusicLoverDefaultArgs> = $Result.GetResult<Prisma.$ReviewMusicLoverPayload, S>
+
+  type ReviewMusicLoverCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReviewMusicLoverFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReviewMusicLoverCountAggregateInputType | true
+    }
+
+  export interface ReviewMusicLoverDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReviewMusicLover'], meta: { name: 'ReviewMusicLover' } }
+    /**
+     * Find zero or one ReviewMusicLover that matches the filter.
+     * @param {ReviewMusicLoverFindUniqueArgs} args - Arguments to find a ReviewMusicLover
+     * @example
+     * // Get one ReviewMusicLover
+     * const reviewMusicLover = await prisma.reviewMusicLover.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ReviewMusicLoverFindUniqueArgs>(args: SelectSubset<T, ReviewMusicLoverFindUniqueArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ReviewMusicLover that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ReviewMusicLoverFindUniqueOrThrowArgs} args - Arguments to find a ReviewMusicLover
+     * @example
+     * // Get one ReviewMusicLover
+     * const reviewMusicLover = await prisma.reviewMusicLover.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ReviewMusicLoverFindUniqueOrThrowArgs>(args: SelectSubset<T, ReviewMusicLoverFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewMusicLover that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewMusicLoverFindFirstArgs} args - Arguments to find a ReviewMusicLover
+     * @example
+     * // Get one ReviewMusicLover
+     * const reviewMusicLover = await prisma.reviewMusicLover.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ReviewMusicLoverFindFirstArgs>(args?: SelectSubset<T, ReviewMusicLoverFindFirstArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewMusicLover that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewMusicLoverFindFirstOrThrowArgs} args - Arguments to find a ReviewMusicLover
+     * @example
+     * // Get one ReviewMusicLover
+     * const reviewMusicLover = await prisma.reviewMusicLover.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ReviewMusicLoverFindFirstOrThrowArgs>(args?: SelectSubset<T, ReviewMusicLoverFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ReviewMusicLovers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewMusicLoverFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ReviewMusicLovers
+     * const reviewMusicLovers = await prisma.reviewMusicLover.findMany()
+     * 
+     * // Get first 10 ReviewMusicLovers
+     * const reviewMusicLovers = await prisma.reviewMusicLover.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const reviewMusicLoverWithIdOnly = await prisma.reviewMusicLover.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ReviewMusicLoverFindManyArgs>(args?: SelectSubset<T, ReviewMusicLoverFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ReviewMusicLover.
+     * @param {ReviewMusicLoverCreateArgs} args - Arguments to create a ReviewMusicLover.
+     * @example
+     * // Create one ReviewMusicLover
+     * const ReviewMusicLover = await prisma.reviewMusicLover.create({
+     *   data: {
+     *     // ... data to create a ReviewMusicLover
+     *   }
+     * })
+     * 
+     */
+    create<T extends ReviewMusicLoverCreateArgs>(args: SelectSubset<T, ReviewMusicLoverCreateArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ReviewMusicLovers.
+     * @param {ReviewMusicLoverCreateManyArgs} args - Arguments to create many ReviewMusicLovers.
+     * @example
+     * // Create many ReviewMusicLovers
+     * const reviewMusicLover = await prisma.reviewMusicLover.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ReviewMusicLoverCreateManyArgs>(args?: SelectSubset<T, ReviewMusicLoverCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ReviewMusicLovers and returns the data saved in the database.
+     * @param {ReviewMusicLoverCreateManyAndReturnArgs} args - Arguments to create many ReviewMusicLovers.
+     * @example
+     * // Create many ReviewMusicLovers
+     * const reviewMusicLover = await prisma.reviewMusicLover.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ReviewMusicLovers and only return the `id`
+     * const reviewMusicLoverWithIdOnly = await prisma.reviewMusicLover.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ReviewMusicLoverCreateManyAndReturnArgs>(args?: SelectSubset<T, ReviewMusicLoverCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ReviewMusicLover.
+     * @param {ReviewMusicLoverDeleteArgs} args - Arguments to delete one ReviewMusicLover.
+     * @example
+     * // Delete one ReviewMusicLover
+     * const ReviewMusicLover = await prisma.reviewMusicLover.delete({
+     *   where: {
+     *     // ... filter to delete one ReviewMusicLover
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ReviewMusicLoverDeleteArgs>(args: SelectSubset<T, ReviewMusicLoverDeleteArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ReviewMusicLover.
+     * @param {ReviewMusicLoverUpdateArgs} args - Arguments to update one ReviewMusicLover.
+     * @example
+     * // Update one ReviewMusicLover
+     * const reviewMusicLover = await prisma.reviewMusicLover.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ReviewMusicLoverUpdateArgs>(args: SelectSubset<T, ReviewMusicLoverUpdateArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ReviewMusicLovers.
+     * @param {ReviewMusicLoverDeleteManyArgs} args - Arguments to filter ReviewMusicLovers to delete.
+     * @example
+     * // Delete a few ReviewMusicLovers
+     * const { count } = await prisma.reviewMusicLover.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ReviewMusicLoverDeleteManyArgs>(args?: SelectSubset<T, ReviewMusicLoverDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewMusicLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewMusicLoverUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ReviewMusicLovers
+     * const reviewMusicLover = await prisma.reviewMusicLover.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ReviewMusicLoverUpdateManyArgs>(args: SelectSubset<T, ReviewMusicLoverUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewMusicLovers and returns the data updated in the database.
+     * @param {ReviewMusicLoverUpdateManyAndReturnArgs} args - Arguments to update many ReviewMusicLovers.
+     * @example
+     * // Update many ReviewMusicLovers
+     * const reviewMusicLover = await prisma.reviewMusicLover.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ReviewMusicLovers and only return the `id`
+     * const reviewMusicLoverWithIdOnly = await prisma.reviewMusicLover.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ReviewMusicLoverUpdateManyAndReturnArgs>(args: SelectSubset<T, ReviewMusicLoverUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ReviewMusicLover.
+     * @param {ReviewMusicLoverUpsertArgs} args - Arguments to update or create a ReviewMusicLover.
+     * @example
+     * // Update or create a ReviewMusicLover
+     * const reviewMusicLover = await prisma.reviewMusicLover.upsert({
+     *   create: {
+     *     // ... data to create a ReviewMusicLover
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ReviewMusicLover we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ReviewMusicLoverUpsertArgs>(args: SelectSubset<T, ReviewMusicLoverUpsertArgs<ExtArgs>>): Prisma__ReviewMusicLoverClient<$Result.GetResult<Prisma.$ReviewMusicLoverPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ReviewMusicLovers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewMusicLoverCountArgs} args - Arguments to filter ReviewMusicLovers to count.
+     * @example
+     * // Count the number of ReviewMusicLovers
+     * const count = await prisma.reviewMusicLover.count({
+     *   where: {
+     *     // ... the filter for the ReviewMusicLovers we want to count
+     *   }
+     * })
+    **/
+    count<T extends ReviewMusicLoverCountArgs>(
+      args?: Subset<T, ReviewMusicLoverCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ReviewMusicLoverCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ReviewMusicLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewMusicLoverAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ReviewMusicLoverAggregateArgs>(args: Subset<T, ReviewMusicLoverAggregateArgs>): Prisma.PrismaPromise<GetReviewMusicLoverAggregateType<T>>
+
+    /**
+     * Group by ReviewMusicLover.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewMusicLoverGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ReviewMusicLoverGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ReviewMusicLoverGroupByArgs['orderBy'] }
+        : { orderBy?: ReviewMusicLoverGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ReviewMusicLoverGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReviewMusicLoverGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ReviewMusicLover model
+   */
+  readonly fields: ReviewMusicLoverFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ReviewMusicLover.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ReviewMusicLoverClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserMusicLoverDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserMusicLoverDefaultArgs<ExtArgs>>): Prisma__UserMusicLoverClient<$Result.GetResult<Prisma.$UserMusicLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    concert<T extends ConcertMusicLoverDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ConcertMusicLoverDefaultArgs<ExtArgs>>): Prisma__ConcertMusicLoverClient<$Result.GetResult<Prisma.$ConcertMusicLoverPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ReviewMusicLover model
+   */ 
+  interface ReviewMusicLoverFieldRefs {
+    readonly id: FieldRef<"ReviewMusicLover", 'String'>
+    readonly concertId: FieldRef<"ReviewMusicLover", 'String'>
+    readonly userId: FieldRef<"ReviewMusicLover", 'String'>
+    readonly rating: FieldRef<"ReviewMusicLover", 'Int'>
+    readonly comment: FieldRef<"ReviewMusicLover", 'String'>
+    readonly validated: FieldRef<"ReviewMusicLover", 'Boolean'>
+    readonly createdAt: FieldRef<"ReviewMusicLover", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ReviewMusicLover findUnique
+   */
+  export type ReviewMusicLoverFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewMusicLover to fetch.
+     */
+    where: ReviewMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ReviewMusicLover findUniqueOrThrow
+   */
+  export type ReviewMusicLoverFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewMusicLover to fetch.
+     */
+    where: ReviewMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ReviewMusicLover findFirst
+   */
+  export type ReviewMusicLoverFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewMusicLover to fetch.
+     */
+    where?: ReviewMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewMusicLovers to fetch.
+     */
+    orderBy?: ReviewMusicLoverOrderByWithRelationInput | ReviewMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewMusicLovers.
+     */
+    cursor?: ReviewMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewMusicLovers.
+     */
+    distinct?: ReviewMusicLoverScalarFieldEnum | ReviewMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewMusicLover findFirstOrThrow
+   */
+  export type ReviewMusicLoverFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewMusicLover to fetch.
+     */
+    where?: ReviewMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewMusicLovers to fetch.
+     */
+    orderBy?: ReviewMusicLoverOrderByWithRelationInput | ReviewMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewMusicLovers.
+     */
+    cursor?: ReviewMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewMusicLovers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewMusicLovers.
+     */
+    distinct?: ReviewMusicLoverScalarFieldEnum | ReviewMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewMusicLover findMany
+   */
+  export type ReviewMusicLoverFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewMusicLovers to fetch.
+     */
+    where?: ReviewMusicLoverWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewMusicLovers to fetch.
+     */
+    orderBy?: ReviewMusicLoverOrderByWithRelationInput | ReviewMusicLoverOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ReviewMusicLovers.
+     */
+    cursor?: ReviewMusicLoverWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewMusicLovers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewMusicLovers.
+     */
+    skip?: number
+    distinct?: ReviewMusicLoverScalarFieldEnum | ReviewMusicLoverScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewMusicLover create
+   */
+  export type ReviewMusicLoverCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ReviewMusicLover.
+     */
+    data: XOR<ReviewMusicLoverCreateInput, ReviewMusicLoverUncheckedCreateInput>
+  }
+
+  /**
+   * ReviewMusicLover createMany
+   */
+  export type ReviewMusicLoverCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ReviewMusicLovers.
+     */
+    data: ReviewMusicLoverCreateManyInput | ReviewMusicLoverCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ReviewMusicLover createManyAndReturn
+   */
+  export type ReviewMusicLoverCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * The data used to create many ReviewMusicLovers.
+     */
+    data: ReviewMusicLoverCreateManyInput | ReviewMusicLoverCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewMusicLover update
+   */
+  export type ReviewMusicLoverUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ReviewMusicLover.
+     */
+    data: XOR<ReviewMusicLoverUpdateInput, ReviewMusicLoverUncheckedUpdateInput>
+    /**
+     * Choose, which ReviewMusicLover to update.
+     */
+    where: ReviewMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ReviewMusicLover updateMany
+   */
+  export type ReviewMusicLoverUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ReviewMusicLovers.
+     */
+    data: XOR<ReviewMusicLoverUpdateManyMutationInput, ReviewMusicLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewMusicLovers to update
+     */
+    where?: ReviewMusicLoverWhereInput
+    /**
+     * Limit how many ReviewMusicLovers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewMusicLover updateManyAndReturn
+   */
+  export type ReviewMusicLoverUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * The data used to update ReviewMusicLovers.
+     */
+    data: XOR<ReviewMusicLoverUpdateManyMutationInput, ReviewMusicLoverUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewMusicLovers to update
+     */
+    where?: ReviewMusicLoverWhereInput
+    /**
+     * Limit how many ReviewMusicLovers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewMusicLover upsert
+   */
+  export type ReviewMusicLoverUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ReviewMusicLover to update in case it exists.
+     */
+    where: ReviewMusicLoverWhereUniqueInput
+    /**
+     * In case the ReviewMusicLover found by the `where` argument doesn't exist, create a new ReviewMusicLover with this data.
+     */
+    create: XOR<ReviewMusicLoverCreateInput, ReviewMusicLoverUncheckedCreateInput>
+    /**
+     * In case the ReviewMusicLover was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ReviewMusicLoverUpdateInput, ReviewMusicLoverUncheckedUpdateInput>
+  }
+
+  /**
+   * ReviewMusicLover delete
+   */
+  export type ReviewMusicLoverDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+    /**
+     * Filter which ReviewMusicLover to delete.
+     */
+    where: ReviewMusicLoverWhereUniqueInput
+  }
+
+  /**
+   * ReviewMusicLover deleteMany
+   */
+  export type ReviewMusicLoverDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewMusicLovers to delete
+     */
+    where?: ReviewMusicLoverWhereInput
+    /**
+     * Limit how many ReviewMusicLovers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewMusicLover without action
+   */
+  export type ReviewMusicLoverDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewMusicLover
+     */
+    select?: ReviewMusicLoverSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewMusicLover
+     */
+    omit?: ReviewMusicLoverOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewMusicLoverInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -22759,6 +26454,44 @@ export namespace Prisma {
   };
 
   export type ClinicHealthTrackerScalarFieldEnum = (typeof ClinicHealthTrackerScalarFieldEnum)[keyof typeof ClinicHealthTrackerScalarFieldEnum]
+
+
+  export const UserMusicLoverScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    createdAt: 'createdAt'
+  };
+
+  export type UserMusicLoverScalarFieldEnum = (typeof UserMusicLoverScalarFieldEnum)[keyof typeof UserMusicLoverScalarFieldEnum]
+
+
+  export const ConcertMusicLoverScalarFieldEnum: {
+    id: 'id',
+    title: 'title',
+    date: 'date',
+    venue: 'venue',
+    genre: 'genre',
+    submittedBy: 'submittedBy',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type ConcertMusicLoverScalarFieldEnum = (typeof ConcertMusicLoverScalarFieldEnum)[keyof typeof ConcertMusicLoverScalarFieldEnum]
+
+
+  export const ReviewMusicLoverScalarFieldEnum: {
+    id: 'id',
+    concertId: 'concertId',
+    userId: 'userId',
+    rating: 'rating',
+    comment: 'comment',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type ReviewMusicLoverScalarFieldEnum = (typeof ReviewMusicLoverScalarFieldEnum)[keyof typeof ReviewMusicLoverScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -24011,6 +27744,207 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"ClinicHealthTracker"> | Date | string
   }
 
+  export type UserMusicLoverWhereInput = {
+    AND?: UserMusicLoverWhereInput | UserMusicLoverWhereInput[]
+    OR?: UserMusicLoverWhereInput[]
+    NOT?: UserMusicLoverWhereInput | UserMusicLoverWhereInput[]
+    id?: StringFilter<"UserMusicLover"> | string
+    email?: StringFilter<"UserMusicLover"> | string
+    name?: StringFilter<"UserMusicLover"> | string
+    password?: StringFilter<"UserMusicLover"> | string
+    createdAt?: DateTimeFilter<"UserMusicLover"> | Date | string
+    concerts?: ConcertMusicLoverListRelationFilter
+    reviews?: ReviewMusicLoverListRelationFilter
+  }
+
+  export type UserMusicLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    concerts?: ConcertMusicLoverOrderByRelationAggregateInput
+    reviews?: ReviewMusicLoverOrderByRelationAggregateInput
+  }
+
+  export type UserMusicLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: UserMusicLoverWhereInput | UserMusicLoverWhereInput[]
+    OR?: UserMusicLoverWhereInput[]
+    NOT?: UserMusicLoverWhereInput | UserMusicLoverWhereInput[]
+    name?: StringFilter<"UserMusicLover"> | string
+    password?: StringFilter<"UserMusicLover"> | string
+    createdAt?: DateTimeFilter<"UserMusicLover"> | Date | string
+    concerts?: ConcertMusicLoverListRelationFilter
+    reviews?: ReviewMusicLoverListRelationFilter
+  }, "id" | "email">
+
+  export type UserMusicLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    _count?: UserMusicLoverCountOrderByAggregateInput
+    _max?: UserMusicLoverMaxOrderByAggregateInput
+    _min?: UserMusicLoverMinOrderByAggregateInput
+  }
+
+  export type UserMusicLoverScalarWhereWithAggregatesInput = {
+    AND?: UserMusicLoverScalarWhereWithAggregatesInput | UserMusicLoverScalarWhereWithAggregatesInput[]
+    OR?: UserMusicLoverScalarWhereWithAggregatesInput[]
+    NOT?: UserMusicLoverScalarWhereWithAggregatesInput | UserMusicLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserMusicLover"> | string
+    email?: StringWithAggregatesFilter<"UserMusicLover"> | string
+    name?: StringWithAggregatesFilter<"UserMusicLover"> | string
+    password?: StringWithAggregatesFilter<"UserMusicLover"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"UserMusicLover"> | Date | string
+  }
+
+  export type ConcertMusicLoverWhereInput = {
+    AND?: ConcertMusicLoverWhereInput | ConcertMusicLoverWhereInput[]
+    OR?: ConcertMusicLoverWhereInput[]
+    NOT?: ConcertMusicLoverWhereInput | ConcertMusicLoverWhereInput[]
+    id?: StringFilter<"ConcertMusicLover"> | string
+    title?: StringFilter<"ConcertMusicLover"> | string
+    date?: DateTimeFilter<"ConcertMusicLover"> | Date | string
+    venue?: StringFilter<"ConcertMusicLover"> | string
+    genre?: StringFilter<"ConcertMusicLover"> | string
+    submittedBy?: StringFilter<"ConcertMusicLover"> | string
+    validated?: BoolFilter<"ConcertMusicLover"> | boolean
+    createdAt?: DateTimeFilter<"ConcertMusicLover"> | Date | string
+    user?: XOR<UserMusicLoverScalarRelationFilter, UserMusicLoverWhereInput>
+    reviews?: ReviewMusicLoverListRelationFilter
+  }
+
+  export type ConcertMusicLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    date?: SortOrder
+    venue?: SortOrder
+    genre?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    user?: UserMusicLoverOrderByWithRelationInput
+    reviews?: ReviewMusicLoverOrderByRelationAggregateInput
+  }
+
+  export type ConcertMusicLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ConcertMusicLoverWhereInput | ConcertMusicLoverWhereInput[]
+    OR?: ConcertMusicLoverWhereInput[]
+    NOT?: ConcertMusicLoverWhereInput | ConcertMusicLoverWhereInput[]
+    title?: StringFilter<"ConcertMusicLover"> | string
+    date?: DateTimeFilter<"ConcertMusicLover"> | Date | string
+    venue?: StringFilter<"ConcertMusicLover"> | string
+    genre?: StringFilter<"ConcertMusicLover"> | string
+    submittedBy?: StringFilter<"ConcertMusicLover"> | string
+    validated?: BoolFilter<"ConcertMusicLover"> | boolean
+    createdAt?: DateTimeFilter<"ConcertMusicLover"> | Date | string
+    user?: XOR<UserMusicLoverScalarRelationFilter, UserMusicLoverWhereInput>
+    reviews?: ReviewMusicLoverListRelationFilter
+  }, "id">
+
+  export type ConcertMusicLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    date?: SortOrder
+    venue?: SortOrder
+    genre?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: ConcertMusicLoverCountOrderByAggregateInput
+    _max?: ConcertMusicLoverMaxOrderByAggregateInput
+    _min?: ConcertMusicLoverMinOrderByAggregateInput
+  }
+
+  export type ConcertMusicLoverScalarWhereWithAggregatesInput = {
+    AND?: ConcertMusicLoverScalarWhereWithAggregatesInput | ConcertMusicLoverScalarWhereWithAggregatesInput[]
+    OR?: ConcertMusicLoverScalarWhereWithAggregatesInput[]
+    NOT?: ConcertMusicLoverScalarWhereWithAggregatesInput | ConcertMusicLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ConcertMusicLover"> | string
+    title?: StringWithAggregatesFilter<"ConcertMusicLover"> | string
+    date?: DateTimeWithAggregatesFilter<"ConcertMusicLover"> | Date | string
+    venue?: StringWithAggregatesFilter<"ConcertMusicLover"> | string
+    genre?: StringWithAggregatesFilter<"ConcertMusicLover"> | string
+    submittedBy?: StringWithAggregatesFilter<"ConcertMusicLover"> | string
+    validated?: BoolWithAggregatesFilter<"ConcertMusicLover"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"ConcertMusicLover"> | Date | string
+  }
+
+  export type ReviewMusicLoverWhereInput = {
+    AND?: ReviewMusicLoverWhereInput | ReviewMusicLoverWhereInput[]
+    OR?: ReviewMusicLoverWhereInput[]
+    NOT?: ReviewMusicLoverWhereInput | ReviewMusicLoverWhereInput[]
+    id?: StringFilter<"ReviewMusicLover"> | string
+    concertId?: StringFilter<"ReviewMusicLover"> | string
+    userId?: StringFilter<"ReviewMusicLover"> | string
+    rating?: IntFilter<"ReviewMusicLover"> | number
+    comment?: StringFilter<"ReviewMusicLover"> | string
+    validated?: BoolFilter<"ReviewMusicLover"> | boolean
+    createdAt?: DateTimeFilter<"ReviewMusicLover"> | Date | string
+    user?: XOR<UserMusicLoverScalarRelationFilter, UserMusicLoverWhereInput>
+    concert?: XOR<ConcertMusicLoverScalarRelationFilter, ConcertMusicLoverWhereInput>
+  }
+
+  export type ReviewMusicLoverOrderByWithRelationInput = {
+    id?: SortOrder
+    concertId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    user?: UserMusicLoverOrderByWithRelationInput
+    concert?: ConcertMusicLoverOrderByWithRelationInput
+  }
+
+  export type ReviewMusicLoverWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ReviewMusicLoverWhereInput | ReviewMusicLoverWhereInput[]
+    OR?: ReviewMusicLoverWhereInput[]
+    NOT?: ReviewMusicLoverWhereInput | ReviewMusicLoverWhereInput[]
+    concertId?: StringFilter<"ReviewMusicLover"> | string
+    userId?: StringFilter<"ReviewMusicLover"> | string
+    rating?: IntFilter<"ReviewMusicLover"> | number
+    comment?: StringFilter<"ReviewMusicLover"> | string
+    validated?: BoolFilter<"ReviewMusicLover"> | boolean
+    createdAt?: DateTimeFilter<"ReviewMusicLover"> | Date | string
+    user?: XOR<UserMusicLoverScalarRelationFilter, UserMusicLoverWhereInput>
+    concert?: XOR<ConcertMusicLoverScalarRelationFilter, ConcertMusicLoverWhereInput>
+  }, "id">
+
+  export type ReviewMusicLoverOrderByWithAggregationInput = {
+    id?: SortOrder
+    concertId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: ReviewMusicLoverCountOrderByAggregateInput
+    _avg?: ReviewMusicLoverAvgOrderByAggregateInput
+    _max?: ReviewMusicLoverMaxOrderByAggregateInput
+    _min?: ReviewMusicLoverMinOrderByAggregateInput
+    _sum?: ReviewMusicLoverSumOrderByAggregateInput
+  }
+
+  export type ReviewMusicLoverScalarWhereWithAggregatesInput = {
+    AND?: ReviewMusicLoverScalarWhereWithAggregatesInput | ReviewMusicLoverScalarWhereWithAggregatesInput[]
+    OR?: ReviewMusicLoverScalarWhereWithAggregatesInput[]
+    NOT?: ReviewMusicLoverScalarWhereWithAggregatesInput | ReviewMusicLoverScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReviewMusicLover"> | string
+    concertId?: StringWithAggregatesFilter<"ReviewMusicLover"> | string
+    userId?: StringWithAggregatesFilter<"ReviewMusicLover"> | string
+    rating?: IntWithAggregatesFilter<"ReviewMusicLover"> | number
+    comment?: StringWithAggregatesFilter<"ReviewMusicLover"> | string
+    validated?: BoolWithAggregatesFilter<"ReviewMusicLover"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"ReviewMusicLover"> | Date | string
+  }
+
   export type EventOrganizerUserCreateInput = {
     id?: string
     email: string
@@ -25224,6 +29158,218 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserMusicLoverCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    concerts?: ConcertMusicLoverCreateNestedManyWithoutUserInput
+    reviews?: ReviewMusicLoverCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMusicLoverUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    concerts?: ConcertMusicLoverUncheckedCreateNestedManyWithoutUserInput
+    reviews?: ReviewMusicLoverUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMusicLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    concerts?: ConcertMusicLoverUpdateManyWithoutUserNestedInput
+    reviews?: ReviewMusicLoverUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMusicLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    concerts?: ConcertMusicLoverUncheckedUpdateManyWithoutUserNestedInput
+    reviews?: ReviewMusicLoverUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMusicLoverCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+  }
+
+  export type UserMusicLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserMusicLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ConcertMusicLoverCreateInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserMusicLoverCreateNestedOneWithoutConcertsInput
+    reviews?: ReviewMusicLoverCreateNestedManyWithoutConcertInput
+  }
+
+  export type ConcertMusicLoverUncheckedCreateInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewMusicLoverUncheckedCreateNestedManyWithoutConcertInput
+  }
+
+  export type ConcertMusicLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMusicLoverUpdateOneRequiredWithoutConcertsNestedInput
+    reviews?: ReviewMusicLoverUpdateManyWithoutConcertNestedInput
+  }
+
+  export type ConcertMusicLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewMusicLoverUncheckedUpdateManyWithoutConcertNestedInput
+  }
+
+  export type ConcertMusicLoverCreateManyInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ConcertMusicLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ConcertMusicLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewMusicLoverCreateInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserMusicLoverCreateNestedOneWithoutReviewsInput
+    concert: ConcertMusicLoverCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewMusicLoverUncheckedCreateInput = {
+    id?: string
+    concertId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewMusicLoverUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMusicLoverUpdateOneRequiredWithoutReviewsNestedInput
+    concert?: ConcertMusicLoverUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    concertId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewMusicLoverCreateManyInput = {
+    id?: string
+    concertId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewMusicLoverUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    concertId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -26063,6 +30209,131 @@ export namespace Prisma {
     location?: SortOrder
     contact?: SortOrder
     createdAt?: SortOrder
+  }
+
+  export type ConcertMusicLoverListRelationFilter = {
+    every?: ConcertMusicLoverWhereInput
+    some?: ConcertMusicLoverWhereInput
+    none?: ConcertMusicLoverWhereInput
+  }
+
+  export type ReviewMusicLoverListRelationFilter = {
+    every?: ReviewMusicLoverWhereInput
+    some?: ReviewMusicLoverWhereInput
+    none?: ReviewMusicLoverWhereInput
+  }
+
+  export type ConcertMusicLoverOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ReviewMusicLoverOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserMusicLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserMusicLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserMusicLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserMusicLoverScalarRelationFilter = {
+    is?: UserMusicLoverWhereInput
+    isNot?: UserMusicLoverWhereInput
+  }
+
+  export type ConcertMusicLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    date?: SortOrder
+    venue?: SortOrder
+    genre?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ConcertMusicLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    date?: SortOrder
+    venue?: SortOrder
+    genre?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ConcertMusicLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    date?: SortOrder
+    venue?: SortOrder
+    genre?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ConcertMusicLoverScalarRelationFilter = {
+    is?: ConcertMusicLoverWhereInput
+    isNot?: ConcertMusicLoverWhereInput
+  }
+
+  export type ReviewMusicLoverCountOrderByAggregateInput = {
+    id?: SortOrder
+    concertId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewMusicLoverAvgOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type ReviewMusicLoverMaxOrderByAggregateInput = {
+    id?: SortOrder
+    concertId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewMusicLoverMinOrderByAggregateInput = {
+    id?: SortOrder
+    concertId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewMusicLoverSumOrderByAggregateInput = {
+    rating?: SortOrder
   }
 
   export type EventOrganizerTaskCreateNestedManyWithoutUserInput = {
@@ -27048,6 +31319,174 @@ export namespace Prisma {
   export type ClinicHealthTrackerUpdateavailableSlotsInput = {
     set?: string[]
     push?: string | string[]
+  }
+
+  export type ConcertMusicLoverCreateNestedManyWithoutUserInput = {
+    create?: XOR<ConcertMusicLoverCreateWithoutUserInput, ConcertMusicLoverUncheckedCreateWithoutUserInput> | ConcertMusicLoverCreateWithoutUserInput[] | ConcertMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ConcertMusicLoverCreateOrConnectWithoutUserInput | ConcertMusicLoverCreateOrConnectWithoutUserInput[]
+    createMany?: ConcertMusicLoverCreateManyUserInputEnvelope
+    connect?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+  }
+
+  export type ReviewMusicLoverCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutUserInput, ReviewMusicLoverUncheckedCreateWithoutUserInput> | ReviewMusicLoverCreateWithoutUserInput[] | ReviewMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutUserInput | ReviewMusicLoverCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewMusicLoverCreateManyUserInputEnvelope
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+  }
+
+  export type ConcertMusicLoverUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ConcertMusicLoverCreateWithoutUserInput, ConcertMusicLoverUncheckedCreateWithoutUserInput> | ConcertMusicLoverCreateWithoutUserInput[] | ConcertMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ConcertMusicLoverCreateOrConnectWithoutUserInput | ConcertMusicLoverCreateOrConnectWithoutUserInput[]
+    createMany?: ConcertMusicLoverCreateManyUserInputEnvelope
+    connect?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+  }
+
+  export type ReviewMusicLoverUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutUserInput, ReviewMusicLoverUncheckedCreateWithoutUserInput> | ReviewMusicLoverCreateWithoutUserInput[] | ReviewMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutUserInput | ReviewMusicLoverCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewMusicLoverCreateManyUserInputEnvelope
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+  }
+
+  export type ConcertMusicLoverUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ConcertMusicLoverCreateWithoutUserInput, ConcertMusicLoverUncheckedCreateWithoutUserInput> | ConcertMusicLoverCreateWithoutUserInput[] | ConcertMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ConcertMusicLoverCreateOrConnectWithoutUserInput | ConcertMusicLoverCreateOrConnectWithoutUserInput[]
+    upsert?: ConcertMusicLoverUpsertWithWhereUniqueWithoutUserInput | ConcertMusicLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ConcertMusicLoverCreateManyUserInputEnvelope
+    set?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    disconnect?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    delete?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    connect?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    update?: ConcertMusicLoverUpdateWithWhereUniqueWithoutUserInput | ConcertMusicLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ConcertMusicLoverUpdateManyWithWhereWithoutUserInput | ConcertMusicLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ConcertMusicLoverScalarWhereInput | ConcertMusicLoverScalarWhereInput[]
+  }
+
+  export type ReviewMusicLoverUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutUserInput, ReviewMusicLoverUncheckedCreateWithoutUserInput> | ReviewMusicLoverCreateWithoutUserInput[] | ReviewMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutUserInput | ReviewMusicLoverCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewMusicLoverUpsertWithWhereUniqueWithoutUserInput | ReviewMusicLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewMusicLoverCreateManyUserInputEnvelope
+    set?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    disconnect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    delete?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    update?: ReviewMusicLoverUpdateWithWhereUniqueWithoutUserInput | ReviewMusicLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewMusicLoverUpdateManyWithWhereWithoutUserInput | ReviewMusicLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewMusicLoverScalarWhereInput | ReviewMusicLoverScalarWhereInput[]
+  }
+
+  export type ConcertMusicLoverUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ConcertMusicLoverCreateWithoutUserInput, ConcertMusicLoverUncheckedCreateWithoutUserInput> | ConcertMusicLoverCreateWithoutUserInput[] | ConcertMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ConcertMusicLoverCreateOrConnectWithoutUserInput | ConcertMusicLoverCreateOrConnectWithoutUserInput[]
+    upsert?: ConcertMusicLoverUpsertWithWhereUniqueWithoutUserInput | ConcertMusicLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ConcertMusicLoverCreateManyUserInputEnvelope
+    set?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    disconnect?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    delete?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    connect?: ConcertMusicLoverWhereUniqueInput | ConcertMusicLoverWhereUniqueInput[]
+    update?: ConcertMusicLoverUpdateWithWhereUniqueWithoutUserInput | ConcertMusicLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ConcertMusicLoverUpdateManyWithWhereWithoutUserInput | ConcertMusicLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ConcertMusicLoverScalarWhereInput | ConcertMusicLoverScalarWhereInput[]
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutUserInput, ReviewMusicLoverUncheckedCreateWithoutUserInput> | ReviewMusicLoverCreateWithoutUserInput[] | ReviewMusicLoverUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutUserInput | ReviewMusicLoverCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewMusicLoverUpsertWithWhereUniqueWithoutUserInput | ReviewMusicLoverUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewMusicLoverCreateManyUserInputEnvelope
+    set?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    disconnect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    delete?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    update?: ReviewMusicLoverUpdateWithWhereUniqueWithoutUserInput | ReviewMusicLoverUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewMusicLoverUpdateManyWithWhereWithoutUserInput | ReviewMusicLoverUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewMusicLoverScalarWhereInput | ReviewMusicLoverScalarWhereInput[]
+  }
+
+  export type UserMusicLoverCreateNestedOneWithoutConcertsInput = {
+    create?: XOR<UserMusicLoverCreateWithoutConcertsInput, UserMusicLoverUncheckedCreateWithoutConcertsInput>
+    connectOrCreate?: UserMusicLoverCreateOrConnectWithoutConcertsInput
+    connect?: UserMusicLoverWhereUniqueInput
+  }
+
+  export type ReviewMusicLoverCreateNestedManyWithoutConcertInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutConcertInput, ReviewMusicLoverUncheckedCreateWithoutConcertInput> | ReviewMusicLoverCreateWithoutConcertInput[] | ReviewMusicLoverUncheckedCreateWithoutConcertInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutConcertInput | ReviewMusicLoverCreateOrConnectWithoutConcertInput[]
+    createMany?: ReviewMusicLoverCreateManyConcertInputEnvelope
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+  }
+
+  export type ReviewMusicLoverUncheckedCreateNestedManyWithoutConcertInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutConcertInput, ReviewMusicLoverUncheckedCreateWithoutConcertInput> | ReviewMusicLoverCreateWithoutConcertInput[] | ReviewMusicLoverUncheckedCreateWithoutConcertInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutConcertInput | ReviewMusicLoverCreateOrConnectWithoutConcertInput[]
+    createMany?: ReviewMusicLoverCreateManyConcertInputEnvelope
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+  }
+
+  export type UserMusicLoverUpdateOneRequiredWithoutConcertsNestedInput = {
+    create?: XOR<UserMusicLoverCreateWithoutConcertsInput, UserMusicLoverUncheckedCreateWithoutConcertsInput>
+    connectOrCreate?: UserMusicLoverCreateOrConnectWithoutConcertsInput
+    upsert?: UserMusicLoverUpsertWithoutConcertsInput
+    connect?: UserMusicLoverWhereUniqueInput
+    update?: XOR<XOR<UserMusicLoverUpdateToOneWithWhereWithoutConcertsInput, UserMusicLoverUpdateWithoutConcertsInput>, UserMusicLoverUncheckedUpdateWithoutConcertsInput>
+  }
+
+  export type ReviewMusicLoverUpdateManyWithoutConcertNestedInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutConcertInput, ReviewMusicLoverUncheckedCreateWithoutConcertInput> | ReviewMusicLoverCreateWithoutConcertInput[] | ReviewMusicLoverUncheckedCreateWithoutConcertInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutConcertInput | ReviewMusicLoverCreateOrConnectWithoutConcertInput[]
+    upsert?: ReviewMusicLoverUpsertWithWhereUniqueWithoutConcertInput | ReviewMusicLoverUpsertWithWhereUniqueWithoutConcertInput[]
+    createMany?: ReviewMusicLoverCreateManyConcertInputEnvelope
+    set?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    disconnect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    delete?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    update?: ReviewMusicLoverUpdateWithWhereUniqueWithoutConcertInput | ReviewMusicLoverUpdateWithWhereUniqueWithoutConcertInput[]
+    updateMany?: ReviewMusicLoverUpdateManyWithWhereWithoutConcertInput | ReviewMusicLoverUpdateManyWithWhereWithoutConcertInput[]
+    deleteMany?: ReviewMusicLoverScalarWhereInput | ReviewMusicLoverScalarWhereInput[]
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateManyWithoutConcertNestedInput = {
+    create?: XOR<ReviewMusicLoverCreateWithoutConcertInput, ReviewMusicLoverUncheckedCreateWithoutConcertInput> | ReviewMusicLoverCreateWithoutConcertInput[] | ReviewMusicLoverUncheckedCreateWithoutConcertInput[]
+    connectOrCreate?: ReviewMusicLoverCreateOrConnectWithoutConcertInput | ReviewMusicLoverCreateOrConnectWithoutConcertInput[]
+    upsert?: ReviewMusicLoverUpsertWithWhereUniqueWithoutConcertInput | ReviewMusicLoverUpsertWithWhereUniqueWithoutConcertInput[]
+    createMany?: ReviewMusicLoverCreateManyConcertInputEnvelope
+    set?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    disconnect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    delete?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    connect?: ReviewMusicLoverWhereUniqueInput | ReviewMusicLoverWhereUniqueInput[]
+    update?: ReviewMusicLoverUpdateWithWhereUniqueWithoutConcertInput | ReviewMusicLoverUpdateWithWhereUniqueWithoutConcertInput[]
+    updateMany?: ReviewMusicLoverUpdateManyWithWhereWithoutConcertInput | ReviewMusicLoverUpdateManyWithWhereWithoutConcertInput[]
+    deleteMany?: ReviewMusicLoverScalarWhereInput | ReviewMusicLoverScalarWhereInput[]
+  }
+
+  export type UserMusicLoverCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<UserMusicLoverCreateWithoutReviewsInput, UserMusicLoverUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: UserMusicLoverCreateOrConnectWithoutReviewsInput
+    connect?: UserMusicLoverWhereUniqueInput
+  }
+
+  export type ConcertMusicLoverCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<ConcertMusicLoverCreateWithoutReviewsInput, ConcertMusicLoverUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: ConcertMusicLoverCreateOrConnectWithoutReviewsInput
+    connect?: ConcertMusicLoverWhereUniqueInput
+  }
+
+  export type UserMusicLoverUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<UserMusicLoverCreateWithoutReviewsInput, UserMusicLoverUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: UserMusicLoverCreateOrConnectWithoutReviewsInput
+    upsert?: UserMusicLoverUpsertWithoutReviewsInput
+    connect?: UserMusicLoverWhereUniqueInput
+    update?: XOR<XOR<UserMusicLoverUpdateToOneWithWhereWithoutReviewsInput, UserMusicLoverUpdateWithoutReviewsInput>, UserMusicLoverUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type ConcertMusicLoverUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<ConcertMusicLoverCreateWithoutReviewsInput, ConcertMusicLoverUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: ConcertMusicLoverCreateOrConnectWithoutReviewsInput
+    upsert?: ConcertMusicLoverUpsertWithoutReviewsInput
+    connect?: ConcertMusicLoverWhereUniqueInput
+    update?: XOR<XOR<ConcertMusicLoverUpdateToOneWithWhereWithoutReviewsInput, ConcertMusicLoverUpdateWithoutReviewsInput>, ConcertMusicLoverUncheckedUpdateWithoutReviewsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -29118,6 +33557,333 @@ export namespace Prisma {
     schedules?: ScheduleHealthTrackerUncheckedUpdateManyWithoutUserNestedInput
   }
 
+  export type ConcertMusicLoverCreateWithoutUserInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewMusicLoverCreateNestedManyWithoutConcertInput
+  }
+
+  export type ConcertMusicLoverUncheckedCreateWithoutUserInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewMusicLoverUncheckedCreateNestedManyWithoutConcertInput
+  }
+
+  export type ConcertMusicLoverCreateOrConnectWithoutUserInput = {
+    where: ConcertMusicLoverWhereUniqueInput
+    create: XOR<ConcertMusicLoverCreateWithoutUserInput, ConcertMusicLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type ConcertMusicLoverCreateManyUserInputEnvelope = {
+    data: ConcertMusicLoverCreateManyUserInput | ConcertMusicLoverCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReviewMusicLoverCreateWithoutUserInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    concert: ConcertMusicLoverCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewMusicLoverUncheckedCreateWithoutUserInput = {
+    id?: string
+    concertId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewMusicLoverCreateOrConnectWithoutUserInput = {
+    where: ReviewMusicLoverWhereUniqueInput
+    create: XOR<ReviewMusicLoverCreateWithoutUserInput, ReviewMusicLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewMusicLoverCreateManyUserInputEnvelope = {
+    data: ReviewMusicLoverCreateManyUserInput | ReviewMusicLoverCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ConcertMusicLoverUpsertWithWhereUniqueWithoutUserInput = {
+    where: ConcertMusicLoverWhereUniqueInput
+    update: XOR<ConcertMusicLoverUpdateWithoutUserInput, ConcertMusicLoverUncheckedUpdateWithoutUserInput>
+    create: XOR<ConcertMusicLoverCreateWithoutUserInput, ConcertMusicLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type ConcertMusicLoverUpdateWithWhereUniqueWithoutUserInput = {
+    where: ConcertMusicLoverWhereUniqueInput
+    data: XOR<ConcertMusicLoverUpdateWithoutUserInput, ConcertMusicLoverUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ConcertMusicLoverUpdateManyWithWhereWithoutUserInput = {
+    where: ConcertMusicLoverScalarWhereInput
+    data: XOR<ConcertMusicLoverUpdateManyMutationInput, ConcertMusicLoverUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ConcertMusicLoverScalarWhereInput = {
+    AND?: ConcertMusicLoverScalarWhereInput | ConcertMusicLoverScalarWhereInput[]
+    OR?: ConcertMusicLoverScalarWhereInput[]
+    NOT?: ConcertMusicLoverScalarWhereInput | ConcertMusicLoverScalarWhereInput[]
+    id?: StringFilter<"ConcertMusicLover"> | string
+    title?: StringFilter<"ConcertMusicLover"> | string
+    date?: DateTimeFilter<"ConcertMusicLover"> | Date | string
+    venue?: StringFilter<"ConcertMusicLover"> | string
+    genre?: StringFilter<"ConcertMusicLover"> | string
+    submittedBy?: StringFilter<"ConcertMusicLover"> | string
+    validated?: BoolFilter<"ConcertMusicLover"> | boolean
+    createdAt?: DateTimeFilter<"ConcertMusicLover"> | Date | string
+  }
+
+  export type ReviewMusicLoverUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReviewMusicLoverWhereUniqueInput
+    update: XOR<ReviewMusicLoverUpdateWithoutUserInput, ReviewMusicLoverUncheckedUpdateWithoutUserInput>
+    create: XOR<ReviewMusicLoverCreateWithoutUserInput, ReviewMusicLoverUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewMusicLoverUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReviewMusicLoverWhereUniqueInput
+    data: XOR<ReviewMusicLoverUpdateWithoutUserInput, ReviewMusicLoverUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ReviewMusicLoverUpdateManyWithWhereWithoutUserInput = {
+    where: ReviewMusicLoverScalarWhereInput
+    data: XOR<ReviewMusicLoverUpdateManyMutationInput, ReviewMusicLoverUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ReviewMusicLoverScalarWhereInput = {
+    AND?: ReviewMusicLoverScalarWhereInput | ReviewMusicLoverScalarWhereInput[]
+    OR?: ReviewMusicLoverScalarWhereInput[]
+    NOT?: ReviewMusicLoverScalarWhereInput | ReviewMusicLoverScalarWhereInput[]
+    id?: StringFilter<"ReviewMusicLover"> | string
+    concertId?: StringFilter<"ReviewMusicLover"> | string
+    userId?: StringFilter<"ReviewMusicLover"> | string
+    rating?: IntFilter<"ReviewMusicLover"> | number
+    comment?: StringFilter<"ReviewMusicLover"> | string
+    validated?: BoolFilter<"ReviewMusicLover"> | boolean
+    createdAt?: DateTimeFilter<"ReviewMusicLover"> | Date | string
+  }
+
+  export type UserMusicLoverCreateWithoutConcertsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    reviews?: ReviewMusicLoverCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMusicLoverUncheckedCreateWithoutConcertsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    reviews?: ReviewMusicLoverUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMusicLoverCreateOrConnectWithoutConcertsInput = {
+    where: UserMusicLoverWhereUniqueInput
+    create: XOR<UserMusicLoverCreateWithoutConcertsInput, UserMusicLoverUncheckedCreateWithoutConcertsInput>
+  }
+
+  export type ReviewMusicLoverCreateWithoutConcertInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserMusicLoverCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewMusicLoverUncheckedCreateWithoutConcertInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewMusicLoverCreateOrConnectWithoutConcertInput = {
+    where: ReviewMusicLoverWhereUniqueInput
+    create: XOR<ReviewMusicLoverCreateWithoutConcertInput, ReviewMusicLoverUncheckedCreateWithoutConcertInput>
+  }
+
+  export type ReviewMusicLoverCreateManyConcertInputEnvelope = {
+    data: ReviewMusicLoverCreateManyConcertInput | ReviewMusicLoverCreateManyConcertInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserMusicLoverUpsertWithoutConcertsInput = {
+    update: XOR<UserMusicLoverUpdateWithoutConcertsInput, UserMusicLoverUncheckedUpdateWithoutConcertsInput>
+    create: XOR<UserMusicLoverCreateWithoutConcertsInput, UserMusicLoverUncheckedCreateWithoutConcertsInput>
+    where?: UserMusicLoverWhereInput
+  }
+
+  export type UserMusicLoverUpdateToOneWithWhereWithoutConcertsInput = {
+    where?: UserMusicLoverWhereInput
+    data: XOR<UserMusicLoverUpdateWithoutConcertsInput, UserMusicLoverUncheckedUpdateWithoutConcertsInput>
+  }
+
+  export type UserMusicLoverUpdateWithoutConcertsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewMusicLoverUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMusicLoverUncheckedUpdateWithoutConcertsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewMusicLoverUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ReviewMusicLoverUpsertWithWhereUniqueWithoutConcertInput = {
+    where: ReviewMusicLoverWhereUniqueInput
+    update: XOR<ReviewMusicLoverUpdateWithoutConcertInput, ReviewMusicLoverUncheckedUpdateWithoutConcertInput>
+    create: XOR<ReviewMusicLoverCreateWithoutConcertInput, ReviewMusicLoverUncheckedCreateWithoutConcertInput>
+  }
+
+  export type ReviewMusicLoverUpdateWithWhereUniqueWithoutConcertInput = {
+    where: ReviewMusicLoverWhereUniqueInput
+    data: XOR<ReviewMusicLoverUpdateWithoutConcertInput, ReviewMusicLoverUncheckedUpdateWithoutConcertInput>
+  }
+
+  export type ReviewMusicLoverUpdateManyWithWhereWithoutConcertInput = {
+    where: ReviewMusicLoverScalarWhereInput
+    data: XOR<ReviewMusicLoverUpdateManyMutationInput, ReviewMusicLoverUncheckedUpdateManyWithoutConcertInput>
+  }
+
+  export type UserMusicLoverCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    concerts?: ConcertMusicLoverCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMusicLoverUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    concerts?: ConcertMusicLoverUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserMusicLoverCreateOrConnectWithoutReviewsInput = {
+    where: UserMusicLoverWhereUniqueInput
+    create: XOR<UserMusicLoverCreateWithoutReviewsInput, UserMusicLoverUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type ConcertMusicLoverCreateWithoutReviewsInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserMusicLoverCreateNestedOneWithoutConcertsInput
+  }
+
+  export type ConcertMusicLoverUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ConcertMusicLoverCreateOrConnectWithoutReviewsInput = {
+    where: ConcertMusicLoverWhereUniqueInput
+    create: XOR<ConcertMusicLoverCreateWithoutReviewsInput, ConcertMusicLoverUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type UserMusicLoverUpsertWithoutReviewsInput = {
+    update: XOR<UserMusicLoverUpdateWithoutReviewsInput, UserMusicLoverUncheckedUpdateWithoutReviewsInput>
+    create: XOR<UserMusicLoverCreateWithoutReviewsInput, UserMusicLoverUncheckedCreateWithoutReviewsInput>
+    where?: UserMusicLoverWhereInput
+  }
+
+  export type UserMusicLoverUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: UserMusicLoverWhereInput
+    data: XOR<UserMusicLoverUpdateWithoutReviewsInput, UserMusicLoverUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type UserMusicLoverUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    concerts?: ConcertMusicLoverUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserMusicLoverUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    concerts?: ConcertMusicLoverUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ConcertMusicLoverUpsertWithoutReviewsInput = {
+    update: XOR<ConcertMusicLoverUpdateWithoutReviewsInput, ConcertMusicLoverUncheckedUpdateWithoutReviewsInput>
+    create: XOR<ConcertMusicLoverCreateWithoutReviewsInput, ConcertMusicLoverUncheckedCreateWithoutReviewsInput>
+    where?: ConcertMusicLoverWhereInput
+  }
+
+  export type ConcertMusicLoverUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: ConcertMusicLoverWhereInput
+    data: XOR<ConcertMusicLoverUpdateWithoutReviewsInput, ConcertMusicLoverUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type ConcertMusicLoverUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMusicLoverUpdateOneRequiredWithoutConcertsNestedInput
+  }
+
+  export type ConcertMusicLoverUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type EventOrganizerTaskCreateManyUserInput = {
     id?: string
     title: string
@@ -29673,6 +34439,120 @@ export namespace Prisma {
     type?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ConcertMusicLoverCreateManyUserInput = {
+    id?: string
+    title: string
+    date: Date | string
+    venue: string
+    genre: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewMusicLoverCreateManyUserInput = {
+    id?: string
+    concertId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ConcertMusicLoverUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewMusicLoverUpdateManyWithoutConcertNestedInput
+  }
+
+  export type ConcertMusicLoverUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewMusicLoverUncheckedUpdateManyWithoutConcertNestedInput
+  }
+
+  export type ConcertMusicLoverUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    venue?: StringFieldUpdateOperationsInput | string
+    genre?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewMusicLoverUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    concert?: ConcertMusicLoverUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    concertId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    concertId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewMusicLoverCreateManyConcertInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewMusicLoverUpdateWithoutConcertInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserMusicLoverUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateWithoutConcertInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewMusicLoverUncheckedUpdateManyWithoutConcertInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

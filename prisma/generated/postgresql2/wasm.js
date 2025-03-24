@@ -283,6 +283,35 @@ exports.Prisma.ClinicHealthTrackerScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserMusicLoverScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ConcertMusicLoverScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  date: 'date',
+  venue: 'venue',
+  genre: 'genre',
+  submittedBy: 'submittedBy',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ReviewMusicLoverScalarFieldEnum = {
+  id: 'id',
+  concertId: 'concertId',
+  userId: 'userId',
+  rating: 'rating',
+  comment: 'comment',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -317,7 +346,10 @@ exports.Prisma.ModelName = {
   UserHealthTracker: 'UserHealthTracker',
   ScheduleHealthTracker: 'ScheduleHealthTracker',
   RecordHealthTracker: 'RecordHealthTracker',
-  ClinicHealthTracker: 'ClinicHealthTracker'
+  ClinicHealthTracker: 'ClinicHealthTracker',
+  UserMusicLover: 'UserMusicLover',
+  ConcertMusicLover: 'ConcertMusicLover',
+  ReviewMusicLover: 'ReviewMusicLover'
 };
 
 /**
