@@ -4,7 +4,7 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 const prisma = new PostgresqlClient();
 
 // ✅ Admin: Delete Review
-export async function ADMIN_REVIEW_DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     await prisma.reviewEduSeeker.delete({ where: { id: params.id } });
     return NextResponse.json({ message: "Review deleted by admin successfully" }, { status: 200 });
