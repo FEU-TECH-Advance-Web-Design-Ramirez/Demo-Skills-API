@@ -397,6 +397,36 @@ exports.Prisma.ReviewEduSeekerScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserFinanceManagerScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.TransactionFinanceManagerScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  amount: 'amount',
+  type: 'type',
+  category: 'category',
+  source: 'source',
+  date: 'date',
+  description: 'description',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.GoalFinanceManagerScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  title: 'title',
+  targetAmount: 'targetAmount',
+  deadline: 'deadline',
+  description: 'description',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -445,7 +475,10 @@ exports.Prisma.ModelName = {
   ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking',
   UserEduSeeker: 'UserEduSeeker',
   PlatformEduSeeker: 'PlatformEduSeeker',
-  ReviewEduSeeker: 'ReviewEduSeeker'
+  ReviewEduSeeker: 'ReviewEduSeeker',
+  UserFinanceManager: 'UserFinanceManager',
+  TransactionFinanceManager: 'TransactionFinanceManager',
+  GoalFinanceManager: 'GoalFinanceManager'
 };
 
 /**
