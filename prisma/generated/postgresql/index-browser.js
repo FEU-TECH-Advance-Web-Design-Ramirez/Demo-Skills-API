@@ -368,6 +368,35 @@ exports.Prisma.ElderlyCareCompanionMedicationTrackingScalarFieldEnum = {
   dateTime: 'dateTime'
 };
 
+exports.Prisma.UserEduSeekerScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.PlatformEduSeekerScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  category: 'category',
+  url: 'url',
+  submittedBy: 'submittedBy',
+  createdAt: 'createdAt',
+  validated: 'validated'
+};
+
+exports.Prisma.ReviewEduSeekerScalarFieldEnum = {
+  id: 'id',
+  platformId: 'platformId',
+  userId: 'userId',
+  rating: 'rating',
+  comment: 'comment',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -413,7 +442,10 @@ exports.Prisma.ModelName = {
   ElderlyCareCompanionClinic: 'ElderlyCareCompanionClinic',
   ElderlyCareCompanionStore: 'ElderlyCareCompanionStore',
   ElderlyCareCompanionRecord: 'ElderlyCareCompanionRecord',
-  ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking'
+  ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking',
+  UserEduSeeker: 'UserEduSeeker',
+  PlatformEduSeeker: 'PlatformEduSeeker',
+  ReviewEduSeeker: 'ReviewEduSeeker'
 };
 
 /**

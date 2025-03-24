@@ -359,3 +359,41 @@ model ElderlyCareCompanionMedicationTracking {
   user       UserElderlyCareCompanion        @relation(fields: [userId], references: [id], onDelete: Cascade)
   medication ElderlyCareCompanionAppointment @relation(fields: [medicationId], references: [id], onDelete: Cascade)
 }
+
+model UserEduSeeker {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  platforms PlatformEduSeeker[]
+  reviews   ReviewEduSeeker[]
+}
+
+model PlatformEduSeeker {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  category    String
+  url         String
+  submittedBy String
+  createdAt   DateTime @default(now())
+  validated   Boolean  @default(false)
+
+  submitter UserEduSeeker     @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
+  reviews   ReviewEduSeeker[]
+}
+
+model ReviewEduSeeker {
+  id         String   @id @default(uuid())
+  platformId String
+  userId     String
+  rating     Int
+  comment    String
+  validated  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  platform PlatformEduSeeker @relation(fields: [platformId], references: [id], onDelete: Cascade)
+  user     UserEduSeeker     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
