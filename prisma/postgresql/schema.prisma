@@ -397,3 +397,40 @@ model ReviewEduSeeker {
   platform PlatformEduSeeker @relation(fields: [platformId], references: [id], onDelete: Cascade)
   user     UserEduSeeker     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
+model UserFinanceManager {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  transactions TransactionFinanceManager[]
+  goals        GoalFinanceManager[]
+}
+
+model TransactionFinanceManager {
+  id          String   @id @default(uuid())
+  userId      String
+  amount      Decimal
+  type        String
+  category    String? // for expense
+  source      String? // for income
+  date        DateTime
+  description String
+  createdAt   DateTime @default(now())
+
+  user UserFinanceManager @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model GoalFinanceManager {
+  id           String   @id @default(uuid())
+  userId       String
+  title        String
+  targetAmount Decimal
+  deadline     DateTime
+  description  String
+  createdAt    DateTime @default(now())
+
+  user UserFinanceManager @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

@@ -91,14 +91,3 @@
 * **Delete a Review** → DELETE /api/EduSeeker/reviews/{review_id}  
   + **Required:** review_id  
   + **Response:** 200 OK with success message
-
----
-
-### 5️⃣ Platform Ranking & Discovery
-
-* **Get Top-Rated Platforms Leaderboard** → GET /api/EduSeeker/platforms/leaderboard  
-  + **Response:** 200 OK with list of top-rated platforms
-
-* **Search Platforms by Category or Name** → GET /api/EduSeeker/platforms/search  
-  + **Query Params:** category, name  
-  + **Response:** 200 OK with filtered platforms

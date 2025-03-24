@@ -173,6 +173,21 @@ export type PlatformEduSeeker = $Result.DefaultSelection<Prisma.$PlatformEduSeek
  * 
  */
 export type ReviewEduSeeker = $Result.DefaultSelection<Prisma.$ReviewEduSeekerPayload>
+/**
+ * Model UserFinanceManager
+ * 
+ */
+export type UserFinanceManager = $Result.DefaultSelection<Prisma.$UserFinanceManagerPayload>
+/**
+ * Model TransactionFinanceManager
+ * 
+ */
+export type TransactionFinanceManager = $Result.DefaultSelection<Prisma.$TransactionFinanceManagerPayload>
+/**
+ * Model GoalFinanceManager
+ * 
+ */
+export type GoalFinanceManager = $Result.DefaultSelection<Prisma.$GoalFinanceManagerPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -618,6 +633,36 @@ export class PrismaClient<
     * ```
     */
   get reviewEduSeeker(): Prisma.ReviewEduSeekerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userFinanceManager`: Exposes CRUD operations for the **UserFinanceManager** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserFinanceManagers
+    * const userFinanceManagers = await prisma.userFinanceManager.findMany()
+    * ```
+    */
+  get userFinanceManager(): Prisma.UserFinanceManagerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.transactionFinanceManager`: Exposes CRUD operations for the **TransactionFinanceManager** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more TransactionFinanceManagers
+    * const transactionFinanceManagers = await prisma.transactionFinanceManager.findMany()
+    * ```
+    */
+  get transactionFinanceManager(): Prisma.TransactionFinanceManagerDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.goalFinanceManager`: Exposes CRUD operations for the **GoalFinanceManager** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GoalFinanceManagers
+    * const goalFinanceManagers = await prisma.goalFinanceManager.findMany()
+    * ```
+    */
+  get goalFinanceManager(): Prisma.GoalFinanceManagerDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -1089,7 +1134,10 @@ export namespace Prisma {
     ElderlyCareCompanionMedicationTracking: 'ElderlyCareCompanionMedicationTracking',
     UserEduSeeker: 'UserEduSeeker',
     PlatformEduSeeker: 'PlatformEduSeeker',
-    ReviewEduSeeker: 'ReviewEduSeeker'
+    ReviewEduSeeker: 'ReviewEduSeeker',
+    UserFinanceManager: 'UserFinanceManager',
+    TransactionFinanceManager: 'TransactionFinanceManager',
+    GoalFinanceManager: 'GoalFinanceManager'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -1108,7 +1156,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "elderlyCareCompanionMedicationTracking" | "userEduSeeker" | "platformEduSeeker" | "reviewEduSeeker"
+      modelProps: "userDIYHomes" | "postDIYHomes" | "reviewDIYHomes" | "likeDIYHomes" | "bookmarkDIYHomes" | "reportDIYHomes" | "userUrbanExplorer" | "placeUrbanExplorer" | "reviewUrbanExplorer" | "likeUrbanExplorer" | "bookmarkUrbanExplorer" | "reportUrbanExplorer" | "userFoodie" | "foodieFood" | "foodieLocation" | "foodieReview" | "foodieLike" | "userPetLover" | "petPetLover" | "appointmentPetLover" | "vaccinationPetLover" | "clinicPetLover" | "storePetLover" | "userElderlyCareCompanion" | "elderlyCareCompanionAppointment" | "elderlyCareCompanionClinic" | "elderlyCareCompanionStore" | "elderlyCareCompanionRecord" | "elderlyCareCompanionMedicationTracking" | "userEduSeeker" | "platformEduSeeker" | "reviewEduSeeker" | "userFinanceManager" | "transactionFinanceManager" | "goalFinanceManager"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -3480,6 +3528,228 @@ export namespace Prisma {
           }
         }
       }
+      UserFinanceManager: {
+        payload: Prisma.$UserFinanceManagerPayload<ExtArgs>
+        fields: Prisma.UserFinanceManagerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserFinanceManagerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserFinanceManagerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>
+          }
+          findFirst: {
+            args: Prisma.UserFinanceManagerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserFinanceManagerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>
+          }
+          findMany: {
+            args: Prisma.UserFinanceManagerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>[]
+          }
+          create: {
+            args: Prisma.UserFinanceManagerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>
+          }
+          createMany: {
+            args: Prisma.UserFinanceManagerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserFinanceManagerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>[]
+          }
+          delete: {
+            args: Prisma.UserFinanceManagerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>
+          }
+          update: {
+            args: Prisma.UserFinanceManagerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserFinanceManagerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserFinanceManagerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserFinanceManagerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserFinanceManagerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserFinanceManagerPayload>
+          }
+          aggregate: {
+            args: Prisma.UserFinanceManagerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserFinanceManager>
+          }
+          groupBy: {
+            args: Prisma.UserFinanceManagerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserFinanceManagerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserFinanceManagerCountArgs<ExtArgs>
+            result: $Utils.Optional<UserFinanceManagerCountAggregateOutputType> | number
+          }
+        }
+      }
+      TransactionFinanceManager: {
+        payload: Prisma.$TransactionFinanceManagerPayload<ExtArgs>
+        fields: Prisma.TransactionFinanceManagerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.TransactionFinanceManagerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.TransactionFinanceManagerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>
+          }
+          findFirst: {
+            args: Prisma.TransactionFinanceManagerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.TransactionFinanceManagerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>
+          }
+          findMany: {
+            args: Prisma.TransactionFinanceManagerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>[]
+          }
+          create: {
+            args: Prisma.TransactionFinanceManagerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>
+          }
+          createMany: {
+            args: Prisma.TransactionFinanceManagerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.TransactionFinanceManagerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>[]
+          }
+          delete: {
+            args: Prisma.TransactionFinanceManagerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>
+          }
+          update: {
+            args: Prisma.TransactionFinanceManagerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>
+          }
+          deleteMany: {
+            args: Prisma.TransactionFinanceManagerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.TransactionFinanceManagerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.TransactionFinanceManagerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>[]
+          }
+          upsert: {
+            args: Prisma.TransactionFinanceManagerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TransactionFinanceManagerPayload>
+          }
+          aggregate: {
+            args: Prisma.TransactionFinanceManagerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTransactionFinanceManager>
+          }
+          groupBy: {
+            args: Prisma.TransactionFinanceManagerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TransactionFinanceManagerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.TransactionFinanceManagerCountArgs<ExtArgs>
+            result: $Utils.Optional<TransactionFinanceManagerCountAggregateOutputType> | number
+          }
+        }
+      }
+      GoalFinanceManager: {
+        payload: Prisma.$GoalFinanceManagerPayload<ExtArgs>
+        fields: Prisma.GoalFinanceManagerFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GoalFinanceManagerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GoalFinanceManagerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>
+          }
+          findFirst: {
+            args: Prisma.GoalFinanceManagerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GoalFinanceManagerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>
+          }
+          findMany: {
+            args: Prisma.GoalFinanceManagerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>[]
+          }
+          create: {
+            args: Prisma.GoalFinanceManagerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>
+          }
+          createMany: {
+            args: Prisma.GoalFinanceManagerCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GoalFinanceManagerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>[]
+          }
+          delete: {
+            args: Prisma.GoalFinanceManagerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>
+          }
+          update: {
+            args: Prisma.GoalFinanceManagerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>
+          }
+          deleteMany: {
+            args: Prisma.GoalFinanceManagerDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GoalFinanceManagerUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GoalFinanceManagerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>[]
+          }
+          upsert: {
+            args: Prisma.GoalFinanceManagerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GoalFinanceManagerPayload>
+          }
+          aggregate: {
+            args: Prisma.GoalFinanceManagerAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGoalFinanceManager>
+          }
+          groupBy: {
+            args: Prisma.GoalFinanceManagerGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GoalFinanceManagerGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GoalFinanceManagerCountArgs<ExtArgs>
+            result: $Utils.Optional<GoalFinanceManagerCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -3596,6 +3866,9 @@ export namespace Prisma {
     userEduSeeker?: UserEduSeekerOmit
     platformEduSeeker?: PlatformEduSeekerOmit
     reviewEduSeeker?: ReviewEduSeekerOmit
+    userFinanceManager?: UserFinanceManagerOmit
+    transactionFinanceManager?: TransactionFinanceManagerOmit
+    goalFinanceManager?: GoalFinanceManagerOmit
   }
 
   /* Types for Logging */
@@ -4332,6 +4605,46 @@ export namespace Prisma {
    */
   export type PlatformEduSeekerCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ReviewEduSeekerWhereInput
+  }
+
+
+  /**
+   * Count Type UserFinanceManagerCountOutputType
+   */
+
+  export type UserFinanceManagerCountOutputType = {
+    transactions: number
+    goals: number
+  }
+
+  export type UserFinanceManagerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    transactions?: boolean | UserFinanceManagerCountOutputTypeCountTransactionsArgs
+    goals?: boolean | UserFinanceManagerCountOutputTypeCountGoalsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * UserFinanceManagerCountOutputType without action
+   */
+  export type UserFinanceManagerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManagerCountOutputType
+     */
+    select?: UserFinanceManagerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * UserFinanceManagerCountOutputType without action
+   */
+  export type UserFinanceManagerCountOutputTypeCountTransactionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TransactionFinanceManagerWhereInput
+  }
+
+  /**
+   * UserFinanceManagerCountOutputType without action
+   */
+  export type UserFinanceManagerCountOutputTypeCountGoalsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GoalFinanceManagerWhereInput
   }
 
 
@@ -39614,6 +39927,3366 @@ export namespace Prisma {
 
 
   /**
+   * Model UserFinanceManager
+   */
+
+  export type AggregateUserFinanceManager = {
+    _count: UserFinanceManagerCountAggregateOutputType | null
+    _min: UserFinanceManagerMinAggregateOutputType | null
+    _max: UserFinanceManagerMaxAggregateOutputType | null
+  }
+
+  export type UserFinanceManagerMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserFinanceManagerMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserFinanceManagerCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type UserFinanceManagerMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserFinanceManagerMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserFinanceManagerCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type UserFinanceManagerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserFinanceManager to aggregate.
+     */
+    where?: UserFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserFinanceManagers to fetch.
+     */
+    orderBy?: UserFinanceManagerOrderByWithRelationInput | UserFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserFinanceManagers
+    **/
+    _count?: true | UserFinanceManagerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserFinanceManagerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserFinanceManagerMaxAggregateInputType
+  }
+
+  export type GetUserFinanceManagerAggregateType<T extends UserFinanceManagerAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserFinanceManager]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserFinanceManager[P]>
+      : GetScalarType<T[P], AggregateUserFinanceManager[P]>
+  }
+
+
+
+
+  export type UserFinanceManagerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserFinanceManagerWhereInput
+    orderBy?: UserFinanceManagerOrderByWithAggregationInput | UserFinanceManagerOrderByWithAggregationInput[]
+    by: UserFinanceManagerScalarFieldEnum[] | UserFinanceManagerScalarFieldEnum
+    having?: UserFinanceManagerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserFinanceManagerCountAggregateInputType | true
+    _min?: UserFinanceManagerMinAggregateInputType
+    _max?: UserFinanceManagerMaxAggregateInputType
+  }
+
+  export type UserFinanceManagerGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    createdAt: Date
+    _count: UserFinanceManagerCountAggregateOutputType | null
+    _min: UserFinanceManagerMinAggregateOutputType | null
+    _max: UserFinanceManagerMaxAggregateOutputType | null
+  }
+
+  type GetUserFinanceManagerGroupByPayload<T extends UserFinanceManagerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserFinanceManagerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserFinanceManagerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserFinanceManagerGroupByOutputType[P]>
+            : GetScalarType<T[P], UserFinanceManagerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserFinanceManagerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+    transactions?: boolean | UserFinanceManager$transactionsArgs<ExtArgs>
+    goals?: boolean | UserFinanceManager$goalsArgs<ExtArgs>
+    _count?: boolean | UserFinanceManagerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userFinanceManager"]>
+
+  export type UserFinanceManagerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userFinanceManager"]>
+
+  export type UserFinanceManagerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userFinanceManager"]>
+
+  export type UserFinanceManagerSelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }
+
+  export type UserFinanceManagerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "createdAt", ExtArgs["result"]["userFinanceManager"]>
+  export type UserFinanceManagerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    transactions?: boolean | UserFinanceManager$transactionsArgs<ExtArgs>
+    goals?: boolean | UserFinanceManager$goalsArgs<ExtArgs>
+    _count?: boolean | UserFinanceManagerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserFinanceManagerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserFinanceManagerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $UserFinanceManagerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserFinanceManager"
+    objects: {
+      transactions: Prisma.$TransactionFinanceManagerPayload<ExtArgs>[]
+      goals: Prisma.$GoalFinanceManagerPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      createdAt: Date
+    }, ExtArgs["result"]["userFinanceManager"]>
+    composites: {}
+  }
+
+  type UserFinanceManagerGetPayload<S extends boolean | null | undefined | UserFinanceManagerDefaultArgs> = $Result.GetResult<Prisma.$UserFinanceManagerPayload, S>
+
+  type UserFinanceManagerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserFinanceManagerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserFinanceManagerCountAggregateInputType | true
+    }
+
+  export interface UserFinanceManagerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserFinanceManager'], meta: { name: 'UserFinanceManager' } }
+    /**
+     * Find zero or one UserFinanceManager that matches the filter.
+     * @param {UserFinanceManagerFindUniqueArgs} args - Arguments to find a UserFinanceManager
+     * @example
+     * // Get one UserFinanceManager
+     * const userFinanceManager = await prisma.userFinanceManager.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserFinanceManagerFindUniqueArgs>(args: SelectSubset<T, UserFinanceManagerFindUniqueArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserFinanceManager that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserFinanceManagerFindUniqueOrThrowArgs} args - Arguments to find a UserFinanceManager
+     * @example
+     * // Get one UserFinanceManager
+     * const userFinanceManager = await prisma.userFinanceManager.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserFinanceManagerFindUniqueOrThrowArgs>(args: SelectSubset<T, UserFinanceManagerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserFinanceManager that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserFinanceManagerFindFirstArgs} args - Arguments to find a UserFinanceManager
+     * @example
+     * // Get one UserFinanceManager
+     * const userFinanceManager = await prisma.userFinanceManager.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserFinanceManagerFindFirstArgs>(args?: SelectSubset<T, UserFinanceManagerFindFirstArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserFinanceManager that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserFinanceManagerFindFirstOrThrowArgs} args - Arguments to find a UserFinanceManager
+     * @example
+     * // Get one UserFinanceManager
+     * const userFinanceManager = await prisma.userFinanceManager.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserFinanceManagerFindFirstOrThrowArgs>(args?: SelectSubset<T, UserFinanceManagerFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserFinanceManagers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserFinanceManagerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserFinanceManagers
+     * const userFinanceManagers = await prisma.userFinanceManager.findMany()
+     * 
+     * // Get first 10 UserFinanceManagers
+     * const userFinanceManagers = await prisma.userFinanceManager.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userFinanceManagerWithIdOnly = await prisma.userFinanceManager.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserFinanceManagerFindManyArgs>(args?: SelectSubset<T, UserFinanceManagerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserFinanceManager.
+     * @param {UserFinanceManagerCreateArgs} args - Arguments to create a UserFinanceManager.
+     * @example
+     * // Create one UserFinanceManager
+     * const UserFinanceManager = await prisma.userFinanceManager.create({
+     *   data: {
+     *     // ... data to create a UserFinanceManager
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserFinanceManagerCreateArgs>(args: SelectSubset<T, UserFinanceManagerCreateArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserFinanceManagers.
+     * @param {UserFinanceManagerCreateManyArgs} args - Arguments to create many UserFinanceManagers.
+     * @example
+     * // Create many UserFinanceManagers
+     * const userFinanceManager = await prisma.userFinanceManager.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserFinanceManagerCreateManyArgs>(args?: SelectSubset<T, UserFinanceManagerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserFinanceManagers and returns the data saved in the database.
+     * @param {UserFinanceManagerCreateManyAndReturnArgs} args - Arguments to create many UserFinanceManagers.
+     * @example
+     * // Create many UserFinanceManagers
+     * const userFinanceManager = await prisma.userFinanceManager.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserFinanceManagers and only return the `id`
+     * const userFinanceManagerWithIdOnly = await prisma.userFinanceManager.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserFinanceManagerCreateManyAndReturnArgs>(args?: SelectSubset<T, UserFinanceManagerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserFinanceManager.
+     * @param {UserFinanceManagerDeleteArgs} args - Arguments to delete one UserFinanceManager.
+     * @example
+     * // Delete one UserFinanceManager
+     * const UserFinanceManager = await prisma.userFinanceManager.delete({
+     *   where: {
+     *     // ... filter to delete one UserFinanceManager
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserFinanceManagerDeleteArgs>(args: SelectSubset<T, UserFinanceManagerDeleteArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserFinanceManager.
+     * @param {UserFinanceManagerUpdateArgs} args - Arguments to update one UserFinanceManager.
+     * @example
+     * // Update one UserFinanceManager
+     * const userFinanceManager = await prisma.userFinanceManager.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserFinanceManagerUpdateArgs>(args: SelectSubset<T, UserFinanceManagerUpdateArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserFinanceManagers.
+     * @param {UserFinanceManagerDeleteManyArgs} args - Arguments to filter UserFinanceManagers to delete.
+     * @example
+     * // Delete a few UserFinanceManagers
+     * const { count } = await prisma.userFinanceManager.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserFinanceManagerDeleteManyArgs>(args?: SelectSubset<T, UserFinanceManagerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserFinanceManagers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserFinanceManagerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserFinanceManagers
+     * const userFinanceManager = await prisma.userFinanceManager.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserFinanceManagerUpdateManyArgs>(args: SelectSubset<T, UserFinanceManagerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserFinanceManagers and returns the data updated in the database.
+     * @param {UserFinanceManagerUpdateManyAndReturnArgs} args - Arguments to update many UserFinanceManagers.
+     * @example
+     * // Update many UserFinanceManagers
+     * const userFinanceManager = await prisma.userFinanceManager.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserFinanceManagers and only return the `id`
+     * const userFinanceManagerWithIdOnly = await prisma.userFinanceManager.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserFinanceManagerUpdateManyAndReturnArgs>(args: SelectSubset<T, UserFinanceManagerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserFinanceManager.
+     * @param {UserFinanceManagerUpsertArgs} args - Arguments to update or create a UserFinanceManager.
+     * @example
+     * // Update or create a UserFinanceManager
+     * const userFinanceManager = await prisma.userFinanceManager.upsert({
+     *   create: {
+     *     // ... data to create a UserFinanceManager
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserFinanceManager we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserFinanceManagerUpsertArgs>(args: SelectSubset<T, UserFinanceManagerUpsertArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserFinanceManagers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserFinanceManagerCountArgs} args - Arguments to filter UserFinanceManagers to count.
+     * @example
+     * // Count the number of UserFinanceManagers
+     * const count = await prisma.userFinanceManager.count({
+     *   where: {
+     *     // ... the filter for the UserFinanceManagers we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserFinanceManagerCountArgs>(
+      args?: Subset<T, UserFinanceManagerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserFinanceManagerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserFinanceManager.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserFinanceManagerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserFinanceManagerAggregateArgs>(args: Subset<T, UserFinanceManagerAggregateArgs>): Prisma.PrismaPromise<GetUserFinanceManagerAggregateType<T>>
+
+    /**
+     * Group by UserFinanceManager.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserFinanceManagerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserFinanceManagerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserFinanceManagerGroupByArgs['orderBy'] }
+        : { orderBy?: UserFinanceManagerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserFinanceManagerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserFinanceManagerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserFinanceManager model
+   */
+  readonly fields: UserFinanceManagerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserFinanceManager.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserFinanceManagerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    transactions<T extends UserFinanceManager$transactionsArgs<ExtArgs> = {}>(args?: Subset<T, UserFinanceManager$transactionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    goals<T extends UserFinanceManager$goalsArgs<ExtArgs> = {}>(args?: Subset<T, UserFinanceManager$goalsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserFinanceManager model
+   */ 
+  interface UserFinanceManagerFieldRefs {
+    readonly id: FieldRef<"UserFinanceManager", 'String'>
+    readonly email: FieldRef<"UserFinanceManager", 'String'>
+    readonly name: FieldRef<"UserFinanceManager", 'String'>
+    readonly password: FieldRef<"UserFinanceManager", 'String'>
+    readonly createdAt: FieldRef<"UserFinanceManager", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserFinanceManager findUnique
+   */
+  export type UserFinanceManagerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserFinanceManager to fetch.
+     */
+    where: UserFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * UserFinanceManager findUniqueOrThrow
+   */
+  export type UserFinanceManagerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserFinanceManager to fetch.
+     */
+    where: UserFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * UserFinanceManager findFirst
+   */
+  export type UserFinanceManagerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserFinanceManager to fetch.
+     */
+    where?: UserFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserFinanceManagers to fetch.
+     */
+    orderBy?: UserFinanceManagerOrderByWithRelationInput | UserFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserFinanceManagers.
+     */
+    cursor?: UserFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserFinanceManagers.
+     */
+    distinct?: UserFinanceManagerScalarFieldEnum | UserFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * UserFinanceManager findFirstOrThrow
+   */
+  export type UserFinanceManagerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserFinanceManager to fetch.
+     */
+    where?: UserFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserFinanceManagers to fetch.
+     */
+    orderBy?: UserFinanceManagerOrderByWithRelationInput | UserFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserFinanceManagers.
+     */
+    cursor?: UserFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserFinanceManagers.
+     */
+    distinct?: UserFinanceManagerScalarFieldEnum | UserFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * UserFinanceManager findMany
+   */
+  export type UserFinanceManagerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which UserFinanceManagers to fetch.
+     */
+    where?: UserFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserFinanceManagers to fetch.
+     */
+    orderBy?: UserFinanceManagerOrderByWithRelationInput | UserFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserFinanceManagers.
+     */
+    cursor?: UserFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserFinanceManagers.
+     */
+    skip?: number
+    distinct?: UserFinanceManagerScalarFieldEnum | UserFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * UserFinanceManager create
+   */
+  export type UserFinanceManagerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserFinanceManager.
+     */
+    data: XOR<UserFinanceManagerCreateInput, UserFinanceManagerUncheckedCreateInput>
+  }
+
+  /**
+   * UserFinanceManager createMany
+   */
+  export type UserFinanceManagerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserFinanceManagers.
+     */
+    data: UserFinanceManagerCreateManyInput | UserFinanceManagerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserFinanceManager createManyAndReturn
+   */
+  export type UserFinanceManagerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserFinanceManagers.
+     */
+    data: UserFinanceManagerCreateManyInput | UserFinanceManagerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserFinanceManager update
+   */
+  export type UserFinanceManagerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserFinanceManager.
+     */
+    data: XOR<UserFinanceManagerUpdateInput, UserFinanceManagerUncheckedUpdateInput>
+    /**
+     * Choose, which UserFinanceManager to update.
+     */
+    where: UserFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * UserFinanceManager updateMany
+   */
+  export type UserFinanceManagerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserFinanceManagers.
+     */
+    data: XOR<UserFinanceManagerUpdateManyMutationInput, UserFinanceManagerUncheckedUpdateManyInput>
+    /**
+     * Filter which UserFinanceManagers to update
+     */
+    where?: UserFinanceManagerWhereInput
+    /**
+     * Limit how many UserFinanceManagers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserFinanceManager updateManyAndReturn
+   */
+  export type UserFinanceManagerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * The data used to update UserFinanceManagers.
+     */
+    data: XOR<UserFinanceManagerUpdateManyMutationInput, UserFinanceManagerUncheckedUpdateManyInput>
+    /**
+     * Filter which UserFinanceManagers to update
+     */
+    where?: UserFinanceManagerWhereInput
+    /**
+     * Limit how many UserFinanceManagers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserFinanceManager upsert
+   */
+  export type UserFinanceManagerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserFinanceManager to update in case it exists.
+     */
+    where: UserFinanceManagerWhereUniqueInput
+    /**
+     * In case the UserFinanceManager found by the `where` argument doesn't exist, create a new UserFinanceManager with this data.
+     */
+    create: XOR<UserFinanceManagerCreateInput, UserFinanceManagerUncheckedCreateInput>
+    /**
+     * In case the UserFinanceManager was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserFinanceManagerUpdateInput, UserFinanceManagerUncheckedUpdateInput>
+  }
+
+  /**
+   * UserFinanceManager delete
+   */
+  export type UserFinanceManagerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter which UserFinanceManager to delete.
+     */
+    where: UserFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * UserFinanceManager deleteMany
+   */
+  export type UserFinanceManagerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserFinanceManagers to delete
+     */
+    where?: UserFinanceManagerWhereInput
+    /**
+     * Limit how many UserFinanceManagers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserFinanceManager.transactions
+   */
+  export type UserFinanceManager$transactionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    where?: TransactionFinanceManagerWhereInput
+    orderBy?: TransactionFinanceManagerOrderByWithRelationInput | TransactionFinanceManagerOrderByWithRelationInput[]
+    cursor?: TransactionFinanceManagerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: TransactionFinanceManagerScalarFieldEnum | TransactionFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * UserFinanceManager.goals
+   */
+  export type UserFinanceManager$goalsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    where?: GoalFinanceManagerWhereInput
+    orderBy?: GoalFinanceManagerOrderByWithRelationInput | GoalFinanceManagerOrderByWithRelationInput[]
+    cursor?: GoalFinanceManagerWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: GoalFinanceManagerScalarFieldEnum | GoalFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * UserFinanceManager without action
+   */
+  export type UserFinanceManagerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserFinanceManager
+     */
+    select?: UserFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserFinanceManager
+     */
+    omit?: UserFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserFinanceManagerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model TransactionFinanceManager
+   */
+
+  export type AggregateTransactionFinanceManager = {
+    _count: TransactionFinanceManagerCountAggregateOutputType | null
+    _avg: TransactionFinanceManagerAvgAggregateOutputType | null
+    _sum: TransactionFinanceManagerSumAggregateOutputType | null
+    _min: TransactionFinanceManagerMinAggregateOutputType | null
+    _max: TransactionFinanceManagerMaxAggregateOutputType | null
+  }
+
+  export type TransactionFinanceManagerAvgAggregateOutputType = {
+    amount: Decimal | null
+  }
+
+  export type TransactionFinanceManagerSumAggregateOutputType = {
+    amount: Decimal | null
+  }
+
+  export type TransactionFinanceManagerMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    amount: Decimal | null
+    type: string | null
+    category: string | null
+    source: string | null
+    date: Date | null
+    description: string | null
+    createdAt: Date | null
+  }
+
+  export type TransactionFinanceManagerMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    amount: Decimal | null
+    type: string | null
+    category: string | null
+    source: string | null
+    date: Date | null
+    description: string | null
+    createdAt: Date | null
+  }
+
+  export type TransactionFinanceManagerCountAggregateOutputType = {
+    id: number
+    userId: number
+    amount: number
+    type: number
+    category: number
+    source: number
+    date: number
+    description: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type TransactionFinanceManagerAvgAggregateInputType = {
+    amount?: true
+  }
+
+  export type TransactionFinanceManagerSumAggregateInputType = {
+    amount?: true
+  }
+
+  export type TransactionFinanceManagerMinAggregateInputType = {
+    id?: true
+    userId?: true
+    amount?: true
+    type?: true
+    category?: true
+    source?: true
+    date?: true
+    description?: true
+    createdAt?: true
+  }
+
+  export type TransactionFinanceManagerMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    amount?: true
+    type?: true
+    category?: true
+    source?: true
+    date?: true
+    description?: true
+    createdAt?: true
+  }
+
+  export type TransactionFinanceManagerCountAggregateInputType = {
+    id?: true
+    userId?: true
+    amount?: true
+    type?: true
+    category?: true
+    source?: true
+    date?: true
+    description?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type TransactionFinanceManagerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which TransactionFinanceManager to aggregate.
+     */
+    where?: TransactionFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TransactionFinanceManagers to fetch.
+     */
+    orderBy?: TransactionFinanceManagerOrderByWithRelationInput | TransactionFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: TransactionFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TransactionFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TransactionFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned TransactionFinanceManagers
+    **/
+    _count?: true | TransactionFinanceManagerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: TransactionFinanceManagerAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: TransactionFinanceManagerSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: TransactionFinanceManagerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: TransactionFinanceManagerMaxAggregateInputType
+  }
+
+  export type GetTransactionFinanceManagerAggregateType<T extends TransactionFinanceManagerAggregateArgs> = {
+        [P in keyof T & keyof AggregateTransactionFinanceManager]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateTransactionFinanceManager[P]>
+      : GetScalarType<T[P], AggregateTransactionFinanceManager[P]>
+  }
+
+
+
+
+  export type TransactionFinanceManagerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TransactionFinanceManagerWhereInput
+    orderBy?: TransactionFinanceManagerOrderByWithAggregationInput | TransactionFinanceManagerOrderByWithAggregationInput[]
+    by: TransactionFinanceManagerScalarFieldEnum[] | TransactionFinanceManagerScalarFieldEnum
+    having?: TransactionFinanceManagerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: TransactionFinanceManagerCountAggregateInputType | true
+    _avg?: TransactionFinanceManagerAvgAggregateInputType
+    _sum?: TransactionFinanceManagerSumAggregateInputType
+    _min?: TransactionFinanceManagerMinAggregateInputType
+    _max?: TransactionFinanceManagerMaxAggregateInputType
+  }
+
+  export type TransactionFinanceManagerGroupByOutputType = {
+    id: string
+    userId: string
+    amount: Decimal
+    type: string
+    category: string | null
+    source: string | null
+    date: Date
+    description: string
+    createdAt: Date
+    _count: TransactionFinanceManagerCountAggregateOutputType | null
+    _avg: TransactionFinanceManagerAvgAggregateOutputType | null
+    _sum: TransactionFinanceManagerSumAggregateOutputType | null
+    _min: TransactionFinanceManagerMinAggregateOutputType | null
+    _max: TransactionFinanceManagerMaxAggregateOutputType | null
+  }
+
+  type GetTransactionFinanceManagerGroupByPayload<T extends TransactionFinanceManagerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<TransactionFinanceManagerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof TransactionFinanceManagerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], TransactionFinanceManagerGroupByOutputType[P]>
+            : GetScalarType<T[P], TransactionFinanceManagerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type TransactionFinanceManagerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    amount?: boolean
+    type?: boolean
+    category?: boolean
+    source?: boolean
+    date?: boolean
+    description?: boolean
+    createdAt?: boolean
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["transactionFinanceManager"]>
+
+  export type TransactionFinanceManagerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    amount?: boolean
+    type?: boolean
+    category?: boolean
+    source?: boolean
+    date?: boolean
+    description?: boolean
+    createdAt?: boolean
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["transactionFinanceManager"]>
+
+  export type TransactionFinanceManagerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    amount?: boolean
+    type?: boolean
+    category?: boolean
+    source?: boolean
+    date?: boolean
+    description?: boolean
+    createdAt?: boolean
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["transactionFinanceManager"]>
+
+  export type TransactionFinanceManagerSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    amount?: boolean
+    type?: boolean
+    category?: boolean
+    source?: boolean
+    date?: boolean
+    description?: boolean
+    createdAt?: boolean
+  }
+
+  export type TransactionFinanceManagerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "amount" | "type" | "category" | "source" | "date" | "description" | "createdAt", ExtArgs["result"]["transactionFinanceManager"]>
+  export type TransactionFinanceManagerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }
+  export type TransactionFinanceManagerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }
+  export type TransactionFinanceManagerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }
+
+  export type $TransactionFinanceManagerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TransactionFinanceManager"
+    objects: {
+      user: Prisma.$UserFinanceManagerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      amount: Prisma.Decimal
+      type: string
+      category: string | null
+      source: string | null
+      date: Date
+      description: string
+      createdAt: Date
+    }, ExtArgs["result"]["transactionFinanceManager"]>
+    composites: {}
+  }
+
+  type TransactionFinanceManagerGetPayload<S extends boolean | null | undefined | TransactionFinanceManagerDefaultArgs> = $Result.GetResult<Prisma.$TransactionFinanceManagerPayload, S>
+
+  type TransactionFinanceManagerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TransactionFinanceManagerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TransactionFinanceManagerCountAggregateInputType | true
+    }
+
+  export interface TransactionFinanceManagerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TransactionFinanceManager'], meta: { name: 'TransactionFinanceManager' } }
+    /**
+     * Find zero or one TransactionFinanceManager that matches the filter.
+     * @param {TransactionFinanceManagerFindUniqueArgs} args - Arguments to find a TransactionFinanceManager
+     * @example
+     * // Get one TransactionFinanceManager
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends TransactionFinanceManagerFindUniqueArgs>(args: SelectSubset<T, TransactionFinanceManagerFindUniqueArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one TransactionFinanceManager that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {TransactionFinanceManagerFindUniqueOrThrowArgs} args - Arguments to find a TransactionFinanceManager
+     * @example
+     * // Get one TransactionFinanceManager
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends TransactionFinanceManagerFindUniqueOrThrowArgs>(args: SelectSubset<T, TransactionFinanceManagerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first TransactionFinanceManager that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TransactionFinanceManagerFindFirstArgs} args - Arguments to find a TransactionFinanceManager
+     * @example
+     * // Get one TransactionFinanceManager
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends TransactionFinanceManagerFindFirstArgs>(args?: SelectSubset<T, TransactionFinanceManagerFindFirstArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first TransactionFinanceManager that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TransactionFinanceManagerFindFirstOrThrowArgs} args - Arguments to find a TransactionFinanceManager
+     * @example
+     * // Get one TransactionFinanceManager
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends TransactionFinanceManagerFindFirstOrThrowArgs>(args?: SelectSubset<T, TransactionFinanceManagerFindFirstOrThrowArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more TransactionFinanceManagers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TransactionFinanceManagerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all TransactionFinanceManagers
+     * const transactionFinanceManagers = await prisma.transactionFinanceManager.findMany()
+     * 
+     * // Get first 10 TransactionFinanceManagers
+     * const transactionFinanceManagers = await prisma.transactionFinanceManager.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const transactionFinanceManagerWithIdOnly = await prisma.transactionFinanceManager.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends TransactionFinanceManagerFindManyArgs>(args?: SelectSubset<T, TransactionFinanceManagerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a TransactionFinanceManager.
+     * @param {TransactionFinanceManagerCreateArgs} args - Arguments to create a TransactionFinanceManager.
+     * @example
+     * // Create one TransactionFinanceManager
+     * const TransactionFinanceManager = await prisma.transactionFinanceManager.create({
+     *   data: {
+     *     // ... data to create a TransactionFinanceManager
+     *   }
+     * })
+     * 
+     */
+    create<T extends TransactionFinanceManagerCreateArgs>(args: SelectSubset<T, TransactionFinanceManagerCreateArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many TransactionFinanceManagers.
+     * @param {TransactionFinanceManagerCreateManyArgs} args - Arguments to create many TransactionFinanceManagers.
+     * @example
+     * // Create many TransactionFinanceManagers
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends TransactionFinanceManagerCreateManyArgs>(args?: SelectSubset<T, TransactionFinanceManagerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many TransactionFinanceManagers and returns the data saved in the database.
+     * @param {TransactionFinanceManagerCreateManyAndReturnArgs} args - Arguments to create many TransactionFinanceManagers.
+     * @example
+     * // Create many TransactionFinanceManagers
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many TransactionFinanceManagers and only return the `id`
+     * const transactionFinanceManagerWithIdOnly = await prisma.transactionFinanceManager.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends TransactionFinanceManagerCreateManyAndReturnArgs>(args?: SelectSubset<T, TransactionFinanceManagerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a TransactionFinanceManager.
+     * @param {TransactionFinanceManagerDeleteArgs} args - Arguments to delete one TransactionFinanceManager.
+     * @example
+     * // Delete one TransactionFinanceManager
+     * const TransactionFinanceManager = await prisma.transactionFinanceManager.delete({
+     *   where: {
+     *     // ... filter to delete one TransactionFinanceManager
+     *   }
+     * })
+     * 
+     */
+    delete<T extends TransactionFinanceManagerDeleteArgs>(args: SelectSubset<T, TransactionFinanceManagerDeleteArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one TransactionFinanceManager.
+     * @param {TransactionFinanceManagerUpdateArgs} args - Arguments to update one TransactionFinanceManager.
+     * @example
+     * // Update one TransactionFinanceManager
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends TransactionFinanceManagerUpdateArgs>(args: SelectSubset<T, TransactionFinanceManagerUpdateArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more TransactionFinanceManagers.
+     * @param {TransactionFinanceManagerDeleteManyArgs} args - Arguments to filter TransactionFinanceManagers to delete.
+     * @example
+     * // Delete a few TransactionFinanceManagers
+     * const { count } = await prisma.transactionFinanceManager.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends TransactionFinanceManagerDeleteManyArgs>(args?: SelectSubset<T, TransactionFinanceManagerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more TransactionFinanceManagers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TransactionFinanceManagerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many TransactionFinanceManagers
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends TransactionFinanceManagerUpdateManyArgs>(args: SelectSubset<T, TransactionFinanceManagerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more TransactionFinanceManagers and returns the data updated in the database.
+     * @param {TransactionFinanceManagerUpdateManyAndReturnArgs} args - Arguments to update many TransactionFinanceManagers.
+     * @example
+     * // Update many TransactionFinanceManagers
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more TransactionFinanceManagers and only return the `id`
+     * const transactionFinanceManagerWithIdOnly = await prisma.transactionFinanceManager.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends TransactionFinanceManagerUpdateManyAndReturnArgs>(args: SelectSubset<T, TransactionFinanceManagerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one TransactionFinanceManager.
+     * @param {TransactionFinanceManagerUpsertArgs} args - Arguments to update or create a TransactionFinanceManager.
+     * @example
+     * // Update or create a TransactionFinanceManager
+     * const transactionFinanceManager = await prisma.transactionFinanceManager.upsert({
+     *   create: {
+     *     // ... data to create a TransactionFinanceManager
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the TransactionFinanceManager we want to update
+     *   }
+     * })
+     */
+    upsert<T extends TransactionFinanceManagerUpsertArgs>(args: SelectSubset<T, TransactionFinanceManagerUpsertArgs<ExtArgs>>): Prisma__TransactionFinanceManagerClient<$Result.GetResult<Prisma.$TransactionFinanceManagerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of TransactionFinanceManagers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TransactionFinanceManagerCountArgs} args - Arguments to filter TransactionFinanceManagers to count.
+     * @example
+     * // Count the number of TransactionFinanceManagers
+     * const count = await prisma.transactionFinanceManager.count({
+     *   where: {
+     *     // ... the filter for the TransactionFinanceManagers we want to count
+     *   }
+     * })
+    **/
+    count<T extends TransactionFinanceManagerCountArgs>(
+      args?: Subset<T, TransactionFinanceManagerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], TransactionFinanceManagerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a TransactionFinanceManager.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TransactionFinanceManagerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends TransactionFinanceManagerAggregateArgs>(args: Subset<T, TransactionFinanceManagerAggregateArgs>): Prisma.PrismaPromise<GetTransactionFinanceManagerAggregateType<T>>
+
+    /**
+     * Group by TransactionFinanceManager.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {TransactionFinanceManagerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends TransactionFinanceManagerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: TransactionFinanceManagerGroupByArgs['orderBy'] }
+        : { orderBy?: TransactionFinanceManagerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, TransactionFinanceManagerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTransactionFinanceManagerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the TransactionFinanceManager model
+   */
+  readonly fields: TransactionFinanceManagerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for TransactionFinanceManager.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__TransactionFinanceManagerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserFinanceManagerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserFinanceManagerDefaultArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the TransactionFinanceManager model
+   */ 
+  interface TransactionFinanceManagerFieldRefs {
+    readonly id: FieldRef<"TransactionFinanceManager", 'String'>
+    readonly userId: FieldRef<"TransactionFinanceManager", 'String'>
+    readonly amount: FieldRef<"TransactionFinanceManager", 'Decimal'>
+    readonly type: FieldRef<"TransactionFinanceManager", 'String'>
+    readonly category: FieldRef<"TransactionFinanceManager", 'String'>
+    readonly source: FieldRef<"TransactionFinanceManager", 'String'>
+    readonly date: FieldRef<"TransactionFinanceManager", 'DateTime'>
+    readonly description: FieldRef<"TransactionFinanceManager", 'String'>
+    readonly createdAt: FieldRef<"TransactionFinanceManager", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * TransactionFinanceManager findUnique
+   */
+  export type TransactionFinanceManagerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which TransactionFinanceManager to fetch.
+     */
+    where: TransactionFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * TransactionFinanceManager findUniqueOrThrow
+   */
+  export type TransactionFinanceManagerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which TransactionFinanceManager to fetch.
+     */
+    where: TransactionFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * TransactionFinanceManager findFirst
+   */
+  export type TransactionFinanceManagerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which TransactionFinanceManager to fetch.
+     */
+    where?: TransactionFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TransactionFinanceManagers to fetch.
+     */
+    orderBy?: TransactionFinanceManagerOrderByWithRelationInput | TransactionFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for TransactionFinanceManagers.
+     */
+    cursor?: TransactionFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TransactionFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TransactionFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of TransactionFinanceManagers.
+     */
+    distinct?: TransactionFinanceManagerScalarFieldEnum | TransactionFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * TransactionFinanceManager findFirstOrThrow
+   */
+  export type TransactionFinanceManagerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which TransactionFinanceManager to fetch.
+     */
+    where?: TransactionFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TransactionFinanceManagers to fetch.
+     */
+    orderBy?: TransactionFinanceManagerOrderByWithRelationInput | TransactionFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for TransactionFinanceManagers.
+     */
+    cursor?: TransactionFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TransactionFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TransactionFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of TransactionFinanceManagers.
+     */
+    distinct?: TransactionFinanceManagerScalarFieldEnum | TransactionFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * TransactionFinanceManager findMany
+   */
+  export type TransactionFinanceManagerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which TransactionFinanceManagers to fetch.
+     */
+    where?: TransactionFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of TransactionFinanceManagers to fetch.
+     */
+    orderBy?: TransactionFinanceManagerOrderByWithRelationInput | TransactionFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing TransactionFinanceManagers.
+     */
+    cursor?: TransactionFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` TransactionFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` TransactionFinanceManagers.
+     */
+    skip?: number
+    distinct?: TransactionFinanceManagerScalarFieldEnum | TransactionFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * TransactionFinanceManager create
+   */
+  export type TransactionFinanceManagerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a TransactionFinanceManager.
+     */
+    data: XOR<TransactionFinanceManagerCreateInput, TransactionFinanceManagerUncheckedCreateInput>
+  }
+
+  /**
+   * TransactionFinanceManager createMany
+   */
+  export type TransactionFinanceManagerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many TransactionFinanceManagers.
+     */
+    data: TransactionFinanceManagerCreateManyInput | TransactionFinanceManagerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * TransactionFinanceManager createManyAndReturn
+   */
+  export type TransactionFinanceManagerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * The data used to create many TransactionFinanceManagers.
+     */
+    data: TransactionFinanceManagerCreateManyInput | TransactionFinanceManagerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * TransactionFinanceManager update
+   */
+  export type TransactionFinanceManagerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a TransactionFinanceManager.
+     */
+    data: XOR<TransactionFinanceManagerUpdateInput, TransactionFinanceManagerUncheckedUpdateInput>
+    /**
+     * Choose, which TransactionFinanceManager to update.
+     */
+    where: TransactionFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * TransactionFinanceManager updateMany
+   */
+  export type TransactionFinanceManagerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update TransactionFinanceManagers.
+     */
+    data: XOR<TransactionFinanceManagerUpdateManyMutationInput, TransactionFinanceManagerUncheckedUpdateManyInput>
+    /**
+     * Filter which TransactionFinanceManagers to update
+     */
+    where?: TransactionFinanceManagerWhereInput
+    /**
+     * Limit how many TransactionFinanceManagers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * TransactionFinanceManager updateManyAndReturn
+   */
+  export type TransactionFinanceManagerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * The data used to update TransactionFinanceManagers.
+     */
+    data: XOR<TransactionFinanceManagerUpdateManyMutationInput, TransactionFinanceManagerUncheckedUpdateManyInput>
+    /**
+     * Filter which TransactionFinanceManagers to update
+     */
+    where?: TransactionFinanceManagerWhereInput
+    /**
+     * Limit how many TransactionFinanceManagers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * TransactionFinanceManager upsert
+   */
+  export type TransactionFinanceManagerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the TransactionFinanceManager to update in case it exists.
+     */
+    where: TransactionFinanceManagerWhereUniqueInput
+    /**
+     * In case the TransactionFinanceManager found by the `where` argument doesn't exist, create a new TransactionFinanceManager with this data.
+     */
+    create: XOR<TransactionFinanceManagerCreateInput, TransactionFinanceManagerUncheckedCreateInput>
+    /**
+     * In case the TransactionFinanceManager was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<TransactionFinanceManagerUpdateInput, TransactionFinanceManagerUncheckedUpdateInput>
+  }
+
+  /**
+   * TransactionFinanceManager delete
+   */
+  export type TransactionFinanceManagerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter which TransactionFinanceManager to delete.
+     */
+    where: TransactionFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * TransactionFinanceManager deleteMany
+   */
+  export type TransactionFinanceManagerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which TransactionFinanceManagers to delete
+     */
+    where?: TransactionFinanceManagerWhereInput
+    /**
+     * Limit how many TransactionFinanceManagers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * TransactionFinanceManager without action
+   */
+  export type TransactionFinanceManagerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the TransactionFinanceManager
+     */
+    select?: TransactionFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the TransactionFinanceManager
+     */
+    omit?: TransactionFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TransactionFinanceManagerInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model GoalFinanceManager
+   */
+
+  export type AggregateGoalFinanceManager = {
+    _count: GoalFinanceManagerCountAggregateOutputType | null
+    _avg: GoalFinanceManagerAvgAggregateOutputType | null
+    _sum: GoalFinanceManagerSumAggregateOutputType | null
+    _min: GoalFinanceManagerMinAggregateOutputType | null
+    _max: GoalFinanceManagerMaxAggregateOutputType | null
+  }
+
+  export type GoalFinanceManagerAvgAggregateOutputType = {
+    targetAmount: Decimal | null
+  }
+
+  export type GoalFinanceManagerSumAggregateOutputType = {
+    targetAmount: Decimal | null
+  }
+
+  export type GoalFinanceManagerMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    title: string | null
+    targetAmount: Decimal | null
+    deadline: Date | null
+    description: string | null
+    createdAt: Date | null
+  }
+
+  export type GoalFinanceManagerMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    title: string | null
+    targetAmount: Decimal | null
+    deadline: Date | null
+    description: string | null
+    createdAt: Date | null
+  }
+
+  export type GoalFinanceManagerCountAggregateOutputType = {
+    id: number
+    userId: number
+    title: number
+    targetAmount: number
+    deadline: number
+    description: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type GoalFinanceManagerAvgAggregateInputType = {
+    targetAmount?: true
+  }
+
+  export type GoalFinanceManagerSumAggregateInputType = {
+    targetAmount?: true
+  }
+
+  export type GoalFinanceManagerMinAggregateInputType = {
+    id?: true
+    userId?: true
+    title?: true
+    targetAmount?: true
+    deadline?: true
+    description?: true
+    createdAt?: true
+  }
+
+  export type GoalFinanceManagerMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    title?: true
+    targetAmount?: true
+    deadline?: true
+    description?: true
+    createdAt?: true
+  }
+
+  export type GoalFinanceManagerCountAggregateInputType = {
+    id?: true
+    userId?: true
+    title?: true
+    targetAmount?: true
+    deadline?: true
+    description?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type GoalFinanceManagerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GoalFinanceManager to aggregate.
+     */
+    where?: GoalFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GoalFinanceManagers to fetch.
+     */
+    orderBy?: GoalFinanceManagerOrderByWithRelationInput | GoalFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GoalFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GoalFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GoalFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GoalFinanceManagers
+    **/
+    _count?: true | GoalFinanceManagerCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: GoalFinanceManagerAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: GoalFinanceManagerSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GoalFinanceManagerMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GoalFinanceManagerMaxAggregateInputType
+  }
+
+  export type GetGoalFinanceManagerAggregateType<T extends GoalFinanceManagerAggregateArgs> = {
+        [P in keyof T & keyof AggregateGoalFinanceManager]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGoalFinanceManager[P]>
+      : GetScalarType<T[P], AggregateGoalFinanceManager[P]>
+  }
+
+
+
+
+  export type GoalFinanceManagerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GoalFinanceManagerWhereInput
+    orderBy?: GoalFinanceManagerOrderByWithAggregationInput | GoalFinanceManagerOrderByWithAggregationInput[]
+    by: GoalFinanceManagerScalarFieldEnum[] | GoalFinanceManagerScalarFieldEnum
+    having?: GoalFinanceManagerScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GoalFinanceManagerCountAggregateInputType | true
+    _avg?: GoalFinanceManagerAvgAggregateInputType
+    _sum?: GoalFinanceManagerSumAggregateInputType
+    _min?: GoalFinanceManagerMinAggregateInputType
+    _max?: GoalFinanceManagerMaxAggregateInputType
+  }
+
+  export type GoalFinanceManagerGroupByOutputType = {
+    id: string
+    userId: string
+    title: string
+    targetAmount: Decimal
+    deadline: Date
+    description: string
+    createdAt: Date
+    _count: GoalFinanceManagerCountAggregateOutputType | null
+    _avg: GoalFinanceManagerAvgAggregateOutputType | null
+    _sum: GoalFinanceManagerSumAggregateOutputType | null
+    _min: GoalFinanceManagerMinAggregateOutputType | null
+    _max: GoalFinanceManagerMaxAggregateOutputType | null
+  }
+
+  type GetGoalFinanceManagerGroupByPayload<T extends GoalFinanceManagerGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GoalFinanceManagerGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GoalFinanceManagerGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GoalFinanceManagerGroupByOutputType[P]>
+            : GetScalarType<T[P], GoalFinanceManagerGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GoalFinanceManagerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    title?: boolean
+    targetAmount?: boolean
+    deadline?: boolean
+    description?: boolean
+    createdAt?: boolean
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["goalFinanceManager"]>
+
+  export type GoalFinanceManagerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    title?: boolean
+    targetAmount?: boolean
+    deadline?: boolean
+    description?: boolean
+    createdAt?: boolean
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["goalFinanceManager"]>
+
+  export type GoalFinanceManagerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    title?: boolean
+    targetAmount?: boolean
+    deadline?: boolean
+    description?: boolean
+    createdAt?: boolean
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["goalFinanceManager"]>
+
+  export type GoalFinanceManagerSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    title?: boolean
+    targetAmount?: boolean
+    deadline?: boolean
+    description?: boolean
+    createdAt?: boolean
+  }
+
+  export type GoalFinanceManagerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "title" | "targetAmount" | "deadline" | "description" | "createdAt", ExtArgs["result"]["goalFinanceManager"]>
+  export type GoalFinanceManagerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }
+  export type GoalFinanceManagerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }
+  export type GoalFinanceManagerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserFinanceManagerDefaultArgs<ExtArgs>
+  }
+
+  export type $GoalFinanceManagerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GoalFinanceManager"
+    objects: {
+      user: Prisma.$UserFinanceManagerPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      title: string
+      targetAmount: Prisma.Decimal
+      deadline: Date
+      description: string
+      createdAt: Date
+    }, ExtArgs["result"]["goalFinanceManager"]>
+    composites: {}
+  }
+
+  type GoalFinanceManagerGetPayload<S extends boolean | null | undefined | GoalFinanceManagerDefaultArgs> = $Result.GetResult<Prisma.$GoalFinanceManagerPayload, S>
+
+  type GoalFinanceManagerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GoalFinanceManagerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GoalFinanceManagerCountAggregateInputType | true
+    }
+
+  export interface GoalFinanceManagerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GoalFinanceManager'], meta: { name: 'GoalFinanceManager' } }
+    /**
+     * Find zero or one GoalFinanceManager that matches the filter.
+     * @param {GoalFinanceManagerFindUniqueArgs} args - Arguments to find a GoalFinanceManager
+     * @example
+     * // Get one GoalFinanceManager
+     * const goalFinanceManager = await prisma.goalFinanceManager.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GoalFinanceManagerFindUniqueArgs>(args: SelectSubset<T, GoalFinanceManagerFindUniqueArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GoalFinanceManager that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GoalFinanceManagerFindUniqueOrThrowArgs} args - Arguments to find a GoalFinanceManager
+     * @example
+     * // Get one GoalFinanceManager
+     * const goalFinanceManager = await prisma.goalFinanceManager.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GoalFinanceManagerFindUniqueOrThrowArgs>(args: SelectSubset<T, GoalFinanceManagerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GoalFinanceManager that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GoalFinanceManagerFindFirstArgs} args - Arguments to find a GoalFinanceManager
+     * @example
+     * // Get one GoalFinanceManager
+     * const goalFinanceManager = await prisma.goalFinanceManager.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GoalFinanceManagerFindFirstArgs>(args?: SelectSubset<T, GoalFinanceManagerFindFirstArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GoalFinanceManager that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GoalFinanceManagerFindFirstOrThrowArgs} args - Arguments to find a GoalFinanceManager
+     * @example
+     * // Get one GoalFinanceManager
+     * const goalFinanceManager = await prisma.goalFinanceManager.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GoalFinanceManagerFindFirstOrThrowArgs>(args?: SelectSubset<T, GoalFinanceManagerFindFirstOrThrowArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GoalFinanceManagers that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GoalFinanceManagerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GoalFinanceManagers
+     * const goalFinanceManagers = await prisma.goalFinanceManager.findMany()
+     * 
+     * // Get first 10 GoalFinanceManagers
+     * const goalFinanceManagers = await prisma.goalFinanceManager.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const goalFinanceManagerWithIdOnly = await prisma.goalFinanceManager.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GoalFinanceManagerFindManyArgs>(args?: SelectSubset<T, GoalFinanceManagerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GoalFinanceManager.
+     * @param {GoalFinanceManagerCreateArgs} args - Arguments to create a GoalFinanceManager.
+     * @example
+     * // Create one GoalFinanceManager
+     * const GoalFinanceManager = await prisma.goalFinanceManager.create({
+     *   data: {
+     *     // ... data to create a GoalFinanceManager
+     *   }
+     * })
+     * 
+     */
+    create<T extends GoalFinanceManagerCreateArgs>(args: SelectSubset<T, GoalFinanceManagerCreateArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GoalFinanceManagers.
+     * @param {GoalFinanceManagerCreateManyArgs} args - Arguments to create many GoalFinanceManagers.
+     * @example
+     * // Create many GoalFinanceManagers
+     * const goalFinanceManager = await prisma.goalFinanceManager.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GoalFinanceManagerCreateManyArgs>(args?: SelectSubset<T, GoalFinanceManagerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GoalFinanceManagers and returns the data saved in the database.
+     * @param {GoalFinanceManagerCreateManyAndReturnArgs} args - Arguments to create many GoalFinanceManagers.
+     * @example
+     * // Create many GoalFinanceManagers
+     * const goalFinanceManager = await prisma.goalFinanceManager.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GoalFinanceManagers and only return the `id`
+     * const goalFinanceManagerWithIdOnly = await prisma.goalFinanceManager.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GoalFinanceManagerCreateManyAndReturnArgs>(args?: SelectSubset<T, GoalFinanceManagerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GoalFinanceManager.
+     * @param {GoalFinanceManagerDeleteArgs} args - Arguments to delete one GoalFinanceManager.
+     * @example
+     * // Delete one GoalFinanceManager
+     * const GoalFinanceManager = await prisma.goalFinanceManager.delete({
+     *   where: {
+     *     // ... filter to delete one GoalFinanceManager
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GoalFinanceManagerDeleteArgs>(args: SelectSubset<T, GoalFinanceManagerDeleteArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GoalFinanceManager.
+     * @param {GoalFinanceManagerUpdateArgs} args - Arguments to update one GoalFinanceManager.
+     * @example
+     * // Update one GoalFinanceManager
+     * const goalFinanceManager = await prisma.goalFinanceManager.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GoalFinanceManagerUpdateArgs>(args: SelectSubset<T, GoalFinanceManagerUpdateArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GoalFinanceManagers.
+     * @param {GoalFinanceManagerDeleteManyArgs} args - Arguments to filter GoalFinanceManagers to delete.
+     * @example
+     * // Delete a few GoalFinanceManagers
+     * const { count } = await prisma.goalFinanceManager.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GoalFinanceManagerDeleteManyArgs>(args?: SelectSubset<T, GoalFinanceManagerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GoalFinanceManagers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GoalFinanceManagerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GoalFinanceManagers
+     * const goalFinanceManager = await prisma.goalFinanceManager.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GoalFinanceManagerUpdateManyArgs>(args: SelectSubset<T, GoalFinanceManagerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GoalFinanceManagers and returns the data updated in the database.
+     * @param {GoalFinanceManagerUpdateManyAndReturnArgs} args - Arguments to update many GoalFinanceManagers.
+     * @example
+     * // Update many GoalFinanceManagers
+     * const goalFinanceManager = await prisma.goalFinanceManager.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GoalFinanceManagers and only return the `id`
+     * const goalFinanceManagerWithIdOnly = await prisma.goalFinanceManager.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GoalFinanceManagerUpdateManyAndReturnArgs>(args: SelectSubset<T, GoalFinanceManagerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GoalFinanceManager.
+     * @param {GoalFinanceManagerUpsertArgs} args - Arguments to update or create a GoalFinanceManager.
+     * @example
+     * // Update or create a GoalFinanceManager
+     * const goalFinanceManager = await prisma.goalFinanceManager.upsert({
+     *   create: {
+     *     // ... data to create a GoalFinanceManager
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GoalFinanceManager we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GoalFinanceManagerUpsertArgs>(args: SelectSubset<T, GoalFinanceManagerUpsertArgs<ExtArgs>>): Prisma__GoalFinanceManagerClient<$Result.GetResult<Prisma.$GoalFinanceManagerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GoalFinanceManagers.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GoalFinanceManagerCountArgs} args - Arguments to filter GoalFinanceManagers to count.
+     * @example
+     * // Count the number of GoalFinanceManagers
+     * const count = await prisma.goalFinanceManager.count({
+     *   where: {
+     *     // ... the filter for the GoalFinanceManagers we want to count
+     *   }
+     * })
+    **/
+    count<T extends GoalFinanceManagerCountArgs>(
+      args?: Subset<T, GoalFinanceManagerCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GoalFinanceManagerCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GoalFinanceManager.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GoalFinanceManagerAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GoalFinanceManagerAggregateArgs>(args: Subset<T, GoalFinanceManagerAggregateArgs>): Prisma.PrismaPromise<GetGoalFinanceManagerAggregateType<T>>
+
+    /**
+     * Group by GoalFinanceManager.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GoalFinanceManagerGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GoalFinanceManagerGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GoalFinanceManagerGroupByArgs['orderBy'] }
+        : { orderBy?: GoalFinanceManagerGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GoalFinanceManagerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGoalFinanceManagerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GoalFinanceManager model
+   */
+  readonly fields: GoalFinanceManagerFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GoalFinanceManager.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GoalFinanceManagerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserFinanceManagerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserFinanceManagerDefaultArgs<ExtArgs>>): Prisma__UserFinanceManagerClient<$Result.GetResult<Prisma.$UserFinanceManagerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GoalFinanceManager model
+   */ 
+  interface GoalFinanceManagerFieldRefs {
+    readonly id: FieldRef<"GoalFinanceManager", 'String'>
+    readonly userId: FieldRef<"GoalFinanceManager", 'String'>
+    readonly title: FieldRef<"GoalFinanceManager", 'String'>
+    readonly targetAmount: FieldRef<"GoalFinanceManager", 'Decimal'>
+    readonly deadline: FieldRef<"GoalFinanceManager", 'DateTime'>
+    readonly description: FieldRef<"GoalFinanceManager", 'String'>
+    readonly createdAt: FieldRef<"GoalFinanceManager", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GoalFinanceManager findUnique
+   */
+  export type GoalFinanceManagerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which GoalFinanceManager to fetch.
+     */
+    where: GoalFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * GoalFinanceManager findUniqueOrThrow
+   */
+  export type GoalFinanceManagerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which GoalFinanceManager to fetch.
+     */
+    where: GoalFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * GoalFinanceManager findFirst
+   */
+  export type GoalFinanceManagerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which GoalFinanceManager to fetch.
+     */
+    where?: GoalFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GoalFinanceManagers to fetch.
+     */
+    orderBy?: GoalFinanceManagerOrderByWithRelationInput | GoalFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GoalFinanceManagers.
+     */
+    cursor?: GoalFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GoalFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GoalFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GoalFinanceManagers.
+     */
+    distinct?: GoalFinanceManagerScalarFieldEnum | GoalFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * GoalFinanceManager findFirstOrThrow
+   */
+  export type GoalFinanceManagerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which GoalFinanceManager to fetch.
+     */
+    where?: GoalFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GoalFinanceManagers to fetch.
+     */
+    orderBy?: GoalFinanceManagerOrderByWithRelationInput | GoalFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GoalFinanceManagers.
+     */
+    cursor?: GoalFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GoalFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GoalFinanceManagers.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GoalFinanceManagers.
+     */
+    distinct?: GoalFinanceManagerScalarFieldEnum | GoalFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * GoalFinanceManager findMany
+   */
+  export type GoalFinanceManagerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter, which GoalFinanceManagers to fetch.
+     */
+    where?: GoalFinanceManagerWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GoalFinanceManagers to fetch.
+     */
+    orderBy?: GoalFinanceManagerOrderByWithRelationInput | GoalFinanceManagerOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GoalFinanceManagers.
+     */
+    cursor?: GoalFinanceManagerWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GoalFinanceManagers from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GoalFinanceManagers.
+     */
+    skip?: number
+    distinct?: GoalFinanceManagerScalarFieldEnum | GoalFinanceManagerScalarFieldEnum[]
+  }
+
+  /**
+   * GoalFinanceManager create
+   */
+  export type GoalFinanceManagerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GoalFinanceManager.
+     */
+    data: XOR<GoalFinanceManagerCreateInput, GoalFinanceManagerUncheckedCreateInput>
+  }
+
+  /**
+   * GoalFinanceManager createMany
+   */
+  export type GoalFinanceManagerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GoalFinanceManagers.
+     */
+    data: GoalFinanceManagerCreateManyInput | GoalFinanceManagerCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GoalFinanceManager createManyAndReturn
+   */
+  export type GoalFinanceManagerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * The data used to create many GoalFinanceManagers.
+     */
+    data: GoalFinanceManagerCreateManyInput | GoalFinanceManagerCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GoalFinanceManager update
+   */
+  export type GoalFinanceManagerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GoalFinanceManager.
+     */
+    data: XOR<GoalFinanceManagerUpdateInput, GoalFinanceManagerUncheckedUpdateInput>
+    /**
+     * Choose, which GoalFinanceManager to update.
+     */
+    where: GoalFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * GoalFinanceManager updateMany
+   */
+  export type GoalFinanceManagerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GoalFinanceManagers.
+     */
+    data: XOR<GoalFinanceManagerUpdateManyMutationInput, GoalFinanceManagerUncheckedUpdateManyInput>
+    /**
+     * Filter which GoalFinanceManagers to update
+     */
+    where?: GoalFinanceManagerWhereInput
+    /**
+     * Limit how many GoalFinanceManagers to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GoalFinanceManager updateManyAndReturn
+   */
+  export type GoalFinanceManagerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * The data used to update GoalFinanceManagers.
+     */
+    data: XOR<GoalFinanceManagerUpdateManyMutationInput, GoalFinanceManagerUncheckedUpdateManyInput>
+    /**
+     * Filter which GoalFinanceManagers to update
+     */
+    where?: GoalFinanceManagerWhereInput
+    /**
+     * Limit how many GoalFinanceManagers to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GoalFinanceManager upsert
+   */
+  export type GoalFinanceManagerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GoalFinanceManager to update in case it exists.
+     */
+    where: GoalFinanceManagerWhereUniqueInput
+    /**
+     * In case the GoalFinanceManager found by the `where` argument doesn't exist, create a new GoalFinanceManager with this data.
+     */
+    create: XOR<GoalFinanceManagerCreateInput, GoalFinanceManagerUncheckedCreateInput>
+    /**
+     * In case the GoalFinanceManager was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GoalFinanceManagerUpdateInput, GoalFinanceManagerUncheckedUpdateInput>
+  }
+
+  /**
+   * GoalFinanceManager delete
+   */
+  export type GoalFinanceManagerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+    /**
+     * Filter which GoalFinanceManager to delete.
+     */
+    where: GoalFinanceManagerWhereUniqueInput
+  }
+
+  /**
+   * GoalFinanceManager deleteMany
+   */
+  export type GoalFinanceManagerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GoalFinanceManagers to delete
+     */
+    where?: GoalFinanceManagerWhereInput
+    /**
+     * Limit how many GoalFinanceManagers to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GoalFinanceManager without action
+   */
+  export type GoalFinanceManagerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GoalFinanceManager
+     */
+    select?: GoalFinanceManagerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GoalFinanceManager
+     */
+    omit?: GoalFinanceManagerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GoalFinanceManagerInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -40003,6 +43676,45 @@ export namespace Prisma {
   export type ReviewEduSeekerScalarFieldEnum = (typeof ReviewEduSeekerScalarFieldEnum)[keyof typeof ReviewEduSeekerScalarFieldEnum]
 
 
+  export const UserFinanceManagerScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    createdAt: 'createdAt'
+  };
+
+  export type UserFinanceManagerScalarFieldEnum = (typeof UserFinanceManagerScalarFieldEnum)[keyof typeof UserFinanceManagerScalarFieldEnum]
+
+
+  export const TransactionFinanceManagerScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    amount: 'amount',
+    type: 'type',
+    category: 'category',
+    source: 'source',
+    date: 'date',
+    description: 'description',
+    createdAt: 'createdAt'
+  };
+
+  export type TransactionFinanceManagerScalarFieldEnum = (typeof TransactionFinanceManagerScalarFieldEnum)[keyof typeof TransactionFinanceManagerScalarFieldEnum]
+
+
+  export const GoalFinanceManagerScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    title: 'title',
+    targetAmount: 'targetAmount',
+    deadline: 'deadline',
+    description: 'description',
+    createdAt: 'createdAt'
+  };
+
+  export type GoalFinanceManagerScalarFieldEnum = (typeof GoalFinanceManagerScalarFieldEnum)[keyof typeof GoalFinanceManagerScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -40078,6 +43790,20 @@ export namespace Prisma {
    * Reference to a field of type 'Boolean'
    */
   export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+    
+
+
+  /**
+   * Reference to a field of type 'Decimal'
+   */
+  export type DecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Decimal'>
+    
+
+
+  /**
+   * Reference to a field of type 'Decimal[]'
+   */
+  export type ListDecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Decimal[]'>
     
 
 
@@ -42123,6 +45849,208 @@ export namespace Prisma {
     comment?: StringWithAggregatesFilter<"ReviewEduSeeker"> | string
     validated?: BoolWithAggregatesFilter<"ReviewEduSeeker"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"ReviewEduSeeker"> | Date | string
+  }
+
+  export type UserFinanceManagerWhereInput = {
+    AND?: UserFinanceManagerWhereInput | UserFinanceManagerWhereInput[]
+    OR?: UserFinanceManagerWhereInput[]
+    NOT?: UserFinanceManagerWhereInput | UserFinanceManagerWhereInput[]
+    id?: StringFilter<"UserFinanceManager"> | string
+    email?: StringFilter<"UserFinanceManager"> | string
+    name?: StringFilter<"UserFinanceManager"> | string
+    password?: StringFilter<"UserFinanceManager"> | string
+    createdAt?: DateTimeFilter<"UserFinanceManager"> | Date | string
+    transactions?: TransactionFinanceManagerListRelationFilter
+    goals?: GoalFinanceManagerListRelationFilter
+  }
+
+  export type UserFinanceManagerOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    transactions?: TransactionFinanceManagerOrderByRelationAggregateInput
+    goals?: GoalFinanceManagerOrderByRelationAggregateInput
+  }
+
+  export type UserFinanceManagerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: UserFinanceManagerWhereInput | UserFinanceManagerWhereInput[]
+    OR?: UserFinanceManagerWhereInput[]
+    NOT?: UserFinanceManagerWhereInput | UserFinanceManagerWhereInput[]
+    name?: StringFilter<"UserFinanceManager"> | string
+    password?: StringFilter<"UserFinanceManager"> | string
+    createdAt?: DateTimeFilter<"UserFinanceManager"> | Date | string
+    transactions?: TransactionFinanceManagerListRelationFilter
+    goals?: GoalFinanceManagerListRelationFilter
+  }, "id" | "email">
+
+  export type UserFinanceManagerOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    _count?: UserFinanceManagerCountOrderByAggregateInput
+    _max?: UserFinanceManagerMaxOrderByAggregateInput
+    _min?: UserFinanceManagerMinOrderByAggregateInput
+  }
+
+  export type UserFinanceManagerScalarWhereWithAggregatesInput = {
+    AND?: UserFinanceManagerScalarWhereWithAggregatesInput | UserFinanceManagerScalarWhereWithAggregatesInput[]
+    OR?: UserFinanceManagerScalarWhereWithAggregatesInput[]
+    NOT?: UserFinanceManagerScalarWhereWithAggregatesInput | UserFinanceManagerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserFinanceManager"> | string
+    email?: StringWithAggregatesFilter<"UserFinanceManager"> | string
+    name?: StringWithAggregatesFilter<"UserFinanceManager"> | string
+    password?: StringWithAggregatesFilter<"UserFinanceManager"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"UserFinanceManager"> | Date | string
+  }
+
+  export type TransactionFinanceManagerWhereInput = {
+    AND?: TransactionFinanceManagerWhereInput | TransactionFinanceManagerWhereInput[]
+    OR?: TransactionFinanceManagerWhereInput[]
+    NOT?: TransactionFinanceManagerWhereInput | TransactionFinanceManagerWhereInput[]
+    id?: StringFilter<"TransactionFinanceManager"> | string
+    userId?: StringFilter<"TransactionFinanceManager"> | string
+    amount?: DecimalFilter<"TransactionFinanceManager"> | Decimal | DecimalJsLike | number | string
+    type?: StringFilter<"TransactionFinanceManager"> | string
+    category?: StringNullableFilter<"TransactionFinanceManager"> | string | null
+    source?: StringNullableFilter<"TransactionFinanceManager"> | string | null
+    date?: DateTimeFilter<"TransactionFinanceManager"> | Date | string
+    description?: StringFilter<"TransactionFinanceManager"> | string
+    createdAt?: DateTimeFilter<"TransactionFinanceManager"> | Date | string
+    user?: XOR<UserFinanceManagerScalarRelationFilter, UserFinanceManagerWhereInput>
+  }
+
+  export type TransactionFinanceManagerOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    amount?: SortOrder
+    type?: SortOrder
+    category?: SortOrderInput | SortOrder
+    source?: SortOrderInput | SortOrder
+    date?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    user?: UserFinanceManagerOrderByWithRelationInput
+  }
+
+  export type TransactionFinanceManagerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: TransactionFinanceManagerWhereInput | TransactionFinanceManagerWhereInput[]
+    OR?: TransactionFinanceManagerWhereInput[]
+    NOT?: TransactionFinanceManagerWhereInput | TransactionFinanceManagerWhereInput[]
+    userId?: StringFilter<"TransactionFinanceManager"> | string
+    amount?: DecimalFilter<"TransactionFinanceManager"> | Decimal | DecimalJsLike | number | string
+    type?: StringFilter<"TransactionFinanceManager"> | string
+    category?: StringNullableFilter<"TransactionFinanceManager"> | string | null
+    source?: StringNullableFilter<"TransactionFinanceManager"> | string | null
+    date?: DateTimeFilter<"TransactionFinanceManager"> | Date | string
+    description?: StringFilter<"TransactionFinanceManager"> | string
+    createdAt?: DateTimeFilter<"TransactionFinanceManager"> | Date | string
+    user?: XOR<UserFinanceManagerScalarRelationFilter, UserFinanceManagerWhereInput>
+  }, "id">
+
+  export type TransactionFinanceManagerOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    amount?: SortOrder
+    type?: SortOrder
+    category?: SortOrderInput | SortOrder
+    source?: SortOrderInput | SortOrder
+    date?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    _count?: TransactionFinanceManagerCountOrderByAggregateInput
+    _avg?: TransactionFinanceManagerAvgOrderByAggregateInput
+    _max?: TransactionFinanceManagerMaxOrderByAggregateInput
+    _min?: TransactionFinanceManagerMinOrderByAggregateInput
+    _sum?: TransactionFinanceManagerSumOrderByAggregateInput
+  }
+
+  export type TransactionFinanceManagerScalarWhereWithAggregatesInput = {
+    AND?: TransactionFinanceManagerScalarWhereWithAggregatesInput | TransactionFinanceManagerScalarWhereWithAggregatesInput[]
+    OR?: TransactionFinanceManagerScalarWhereWithAggregatesInput[]
+    NOT?: TransactionFinanceManagerScalarWhereWithAggregatesInput | TransactionFinanceManagerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"TransactionFinanceManager"> | string
+    userId?: StringWithAggregatesFilter<"TransactionFinanceManager"> | string
+    amount?: DecimalWithAggregatesFilter<"TransactionFinanceManager"> | Decimal | DecimalJsLike | number | string
+    type?: StringWithAggregatesFilter<"TransactionFinanceManager"> | string
+    category?: StringNullableWithAggregatesFilter<"TransactionFinanceManager"> | string | null
+    source?: StringNullableWithAggregatesFilter<"TransactionFinanceManager"> | string | null
+    date?: DateTimeWithAggregatesFilter<"TransactionFinanceManager"> | Date | string
+    description?: StringWithAggregatesFilter<"TransactionFinanceManager"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"TransactionFinanceManager"> | Date | string
+  }
+
+  export type GoalFinanceManagerWhereInput = {
+    AND?: GoalFinanceManagerWhereInput | GoalFinanceManagerWhereInput[]
+    OR?: GoalFinanceManagerWhereInput[]
+    NOT?: GoalFinanceManagerWhereInput | GoalFinanceManagerWhereInput[]
+    id?: StringFilter<"GoalFinanceManager"> | string
+    userId?: StringFilter<"GoalFinanceManager"> | string
+    title?: StringFilter<"GoalFinanceManager"> | string
+    targetAmount?: DecimalFilter<"GoalFinanceManager"> | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFilter<"GoalFinanceManager"> | Date | string
+    description?: StringFilter<"GoalFinanceManager"> | string
+    createdAt?: DateTimeFilter<"GoalFinanceManager"> | Date | string
+    user?: XOR<UserFinanceManagerScalarRelationFilter, UserFinanceManagerWhereInput>
+  }
+
+  export type GoalFinanceManagerOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    title?: SortOrder
+    targetAmount?: SortOrder
+    deadline?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    user?: UserFinanceManagerOrderByWithRelationInput
+  }
+
+  export type GoalFinanceManagerWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: GoalFinanceManagerWhereInput | GoalFinanceManagerWhereInput[]
+    OR?: GoalFinanceManagerWhereInput[]
+    NOT?: GoalFinanceManagerWhereInput | GoalFinanceManagerWhereInput[]
+    userId?: StringFilter<"GoalFinanceManager"> | string
+    title?: StringFilter<"GoalFinanceManager"> | string
+    targetAmount?: DecimalFilter<"GoalFinanceManager"> | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFilter<"GoalFinanceManager"> | Date | string
+    description?: StringFilter<"GoalFinanceManager"> | string
+    createdAt?: DateTimeFilter<"GoalFinanceManager"> | Date | string
+    user?: XOR<UserFinanceManagerScalarRelationFilter, UserFinanceManagerWhereInput>
+  }, "id">
+
+  export type GoalFinanceManagerOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    title?: SortOrder
+    targetAmount?: SortOrder
+    deadline?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+    _count?: GoalFinanceManagerCountOrderByAggregateInput
+    _avg?: GoalFinanceManagerAvgOrderByAggregateInput
+    _max?: GoalFinanceManagerMaxOrderByAggregateInput
+    _min?: GoalFinanceManagerMinOrderByAggregateInput
+    _sum?: GoalFinanceManagerSumOrderByAggregateInput
+  }
+
+  export type GoalFinanceManagerScalarWhereWithAggregatesInput = {
+    AND?: GoalFinanceManagerScalarWhereWithAggregatesInput | GoalFinanceManagerScalarWhereWithAggregatesInput[]
+    OR?: GoalFinanceManagerScalarWhereWithAggregatesInput[]
+    NOT?: GoalFinanceManagerScalarWhereWithAggregatesInput | GoalFinanceManagerScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GoalFinanceManager"> | string
+    userId?: StringWithAggregatesFilter<"GoalFinanceManager"> | string
+    title?: StringWithAggregatesFilter<"GoalFinanceManager"> | string
+    targetAmount?: DecimalWithAggregatesFilter<"GoalFinanceManager"> | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeWithAggregatesFilter<"GoalFinanceManager"> | Date | string
+    description?: StringWithAggregatesFilter<"GoalFinanceManager"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"GoalFinanceManager"> | Date | string
   }
 
   export type UserDIYHomesCreateInput = {
@@ -44199,6 +48127,222 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserFinanceManagerCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    transactions?: TransactionFinanceManagerCreateNestedManyWithoutUserInput
+    goals?: GoalFinanceManagerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserFinanceManagerUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    transactions?: TransactionFinanceManagerUncheckedCreateNestedManyWithoutUserInput
+    goals?: GoalFinanceManagerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserFinanceManagerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    transactions?: TransactionFinanceManagerUpdateManyWithoutUserNestedInput
+    goals?: GoalFinanceManagerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserFinanceManagerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    transactions?: TransactionFinanceManagerUncheckedUpdateManyWithoutUserNestedInput
+    goals?: GoalFinanceManagerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserFinanceManagerCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+  }
+
+  export type UserFinanceManagerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserFinanceManagerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TransactionFinanceManagerCreateInput = {
+    id?: string
+    amount: Decimal | DecimalJsLike | number | string
+    type: string
+    category?: string | null
+    source?: string | null
+    date: Date | string
+    description: string
+    createdAt?: Date | string
+    user: UserFinanceManagerCreateNestedOneWithoutTransactionsInput
+  }
+
+  export type TransactionFinanceManagerUncheckedCreateInput = {
+    id?: string
+    userId: string
+    amount: Decimal | DecimalJsLike | number | string
+    type: string
+    category?: string | null
+    source?: string | null
+    date: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type TransactionFinanceManagerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    amount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    type?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    source?: NullableStringFieldUpdateOperationsInput | string | null
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserFinanceManagerUpdateOneRequiredWithoutTransactionsNestedInput
+  }
+
+  export type TransactionFinanceManagerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    amount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    type?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    source?: NullableStringFieldUpdateOperationsInput | string | null
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TransactionFinanceManagerCreateManyInput = {
+    id?: string
+    userId: string
+    amount: Decimal | DecimalJsLike | number | string
+    type: string
+    category?: string | null
+    source?: string | null
+    date: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type TransactionFinanceManagerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    amount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    type?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    source?: NullableStringFieldUpdateOperationsInput | string | null
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TransactionFinanceManagerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    amount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    type?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    source?: NullableStringFieldUpdateOperationsInput | string | null
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GoalFinanceManagerCreateInput = {
+    id?: string
+    title: string
+    targetAmount: Decimal | DecimalJsLike | number | string
+    deadline: Date | string
+    description: string
+    createdAt?: Date | string
+    user: UserFinanceManagerCreateNestedOneWithoutGoalsInput
+  }
+
+  export type GoalFinanceManagerUncheckedCreateInput = {
+    id?: string
+    userId: string
+    title: string
+    targetAmount: Decimal | DecimalJsLike | number | string
+    deadline: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type GoalFinanceManagerUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserFinanceManagerUpdateOneRequiredWithoutGoalsNestedInput
+  }
+
+  export type GoalFinanceManagerUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GoalFinanceManagerCreateManyInput = {
+    id?: string
+    userId: string
+    title: string
+    targetAmount: Decimal | DecimalJsLike | number | string
+    deadline: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type GoalFinanceManagerUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GoalFinanceManagerUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -45563,6 +49707,164 @@ export namespace Prisma {
 
   export type ReviewEduSeekerSumOrderByAggregateInput = {
     rating?: SortOrder
+  }
+
+  export type TransactionFinanceManagerListRelationFilter = {
+    every?: TransactionFinanceManagerWhereInput
+    some?: TransactionFinanceManagerWhereInput
+    none?: TransactionFinanceManagerWhereInput
+  }
+
+  export type GoalFinanceManagerListRelationFilter = {
+    every?: GoalFinanceManagerWhereInput
+    some?: GoalFinanceManagerWhereInput
+    none?: GoalFinanceManagerWhereInput
+  }
+
+  export type TransactionFinanceManagerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type GoalFinanceManagerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserFinanceManagerCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserFinanceManagerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserFinanceManagerMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type DecimalFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
+  }
+
+  export type UserFinanceManagerScalarRelationFilter = {
+    is?: UserFinanceManagerWhereInput
+    isNot?: UserFinanceManagerWhereInput
+  }
+
+  export type TransactionFinanceManagerCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    amount?: SortOrder
+    type?: SortOrder
+    category?: SortOrder
+    source?: SortOrder
+    date?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type TransactionFinanceManagerAvgOrderByAggregateInput = {
+    amount?: SortOrder
+  }
+
+  export type TransactionFinanceManagerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    amount?: SortOrder
+    type?: SortOrder
+    category?: SortOrder
+    source?: SortOrder
+    date?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type TransactionFinanceManagerMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    amount?: SortOrder
+    type?: SortOrder
+    category?: SortOrder
+    source?: SortOrder
+    date?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type TransactionFinanceManagerSumOrderByAggregateInput = {
+    amount?: SortOrder
+  }
+
+  export type DecimalWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalWithAggregatesFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedDecimalFilter<$PrismaModel>
+    _sum?: NestedDecimalFilter<$PrismaModel>
+    _min?: NestedDecimalFilter<$PrismaModel>
+    _max?: NestedDecimalFilter<$PrismaModel>
+  }
+
+  export type GoalFinanceManagerCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    title?: SortOrder
+    targetAmount?: SortOrder
+    deadline?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GoalFinanceManagerAvgOrderByAggregateInput = {
+    targetAmount?: SortOrder
+  }
+
+  export type GoalFinanceManagerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    title?: SortOrder
+    targetAmount?: SortOrder
+    deadline?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GoalFinanceManagerMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    title?: SortOrder
+    targetAmount?: SortOrder
+    deadline?: SortOrder
+    description?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type GoalFinanceManagerSumOrderByAggregateInput = {
+    targetAmount?: SortOrder
   }
 
   export type PostDIYHomesCreateNestedManyWithoutUserInput = {
@@ -47729,6 +52031,126 @@ export namespace Prisma {
     update?: XOR<XOR<UserEduSeekerUpdateToOneWithWhereWithoutReviewsInput, UserEduSeekerUpdateWithoutReviewsInput>, UserEduSeekerUncheckedUpdateWithoutReviewsInput>
   }
 
+  export type TransactionFinanceManagerCreateNestedManyWithoutUserInput = {
+    create?: XOR<TransactionFinanceManagerCreateWithoutUserInput, TransactionFinanceManagerUncheckedCreateWithoutUserInput> | TransactionFinanceManagerCreateWithoutUserInput[] | TransactionFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: TransactionFinanceManagerCreateOrConnectWithoutUserInput | TransactionFinanceManagerCreateOrConnectWithoutUserInput[]
+    createMany?: TransactionFinanceManagerCreateManyUserInputEnvelope
+    connect?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+  }
+
+  export type GoalFinanceManagerCreateNestedManyWithoutUserInput = {
+    create?: XOR<GoalFinanceManagerCreateWithoutUserInput, GoalFinanceManagerUncheckedCreateWithoutUserInput> | GoalFinanceManagerCreateWithoutUserInput[] | GoalFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GoalFinanceManagerCreateOrConnectWithoutUserInput | GoalFinanceManagerCreateOrConnectWithoutUserInput[]
+    createMany?: GoalFinanceManagerCreateManyUserInputEnvelope
+    connect?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+  }
+
+  export type TransactionFinanceManagerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<TransactionFinanceManagerCreateWithoutUserInput, TransactionFinanceManagerUncheckedCreateWithoutUserInput> | TransactionFinanceManagerCreateWithoutUserInput[] | TransactionFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: TransactionFinanceManagerCreateOrConnectWithoutUserInput | TransactionFinanceManagerCreateOrConnectWithoutUserInput[]
+    createMany?: TransactionFinanceManagerCreateManyUserInputEnvelope
+    connect?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+  }
+
+  export type GoalFinanceManagerUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<GoalFinanceManagerCreateWithoutUserInput, GoalFinanceManagerUncheckedCreateWithoutUserInput> | GoalFinanceManagerCreateWithoutUserInput[] | GoalFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GoalFinanceManagerCreateOrConnectWithoutUserInput | GoalFinanceManagerCreateOrConnectWithoutUserInput[]
+    createMany?: GoalFinanceManagerCreateManyUserInputEnvelope
+    connect?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+  }
+
+  export type TransactionFinanceManagerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<TransactionFinanceManagerCreateWithoutUserInput, TransactionFinanceManagerUncheckedCreateWithoutUserInput> | TransactionFinanceManagerCreateWithoutUserInput[] | TransactionFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: TransactionFinanceManagerCreateOrConnectWithoutUserInput | TransactionFinanceManagerCreateOrConnectWithoutUserInput[]
+    upsert?: TransactionFinanceManagerUpsertWithWhereUniqueWithoutUserInput | TransactionFinanceManagerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: TransactionFinanceManagerCreateManyUserInputEnvelope
+    set?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    disconnect?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    delete?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    connect?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    update?: TransactionFinanceManagerUpdateWithWhereUniqueWithoutUserInput | TransactionFinanceManagerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: TransactionFinanceManagerUpdateManyWithWhereWithoutUserInput | TransactionFinanceManagerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: TransactionFinanceManagerScalarWhereInput | TransactionFinanceManagerScalarWhereInput[]
+  }
+
+  export type GoalFinanceManagerUpdateManyWithoutUserNestedInput = {
+    create?: XOR<GoalFinanceManagerCreateWithoutUserInput, GoalFinanceManagerUncheckedCreateWithoutUserInput> | GoalFinanceManagerCreateWithoutUserInput[] | GoalFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GoalFinanceManagerCreateOrConnectWithoutUserInput | GoalFinanceManagerCreateOrConnectWithoutUserInput[]
+    upsert?: GoalFinanceManagerUpsertWithWhereUniqueWithoutUserInput | GoalFinanceManagerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: GoalFinanceManagerCreateManyUserInputEnvelope
+    set?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    disconnect?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    delete?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    connect?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    update?: GoalFinanceManagerUpdateWithWhereUniqueWithoutUserInput | GoalFinanceManagerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: GoalFinanceManagerUpdateManyWithWhereWithoutUserInput | GoalFinanceManagerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: GoalFinanceManagerScalarWhereInput | GoalFinanceManagerScalarWhereInput[]
+  }
+
+  export type TransactionFinanceManagerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<TransactionFinanceManagerCreateWithoutUserInput, TransactionFinanceManagerUncheckedCreateWithoutUserInput> | TransactionFinanceManagerCreateWithoutUserInput[] | TransactionFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: TransactionFinanceManagerCreateOrConnectWithoutUserInput | TransactionFinanceManagerCreateOrConnectWithoutUserInput[]
+    upsert?: TransactionFinanceManagerUpsertWithWhereUniqueWithoutUserInput | TransactionFinanceManagerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: TransactionFinanceManagerCreateManyUserInputEnvelope
+    set?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    disconnect?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    delete?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    connect?: TransactionFinanceManagerWhereUniqueInput | TransactionFinanceManagerWhereUniqueInput[]
+    update?: TransactionFinanceManagerUpdateWithWhereUniqueWithoutUserInput | TransactionFinanceManagerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: TransactionFinanceManagerUpdateManyWithWhereWithoutUserInput | TransactionFinanceManagerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: TransactionFinanceManagerScalarWhereInput | TransactionFinanceManagerScalarWhereInput[]
+  }
+
+  export type GoalFinanceManagerUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<GoalFinanceManagerCreateWithoutUserInput, GoalFinanceManagerUncheckedCreateWithoutUserInput> | GoalFinanceManagerCreateWithoutUserInput[] | GoalFinanceManagerUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: GoalFinanceManagerCreateOrConnectWithoutUserInput | GoalFinanceManagerCreateOrConnectWithoutUserInput[]
+    upsert?: GoalFinanceManagerUpsertWithWhereUniqueWithoutUserInput | GoalFinanceManagerUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: GoalFinanceManagerCreateManyUserInputEnvelope
+    set?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    disconnect?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    delete?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    connect?: GoalFinanceManagerWhereUniqueInput | GoalFinanceManagerWhereUniqueInput[]
+    update?: GoalFinanceManagerUpdateWithWhereUniqueWithoutUserInput | GoalFinanceManagerUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: GoalFinanceManagerUpdateManyWithWhereWithoutUserInput | GoalFinanceManagerUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: GoalFinanceManagerScalarWhereInput | GoalFinanceManagerScalarWhereInput[]
+  }
+
+  export type UserFinanceManagerCreateNestedOneWithoutTransactionsInput = {
+    create?: XOR<UserFinanceManagerCreateWithoutTransactionsInput, UserFinanceManagerUncheckedCreateWithoutTransactionsInput>
+    connectOrCreate?: UserFinanceManagerCreateOrConnectWithoutTransactionsInput
+    connect?: UserFinanceManagerWhereUniqueInput
+  }
+
+  export type DecimalFieldUpdateOperationsInput = {
+    set?: Decimal | DecimalJsLike | number | string
+    increment?: Decimal | DecimalJsLike | number | string
+    decrement?: Decimal | DecimalJsLike | number | string
+    multiply?: Decimal | DecimalJsLike | number | string
+    divide?: Decimal | DecimalJsLike | number | string
+  }
+
+  export type UserFinanceManagerUpdateOneRequiredWithoutTransactionsNestedInput = {
+    create?: XOR<UserFinanceManagerCreateWithoutTransactionsInput, UserFinanceManagerUncheckedCreateWithoutTransactionsInput>
+    connectOrCreate?: UserFinanceManagerCreateOrConnectWithoutTransactionsInput
+    upsert?: UserFinanceManagerUpsertWithoutTransactionsInput
+    connect?: UserFinanceManagerWhereUniqueInput
+    update?: XOR<XOR<UserFinanceManagerUpdateToOneWithWhereWithoutTransactionsInput, UserFinanceManagerUpdateWithoutTransactionsInput>, UserFinanceManagerUncheckedUpdateWithoutTransactionsInput>
+  }
+
+  export type UserFinanceManagerCreateNestedOneWithoutGoalsInput = {
+    create?: XOR<UserFinanceManagerCreateWithoutGoalsInput, UserFinanceManagerUncheckedCreateWithoutGoalsInput>
+    connectOrCreate?: UserFinanceManagerCreateOrConnectWithoutGoalsInput
+    connect?: UserFinanceManagerWhereUniqueInput
+  }
+
+  export type UserFinanceManagerUpdateOneRequiredWithoutGoalsNestedInput = {
+    create?: XOR<UserFinanceManagerCreateWithoutGoalsInput, UserFinanceManagerUncheckedCreateWithoutGoalsInput>
+    connectOrCreate?: UserFinanceManagerCreateOrConnectWithoutGoalsInput
+    upsert?: UserFinanceManagerUpsertWithoutGoalsInput
+    connect?: UserFinanceManagerWhereUniqueInput
+    update?: XOR<XOR<UserFinanceManagerUpdateToOneWithWhereWithoutGoalsInput, UserFinanceManagerUpdateWithoutGoalsInput>, UserFinanceManagerUncheckedUpdateWithoutGoalsInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -47901,6 +52323,33 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedDateTimeNullableFilter<$PrismaModel>
     _max?: NestedDateTimeNullableFilter<$PrismaModel>
+  }
+
+  export type NestedDecimalFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
+  }
+
+  export type NestedDecimalWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalWithAggregatesFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedDecimalFilter<$PrismaModel>
+    _sum?: NestedDecimalFilter<$PrismaModel>
+    _min?: NestedDecimalFilter<$PrismaModel>
+    _max?: NestedDecimalFilter<$PrismaModel>
   }
 
   export type PostDIYHomesCreateWithoutUserInput = {
@@ -52147,6 +56596,230 @@ export namespace Prisma {
     platforms?: PlatformEduSeekerUncheckedUpdateManyWithoutSubmitterNestedInput
   }
 
+  export type TransactionFinanceManagerCreateWithoutUserInput = {
+    id?: string
+    amount: Decimal | DecimalJsLike | number | string
+    type: string
+    category?: string | null
+    source?: string | null
+    date: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type TransactionFinanceManagerUncheckedCreateWithoutUserInput = {
+    id?: string
+    amount: Decimal | DecimalJsLike | number | string
+    type: string
+    category?: string | null
+    source?: string | null
+    date: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type TransactionFinanceManagerCreateOrConnectWithoutUserInput = {
+    where: TransactionFinanceManagerWhereUniqueInput
+    create: XOR<TransactionFinanceManagerCreateWithoutUserInput, TransactionFinanceManagerUncheckedCreateWithoutUserInput>
+  }
+
+  export type TransactionFinanceManagerCreateManyUserInputEnvelope = {
+    data: TransactionFinanceManagerCreateManyUserInput | TransactionFinanceManagerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GoalFinanceManagerCreateWithoutUserInput = {
+    id?: string
+    title: string
+    targetAmount: Decimal | DecimalJsLike | number | string
+    deadline: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type GoalFinanceManagerUncheckedCreateWithoutUserInput = {
+    id?: string
+    title: string
+    targetAmount: Decimal | DecimalJsLike | number | string
+    deadline: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type GoalFinanceManagerCreateOrConnectWithoutUserInput = {
+    where: GoalFinanceManagerWhereUniqueInput
+    create: XOR<GoalFinanceManagerCreateWithoutUserInput, GoalFinanceManagerUncheckedCreateWithoutUserInput>
+  }
+
+  export type GoalFinanceManagerCreateManyUserInputEnvelope = {
+    data: GoalFinanceManagerCreateManyUserInput | GoalFinanceManagerCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type TransactionFinanceManagerUpsertWithWhereUniqueWithoutUserInput = {
+    where: TransactionFinanceManagerWhereUniqueInput
+    update: XOR<TransactionFinanceManagerUpdateWithoutUserInput, TransactionFinanceManagerUncheckedUpdateWithoutUserInput>
+    create: XOR<TransactionFinanceManagerCreateWithoutUserInput, TransactionFinanceManagerUncheckedCreateWithoutUserInput>
+  }
+
+  export type TransactionFinanceManagerUpdateWithWhereUniqueWithoutUserInput = {
+    where: TransactionFinanceManagerWhereUniqueInput
+    data: XOR<TransactionFinanceManagerUpdateWithoutUserInput, TransactionFinanceManagerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type TransactionFinanceManagerUpdateManyWithWhereWithoutUserInput = {
+    where: TransactionFinanceManagerScalarWhereInput
+    data: XOR<TransactionFinanceManagerUpdateManyMutationInput, TransactionFinanceManagerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type TransactionFinanceManagerScalarWhereInput = {
+    AND?: TransactionFinanceManagerScalarWhereInput | TransactionFinanceManagerScalarWhereInput[]
+    OR?: TransactionFinanceManagerScalarWhereInput[]
+    NOT?: TransactionFinanceManagerScalarWhereInput | TransactionFinanceManagerScalarWhereInput[]
+    id?: StringFilter<"TransactionFinanceManager"> | string
+    userId?: StringFilter<"TransactionFinanceManager"> | string
+    amount?: DecimalFilter<"TransactionFinanceManager"> | Decimal | DecimalJsLike | number | string
+    type?: StringFilter<"TransactionFinanceManager"> | string
+    category?: StringNullableFilter<"TransactionFinanceManager"> | string | null
+    source?: StringNullableFilter<"TransactionFinanceManager"> | string | null
+    date?: DateTimeFilter<"TransactionFinanceManager"> | Date | string
+    description?: StringFilter<"TransactionFinanceManager"> | string
+    createdAt?: DateTimeFilter<"TransactionFinanceManager"> | Date | string
+  }
+
+  export type GoalFinanceManagerUpsertWithWhereUniqueWithoutUserInput = {
+    where: GoalFinanceManagerWhereUniqueInput
+    update: XOR<GoalFinanceManagerUpdateWithoutUserInput, GoalFinanceManagerUncheckedUpdateWithoutUserInput>
+    create: XOR<GoalFinanceManagerCreateWithoutUserInput, GoalFinanceManagerUncheckedCreateWithoutUserInput>
+  }
+
+  export type GoalFinanceManagerUpdateWithWhereUniqueWithoutUserInput = {
+    where: GoalFinanceManagerWhereUniqueInput
+    data: XOR<GoalFinanceManagerUpdateWithoutUserInput, GoalFinanceManagerUncheckedUpdateWithoutUserInput>
+  }
+
+  export type GoalFinanceManagerUpdateManyWithWhereWithoutUserInput = {
+    where: GoalFinanceManagerScalarWhereInput
+    data: XOR<GoalFinanceManagerUpdateManyMutationInput, GoalFinanceManagerUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type GoalFinanceManagerScalarWhereInput = {
+    AND?: GoalFinanceManagerScalarWhereInput | GoalFinanceManagerScalarWhereInput[]
+    OR?: GoalFinanceManagerScalarWhereInput[]
+    NOT?: GoalFinanceManagerScalarWhereInput | GoalFinanceManagerScalarWhereInput[]
+    id?: StringFilter<"GoalFinanceManager"> | string
+    userId?: StringFilter<"GoalFinanceManager"> | string
+    title?: StringFilter<"GoalFinanceManager"> | string
+    targetAmount?: DecimalFilter<"GoalFinanceManager"> | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFilter<"GoalFinanceManager"> | Date | string
+    description?: StringFilter<"GoalFinanceManager"> | string
+    createdAt?: DateTimeFilter<"GoalFinanceManager"> | Date | string
+  }
+
+  export type UserFinanceManagerCreateWithoutTransactionsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    goals?: GoalFinanceManagerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserFinanceManagerUncheckedCreateWithoutTransactionsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    goals?: GoalFinanceManagerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserFinanceManagerCreateOrConnectWithoutTransactionsInput = {
+    where: UserFinanceManagerWhereUniqueInput
+    create: XOR<UserFinanceManagerCreateWithoutTransactionsInput, UserFinanceManagerUncheckedCreateWithoutTransactionsInput>
+  }
+
+  export type UserFinanceManagerUpsertWithoutTransactionsInput = {
+    update: XOR<UserFinanceManagerUpdateWithoutTransactionsInput, UserFinanceManagerUncheckedUpdateWithoutTransactionsInput>
+    create: XOR<UserFinanceManagerCreateWithoutTransactionsInput, UserFinanceManagerUncheckedCreateWithoutTransactionsInput>
+    where?: UserFinanceManagerWhereInput
+  }
+
+  export type UserFinanceManagerUpdateToOneWithWhereWithoutTransactionsInput = {
+    where?: UserFinanceManagerWhereInput
+    data: XOR<UserFinanceManagerUpdateWithoutTransactionsInput, UserFinanceManagerUncheckedUpdateWithoutTransactionsInput>
+  }
+
+  export type UserFinanceManagerUpdateWithoutTransactionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    goals?: GoalFinanceManagerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserFinanceManagerUncheckedUpdateWithoutTransactionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    goals?: GoalFinanceManagerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserFinanceManagerCreateWithoutGoalsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    transactions?: TransactionFinanceManagerCreateNestedManyWithoutUserInput
+  }
+
+  export type UserFinanceManagerUncheckedCreateWithoutGoalsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    transactions?: TransactionFinanceManagerUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserFinanceManagerCreateOrConnectWithoutGoalsInput = {
+    where: UserFinanceManagerWhereUniqueInput
+    create: XOR<UserFinanceManagerCreateWithoutGoalsInput, UserFinanceManagerUncheckedCreateWithoutGoalsInput>
+  }
+
+  export type UserFinanceManagerUpsertWithoutGoalsInput = {
+    update: XOR<UserFinanceManagerUpdateWithoutGoalsInput, UserFinanceManagerUncheckedUpdateWithoutGoalsInput>
+    create: XOR<UserFinanceManagerCreateWithoutGoalsInput, UserFinanceManagerUncheckedCreateWithoutGoalsInput>
+    where?: UserFinanceManagerWhereInput
+  }
+
+  export type UserFinanceManagerUpdateToOneWithWhereWithoutGoalsInput = {
+    where?: UserFinanceManagerWhereInput
+    data: XOR<UserFinanceManagerUpdateWithoutGoalsInput, UserFinanceManagerUncheckedUpdateWithoutGoalsInput>
+  }
+
+  export type UserFinanceManagerUpdateWithoutGoalsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    transactions?: TransactionFinanceManagerUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserFinanceManagerUncheckedUpdateWithoutGoalsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    transactions?: TransactionFinanceManagerUncheckedUpdateManyWithoutUserNestedInput
+  }
+
   export type PostDIYHomesCreateManyUserInput = {
     id?: string
     title: string
@@ -53374,6 +58047,86 @@ export namespace Prisma {
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TransactionFinanceManagerCreateManyUserInput = {
+    id?: string
+    amount: Decimal | DecimalJsLike | number | string
+    type: string
+    category?: string | null
+    source?: string | null
+    date: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type GoalFinanceManagerCreateManyUserInput = {
+    id?: string
+    title: string
+    targetAmount: Decimal | DecimalJsLike | number | string
+    deadline: Date | string
+    description: string
+    createdAt?: Date | string
+  }
+
+  export type TransactionFinanceManagerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    amount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    type?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    source?: NullableStringFieldUpdateOperationsInput | string | null
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TransactionFinanceManagerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    amount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    type?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    source?: NullableStringFieldUpdateOperationsInput | string | null
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type TransactionFinanceManagerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    amount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    type?: StringFieldUpdateOperationsInput | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    source?: NullableStringFieldUpdateOperationsInput | string | null
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GoalFinanceManagerUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GoalFinanceManagerUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GoalFinanceManagerUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    targetAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    deadline?: DateTimeFieldUpdateOperationsInput | Date | string
+    description?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
