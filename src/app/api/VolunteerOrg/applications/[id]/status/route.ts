@@ -12,6 +12,14 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
       return NextResponse.json({ error: 'Invalid status' }, { status: 400 })
     }
 
+    const application = await prisma.volunteerApplication.findUnique({
+      where: { id },
+    })
+
+    if (!application) {
+      return NextResponse.json({ error: 'Application not found' }, { status: 404 })
+    }
+
     const updated = await prisma.volunteerApplication.update({
       where: { id },
       data: { status },
