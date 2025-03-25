@@ -365,6 +365,34 @@ exports.Prisma.ReportSocialButterflyScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserVolunteerOrgScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.VolunteerActivityScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  location: 'location',
+  date: 'date',
+  organizerId: 'organizerId',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.VolunteerApplicationScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  activityId: 'activityId',
+  motivation: 'motivation',
+  status: 'status',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -408,7 +436,10 @@ exports.Prisma.ModelName = {
   ReviewSocialButterfly: 'ReviewSocialButterfly',
   LikeSocialButterfly: 'LikeSocialButterfly',
   BookmarkSocialButterfly: 'BookmarkSocialButterfly',
-  ReportSocialButterfly: 'ReportSocialButterfly'
+  ReportSocialButterfly: 'ReportSocialButterfly',
+  UserVolunteerOrg: 'UserVolunteerOrg',
+  VolunteerActivity: 'VolunteerActivity',
+  VolunteerApplication: 'VolunteerApplication'
 };
 
 /**

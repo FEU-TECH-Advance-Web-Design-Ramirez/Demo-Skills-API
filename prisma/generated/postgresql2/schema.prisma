@@ -352,3 +352,40 @@ model ReportSocialButterfly {
   event  EventSocialButterfly?  @relation(fields: [eventId], references: [id], onDelete: Cascade)
   review ReviewSocialButterfly? @relation(fields: [reviewId], references: [id], onDelete: Cascade)
 }
+
+model UserVolunteerOrg {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  activities   VolunteerActivity[]    @relation("OrganizerActivities")
+  applications VolunteerApplication[] @relation("UserApplications")
+}
+
+model VolunteerActivity {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  location    String
+  date        DateTime
+  organizerId String
+  validated   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  organizer    UserVolunteerOrg       @relation("OrganizerActivities", fields: [organizerId], references: [id], onDelete: Cascade)
+  applications VolunteerApplication[] @relation("ActivityApplications")
+}
+
+model VolunteerApplication {
+  id         String   @id @default(uuid())
+  userId     String
+  activityId String
+  motivation String
+  status     String   @default("pending") // confirmed | rejected | pending
+  createdAt  DateTime @default(now())
+
+  user     UserVolunteerOrg  @relation("UserApplications", fields: [userId], references: [id], onDelete: Cascade)
+  activity VolunteerActivity @relation("ActivityApplications", fields: [activityId], references: [id], onDelete: Cascade)
+}
