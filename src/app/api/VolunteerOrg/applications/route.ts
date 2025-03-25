@@ -11,11 +11,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    const validatedActivty = await prisma.volunteerActivity.findUnique({
+    const validatedActivity = await prisma.volunteerActivity.findUnique({
       where: { id: activityId, validated: true },
     })
 
-    if (!validatedActivty) {
+    if (!validatedActivity) {
       return NextResponse.json({ error: 'Activity not yet validated' }, { status: 404 })
     }
 
