@@ -234,7 +234,7 @@ describe("VolunteerOrg - Activities API Tests", () => {
   // =========================
   afterAll(async () => {
     await prisma.volunteerActivity.deleteMany();
-    await prisma.userVolunteerOrg.deleteMany({ where: { email: { in: [testEmail, otherEmail] } } });
+    await prisma.userVolunteerOrg.deleteMany({ where: { email: { in: [testEmail, otherEmail, adminEmail] } } });
     await prisma.$disconnect();
   });
 
