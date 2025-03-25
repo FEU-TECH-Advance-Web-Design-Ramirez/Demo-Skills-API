@@ -25,7 +25,16 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const { id } = params
-    const { title, description, location, date } = await req.json()
+    const { title, description, location, date, organizerId } = await req.json()
+
+    if (!organizerId)
+      return NextResponse.json({ error: 'Organizer ID is required' }, { status: 400 })
+
+    const owner = await prisma.volunteerActivity.findUnique({ where: { id, organizerId } })
+
+    if (!owner) {
+      return NextResponse.json({ error: 'You are not authorized to update this activity' }, { status: 403 })
+    }
 
     const updated = await prisma.volunteerActivity.update({
       where: { id },
@@ -47,11 +56,23 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
 }
 
 export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
-  const { id } = params
-
-  // Optional: Verify if requester is admin before deletion
-
   try {
+    const { id } = params
+
+    const organizerId = req.headers.get('organizerId')
+
+    if (!organizerId)
+      return NextResponse.json({ error: 'Organizer ID is required' }, { status: 400 })
+
+    const owner = await prisma.volunteerActivity.findUnique({ where: { id, organizerId } })
+
+    if (!owner) {
+      const admin = await prisma.userVolunteerOrg.findUnique({ where: { id: organizerId } })
+
+      if (!admin || !admin.name.startsWith('a-'))
+        return NextResponse.json({ error: 'You are not authorized to update this activity' }, { status: 403 })
+    }
+
     await prisma.volunteerActivity.delete({ where: { id } })
     return NextResponse.json({ message: 'Activity deleted successfully' })
   } catch (err) {
