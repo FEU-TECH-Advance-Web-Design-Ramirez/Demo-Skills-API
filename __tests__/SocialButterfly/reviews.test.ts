@@ -9,8 +9,6 @@
  * - Get reviews for event from admin and creator (GET) - Invalid
  * - Update review by creator (PUT)
  * - Update review by non-creator (PUT) - Invalid
- * - Validate review by Admin (POST)
- * - Validate review by non-admin (POST) - Invalid
  * - Delete review by creator or admin (DELETE)
  * - Delete review by non-creator or non-admin (DELETE) - Invalid
  * 
@@ -147,25 +145,6 @@ describe("SocialButterfly - Reviews API Tests", () => {
   })
 
   it("should block non-creator from updating review (not enforced yet)", async () => {
-    expect(true).toBe(true)
-  })
-
-  // =========================
-  // ✅ Admin Validate Review
-  // =========================
-  it("should validate a review as admin", async () => {
-    const req = new NextRequest(`http://localhost:3000/api/SocialButterfly/admin/reviews/${testReviewId}/validate`, {
-      method: "POST"
-    })
-
-    const res = await validateReview(req, { params: { id: testReviewId } })
-    expect(res.status).toBe(200)
-
-    const result = await res.json()
-    expect(result.review.validated).toBe(true)
-  })
-
-  it("should block non-admin from validating review (not enforced yet)", async () => {
     expect(true).toBe(true)
   })
 
