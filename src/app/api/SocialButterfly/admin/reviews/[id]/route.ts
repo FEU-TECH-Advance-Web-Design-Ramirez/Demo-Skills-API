@@ -4,8 +4,21 @@ import { PrismaClient as PostgresqlClient } from '@/../prisma/generated/postgres
 const prisma = new PostgresqlClient()
 
 // DELETE review (admin only)
-export async function DELETE(_: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
   try {
+    const adminId = req.headers.get('adminId')
+    if (!adminId) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    const admin = await prisma.userSocialButterfly.findUnique({
+      where: { id: adminId }
+    })
+
+    if (!admin || !admin.name.startsWith("a-")) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     await prisma.reviewSocialButterfly.delete({
       where: { id: params.id }
     })
