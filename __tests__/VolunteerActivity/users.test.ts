@@ -1,23 +1,14 @@
 /**
  * @fileoverview Test suite for Volunteer Organization User API endpoints.
- * Tests the complete CRUD operations for user management.
- * 
- * as follows:
- * - Creating a new user
- * - Create multiple dummy users
- * - Fetching user's list
- * - Fetching a single user by ID
- * - Updating a user
- * - Deleting a user
  * 
  * @description
  * This test suite validates the following API endpoints and operations:
- * - CREATE: POST /api/VolunteerOrg/users
- * - CREATE: POST /api/VolunteerOrg/users (multiple dummy users)
- * - READ: GET /api/VolunteerOrg/users
- * - READ: GET /api/VolunteerOrg/users/[id]
- * - UPDATE: PUT /api/VolunteerOrg/users/[id] 
- * - DELETE: DELETE /api/VolunteerOrg/users/[id]
+ * - Create a new user (POST)
+ * - Create multiple dummy users (POST)
+ * - Get a list of users (GET)
+ * - Get a single user by ID (GET)
+ * - Update a user (PUT)
+ * - Delete a user (DELETE)
  * 
  * @testSetup
  * - Cleans up any existing test users before running tests
