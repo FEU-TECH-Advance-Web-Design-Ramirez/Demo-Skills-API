@@ -3,10 +3,10 @@ import { PrismaClient as HealthTrackerClient } from "@/../prisma/generated/postg
 
 const prisma = new HealthTrackerClient();
 
-export async function GET(_: NextRequest, { params }: { params: { userId: string } }) {
+export async function GET(_: NextRequest, { params }: { params: { id: string } }) {
   try {
     const records = await prisma.recordHealthTracker.findMany({
-      where: { userId: params.userId },
+      where: { userId: params.id },
       orderBy: { date: "desc" },
     });
 
