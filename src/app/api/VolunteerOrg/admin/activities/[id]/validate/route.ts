@@ -16,7 +16,11 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     })
 
     return NextResponse.json({ message: 'Activity validated', activity: updated })
-  } catch {
-    return NextResponse.json({ error: 'Activity not found' }, { status: 404 })
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
 }

@@ -4,31 +4,46 @@ import { PrismaClient as PostgresqlClient } from '@/../prisma/generated/postgres
 const prisma = new PostgresqlClient()
 
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  const { id } = params
-  const activity = await prisma.volunteerActivity.findUnique({ where: { id } })
+  try {
+    const { id } = params
+    const activity = await prisma.volunteerActivity.findUnique({ where: { id } })
 
-  if (!activity) {
-    return NextResponse.json({ error: 'Activity not found' }, { status: 404 })
+    if (!activity) {
+      return NextResponse.json({ error: 'Activity not found' }, { status: 404 })
+    }
+
+    return NextResponse.json(activity)
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
-
-  return NextResponse.json(activity)
 }
 
 export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
-  const { id } = params
-  const { title, description, location, date } = await req.json()
+  try {
+    const { id } = params
+    const { title, description, location, date } = await req.json()
 
-  const updated = await prisma.volunteerActivity.update({
-    where: { id },
-    data: {
-      title,
-      description,
-      location,
-      date: new Date(date),
-    },
-  })
-
-  return NextResponse.json(updated)
+    const updated = await prisma.volunteerActivity.update({
+      where: { id },
+      data: {
+        title,
+        description,
+        location,
+        date: new Date(date),
+      },
+    })
+    return NextResponse.json(updated)
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
+  }
 }
 
 export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
@@ -39,7 +54,11 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
   try {
     await prisma.volunteerActivity.delete({ where: { id } })
     return NextResponse.json({ message: 'Activity deleted successfully' })
-  } catch {
-    return NextResponse.json({ error: 'Activity not found or cannot delete' }, { status: 404 })
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
 }
