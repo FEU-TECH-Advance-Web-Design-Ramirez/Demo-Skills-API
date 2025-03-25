@@ -326,6 +326,143 @@ This doc outlines the **required input data**, **HTTP methods**, **endpoints**, 
 }
 ```
 
-##
+## Application
+
+### 📌 1. **Apply to Volunteer Activity**
+
+* **Endpoint:** `POST /api/VolunteerOrg/applications`  
+* **Purpose:** A volunteer submits an application to join a volunteer activity.  
+* **Request Body (JSON):**
+
+```json
+{
+  "userId": "uuid-string",
+  "activityId": "uuid-string",
+  "motivation": "I want to help!"
+}
+```
+
+* **Response:** `201 Created`  
+* **Response Body:**
+
+```json
+{
+  "id": "uuid-string",
+  "userId": "uuid-string",
+  "activityId": "uuid-string",
+  "motivation": "I want to help!",
+  "status": "pending",
+  "createdAt": "2025-03-25T12:00:00.000Z"
+}
+```
+
+---
+
+### 📌 2. **Get All Applications for an Activity**
+
+* **Endpoint:** `GET /api/VolunteerOrg/activities/{activityId}/applications`
+
+* **Purpose:** Retrieves all volunteer applications submitted for a specific activity.  
+* **URL Param:** `activityId`
+
+* **Response:** `200 OK`  
+* **Response Body:**
+
+```json
+[
+  {
+    "id": "uuid-string",
+    "userId": "uuid-string",
+    "activityId": "uuid-string",
+    "motivation": "I want to help!",
+    "status": "pending",
+    "createdAt": "2025-03-25T12:00:00.000Z",
+    "user": {
+      "id": "uuid-string",
+      "name": "Volunteer User Approved",
+      "email": "volunteer@example.com"
+    }
+  }
+]
+```
+
+---
+
+### 📌 3. **Confirm Volunteer Application**
+
+* **Endpoint:** `PUT /api/VolunteerOrg/applications/{id}/status`  
+* **Purpose:** The organizer confirms a volunteer's application.  
+* **Request Body:**
+
+```json
+{
+  "status": "confirmed"
+}
+```
+
+* **Response:** `200 OK`  
+* **Response Body:**
+
+```json
+{
+  "id": "uuid-string",
+  "userId": "uuid-string",
+  "activityId": "uuid-string",
+  "motivation": "I want to help!",
+  "status": "confirmed",
+  "createdAt": "2025-03-25T12:00:00.000Z"
+}
+```
+
+---
+
+### 📌 4. **Reject Volunteer Application**
+
+* **Endpoint:** `PUT /api/VolunteerOrg/applications/{id}/status`  
+* **Purpose:** The organizer rejects a volunteer's application.  
+* **Request Body:**
+
+```json
+{
+  "status": "rejected"
+}
+```
+
+* **Response:** `200 OK`  
+* **Response Body:**
+
+```json
+{
+  "id": "uuid-string",
+  "userId": "uuid-string",
+  "activityId": "uuid-string",
+  "motivation": "I want to help!",
+  "status": "rejected",
+  "createdAt": "2025-03-25T12:00:00.000Z"
+}
+```
+
+---
+
+### 📌 5. **Invalid Status Update**
+
+* **Endpoint:** `PUT /api/VolunteerOrg/applications/{id}/status`  
+* **Purpose:** Handles invalid status values like "maybe", "approved", etc.  
+* **Request Body:**
+
+```json
+{
+  "status": "maybe"
+}
+```
+
+* **Response:** `400 Bad Request`  
+* **Response Body:**
+
+```json
+{
+  "error": "Invalid status"
+}
+```
 
 ##
