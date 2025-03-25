@@ -4,7 +4,7 @@ import { PrismaClient as PostgresqlClient } from '@/../prisma/generated/postgres
 const prisma = new PostgresqlClient()
 
 // PUT - Update a review
-export async function PUT(req: NextRequest, { params }: { params: { review_id: string } }) {
+export async function PUT(req: NextRequest, { params }: { params: { id: string, review_id: string } }) {
   try {
     const body = await req.json()
     const { rating, comment } = body
@@ -14,7 +14,10 @@ export async function PUT(req: NextRequest, { params }: { params: { review_id: s
     }
 
     const updated = await prisma.reviewSocialButterfly.update({
-      where: { id: params.review_id },
+      where: {
+        id: params.review_id,
+        eventId: params.id
+      },
       data: {
         rating,
         comment,
@@ -32,10 +35,13 @@ export async function PUT(req: NextRequest, { params }: { params: { review_id: s
   }
 }
 
-export async function DELETE(_: NextRequest, { params }: { params: { review_id: string } }) {
+export async function DELETE(_: NextRequest, { params }: { params: { id: string, review_id: string } }) {
   try {
     await prisma.reviewSocialButterfly.delete({
-      where: { id: params.review_id }
+      where: {
+        id: params.review_id,
+        eventId: params.id
+      }
     })
 
     return NextResponse.json({ message: 'Review deleted successfully' }, { status: 200 })

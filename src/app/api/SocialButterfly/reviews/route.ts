@@ -18,7 +18,8 @@ export async function POST(req: NextRequest) {
         eventId: event_id,
         userId,
         rating,
-        comment
+        comment,
+        validated: false
       }
     })
 
