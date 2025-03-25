@@ -20,7 +20,7 @@
  * @testData
  * - Uses test emails:
  *   - social_event_user@example.com (creator)
- *   - social_event_hacker@example.com (non-creator)
+ *   - social_event_admin@example.com (non-creator)
  * 
  * @dependencies
  * - Prisma Client for PostgreSQL database operations
@@ -47,10 +47,10 @@ const prisma = new PostgresqlClient();
 let validatedEventId: string;
 let unvalidatedEventId: string;
 let creatorUserId: string;
-let hackerUserId: string;
+let adminUserId: string;
 
 const creatorEmail = "social_event_user@example.com";
-const hackerEmail = "social_event_hacker@example.com";
+const adminEmail = 'social_event_admin@example.com';
 
 describe("SocialButterfly - Events API Tests", () => {
   // =========================
@@ -68,7 +68,7 @@ describe("SocialButterfly - Events API Tests", () => {
     await prisma.userSocialButterfly.deleteMany({
       where: {
         email: {
-          in: [creatorEmail, hackerEmail]
+          in: [creatorEmail, adminEmail]
         }
       }
     });
@@ -81,16 +81,16 @@ describe("SocialButterfly - Events API Tests", () => {
       }
     });
 
-    const hacker = await prisma.userSocialButterfly.create({
+    const admin = await prisma.userSocialButterfly.create({
       data: {
-        email: hackerEmail,
-        name: "Event Hacker",
-        password: "guessme"
+        email: adminEmail,
+        name: "a-Event Admin",
+        password: "admin123"
       }
     });
 
+    adminUserId = admin.id;
     creatorUserId = creator.id;
-    hackerUserId = hacker.id;
   });
 
   // =========================
@@ -115,7 +115,8 @@ describe("SocialButterfly - Events API Tests", () => {
     validatedEventId = event.id;
 
     const validateReq = new NextRequest(`http://localhost:3000/api/SocialButterfly/admin/events/${validatedEventId}/validate`, {
-      method: "POST"
+      method: "POST",
+      headers: new Headers({ adminId: adminUserId })
     });
     await validateEvent(validateReq, { params: { id: validatedEventId } });
   });
@@ -203,7 +204,7 @@ describe("SocialButterfly - Events API Tests", () => {
   // =========================
   afterAll(async () => {
     await prisma.eventSocialButterfly.deleteMany({ where: { id: validatedEventId } });
-    await prisma.userSocialButterfly.deleteMany({ where: { email: { in: [creatorEmail, hackerEmail] } } });
+    await prisma.userSocialButterfly.deleteMany({ where: { email: { in: [creatorEmail] } } });
     await prisma.$disconnect();
   });
 });

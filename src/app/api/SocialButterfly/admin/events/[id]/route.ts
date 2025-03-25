@@ -3,13 +3,16 @@ import { PrismaClient as PostgresqlClient } from '@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient()
 
-export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+// DELETE events (admin only)
+export async function DELETE(_: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const adminId = req.headers.get('adminId')
+    // check header adminId 
+    const adminId = _.headers.get('adminId')
     if (!adminId) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    // check if the admin exists
     const admin = await prisma.userSocialButterfly.findUnique({
       where: { id: adminId }
     })
@@ -18,15 +21,11 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const updated = await prisma.eventSocialButterfly.update({
-      where: { id: params.id },
-      data: { validated: true }
+    await prisma.eventSocialButterfly.delete({
+      where: { id: params.id }
     })
 
-    return NextResponse.json({
-      message: 'Event validated successfully',
-      event: updated
-    }, { status: 200 })
+    return NextResponse.json({ message: 'Event deleted successfully' }, { status: 200 })
   } catch (err: any) {
     if (err.code === 'P2025') {
       return NextResponse.json({ error: 'Event not found' }, { status: 404 })
