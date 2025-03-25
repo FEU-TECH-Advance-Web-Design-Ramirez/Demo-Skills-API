@@ -35,7 +35,8 @@ export async function POST(req: NextRequest) {
 export async function GET() {
   try {
     const events = await prisma.eventSocialButterfly.findMany({
-      orderBy: { date: 'asc' }
+      orderBy: { date: 'asc' },
+      where: { validated: true }
     })
 
     return NextResponse.json(events, { status: 200 })
