@@ -136,7 +136,7 @@ describe("SocialButterfly - Reviews API Tests", () => {
       headers: new Headers({ "Content-Type": "application/json" })
     })
 
-    const res = await updateReview(req, { params: { review_id: testReviewId } })
+    const res = await updateReview(req, { params: { id: testReviewId } })
     expect(res.status).toBe(200)
 
     const updated = await res.json()
