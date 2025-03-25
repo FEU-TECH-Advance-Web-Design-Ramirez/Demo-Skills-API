@@ -33,7 +33,9 @@ export async function POST(req: NextRequest) {
 
 export async function GET() {
   try {
-    const activities = await prisma.volunteerActivity.findMany()
+    const activities = await prisma.volunteerActivity.findMany({
+      where: { validated: true },
+    })
     return NextResponse.json(activities)
   } catch (err) {
     let errMessage = 'Internal server error'
