@@ -3,11 +3,11 @@ import { PrismaClient as PostgresqlClient } from '@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient()
 
-export async function GET(req: NextRequest, { params }: { params: { activityId: string } }) {
-  const { activityId } = params
+export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+  const { id } = params
 
   const applications = await prisma.volunteerApplication.findMany({
-    where: { activityId },
+    where: { activityId: id },
     include: {
       user: true,
     },
