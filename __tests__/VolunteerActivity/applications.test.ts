@@ -8,7 +8,6 @@
  * - Confirm application (PUT by organizer)
  * - Reject application (PUT by organizer)
  * - Invalid status update (PUT)
- * - Duplicate application prevention (optional)
  *
  * @testSetup
  * - Cleans all users, activities, and applications before run
