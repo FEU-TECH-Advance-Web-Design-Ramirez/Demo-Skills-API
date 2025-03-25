@@ -5,7 +5,7 @@ import { PrismaClient as PostgresqlClient } from '@/../prisma/generated/postgres
 const prisma = new PostgresqlClient()
 
 // GET - Get review by ID
-export async function PUT(req: NextRequest, { params }: { params: { review_id: string } }) {
+export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const body = await req.json()
     const { rating, comment } = body
@@ -15,7 +15,7 @@ export async function PUT(req: NextRequest, { params }: { params: { review_id: s
     }
 
     const updated = await prisma.reviewSocialButterfly.update({
-      where: { id: params.review_id },
+      where: { id: params.id },
       data: {
         rating,
         comment,
