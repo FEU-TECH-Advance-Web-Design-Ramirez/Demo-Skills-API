@@ -3,9 +3,11 @@
  * 
  * @description
  * Tests all CRUD operations + ownership restrictions:
- * - Create activity (POST)
- * - Get all activities (GET)
- * - Get single activity (GET by ID)
+ * - Create activity - Validated (POST)
+ * - Create activity - Non-validated (POST)
+ * - Get all activities - Validated (GET)
+ * - Get single activity - Validated (GET by ID)
+ * - Get single activity - Non-validated (GET by ID)
  * - Update activity (PUT by owner only)
  * - Update activity (PUT by non-owner, should fail)
  * - Delete activity (DELETE by owner only)
@@ -30,6 +32,7 @@
 import { POST as createUser } from "@/app/api/VolunteerOrg/users/route";
 import { POST as createActivity, GET as getAllActivities } from "@/app/api/VolunteerOrg/activities/route";
 import { GET as getActivityById, PUT as updateActivity, DELETE as deleteActivity } from "@/app/api/VolunteerOrg/activities/[id]/route";
+import { POST as validateActivity } from "@/app/api/VolunteerOrg/admin/activities/[id]/validate/route";
 import { NextRequest } from "next/server";
 import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgresql2";
 
@@ -40,6 +43,7 @@ let otherUserId: string;
 let adminUserId: string;
 let testActivityId: string;
 let testActivityIdAdmin: string;
+let testActivityIdNonValidated: string;
 const testEmail = "volunteerorg_activity_test@example.com";
 const otherEmail = "nonowner@example.com";
 const adminEmail = "admin@example.com";
@@ -97,7 +101,7 @@ describe("VolunteerOrg - Activities API Tests", () => {
   // =========================
   // ✅ Create Methods (C)
   // =========================
-  it("should create a new volunteer activity", async () => {
+  it("should create a new volunteer activity - validated", async () => {
     const req = new NextRequest("http://localhost", {
       method: "POST",
       body: JSON.stringify({
@@ -109,6 +113,21 @@ describe("VolunteerOrg - Activities API Tests", () => {
       }),
       headers: new Headers({ "Content-Type": "application/json" }),
     });
+
+    const res = await createActivity(req);
+    expect(res.status).toBe(201);
+    const activity = await res.json();
+    testActivityId = activity.id;
+
+    const validateRes = await validateActivity(new NextRequest("http://localhost", {
+      method: "POST",
+      body: JSON.stringify({ adminId: adminUserId }),
+      headers: new Headers({ "Content-Type": "application/json" }),
+    }), { params: { id: testActivityId } });
+
+    expect(activity.organizerId).toBe(testUserId);
+    expect(activity.title).toBe("Park Clean-up");
+    expect(validateRes.status).toBe(200);
 
     const reqAdmin = new NextRequest("http://localhost", {
       method: "POST",
@@ -122,13 +141,39 @@ describe("VolunteerOrg - Activities API Tests", () => {
       headers: new Headers({ "Content-Type": "application/json" }),
     });
 
-    const res = await createActivity(req);
     const resAdmin = await createActivity(reqAdmin);
+    expect(resAdmin.status).toBe(201);
     const activityAdmin = await resAdmin.json();
     testActivityIdAdmin = activityAdmin.id;
+
+    const validateResAdmin = await validateActivity(new NextRequest("http://localhost", {
+      method: "POST",
+      body: JSON.stringify({ adminId: adminUserId }),
+      headers: new Headers({ "Content-Type": "application/json" }),
+    }), { params: { id: testActivityIdAdmin } });
+
+    expect(activityAdmin.organizerId).toBe(testUserId);
+    expect(activityAdmin.title).toBe("Park Clean-up - Going to be deleted by admin");
+    expect(validateResAdmin.status).toBe(200);
+  });
+
+  it("should create a new volunteer activity - non-validated", async () => {
+    const req = new NextRequest("http://localhost", {
+      method: "POST",
+      body: JSON.stringify({
+        title: "Park Clean-up",
+        description: "Clean up the city park",
+        location: "Central Park",
+        date: new Date().toISOString(),
+        organizerId: testUserId,
+      }),
+      headers: new Headers({ "Content-Type": "application/json" }),
+    });
+
+    const res = await createActivity(req);
     expect(res.status).toBe(201);
     const activity = await res.json();
-    testActivityId = activity.id;
+    testActivityIdNonValidated = activity.id;
 
     expect(activity.organizerId).toBe(testUserId);
     expect(activity.title).toBe("Park Clean-up");
@@ -137,12 +182,19 @@ describe("VolunteerOrg - Activities API Tests", () => {
   // =========================
   // ✅ Read Methods (R)
   // =========================
-  it("should fetch all volunteer activities", async () => {
+  it("should fetch all volunteer activities - validated only", async () => {
     const res = await getAllActivities();
     expect(res.status).toBe(200);
     const activities = await res.json();
 
     expect(Array.isArray(activities)).toBe(true);
+    expect(activities.length).toBeGreaterThanOrEqual(2);
+
+    // expect the non-validated activity to be missing
+    expect(activities.some((a: any) => a.id === testActivityIdNonValidated)).toBe(false);
+
+    // expect the admin validated activity to be present
+    expect(activities.some((a: any) => a.id === testActivityIdAdmin)).toBe(true);
     expect(activities.some((a: any) => a.id === testActivityId)).toBe(true);
   });
 
