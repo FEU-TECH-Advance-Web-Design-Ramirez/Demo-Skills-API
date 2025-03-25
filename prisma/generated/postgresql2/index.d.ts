@@ -118,6 +118,36 @@ export type ConcertMusicLover = $Result.DefaultSelection<Prisma.$ConcertMusicLov
  * 
  */
 export type ReviewMusicLover = $Result.DefaultSelection<Prisma.$ReviewMusicLoverPayload>
+/**
+ * Model UserSocialButterfly
+ * 
+ */
+export type UserSocialButterfly = $Result.DefaultSelection<Prisma.$UserSocialButterflyPayload>
+/**
+ * Model EventSocialButterfly
+ * 
+ */
+export type EventSocialButterfly = $Result.DefaultSelection<Prisma.$EventSocialButterflyPayload>
+/**
+ * Model ReviewSocialButterfly
+ * 
+ */
+export type ReviewSocialButterfly = $Result.DefaultSelection<Prisma.$ReviewSocialButterflyPayload>
+/**
+ * Model LikeSocialButterfly
+ * 
+ */
+export type LikeSocialButterfly = $Result.DefaultSelection<Prisma.$LikeSocialButterflyPayload>
+/**
+ * Model BookmarkSocialButterfly
+ * 
+ */
+export type BookmarkSocialButterfly = $Result.DefaultSelection<Prisma.$BookmarkSocialButterflyPayload>
+/**
+ * Model ReportSocialButterfly
+ * 
+ */
+export type ReportSocialButterfly = $Result.DefaultSelection<Prisma.$ReportSocialButterflyPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -453,6 +483,66 @@ export class PrismaClient<
     * ```
     */
   get reviewMusicLover(): Prisma.ReviewMusicLoverDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.userSocialButterfly`: Exposes CRUD operations for the **UserSocialButterfly** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more UserSocialButterflies
+    * const userSocialButterflies = await prisma.userSocialButterfly.findMany()
+    * ```
+    */
+  get userSocialButterfly(): Prisma.UserSocialButterflyDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.eventSocialButterfly`: Exposes CRUD operations for the **EventSocialButterfly** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more EventSocialButterflies
+    * const eventSocialButterflies = await prisma.eventSocialButterfly.findMany()
+    * ```
+    */
+  get eventSocialButterfly(): Prisma.EventSocialButterflyDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.reviewSocialButterfly`: Exposes CRUD operations for the **ReviewSocialButterfly** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReviewSocialButterflies
+    * const reviewSocialButterflies = await prisma.reviewSocialButterfly.findMany()
+    * ```
+    */
+  get reviewSocialButterfly(): Prisma.ReviewSocialButterflyDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.likeSocialButterfly`: Exposes CRUD operations for the **LikeSocialButterfly** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more LikeSocialButterflies
+    * const likeSocialButterflies = await prisma.likeSocialButterfly.findMany()
+    * ```
+    */
+  get likeSocialButterfly(): Prisma.LikeSocialButterflyDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.bookmarkSocialButterfly`: Exposes CRUD operations for the **BookmarkSocialButterfly** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more BookmarkSocialButterflies
+    * const bookmarkSocialButterflies = await prisma.bookmarkSocialButterfly.findMany()
+    * ```
+    */
+  get bookmarkSocialButterfly(): Prisma.BookmarkSocialButterflyDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.reportSocialButterfly`: Exposes CRUD operations for the **ReportSocialButterfly** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ReportSocialButterflies
+    * const reportSocialButterflies = await prisma.reportSocialButterfly.findMany()
+    * ```
+    */
+  get reportSocialButterfly(): Prisma.ReportSocialButterflyDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -913,7 +1003,13 @@ export namespace Prisma {
     ClinicHealthTracker: 'ClinicHealthTracker',
     UserMusicLover: 'UserMusicLover',
     ConcertMusicLover: 'ConcertMusicLover',
-    ReviewMusicLover: 'ReviewMusicLover'
+    ReviewMusicLover: 'ReviewMusicLover',
+    UserSocialButterfly: 'UserSocialButterfly',
+    EventSocialButterfly: 'EventSocialButterfly',
+    ReviewSocialButterfly: 'ReviewSocialButterfly',
+    LikeSocialButterfly: 'LikeSocialButterfly',
+    BookmarkSocialButterfly: 'BookmarkSocialButterfly',
+    ReportSocialButterfly: 'ReportSocialButterfly'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -932,7 +1028,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote" | "gameHubUser" | "gameHubPlayer" | "gameHubTournament" | "gameHubTournamentPlayer" | "userHealthTracker" | "scheduleHealthTracker" | "recordHealthTracker" | "clinicHealthTracker" | "userMusicLover" | "concertMusicLover" | "reviewMusicLover"
+      modelProps: "eventOrganizerUser" | "eventOrganizerTask" | "eventOrganizerGuest" | "eventOrganizerVenue" | "eventOrganizerServiceProvider" | "languageLearnerUser" | "languageLearnerPlatform" | "languageLearnerReview" | "languageLearnerReviewLike" | "languageLearnerUserVote" | "gameHubUser" | "gameHubPlayer" | "gameHubTournament" | "gameHubTournamentPlayer" | "userHealthTracker" | "scheduleHealthTracker" | "recordHealthTracker" | "clinicHealthTracker" | "userMusicLover" | "concertMusicLover" | "reviewMusicLover" | "userSocialButterfly" | "eventSocialButterfly" | "reviewSocialButterfly" | "likeSocialButterfly" | "bookmarkSocialButterfly" | "reportSocialButterfly"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -2490,6 +2586,450 @@ export namespace Prisma {
           }
         }
       }
+      UserSocialButterfly: {
+        payload: Prisma.$UserSocialButterflyPayload<ExtArgs>
+        fields: Prisma.UserSocialButterflyFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.UserSocialButterflyFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserSocialButterflyFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>
+          }
+          findFirst: {
+            args: Prisma.UserSocialButterflyFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserSocialButterflyFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>
+          }
+          findMany: {
+            args: Prisma.UserSocialButterflyFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>[]
+          }
+          create: {
+            args: Prisma.UserSocialButterflyCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>
+          }
+          createMany: {
+            args: Prisma.UserSocialButterflyCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.UserSocialButterflyCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>[]
+          }
+          delete: {
+            args: Prisma.UserSocialButterflyDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>
+          }
+          update: {
+            args: Prisma.UserSocialButterflyUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>
+          }
+          deleteMany: {
+            args: Prisma.UserSocialButterflyDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.UserSocialButterflyUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.UserSocialButterflyUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>[]
+          }
+          upsert: {
+            args: Prisma.UserSocialButterflyUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserSocialButterflyPayload>
+          }
+          aggregate: {
+            args: Prisma.UserSocialButterflyAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateUserSocialButterfly>
+          }
+          groupBy: {
+            args: Prisma.UserSocialButterflyGroupByArgs<ExtArgs>
+            result: $Utils.Optional<UserSocialButterflyGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.UserSocialButterflyCountArgs<ExtArgs>
+            result: $Utils.Optional<UserSocialButterflyCountAggregateOutputType> | number
+          }
+        }
+      }
+      EventSocialButterfly: {
+        payload: Prisma.$EventSocialButterflyPayload<ExtArgs>
+        fields: Prisma.EventSocialButterflyFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.EventSocialButterflyFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.EventSocialButterflyFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>
+          }
+          findFirst: {
+            args: Prisma.EventSocialButterflyFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.EventSocialButterflyFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>
+          }
+          findMany: {
+            args: Prisma.EventSocialButterflyFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>[]
+          }
+          create: {
+            args: Prisma.EventSocialButterflyCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>
+          }
+          createMany: {
+            args: Prisma.EventSocialButterflyCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.EventSocialButterflyCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>[]
+          }
+          delete: {
+            args: Prisma.EventSocialButterflyDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>
+          }
+          update: {
+            args: Prisma.EventSocialButterflyUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>
+          }
+          deleteMany: {
+            args: Prisma.EventSocialButterflyDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.EventSocialButterflyUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.EventSocialButterflyUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>[]
+          }
+          upsert: {
+            args: Prisma.EventSocialButterflyUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EventSocialButterflyPayload>
+          }
+          aggregate: {
+            args: Prisma.EventSocialButterflyAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateEventSocialButterfly>
+          }
+          groupBy: {
+            args: Prisma.EventSocialButterflyGroupByArgs<ExtArgs>
+            result: $Utils.Optional<EventSocialButterflyGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.EventSocialButterflyCountArgs<ExtArgs>
+            result: $Utils.Optional<EventSocialButterflyCountAggregateOutputType> | number
+          }
+        }
+      }
+      ReviewSocialButterfly: {
+        payload: Prisma.$ReviewSocialButterflyPayload<ExtArgs>
+        fields: Prisma.ReviewSocialButterflyFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ReviewSocialButterflyFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ReviewSocialButterflyFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>
+          }
+          findFirst: {
+            args: Prisma.ReviewSocialButterflyFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ReviewSocialButterflyFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>
+          }
+          findMany: {
+            args: Prisma.ReviewSocialButterflyFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>[]
+          }
+          create: {
+            args: Prisma.ReviewSocialButterflyCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>
+          }
+          createMany: {
+            args: Prisma.ReviewSocialButterflyCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ReviewSocialButterflyCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>[]
+          }
+          delete: {
+            args: Prisma.ReviewSocialButterflyDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>
+          }
+          update: {
+            args: Prisma.ReviewSocialButterflyUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>
+          }
+          deleteMany: {
+            args: Prisma.ReviewSocialButterflyDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ReviewSocialButterflyUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ReviewSocialButterflyUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>[]
+          }
+          upsert: {
+            args: Prisma.ReviewSocialButterflyUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReviewSocialButterflyPayload>
+          }
+          aggregate: {
+            args: Prisma.ReviewSocialButterflyAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReviewSocialButterfly>
+          }
+          groupBy: {
+            args: Prisma.ReviewSocialButterflyGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReviewSocialButterflyGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ReviewSocialButterflyCountArgs<ExtArgs>
+            result: $Utils.Optional<ReviewSocialButterflyCountAggregateOutputType> | number
+          }
+        }
+      }
+      LikeSocialButterfly: {
+        payload: Prisma.$LikeSocialButterflyPayload<ExtArgs>
+        fields: Prisma.LikeSocialButterflyFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.LikeSocialButterflyFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.LikeSocialButterflyFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>
+          }
+          findFirst: {
+            args: Prisma.LikeSocialButterflyFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.LikeSocialButterflyFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>
+          }
+          findMany: {
+            args: Prisma.LikeSocialButterflyFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>[]
+          }
+          create: {
+            args: Prisma.LikeSocialButterflyCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>
+          }
+          createMany: {
+            args: Prisma.LikeSocialButterflyCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.LikeSocialButterflyCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>[]
+          }
+          delete: {
+            args: Prisma.LikeSocialButterflyDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>
+          }
+          update: {
+            args: Prisma.LikeSocialButterflyUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>
+          }
+          deleteMany: {
+            args: Prisma.LikeSocialButterflyDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.LikeSocialButterflyUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.LikeSocialButterflyUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>[]
+          }
+          upsert: {
+            args: Prisma.LikeSocialButterflyUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$LikeSocialButterflyPayload>
+          }
+          aggregate: {
+            args: Prisma.LikeSocialButterflyAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateLikeSocialButterfly>
+          }
+          groupBy: {
+            args: Prisma.LikeSocialButterflyGroupByArgs<ExtArgs>
+            result: $Utils.Optional<LikeSocialButterflyGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.LikeSocialButterflyCountArgs<ExtArgs>
+            result: $Utils.Optional<LikeSocialButterflyCountAggregateOutputType> | number
+          }
+        }
+      }
+      BookmarkSocialButterfly: {
+        payload: Prisma.$BookmarkSocialButterflyPayload<ExtArgs>
+        fields: Prisma.BookmarkSocialButterflyFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.BookmarkSocialButterflyFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.BookmarkSocialButterflyFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>
+          }
+          findFirst: {
+            args: Prisma.BookmarkSocialButterflyFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.BookmarkSocialButterflyFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>
+          }
+          findMany: {
+            args: Prisma.BookmarkSocialButterflyFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>[]
+          }
+          create: {
+            args: Prisma.BookmarkSocialButterflyCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>
+          }
+          createMany: {
+            args: Prisma.BookmarkSocialButterflyCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.BookmarkSocialButterflyCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>[]
+          }
+          delete: {
+            args: Prisma.BookmarkSocialButterflyDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>
+          }
+          update: {
+            args: Prisma.BookmarkSocialButterflyUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>
+          }
+          deleteMany: {
+            args: Prisma.BookmarkSocialButterflyDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.BookmarkSocialButterflyUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.BookmarkSocialButterflyUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>[]
+          }
+          upsert: {
+            args: Prisma.BookmarkSocialButterflyUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkSocialButterflyPayload>
+          }
+          aggregate: {
+            args: Prisma.BookmarkSocialButterflyAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateBookmarkSocialButterfly>
+          }
+          groupBy: {
+            args: Prisma.BookmarkSocialButterflyGroupByArgs<ExtArgs>
+            result: $Utils.Optional<BookmarkSocialButterflyGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.BookmarkSocialButterflyCountArgs<ExtArgs>
+            result: $Utils.Optional<BookmarkSocialButterflyCountAggregateOutputType> | number
+          }
+        }
+      }
+      ReportSocialButterfly: {
+        payload: Prisma.$ReportSocialButterflyPayload<ExtArgs>
+        fields: Prisma.ReportSocialButterflyFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ReportSocialButterflyFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ReportSocialButterflyFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>
+          }
+          findFirst: {
+            args: Prisma.ReportSocialButterflyFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ReportSocialButterflyFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>
+          }
+          findMany: {
+            args: Prisma.ReportSocialButterflyFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>[]
+          }
+          create: {
+            args: Prisma.ReportSocialButterflyCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>
+          }
+          createMany: {
+            args: Prisma.ReportSocialButterflyCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ReportSocialButterflyCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>[]
+          }
+          delete: {
+            args: Prisma.ReportSocialButterflyDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>
+          }
+          update: {
+            args: Prisma.ReportSocialButterflyUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>
+          }
+          deleteMany: {
+            args: Prisma.ReportSocialButterflyDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ReportSocialButterflyUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ReportSocialButterflyUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>[]
+          }
+          upsert: {
+            args: Prisma.ReportSocialButterflyUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ReportSocialButterflyPayload>
+          }
+          aggregate: {
+            args: Prisma.ReportSocialButterflyAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateReportSocialButterfly>
+          }
+          groupBy: {
+            args: Prisma.ReportSocialButterflyGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ReportSocialButterflyGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ReportSocialButterflyCountArgs<ExtArgs>
+            result: $Utils.Optional<ReportSocialButterflyCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -2595,6 +3135,12 @@ export namespace Prisma {
     userMusicLover?: UserMusicLoverOmit
     concertMusicLover?: ConcertMusicLoverOmit
     reviewMusicLover?: ReviewMusicLoverOmit
+    userSocialButterfly?: UserSocialButterflyOmit
+    eventSocialButterfly?: EventSocialButterflyOmit
+    reviewSocialButterfly?: ReviewSocialButterflyOmit
+    likeSocialButterfly?: LikeSocialButterflyOmit
+    bookmarkSocialButterfly?: BookmarkSocialButterflyOmit
+    reportSocialButterfly?: ReportSocialButterflyOmit
   }
 
   /* Types for Logging */
@@ -3081,6 +3627,162 @@ export namespace Prisma {
    */
   export type ConcertMusicLoverCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ReviewMusicLoverWhereInput
+  }
+
+
+  /**
+   * Count Type UserSocialButterflyCountOutputType
+   */
+
+  export type UserSocialButterflyCountOutputType = {
+    events: number
+    reviews: number
+    likes: number
+    bookmarks: number
+    reports: number
+  }
+
+  export type UserSocialButterflyCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    events?: boolean | UserSocialButterflyCountOutputTypeCountEventsArgs
+    reviews?: boolean | UserSocialButterflyCountOutputTypeCountReviewsArgs
+    likes?: boolean | UserSocialButterflyCountOutputTypeCountLikesArgs
+    bookmarks?: boolean | UserSocialButterflyCountOutputTypeCountBookmarksArgs
+    reports?: boolean | UserSocialButterflyCountOutputTypeCountReportsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * UserSocialButterflyCountOutputType without action
+   */
+  export type UserSocialButterflyCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterflyCountOutputType
+     */
+    select?: UserSocialButterflyCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * UserSocialButterflyCountOutputType without action
+   */
+  export type UserSocialButterflyCountOutputTypeCountEventsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EventSocialButterflyWhereInput
+  }
+
+  /**
+   * UserSocialButterflyCountOutputType without action
+   */
+  export type UserSocialButterflyCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewSocialButterflyWhereInput
+  }
+
+  /**
+   * UserSocialButterflyCountOutputType without action
+   */
+  export type UserSocialButterflyCountOutputTypeCountLikesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeSocialButterflyWhereInput
+  }
+
+  /**
+   * UserSocialButterflyCountOutputType without action
+   */
+  export type UserSocialButterflyCountOutputTypeCountBookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkSocialButterflyWhereInput
+  }
+
+  /**
+   * UserSocialButterflyCountOutputType without action
+   */
+  export type UserSocialButterflyCountOutputTypeCountReportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportSocialButterflyWhereInput
+  }
+
+
+  /**
+   * Count Type EventSocialButterflyCountOutputType
+   */
+
+  export type EventSocialButterflyCountOutputType = {
+    reviews: number
+    bookmarks: number
+    likes: number
+    reports: number
+  }
+
+  export type EventSocialButterflyCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reviews?: boolean | EventSocialButterflyCountOutputTypeCountReviewsArgs
+    bookmarks?: boolean | EventSocialButterflyCountOutputTypeCountBookmarksArgs
+    likes?: boolean | EventSocialButterflyCountOutputTypeCountLikesArgs
+    reports?: boolean | EventSocialButterflyCountOutputTypeCountReportsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * EventSocialButterflyCountOutputType without action
+   */
+  export type EventSocialButterflyCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterflyCountOutputType
+     */
+    select?: EventSocialButterflyCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * EventSocialButterflyCountOutputType without action
+   */
+  export type EventSocialButterflyCountOutputTypeCountReviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewSocialButterflyWhereInput
+  }
+
+  /**
+   * EventSocialButterflyCountOutputType without action
+   */
+  export type EventSocialButterflyCountOutputTypeCountBookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkSocialButterflyWhereInput
+  }
+
+  /**
+   * EventSocialButterflyCountOutputType without action
+   */
+  export type EventSocialButterflyCountOutputTypeCountLikesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeSocialButterflyWhereInput
+  }
+
+  /**
+   * EventSocialButterflyCountOutputType without action
+   */
+  export type EventSocialButterflyCountOutputTypeCountReportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportSocialButterflyWhereInput
+  }
+
+
+  /**
+   * Count Type ReviewSocialButterflyCountOutputType
+   */
+
+  export type ReviewSocialButterflyCountOutputType = {
+    reports: number
+  }
+
+  export type ReviewSocialButterflyCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reports?: boolean | ReviewSocialButterflyCountOutputTypeCountReportsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * ReviewSocialButterflyCountOutputType without action
+   */
+  export type ReviewSocialButterflyCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterflyCountOutputType
+     */
+    select?: ReviewSocialButterflyCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * ReviewSocialButterflyCountOutputType without action
+   */
+  export type ReviewSocialButterflyCountOutputTypeCountReportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportSocialButterflyWhereInput
   }
 
 
@@ -26223,6 +26925,6799 @@ export namespace Prisma {
 
 
   /**
+   * Model UserSocialButterfly
+   */
+
+  export type AggregateUserSocialButterfly = {
+    _count: UserSocialButterflyCountAggregateOutputType | null
+    _min: UserSocialButterflyMinAggregateOutputType | null
+    _max: UserSocialButterflyMaxAggregateOutputType | null
+  }
+
+  export type UserSocialButterflyMinAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserSocialButterflyMaxAggregateOutputType = {
+    id: string | null
+    email: string | null
+    name: string | null
+    password: string | null
+    createdAt: Date | null
+  }
+
+  export type UserSocialButterflyCountAggregateOutputType = {
+    id: number
+    email: number
+    name: number
+    password: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type UserSocialButterflyMinAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserSocialButterflyMaxAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+  }
+
+  export type UserSocialButterflyCountAggregateInputType = {
+    id?: true
+    email?: true
+    name?: true
+    password?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type UserSocialButterflyAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserSocialButterfly to aggregate.
+     */
+    where?: UserSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserSocialButterflies to fetch.
+     */
+    orderBy?: UserSocialButterflyOrderByWithRelationInput | UserSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: UserSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned UserSocialButterflies
+    **/
+    _count?: true | UserSocialButterflyCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: UserSocialButterflyMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: UserSocialButterflyMaxAggregateInputType
+  }
+
+  export type GetUserSocialButterflyAggregateType<T extends UserSocialButterflyAggregateArgs> = {
+        [P in keyof T & keyof AggregateUserSocialButterfly]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateUserSocialButterfly[P]>
+      : GetScalarType<T[P], AggregateUserSocialButterfly[P]>
+  }
+
+
+
+
+  export type UserSocialButterflyGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserSocialButterflyWhereInput
+    orderBy?: UserSocialButterflyOrderByWithAggregationInput | UserSocialButterflyOrderByWithAggregationInput[]
+    by: UserSocialButterflyScalarFieldEnum[] | UserSocialButterflyScalarFieldEnum
+    having?: UserSocialButterflyScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: UserSocialButterflyCountAggregateInputType | true
+    _min?: UserSocialButterflyMinAggregateInputType
+    _max?: UserSocialButterflyMaxAggregateInputType
+  }
+
+  export type UserSocialButterflyGroupByOutputType = {
+    id: string
+    email: string
+    name: string
+    password: string
+    createdAt: Date
+    _count: UserSocialButterflyCountAggregateOutputType | null
+    _min: UserSocialButterflyMinAggregateOutputType | null
+    _max: UserSocialButterflyMaxAggregateOutputType | null
+  }
+
+  type GetUserSocialButterflyGroupByPayload<T extends UserSocialButterflyGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<UserSocialButterflyGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof UserSocialButterflyGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], UserSocialButterflyGroupByOutputType[P]>
+            : GetScalarType<T[P], UserSocialButterflyGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type UserSocialButterflySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+    events?: boolean | UserSocialButterfly$eventsArgs<ExtArgs>
+    reviews?: boolean | UserSocialButterfly$reviewsArgs<ExtArgs>
+    likes?: boolean | UserSocialButterfly$likesArgs<ExtArgs>
+    bookmarks?: boolean | UserSocialButterfly$bookmarksArgs<ExtArgs>
+    reports?: boolean | UserSocialButterfly$reportsArgs<ExtArgs>
+    _count?: boolean | UserSocialButterflyCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["userSocialButterfly"]>
+
+  export type UserSocialButterflySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userSocialButterfly"]>
+
+  export type UserSocialButterflySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }, ExtArgs["result"]["userSocialButterfly"]>
+
+  export type UserSocialButterflySelectScalar = {
+    id?: boolean
+    email?: boolean
+    name?: boolean
+    password?: boolean
+    createdAt?: boolean
+  }
+
+  export type UserSocialButterflyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "createdAt", ExtArgs["result"]["userSocialButterfly"]>
+  export type UserSocialButterflyInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    events?: boolean | UserSocialButterfly$eventsArgs<ExtArgs>
+    reviews?: boolean | UserSocialButterfly$reviewsArgs<ExtArgs>
+    likes?: boolean | UserSocialButterfly$likesArgs<ExtArgs>
+    bookmarks?: boolean | UserSocialButterfly$bookmarksArgs<ExtArgs>
+    reports?: boolean | UserSocialButterfly$reportsArgs<ExtArgs>
+    _count?: boolean | UserSocialButterflyCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserSocialButterflyIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserSocialButterflyIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+
+  export type $UserSocialButterflyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "UserSocialButterfly"
+    objects: {
+      events: Prisma.$EventSocialButterflyPayload<ExtArgs>[]
+      reviews: Prisma.$ReviewSocialButterflyPayload<ExtArgs>[]
+      likes: Prisma.$LikeSocialButterflyPayload<ExtArgs>[]
+      bookmarks: Prisma.$BookmarkSocialButterflyPayload<ExtArgs>[]
+      reports: Prisma.$ReportSocialButterflyPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      email: string
+      name: string
+      password: string
+      createdAt: Date
+    }, ExtArgs["result"]["userSocialButterfly"]>
+    composites: {}
+  }
+
+  type UserSocialButterflyGetPayload<S extends boolean | null | undefined | UserSocialButterflyDefaultArgs> = $Result.GetResult<Prisma.$UserSocialButterflyPayload, S>
+
+  type UserSocialButterflyCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserSocialButterflyFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: UserSocialButterflyCountAggregateInputType | true
+    }
+
+  export interface UserSocialButterflyDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['UserSocialButterfly'], meta: { name: 'UserSocialButterfly' } }
+    /**
+     * Find zero or one UserSocialButterfly that matches the filter.
+     * @param {UserSocialButterflyFindUniqueArgs} args - Arguments to find a UserSocialButterfly
+     * @example
+     * // Get one UserSocialButterfly
+     * const userSocialButterfly = await prisma.userSocialButterfly.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends UserSocialButterflyFindUniqueArgs>(args: SelectSubset<T, UserSocialButterflyFindUniqueArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one UserSocialButterfly that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {UserSocialButterflyFindUniqueOrThrowArgs} args - Arguments to find a UserSocialButterfly
+     * @example
+     * // Get one UserSocialButterfly
+     * const userSocialButterfly = await prisma.userSocialButterfly.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends UserSocialButterflyFindUniqueOrThrowArgs>(args: SelectSubset<T, UserSocialButterflyFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserSocialButterfly that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserSocialButterflyFindFirstArgs} args - Arguments to find a UserSocialButterfly
+     * @example
+     * // Get one UserSocialButterfly
+     * const userSocialButterfly = await prisma.userSocialButterfly.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends UserSocialButterflyFindFirstArgs>(args?: SelectSubset<T, UserSocialButterflyFindFirstArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first UserSocialButterfly that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserSocialButterflyFindFirstOrThrowArgs} args - Arguments to find a UserSocialButterfly
+     * @example
+     * // Get one UserSocialButterfly
+     * const userSocialButterfly = await prisma.userSocialButterfly.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends UserSocialButterflyFindFirstOrThrowArgs>(args?: SelectSubset<T, UserSocialButterflyFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more UserSocialButterflies that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserSocialButterflyFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all UserSocialButterflies
+     * const userSocialButterflies = await prisma.userSocialButterfly.findMany()
+     * 
+     * // Get first 10 UserSocialButterflies
+     * const userSocialButterflies = await prisma.userSocialButterfly.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const userSocialButterflyWithIdOnly = await prisma.userSocialButterfly.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends UserSocialButterflyFindManyArgs>(args?: SelectSubset<T, UserSocialButterflyFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a UserSocialButterfly.
+     * @param {UserSocialButterflyCreateArgs} args - Arguments to create a UserSocialButterfly.
+     * @example
+     * // Create one UserSocialButterfly
+     * const UserSocialButterfly = await prisma.userSocialButterfly.create({
+     *   data: {
+     *     // ... data to create a UserSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    create<T extends UserSocialButterflyCreateArgs>(args: SelectSubset<T, UserSocialButterflyCreateArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many UserSocialButterflies.
+     * @param {UserSocialButterflyCreateManyArgs} args - Arguments to create many UserSocialButterflies.
+     * @example
+     * // Create many UserSocialButterflies
+     * const userSocialButterfly = await prisma.userSocialButterfly.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends UserSocialButterflyCreateManyArgs>(args?: SelectSubset<T, UserSocialButterflyCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many UserSocialButterflies and returns the data saved in the database.
+     * @param {UserSocialButterflyCreateManyAndReturnArgs} args - Arguments to create many UserSocialButterflies.
+     * @example
+     * // Create many UserSocialButterflies
+     * const userSocialButterfly = await prisma.userSocialButterfly.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many UserSocialButterflies and only return the `id`
+     * const userSocialButterflyWithIdOnly = await prisma.userSocialButterfly.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends UserSocialButterflyCreateManyAndReturnArgs>(args?: SelectSubset<T, UserSocialButterflyCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a UserSocialButterfly.
+     * @param {UserSocialButterflyDeleteArgs} args - Arguments to delete one UserSocialButterfly.
+     * @example
+     * // Delete one UserSocialButterfly
+     * const UserSocialButterfly = await prisma.userSocialButterfly.delete({
+     *   where: {
+     *     // ... filter to delete one UserSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    delete<T extends UserSocialButterflyDeleteArgs>(args: SelectSubset<T, UserSocialButterflyDeleteArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one UserSocialButterfly.
+     * @param {UserSocialButterflyUpdateArgs} args - Arguments to update one UserSocialButterfly.
+     * @example
+     * // Update one UserSocialButterfly
+     * const userSocialButterfly = await prisma.userSocialButterfly.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends UserSocialButterflyUpdateArgs>(args: SelectSubset<T, UserSocialButterflyUpdateArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more UserSocialButterflies.
+     * @param {UserSocialButterflyDeleteManyArgs} args - Arguments to filter UserSocialButterflies to delete.
+     * @example
+     * // Delete a few UserSocialButterflies
+     * const { count } = await prisma.userSocialButterfly.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends UserSocialButterflyDeleteManyArgs>(args?: SelectSubset<T, UserSocialButterflyDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserSocialButterflyUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many UserSocialButterflies
+     * const userSocialButterfly = await prisma.userSocialButterfly.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends UserSocialButterflyUpdateManyArgs>(args: SelectSubset<T, UserSocialButterflyUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more UserSocialButterflies and returns the data updated in the database.
+     * @param {UserSocialButterflyUpdateManyAndReturnArgs} args - Arguments to update many UserSocialButterflies.
+     * @example
+     * // Update many UserSocialButterflies
+     * const userSocialButterfly = await prisma.userSocialButterfly.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more UserSocialButterflies and only return the `id`
+     * const userSocialButterflyWithIdOnly = await prisma.userSocialButterfly.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends UserSocialButterflyUpdateManyAndReturnArgs>(args: SelectSubset<T, UserSocialButterflyUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one UserSocialButterfly.
+     * @param {UserSocialButterflyUpsertArgs} args - Arguments to update or create a UserSocialButterfly.
+     * @example
+     * // Update or create a UserSocialButterfly
+     * const userSocialButterfly = await prisma.userSocialButterfly.upsert({
+     *   create: {
+     *     // ... data to create a UserSocialButterfly
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the UserSocialButterfly we want to update
+     *   }
+     * })
+     */
+    upsert<T extends UserSocialButterflyUpsertArgs>(args: SelectSubset<T, UserSocialButterflyUpsertArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of UserSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserSocialButterflyCountArgs} args - Arguments to filter UserSocialButterflies to count.
+     * @example
+     * // Count the number of UserSocialButterflies
+     * const count = await prisma.userSocialButterfly.count({
+     *   where: {
+     *     // ... the filter for the UserSocialButterflies we want to count
+     *   }
+     * })
+    **/
+    count<T extends UserSocialButterflyCountArgs>(
+      args?: Subset<T, UserSocialButterflyCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], UserSocialButterflyCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a UserSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserSocialButterflyAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends UserSocialButterflyAggregateArgs>(args: Subset<T, UserSocialButterflyAggregateArgs>): Prisma.PrismaPromise<GetUserSocialButterflyAggregateType<T>>
+
+    /**
+     * Group by UserSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {UserSocialButterflyGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends UserSocialButterflyGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: UserSocialButterflyGroupByArgs['orderBy'] }
+        : { orderBy?: UserSocialButterflyGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, UserSocialButterflyGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserSocialButterflyGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the UserSocialButterfly model
+   */
+  readonly fields: UserSocialButterflyFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for UserSocialButterfly.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__UserSocialButterflyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    events<T extends UserSocialButterfly$eventsArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterfly$eventsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reviews<T extends UserSocialButterfly$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterfly$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    likes<T extends UserSocialButterfly$likesArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterfly$likesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    bookmarks<T extends UserSocialButterfly$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterfly$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reports<T extends UserSocialButterfly$reportsArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterfly$reportsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the UserSocialButterfly model
+   */ 
+  interface UserSocialButterflyFieldRefs {
+    readonly id: FieldRef<"UserSocialButterfly", 'String'>
+    readonly email: FieldRef<"UserSocialButterfly", 'String'>
+    readonly name: FieldRef<"UserSocialButterfly", 'String'>
+    readonly password: FieldRef<"UserSocialButterfly", 'String'>
+    readonly createdAt: FieldRef<"UserSocialButterfly", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * UserSocialButterfly findUnique
+   */
+  export type UserSocialButterflyFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which UserSocialButterfly to fetch.
+     */
+    where: UserSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * UserSocialButterfly findUniqueOrThrow
+   */
+  export type UserSocialButterflyFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which UserSocialButterfly to fetch.
+     */
+    where: UserSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * UserSocialButterfly findFirst
+   */
+  export type UserSocialButterflyFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which UserSocialButterfly to fetch.
+     */
+    where?: UserSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserSocialButterflies to fetch.
+     */
+    orderBy?: UserSocialButterflyOrderByWithRelationInput | UserSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserSocialButterflies.
+     */
+    cursor?: UserSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserSocialButterflies.
+     */
+    distinct?: UserSocialButterflyScalarFieldEnum | UserSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly findFirstOrThrow
+   */
+  export type UserSocialButterflyFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which UserSocialButterfly to fetch.
+     */
+    where?: UserSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserSocialButterflies to fetch.
+     */
+    orderBy?: UserSocialButterflyOrderByWithRelationInput | UserSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for UserSocialButterflies.
+     */
+    cursor?: UserSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of UserSocialButterflies.
+     */
+    distinct?: UserSocialButterflyScalarFieldEnum | UserSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly findMany
+   */
+  export type UserSocialButterflyFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which UserSocialButterflies to fetch.
+     */
+    where?: UserSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of UserSocialButterflies to fetch.
+     */
+    orderBy?: UserSocialButterflyOrderByWithRelationInput | UserSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing UserSocialButterflies.
+     */
+    cursor?: UserSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` UserSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` UserSocialButterflies.
+     */
+    skip?: number
+    distinct?: UserSocialButterflyScalarFieldEnum | UserSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly create
+   */
+  export type UserSocialButterflyCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to create a UserSocialButterfly.
+     */
+    data: XOR<UserSocialButterflyCreateInput, UserSocialButterflyUncheckedCreateInput>
+  }
+
+  /**
+   * UserSocialButterfly createMany
+   */
+  export type UserSocialButterflyCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many UserSocialButterflies.
+     */
+    data: UserSocialButterflyCreateManyInput | UserSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserSocialButterfly createManyAndReturn
+   */
+  export type UserSocialButterflyCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to create many UserSocialButterflies.
+     */
+    data: UserSocialButterflyCreateManyInput | UserSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * UserSocialButterfly update
+   */
+  export type UserSocialButterflyUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to update a UserSocialButterfly.
+     */
+    data: XOR<UserSocialButterflyUpdateInput, UserSocialButterflyUncheckedUpdateInput>
+    /**
+     * Choose, which UserSocialButterfly to update.
+     */
+    where: UserSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * UserSocialButterfly updateMany
+   */
+  export type UserSocialButterflyUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update UserSocialButterflies.
+     */
+    data: XOR<UserSocialButterflyUpdateManyMutationInput, UserSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which UserSocialButterflies to update
+     */
+    where?: UserSocialButterflyWhereInput
+    /**
+     * Limit how many UserSocialButterflies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserSocialButterfly updateManyAndReturn
+   */
+  export type UserSocialButterflyUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to update UserSocialButterflies.
+     */
+    data: XOR<UserSocialButterflyUpdateManyMutationInput, UserSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which UserSocialButterflies to update
+     */
+    where?: UserSocialButterflyWhereInput
+    /**
+     * Limit how many UserSocialButterflies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserSocialButterfly upsert
+   */
+  export type UserSocialButterflyUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The filter to search for the UserSocialButterfly to update in case it exists.
+     */
+    where: UserSocialButterflyWhereUniqueInput
+    /**
+     * In case the UserSocialButterfly found by the `where` argument doesn't exist, create a new UserSocialButterfly with this data.
+     */
+    create: XOR<UserSocialButterflyCreateInput, UserSocialButterflyUncheckedCreateInput>
+    /**
+     * In case the UserSocialButterfly was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<UserSocialButterflyUpdateInput, UserSocialButterflyUncheckedUpdateInput>
+  }
+
+  /**
+   * UserSocialButterfly delete
+   */
+  export type UserSocialButterflyDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter which UserSocialButterfly to delete.
+     */
+    where: UserSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * UserSocialButterfly deleteMany
+   */
+  export type UserSocialButterflyDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which UserSocialButterflies to delete
+     */
+    where?: UserSocialButterflyWhereInput
+    /**
+     * Limit how many UserSocialButterflies to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * UserSocialButterfly.events
+   */
+  export type UserSocialButterfly$eventsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    where?: EventSocialButterflyWhereInput
+    orderBy?: EventSocialButterflyOrderByWithRelationInput | EventSocialButterflyOrderByWithRelationInput[]
+    cursor?: EventSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: EventSocialButterflyScalarFieldEnum | EventSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly.reviews
+   */
+  export type UserSocialButterfly$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    where?: ReviewSocialButterflyWhereInput
+    orderBy?: ReviewSocialButterflyOrderByWithRelationInput | ReviewSocialButterflyOrderByWithRelationInput[]
+    cursor?: ReviewSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewSocialButterflyScalarFieldEnum | ReviewSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly.likes
+   */
+  export type UserSocialButterfly$likesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    where?: LikeSocialButterflyWhereInput
+    orderBy?: LikeSocialButterflyOrderByWithRelationInput | LikeSocialButterflyOrderByWithRelationInput[]
+    cursor?: LikeSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LikeSocialButterflyScalarFieldEnum | LikeSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly.bookmarks
+   */
+  export type UserSocialButterfly$bookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    where?: BookmarkSocialButterflyWhereInput
+    orderBy?: BookmarkSocialButterflyOrderByWithRelationInput | BookmarkSocialButterflyOrderByWithRelationInput[]
+    cursor?: BookmarkSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: BookmarkSocialButterflyScalarFieldEnum | BookmarkSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly.reports
+   */
+  export type UserSocialButterfly$reportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    where?: ReportSocialButterflyWhereInput
+    orderBy?: ReportSocialButterflyOrderByWithRelationInput | ReportSocialButterflyOrderByWithRelationInput[]
+    cursor?: ReportSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReportSocialButterflyScalarFieldEnum | ReportSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * UserSocialButterfly without action
+   */
+  export type UserSocialButterflyDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserSocialButterfly
+     */
+    select?: UserSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the UserSocialButterfly
+     */
+    omit?: UserSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserSocialButterflyInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model EventSocialButterfly
+   */
+
+  export type AggregateEventSocialButterfly = {
+    _count: EventSocialButterflyCountAggregateOutputType | null
+    _min: EventSocialButterflyMinAggregateOutputType | null
+    _max: EventSocialButterflyMaxAggregateOutputType | null
+  }
+
+  export type EventSocialButterflyMinAggregateOutputType = {
+    id: string | null
+    title: string | null
+    description: string | null
+    date: Date | null
+    location: string | null
+    category: string | null
+    submittedBy: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type EventSocialButterflyMaxAggregateOutputType = {
+    id: string | null
+    title: string | null
+    description: string | null
+    date: Date | null
+    location: string | null
+    category: string | null
+    submittedBy: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type EventSocialButterflyCountAggregateOutputType = {
+    id: number
+    title: number
+    description: number
+    date: number
+    location: number
+    category: number
+    submittedBy: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type EventSocialButterflyMinAggregateInputType = {
+    id?: true
+    title?: true
+    description?: true
+    date?: true
+    location?: true
+    category?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type EventSocialButterflyMaxAggregateInputType = {
+    id?: true
+    title?: true
+    description?: true
+    date?: true
+    location?: true
+    category?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type EventSocialButterflyCountAggregateInputType = {
+    id?: true
+    title?: true
+    description?: true
+    date?: true
+    location?: true
+    category?: true
+    submittedBy?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type EventSocialButterflyAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EventSocialButterfly to aggregate.
+     */
+    where?: EventSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EventSocialButterflies to fetch.
+     */
+    orderBy?: EventSocialButterflyOrderByWithRelationInput | EventSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: EventSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EventSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EventSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned EventSocialButterflies
+    **/
+    _count?: true | EventSocialButterflyCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: EventSocialButterflyMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: EventSocialButterflyMaxAggregateInputType
+  }
+
+  export type GetEventSocialButterflyAggregateType<T extends EventSocialButterflyAggregateArgs> = {
+        [P in keyof T & keyof AggregateEventSocialButterfly]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateEventSocialButterfly[P]>
+      : GetScalarType<T[P], AggregateEventSocialButterfly[P]>
+  }
+
+
+
+
+  export type EventSocialButterflyGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EventSocialButterflyWhereInput
+    orderBy?: EventSocialButterflyOrderByWithAggregationInput | EventSocialButterflyOrderByWithAggregationInput[]
+    by: EventSocialButterflyScalarFieldEnum[] | EventSocialButterflyScalarFieldEnum
+    having?: EventSocialButterflyScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: EventSocialButterflyCountAggregateInputType | true
+    _min?: EventSocialButterflyMinAggregateInputType
+    _max?: EventSocialButterflyMaxAggregateInputType
+  }
+
+  export type EventSocialButterflyGroupByOutputType = {
+    id: string
+    title: string
+    description: string
+    date: Date
+    location: string
+    category: string
+    submittedBy: string
+    validated: boolean
+    createdAt: Date
+    _count: EventSocialButterflyCountAggregateOutputType | null
+    _min: EventSocialButterflyMinAggregateOutputType | null
+    _max: EventSocialButterflyMaxAggregateOutputType | null
+  }
+
+  type GetEventSocialButterflyGroupByPayload<T extends EventSocialButterflyGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<EventSocialButterflyGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof EventSocialButterflyGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], EventSocialButterflyGroupByOutputType[P]>
+            : GetScalarType<T[P], EventSocialButterflyGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type EventSocialButterflySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    date?: boolean
+    location?: boolean
+    category?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    owner?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    reviews?: boolean | EventSocialButterfly$reviewsArgs<ExtArgs>
+    bookmarks?: boolean | EventSocialButterfly$bookmarksArgs<ExtArgs>
+    likes?: boolean | EventSocialButterfly$likesArgs<ExtArgs>
+    reports?: boolean | EventSocialButterfly$reportsArgs<ExtArgs>
+    _count?: boolean | EventSocialButterflyCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["eventSocialButterfly"]>
+
+  export type EventSocialButterflySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    date?: boolean
+    location?: boolean
+    category?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    owner?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["eventSocialButterfly"]>
+
+  export type EventSocialButterflySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    date?: boolean
+    location?: boolean
+    category?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    owner?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["eventSocialButterfly"]>
+
+  export type EventSocialButterflySelectScalar = {
+    id?: boolean
+    title?: boolean
+    description?: boolean
+    date?: boolean
+    location?: boolean
+    category?: boolean
+    submittedBy?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type EventSocialButterflyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "description" | "date" | "location" | "category" | "submittedBy" | "validated" | "createdAt", ExtArgs["result"]["eventSocialButterfly"]>
+  export type EventSocialButterflyInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    reviews?: boolean | EventSocialButterfly$reviewsArgs<ExtArgs>
+    bookmarks?: boolean | EventSocialButterfly$bookmarksArgs<ExtArgs>
+    likes?: boolean | EventSocialButterfly$likesArgs<ExtArgs>
+    reports?: boolean | EventSocialButterfly$reportsArgs<ExtArgs>
+    _count?: boolean | EventSocialButterflyCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type EventSocialButterflyIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+  }
+  export type EventSocialButterflyIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    owner?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+  }
+
+  export type $EventSocialButterflyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "EventSocialButterfly"
+    objects: {
+      owner: Prisma.$UserSocialButterflyPayload<ExtArgs>
+      reviews: Prisma.$ReviewSocialButterflyPayload<ExtArgs>[]
+      bookmarks: Prisma.$BookmarkSocialButterflyPayload<ExtArgs>[]
+      likes: Prisma.$LikeSocialButterflyPayload<ExtArgs>[]
+      reports: Prisma.$ReportSocialButterflyPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      title: string
+      description: string
+      date: Date
+      location: string
+      category: string
+      submittedBy: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["eventSocialButterfly"]>
+    composites: {}
+  }
+
+  type EventSocialButterflyGetPayload<S extends boolean | null | undefined | EventSocialButterflyDefaultArgs> = $Result.GetResult<Prisma.$EventSocialButterflyPayload, S>
+
+  type EventSocialButterflyCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<EventSocialButterflyFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: EventSocialButterflyCountAggregateInputType | true
+    }
+
+  export interface EventSocialButterflyDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['EventSocialButterfly'], meta: { name: 'EventSocialButterfly' } }
+    /**
+     * Find zero or one EventSocialButterfly that matches the filter.
+     * @param {EventSocialButterflyFindUniqueArgs} args - Arguments to find a EventSocialButterfly
+     * @example
+     * // Get one EventSocialButterfly
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends EventSocialButterflyFindUniqueArgs>(args: SelectSubset<T, EventSocialButterflyFindUniqueArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one EventSocialButterfly that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {EventSocialButterflyFindUniqueOrThrowArgs} args - Arguments to find a EventSocialButterfly
+     * @example
+     * // Get one EventSocialButterfly
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends EventSocialButterflyFindUniqueOrThrowArgs>(args: SelectSubset<T, EventSocialButterflyFindUniqueOrThrowArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first EventSocialButterfly that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EventSocialButterflyFindFirstArgs} args - Arguments to find a EventSocialButterfly
+     * @example
+     * // Get one EventSocialButterfly
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends EventSocialButterflyFindFirstArgs>(args?: SelectSubset<T, EventSocialButterflyFindFirstArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first EventSocialButterfly that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EventSocialButterflyFindFirstOrThrowArgs} args - Arguments to find a EventSocialButterfly
+     * @example
+     * // Get one EventSocialButterfly
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends EventSocialButterflyFindFirstOrThrowArgs>(args?: SelectSubset<T, EventSocialButterflyFindFirstOrThrowArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more EventSocialButterflies that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EventSocialButterflyFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all EventSocialButterflies
+     * const eventSocialButterflies = await prisma.eventSocialButterfly.findMany()
+     * 
+     * // Get first 10 EventSocialButterflies
+     * const eventSocialButterflies = await prisma.eventSocialButterfly.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const eventSocialButterflyWithIdOnly = await prisma.eventSocialButterfly.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends EventSocialButterflyFindManyArgs>(args?: SelectSubset<T, EventSocialButterflyFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a EventSocialButterfly.
+     * @param {EventSocialButterflyCreateArgs} args - Arguments to create a EventSocialButterfly.
+     * @example
+     * // Create one EventSocialButterfly
+     * const EventSocialButterfly = await prisma.eventSocialButterfly.create({
+     *   data: {
+     *     // ... data to create a EventSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    create<T extends EventSocialButterflyCreateArgs>(args: SelectSubset<T, EventSocialButterflyCreateArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many EventSocialButterflies.
+     * @param {EventSocialButterflyCreateManyArgs} args - Arguments to create many EventSocialButterflies.
+     * @example
+     * // Create many EventSocialButterflies
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends EventSocialButterflyCreateManyArgs>(args?: SelectSubset<T, EventSocialButterflyCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many EventSocialButterflies and returns the data saved in the database.
+     * @param {EventSocialButterflyCreateManyAndReturnArgs} args - Arguments to create many EventSocialButterflies.
+     * @example
+     * // Create many EventSocialButterflies
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many EventSocialButterflies and only return the `id`
+     * const eventSocialButterflyWithIdOnly = await prisma.eventSocialButterfly.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends EventSocialButterflyCreateManyAndReturnArgs>(args?: SelectSubset<T, EventSocialButterflyCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a EventSocialButterfly.
+     * @param {EventSocialButterflyDeleteArgs} args - Arguments to delete one EventSocialButterfly.
+     * @example
+     * // Delete one EventSocialButterfly
+     * const EventSocialButterfly = await prisma.eventSocialButterfly.delete({
+     *   where: {
+     *     // ... filter to delete one EventSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    delete<T extends EventSocialButterflyDeleteArgs>(args: SelectSubset<T, EventSocialButterflyDeleteArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one EventSocialButterfly.
+     * @param {EventSocialButterflyUpdateArgs} args - Arguments to update one EventSocialButterfly.
+     * @example
+     * // Update one EventSocialButterfly
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends EventSocialButterflyUpdateArgs>(args: SelectSubset<T, EventSocialButterflyUpdateArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more EventSocialButterflies.
+     * @param {EventSocialButterflyDeleteManyArgs} args - Arguments to filter EventSocialButterflies to delete.
+     * @example
+     * // Delete a few EventSocialButterflies
+     * const { count } = await prisma.eventSocialButterfly.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends EventSocialButterflyDeleteManyArgs>(args?: SelectSubset<T, EventSocialButterflyDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more EventSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EventSocialButterflyUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many EventSocialButterflies
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends EventSocialButterflyUpdateManyArgs>(args: SelectSubset<T, EventSocialButterflyUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more EventSocialButterflies and returns the data updated in the database.
+     * @param {EventSocialButterflyUpdateManyAndReturnArgs} args - Arguments to update many EventSocialButterflies.
+     * @example
+     * // Update many EventSocialButterflies
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more EventSocialButterflies and only return the `id`
+     * const eventSocialButterflyWithIdOnly = await prisma.eventSocialButterfly.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends EventSocialButterflyUpdateManyAndReturnArgs>(args: SelectSubset<T, EventSocialButterflyUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one EventSocialButterfly.
+     * @param {EventSocialButterflyUpsertArgs} args - Arguments to update or create a EventSocialButterfly.
+     * @example
+     * // Update or create a EventSocialButterfly
+     * const eventSocialButterfly = await prisma.eventSocialButterfly.upsert({
+     *   create: {
+     *     // ... data to create a EventSocialButterfly
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the EventSocialButterfly we want to update
+     *   }
+     * })
+     */
+    upsert<T extends EventSocialButterflyUpsertArgs>(args: SelectSubset<T, EventSocialButterflyUpsertArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of EventSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EventSocialButterflyCountArgs} args - Arguments to filter EventSocialButterflies to count.
+     * @example
+     * // Count the number of EventSocialButterflies
+     * const count = await prisma.eventSocialButterfly.count({
+     *   where: {
+     *     // ... the filter for the EventSocialButterflies we want to count
+     *   }
+     * })
+    **/
+    count<T extends EventSocialButterflyCountArgs>(
+      args?: Subset<T, EventSocialButterflyCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], EventSocialButterflyCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a EventSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EventSocialButterflyAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends EventSocialButterflyAggregateArgs>(args: Subset<T, EventSocialButterflyAggregateArgs>): Prisma.PrismaPromise<GetEventSocialButterflyAggregateType<T>>
+
+    /**
+     * Group by EventSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EventSocialButterflyGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends EventSocialButterflyGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: EventSocialButterflyGroupByArgs['orderBy'] }
+        : { orderBy?: EventSocialButterflyGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, EventSocialButterflyGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEventSocialButterflyGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the EventSocialButterfly model
+   */
+  readonly fields: EventSocialButterflyFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for EventSocialButterfly.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__EventSocialButterflyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    owner<T extends UserSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterflyDefaultArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reviews<T extends EventSocialButterfly$reviewsArgs<ExtArgs> = {}>(args?: Subset<T, EventSocialButterfly$reviewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    bookmarks<T extends EventSocialButterfly$bookmarksArgs<ExtArgs> = {}>(args?: Subset<T, EventSocialButterfly$bookmarksArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    likes<T extends EventSocialButterfly$likesArgs<ExtArgs> = {}>(args?: Subset<T, EventSocialButterfly$likesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    reports<T extends EventSocialButterfly$reportsArgs<ExtArgs> = {}>(args?: Subset<T, EventSocialButterfly$reportsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the EventSocialButterfly model
+   */ 
+  interface EventSocialButterflyFieldRefs {
+    readonly id: FieldRef<"EventSocialButterfly", 'String'>
+    readonly title: FieldRef<"EventSocialButterfly", 'String'>
+    readonly description: FieldRef<"EventSocialButterfly", 'String'>
+    readonly date: FieldRef<"EventSocialButterfly", 'DateTime'>
+    readonly location: FieldRef<"EventSocialButterfly", 'String'>
+    readonly category: FieldRef<"EventSocialButterfly", 'String'>
+    readonly submittedBy: FieldRef<"EventSocialButterfly", 'String'>
+    readonly validated: FieldRef<"EventSocialButterfly", 'Boolean'>
+    readonly createdAt: FieldRef<"EventSocialButterfly", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * EventSocialButterfly findUnique
+   */
+  export type EventSocialButterflyFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which EventSocialButterfly to fetch.
+     */
+    where: EventSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * EventSocialButterfly findUniqueOrThrow
+   */
+  export type EventSocialButterflyFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which EventSocialButterfly to fetch.
+     */
+    where: EventSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * EventSocialButterfly findFirst
+   */
+  export type EventSocialButterflyFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which EventSocialButterfly to fetch.
+     */
+    where?: EventSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EventSocialButterflies to fetch.
+     */
+    orderBy?: EventSocialButterflyOrderByWithRelationInput | EventSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EventSocialButterflies.
+     */
+    cursor?: EventSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EventSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EventSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EventSocialButterflies.
+     */
+    distinct?: EventSocialButterflyScalarFieldEnum | EventSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * EventSocialButterfly findFirstOrThrow
+   */
+  export type EventSocialButterflyFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which EventSocialButterfly to fetch.
+     */
+    where?: EventSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EventSocialButterflies to fetch.
+     */
+    orderBy?: EventSocialButterflyOrderByWithRelationInput | EventSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EventSocialButterflies.
+     */
+    cursor?: EventSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EventSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EventSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EventSocialButterflies.
+     */
+    distinct?: EventSocialButterflyScalarFieldEnum | EventSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * EventSocialButterfly findMany
+   */
+  export type EventSocialButterflyFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which EventSocialButterflies to fetch.
+     */
+    where?: EventSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EventSocialButterflies to fetch.
+     */
+    orderBy?: EventSocialButterflyOrderByWithRelationInput | EventSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing EventSocialButterflies.
+     */
+    cursor?: EventSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EventSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EventSocialButterflies.
+     */
+    skip?: number
+    distinct?: EventSocialButterflyScalarFieldEnum | EventSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * EventSocialButterfly create
+   */
+  export type EventSocialButterflyCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to create a EventSocialButterfly.
+     */
+    data: XOR<EventSocialButterflyCreateInput, EventSocialButterflyUncheckedCreateInput>
+  }
+
+  /**
+   * EventSocialButterfly createMany
+   */
+  export type EventSocialButterflyCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many EventSocialButterflies.
+     */
+    data: EventSocialButterflyCreateManyInput | EventSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * EventSocialButterfly createManyAndReturn
+   */
+  export type EventSocialButterflyCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to create many EventSocialButterflies.
+     */
+    data: EventSocialButterflyCreateManyInput | EventSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * EventSocialButterfly update
+   */
+  export type EventSocialButterflyUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to update a EventSocialButterfly.
+     */
+    data: XOR<EventSocialButterflyUpdateInput, EventSocialButterflyUncheckedUpdateInput>
+    /**
+     * Choose, which EventSocialButterfly to update.
+     */
+    where: EventSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * EventSocialButterfly updateMany
+   */
+  export type EventSocialButterflyUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update EventSocialButterflies.
+     */
+    data: XOR<EventSocialButterflyUpdateManyMutationInput, EventSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which EventSocialButterflies to update
+     */
+    where?: EventSocialButterflyWhereInput
+    /**
+     * Limit how many EventSocialButterflies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * EventSocialButterfly updateManyAndReturn
+   */
+  export type EventSocialButterflyUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to update EventSocialButterflies.
+     */
+    data: XOR<EventSocialButterflyUpdateManyMutationInput, EventSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which EventSocialButterflies to update
+     */
+    where?: EventSocialButterflyWhereInput
+    /**
+     * Limit how many EventSocialButterflies to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * EventSocialButterfly upsert
+   */
+  export type EventSocialButterflyUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The filter to search for the EventSocialButterfly to update in case it exists.
+     */
+    where: EventSocialButterflyWhereUniqueInput
+    /**
+     * In case the EventSocialButterfly found by the `where` argument doesn't exist, create a new EventSocialButterfly with this data.
+     */
+    create: XOR<EventSocialButterflyCreateInput, EventSocialButterflyUncheckedCreateInput>
+    /**
+     * In case the EventSocialButterfly was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<EventSocialButterflyUpdateInput, EventSocialButterflyUncheckedUpdateInput>
+  }
+
+  /**
+   * EventSocialButterfly delete
+   */
+  export type EventSocialButterflyDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter which EventSocialButterfly to delete.
+     */
+    where: EventSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * EventSocialButterfly deleteMany
+   */
+  export type EventSocialButterflyDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EventSocialButterflies to delete
+     */
+    where?: EventSocialButterflyWhereInput
+    /**
+     * Limit how many EventSocialButterflies to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * EventSocialButterfly.reviews
+   */
+  export type EventSocialButterfly$reviewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    where?: ReviewSocialButterflyWhereInput
+    orderBy?: ReviewSocialButterflyOrderByWithRelationInput | ReviewSocialButterflyOrderByWithRelationInput[]
+    cursor?: ReviewSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReviewSocialButterflyScalarFieldEnum | ReviewSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * EventSocialButterfly.bookmarks
+   */
+  export type EventSocialButterfly$bookmarksArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    where?: BookmarkSocialButterflyWhereInput
+    orderBy?: BookmarkSocialButterflyOrderByWithRelationInput | BookmarkSocialButterflyOrderByWithRelationInput[]
+    cursor?: BookmarkSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: BookmarkSocialButterflyScalarFieldEnum | BookmarkSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * EventSocialButterfly.likes
+   */
+  export type EventSocialButterfly$likesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    where?: LikeSocialButterflyWhereInput
+    orderBy?: LikeSocialButterflyOrderByWithRelationInput | LikeSocialButterflyOrderByWithRelationInput[]
+    cursor?: LikeSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: LikeSocialButterflyScalarFieldEnum | LikeSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * EventSocialButterfly.reports
+   */
+  export type EventSocialButterfly$reportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    where?: ReportSocialButterflyWhereInput
+    orderBy?: ReportSocialButterflyOrderByWithRelationInput | ReportSocialButterflyOrderByWithRelationInput[]
+    cursor?: ReportSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReportSocialButterflyScalarFieldEnum | ReportSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * EventSocialButterfly without action
+   */
+  export type EventSocialButterflyDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ReviewSocialButterfly
+   */
+
+  export type AggregateReviewSocialButterfly = {
+    _count: ReviewSocialButterflyCountAggregateOutputType | null
+    _avg: ReviewSocialButterflyAvgAggregateOutputType | null
+    _sum: ReviewSocialButterflySumAggregateOutputType | null
+    _min: ReviewSocialButterflyMinAggregateOutputType | null
+    _max: ReviewSocialButterflyMaxAggregateOutputType | null
+  }
+
+  export type ReviewSocialButterflyAvgAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewSocialButterflySumAggregateOutputType = {
+    rating: number | null
+  }
+
+  export type ReviewSocialButterflyMinAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ReviewSocialButterflyMaxAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    userId: string | null
+    rating: number | null
+    comment: string | null
+    validated: boolean | null
+    createdAt: Date | null
+  }
+
+  export type ReviewSocialButterflyCountAggregateOutputType = {
+    id: number
+    eventId: number
+    userId: number
+    rating: number
+    comment: number
+    validated: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ReviewSocialButterflyAvgAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewSocialButterflySumAggregateInputType = {
+    rating?: true
+  }
+
+  export type ReviewSocialButterflyMinAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ReviewSocialButterflyMaxAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+  }
+
+  export type ReviewSocialButterflyCountAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    rating?: true
+    comment?: true
+    validated?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ReviewSocialButterflyAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewSocialButterfly to aggregate.
+     */
+    where?: ReviewSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewSocialButterflies to fetch.
+     */
+    orderBy?: ReviewSocialButterflyOrderByWithRelationInput | ReviewSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ReviewSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ReviewSocialButterflies
+    **/
+    _count?: true | ReviewSocialButterflyCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ReviewSocialButterflyAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ReviewSocialButterflySumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ReviewSocialButterflyMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ReviewSocialButterflyMaxAggregateInputType
+  }
+
+  export type GetReviewSocialButterflyAggregateType<T extends ReviewSocialButterflyAggregateArgs> = {
+        [P in keyof T & keyof AggregateReviewSocialButterfly]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateReviewSocialButterfly[P]>
+      : GetScalarType<T[P], AggregateReviewSocialButterfly[P]>
+  }
+
+
+
+
+  export type ReviewSocialButterflyGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReviewSocialButterflyWhereInput
+    orderBy?: ReviewSocialButterflyOrderByWithAggregationInput | ReviewSocialButterflyOrderByWithAggregationInput[]
+    by: ReviewSocialButterflyScalarFieldEnum[] | ReviewSocialButterflyScalarFieldEnum
+    having?: ReviewSocialButterflyScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ReviewSocialButterflyCountAggregateInputType | true
+    _avg?: ReviewSocialButterflyAvgAggregateInputType
+    _sum?: ReviewSocialButterflySumAggregateInputType
+    _min?: ReviewSocialButterflyMinAggregateInputType
+    _max?: ReviewSocialButterflyMaxAggregateInputType
+  }
+
+  export type ReviewSocialButterflyGroupByOutputType = {
+    id: string
+    eventId: string
+    userId: string
+    rating: number
+    comment: string
+    validated: boolean
+    createdAt: Date
+    _count: ReviewSocialButterflyCountAggregateOutputType | null
+    _avg: ReviewSocialButterflyAvgAggregateOutputType | null
+    _sum: ReviewSocialButterflySumAggregateOutputType | null
+    _min: ReviewSocialButterflyMinAggregateOutputType | null
+    _max: ReviewSocialButterflyMaxAggregateOutputType | null
+  }
+
+  type GetReviewSocialButterflyGroupByPayload<T extends ReviewSocialButterflyGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ReviewSocialButterflyGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ReviewSocialButterflyGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ReviewSocialButterflyGroupByOutputType[P]>
+            : GetScalarType<T[P], ReviewSocialButterflyGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ReviewSocialButterflySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+    reports?: boolean | ReviewSocialButterfly$reportsArgs<ExtArgs>
+    _count?: boolean | ReviewSocialButterflyCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewSocialButterfly"]>
+
+  export type ReviewSocialButterflySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewSocialButterfly"]>
+
+  export type ReviewSocialButterflySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["reviewSocialButterfly"]>
+
+  export type ReviewSocialButterflySelectScalar = {
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    rating?: boolean
+    comment?: boolean
+    validated?: boolean
+    createdAt?: boolean
+  }
+
+  export type ReviewSocialButterflyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "eventId" | "userId" | "rating" | "comment" | "validated" | "createdAt", ExtArgs["result"]["reviewSocialButterfly"]>
+  export type ReviewSocialButterflyInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+    reports?: boolean | ReviewSocialButterfly$reportsArgs<ExtArgs>
+    _count?: boolean | ReviewSocialButterflyCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type ReviewSocialButterflyIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+  export type ReviewSocialButterflyIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+
+  export type $ReviewSocialButterflyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReviewSocialButterfly"
+    objects: {
+      user: Prisma.$UserSocialButterflyPayload<ExtArgs>
+      event: Prisma.$EventSocialButterflyPayload<ExtArgs>
+      reports: Prisma.$ReportSocialButterflyPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      eventId: string
+      userId: string
+      rating: number
+      comment: string
+      validated: boolean
+      createdAt: Date
+    }, ExtArgs["result"]["reviewSocialButterfly"]>
+    composites: {}
+  }
+
+  type ReviewSocialButterflyGetPayload<S extends boolean | null | undefined | ReviewSocialButterflyDefaultArgs> = $Result.GetResult<Prisma.$ReviewSocialButterflyPayload, S>
+
+  type ReviewSocialButterflyCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReviewSocialButterflyFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReviewSocialButterflyCountAggregateInputType | true
+    }
+
+  export interface ReviewSocialButterflyDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReviewSocialButterfly'], meta: { name: 'ReviewSocialButterfly' } }
+    /**
+     * Find zero or one ReviewSocialButterfly that matches the filter.
+     * @param {ReviewSocialButterflyFindUniqueArgs} args - Arguments to find a ReviewSocialButterfly
+     * @example
+     * // Get one ReviewSocialButterfly
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ReviewSocialButterflyFindUniqueArgs>(args: SelectSubset<T, ReviewSocialButterflyFindUniqueArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ReviewSocialButterfly that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ReviewSocialButterflyFindUniqueOrThrowArgs} args - Arguments to find a ReviewSocialButterfly
+     * @example
+     * // Get one ReviewSocialButterfly
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ReviewSocialButterflyFindUniqueOrThrowArgs>(args: SelectSubset<T, ReviewSocialButterflyFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewSocialButterfly that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewSocialButterflyFindFirstArgs} args - Arguments to find a ReviewSocialButterfly
+     * @example
+     * // Get one ReviewSocialButterfly
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ReviewSocialButterflyFindFirstArgs>(args?: SelectSubset<T, ReviewSocialButterflyFindFirstArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReviewSocialButterfly that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewSocialButterflyFindFirstOrThrowArgs} args - Arguments to find a ReviewSocialButterfly
+     * @example
+     * // Get one ReviewSocialButterfly
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ReviewSocialButterflyFindFirstOrThrowArgs>(args?: SelectSubset<T, ReviewSocialButterflyFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ReviewSocialButterflies that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewSocialButterflyFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ReviewSocialButterflies
+     * const reviewSocialButterflies = await prisma.reviewSocialButterfly.findMany()
+     * 
+     * // Get first 10 ReviewSocialButterflies
+     * const reviewSocialButterflies = await prisma.reviewSocialButterfly.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const reviewSocialButterflyWithIdOnly = await prisma.reviewSocialButterfly.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ReviewSocialButterflyFindManyArgs>(args?: SelectSubset<T, ReviewSocialButterflyFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ReviewSocialButterfly.
+     * @param {ReviewSocialButterflyCreateArgs} args - Arguments to create a ReviewSocialButterfly.
+     * @example
+     * // Create one ReviewSocialButterfly
+     * const ReviewSocialButterfly = await prisma.reviewSocialButterfly.create({
+     *   data: {
+     *     // ... data to create a ReviewSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    create<T extends ReviewSocialButterflyCreateArgs>(args: SelectSubset<T, ReviewSocialButterflyCreateArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ReviewSocialButterflies.
+     * @param {ReviewSocialButterflyCreateManyArgs} args - Arguments to create many ReviewSocialButterflies.
+     * @example
+     * // Create many ReviewSocialButterflies
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ReviewSocialButterflyCreateManyArgs>(args?: SelectSubset<T, ReviewSocialButterflyCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ReviewSocialButterflies and returns the data saved in the database.
+     * @param {ReviewSocialButterflyCreateManyAndReturnArgs} args - Arguments to create many ReviewSocialButterflies.
+     * @example
+     * // Create many ReviewSocialButterflies
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ReviewSocialButterflies and only return the `id`
+     * const reviewSocialButterflyWithIdOnly = await prisma.reviewSocialButterfly.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ReviewSocialButterflyCreateManyAndReturnArgs>(args?: SelectSubset<T, ReviewSocialButterflyCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ReviewSocialButterfly.
+     * @param {ReviewSocialButterflyDeleteArgs} args - Arguments to delete one ReviewSocialButterfly.
+     * @example
+     * // Delete one ReviewSocialButterfly
+     * const ReviewSocialButterfly = await prisma.reviewSocialButterfly.delete({
+     *   where: {
+     *     // ... filter to delete one ReviewSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ReviewSocialButterflyDeleteArgs>(args: SelectSubset<T, ReviewSocialButterflyDeleteArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ReviewSocialButterfly.
+     * @param {ReviewSocialButterflyUpdateArgs} args - Arguments to update one ReviewSocialButterfly.
+     * @example
+     * // Update one ReviewSocialButterfly
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ReviewSocialButterflyUpdateArgs>(args: SelectSubset<T, ReviewSocialButterflyUpdateArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ReviewSocialButterflies.
+     * @param {ReviewSocialButterflyDeleteManyArgs} args - Arguments to filter ReviewSocialButterflies to delete.
+     * @example
+     * // Delete a few ReviewSocialButterflies
+     * const { count } = await prisma.reviewSocialButterfly.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ReviewSocialButterflyDeleteManyArgs>(args?: SelectSubset<T, ReviewSocialButterflyDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewSocialButterflyUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ReviewSocialButterflies
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ReviewSocialButterflyUpdateManyArgs>(args: SelectSubset<T, ReviewSocialButterflyUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReviewSocialButterflies and returns the data updated in the database.
+     * @param {ReviewSocialButterflyUpdateManyAndReturnArgs} args - Arguments to update many ReviewSocialButterflies.
+     * @example
+     * // Update many ReviewSocialButterflies
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ReviewSocialButterflies and only return the `id`
+     * const reviewSocialButterflyWithIdOnly = await prisma.reviewSocialButterfly.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ReviewSocialButterflyUpdateManyAndReturnArgs>(args: SelectSubset<T, ReviewSocialButterflyUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ReviewSocialButterfly.
+     * @param {ReviewSocialButterflyUpsertArgs} args - Arguments to update or create a ReviewSocialButterfly.
+     * @example
+     * // Update or create a ReviewSocialButterfly
+     * const reviewSocialButterfly = await prisma.reviewSocialButterfly.upsert({
+     *   create: {
+     *     // ... data to create a ReviewSocialButterfly
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ReviewSocialButterfly we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ReviewSocialButterflyUpsertArgs>(args: SelectSubset<T, ReviewSocialButterflyUpsertArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ReviewSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewSocialButterflyCountArgs} args - Arguments to filter ReviewSocialButterflies to count.
+     * @example
+     * // Count the number of ReviewSocialButterflies
+     * const count = await prisma.reviewSocialButterfly.count({
+     *   where: {
+     *     // ... the filter for the ReviewSocialButterflies we want to count
+     *   }
+     * })
+    **/
+    count<T extends ReviewSocialButterflyCountArgs>(
+      args?: Subset<T, ReviewSocialButterflyCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ReviewSocialButterflyCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ReviewSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewSocialButterflyAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ReviewSocialButterflyAggregateArgs>(args: Subset<T, ReviewSocialButterflyAggregateArgs>): Prisma.PrismaPromise<GetReviewSocialButterflyAggregateType<T>>
+
+    /**
+     * Group by ReviewSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReviewSocialButterflyGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ReviewSocialButterflyGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ReviewSocialButterflyGroupByArgs['orderBy'] }
+        : { orderBy?: ReviewSocialButterflyGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ReviewSocialButterflyGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReviewSocialButterflyGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ReviewSocialButterfly model
+   */
+  readonly fields: ReviewSocialButterflyFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ReviewSocialButterfly.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ReviewSocialButterflyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterflyDefaultArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    event<T extends EventSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, EventSocialButterflyDefaultArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reports<T extends ReviewSocialButterfly$reportsArgs<ExtArgs> = {}>(args?: Subset<T, ReviewSocialButterfly$reportsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ReviewSocialButterfly model
+   */ 
+  interface ReviewSocialButterflyFieldRefs {
+    readonly id: FieldRef<"ReviewSocialButterfly", 'String'>
+    readonly eventId: FieldRef<"ReviewSocialButterfly", 'String'>
+    readonly userId: FieldRef<"ReviewSocialButterfly", 'String'>
+    readonly rating: FieldRef<"ReviewSocialButterfly", 'Int'>
+    readonly comment: FieldRef<"ReviewSocialButterfly", 'String'>
+    readonly validated: FieldRef<"ReviewSocialButterfly", 'Boolean'>
+    readonly createdAt: FieldRef<"ReviewSocialButterfly", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ReviewSocialButterfly findUnique
+   */
+  export type ReviewSocialButterflyFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewSocialButterfly to fetch.
+     */
+    where: ReviewSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReviewSocialButterfly findUniqueOrThrow
+   */
+  export type ReviewSocialButterflyFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewSocialButterfly to fetch.
+     */
+    where: ReviewSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReviewSocialButterfly findFirst
+   */
+  export type ReviewSocialButterflyFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewSocialButterfly to fetch.
+     */
+    where?: ReviewSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewSocialButterflies to fetch.
+     */
+    orderBy?: ReviewSocialButterflyOrderByWithRelationInput | ReviewSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewSocialButterflies.
+     */
+    cursor?: ReviewSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewSocialButterflies.
+     */
+    distinct?: ReviewSocialButterflyScalarFieldEnum | ReviewSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewSocialButterfly findFirstOrThrow
+   */
+  export type ReviewSocialButterflyFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewSocialButterfly to fetch.
+     */
+    where?: ReviewSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewSocialButterflies to fetch.
+     */
+    orderBy?: ReviewSocialButterflyOrderByWithRelationInput | ReviewSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReviewSocialButterflies.
+     */
+    cursor?: ReviewSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReviewSocialButterflies.
+     */
+    distinct?: ReviewSocialButterflyScalarFieldEnum | ReviewSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewSocialButterfly findMany
+   */
+  export type ReviewSocialButterflyFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReviewSocialButterflies to fetch.
+     */
+    where?: ReviewSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReviewSocialButterflies to fetch.
+     */
+    orderBy?: ReviewSocialButterflyOrderByWithRelationInput | ReviewSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ReviewSocialButterflies.
+     */
+    cursor?: ReviewSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReviewSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReviewSocialButterflies.
+     */
+    skip?: number
+    distinct?: ReviewSocialButterflyScalarFieldEnum | ReviewSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewSocialButterfly create
+   */
+  export type ReviewSocialButterflyCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ReviewSocialButterfly.
+     */
+    data: XOR<ReviewSocialButterflyCreateInput, ReviewSocialButterflyUncheckedCreateInput>
+  }
+
+  /**
+   * ReviewSocialButterfly createMany
+   */
+  export type ReviewSocialButterflyCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ReviewSocialButterflies.
+     */
+    data: ReviewSocialButterflyCreateManyInput | ReviewSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ReviewSocialButterfly createManyAndReturn
+   */
+  export type ReviewSocialButterflyCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to create many ReviewSocialButterflies.
+     */
+    data: ReviewSocialButterflyCreateManyInput | ReviewSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewSocialButterfly update
+   */
+  export type ReviewSocialButterflyUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ReviewSocialButterfly.
+     */
+    data: XOR<ReviewSocialButterflyUpdateInput, ReviewSocialButterflyUncheckedUpdateInput>
+    /**
+     * Choose, which ReviewSocialButterfly to update.
+     */
+    where: ReviewSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReviewSocialButterfly updateMany
+   */
+  export type ReviewSocialButterflyUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ReviewSocialButterflies.
+     */
+    data: XOR<ReviewSocialButterflyUpdateManyMutationInput, ReviewSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewSocialButterflies to update
+     */
+    where?: ReviewSocialButterflyWhereInput
+    /**
+     * Limit how many ReviewSocialButterflies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewSocialButterfly updateManyAndReturn
+   */
+  export type ReviewSocialButterflyUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to update ReviewSocialButterflies.
+     */
+    data: XOR<ReviewSocialButterflyUpdateManyMutationInput, ReviewSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which ReviewSocialButterflies to update
+     */
+    where?: ReviewSocialButterflyWhereInput
+    /**
+     * Limit how many ReviewSocialButterflies to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReviewSocialButterfly upsert
+   */
+  export type ReviewSocialButterflyUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ReviewSocialButterfly to update in case it exists.
+     */
+    where: ReviewSocialButterflyWhereUniqueInput
+    /**
+     * In case the ReviewSocialButterfly found by the `where` argument doesn't exist, create a new ReviewSocialButterfly with this data.
+     */
+    create: XOR<ReviewSocialButterflyCreateInput, ReviewSocialButterflyUncheckedCreateInput>
+    /**
+     * In case the ReviewSocialButterfly was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ReviewSocialButterflyUpdateInput, ReviewSocialButterflyUncheckedUpdateInput>
+  }
+
+  /**
+   * ReviewSocialButterfly delete
+   */
+  export type ReviewSocialButterflyDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter which ReviewSocialButterfly to delete.
+     */
+    where: ReviewSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReviewSocialButterfly deleteMany
+   */
+  export type ReviewSocialButterflyDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReviewSocialButterflies to delete
+     */
+    where?: ReviewSocialButterflyWhereInput
+    /**
+     * Limit how many ReviewSocialButterflies to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReviewSocialButterfly.reports
+   */
+  export type ReviewSocialButterfly$reportsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    where?: ReportSocialButterflyWhereInput
+    orderBy?: ReportSocialButterflyOrderByWithRelationInput | ReportSocialButterflyOrderByWithRelationInput[]
+    cursor?: ReportSocialButterflyWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ReportSocialButterflyScalarFieldEnum | ReportSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * ReviewSocialButterfly without action
+   */
+  export type ReviewSocialButterflyDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model LikeSocialButterfly
+   */
+
+  export type AggregateLikeSocialButterfly = {
+    _count: LikeSocialButterflyCountAggregateOutputType | null
+    _min: LikeSocialButterflyMinAggregateOutputType | null
+    _max: LikeSocialButterflyMaxAggregateOutputType | null
+  }
+
+  export type LikeSocialButterflyMinAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type LikeSocialButterflyMaxAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type LikeSocialButterflyCountAggregateOutputType = {
+    id: number
+    eventId: number
+    userId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type LikeSocialButterflyMinAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type LikeSocialButterflyMaxAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type LikeSocialButterflyCountAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type LikeSocialButterflyAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LikeSocialButterfly to aggregate.
+     */
+    where?: LikeSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeSocialButterflies to fetch.
+     */
+    orderBy?: LikeSocialButterflyOrderByWithRelationInput | LikeSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: LikeSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned LikeSocialButterflies
+    **/
+    _count?: true | LikeSocialButterflyCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: LikeSocialButterflyMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: LikeSocialButterflyMaxAggregateInputType
+  }
+
+  export type GetLikeSocialButterflyAggregateType<T extends LikeSocialButterflyAggregateArgs> = {
+        [P in keyof T & keyof AggregateLikeSocialButterfly]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateLikeSocialButterfly[P]>
+      : GetScalarType<T[P], AggregateLikeSocialButterfly[P]>
+  }
+
+
+
+
+  export type LikeSocialButterflyGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: LikeSocialButterflyWhereInput
+    orderBy?: LikeSocialButterflyOrderByWithAggregationInput | LikeSocialButterflyOrderByWithAggregationInput[]
+    by: LikeSocialButterflyScalarFieldEnum[] | LikeSocialButterflyScalarFieldEnum
+    having?: LikeSocialButterflyScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: LikeSocialButterflyCountAggregateInputType | true
+    _min?: LikeSocialButterflyMinAggregateInputType
+    _max?: LikeSocialButterflyMaxAggregateInputType
+  }
+
+  export type LikeSocialButterflyGroupByOutputType = {
+    id: string
+    eventId: string
+    userId: string
+    createdAt: Date
+    _count: LikeSocialButterflyCountAggregateOutputType | null
+    _min: LikeSocialButterflyMinAggregateOutputType | null
+    _max: LikeSocialButterflyMaxAggregateOutputType | null
+  }
+
+  type GetLikeSocialButterflyGroupByPayload<T extends LikeSocialButterflyGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<LikeSocialButterflyGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof LikeSocialButterflyGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], LikeSocialButterflyGroupByOutputType[P]>
+            : GetScalarType<T[P], LikeSocialButterflyGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type LikeSocialButterflySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeSocialButterfly"]>
+
+  export type LikeSocialButterflySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeSocialButterfly"]>
+
+  export type LikeSocialButterflySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["likeSocialButterfly"]>
+
+  export type LikeSocialButterflySelectScalar = {
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+  }
+
+  export type LikeSocialButterflyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "eventId" | "userId" | "createdAt", ExtArgs["result"]["likeSocialButterfly"]>
+  export type LikeSocialButterflyInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+  export type LikeSocialButterflyIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+  export type LikeSocialButterflyIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+
+  export type $LikeSocialButterflyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "LikeSocialButterfly"
+    objects: {
+      user: Prisma.$UserSocialButterflyPayload<ExtArgs>
+      event: Prisma.$EventSocialButterflyPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      eventId: string
+      userId: string
+      createdAt: Date
+    }, ExtArgs["result"]["likeSocialButterfly"]>
+    composites: {}
+  }
+
+  type LikeSocialButterflyGetPayload<S extends boolean | null | undefined | LikeSocialButterflyDefaultArgs> = $Result.GetResult<Prisma.$LikeSocialButterflyPayload, S>
+
+  type LikeSocialButterflyCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<LikeSocialButterflyFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: LikeSocialButterflyCountAggregateInputType | true
+    }
+
+  export interface LikeSocialButterflyDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['LikeSocialButterfly'], meta: { name: 'LikeSocialButterfly' } }
+    /**
+     * Find zero or one LikeSocialButterfly that matches the filter.
+     * @param {LikeSocialButterflyFindUniqueArgs} args - Arguments to find a LikeSocialButterfly
+     * @example
+     * // Get one LikeSocialButterfly
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends LikeSocialButterflyFindUniqueArgs>(args: SelectSubset<T, LikeSocialButterflyFindUniqueArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one LikeSocialButterfly that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {LikeSocialButterflyFindUniqueOrThrowArgs} args - Arguments to find a LikeSocialButterfly
+     * @example
+     * // Get one LikeSocialButterfly
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends LikeSocialButterflyFindUniqueOrThrowArgs>(args: SelectSubset<T, LikeSocialButterflyFindUniqueOrThrowArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LikeSocialButterfly that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeSocialButterflyFindFirstArgs} args - Arguments to find a LikeSocialButterfly
+     * @example
+     * // Get one LikeSocialButterfly
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends LikeSocialButterflyFindFirstArgs>(args?: SelectSubset<T, LikeSocialButterflyFindFirstArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first LikeSocialButterfly that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeSocialButterflyFindFirstOrThrowArgs} args - Arguments to find a LikeSocialButterfly
+     * @example
+     * // Get one LikeSocialButterfly
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends LikeSocialButterflyFindFirstOrThrowArgs>(args?: SelectSubset<T, LikeSocialButterflyFindFirstOrThrowArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more LikeSocialButterflies that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeSocialButterflyFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all LikeSocialButterflies
+     * const likeSocialButterflies = await prisma.likeSocialButterfly.findMany()
+     * 
+     * // Get first 10 LikeSocialButterflies
+     * const likeSocialButterflies = await prisma.likeSocialButterfly.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const likeSocialButterflyWithIdOnly = await prisma.likeSocialButterfly.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends LikeSocialButterflyFindManyArgs>(args?: SelectSubset<T, LikeSocialButterflyFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a LikeSocialButterfly.
+     * @param {LikeSocialButterflyCreateArgs} args - Arguments to create a LikeSocialButterfly.
+     * @example
+     * // Create one LikeSocialButterfly
+     * const LikeSocialButterfly = await prisma.likeSocialButterfly.create({
+     *   data: {
+     *     // ... data to create a LikeSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    create<T extends LikeSocialButterflyCreateArgs>(args: SelectSubset<T, LikeSocialButterflyCreateArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many LikeSocialButterflies.
+     * @param {LikeSocialButterflyCreateManyArgs} args - Arguments to create many LikeSocialButterflies.
+     * @example
+     * // Create many LikeSocialButterflies
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends LikeSocialButterflyCreateManyArgs>(args?: SelectSubset<T, LikeSocialButterflyCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many LikeSocialButterflies and returns the data saved in the database.
+     * @param {LikeSocialButterflyCreateManyAndReturnArgs} args - Arguments to create many LikeSocialButterflies.
+     * @example
+     * // Create many LikeSocialButterflies
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many LikeSocialButterflies and only return the `id`
+     * const likeSocialButterflyWithIdOnly = await prisma.likeSocialButterfly.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends LikeSocialButterflyCreateManyAndReturnArgs>(args?: SelectSubset<T, LikeSocialButterflyCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a LikeSocialButterfly.
+     * @param {LikeSocialButterflyDeleteArgs} args - Arguments to delete one LikeSocialButterfly.
+     * @example
+     * // Delete one LikeSocialButterfly
+     * const LikeSocialButterfly = await prisma.likeSocialButterfly.delete({
+     *   where: {
+     *     // ... filter to delete one LikeSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    delete<T extends LikeSocialButterflyDeleteArgs>(args: SelectSubset<T, LikeSocialButterflyDeleteArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one LikeSocialButterfly.
+     * @param {LikeSocialButterflyUpdateArgs} args - Arguments to update one LikeSocialButterfly.
+     * @example
+     * // Update one LikeSocialButterfly
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends LikeSocialButterflyUpdateArgs>(args: SelectSubset<T, LikeSocialButterflyUpdateArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more LikeSocialButterflies.
+     * @param {LikeSocialButterflyDeleteManyArgs} args - Arguments to filter LikeSocialButterflies to delete.
+     * @example
+     * // Delete a few LikeSocialButterflies
+     * const { count } = await prisma.likeSocialButterfly.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends LikeSocialButterflyDeleteManyArgs>(args?: SelectSubset<T, LikeSocialButterflyDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LikeSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeSocialButterflyUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many LikeSocialButterflies
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends LikeSocialButterflyUpdateManyArgs>(args: SelectSubset<T, LikeSocialButterflyUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more LikeSocialButterflies and returns the data updated in the database.
+     * @param {LikeSocialButterflyUpdateManyAndReturnArgs} args - Arguments to update many LikeSocialButterflies.
+     * @example
+     * // Update many LikeSocialButterflies
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more LikeSocialButterflies and only return the `id`
+     * const likeSocialButterflyWithIdOnly = await prisma.likeSocialButterfly.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends LikeSocialButterflyUpdateManyAndReturnArgs>(args: SelectSubset<T, LikeSocialButterflyUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one LikeSocialButterfly.
+     * @param {LikeSocialButterflyUpsertArgs} args - Arguments to update or create a LikeSocialButterfly.
+     * @example
+     * // Update or create a LikeSocialButterfly
+     * const likeSocialButterfly = await prisma.likeSocialButterfly.upsert({
+     *   create: {
+     *     // ... data to create a LikeSocialButterfly
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the LikeSocialButterfly we want to update
+     *   }
+     * })
+     */
+    upsert<T extends LikeSocialButterflyUpsertArgs>(args: SelectSubset<T, LikeSocialButterflyUpsertArgs<ExtArgs>>): Prisma__LikeSocialButterflyClient<$Result.GetResult<Prisma.$LikeSocialButterflyPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of LikeSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeSocialButterflyCountArgs} args - Arguments to filter LikeSocialButterflies to count.
+     * @example
+     * // Count the number of LikeSocialButterflies
+     * const count = await prisma.likeSocialButterfly.count({
+     *   where: {
+     *     // ... the filter for the LikeSocialButterflies we want to count
+     *   }
+     * })
+    **/
+    count<T extends LikeSocialButterflyCountArgs>(
+      args?: Subset<T, LikeSocialButterflyCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], LikeSocialButterflyCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a LikeSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeSocialButterflyAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends LikeSocialButterflyAggregateArgs>(args: Subset<T, LikeSocialButterflyAggregateArgs>): Prisma.PrismaPromise<GetLikeSocialButterflyAggregateType<T>>
+
+    /**
+     * Group by LikeSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {LikeSocialButterflyGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends LikeSocialButterflyGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: LikeSocialButterflyGroupByArgs['orderBy'] }
+        : { orderBy?: LikeSocialButterflyGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, LikeSocialButterflyGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetLikeSocialButterflyGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the LikeSocialButterfly model
+   */
+  readonly fields: LikeSocialButterflyFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for LikeSocialButterfly.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__LikeSocialButterflyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterflyDefaultArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    event<T extends EventSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, EventSocialButterflyDefaultArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the LikeSocialButterfly model
+   */ 
+  interface LikeSocialButterflyFieldRefs {
+    readonly id: FieldRef<"LikeSocialButterfly", 'String'>
+    readonly eventId: FieldRef<"LikeSocialButterfly", 'String'>
+    readonly userId: FieldRef<"LikeSocialButterfly", 'String'>
+    readonly createdAt: FieldRef<"LikeSocialButterfly", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * LikeSocialButterfly findUnique
+   */
+  export type LikeSocialButterflyFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeSocialButterfly to fetch.
+     */
+    where: LikeSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * LikeSocialButterfly findUniqueOrThrow
+   */
+  export type LikeSocialButterflyFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeSocialButterfly to fetch.
+     */
+    where: LikeSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * LikeSocialButterfly findFirst
+   */
+  export type LikeSocialButterflyFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeSocialButterfly to fetch.
+     */
+    where?: LikeSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeSocialButterflies to fetch.
+     */
+    orderBy?: LikeSocialButterflyOrderByWithRelationInput | LikeSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LikeSocialButterflies.
+     */
+    cursor?: LikeSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LikeSocialButterflies.
+     */
+    distinct?: LikeSocialButterflyScalarFieldEnum | LikeSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * LikeSocialButterfly findFirstOrThrow
+   */
+  export type LikeSocialButterflyFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeSocialButterfly to fetch.
+     */
+    where?: LikeSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeSocialButterflies to fetch.
+     */
+    orderBy?: LikeSocialButterflyOrderByWithRelationInput | LikeSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for LikeSocialButterflies.
+     */
+    cursor?: LikeSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of LikeSocialButterflies.
+     */
+    distinct?: LikeSocialButterflyScalarFieldEnum | LikeSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * LikeSocialButterfly findMany
+   */
+  export type LikeSocialButterflyFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which LikeSocialButterflies to fetch.
+     */
+    where?: LikeSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of LikeSocialButterflies to fetch.
+     */
+    orderBy?: LikeSocialButterflyOrderByWithRelationInput | LikeSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing LikeSocialButterflies.
+     */
+    cursor?: LikeSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` LikeSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` LikeSocialButterflies.
+     */
+    skip?: number
+    distinct?: LikeSocialButterflyScalarFieldEnum | LikeSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * LikeSocialButterfly create
+   */
+  export type LikeSocialButterflyCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to create a LikeSocialButterfly.
+     */
+    data: XOR<LikeSocialButterflyCreateInput, LikeSocialButterflyUncheckedCreateInput>
+  }
+
+  /**
+   * LikeSocialButterfly createMany
+   */
+  export type LikeSocialButterflyCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many LikeSocialButterflies.
+     */
+    data: LikeSocialButterflyCreateManyInput | LikeSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * LikeSocialButterfly createManyAndReturn
+   */
+  export type LikeSocialButterflyCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to create many LikeSocialButterflies.
+     */
+    data: LikeSocialButterflyCreateManyInput | LikeSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LikeSocialButterfly update
+   */
+  export type LikeSocialButterflyUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to update a LikeSocialButterfly.
+     */
+    data: XOR<LikeSocialButterflyUpdateInput, LikeSocialButterflyUncheckedUpdateInput>
+    /**
+     * Choose, which LikeSocialButterfly to update.
+     */
+    where: LikeSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * LikeSocialButterfly updateMany
+   */
+  export type LikeSocialButterflyUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update LikeSocialButterflies.
+     */
+    data: XOR<LikeSocialButterflyUpdateManyMutationInput, LikeSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which LikeSocialButterflies to update
+     */
+    where?: LikeSocialButterflyWhereInput
+    /**
+     * Limit how many LikeSocialButterflies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * LikeSocialButterfly updateManyAndReturn
+   */
+  export type LikeSocialButterflyUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to update LikeSocialButterflies.
+     */
+    data: XOR<LikeSocialButterflyUpdateManyMutationInput, LikeSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which LikeSocialButterflies to update
+     */
+    where?: LikeSocialButterflyWhereInput
+    /**
+     * Limit how many LikeSocialButterflies to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * LikeSocialButterfly upsert
+   */
+  export type LikeSocialButterflyUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The filter to search for the LikeSocialButterfly to update in case it exists.
+     */
+    where: LikeSocialButterflyWhereUniqueInput
+    /**
+     * In case the LikeSocialButterfly found by the `where` argument doesn't exist, create a new LikeSocialButterfly with this data.
+     */
+    create: XOR<LikeSocialButterflyCreateInput, LikeSocialButterflyUncheckedCreateInput>
+    /**
+     * In case the LikeSocialButterfly was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<LikeSocialButterflyUpdateInput, LikeSocialButterflyUncheckedUpdateInput>
+  }
+
+  /**
+   * LikeSocialButterfly delete
+   */
+  export type LikeSocialButterflyDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter which LikeSocialButterfly to delete.
+     */
+    where: LikeSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * LikeSocialButterfly deleteMany
+   */
+  export type LikeSocialButterflyDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which LikeSocialButterflies to delete
+     */
+    where?: LikeSocialButterflyWhereInput
+    /**
+     * Limit how many LikeSocialButterflies to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * LikeSocialButterfly without action
+   */
+  export type LikeSocialButterflyDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the LikeSocialButterfly
+     */
+    select?: LikeSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the LikeSocialButterfly
+     */
+    omit?: LikeSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: LikeSocialButterflyInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model BookmarkSocialButterfly
+   */
+
+  export type AggregateBookmarkSocialButterfly = {
+    _count: BookmarkSocialButterflyCountAggregateOutputType | null
+    _min: BookmarkSocialButterflyMinAggregateOutputType | null
+    _max: BookmarkSocialButterflyMaxAggregateOutputType | null
+  }
+
+  export type BookmarkSocialButterflyMinAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type BookmarkSocialButterflyMaxAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    userId: string | null
+    createdAt: Date | null
+  }
+
+  export type BookmarkSocialButterflyCountAggregateOutputType = {
+    id: number
+    eventId: number
+    userId: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type BookmarkSocialButterflyMinAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type BookmarkSocialButterflyMaxAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    createdAt?: true
+  }
+
+  export type BookmarkSocialButterflyCountAggregateInputType = {
+    id?: true
+    eventId?: true
+    userId?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type BookmarkSocialButterflyAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which BookmarkSocialButterfly to aggregate.
+     */
+    where?: BookmarkSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkSocialButterflies to fetch.
+     */
+    orderBy?: BookmarkSocialButterflyOrderByWithRelationInput | BookmarkSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: BookmarkSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned BookmarkSocialButterflies
+    **/
+    _count?: true | BookmarkSocialButterflyCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: BookmarkSocialButterflyMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: BookmarkSocialButterflyMaxAggregateInputType
+  }
+
+  export type GetBookmarkSocialButterflyAggregateType<T extends BookmarkSocialButterflyAggregateArgs> = {
+        [P in keyof T & keyof AggregateBookmarkSocialButterfly]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateBookmarkSocialButterfly[P]>
+      : GetScalarType<T[P], AggregateBookmarkSocialButterfly[P]>
+  }
+
+
+
+
+  export type BookmarkSocialButterflyGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkSocialButterflyWhereInput
+    orderBy?: BookmarkSocialButterflyOrderByWithAggregationInput | BookmarkSocialButterflyOrderByWithAggregationInput[]
+    by: BookmarkSocialButterflyScalarFieldEnum[] | BookmarkSocialButterflyScalarFieldEnum
+    having?: BookmarkSocialButterflyScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: BookmarkSocialButterflyCountAggregateInputType | true
+    _min?: BookmarkSocialButterflyMinAggregateInputType
+    _max?: BookmarkSocialButterflyMaxAggregateInputType
+  }
+
+  export type BookmarkSocialButterflyGroupByOutputType = {
+    id: string
+    eventId: string
+    userId: string
+    createdAt: Date
+    _count: BookmarkSocialButterflyCountAggregateOutputType | null
+    _min: BookmarkSocialButterflyMinAggregateOutputType | null
+    _max: BookmarkSocialButterflyMaxAggregateOutputType | null
+  }
+
+  type GetBookmarkSocialButterflyGroupByPayload<T extends BookmarkSocialButterflyGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<BookmarkSocialButterflyGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof BookmarkSocialButterflyGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], BookmarkSocialButterflyGroupByOutputType[P]>
+            : GetScalarType<T[P], BookmarkSocialButterflyGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type BookmarkSocialButterflySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkSocialButterfly"]>
+
+  export type BookmarkSocialButterflySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkSocialButterfly"]>
+
+  export type BookmarkSocialButterflySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["bookmarkSocialButterfly"]>
+
+  export type BookmarkSocialButterflySelectScalar = {
+    id?: boolean
+    eventId?: boolean
+    userId?: boolean
+    createdAt?: boolean
+  }
+
+  export type BookmarkSocialButterflyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "eventId" | "userId" | "createdAt", ExtArgs["result"]["bookmarkSocialButterfly"]>
+  export type BookmarkSocialButterflyInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+  export type BookmarkSocialButterflyIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+  export type BookmarkSocialButterflyIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | EventSocialButterflyDefaultArgs<ExtArgs>
+  }
+
+  export type $BookmarkSocialButterflyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "BookmarkSocialButterfly"
+    objects: {
+      user: Prisma.$UserSocialButterflyPayload<ExtArgs>
+      event: Prisma.$EventSocialButterflyPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      eventId: string
+      userId: string
+      createdAt: Date
+    }, ExtArgs["result"]["bookmarkSocialButterfly"]>
+    composites: {}
+  }
+
+  type BookmarkSocialButterflyGetPayload<S extends boolean | null | undefined | BookmarkSocialButterflyDefaultArgs> = $Result.GetResult<Prisma.$BookmarkSocialButterflyPayload, S>
+
+  type BookmarkSocialButterflyCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<BookmarkSocialButterflyFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: BookmarkSocialButterflyCountAggregateInputType | true
+    }
+
+  export interface BookmarkSocialButterflyDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['BookmarkSocialButterfly'], meta: { name: 'BookmarkSocialButterfly' } }
+    /**
+     * Find zero or one BookmarkSocialButterfly that matches the filter.
+     * @param {BookmarkSocialButterflyFindUniqueArgs} args - Arguments to find a BookmarkSocialButterfly
+     * @example
+     * // Get one BookmarkSocialButterfly
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends BookmarkSocialButterflyFindUniqueArgs>(args: SelectSubset<T, BookmarkSocialButterflyFindUniqueArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one BookmarkSocialButterfly that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {BookmarkSocialButterflyFindUniqueOrThrowArgs} args - Arguments to find a BookmarkSocialButterfly
+     * @example
+     * // Get one BookmarkSocialButterfly
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends BookmarkSocialButterflyFindUniqueOrThrowArgs>(args: SelectSubset<T, BookmarkSocialButterflyFindUniqueOrThrowArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first BookmarkSocialButterfly that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkSocialButterflyFindFirstArgs} args - Arguments to find a BookmarkSocialButterfly
+     * @example
+     * // Get one BookmarkSocialButterfly
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends BookmarkSocialButterflyFindFirstArgs>(args?: SelectSubset<T, BookmarkSocialButterflyFindFirstArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first BookmarkSocialButterfly that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkSocialButterflyFindFirstOrThrowArgs} args - Arguments to find a BookmarkSocialButterfly
+     * @example
+     * // Get one BookmarkSocialButterfly
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends BookmarkSocialButterflyFindFirstOrThrowArgs>(args?: SelectSubset<T, BookmarkSocialButterflyFindFirstOrThrowArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more BookmarkSocialButterflies that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkSocialButterflyFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all BookmarkSocialButterflies
+     * const bookmarkSocialButterflies = await prisma.bookmarkSocialButterfly.findMany()
+     * 
+     * // Get first 10 BookmarkSocialButterflies
+     * const bookmarkSocialButterflies = await prisma.bookmarkSocialButterfly.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const bookmarkSocialButterflyWithIdOnly = await prisma.bookmarkSocialButterfly.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends BookmarkSocialButterflyFindManyArgs>(args?: SelectSubset<T, BookmarkSocialButterflyFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a BookmarkSocialButterfly.
+     * @param {BookmarkSocialButterflyCreateArgs} args - Arguments to create a BookmarkSocialButterfly.
+     * @example
+     * // Create one BookmarkSocialButterfly
+     * const BookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.create({
+     *   data: {
+     *     // ... data to create a BookmarkSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    create<T extends BookmarkSocialButterflyCreateArgs>(args: SelectSubset<T, BookmarkSocialButterflyCreateArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many BookmarkSocialButterflies.
+     * @param {BookmarkSocialButterflyCreateManyArgs} args - Arguments to create many BookmarkSocialButterflies.
+     * @example
+     * // Create many BookmarkSocialButterflies
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends BookmarkSocialButterflyCreateManyArgs>(args?: SelectSubset<T, BookmarkSocialButterflyCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many BookmarkSocialButterflies and returns the data saved in the database.
+     * @param {BookmarkSocialButterflyCreateManyAndReturnArgs} args - Arguments to create many BookmarkSocialButterflies.
+     * @example
+     * // Create many BookmarkSocialButterflies
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many BookmarkSocialButterflies and only return the `id`
+     * const bookmarkSocialButterflyWithIdOnly = await prisma.bookmarkSocialButterfly.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends BookmarkSocialButterflyCreateManyAndReturnArgs>(args?: SelectSubset<T, BookmarkSocialButterflyCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a BookmarkSocialButterfly.
+     * @param {BookmarkSocialButterflyDeleteArgs} args - Arguments to delete one BookmarkSocialButterfly.
+     * @example
+     * // Delete one BookmarkSocialButterfly
+     * const BookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.delete({
+     *   where: {
+     *     // ... filter to delete one BookmarkSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    delete<T extends BookmarkSocialButterflyDeleteArgs>(args: SelectSubset<T, BookmarkSocialButterflyDeleteArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one BookmarkSocialButterfly.
+     * @param {BookmarkSocialButterflyUpdateArgs} args - Arguments to update one BookmarkSocialButterfly.
+     * @example
+     * // Update one BookmarkSocialButterfly
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends BookmarkSocialButterflyUpdateArgs>(args: SelectSubset<T, BookmarkSocialButterflyUpdateArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more BookmarkSocialButterflies.
+     * @param {BookmarkSocialButterflyDeleteManyArgs} args - Arguments to filter BookmarkSocialButterflies to delete.
+     * @example
+     * // Delete a few BookmarkSocialButterflies
+     * const { count } = await prisma.bookmarkSocialButterfly.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends BookmarkSocialButterflyDeleteManyArgs>(args?: SelectSubset<T, BookmarkSocialButterflyDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more BookmarkSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkSocialButterflyUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many BookmarkSocialButterflies
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends BookmarkSocialButterflyUpdateManyArgs>(args: SelectSubset<T, BookmarkSocialButterflyUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more BookmarkSocialButterflies and returns the data updated in the database.
+     * @param {BookmarkSocialButterflyUpdateManyAndReturnArgs} args - Arguments to update many BookmarkSocialButterflies.
+     * @example
+     * // Update many BookmarkSocialButterflies
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more BookmarkSocialButterflies and only return the `id`
+     * const bookmarkSocialButterflyWithIdOnly = await prisma.bookmarkSocialButterfly.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends BookmarkSocialButterflyUpdateManyAndReturnArgs>(args: SelectSubset<T, BookmarkSocialButterflyUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one BookmarkSocialButterfly.
+     * @param {BookmarkSocialButterflyUpsertArgs} args - Arguments to update or create a BookmarkSocialButterfly.
+     * @example
+     * // Update or create a BookmarkSocialButterfly
+     * const bookmarkSocialButterfly = await prisma.bookmarkSocialButterfly.upsert({
+     *   create: {
+     *     // ... data to create a BookmarkSocialButterfly
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the BookmarkSocialButterfly we want to update
+     *   }
+     * })
+     */
+    upsert<T extends BookmarkSocialButterflyUpsertArgs>(args: SelectSubset<T, BookmarkSocialButterflyUpsertArgs<ExtArgs>>): Prisma__BookmarkSocialButterflyClient<$Result.GetResult<Prisma.$BookmarkSocialButterflyPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of BookmarkSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkSocialButterflyCountArgs} args - Arguments to filter BookmarkSocialButterflies to count.
+     * @example
+     * // Count the number of BookmarkSocialButterflies
+     * const count = await prisma.bookmarkSocialButterfly.count({
+     *   where: {
+     *     // ... the filter for the BookmarkSocialButterflies we want to count
+     *   }
+     * })
+    **/
+    count<T extends BookmarkSocialButterflyCountArgs>(
+      args?: Subset<T, BookmarkSocialButterflyCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], BookmarkSocialButterflyCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a BookmarkSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkSocialButterflyAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends BookmarkSocialButterflyAggregateArgs>(args: Subset<T, BookmarkSocialButterflyAggregateArgs>): Prisma.PrismaPromise<GetBookmarkSocialButterflyAggregateType<T>>
+
+    /**
+     * Group by BookmarkSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {BookmarkSocialButterflyGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends BookmarkSocialButterflyGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: BookmarkSocialButterflyGroupByArgs['orderBy'] }
+        : { orderBy?: BookmarkSocialButterflyGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, BookmarkSocialButterflyGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBookmarkSocialButterflyGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the BookmarkSocialButterfly model
+   */
+  readonly fields: BookmarkSocialButterflyFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for BookmarkSocialButterfly.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__BookmarkSocialButterflyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterflyDefaultArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    event<T extends EventSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, EventSocialButterflyDefaultArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the BookmarkSocialButterfly model
+   */ 
+  interface BookmarkSocialButterflyFieldRefs {
+    readonly id: FieldRef<"BookmarkSocialButterfly", 'String'>
+    readonly eventId: FieldRef<"BookmarkSocialButterfly", 'String'>
+    readonly userId: FieldRef<"BookmarkSocialButterfly", 'String'>
+    readonly createdAt: FieldRef<"BookmarkSocialButterfly", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * BookmarkSocialButterfly findUnique
+   */
+  export type BookmarkSocialButterflyFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkSocialButterfly to fetch.
+     */
+    where: BookmarkSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * BookmarkSocialButterfly findUniqueOrThrow
+   */
+  export type BookmarkSocialButterflyFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkSocialButterfly to fetch.
+     */
+    where: BookmarkSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * BookmarkSocialButterfly findFirst
+   */
+  export type BookmarkSocialButterflyFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkSocialButterfly to fetch.
+     */
+    where?: BookmarkSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkSocialButterflies to fetch.
+     */
+    orderBy?: BookmarkSocialButterflyOrderByWithRelationInput | BookmarkSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for BookmarkSocialButterflies.
+     */
+    cursor?: BookmarkSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of BookmarkSocialButterflies.
+     */
+    distinct?: BookmarkSocialButterflyScalarFieldEnum | BookmarkSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * BookmarkSocialButterfly findFirstOrThrow
+   */
+  export type BookmarkSocialButterflyFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkSocialButterfly to fetch.
+     */
+    where?: BookmarkSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkSocialButterflies to fetch.
+     */
+    orderBy?: BookmarkSocialButterflyOrderByWithRelationInput | BookmarkSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for BookmarkSocialButterflies.
+     */
+    cursor?: BookmarkSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of BookmarkSocialButterflies.
+     */
+    distinct?: BookmarkSocialButterflyScalarFieldEnum | BookmarkSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * BookmarkSocialButterfly findMany
+   */
+  export type BookmarkSocialButterflyFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which BookmarkSocialButterflies to fetch.
+     */
+    where?: BookmarkSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of BookmarkSocialButterflies to fetch.
+     */
+    orderBy?: BookmarkSocialButterflyOrderByWithRelationInput | BookmarkSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing BookmarkSocialButterflies.
+     */
+    cursor?: BookmarkSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` BookmarkSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` BookmarkSocialButterflies.
+     */
+    skip?: number
+    distinct?: BookmarkSocialButterflyScalarFieldEnum | BookmarkSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * BookmarkSocialButterfly create
+   */
+  export type BookmarkSocialButterflyCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to create a BookmarkSocialButterfly.
+     */
+    data: XOR<BookmarkSocialButterflyCreateInput, BookmarkSocialButterflyUncheckedCreateInput>
+  }
+
+  /**
+   * BookmarkSocialButterfly createMany
+   */
+  export type BookmarkSocialButterflyCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many BookmarkSocialButterflies.
+     */
+    data: BookmarkSocialButterflyCreateManyInput | BookmarkSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * BookmarkSocialButterfly createManyAndReturn
+   */
+  export type BookmarkSocialButterflyCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to create many BookmarkSocialButterflies.
+     */
+    data: BookmarkSocialButterflyCreateManyInput | BookmarkSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * BookmarkSocialButterfly update
+   */
+  export type BookmarkSocialButterflyUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to update a BookmarkSocialButterfly.
+     */
+    data: XOR<BookmarkSocialButterflyUpdateInput, BookmarkSocialButterflyUncheckedUpdateInput>
+    /**
+     * Choose, which BookmarkSocialButterfly to update.
+     */
+    where: BookmarkSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * BookmarkSocialButterfly updateMany
+   */
+  export type BookmarkSocialButterflyUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update BookmarkSocialButterflies.
+     */
+    data: XOR<BookmarkSocialButterflyUpdateManyMutationInput, BookmarkSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which BookmarkSocialButterflies to update
+     */
+    where?: BookmarkSocialButterflyWhereInput
+    /**
+     * Limit how many BookmarkSocialButterflies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * BookmarkSocialButterfly updateManyAndReturn
+   */
+  export type BookmarkSocialButterflyUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to update BookmarkSocialButterflies.
+     */
+    data: XOR<BookmarkSocialButterflyUpdateManyMutationInput, BookmarkSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which BookmarkSocialButterflies to update
+     */
+    where?: BookmarkSocialButterflyWhereInput
+    /**
+     * Limit how many BookmarkSocialButterflies to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * BookmarkSocialButterfly upsert
+   */
+  export type BookmarkSocialButterflyUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The filter to search for the BookmarkSocialButterfly to update in case it exists.
+     */
+    where: BookmarkSocialButterflyWhereUniqueInput
+    /**
+     * In case the BookmarkSocialButterfly found by the `where` argument doesn't exist, create a new BookmarkSocialButterfly with this data.
+     */
+    create: XOR<BookmarkSocialButterflyCreateInput, BookmarkSocialButterflyUncheckedCreateInput>
+    /**
+     * In case the BookmarkSocialButterfly was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<BookmarkSocialButterflyUpdateInput, BookmarkSocialButterflyUncheckedUpdateInput>
+  }
+
+  /**
+   * BookmarkSocialButterfly delete
+   */
+  export type BookmarkSocialButterflyDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter which BookmarkSocialButterfly to delete.
+     */
+    where: BookmarkSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * BookmarkSocialButterfly deleteMany
+   */
+  export type BookmarkSocialButterflyDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which BookmarkSocialButterflies to delete
+     */
+    where?: BookmarkSocialButterflyWhereInput
+    /**
+     * Limit how many BookmarkSocialButterflies to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * BookmarkSocialButterfly without action
+   */
+  export type BookmarkSocialButterflyDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the BookmarkSocialButterfly
+     */
+    select?: BookmarkSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the BookmarkSocialButterfly
+     */
+    omit?: BookmarkSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: BookmarkSocialButterflyInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ReportSocialButterfly
+   */
+
+  export type AggregateReportSocialButterfly = {
+    _count: ReportSocialButterflyCountAggregateOutputType | null
+    _min: ReportSocialButterflyMinAggregateOutputType | null
+    _max: ReportSocialButterflyMaxAggregateOutputType | null
+  }
+
+  export type ReportSocialButterflyMinAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    reviewId: string | null
+    userId: string | null
+    reason: string | null
+    createdAt: Date | null
+  }
+
+  export type ReportSocialButterflyMaxAggregateOutputType = {
+    id: string | null
+    eventId: string | null
+    reviewId: string | null
+    userId: string | null
+    reason: string | null
+    createdAt: Date | null
+  }
+
+  export type ReportSocialButterflyCountAggregateOutputType = {
+    id: number
+    eventId: number
+    reviewId: number
+    userId: number
+    reason: number
+    createdAt: number
+    _all: number
+  }
+
+
+  export type ReportSocialButterflyMinAggregateInputType = {
+    id?: true
+    eventId?: true
+    reviewId?: true
+    userId?: true
+    reason?: true
+    createdAt?: true
+  }
+
+  export type ReportSocialButterflyMaxAggregateInputType = {
+    id?: true
+    eventId?: true
+    reviewId?: true
+    userId?: true
+    reason?: true
+    createdAt?: true
+  }
+
+  export type ReportSocialButterflyCountAggregateInputType = {
+    id?: true
+    eventId?: true
+    reviewId?: true
+    userId?: true
+    reason?: true
+    createdAt?: true
+    _all?: true
+  }
+
+  export type ReportSocialButterflyAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReportSocialButterfly to aggregate.
+     */
+    where?: ReportSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportSocialButterflies to fetch.
+     */
+    orderBy?: ReportSocialButterflyOrderByWithRelationInput | ReportSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ReportSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ReportSocialButterflies
+    **/
+    _count?: true | ReportSocialButterflyCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ReportSocialButterflyMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ReportSocialButterflyMaxAggregateInputType
+  }
+
+  export type GetReportSocialButterflyAggregateType<T extends ReportSocialButterflyAggregateArgs> = {
+        [P in keyof T & keyof AggregateReportSocialButterfly]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateReportSocialButterfly[P]>
+      : GetScalarType<T[P], AggregateReportSocialButterfly[P]>
+  }
+
+
+
+
+  export type ReportSocialButterflyGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ReportSocialButterflyWhereInput
+    orderBy?: ReportSocialButterflyOrderByWithAggregationInput | ReportSocialButterflyOrderByWithAggregationInput[]
+    by: ReportSocialButterflyScalarFieldEnum[] | ReportSocialButterflyScalarFieldEnum
+    having?: ReportSocialButterflyScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ReportSocialButterflyCountAggregateInputType | true
+    _min?: ReportSocialButterflyMinAggregateInputType
+    _max?: ReportSocialButterflyMaxAggregateInputType
+  }
+
+  export type ReportSocialButterflyGroupByOutputType = {
+    id: string
+    eventId: string | null
+    reviewId: string | null
+    userId: string
+    reason: string
+    createdAt: Date
+    _count: ReportSocialButterflyCountAggregateOutputType | null
+    _min: ReportSocialButterflyMinAggregateOutputType | null
+    _max: ReportSocialButterflyMaxAggregateOutputType | null
+  }
+
+  type GetReportSocialButterflyGroupByPayload<T extends ReportSocialButterflyGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ReportSocialButterflyGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ReportSocialButterflyGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ReportSocialButterflyGroupByOutputType[P]>
+            : GetScalarType<T[P], ReportSocialButterflyGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ReportSocialButterflySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | ReportSocialButterfly$eventArgs<ExtArgs>
+    review?: boolean | ReportSocialButterfly$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportSocialButterfly"]>
+
+  export type ReportSocialButterflySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | ReportSocialButterfly$eventArgs<ExtArgs>
+    review?: boolean | ReportSocialButterfly$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportSocialButterfly"]>
+
+  export type ReportSocialButterflySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    eventId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | ReportSocialButterfly$eventArgs<ExtArgs>
+    review?: boolean | ReportSocialButterfly$reviewArgs<ExtArgs>
+  }, ExtArgs["result"]["reportSocialButterfly"]>
+
+  export type ReportSocialButterflySelectScalar = {
+    id?: boolean
+    eventId?: boolean
+    reviewId?: boolean
+    userId?: boolean
+    reason?: boolean
+    createdAt?: boolean
+  }
+
+  export type ReportSocialButterflyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "eventId" | "reviewId" | "userId" | "reason" | "createdAt", ExtArgs["result"]["reportSocialButterfly"]>
+  export type ReportSocialButterflyInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | ReportSocialButterfly$eventArgs<ExtArgs>
+    review?: boolean | ReportSocialButterfly$reviewArgs<ExtArgs>
+  }
+  export type ReportSocialButterflyIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | ReportSocialButterfly$eventArgs<ExtArgs>
+    review?: boolean | ReportSocialButterfly$reviewArgs<ExtArgs>
+  }
+  export type ReportSocialButterflyIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserSocialButterflyDefaultArgs<ExtArgs>
+    event?: boolean | ReportSocialButterfly$eventArgs<ExtArgs>
+    review?: boolean | ReportSocialButterfly$reviewArgs<ExtArgs>
+  }
+
+  export type $ReportSocialButterflyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ReportSocialButterfly"
+    objects: {
+      user: Prisma.$UserSocialButterflyPayload<ExtArgs>
+      event: Prisma.$EventSocialButterflyPayload<ExtArgs> | null
+      review: Prisma.$ReviewSocialButterflyPayload<ExtArgs> | null
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      eventId: string | null
+      reviewId: string | null
+      userId: string
+      reason: string
+      createdAt: Date
+    }, ExtArgs["result"]["reportSocialButterfly"]>
+    composites: {}
+  }
+
+  type ReportSocialButterflyGetPayload<S extends boolean | null | undefined | ReportSocialButterflyDefaultArgs> = $Result.GetResult<Prisma.$ReportSocialButterflyPayload, S>
+
+  type ReportSocialButterflyCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ReportSocialButterflyFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ReportSocialButterflyCountAggregateInputType | true
+    }
+
+  export interface ReportSocialButterflyDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ReportSocialButterfly'], meta: { name: 'ReportSocialButterfly' } }
+    /**
+     * Find zero or one ReportSocialButterfly that matches the filter.
+     * @param {ReportSocialButterflyFindUniqueArgs} args - Arguments to find a ReportSocialButterfly
+     * @example
+     * // Get one ReportSocialButterfly
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ReportSocialButterflyFindUniqueArgs>(args: SelectSubset<T, ReportSocialButterflyFindUniqueArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ReportSocialButterfly that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ReportSocialButterflyFindUniqueOrThrowArgs} args - Arguments to find a ReportSocialButterfly
+     * @example
+     * // Get one ReportSocialButterfly
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ReportSocialButterflyFindUniqueOrThrowArgs>(args: SelectSubset<T, ReportSocialButterflyFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReportSocialButterfly that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportSocialButterflyFindFirstArgs} args - Arguments to find a ReportSocialButterfly
+     * @example
+     * // Get one ReportSocialButterfly
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ReportSocialButterflyFindFirstArgs>(args?: SelectSubset<T, ReportSocialButterflyFindFirstArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ReportSocialButterfly that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportSocialButterflyFindFirstOrThrowArgs} args - Arguments to find a ReportSocialButterfly
+     * @example
+     * // Get one ReportSocialButterfly
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ReportSocialButterflyFindFirstOrThrowArgs>(args?: SelectSubset<T, ReportSocialButterflyFindFirstOrThrowArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ReportSocialButterflies that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportSocialButterflyFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ReportSocialButterflies
+     * const reportSocialButterflies = await prisma.reportSocialButterfly.findMany()
+     * 
+     * // Get first 10 ReportSocialButterflies
+     * const reportSocialButterflies = await prisma.reportSocialButterfly.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const reportSocialButterflyWithIdOnly = await prisma.reportSocialButterfly.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ReportSocialButterflyFindManyArgs>(args?: SelectSubset<T, ReportSocialButterflyFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ReportSocialButterfly.
+     * @param {ReportSocialButterflyCreateArgs} args - Arguments to create a ReportSocialButterfly.
+     * @example
+     * // Create one ReportSocialButterfly
+     * const ReportSocialButterfly = await prisma.reportSocialButterfly.create({
+     *   data: {
+     *     // ... data to create a ReportSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    create<T extends ReportSocialButterflyCreateArgs>(args: SelectSubset<T, ReportSocialButterflyCreateArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ReportSocialButterflies.
+     * @param {ReportSocialButterflyCreateManyArgs} args - Arguments to create many ReportSocialButterflies.
+     * @example
+     * // Create many ReportSocialButterflies
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ReportSocialButterflyCreateManyArgs>(args?: SelectSubset<T, ReportSocialButterflyCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ReportSocialButterflies and returns the data saved in the database.
+     * @param {ReportSocialButterflyCreateManyAndReturnArgs} args - Arguments to create many ReportSocialButterflies.
+     * @example
+     * // Create many ReportSocialButterflies
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ReportSocialButterflies and only return the `id`
+     * const reportSocialButterflyWithIdOnly = await prisma.reportSocialButterfly.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ReportSocialButterflyCreateManyAndReturnArgs>(args?: SelectSubset<T, ReportSocialButterflyCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ReportSocialButterfly.
+     * @param {ReportSocialButterflyDeleteArgs} args - Arguments to delete one ReportSocialButterfly.
+     * @example
+     * // Delete one ReportSocialButterfly
+     * const ReportSocialButterfly = await prisma.reportSocialButterfly.delete({
+     *   where: {
+     *     // ... filter to delete one ReportSocialButterfly
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ReportSocialButterflyDeleteArgs>(args: SelectSubset<T, ReportSocialButterflyDeleteArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ReportSocialButterfly.
+     * @param {ReportSocialButterflyUpdateArgs} args - Arguments to update one ReportSocialButterfly.
+     * @example
+     * // Update one ReportSocialButterfly
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ReportSocialButterflyUpdateArgs>(args: SelectSubset<T, ReportSocialButterflyUpdateArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ReportSocialButterflies.
+     * @param {ReportSocialButterflyDeleteManyArgs} args - Arguments to filter ReportSocialButterflies to delete.
+     * @example
+     * // Delete a few ReportSocialButterflies
+     * const { count } = await prisma.reportSocialButterfly.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ReportSocialButterflyDeleteManyArgs>(args?: SelectSubset<T, ReportSocialButterflyDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReportSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportSocialButterflyUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ReportSocialButterflies
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ReportSocialButterflyUpdateManyArgs>(args: SelectSubset<T, ReportSocialButterflyUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ReportSocialButterflies and returns the data updated in the database.
+     * @param {ReportSocialButterflyUpdateManyAndReturnArgs} args - Arguments to update many ReportSocialButterflies.
+     * @example
+     * // Update many ReportSocialButterflies
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ReportSocialButterflies and only return the `id`
+     * const reportSocialButterflyWithIdOnly = await prisma.reportSocialButterfly.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ReportSocialButterflyUpdateManyAndReturnArgs>(args: SelectSubset<T, ReportSocialButterflyUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ReportSocialButterfly.
+     * @param {ReportSocialButterflyUpsertArgs} args - Arguments to update or create a ReportSocialButterfly.
+     * @example
+     * // Update or create a ReportSocialButterfly
+     * const reportSocialButterfly = await prisma.reportSocialButterfly.upsert({
+     *   create: {
+     *     // ... data to create a ReportSocialButterfly
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ReportSocialButterfly we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ReportSocialButterflyUpsertArgs>(args: SelectSubset<T, ReportSocialButterflyUpsertArgs<ExtArgs>>): Prisma__ReportSocialButterflyClient<$Result.GetResult<Prisma.$ReportSocialButterflyPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ReportSocialButterflies.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportSocialButterflyCountArgs} args - Arguments to filter ReportSocialButterflies to count.
+     * @example
+     * // Count the number of ReportSocialButterflies
+     * const count = await prisma.reportSocialButterfly.count({
+     *   where: {
+     *     // ... the filter for the ReportSocialButterflies we want to count
+     *   }
+     * })
+    **/
+    count<T extends ReportSocialButterflyCountArgs>(
+      args?: Subset<T, ReportSocialButterflyCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ReportSocialButterflyCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ReportSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportSocialButterflyAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ReportSocialButterflyAggregateArgs>(args: Subset<T, ReportSocialButterflyAggregateArgs>): Prisma.PrismaPromise<GetReportSocialButterflyAggregateType<T>>
+
+    /**
+     * Group by ReportSocialButterfly.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ReportSocialButterflyGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ReportSocialButterflyGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ReportSocialButterflyGroupByArgs['orderBy'] }
+        : { orderBy?: ReportSocialButterflyGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ReportSocialButterflyGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetReportSocialButterflyGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ReportSocialButterfly model
+   */
+  readonly fields: ReportSocialButterflyFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ReportSocialButterfly.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ReportSocialButterflyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserSocialButterflyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserSocialButterflyDefaultArgs<ExtArgs>>): Prisma__UserSocialButterflyClient<$Result.GetResult<Prisma.$UserSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    event<T extends ReportSocialButterfly$eventArgs<ExtArgs> = {}>(args?: Subset<T, ReportSocialButterfly$eventArgs<ExtArgs>>): Prisma__EventSocialButterflyClient<$Result.GetResult<Prisma.$EventSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    review<T extends ReportSocialButterfly$reviewArgs<ExtArgs> = {}>(args?: Subset<T, ReportSocialButterfly$reviewArgs<ExtArgs>>): Prisma__ReviewSocialButterflyClient<$Result.GetResult<Prisma.$ReviewSocialButterflyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ReportSocialButterfly model
+   */ 
+  interface ReportSocialButterflyFieldRefs {
+    readonly id: FieldRef<"ReportSocialButterfly", 'String'>
+    readonly eventId: FieldRef<"ReportSocialButterfly", 'String'>
+    readonly reviewId: FieldRef<"ReportSocialButterfly", 'String'>
+    readonly userId: FieldRef<"ReportSocialButterfly", 'String'>
+    readonly reason: FieldRef<"ReportSocialButterfly", 'String'>
+    readonly createdAt: FieldRef<"ReportSocialButterfly", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ReportSocialButterfly findUnique
+   */
+  export type ReportSocialButterflyFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportSocialButterfly to fetch.
+     */
+    where: ReportSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReportSocialButterfly findUniqueOrThrow
+   */
+  export type ReportSocialButterflyFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportSocialButterfly to fetch.
+     */
+    where: ReportSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReportSocialButterfly findFirst
+   */
+  export type ReportSocialButterflyFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportSocialButterfly to fetch.
+     */
+    where?: ReportSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportSocialButterflies to fetch.
+     */
+    orderBy?: ReportSocialButterflyOrderByWithRelationInput | ReportSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReportSocialButterflies.
+     */
+    cursor?: ReportSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReportSocialButterflies.
+     */
+    distinct?: ReportSocialButterflyScalarFieldEnum | ReportSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * ReportSocialButterfly findFirstOrThrow
+   */
+  export type ReportSocialButterflyFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportSocialButterfly to fetch.
+     */
+    where?: ReportSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportSocialButterflies to fetch.
+     */
+    orderBy?: ReportSocialButterflyOrderByWithRelationInput | ReportSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ReportSocialButterflies.
+     */
+    cursor?: ReportSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportSocialButterflies.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ReportSocialButterflies.
+     */
+    distinct?: ReportSocialButterflyScalarFieldEnum | ReportSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * ReportSocialButterfly findMany
+   */
+  export type ReportSocialButterflyFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter, which ReportSocialButterflies to fetch.
+     */
+    where?: ReportSocialButterflyWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ReportSocialButterflies to fetch.
+     */
+    orderBy?: ReportSocialButterflyOrderByWithRelationInput | ReportSocialButterflyOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ReportSocialButterflies.
+     */
+    cursor?: ReportSocialButterflyWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ReportSocialButterflies from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ReportSocialButterflies.
+     */
+    skip?: number
+    distinct?: ReportSocialButterflyScalarFieldEnum | ReportSocialButterflyScalarFieldEnum[]
+  }
+
+  /**
+   * ReportSocialButterfly create
+   */
+  export type ReportSocialButterflyCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ReportSocialButterfly.
+     */
+    data: XOR<ReportSocialButterflyCreateInput, ReportSocialButterflyUncheckedCreateInput>
+  }
+
+  /**
+   * ReportSocialButterfly createMany
+   */
+  export type ReportSocialButterflyCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ReportSocialButterflies.
+     */
+    data: ReportSocialButterflyCreateManyInput | ReportSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ReportSocialButterfly createManyAndReturn
+   */
+  export type ReportSocialButterflyCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to create many ReportSocialButterflies.
+     */
+    data: ReportSocialButterflyCreateManyInput | ReportSocialButterflyCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReportSocialButterfly update
+   */
+  export type ReportSocialButterflyUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ReportSocialButterfly.
+     */
+    data: XOR<ReportSocialButterflyUpdateInput, ReportSocialButterflyUncheckedUpdateInput>
+    /**
+     * Choose, which ReportSocialButterfly to update.
+     */
+    where: ReportSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReportSocialButterfly updateMany
+   */
+  export type ReportSocialButterflyUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ReportSocialButterflies.
+     */
+    data: XOR<ReportSocialButterflyUpdateManyMutationInput, ReportSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which ReportSocialButterflies to update
+     */
+    where?: ReportSocialButterflyWhereInput
+    /**
+     * Limit how many ReportSocialButterflies to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReportSocialButterfly updateManyAndReturn
+   */
+  export type ReportSocialButterflyUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * The data used to update ReportSocialButterflies.
+     */
+    data: XOR<ReportSocialButterflyUpdateManyMutationInput, ReportSocialButterflyUncheckedUpdateManyInput>
+    /**
+     * Filter which ReportSocialButterflies to update
+     */
+    where?: ReportSocialButterflyWhereInput
+    /**
+     * Limit how many ReportSocialButterflies to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ReportSocialButterfly upsert
+   */
+  export type ReportSocialButterflyUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ReportSocialButterfly to update in case it exists.
+     */
+    where: ReportSocialButterflyWhereUniqueInput
+    /**
+     * In case the ReportSocialButterfly found by the `where` argument doesn't exist, create a new ReportSocialButterfly with this data.
+     */
+    create: XOR<ReportSocialButterflyCreateInput, ReportSocialButterflyUncheckedCreateInput>
+    /**
+     * In case the ReportSocialButterfly was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ReportSocialButterflyUpdateInput, ReportSocialButterflyUncheckedUpdateInput>
+  }
+
+  /**
+   * ReportSocialButterfly delete
+   */
+  export type ReportSocialButterflyDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+    /**
+     * Filter which ReportSocialButterfly to delete.
+     */
+    where: ReportSocialButterflyWhereUniqueInput
+  }
+
+  /**
+   * ReportSocialButterfly deleteMany
+   */
+  export type ReportSocialButterflyDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ReportSocialButterflies to delete
+     */
+    where?: ReportSocialButterflyWhereInput
+    /**
+     * Limit how many ReportSocialButterflies to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ReportSocialButterfly.event
+   */
+  export type ReportSocialButterfly$eventArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EventSocialButterfly
+     */
+    select?: EventSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EventSocialButterfly
+     */
+    omit?: EventSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EventSocialButterflyInclude<ExtArgs> | null
+    where?: EventSocialButterflyWhereInput
+  }
+
+  /**
+   * ReportSocialButterfly.review
+   */
+  export type ReportSocialButterfly$reviewArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReviewSocialButterfly
+     */
+    select?: ReviewSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReviewSocialButterfly
+     */
+    omit?: ReviewSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReviewSocialButterflyInclude<ExtArgs> | null
+    where?: ReviewSocialButterflyWhereInput
+  }
+
+  /**
+   * ReportSocialButterfly without action
+   */
+  export type ReportSocialButterflyDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ReportSocialButterfly
+     */
+    select?: ReportSocialButterflySelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ReportSocialButterfly
+     */
+    omit?: ReportSocialButterflyOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ReportSocialButterflyInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -26492,6 +33987,77 @@ export namespace Prisma {
   };
 
   export type ReviewMusicLoverScalarFieldEnum = (typeof ReviewMusicLoverScalarFieldEnum)[keyof typeof ReviewMusicLoverScalarFieldEnum]
+
+
+  export const UserSocialButterflyScalarFieldEnum: {
+    id: 'id',
+    email: 'email',
+    name: 'name',
+    password: 'password',
+    createdAt: 'createdAt'
+  };
+
+  export type UserSocialButterflyScalarFieldEnum = (typeof UserSocialButterflyScalarFieldEnum)[keyof typeof UserSocialButterflyScalarFieldEnum]
+
+
+  export const EventSocialButterflyScalarFieldEnum: {
+    id: 'id',
+    title: 'title',
+    description: 'description',
+    date: 'date',
+    location: 'location',
+    category: 'category',
+    submittedBy: 'submittedBy',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type EventSocialButterflyScalarFieldEnum = (typeof EventSocialButterflyScalarFieldEnum)[keyof typeof EventSocialButterflyScalarFieldEnum]
+
+
+  export const ReviewSocialButterflyScalarFieldEnum: {
+    id: 'id',
+    eventId: 'eventId',
+    userId: 'userId',
+    rating: 'rating',
+    comment: 'comment',
+    validated: 'validated',
+    createdAt: 'createdAt'
+  };
+
+  export type ReviewSocialButterflyScalarFieldEnum = (typeof ReviewSocialButterflyScalarFieldEnum)[keyof typeof ReviewSocialButterflyScalarFieldEnum]
+
+
+  export const LikeSocialButterflyScalarFieldEnum: {
+    id: 'id',
+    eventId: 'eventId',
+    userId: 'userId',
+    createdAt: 'createdAt'
+  };
+
+  export type LikeSocialButterflyScalarFieldEnum = (typeof LikeSocialButterflyScalarFieldEnum)[keyof typeof LikeSocialButterflyScalarFieldEnum]
+
+
+  export const BookmarkSocialButterflyScalarFieldEnum: {
+    id: 'id',
+    eventId: 'eventId',
+    userId: 'userId',
+    createdAt: 'createdAt'
+  };
+
+  export type BookmarkSocialButterflyScalarFieldEnum = (typeof BookmarkSocialButterflyScalarFieldEnum)[keyof typeof BookmarkSocialButterflyScalarFieldEnum]
+
+
+  export const ReportSocialButterflyScalarFieldEnum: {
+    id: 'id',
+    eventId: 'eventId',
+    reviewId: 'reviewId',
+    userId: 'userId',
+    reason: 'reason',
+    createdAt: 'createdAt'
+  };
+
+  export type ReportSocialButterflyScalarFieldEnum = (typeof ReportSocialButterflyScalarFieldEnum)[keyof typeof ReportSocialButterflyScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -27945,6 +35511,407 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"ReviewMusicLover"> | Date | string
   }
 
+  export type UserSocialButterflyWhereInput = {
+    AND?: UserSocialButterflyWhereInput | UserSocialButterflyWhereInput[]
+    OR?: UserSocialButterflyWhereInput[]
+    NOT?: UserSocialButterflyWhereInput | UserSocialButterflyWhereInput[]
+    id?: StringFilter<"UserSocialButterfly"> | string
+    email?: StringFilter<"UserSocialButterfly"> | string
+    name?: StringFilter<"UserSocialButterfly"> | string
+    password?: StringFilter<"UserSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"UserSocialButterfly"> | Date | string
+    events?: EventSocialButterflyListRelationFilter
+    reviews?: ReviewSocialButterflyListRelationFilter
+    likes?: LikeSocialButterflyListRelationFilter
+    bookmarks?: BookmarkSocialButterflyListRelationFilter
+    reports?: ReportSocialButterflyListRelationFilter
+  }
+
+  export type UserSocialButterflyOrderByWithRelationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    events?: EventSocialButterflyOrderByRelationAggregateInput
+    reviews?: ReviewSocialButterflyOrderByRelationAggregateInput
+    likes?: LikeSocialButterflyOrderByRelationAggregateInput
+    bookmarks?: BookmarkSocialButterflyOrderByRelationAggregateInput
+    reports?: ReportSocialButterflyOrderByRelationAggregateInput
+  }
+
+  export type UserSocialButterflyWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    email?: string
+    AND?: UserSocialButterflyWhereInput | UserSocialButterflyWhereInput[]
+    OR?: UserSocialButterflyWhereInput[]
+    NOT?: UserSocialButterflyWhereInput | UserSocialButterflyWhereInput[]
+    name?: StringFilter<"UserSocialButterfly"> | string
+    password?: StringFilter<"UserSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"UserSocialButterfly"> | Date | string
+    events?: EventSocialButterflyListRelationFilter
+    reviews?: ReviewSocialButterflyListRelationFilter
+    likes?: LikeSocialButterflyListRelationFilter
+    bookmarks?: BookmarkSocialButterflyListRelationFilter
+    reports?: ReportSocialButterflyListRelationFilter
+  }, "id" | "email">
+
+  export type UserSocialButterflyOrderByWithAggregationInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+    _count?: UserSocialButterflyCountOrderByAggregateInput
+    _max?: UserSocialButterflyMaxOrderByAggregateInput
+    _min?: UserSocialButterflyMinOrderByAggregateInput
+  }
+
+  export type UserSocialButterflyScalarWhereWithAggregatesInput = {
+    AND?: UserSocialButterflyScalarWhereWithAggregatesInput | UserSocialButterflyScalarWhereWithAggregatesInput[]
+    OR?: UserSocialButterflyScalarWhereWithAggregatesInput[]
+    NOT?: UserSocialButterflyScalarWhereWithAggregatesInput | UserSocialButterflyScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"UserSocialButterfly"> | string
+    email?: StringWithAggregatesFilter<"UserSocialButterfly"> | string
+    name?: StringWithAggregatesFilter<"UserSocialButterfly"> | string
+    password?: StringWithAggregatesFilter<"UserSocialButterfly"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"UserSocialButterfly"> | Date | string
+  }
+
+  export type EventSocialButterflyWhereInput = {
+    AND?: EventSocialButterflyWhereInput | EventSocialButterflyWhereInput[]
+    OR?: EventSocialButterflyWhereInput[]
+    NOT?: EventSocialButterflyWhereInput | EventSocialButterflyWhereInput[]
+    id?: StringFilter<"EventSocialButterfly"> | string
+    title?: StringFilter<"EventSocialButterfly"> | string
+    description?: StringFilter<"EventSocialButterfly"> | string
+    date?: DateTimeFilter<"EventSocialButterfly"> | Date | string
+    location?: StringFilter<"EventSocialButterfly"> | string
+    category?: StringFilter<"EventSocialButterfly"> | string
+    submittedBy?: StringFilter<"EventSocialButterfly"> | string
+    validated?: BoolFilter<"EventSocialButterfly"> | boolean
+    createdAt?: DateTimeFilter<"EventSocialButterfly"> | Date | string
+    owner?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    reviews?: ReviewSocialButterflyListRelationFilter
+    bookmarks?: BookmarkSocialButterflyListRelationFilter
+    likes?: LikeSocialButterflyListRelationFilter
+    reports?: ReportSocialButterflyListRelationFilter
+  }
+
+  export type EventSocialButterflyOrderByWithRelationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    category?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    owner?: UserSocialButterflyOrderByWithRelationInput
+    reviews?: ReviewSocialButterflyOrderByRelationAggregateInput
+    bookmarks?: BookmarkSocialButterflyOrderByRelationAggregateInput
+    likes?: LikeSocialButterflyOrderByRelationAggregateInput
+    reports?: ReportSocialButterflyOrderByRelationAggregateInput
+  }
+
+  export type EventSocialButterflyWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: EventSocialButterflyWhereInput | EventSocialButterflyWhereInput[]
+    OR?: EventSocialButterflyWhereInput[]
+    NOT?: EventSocialButterflyWhereInput | EventSocialButterflyWhereInput[]
+    title?: StringFilter<"EventSocialButterfly"> | string
+    description?: StringFilter<"EventSocialButterfly"> | string
+    date?: DateTimeFilter<"EventSocialButterfly"> | Date | string
+    location?: StringFilter<"EventSocialButterfly"> | string
+    category?: StringFilter<"EventSocialButterfly"> | string
+    submittedBy?: StringFilter<"EventSocialButterfly"> | string
+    validated?: BoolFilter<"EventSocialButterfly"> | boolean
+    createdAt?: DateTimeFilter<"EventSocialButterfly"> | Date | string
+    owner?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    reviews?: ReviewSocialButterflyListRelationFilter
+    bookmarks?: BookmarkSocialButterflyListRelationFilter
+    likes?: LikeSocialButterflyListRelationFilter
+    reports?: ReportSocialButterflyListRelationFilter
+  }, "id">
+
+  export type EventSocialButterflyOrderByWithAggregationInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    category?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: EventSocialButterflyCountOrderByAggregateInput
+    _max?: EventSocialButterflyMaxOrderByAggregateInput
+    _min?: EventSocialButterflyMinOrderByAggregateInput
+  }
+
+  export type EventSocialButterflyScalarWhereWithAggregatesInput = {
+    AND?: EventSocialButterflyScalarWhereWithAggregatesInput | EventSocialButterflyScalarWhereWithAggregatesInput[]
+    OR?: EventSocialButterflyScalarWhereWithAggregatesInput[]
+    NOT?: EventSocialButterflyScalarWhereWithAggregatesInput | EventSocialButterflyScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"EventSocialButterfly"> | string
+    title?: StringWithAggregatesFilter<"EventSocialButterfly"> | string
+    description?: StringWithAggregatesFilter<"EventSocialButterfly"> | string
+    date?: DateTimeWithAggregatesFilter<"EventSocialButterfly"> | Date | string
+    location?: StringWithAggregatesFilter<"EventSocialButterfly"> | string
+    category?: StringWithAggregatesFilter<"EventSocialButterfly"> | string
+    submittedBy?: StringWithAggregatesFilter<"EventSocialButterfly"> | string
+    validated?: BoolWithAggregatesFilter<"EventSocialButterfly"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"EventSocialButterfly"> | Date | string
+  }
+
+  export type ReviewSocialButterflyWhereInput = {
+    AND?: ReviewSocialButterflyWhereInput | ReviewSocialButterflyWhereInput[]
+    OR?: ReviewSocialButterflyWhereInput[]
+    NOT?: ReviewSocialButterflyWhereInput | ReviewSocialButterflyWhereInput[]
+    id?: StringFilter<"ReviewSocialButterfly"> | string
+    eventId?: StringFilter<"ReviewSocialButterfly"> | string
+    userId?: StringFilter<"ReviewSocialButterfly"> | string
+    rating?: IntFilter<"ReviewSocialButterfly"> | number
+    comment?: StringFilter<"ReviewSocialButterfly"> | string
+    validated?: BoolFilter<"ReviewSocialButterfly"> | boolean
+    createdAt?: DateTimeFilter<"ReviewSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyScalarRelationFilter, EventSocialButterflyWhereInput>
+    reports?: ReportSocialButterflyListRelationFilter
+  }
+
+  export type ReviewSocialButterflyOrderByWithRelationInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    user?: UserSocialButterflyOrderByWithRelationInput
+    event?: EventSocialButterflyOrderByWithRelationInput
+    reports?: ReportSocialButterflyOrderByRelationAggregateInput
+  }
+
+  export type ReviewSocialButterflyWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ReviewSocialButterflyWhereInput | ReviewSocialButterflyWhereInput[]
+    OR?: ReviewSocialButterflyWhereInput[]
+    NOT?: ReviewSocialButterflyWhereInput | ReviewSocialButterflyWhereInput[]
+    eventId?: StringFilter<"ReviewSocialButterfly"> | string
+    userId?: StringFilter<"ReviewSocialButterfly"> | string
+    rating?: IntFilter<"ReviewSocialButterfly"> | number
+    comment?: StringFilter<"ReviewSocialButterfly"> | string
+    validated?: BoolFilter<"ReviewSocialButterfly"> | boolean
+    createdAt?: DateTimeFilter<"ReviewSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyScalarRelationFilter, EventSocialButterflyWhereInput>
+    reports?: ReportSocialButterflyListRelationFilter
+  }, "id">
+
+  export type ReviewSocialButterflyOrderByWithAggregationInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+    _count?: ReviewSocialButterflyCountOrderByAggregateInput
+    _avg?: ReviewSocialButterflyAvgOrderByAggregateInput
+    _max?: ReviewSocialButterflyMaxOrderByAggregateInput
+    _min?: ReviewSocialButterflyMinOrderByAggregateInput
+    _sum?: ReviewSocialButterflySumOrderByAggregateInput
+  }
+
+  export type ReviewSocialButterflyScalarWhereWithAggregatesInput = {
+    AND?: ReviewSocialButterflyScalarWhereWithAggregatesInput | ReviewSocialButterflyScalarWhereWithAggregatesInput[]
+    OR?: ReviewSocialButterflyScalarWhereWithAggregatesInput[]
+    NOT?: ReviewSocialButterflyScalarWhereWithAggregatesInput | ReviewSocialButterflyScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReviewSocialButterfly"> | string
+    eventId?: StringWithAggregatesFilter<"ReviewSocialButterfly"> | string
+    userId?: StringWithAggregatesFilter<"ReviewSocialButterfly"> | string
+    rating?: IntWithAggregatesFilter<"ReviewSocialButterfly"> | number
+    comment?: StringWithAggregatesFilter<"ReviewSocialButterfly"> | string
+    validated?: BoolWithAggregatesFilter<"ReviewSocialButterfly"> | boolean
+    createdAt?: DateTimeWithAggregatesFilter<"ReviewSocialButterfly"> | Date | string
+  }
+
+  export type LikeSocialButterflyWhereInput = {
+    AND?: LikeSocialButterflyWhereInput | LikeSocialButterflyWhereInput[]
+    OR?: LikeSocialButterflyWhereInput[]
+    NOT?: LikeSocialButterflyWhereInput | LikeSocialButterflyWhereInput[]
+    id?: StringFilter<"LikeSocialButterfly"> | string
+    eventId?: StringFilter<"LikeSocialButterfly"> | string
+    userId?: StringFilter<"LikeSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"LikeSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyScalarRelationFilter, EventSocialButterflyWhereInput>
+  }
+
+  export type LikeSocialButterflyOrderByWithRelationInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    user?: UserSocialButterflyOrderByWithRelationInput
+    event?: EventSocialButterflyOrderByWithRelationInput
+  }
+
+  export type LikeSocialButterflyWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    eventId_userId?: LikeSocialButterflyEventIdUserIdCompoundUniqueInput
+    AND?: LikeSocialButterflyWhereInput | LikeSocialButterflyWhereInput[]
+    OR?: LikeSocialButterflyWhereInput[]
+    NOT?: LikeSocialButterflyWhereInput | LikeSocialButterflyWhereInput[]
+    eventId?: StringFilter<"LikeSocialButterfly"> | string
+    userId?: StringFilter<"LikeSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"LikeSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyScalarRelationFilter, EventSocialButterflyWhereInput>
+  }, "id" | "eventId_userId">
+
+  export type LikeSocialButterflyOrderByWithAggregationInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    _count?: LikeSocialButterflyCountOrderByAggregateInput
+    _max?: LikeSocialButterflyMaxOrderByAggregateInput
+    _min?: LikeSocialButterflyMinOrderByAggregateInput
+  }
+
+  export type LikeSocialButterflyScalarWhereWithAggregatesInput = {
+    AND?: LikeSocialButterflyScalarWhereWithAggregatesInput | LikeSocialButterflyScalarWhereWithAggregatesInput[]
+    OR?: LikeSocialButterflyScalarWhereWithAggregatesInput[]
+    NOT?: LikeSocialButterflyScalarWhereWithAggregatesInput | LikeSocialButterflyScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"LikeSocialButterfly"> | string
+    eventId?: StringWithAggregatesFilter<"LikeSocialButterfly"> | string
+    userId?: StringWithAggregatesFilter<"LikeSocialButterfly"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"LikeSocialButterfly"> | Date | string
+  }
+
+  export type BookmarkSocialButterflyWhereInput = {
+    AND?: BookmarkSocialButterflyWhereInput | BookmarkSocialButterflyWhereInput[]
+    OR?: BookmarkSocialButterflyWhereInput[]
+    NOT?: BookmarkSocialButterflyWhereInput | BookmarkSocialButterflyWhereInput[]
+    id?: StringFilter<"BookmarkSocialButterfly"> | string
+    eventId?: StringFilter<"BookmarkSocialButterfly"> | string
+    userId?: StringFilter<"BookmarkSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"BookmarkSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyScalarRelationFilter, EventSocialButterflyWhereInput>
+  }
+
+  export type BookmarkSocialButterflyOrderByWithRelationInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    user?: UserSocialButterflyOrderByWithRelationInput
+    event?: EventSocialButterflyOrderByWithRelationInput
+  }
+
+  export type BookmarkSocialButterflyWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    eventId_userId?: BookmarkSocialButterflyEventIdUserIdCompoundUniqueInput
+    AND?: BookmarkSocialButterflyWhereInput | BookmarkSocialButterflyWhereInput[]
+    OR?: BookmarkSocialButterflyWhereInput[]
+    NOT?: BookmarkSocialButterflyWhereInput | BookmarkSocialButterflyWhereInput[]
+    eventId?: StringFilter<"BookmarkSocialButterfly"> | string
+    userId?: StringFilter<"BookmarkSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"BookmarkSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyScalarRelationFilter, EventSocialButterflyWhereInput>
+  }, "id" | "eventId_userId">
+
+  export type BookmarkSocialButterflyOrderByWithAggregationInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+    _count?: BookmarkSocialButterflyCountOrderByAggregateInput
+    _max?: BookmarkSocialButterflyMaxOrderByAggregateInput
+    _min?: BookmarkSocialButterflyMinOrderByAggregateInput
+  }
+
+  export type BookmarkSocialButterflyScalarWhereWithAggregatesInput = {
+    AND?: BookmarkSocialButterflyScalarWhereWithAggregatesInput | BookmarkSocialButterflyScalarWhereWithAggregatesInput[]
+    OR?: BookmarkSocialButterflyScalarWhereWithAggregatesInput[]
+    NOT?: BookmarkSocialButterflyScalarWhereWithAggregatesInput | BookmarkSocialButterflyScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"BookmarkSocialButterfly"> | string
+    eventId?: StringWithAggregatesFilter<"BookmarkSocialButterfly"> | string
+    userId?: StringWithAggregatesFilter<"BookmarkSocialButterfly"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"BookmarkSocialButterfly"> | Date | string
+  }
+
+  export type ReportSocialButterflyWhereInput = {
+    AND?: ReportSocialButterflyWhereInput | ReportSocialButterflyWhereInput[]
+    OR?: ReportSocialButterflyWhereInput[]
+    NOT?: ReportSocialButterflyWhereInput | ReportSocialButterflyWhereInput[]
+    id?: StringFilter<"ReportSocialButterfly"> | string
+    eventId?: StringNullableFilter<"ReportSocialButterfly"> | string | null
+    reviewId?: StringNullableFilter<"ReportSocialButterfly"> | string | null
+    userId?: StringFilter<"ReportSocialButterfly"> | string
+    reason?: StringFilter<"ReportSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"ReportSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyNullableScalarRelationFilter, EventSocialButterflyWhereInput> | null
+    review?: XOR<ReviewSocialButterflyNullableScalarRelationFilter, ReviewSocialButterflyWhereInput> | null
+  }
+
+  export type ReportSocialButterflyOrderByWithRelationInput = {
+    id?: SortOrder
+    eventId?: SortOrderInput | SortOrder
+    reviewId?: SortOrderInput | SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+    user?: UserSocialButterflyOrderByWithRelationInput
+    event?: EventSocialButterflyOrderByWithRelationInput
+    review?: ReviewSocialButterflyOrderByWithRelationInput
+  }
+
+  export type ReportSocialButterflyWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ReportSocialButterflyWhereInput | ReportSocialButterflyWhereInput[]
+    OR?: ReportSocialButterflyWhereInput[]
+    NOT?: ReportSocialButterflyWhereInput | ReportSocialButterflyWhereInput[]
+    eventId?: StringNullableFilter<"ReportSocialButterfly"> | string | null
+    reviewId?: StringNullableFilter<"ReportSocialButterfly"> | string | null
+    userId?: StringFilter<"ReportSocialButterfly"> | string
+    reason?: StringFilter<"ReportSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"ReportSocialButterfly"> | Date | string
+    user?: XOR<UserSocialButterflyScalarRelationFilter, UserSocialButterflyWhereInput>
+    event?: XOR<EventSocialButterflyNullableScalarRelationFilter, EventSocialButterflyWhereInput> | null
+    review?: XOR<ReviewSocialButterflyNullableScalarRelationFilter, ReviewSocialButterflyWhereInput> | null
+  }, "id">
+
+  export type ReportSocialButterflyOrderByWithAggregationInput = {
+    id?: SortOrder
+    eventId?: SortOrderInput | SortOrder
+    reviewId?: SortOrderInput | SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+    _count?: ReportSocialButterflyCountOrderByAggregateInput
+    _max?: ReportSocialButterflyMaxOrderByAggregateInput
+    _min?: ReportSocialButterflyMinOrderByAggregateInput
+  }
+
+  export type ReportSocialButterflyScalarWhereWithAggregatesInput = {
+    AND?: ReportSocialButterflyScalarWhereWithAggregatesInput | ReportSocialButterflyScalarWhereWithAggregatesInput[]
+    OR?: ReportSocialButterflyScalarWhereWithAggregatesInput[]
+    NOT?: ReportSocialButterflyScalarWhereWithAggregatesInput | ReportSocialButterflyScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ReportSocialButterfly"> | string
+    eventId?: StringNullableWithAggregatesFilter<"ReportSocialButterfly"> | string | null
+    reviewId?: StringNullableWithAggregatesFilter<"ReportSocialButterfly"> | string | null
+    userId?: StringWithAggregatesFilter<"ReportSocialButterfly"> | string
+    reason?: StringWithAggregatesFilter<"ReportSocialButterfly"> | string
+    createdAt?: DateTimeWithAggregatesFilter<"ReportSocialButterfly"> | Date | string
+  }
+
   export type EventOrganizerUserCreateInput = {
     id?: string
     email: string
@@ -29370,6 +37337,407 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type UserSocialButterflyCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyUncheckedCreateInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserSocialButterflyUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserSocialButterflyCreateManyInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+  }
+
+  export type UserSocialButterflyUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type UserSocialButterflyUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EventSocialButterflyCreateInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+    owner: UserSocialButterflyCreateNestedOneWithoutEventsInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyUncheckedCreateInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    owner?: UserSocialButterflyUpdateOneRequiredWithoutEventsNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyCreateManyInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type EventSocialButterflyUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EventSocialButterflyUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewSocialButterflyCreateInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutReviewsInput
+    event: EventSocialButterflyCreateNestedOneWithoutReviewsInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewSocialButterflyUncheckedCreateInput = {
+    id?: string
+    eventId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewSocialButterflyUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput
+    event?: EventSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewSocialButterflyCreateManyInput = {
+    id?: string
+    eventId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewSocialButterflyUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeSocialButterflyCreateInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutLikesInput
+    event: EventSocialButterflyCreateNestedOneWithoutLikesInput
+  }
+
+  export type LikeSocialButterflyUncheckedCreateInput = {
+    id?: string
+    eventId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeSocialButterflyUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutLikesNestedInput
+    event?: EventSocialButterflyUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeSocialButterflyCreateManyInput = {
+    id?: string
+    eventId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeSocialButterflyUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkSocialButterflyCreateInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutBookmarksInput
+    event: EventSocialButterflyCreateNestedOneWithoutBookmarksInput
+  }
+
+  export type BookmarkSocialButterflyUncheckedCreateInput = {
+    id?: string
+    eventId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkSocialButterflyUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutBookmarksNestedInput
+    event?: EventSocialButterflyUpdateOneRequiredWithoutBookmarksNestedInput
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkSocialButterflyCreateManyInput = {
+    id?: string
+    eventId: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkSocialButterflyUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyCreateInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutReportsInput
+    event?: EventSocialButterflyCreateNestedOneWithoutReportsInput
+    review?: ReviewSocialButterflyCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportSocialButterflyUncheckedCreateInput = {
+    id?: string
+    eventId?: string | null
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutReportsNestedInput
+    event?: EventSocialButterflyUpdateOneWithoutReportsNestedInput
+    review?: ReviewSocialButterflyUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyCreateManyInput = {
+    id?: string
+    eventId?: string | null
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -30334,6 +38702,253 @@ export namespace Prisma {
 
   export type ReviewMusicLoverSumOrderByAggregateInput = {
     rating?: SortOrder
+  }
+
+  export type EventSocialButterflyListRelationFilter = {
+    every?: EventSocialButterflyWhereInput
+    some?: EventSocialButterflyWhereInput
+    none?: EventSocialButterflyWhereInput
+  }
+
+  export type ReviewSocialButterflyListRelationFilter = {
+    every?: ReviewSocialButterflyWhereInput
+    some?: ReviewSocialButterflyWhereInput
+    none?: ReviewSocialButterflyWhereInput
+  }
+
+  export type LikeSocialButterflyListRelationFilter = {
+    every?: LikeSocialButterflyWhereInput
+    some?: LikeSocialButterflyWhereInput
+    none?: LikeSocialButterflyWhereInput
+  }
+
+  export type BookmarkSocialButterflyListRelationFilter = {
+    every?: BookmarkSocialButterflyWhereInput
+    some?: BookmarkSocialButterflyWhereInput
+    none?: BookmarkSocialButterflyWhereInput
+  }
+
+  export type ReportSocialButterflyListRelationFilter = {
+    every?: ReportSocialButterflyWhereInput
+    some?: ReportSocialButterflyWhereInput
+    none?: ReportSocialButterflyWhereInput
+  }
+
+  export type EventSocialButterflyOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ReviewSocialButterflyOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type LikeSocialButterflyOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type BookmarkSocialButterflyOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ReportSocialButterflyOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type UserSocialButterflyCountOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserSocialButterflyMaxOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserSocialButterflyMinOrderByAggregateInput = {
+    id?: SortOrder
+    email?: SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type UserSocialButterflyScalarRelationFilter = {
+    is?: UserSocialButterflyWhereInput
+    isNot?: UserSocialButterflyWhereInput
+  }
+
+  export type EventSocialButterflyCountOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    category?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type EventSocialButterflyMaxOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    category?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type EventSocialButterflyMinOrderByAggregateInput = {
+    id?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+    location?: SortOrder
+    category?: SortOrder
+    submittedBy?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type EventSocialButterflyScalarRelationFilter = {
+    is?: EventSocialButterflyWhereInput
+    isNot?: EventSocialButterflyWhereInput
+  }
+
+  export type ReviewSocialButterflyCountOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewSocialButterflyAvgOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type ReviewSocialButterflyMaxOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewSocialButterflyMinOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    rating?: SortOrder
+    comment?: SortOrder
+    validated?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReviewSocialButterflySumOrderByAggregateInput = {
+    rating?: SortOrder
+  }
+
+  export type LikeSocialButterflyEventIdUserIdCompoundUniqueInput = {
+    eventId: string
+    userId: string
+  }
+
+  export type LikeSocialButterflyCountOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LikeSocialButterflyMaxOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type LikeSocialButterflyMinOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type BookmarkSocialButterflyEventIdUserIdCompoundUniqueInput = {
+    eventId: string
+    userId: string
+  }
+
+  export type BookmarkSocialButterflyCountOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type BookmarkSocialButterflyMaxOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type BookmarkSocialButterflyMinOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    userId?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type EventSocialButterflyNullableScalarRelationFilter = {
+    is?: EventSocialButterflyWhereInput | null
+    isNot?: EventSocialButterflyWhereInput | null
+  }
+
+  export type ReviewSocialButterflyNullableScalarRelationFilter = {
+    is?: ReviewSocialButterflyWhereInput | null
+    isNot?: ReviewSocialButterflyWhereInput | null
+  }
+
+  export type ReportSocialButterflyCountOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    reviewId?: SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReportSocialButterflyMaxOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    reviewId?: SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type ReportSocialButterflyMinOrderByAggregateInput = {
+    id?: SortOrder
+    eventId?: SortOrder
+    reviewId?: SortOrder
+    userId?: SortOrder
+    reason?: SortOrder
+    createdAt?: SortOrder
   }
 
   export type EventOrganizerTaskCreateNestedManyWithoutUserInput = {
@@ -31487,6 +40102,570 @@ export namespace Prisma {
     upsert?: ConcertMusicLoverUpsertWithoutReviewsInput
     connect?: ConcertMusicLoverWhereUniqueInput
     update?: XOR<XOR<ConcertMusicLoverUpdateToOneWithWhereWithoutReviewsInput, ConcertMusicLoverUpdateWithoutReviewsInput>, ConcertMusicLoverUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type EventSocialButterflyCreateNestedManyWithoutOwnerInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutOwnerInput, EventSocialButterflyUncheckedCreateWithoutOwnerInput> | EventSocialButterflyCreateWithoutOwnerInput[] | EventSocialButterflyUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutOwnerInput | EventSocialButterflyCreateOrConnectWithoutOwnerInput[]
+    createMany?: EventSocialButterflyCreateManyOwnerInputEnvelope
+    connect?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReviewSocialButterflyCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutUserInput, ReviewSocialButterflyUncheckedCreateWithoutUserInput> | ReviewSocialButterflyCreateWithoutUserInput[] | ReviewSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutUserInput | ReviewSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewSocialButterflyCreateManyUserInputEnvelope
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+  }
+
+  export type LikeSocialButterflyCreateNestedManyWithoutUserInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutUserInput, LikeSocialButterflyUncheckedCreateWithoutUserInput> | LikeSocialButterflyCreateWithoutUserInput[] | LikeSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutUserInput | LikeSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: LikeSocialButterflyCreateManyUserInputEnvelope
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+  }
+
+  export type BookmarkSocialButterflyCreateNestedManyWithoutUserInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutUserInput, BookmarkSocialButterflyUncheckedCreateWithoutUserInput> | BookmarkSocialButterflyCreateWithoutUserInput[] | BookmarkSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutUserInput | BookmarkSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: BookmarkSocialButterflyCreateManyUserInputEnvelope
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReportSocialButterflyCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutUserInput, ReportSocialButterflyUncheckedCreateWithoutUserInput> | ReportSocialButterflyCreateWithoutUserInput[] | ReportSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutUserInput | ReportSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: ReportSocialButterflyCreateManyUserInputEnvelope
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+  }
+
+  export type EventSocialButterflyUncheckedCreateNestedManyWithoutOwnerInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutOwnerInput, EventSocialButterflyUncheckedCreateWithoutOwnerInput> | EventSocialButterflyCreateWithoutOwnerInput[] | EventSocialButterflyUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutOwnerInput | EventSocialButterflyCreateOrConnectWithoutOwnerInput[]
+    createMany?: EventSocialButterflyCreateManyOwnerInputEnvelope
+    connect?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReviewSocialButterflyUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutUserInput, ReviewSocialButterflyUncheckedCreateWithoutUserInput> | ReviewSocialButterflyCreateWithoutUserInput[] | ReviewSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutUserInput | ReviewSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: ReviewSocialButterflyCreateManyUserInputEnvelope
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+  }
+
+  export type LikeSocialButterflyUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutUserInput, LikeSocialButterflyUncheckedCreateWithoutUserInput> | LikeSocialButterflyCreateWithoutUserInput[] | LikeSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutUserInput | LikeSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: LikeSocialButterflyCreateManyUserInputEnvelope
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+  }
+
+  export type BookmarkSocialButterflyUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutUserInput, BookmarkSocialButterflyUncheckedCreateWithoutUserInput> | BookmarkSocialButterflyCreateWithoutUserInput[] | BookmarkSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutUserInput | BookmarkSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: BookmarkSocialButterflyCreateManyUserInputEnvelope
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReportSocialButterflyUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutUserInput, ReportSocialButterflyUncheckedCreateWithoutUserInput> | ReportSocialButterflyCreateWithoutUserInput[] | ReportSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutUserInput | ReportSocialButterflyCreateOrConnectWithoutUserInput[]
+    createMany?: ReportSocialButterflyCreateManyUserInputEnvelope
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+  }
+
+  export type EventSocialButterflyUpdateManyWithoutOwnerNestedInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutOwnerInput, EventSocialButterflyUncheckedCreateWithoutOwnerInput> | EventSocialButterflyCreateWithoutOwnerInput[] | EventSocialButterflyUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutOwnerInput | EventSocialButterflyCreateOrConnectWithoutOwnerInput[]
+    upsert?: EventSocialButterflyUpsertWithWhereUniqueWithoutOwnerInput | EventSocialButterflyUpsertWithWhereUniqueWithoutOwnerInput[]
+    createMany?: EventSocialButterflyCreateManyOwnerInputEnvelope
+    set?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    disconnect?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    delete?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    connect?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    update?: EventSocialButterflyUpdateWithWhereUniqueWithoutOwnerInput | EventSocialButterflyUpdateWithWhereUniqueWithoutOwnerInput[]
+    updateMany?: EventSocialButterflyUpdateManyWithWhereWithoutOwnerInput | EventSocialButterflyUpdateManyWithWhereWithoutOwnerInput[]
+    deleteMany?: EventSocialButterflyScalarWhereInput | EventSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReviewSocialButterflyUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutUserInput, ReviewSocialButterflyUncheckedCreateWithoutUserInput> | ReviewSocialButterflyCreateWithoutUserInput[] | ReviewSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutUserInput | ReviewSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewSocialButterflyUpsertWithWhereUniqueWithoutUserInput | ReviewSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewSocialButterflyCreateManyUserInputEnvelope
+    set?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    disconnect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    delete?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    update?: ReviewSocialButterflyUpdateWithWhereUniqueWithoutUserInput | ReviewSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewSocialButterflyUpdateManyWithWhereWithoutUserInput | ReviewSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewSocialButterflyScalarWhereInput | ReviewSocialButterflyScalarWhereInput[]
+  }
+
+  export type LikeSocialButterflyUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutUserInput, LikeSocialButterflyUncheckedCreateWithoutUserInput> | LikeSocialButterflyCreateWithoutUserInput[] | LikeSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutUserInput | LikeSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: LikeSocialButterflyUpsertWithWhereUniqueWithoutUserInput | LikeSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LikeSocialButterflyCreateManyUserInputEnvelope
+    set?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    disconnect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    delete?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    update?: LikeSocialButterflyUpdateWithWhereUniqueWithoutUserInput | LikeSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LikeSocialButterflyUpdateManyWithWhereWithoutUserInput | LikeSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LikeSocialButterflyScalarWhereInput | LikeSocialButterflyScalarWhereInput[]
+  }
+
+  export type BookmarkSocialButterflyUpdateManyWithoutUserNestedInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutUserInput, BookmarkSocialButterflyUncheckedCreateWithoutUserInput> | BookmarkSocialButterflyCreateWithoutUserInput[] | BookmarkSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutUserInput | BookmarkSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: BookmarkSocialButterflyUpsertWithWhereUniqueWithoutUserInput | BookmarkSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: BookmarkSocialButterflyCreateManyUserInputEnvelope
+    set?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    disconnect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    delete?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    update?: BookmarkSocialButterflyUpdateWithWhereUniqueWithoutUserInput | BookmarkSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: BookmarkSocialButterflyUpdateManyWithWhereWithoutUserInput | BookmarkSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: BookmarkSocialButterflyScalarWhereInput | BookmarkSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReportSocialButterflyUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutUserInput, ReportSocialButterflyUncheckedCreateWithoutUserInput> | ReportSocialButterflyCreateWithoutUserInput[] | ReportSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutUserInput | ReportSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: ReportSocialButterflyUpsertWithWhereUniqueWithoutUserInput | ReportSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReportSocialButterflyCreateManyUserInputEnvelope
+    set?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    disconnect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    delete?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    update?: ReportSocialButterflyUpdateWithWhereUniqueWithoutUserInput | ReportSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReportSocialButterflyUpdateManyWithWhereWithoutUserInput | ReportSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+  }
+
+  export type EventSocialButterflyUncheckedUpdateManyWithoutOwnerNestedInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutOwnerInput, EventSocialButterflyUncheckedCreateWithoutOwnerInput> | EventSocialButterflyCreateWithoutOwnerInput[] | EventSocialButterflyUncheckedCreateWithoutOwnerInput[]
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutOwnerInput | EventSocialButterflyCreateOrConnectWithoutOwnerInput[]
+    upsert?: EventSocialButterflyUpsertWithWhereUniqueWithoutOwnerInput | EventSocialButterflyUpsertWithWhereUniqueWithoutOwnerInput[]
+    createMany?: EventSocialButterflyCreateManyOwnerInputEnvelope
+    set?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    disconnect?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    delete?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    connect?: EventSocialButterflyWhereUniqueInput | EventSocialButterflyWhereUniqueInput[]
+    update?: EventSocialButterflyUpdateWithWhereUniqueWithoutOwnerInput | EventSocialButterflyUpdateWithWhereUniqueWithoutOwnerInput[]
+    updateMany?: EventSocialButterflyUpdateManyWithWhereWithoutOwnerInput | EventSocialButterflyUpdateManyWithWhereWithoutOwnerInput[]
+    deleteMany?: EventSocialButterflyScalarWhereInput | EventSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutUserInput, ReviewSocialButterflyUncheckedCreateWithoutUserInput> | ReviewSocialButterflyCreateWithoutUserInput[] | ReviewSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutUserInput | ReviewSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: ReviewSocialButterflyUpsertWithWhereUniqueWithoutUserInput | ReviewSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReviewSocialButterflyCreateManyUserInputEnvelope
+    set?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    disconnect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    delete?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    update?: ReviewSocialButterflyUpdateWithWhereUniqueWithoutUserInput | ReviewSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReviewSocialButterflyUpdateManyWithWhereWithoutUserInput | ReviewSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReviewSocialButterflyScalarWhereInput | ReviewSocialButterflyScalarWhereInput[]
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutUserInput, LikeSocialButterflyUncheckedCreateWithoutUserInput> | LikeSocialButterflyCreateWithoutUserInput[] | LikeSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutUserInput | LikeSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: LikeSocialButterflyUpsertWithWhereUniqueWithoutUserInput | LikeSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: LikeSocialButterflyCreateManyUserInputEnvelope
+    set?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    disconnect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    delete?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    update?: LikeSocialButterflyUpdateWithWhereUniqueWithoutUserInput | LikeSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: LikeSocialButterflyUpdateManyWithWhereWithoutUserInput | LikeSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: LikeSocialButterflyScalarWhereInput | LikeSocialButterflyScalarWhereInput[]
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutUserInput, BookmarkSocialButterflyUncheckedCreateWithoutUserInput> | BookmarkSocialButterflyCreateWithoutUserInput[] | BookmarkSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutUserInput | BookmarkSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: BookmarkSocialButterflyUpsertWithWhereUniqueWithoutUserInput | BookmarkSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: BookmarkSocialButterflyCreateManyUserInputEnvelope
+    set?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    disconnect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    delete?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    update?: BookmarkSocialButterflyUpdateWithWhereUniqueWithoutUserInput | BookmarkSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: BookmarkSocialButterflyUpdateManyWithWhereWithoutUserInput | BookmarkSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: BookmarkSocialButterflyScalarWhereInput | BookmarkSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutUserInput, ReportSocialButterflyUncheckedCreateWithoutUserInput> | ReportSocialButterflyCreateWithoutUserInput[] | ReportSocialButterflyUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutUserInput | ReportSocialButterflyCreateOrConnectWithoutUserInput[]
+    upsert?: ReportSocialButterflyUpsertWithWhereUniqueWithoutUserInput | ReportSocialButterflyUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ReportSocialButterflyCreateManyUserInputEnvelope
+    set?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    disconnect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    delete?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    update?: ReportSocialButterflyUpdateWithWhereUniqueWithoutUserInput | ReportSocialButterflyUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ReportSocialButterflyUpdateManyWithWhereWithoutUserInput | ReportSocialButterflyUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+  }
+
+  export type UserSocialButterflyCreateNestedOneWithoutEventsInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutEventsInput, UserSocialButterflyUncheckedCreateWithoutEventsInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutEventsInput
+    connect?: UserSocialButterflyWhereUniqueInput
+  }
+
+  export type ReviewSocialButterflyCreateNestedManyWithoutEventInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutEventInput, ReviewSocialButterflyUncheckedCreateWithoutEventInput> | ReviewSocialButterflyCreateWithoutEventInput[] | ReviewSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutEventInput | ReviewSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: ReviewSocialButterflyCreateManyEventInputEnvelope
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+  }
+
+  export type BookmarkSocialButterflyCreateNestedManyWithoutEventInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutEventInput, BookmarkSocialButterflyUncheckedCreateWithoutEventInput> | BookmarkSocialButterflyCreateWithoutEventInput[] | BookmarkSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutEventInput | BookmarkSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: BookmarkSocialButterflyCreateManyEventInputEnvelope
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+  }
+
+  export type LikeSocialButterflyCreateNestedManyWithoutEventInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutEventInput, LikeSocialButterflyUncheckedCreateWithoutEventInput> | LikeSocialButterflyCreateWithoutEventInput[] | LikeSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutEventInput | LikeSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: LikeSocialButterflyCreateManyEventInputEnvelope
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReportSocialButterflyCreateNestedManyWithoutEventInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutEventInput, ReportSocialButterflyUncheckedCreateWithoutEventInput> | ReportSocialButterflyCreateWithoutEventInput[] | ReportSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutEventInput | ReportSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: ReportSocialButterflyCreateManyEventInputEnvelope
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReviewSocialButterflyUncheckedCreateNestedManyWithoutEventInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutEventInput, ReviewSocialButterflyUncheckedCreateWithoutEventInput> | ReviewSocialButterflyCreateWithoutEventInput[] | ReviewSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutEventInput | ReviewSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: ReviewSocialButterflyCreateManyEventInputEnvelope
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+  }
+
+  export type BookmarkSocialButterflyUncheckedCreateNestedManyWithoutEventInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutEventInput, BookmarkSocialButterflyUncheckedCreateWithoutEventInput> | BookmarkSocialButterflyCreateWithoutEventInput[] | BookmarkSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutEventInput | BookmarkSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: BookmarkSocialButterflyCreateManyEventInputEnvelope
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+  }
+
+  export type LikeSocialButterflyUncheckedCreateNestedManyWithoutEventInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutEventInput, LikeSocialButterflyUncheckedCreateWithoutEventInput> | LikeSocialButterflyCreateWithoutEventInput[] | LikeSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutEventInput | LikeSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: LikeSocialButterflyCreateManyEventInputEnvelope
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReportSocialButterflyUncheckedCreateNestedManyWithoutEventInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutEventInput, ReportSocialButterflyUncheckedCreateWithoutEventInput> | ReportSocialButterflyCreateWithoutEventInput[] | ReportSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutEventInput | ReportSocialButterflyCreateOrConnectWithoutEventInput[]
+    createMany?: ReportSocialButterflyCreateManyEventInputEnvelope
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+  }
+
+  export type UserSocialButterflyUpdateOneRequiredWithoutEventsNestedInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutEventsInput, UserSocialButterflyUncheckedCreateWithoutEventsInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutEventsInput
+    upsert?: UserSocialButterflyUpsertWithoutEventsInput
+    connect?: UserSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<UserSocialButterflyUpdateToOneWithWhereWithoutEventsInput, UserSocialButterflyUpdateWithoutEventsInput>, UserSocialButterflyUncheckedUpdateWithoutEventsInput>
+  }
+
+  export type ReviewSocialButterflyUpdateManyWithoutEventNestedInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutEventInput, ReviewSocialButterflyUncheckedCreateWithoutEventInput> | ReviewSocialButterflyCreateWithoutEventInput[] | ReviewSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutEventInput | ReviewSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: ReviewSocialButterflyUpsertWithWhereUniqueWithoutEventInput | ReviewSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: ReviewSocialButterflyCreateManyEventInputEnvelope
+    set?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    disconnect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    delete?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    update?: ReviewSocialButterflyUpdateWithWhereUniqueWithoutEventInput | ReviewSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: ReviewSocialButterflyUpdateManyWithWhereWithoutEventInput | ReviewSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: ReviewSocialButterflyScalarWhereInput | ReviewSocialButterflyScalarWhereInput[]
+  }
+
+  export type BookmarkSocialButterflyUpdateManyWithoutEventNestedInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutEventInput, BookmarkSocialButterflyUncheckedCreateWithoutEventInput> | BookmarkSocialButterflyCreateWithoutEventInput[] | BookmarkSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutEventInput | BookmarkSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: BookmarkSocialButterflyUpsertWithWhereUniqueWithoutEventInput | BookmarkSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: BookmarkSocialButterflyCreateManyEventInputEnvelope
+    set?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    disconnect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    delete?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    update?: BookmarkSocialButterflyUpdateWithWhereUniqueWithoutEventInput | BookmarkSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: BookmarkSocialButterflyUpdateManyWithWhereWithoutEventInput | BookmarkSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: BookmarkSocialButterflyScalarWhereInput | BookmarkSocialButterflyScalarWhereInput[]
+  }
+
+  export type LikeSocialButterflyUpdateManyWithoutEventNestedInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutEventInput, LikeSocialButterflyUncheckedCreateWithoutEventInput> | LikeSocialButterflyCreateWithoutEventInput[] | LikeSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutEventInput | LikeSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: LikeSocialButterflyUpsertWithWhereUniqueWithoutEventInput | LikeSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: LikeSocialButterflyCreateManyEventInputEnvelope
+    set?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    disconnect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    delete?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    update?: LikeSocialButterflyUpdateWithWhereUniqueWithoutEventInput | LikeSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: LikeSocialButterflyUpdateManyWithWhereWithoutEventInput | LikeSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: LikeSocialButterflyScalarWhereInput | LikeSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReportSocialButterflyUpdateManyWithoutEventNestedInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutEventInput, ReportSocialButterflyUncheckedCreateWithoutEventInput> | ReportSocialButterflyCreateWithoutEventInput[] | ReportSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutEventInput | ReportSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: ReportSocialButterflyUpsertWithWhereUniqueWithoutEventInput | ReportSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: ReportSocialButterflyCreateManyEventInputEnvelope
+    set?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    disconnect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    delete?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    update?: ReportSocialButterflyUpdateWithWhereUniqueWithoutEventInput | ReportSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: ReportSocialButterflyUpdateManyWithWhereWithoutEventInput | ReportSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateManyWithoutEventNestedInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutEventInput, ReviewSocialButterflyUncheckedCreateWithoutEventInput> | ReviewSocialButterflyCreateWithoutEventInput[] | ReviewSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutEventInput | ReviewSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: ReviewSocialButterflyUpsertWithWhereUniqueWithoutEventInput | ReviewSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: ReviewSocialButterflyCreateManyEventInputEnvelope
+    set?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    disconnect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    delete?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    connect?: ReviewSocialButterflyWhereUniqueInput | ReviewSocialButterflyWhereUniqueInput[]
+    update?: ReviewSocialButterflyUpdateWithWhereUniqueWithoutEventInput | ReviewSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: ReviewSocialButterflyUpdateManyWithWhereWithoutEventInput | ReviewSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: ReviewSocialButterflyScalarWhereInput | ReviewSocialButterflyScalarWhereInput[]
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateManyWithoutEventNestedInput = {
+    create?: XOR<BookmarkSocialButterflyCreateWithoutEventInput, BookmarkSocialButterflyUncheckedCreateWithoutEventInput> | BookmarkSocialButterflyCreateWithoutEventInput[] | BookmarkSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: BookmarkSocialButterflyCreateOrConnectWithoutEventInput | BookmarkSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: BookmarkSocialButterflyUpsertWithWhereUniqueWithoutEventInput | BookmarkSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: BookmarkSocialButterflyCreateManyEventInputEnvelope
+    set?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    disconnect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    delete?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    connect?: BookmarkSocialButterflyWhereUniqueInput | BookmarkSocialButterflyWhereUniqueInput[]
+    update?: BookmarkSocialButterflyUpdateWithWhereUniqueWithoutEventInput | BookmarkSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: BookmarkSocialButterflyUpdateManyWithWhereWithoutEventInput | BookmarkSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: BookmarkSocialButterflyScalarWhereInput | BookmarkSocialButterflyScalarWhereInput[]
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateManyWithoutEventNestedInput = {
+    create?: XOR<LikeSocialButterflyCreateWithoutEventInput, LikeSocialButterflyUncheckedCreateWithoutEventInput> | LikeSocialButterflyCreateWithoutEventInput[] | LikeSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: LikeSocialButterflyCreateOrConnectWithoutEventInput | LikeSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: LikeSocialButterflyUpsertWithWhereUniqueWithoutEventInput | LikeSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: LikeSocialButterflyCreateManyEventInputEnvelope
+    set?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    disconnect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    delete?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    connect?: LikeSocialButterflyWhereUniqueInput | LikeSocialButterflyWhereUniqueInput[]
+    update?: LikeSocialButterflyUpdateWithWhereUniqueWithoutEventInput | LikeSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: LikeSocialButterflyUpdateManyWithWhereWithoutEventInput | LikeSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: LikeSocialButterflyScalarWhereInput | LikeSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateManyWithoutEventNestedInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutEventInput, ReportSocialButterflyUncheckedCreateWithoutEventInput> | ReportSocialButterflyCreateWithoutEventInput[] | ReportSocialButterflyUncheckedCreateWithoutEventInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutEventInput | ReportSocialButterflyCreateOrConnectWithoutEventInput[]
+    upsert?: ReportSocialButterflyUpsertWithWhereUniqueWithoutEventInput | ReportSocialButterflyUpsertWithWhereUniqueWithoutEventInput[]
+    createMany?: ReportSocialButterflyCreateManyEventInputEnvelope
+    set?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    disconnect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    delete?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    update?: ReportSocialButterflyUpdateWithWhereUniqueWithoutEventInput | ReportSocialButterflyUpdateWithWhereUniqueWithoutEventInput[]
+    updateMany?: ReportSocialButterflyUpdateManyWithWhereWithoutEventInput | ReportSocialButterflyUpdateManyWithWhereWithoutEventInput[]
+    deleteMany?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+  }
+
+  export type UserSocialButterflyCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutReviewsInput, UserSocialButterflyUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutReviewsInput
+    connect?: UserSocialButterflyWhereUniqueInput
+  }
+
+  export type EventSocialButterflyCreateNestedOneWithoutReviewsInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutReviewsInput, EventSocialButterflyUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutReviewsInput
+    connect?: EventSocialButterflyWhereUniqueInput
+  }
+
+  export type ReportSocialButterflyCreateNestedManyWithoutReviewInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutReviewInput, ReportSocialButterflyUncheckedCreateWithoutReviewInput> | ReportSocialButterflyCreateWithoutReviewInput[] | ReportSocialButterflyUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutReviewInput | ReportSocialButterflyCreateOrConnectWithoutReviewInput[]
+    createMany?: ReportSocialButterflyCreateManyReviewInputEnvelope
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+  }
+
+  export type ReportSocialButterflyUncheckedCreateNestedManyWithoutReviewInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutReviewInput, ReportSocialButterflyUncheckedCreateWithoutReviewInput> | ReportSocialButterflyCreateWithoutReviewInput[] | ReportSocialButterflyUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutReviewInput | ReportSocialButterflyCreateOrConnectWithoutReviewInput[]
+    createMany?: ReportSocialButterflyCreateManyReviewInputEnvelope
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+  }
+
+  export type UserSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutReviewsInput, UserSocialButterflyUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutReviewsInput
+    upsert?: UserSocialButterflyUpsertWithoutReviewsInput
+    connect?: UserSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<UserSocialButterflyUpdateToOneWithWhereWithoutReviewsInput, UserSocialButterflyUpdateWithoutReviewsInput>, UserSocialButterflyUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type EventSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutReviewsInput, EventSocialButterflyUncheckedCreateWithoutReviewsInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutReviewsInput
+    upsert?: EventSocialButterflyUpsertWithoutReviewsInput
+    connect?: EventSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<EventSocialButterflyUpdateToOneWithWhereWithoutReviewsInput, EventSocialButterflyUpdateWithoutReviewsInput>, EventSocialButterflyUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type ReportSocialButterflyUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutReviewInput, ReportSocialButterflyUncheckedCreateWithoutReviewInput> | ReportSocialButterflyCreateWithoutReviewInput[] | ReportSocialButterflyUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutReviewInput | ReportSocialButterflyCreateOrConnectWithoutReviewInput[]
+    upsert?: ReportSocialButterflyUpsertWithWhereUniqueWithoutReviewInput | ReportSocialButterflyUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: ReportSocialButterflyCreateManyReviewInputEnvelope
+    set?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    disconnect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    delete?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    update?: ReportSocialButterflyUpdateWithWhereUniqueWithoutReviewInput | ReportSocialButterflyUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: ReportSocialButterflyUpdateManyWithWhereWithoutReviewInput | ReportSocialButterflyUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateManyWithoutReviewNestedInput = {
+    create?: XOR<ReportSocialButterflyCreateWithoutReviewInput, ReportSocialButterflyUncheckedCreateWithoutReviewInput> | ReportSocialButterflyCreateWithoutReviewInput[] | ReportSocialButterflyUncheckedCreateWithoutReviewInput[]
+    connectOrCreate?: ReportSocialButterflyCreateOrConnectWithoutReviewInput | ReportSocialButterflyCreateOrConnectWithoutReviewInput[]
+    upsert?: ReportSocialButterflyUpsertWithWhereUniqueWithoutReviewInput | ReportSocialButterflyUpsertWithWhereUniqueWithoutReviewInput[]
+    createMany?: ReportSocialButterflyCreateManyReviewInputEnvelope
+    set?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    disconnect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    delete?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    connect?: ReportSocialButterflyWhereUniqueInput | ReportSocialButterflyWhereUniqueInput[]
+    update?: ReportSocialButterflyUpdateWithWhereUniqueWithoutReviewInput | ReportSocialButterflyUpdateWithWhereUniqueWithoutReviewInput[]
+    updateMany?: ReportSocialButterflyUpdateManyWithWhereWithoutReviewInput | ReportSocialButterflyUpdateManyWithWhereWithoutReviewInput[]
+    deleteMany?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+  }
+
+  export type UserSocialButterflyCreateNestedOneWithoutLikesInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutLikesInput, UserSocialButterflyUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutLikesInput
+    connect?: UserSocialButterflyWhereUniqueInput
+  }
+
+  export type EventSocialButterflyCreateNestedOneWithoutLikesInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutLikesInput, EventSocialButterflyUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutLikesInput
+    connect?: EventSocialButterflyWhereUniqueInput
+  }
+
+  export type UserSocialButterflyUpdateOneRequiredWithoutLikesNestedInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutLikesInput, UserSocialButterflyUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutLikesInput
+    upsert?: UserSocialButterflyUpsertWithoutLikesInput
+    connect?: UserSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<UserSocialButterflyUpdateToOneWithWhereWithoutLikesInput, UserSocialButterflyUpdateWithoutLikesInput>, UserSocialButterflyUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type EventSocialButterflyUpdateOneRequiredWithoutLikesNestedInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutLikesInput, EventSocialButterflyUncheckedCreateWithoutLikesInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutLikesInput
+    upsert?: EventSocialButterflyUpsertWithoutLikesInput
+    connect?: EventSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<EventSocialButterflyUpdateToOneWithWhereWithoutLikesInput, EventSocialButterflyUpdateWithoutLikesInput>, EventSocialButterflyUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type UserSocialButterflyCreateNestedOneWithoutBookmarksInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutBookmarksInput, UserSocialButterflyUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutBookmarksInput
+    connect?: UserSocialButterflyWhereUniqueInput
+  }
+
+  export type EventSocialButterflyCreateNestedOneWithoutBookmarksInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutBookmarksInput, EventSocialButterflyUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutBookmarksInput
+    connect?: EventSocialButterflyWhereUniqueInput
+  }
+
+  export type UserSocialButterflyUpdateOneRequiredWithoutBookmarksNestedInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutBookmarksInput, UserSocialButterflyUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutBookmarksInput
+    upsert?: UserSocialButterflyUpsertWithoutBookmarksInput
+    connect?: UserSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<UserSocialButterflyUpdateToOneWithWhereWithoutBookmarksInput, UserSocialButterflyUpdateWithoutBookmarksInput>, UserSocialButterflyUncheckedUpdateWithoutBookmarksInput>
+  }
+
+  export type EventSocialButterflyUpdateOneRequiredWithoutBookmarksNestedInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutBookmarksInput, EventSocialButterflyUncheckedCreateWithoutBookmarksInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutBookmarksInput
+    upsert?: EventSocialButterflyUpsertWithoutBookmarksInput
+    connect?: EventSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<EventSocialButterflyUpdateToOneWithWhereWithoutBookmarksInput, EventSocialButterflyUpdateWithoutBookmarksInput>, EventSocialButterflyUncheckedUpdateWithoutBookmarksInput>
+  }
+
+  export type UserSocialButterflyCreateNestedOneWithoutReportsInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutReportsInput, UserSocialButterflyUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutReportsInput
+    connect?: UserSocialButterflyWhereUniqueInput
+  }
+
+  export type EventSocialButterflyCreateNestedOneWithoutReportsInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutReportsInput, EventSocialButterflyUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutReportsInput
+    connect?: EventSocialButterflyWhereUniqueInput
+  }
+
+  export type ReviewSocialButterflyCreateNestedOneWithoutReportsInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutReportsInput, ReviewSocialButterflyUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutReportsInput
+    connect?: ReviewSocialButterflyWhereUniqueInput
+  }
+
+  export type UserSocialButterflyUpdateOneRequiredWithoutReportsNestedInput = {
+    create?: XOR<UserSocialButterflyCreateWithoutReportsInput, UserSocialButterflyUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: UserSocialButterflyCreateOrConnectWithoutReportsInput
+    upsert?: UserSocialButterflyUpsertWithoutReportsInput
+    connect?: UserSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<UserSocialButterflyUpdateToOneWithWhereWithoutReportsInput, UserSocialButterflyUpdateWithoutReportsInput>, UserSocialButterflyUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type EventSocialButterflyUpdateOneWithoutReportsNestedInput = {
+    create?: XOR<EventSocialButterflyCreateWithoutReportsInput, EventSocialButterflyUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: EventSocialButterflyCreateOrConnectWithoutReportsInput
+    upsert?: EventSocialButterflyUpsertWithoutReportsInput
+    disconnect?: EventSocialButterflyWhereInput | boolean
+    delete?: EventSocialButterflyWhereInput | boolean
+    connect?: EventSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<EventSocialButterflyUpdateToOneWithWhereWithoutReportsInput, EventSocialButterflyUpdateWithoutReportsInput>, EventSocialButterflyUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type ReviewSocialButterflyUpdateOneWithoutReportsNestedInput = {
+    create?: XOR<ReviewSocialButterflyCreateWithoutReportsInput, ReviewSocialButterflyUncheckedCreateWithoutReportsInput>
+    connectOrCreate?: ReviewSocialButterflyCreateOrConnectWithoutReportsInput
+    upsert?: ReviewSocialButterflyUpsertWithoutReportsInput
+    disconnect?: ReviewSocialButterflyWhereInput | boolean
+    delete?: ReviewSocialButterflyWhereInput | boolean
+    connect?: ReviewSocialButterflyWhereUniqueInput
+    update?: XOR<XOR<ReviewSocialButterflyUpdateToOneWithWhereWithoutReportsInput, ReviewSocialButterflyUpdateWithoutReportsInput>, ReviewSocialButterflyUncheckedUpdateWithoutReportsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -33884,6 +43063,1172 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type EventSocialButterflyCreateWithoutOwnerInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyUncheckedCreateWithoutOwnerInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyCreateOrConnectWithoutOwnerInput = {
+    where: EventSocialButterflyWhereUniqueInput
+    create: XOR<EventSocialButterflyCreateWithoutOwnerInput, EventSocialButterflyUncheckedCreateWithoutOwnerInput>
+  }
+
+  export type EventSocialButterflyCreateManyOwnerInputEnvelope = {
+    data: EventSocialButterflyCreateManyOwnerInput | EventSocialButterflyCreateManyOwnerInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReviewSocialButterflyCreateWithoutUserInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    event: EventSocialButterflyCreateNestedOneWithoutReviewsInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewSocialButterflyUncheckedCreateWithoutUserInput = {
+    id?: string
+    eventId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewSocialButterflyCreateOrConnectWithoutUserInput = {
+    where: ReviewSocialButterflyWhereUniqueInput
+    create: XOR<ReviewSocialButterflyCreateWithoutUserInput, ReviewSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewSocialButterflyCreateManyUserInputEnvelope = {
+    data: ReviewSocialButterflyCreateManyUserInput | ReviewSocialButterflyCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LikeSocialButterflyCreateWithoutUserInput = {
+    id?: string
+    createdAt?: Date | string
+    event: EventSocialButterflyCreateNestedOneWithoutLikesInput
+  }
+
+  export type LikeSocialButterflyUncheckedCreateWithoutUserInput = {
+    id?: string
+    eventId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeSocialButterflyCreateOrConnectWithoutUserInput = {
+    where: LikeSocialButterflyWhereUniqueInput
+    create: XOR<LikeSocialButterflyCreateWithoutUserInput, LikeSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type LikeSocialButterflyCreateManyUserInputEnvelope = {
+    data: LikeSocialButterflyCreateManyUserInput | LikeSocialButterflyCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type BookmarkSocialButterflyCreateWithoutUserInput = {
+    id?: string
+    createdAt?: Date | string
+    event: EventSocialButterflyCreateNestedOneWithoutBookmarksInput
+  }
+
+  export type BookmarkSocialButterflyUncheckedCreateWithoutUserInput = {
+    id?: string
+    eventId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkSocialButterflyCreateOrConnectWithoutUserInput = {
+    where: BookmarkSocialButterflyWhereUniqueInput
+    create: XOR<BookmarkSocialButterflyCreateWithoutUserInput, BookmarkSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type BookmarkSocialButterflyCreateManyUserInputEnvelope = {
+    data: BookmarkSocialButterflyCreateManyUserInput | BookmarkSocialButterflyCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReportSocialButterflyCreateWithoutUserInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    event?: EventSocialButterflyCreateNestedOneWithoutReportsInput
+    review?: ReviewSocialButterflyCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportSocialButterflyUncheckedCreateWithoutUserInput = {
+    id?: string
+    eventId?: string | null
+    reviewId?: string | null
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyCreateOrConnectWithoutUserInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    create: XOR<ReportSocialButterflyCreateWithoutUserInput, ReportSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReportSocialButterflyCreateManyUserInputEnvelope = {
+    data: ReportSocialButterflyCreateManyUserInput | ReportSocialButterflyCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type EventSocialButterflyUpsertWithWhereUniqueWithoutOwnerInput = {
+    where: EventSocialButterflyWhereUniqueInput
+    update: XOR<EventSocialButterflyUpdateWithoutOwnerInput, EventSocialButterflyUncheckedUpdateWithoutOwnerInput>
+    create: XOR<EventSocialButterflyCreateWithoutOwnerInput, EventSocialButterflyUncheckedCreateWithoutOwnerInput>
+  }
+
+  export type EventSocialButterflyUpdateWithWhereUniqueWithoutOwnerInput = {
+    where: EventSocialButterflyWhereUniqueInput
+    data: XOR<EventSocialButterflyUpdateWithoutOwnerInput, EventSocialButterflyUncheckedUpdateWithoutOwnerInput>
+  }
+
+  export type EventSocialButterflyUpdateManyWithWhereWithoutOwnerInput = {
+    where: EventSocialButterflyScalarWhereInput
+    data: XOR<EventSocialButterflyUpdateManyMutationInput, EventSocialButterflyUncheckedUpdateManyWithoutOwnerInput>
+  }
+
+  export type EventSocialButterflyScalarWhereInput = {
+    AND?: EventSocialButterflyScalarWhereInput | EventSocialButterflyScalarWhereInput[]
+    OR?: EventSocialButterflyScalarWhereInput[]
+    NOT?: EventSocialButterflyScalarWhereInput | EventSocialButterflyScalarWhereInput[]
+    id?: StringFilter<"EventSocialButterfly"> | string
+    title?: StringFilter<"EventSocialButterfly"> | string
+    description?: StringFilter<"EventSocialButterfly"> | string
+    date?: DateTimeFilter<"EventSocialButterfly"> | Date | string
+    location?: StringFilter<"EventSocialButterfly"> | string
+    category?: StringFilter<"EventSocialButterfly"> | string
+    submittedBy?: StringFilter<"EventSocialButterfly"> | string
+    validated?: BoolFilter<"EventSocialButterfly"> | boolean
+    createdAt?: DateTimeFilter<"EventSocialButterfly"> | Date | string
+  }
+
+  export type ReviewSocialButterflyUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReviewSocialButterflyWhereUniqueInput
+    update: XOR<ReviewSocialButterflyUpdateWithoutUserInput, ReviewSocialButterflyUncheckedUpdateWithoutUserInput>
+    create: XOR<ReviewSocialButterflyCreateWithoutUserInput, ReviewSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReviewSocialButterflyUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReviewSocialButterflyWhereUniqueInput
+    data: XOR<ReviewSocialButterflyUpdateWithoutUserInput, ReviewSocialButterflyUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ReviewSocialButterflyUpdateManyWithWhereWithoutUserInput = {
+    where: ReviewSocialButterflyScalarWhereInput
+    data: XOR<ReviewSocialButterflyUpdateManyMutationInput, ReviewSocialButterflyUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ReviewSocialButterflyScalarWhereInput = {
+    AND?: ReviewSocialButterflyScalarWhereInput | ReviewSocialButterflyScalarWhereInput[]
+    OR?: ReviewSocialButterflyScalarWhereInput[]
+    NOT?: ReviewSocialButterflyScalarWhereInput | ReviewSocialButterflyScalarWhereInput[]
+    id?: StringFilter<"ReviewSocialButterfly"> | string
+    eventId?: StringFilter<"ReviewSocialButterfly"> | string
+    userId?: StringFilter<"ReviewSocialButterfly"> | string
+    rating?: IntFilter<"ReviewSocialButterfly"> | number
+    comment?: StringFilter<"ReviewSocialButterfly"> | string
+    validated?: BoolFilter<"ReviewSocialButterfly"> | boolean
+    createdAt?: DateTimeFilter<"ReviewSocialButterfly"> | Date | string
+  }
+
+  export type LikeSocialButterflyUpsertWithWhereUniqueWithoutUserInput = {
+    where: LikeSocialButterflyWhereUniqueInput
+    update: XOR<LikeSocialButterflyUpdateWithoutUserInput, LikeSocialButterflyUncheckedUpdateWithoutUserInput>
+    create: XOR<LikeSocialButterflyCreateWithoutUserInput, LikeSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type LikeSocialButterflyUpdateWithWhereUniqueWithoutUserInput = {
+    where: LikeSocialButterflyWhereUniqueInput
+    data: XOR<LikeSocialButterflyUpdateWithoutUserInput, LikeSocialButterflyUncheckedUpdateWithoutUserInput>
+  }
+
+  export type LikeSocialButterflyUpdateManyWithWhereWithoutUserInput = {
+    where: LikeSocialButterflyScalarWhereInput
+    data: XOR<LikeSocialButterflyUpdateManyMutationInput, LikeSocialButterflyUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type LikeSocialButterflyScalarWhereInput = {
+    AND?: LikeSocialButterflyScalarWhereInput | LikeSocialButterflyScalarWhereInput[]
+    OR?: LikeSocialButterflyScalarWhereInput[]
+    NOT?: LikeSocialButterflyScalarWhereInput | LikeSocialButterflyScalarWhereInput[]
+    id?: StringFilter<"LikeSocialButterfly"> | string
+    eventId?: StringFilter<"LikeSocialButterfly"> | string
+    userId?: StringFilter<"LikeSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"LikeSocialButterfly"> | Date | string
+  }
+
+  export type BookmarkSocialButterflyUpsertWithWhereUniqueWithoutUserInput = {
+    where: BookmarkSocialButterflyWhereUniqueInput
+    update: XOR<BookmarkSocialButterflyUpdateWithoutUserInput, BookmarkSocialButterflyUncheckedUpdateWithoutUserInput>
+    create: XOR<BookmarkSocialButterflyCreateWithoutUserInput, BookmarkSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type BookmarkSocialButterflyUpdateWithWhereUniqueWithoutUserInput = {
+    where: BookmarkSocialButterflyWhereUniqueInput
+    data: XOR<BookmarkSocialButterflyUpdateWithoutUserInput, BookmarkSocialButterflyUncheckedUpdateWithoutUserInput>
+  }
+
+  export type BookmarkSocialButterflyUpdateManyWithWhereWithoutUserInput = {
+    where: BookmarkSocialButterflyScalarWhereInput
+    data: XOR<BookmarkSocialButterflyUpdateManyMutationInput, BookmarkSocialButterflyUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type BookmarkSocialButterflyScalarWhereInput = {
+    AND?: BookmarkSocialButterflyScalarWhereInput | BookmarkSocialButterflyScalarWhereInput[]
+    OR?: BookmarkSocialButterflyScalarWhereInput[]
+    NOT?: BookmarkSocialButterflyScalarWhereInput | BookmarkSocialButterflyScalarWhereInput[]
+    id?: StringFilter<"BookmarkSocialButterfly"> | string
+    eventId?: StringFilter<"BookmarkSocialButterfly"> | string
+    userId?: StringFilter<"BookmarkSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"BookmarkSocialButterfly"> | Date | string
+  }
+
+  export type ReportSocialButterflyUpsertWithWhereUniqueWithoutUserInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    update: XOR<ReportSocialButterflyUpdateWithoutUserInput, ReportSocialButterflyUncheckedUpdateWithoutUserInput>
+    create: XOR<ReportSocialButterflyCreateWithoutUserInput, ReportSocialButterflyUncheckedCreateWithoutUserInput>
+  }
+
+  export type ReportSocialButterflyUpdateWithWhereUniqueWithoutUserInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    data: XOR<ReportSocialButterflyUpdateWithoutUserInput, ReportSocialButterflyUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ReportSocialButterflyUpdateManyWithWhereWithoutUserInput = {
+    where: ReportSocialButterflyScalarWhereInput
+    data: XOR<ReportSocialButterflyUpdateManyMutationInput, ReportSocialButterflyUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ReportSocialButterflyScalarWhereInput = {
+    AND?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+    OR?: ReportSocialButterflyScalarWhereInput[]
+    NOT?: ReportSocialButterflyScalarWhereInput | ReportSocialButterflyScalarWhereInput[]
+    id?: StringFilter<"ReportSocialButterfly"> | string
+    eventId?: StringNullableFilter<"ReportSocialButterfly"> | string | null
+    reviewId?: StringNullableFilter<"ReportSocialButterfly"> | string | null
+    userId?: StringFilter<"ReportSocialButterfly"> | string
+    reason?: StringFilter<"ReportSocialButterfly"> | string
+    createdAt?: DateTimeFilter<"ReportSocialButterfly"> | Date | string
+  }
+
+  export type UserSocialButterflyCreateWithoutEventsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyUncheckedCreateWithoutEventsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyCreateOrConnectWithoutEventsInput = {
+    where: UserSocialButterflyWhereUniqueInput
+    create: XOR<UserSocialButterflyCreateWithoutEventsInput, UserSocialButterflyUncheckedCreateWithoutEventsInput>
+  }
+
+  export type ReviewSocialButterflyCreateWithoutEventInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutReviewsInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewSocialButterflyUncheckedCreateWithoutEventInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutReviewInput
+  }
+
+  export type ReviewSocialButterflyCreateOrConnectWithoutEventInput = {
+    where: ReviewSocialButterflyWhereUniqueInput
+    create: XOR<ReviewSocialButterflyCreateWithoutEventInput, ReviewSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type ReviewSocialButterflyCreateManyEventInputEnvelope = {
+    data: ReviewSocialButterflyCreateManyEventInput | ReviewSocialButterflyCreateManyEventInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type BookmarkSocialButterflyCreateWithoutEventInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutBookmarksInput
+  }
+
+  export type BookmarkSocialButterflyUncheckedCreateWithoutEventInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkSocialButterflyCreateOrConnectWithoutEventInput = {
+    where: BookmarkSocialButterflyWhereUniqueInput
+    create: XOR<BookmarkSocialButterflyCreateWithoutEventInput, BookmarkSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type BookmarkSocialButterflyCreateManyEventInputEnvelope = {
+    data: BookmarkSocialButterflyCreateManyEventInput | BookmarkSocialButterflyCreateManyEventInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type LikeSocialButterflyCreateWithoutEventInput = {
+    id?: string
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutLikesInput
+  }
+
+  export type LikeSocialButterflyUncheckedCreateWithoutEventInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeSocialButterflyCreateOrConnectWithoutEventInput = {
+    where: LikeSocialButterflyWhereUniqueInput
+    create: XOR<LikeSocialButterflyCreateWithoutEventInput, LikeSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type LikeSocialButterflyCreateManyEventInputEnvelope = {
+    data: LikeSocialButterflyCreateManyEventInput | LikeSocialButterflyCreateManyEventInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ReportSocialButterflyCreateWithoutEventInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutReportsInput
+    review?: ReviewSocialButterflyCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportSocialButterflyUncheckedCreateWithoutEventInput = {
+    id?: string
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyCreateOrConnectWithoutEventInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    create: XOR<ReportSocialButterflyCreateWithoutEventInput, ReportSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type ReportSocialButterflyCreateManyEventInputEnvelope = {
+    data: ReportSocialButterflyCreateManyEventInput | ReportSocialButterflyCreateManyEventInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserSocialButterflyUpsertWithoutEventsInput = {
+    update: XOR<UserSocialButterflyUpdateWithoutEventsInput, UserSocialButterflyUncheckedUpdateWithoutEventsInput>
+    create: XOR<UserSocialButterflyCreateWithoutEventsInput, UserSocialButterflyUncheckedCreateWithoutEventsInput>
+    where?: UserSocialButterflyWhereInput
+  }
+
+  export type UserSocialButterflyUpdateToOneWithWhereWithoutEventsInput = {
+    where?: UserSocialButterflyWhereInput
+    data: XOR<UserSocialButterflyUpdateWithoutEventsInput, UserSocialButterflyUncheckedUpdateWithoutEventsInput>
+  }
+
+  export type UserSocialButterflyUpdateWithoutEventsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserSocialButterflyUncheckedUpdateWithoutEventsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ReviewSocialButterflyUpsertWithWhereUniqueWithoutEventInput = {
+    where: ReviewSocialButterflyWhereUniqueInput
+    update: XOR<ReviewSocialButterflyUpdateWithoutEventInput, ReviewSocialButterflyUncheckedUpdateWithoutEventInput>
+    create: XOR<ReviewSocialButterflyCreateWithoutEventInput, ReviewSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type ReviewSocialButterflyUpdateWithWhereUniqueWithoutEventInput = {
+    where: ReviewSocialButterflyWhereUniqueInput
+    data: XOR<ReviewSocialButterflyUpdateWithoutEventInput, ReviewSocialButterflyUncheckedUpdateWithoutEventInput>
+  }
+
+  export type ReviewSocialButterflyUpdateManyWithWhereWithoutEventInput = {
+    where: ReviewSocialButterflyScalarWhereInput
+    data: XOR<ReviewSocialButterflyUpdateManyMutationInput, ReviewSocialButterflyUncheckedUpdateManyWithoutEventInput>
+  }
+
+  export type BookmarkSocialButterflyUpsertWithWhereUniqueWithoutEventInput = {
+    where: BookmarkSocialButterflyWhereUniqueInput
+    update: XOR<BookmarkSocialButterflyUpdateWithoutEventInput, BookmarkSocialButterflyUncheckedUpdateWithoutEventInput>
+    create: XOR<BookmarkSocialButterflyCreateWithoutEventInput, BookmarkSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type BookmarkSocialButterflyUpdateWithWhereUniqueWithoutEventInput = {
+    where: BookmarkSocialButterflyWhereUniqueInput
+    data: XOR<BookmarkSocialButterflyUpdateWithoutEventInput, BookmarkSocialButterflyUncheckedUpdateWithoutEventInput>
+  }
+
+  export type BookmarkSocialButterflyUpdateManyWithWhereWithoutEventInput = {
+    where: BookmarkSocialButterflyScalarWhereInput
+    data: XOR<BookmarkSocialButterflyUpdateManyMutationInput, BookmarkSocialButterflyUncheckedUpdateManyWithoutEventInput>
+  }
+
+  export type LikeSocialButterflyUpsertWithWhereUniqueWithoutEventInput = {
+    where: LikeSocialButterflyWhereUniqueInput
+    update: XOR<LikeSocialButterflyUpdateWithoutEventInput, LikeSocialButterflyUncheckedUpdateWithoutEventInput>
+    create: XOR<LikeSocialButterflyCreateWithoutEventInput, LikeSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type LikeSocialButterflyUpdateWithWhereUniqueWithoutEventInput = {
+    where: LikeSocialButterflyWhereUniqueInput
+    data: XOR<LikeSocialButterflyUpdateWithoutEventInput, LikeSocialButterflyUncheckedUpdateWithoutEventInput>
+  }
+
+  export type LikeSocialButterflyUpdateManyWithWhereWithoutEventInput = {
+    where: LikeSocialButterflyScalarWhereInput
+    data: XOR<LikeSocialButterflyUpdateManyMutationInput, LikeSocialButterflyUncheckedUpdateManyWithoutEventInput>
+  }
+
+  export type ReportSocialButterflyUpsertWithWhereUniqueWithoutEventInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    update: XOR<ReportSocialButterflyUpdateWithoutEventInput, ReportSocialButterflyUncheckedUpdateWithoutEventInput>
+    create: XOR<ReportSocialButterflyCreateWithoutEventInput, ReportSocialButterflyUncheckedCreateWithoutEventInput>
+  }
+
+  export type ReportSocialButterflyUpdateWithWhereUniqueWithoutEventInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    data: XOR<ReportSocialButterflyUpdateWithoutEventInput, ReportSocialButterflyUncheckedUpdateWithoutEventInput>
+  }
+
+  export type ReportSocialButterflyUpdateManyWithWhereWithoutEventInput = {
+    where: ReportSocialButterflyScalarWhereInput
+    data: XOR<ReportSocialButterflyUpdateManyMutationInput, ReportSocialButterflyUncheckedUpdateManyWithoutEventInput>
+  }
+
+  export type UserSocialButterflyCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyCreateNestedManyWithoutOwnerInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyUncheckedCreateNestedManyWithoutOwnerInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyCreateOrConnectWithoutReviewsInput = {
+    where: UserSocialButterflyWhereUniqueInput
+    create: XOR<UserSocialButterflyCreateWithoutReviewsInput, UserSocialButterflyUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type EventSocialButterflyCreateWithoutReviewsInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+    owner: UserSocialButterflyCreateNestedOneWithoutEventsInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyUncheckedCreateWithoutReviewsInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyCreateOrConnectWithoutReviewsInput = {
+    where: EventSocialButterflyWhereUniqueInput
+    create: XOR<EventSocialButterflyCreateWithoutReviewsInput, EventSocialButterflyUncheckedCreateWithoutReviewsInput>
+  }
+
+  export type ReportSocialButterflyCreateWithoutReviewInput = {
+    id?: string
+    reason: string
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutReportsInput
+    event?: EventSocialButterflyCreateNestedOneWithoutReportsInput
+  }
+
+  export type ReportSocialButterflyUncheckedCreateWithoutReviewInput = {
+    id?: string
+    eventId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyCreateOrConnectWithoutReviewInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    create: XOR<ReportSocialButterflyCreateWithoutReviewInput, ReportSocialButterflyUncheckedCreateWithoutReviewInput>
+  }
+
+  export type ReportSocialButterflyCreateManyReviewInputEnvelope = {
+    data: ReportSocialButterflyCreateManyReviewInput | ReportSocialButterflyCreateManyReviewInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserSocialButterflyUpsertWithoutReviewsInput = {
+    update: XOR<UserSocialButterflyUpdateWithoutReviewsInput, UserSocialButterflyUncheckedUpdateWithoutReviewsInput>
+    create: XOR<UserSocialButterflyCreateWithoutReviewsInput, UserSocialButterflyUncheckedCreateWithoutReviewsInput>
+    where?: UserSocialButterflyWhereInput
+  }
+
+  export type UserSocialButterflyUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: UserSocialButterflyWhereInput
+    data: XOR<UserSocialButterflyUpdateWithoutReviewsInput, UserSocialButterflyUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type UserSocialButterflyUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUpdateManyWithoutOwnerNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserSocialButterflyUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUncheckedUpdateManyWithoutOwnerNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type EventSocialButterflyUpsertWithoutReviewsInput = {
+    update: XOR<EventSocialButterflyUpdateWithoutReviewsInput, EventSocialButterflyUncheckedUpdateWithoutReviewsInput>
+    create: XOR<EventSocialButterflyCreateWithoutReviewsInput, EventSocialButterflyUncheckedCreateWithoutReviewsInput>
+    where?: EventSocialButterflyWhereInput
+  }
+
+  export type EventSocialButterflyUpdateToOneWithWhereWithoutReviewsInput = {
+    where?: EventSocialButterflyWhereInput
+    data: XOR<EventSocialButterflyUpdateWithoutReviewsInput, EventSocialButterflyUncheckedUpdateWithoutReviewsInput>
+  }
+
+  export type EventSocialButterflyUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    owner?: UserSocialButterflyUpdateOneRequiredWithoutEventsNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyUncheckedUpdateWithoutReviewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+  }
+
+  export type ReportSocialButterflyUpsertWithWhereUniqueWithoutReviewInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    update: XOR<ReportSocialButterflyUpdateWithoutReviewInput, ReportSocialButterflyUncheckedUpdateWithoutReviewInput>
+    create: XOR<ReportSocialButterflyCreateWithoutReviewInput, ReportSocialButterflyUncheckedCreateWithoutReviewInput>
+  }
+
+  export type ReportSocialButterflyUpdateWithWhereUniqueWithoutReviewInput = {
+    where: ReportSocialButterflyWhereUniqueInput
+    data: XOR<ReportSocialButterflyUpdateWithoutReviewInput, ReportSocialButterflyUncheckedUpdateWithoutReviewInput>
+  }
+
+  export type ReportSocialButterflyUpdateManyWithWhereWithoutReviewInput = {
+    where: ReportSocialButterflyScalarWhereInput
+    data: XOR<ReportSocialButterflyUpdateManyMutationInput, ReportSocialButterflyUncheckedUpdateManyWithoutReviewInput>
+  }
+
+  export type UserSocialButterflyCreateWithoutLikesInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyUncheckedCreateWithoutLikesInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyCreateOrConnectWithoutLikesInput = {
+    where: UserSocialButterflyWhereUniqueInput
+    create: XOR<UserSocialButterflyCreateWithoutLikesInput, UserSocialButterflyUncheckedCreateWithoutLikesInput>
+  }
+
+  export type EventSocialButterflyCreateWithoutLikesInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+    owner: UserSocialButterflyCreateNestedOneWithoutEventsInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyUncheckedCreateWithoutLikesInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyCreateOrConnectWithoutLikesInput = {
+    where: EventSocialButterflyWhereUniqueInput
+    create: XOR<EventSocialButterflyCreateWithoutLikesInput, EventSocialButterflyUncheckedCreateWithoutLikesInput>
+  }
+
+  export type UserSocialButterflyUpsertWithoutLikesInput = {
+    update: XOR<UserSocialButterflyUpdateWithoutLikesInput, UserSocialButterflyUncheckedUpdateWithoutLikesInput>
+    create: XOR<UserSocialButterflyCreateWithoutLikesInput, UserSocialButterflyUncheckedCreateWithoutLikesInput>
+    where?: UserSocialButterflyWhereInput
+  }
+
+  export type UserSocialButterflyUpdateToOneWithWhereWithoutLikesInput = {
+    where?: UserSocialButterflyWhereInput
+    data: XOR<UserSocialButterflyUpdateWithoutLikesInput, UserSocialButterflyUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type UserSocialButterflyUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserSocialButterflyUncheckedUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type EventSocialButterflyUpsertWithoutLikesInput = {
+    update: XOR<EventSocialButterflyUpdateWithoutLikesInput, EventSocialButterflyUncheckedUpdateWithoutLikesInput>
+    create: XOR<EventSocialButterflyCreateWithoutLikesInput, EventSocialButterflyUncheckedCreateWithoutLikesInput>
+    where?: EventSocialButterflyWhereInput
+  }
+
+  export type EventSocialButterflyUpdateToOneWithWhereWithoutLikesInput = {
+    where?: EventSocialButterflyWhereInput
+    data: XOR<EventSocialButterflyUpdateWithoutLikesInput, EventSocialButterflyUncheckedUpdateWithoutLikesInput>
+  }
+
+  export type EventSocialButterflyUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    owner?: UserSocialButterflyUpdateOneRequiredWithoutEventsNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyUncheckedUpdateWithoutLikesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+  }
+
+  export type UserSocialButterflyCreateWithoutBookmarksInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyUncheckedCreateWithoutBookmarksInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyCreateOrConnectWithoutBookmarksInput = {
+    where: UserSocialButterflyWhereUniqueInput
+    create: XOR<UserSocialButterflyCreateWithoutBookmarksInput, UserSocialButterflyUncheckedCreateWithoutBookmarksInput>
+  }
+
+  export type EventSocialButterflyCreateWithoutBookmarksInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+    owner: UserSocialButterflyCreateNestedOneWithoutEventsInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyUncheckedCreateWithoutBookmarksInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    reports?: ReportSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyCreateOrConnectWithoutBookmarksInput = {
+    where: EventSocialButterflyWhereUniqueInput
+    create: XOR<EventSocialButterflyCreateWithoutBookmarksInput, EventSocialButterflyUncheckedCreateWithoutBookmarksInput>
+  }
+
+  export type UserSocialButterflyUpsertWithoutBookmarksInput = {
+    update: XOR<UserSocialButterflyUpdateWithoutBookmarksInput, UserSocialButterflyUncheckedUpdateWithoutBookmarksInput>
+    create: XOR<UserSocialButterflyCreateWithoutBookmarksInput, UserSocialButterflyUncheckedCreateWithoutBookmarksInput>
+    where?: UserSocialButterflyWhereInput
+  }
+
+  export type UserSocialButterflyUpdateToOneWithWhereWithoutBookmarksInput = {
+    where?: UserSocialButterflyWhereInput
+    data: XOR<UserSocialButterflyUpdateWithoutBookmarksInput, UserSocialButterflyUncheckedUpdateWithoutBookmarksInput>
+  }
+
+  export type UserSocialButterflyUpdateWithoutBookmarksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserSocialButterflyUncheckedUpdateWithoutBookmarksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type EventSocialButterflyUpsertWithoutBookmarksInput = {
+    update: XOR<EventSocialButterflyUpdateWithoutBookmarksInput, EventSocialButterflyUncheckedUpdateWithoutBookmarksInput>
+    create: XOR<EventSocialButterflyCreateWithoutBookmarksInput, EventSocialButterflyUncheckedCreateWithoutBookmarksInput>
+    where?: EventSocialButterflyWhereInput
+  }
+
+  export type EventSocialButterflyUpdateToOneWithWhereWithoutBookmarksInput = {
+    where?: EventSocialButterflyWhereInput
+    data: XOR<EventSocialButterflyUpdateWithoutBookmarksInput, EventSocialButterflyUncheckedUpdateWithoutBookmarksInput>
+  }
+
+  export type EventSocialButterflyUpdateWithoutBookmarksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    owner?: UserSocialButterflyUpdateOneRequiredWithoutEventsNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyUncheckedUpdateWithoutBookmarksInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+  }
+
+  export type UserSocialButterflyCreateWithoutReportsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyUncheckedCreateWithoutReportsInput = {
+    id?: string
+    email: string
+    name: string
+    password: string
+    createdAt?: Date | string
+    events?: EventSocialButterflyUncheckedCreateNestedManyWithoutOwnerInput
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserSocialButterflyCreateOrConnectWithoutReportsInput = {
+    where: UserSocialButterflyWhereUniqueInput
+    create: XOR<UserSocialButterflyCreateWithoutReportsInput, UserSocialButterflyUncheckedCreateWithoutReportsInput>
+  }
+
+  export type EventSocialButterflyCreateWithoutReportsInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+    owner: UserSocialButterflyCreateNestedOneWithoutEventsInput
+    reviews?: ReviewSocialButterflyCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyUncheckedCreateWithoutReportsInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    submittedBy: string
+    validated?: boolean
+    createdAt?: Date | string
+    reviews?: ReviewSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    bookmarks?: BookmarkSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+    likes?: LikeSocialButterflyUncheckedCreateNestedManyWithoutEventInput
+  }
+
+  export type EventSocialButterflyCreateOrConnectWithoutReportsInput = {
+    where: EventSocialButterflyWhereUniqueInput
+    create: XOR<EventSocialButterflyCreateWithoutReportsInput, EventSocialButterflyUncheckedCreateWithoutReportsInput>
+  }
+
+  export type ReviewSocialButterflyCreateWithoutReportsInput = {
+    id?: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+    user: UserSocialButterflyCreateNestedOneWithoutReviewsInput
+    event: EventSocialButterflyCreateNestedOneWithoutReviewsInput
+  }
+
+  export type ReviewSocialButterflyUncheckedCreateWithoutReportsInput = {
+    id?: string
+    eventId: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewSocialButterflyCreateOrConnectWithoutReportsInput = {
+    where: ReviewSocialButterflyWhereUniqueInput
+    create: XOR<ReviewSocialButterflyCreateWithoutReportsInput, ReviewSocialButterflyUncheckedCreateWithoutReportsInput>
+  }
+
+  export type UserSocialButterflyUpsertWithoutReportsInput = {
+    update: XOR<UserSocialButterflyUpdateWithoutReportsInput, UserSocialButterflyUncheckedUpdateWithoutReportsInput>
+    create: XOR<UserSocialButterflyCreateWithoutReportsInput, UserSocialButterflyUncheckedCreateWithoutReportsInput>
+    where?: UserSocialButterflyWhereInput
+  }
+
+  export type UserSocialButterflyUpdateToOneWithWhereWithoutReportsInput = {
+    where?: UserSocialButterflyWhereInput
+    data: XOR<UserSocialButterflyUpdateWithoutReportsInput, UserSocialButterflyUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type UserSocialButterflyUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserSocialButterflyUncheckedUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    events?: EventSocialButterflyUncheckedUpdateManyWithoutOwnerNestedInput
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type EventSocialButterflyUpsertWithoutReportsInput = {
+    update: XOR<EventSocialButterflyUpdateWithoutReportsInput, EventSocialButterflyUncheckedUpdateWithoutReportsInput>
+    create: XOR<EventSocialButterflyCreateWithoutReportsInput, EventSocialButterflyUncheckedCreateWithoutReportsInput>
+    where?: EventSocialButterflyWhereInput
+  }
+
+  export type EventSocialButterflyUpdateToOneWithWhereWithoutReportsInput = {
+    where?: EventSocialButterflyWhereInput
+    data: XOR<EventSocialButterflyUpdateWithoutReportsInput, EventSocialButterflyUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type EventSocialButterflyUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    owner?: UserSocialButterflyUpdateOneRequiredWithoutEventsNestedInput
+    reviews?: ReviewSocialButterflyUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyUncheckedUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    submittedBy?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+  }
+
+  export type ReviewSocialButterflyUpsertWithoutReportsInput = {
+    update: XOR<ReviewSocialButterflyUpdateWithoutReportsInput, ReviewSocialButterflyUncheckedUpdateWithoutReportsInput>
+    create: XOR<ReviewSocialButterflyCreateWithoutReportsInput, ReviewSocialButterflyUncheckedCreateWithoutReportsInput>
+    where?: ReviewSocialButterflyWhereInput
+  }
+
+  export type ReviewSocialButterflyUpdateToOneWithWhereWithoutReportsInput = {
+    where?: ReviewSocialButterflyWhereInput
+    data: XOR<ReviewSocialButterflyUpdateWithoutReportsInput, ReviewSocialButterflyUncheckedUpdateWithoutReportsInput>
+  }
+
+  export type ReviewSocialButterflyUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput
+    event?: EventSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateWithoutReportsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type EventOrganizerTaskCreateManyUserInput = {
     id?: string
     title: string
@@ -34553,6 +44898,326 @@ export namespace Prisma {
     rating?: IntFieldUpdateOperationsInput | number
     comment?: StringFieldUpdateOperationsInput | string
     validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EventSocialButterflyCreateManyOwnerInput = {
+    id?: string
+    title: string
+    description: string
+    date: Date | string
+    location: string
+    category: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type ReviewSocialButterflyCreateManyUserInput = {
+    id?: string
+    eventId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type LikeSocialButterflyCreateManyUserInput = {
+    id?: string
+    eventId: string
+    createdAt?: Date | string
+  }
+
+  export type BookmarkSocialButterflyCreateManyUserInput = {
+    id?: string
+    eventId: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyCreateManyUserInput = {
+    id?: string
+    eventId?: string | null
+    reviewId?: string | null
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type EventSocialButterflyUpdateWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyUncheckedUpdateWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviews?: ReviewSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    bookmarks?: BookmarkSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    likes?: LikeSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutEventNestedInput
+  }
+
+  export type EventSocialButterflyUncheckedUpdateManyWithoutOwnerInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+    date?: DateTimeFieldUpdateOperationsInput | Date | string
+    location?: StringFieldUpdateOperationsInput | string
+    category?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewSocialButterflyUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    event?: EventSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeSocialButterflyUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    event?: EventSocialButterflyUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkSocialButterflyUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    event?: EventSocialButterflyUpdateOneRequiredWithoutBookmarksNestedInput
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    event?: EventSocialButterflyUpdateOneWithoutReportsNestedInput
+    review?: ReviewSocialButterflyUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: NullableStringFieldUpdateOperationsInput | string | null
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReviewSocialButterflyCreateManyEventInput = {
+    id?: string
+    userId: string
+    rating: number
+    comment: string
+    validated?: boolean
+    createdAt?: Date | string
+  }
+
+  export type BookmarkSocialButterflyCreateManyEventInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type LikeSocialButterflyCreateManyEventInput = {
+    id?: string
+    userId: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyCreateManyEventInput = {
+    id?: string
+    reviewId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReviewSocialButterflyUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutReviewsNestedInput
+    reports?: ReportSocialButterflyUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reports?: ReportSocialButterflyUncheckedUpdateManyWithoutReviewNestedInput
+  }
+
+  export type ReviewSocialButterflyUncheckedUpdateManyWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    rating?: IntFieldUpdateOperationsInput | number
+    comment?: StringFieldUpdateOperationsInput | string
+    validated?: BoolFieldUpdateOperationsInput | boolean
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkSocialButterflyUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutBookmarksNestedInput
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type BookmarkSocialButterflyUncheckedUpdateManyWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeSocialButterflyUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutLikesNestedInput
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type LikeSocialButterflyUncheckedUpdateManyWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutReportsNestedInput
+    review?: ReviewSocialButterflyUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateManyWithoutEventInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reviewId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyCreateManyReviewInput = {
+    id?: string
+    eventId?: string | null
+    userId: string
+    reason: string
+    createdAt?: Date | string
+  }
+
+  export type ReportSocialButterflyUpdateWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserSocialButterflyUpdateOneRequiredWithoutReportsNestedInput
+    event?: EventSocialButterflyUpdateOneWithoutReportsNestedInput
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ReportSocialButterflyUncheckedUpdateManyWithoutReviewInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    eventId?: NullableStringFieldUpdateOperationsInput | string | null
+    userId?: StringFieldUpdateOperationsInput | string
+    reason?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 

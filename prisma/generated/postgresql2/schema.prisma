@@ -269,3 +269,86 @@ model ReviewMusicLover {
   user    UserMusicLover    @relation(fields: [userId], references: [id], onDelete: Cascade)
   concert ConcertMusicLover @relation(fields: [concertId], references: [id], onDelete: Cascade)
 }
+
+model UserSocialButterfly {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+
+  events    EventSocialButterfly[]
+  reviews   ReviewSocialButterfly[]
+  likes     LikeSocialButterfly[]
+  bookmarks BookmarkSocialButterfly[]
+  reports   ReportSocialButterfly[]
+}
+
+model EventSocialButterfly {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  date        DateTime
+  location    String
+  category    String
+  submittedBy String
+  validated   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  owner     UserSocialButterfly       @relation(fields: [submittedBy], references: [id], onDelete: Cascade)
+  reviews   ReviewSocialButterfly[]
+  bookmarks BookmarkSocialButterfly[]
+  likes     LikeSocialButterfly[]
+  reports   ReportSocialButterfly[]
+}
+
+model ReviewSocialButterfly {
+  id        String   @id @default(uuid())
+  eventId   String
+  userId    String
+  rating    Int
+  comment   String
+  validated Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user    UserSocialButterfly     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event   EventSocialButterfly    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  reports ReportSocialButterfly[]
+}
+
+model LikeSocialButterfly {
+  id        String   @id @default(uuid())
+  eventId   String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user  UserSocialButterfly  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event EventSocialButterfly @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, userId])
+}
+
+model BookmarkSocialButterfly {
+  id        String   @id @default(uuid())
+  eventId   String
+  userId    String
+  createdAt DateTime @default(now())
+
+  user  UserSocialButterfly  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event EventSocialButterfly @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, userId])
+}
+
+model ReportSocialButterfly {
+  id        String   @id @default(uuid())
+  eventId   String?
+  reviewId  String?
+  userId    String
+  reason    String
+  createdAt DateTime @default(now())
+
+  user   UserSocialButterfly    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event  EventSocialButterfly?  @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  review ReviewSocialButterfly? @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+}

@@ -312,6 +312,59 @@ exports.Prisma.ReviewMusicLoverScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.UserSocialButterflyScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  name: 'name',
+  password: 'password',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.EventSocialButterflyScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  description: 'description',
+  date: 'date',
+  location: 'location',
+  category: 'category',
+  submittedBy: 'submittedBy',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ReviewSocialButterflyScalarFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  userId: 'userId',
+  rating: 'rating',
+  comment: 'comment',
+  validated: 'validated',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.LikeSocialButterflyScalarFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.BookmarkSocialButterflyScalarFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  userId: 'userId',
+  createdAt: 'createdAt'
+};
+
+exports.Prisma.ReportSocialButterflyScalarFieldEnum = {
+  id: 'id',
+  eventId: 'eventId',
+  reviewId: 'reviewId',
+  userId: 'userId',
+  reason: 'reason',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -349,7 +402,13 @@ exports.Prisma.ModelName = {
   ClinicHealthTracker: 'ClinicHealthTracker',
   UserMusicLover: 'UserMusicLover',
   ConcertMusicLover: 'ConcertMusicLover',
-  ReviewMusicLover: 'ReviewMusicLover'
+  ReviewMusicLover: 'ReviewMusicLover',
+  UserSocialButterfly: 'UserSocialButterfly',
+  EventSocialButterfly: 'EventSocialButterfly',
+  ReviewSocialButterfly: 'ReviewSocialButterfly',
+  LikeSocialButterfly: 'LikeSocialButterfly',
+  BookmarkSocialButterfly: 'BookmarkSocialButterfly',
+  ReportSocialButterfly: 'ReportSocialButterfly'
 };
 
 /**
