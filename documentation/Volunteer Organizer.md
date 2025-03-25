@@ -1,159 +1,126 @@
-# 📘 VolunteerOrg - Users API Test Documentation
+# 📘 VolunteerOrg API Test Documentation
 
-This doc outlines the **required input data**, **HTTP methods**, **endpoints**, and the **expected response structure** based on the full CRUD test suite.
+This document outlines the **input data**, **endpoints**, **expected outputs**, and **validation behavior** across the complete tested API:  
+* **Users**
+* **Activities**
+* **Applications**
+* **Admin Validation**
 
 ---
 
-## User
+## 👤 User
 
 ### 📌 1. **Create a New User**
 
-* **Endpoint:** `POST /api/VolunteerOrg/users`
-* **Purpose:** Registers a new volunteer or organizer.
-* **Request Body (JSON):**
-  
+* **Endpoint:** `POST /api/VolunteerOrg/users`  
+* **Purpose:** Registers a new volunteer or organizer.  
+* **Request Body:**
 
 ```json
-  {
-    "email": "volunteerorg_test@example.com",
-    "name": "Volunteer User",
-    "password": "password123"
-  }
-  ```
+{
+  "email": "volunteerorg_test@example.com",
+  "name": "Volunteer User",
+  "password": "password123"
+}
+```
 
-* **Response:** `201 Created`
+* **Response:** `201 Created`  
 * **Response Body:**
-  
 
 ```json
-  {
-    "id": "uuid-string",
-    "email": "volunteerorg_test@example.com",
-    "name": "Volunteer User",
-    "password": "password123",
-    "createdAt": "2025-03-25T12:00:00.000Z"
-  }
-  ```
+{
+  "id": "uuid-string",
+  "email": "volunteerorg_test@example.com",
+  "name": "Volunteer User",
+  "password": "password123",
+  "createdAt": "2025-03-25T12:00:00.000Z"
+}
+```
 
 ---
 
-### 📌 2. **Create Multiple Dummy Users**
+### 📌 2. **Get All Users**
 
-* **Endpoint:** `POST /api/VolunteerOrg/users`
-* **Purpose:** Adds a batch of sample users (for testing or demo).
-* **Request Body Example:**
-  
+* **Endpoint:** `GET /api/VolunteerOrg/users`  
+* **Response:** `200 OK`
 
 ```json
+[
   {
+    "id": "uuid-string",
     "email": "sample0@gmail.com",
     "name": "Sample User 0",
-    "password": "password123"
-  }
-  ```
-
-* **Expected Status:**  
-  + `201 Created` for new entries  
-  + `409 Conflict` if user already exists
-
----
-
-### 📌 3. **Get a List of All Users**
-
-* **Endpoint:** `GET /api/VolunteerOrg/users`
-* **Purpose:** Retrieves all registered users.
-* **Request:** No body required.
-* **Response:** `200 OK`
-* **Expected Body:**
-  
-
-```json
-  [
-    {
-      "id": "uuid-string",
-      "email": "sample0@gmail.com",
-      "name": "Sample User 0",
-      "password": "password123",
-      "createdAt": "2025-03-25T12:00:00.000Z"
-    },
-    ...
-  ]
-  ```
-
----
-
-### 📌 4. **Get User by ID**
-
-* **Endpoint:** `GET /api/VolunteerOrg/users/{id}`
-* **Purpose:** Retrieves a single user's profile.
-* **URL Param:** `id` (User UUID)
-* **Response:** `200 OK`
-* **Response Body:**
-  
-
-```json
-  {
-    "id": "uuid-string",
-    "email": "volunteerorg_test@example.com",
-    "name": "Volunteer User",
     "password": "password123",
     "createdAt": "2025-03-25T12:00:00.000Z"
-  }
-  ```
+  },
+  ...
+]
+```
 
 ---
 
-### 📌 5. **Update a User**
+### 📌 3. **Get User by ID**
 
-* **Endpoint:** `PUT /api/VolunteerOrg/users/{id}`
-* **Purpose:** Updates a user's name.
+* **Endpoint:** `GET /api/VolunteerOrg/users/{id}`  
+* **Response:** `200 OK`
+
+```json
+{
+  "id": "uuid-string",
+  "email": "volunteerorg_test@example.com",
+  "name": "Volunteer User",
+  "password": "password123",
+  "createdAt": "2025-03-25T12:00:00.000Z"
+}
+```
+
+---
+
+### 📌 6. **Update a User**
+
+* **Endpoint:** `PUT /api/VolunteerOrg/users/{id}`  
 * **Request Body:**
-  
 
 ```json
-  {
-    "name": "Updated Volunteer User"
-  }
-  ```
+{
+  "name": "Updated Volunteer User"
+}
+```
 
 * **Response:** `200 OK`
-* **Response Body:**
-  
 
 ```json
-  {
-    "id": "uuid-string",
-    "email": "volunteerorg_test@example.com",
-    "name": "Updated Volunteer User",
-    "password": "password123",
-    "createdAt": "2025-03-25T12:00:00.000Z"
-  }
-  ```
+{
+  "id": "uuid-string",
+  "email": "volunteerorg_test@example.com",
+  "name": "Updated Volunteer User",
+  "password": "password123",
+  "createdAt": "2025-03-25T12:00:00.000Z"
+}
+```
 
 ---
 
-### 📌 6. **Delete a User**
+### 📌 7. **Delete a User**
 
 * **Endpoint:** `DELETE /api/VolunteerOrg/users/{id}`
 
-* **Purpose:** Permanently deletes a user.
 * **Response:** `200 OK`
-* **Response Body:**
-  
 
 ```json
-  {
-    "message": "User deleted successfully"
-  }
-  ```
+{
+  "message": "User deleted successfully"
+}
+```
 
-## Activities
+---
 
-### 📌 1. **Create a New Activity**
+## 🗓️ Activities
+
+### 📌 1. **Create Activity (Unvalidated by Default)**
 
 * **Endpoint:** `POST /api/VolunteerOrg/activities`  
-* **Purpose:** Organizer creates a new volunteer activity.  
-* **Request Body (JSON):**
+* **Request Body:**
 
 ```json
 {
@@ -171,138 +138,91 @@ This doc outlines the **required input data**, **HTTP methods**, **endpoints**, 
 ```json
 {
   "id": "uuid-string",
-  "title": "Park Clean-up",
-  "description": "Clean up the city park",
-  "location": "Central Park",
-  "date": "2025-03-25T10:00:00.000Z",
-  "organizerId": "uuid-string",
   "validated": false,
-  "createdAt": "2025-03-25T12:00:00.000Z"
+  ...
 }
 ```
 
 ---
 
-### 📌 2. **Get a List of All Activities**
+### 📌 2. **Validate Activity (Admin Only)**
 
-* **Endpoint:** `GET /api/VolunteerOrg/activities`  
-* **Purpose:** Retrieves all volunteer activities.  
-* **Request:** No body required.  
+* **Endpoint:** `POST /api/VolunteerOrg/admin/activities/{id}/validate`  
+* **Request Body:**
+
+```json
+{
+  "adminId": "uuid-string"
+}
+```
+
+* **Response:** `200 OK`
+
+```json
+{
+  "message": "Activity validated",
+  "activity": {
+    "id": "uuid-string",
+    "validated": true
+  }
+}
+```
+
+---
+
+### 📌 3. **Get All Activities (Only Validated)**
+
+* **Endpoint:** `GET /api/VolunteerOrg/activities`
+
 * **Response:** `200 OK`  
-* **Expected Body:**
+* **Note:** Only returns activities where `validated = true`
 
 ```json
 [
   {
     "id": "uuid-string",
     "title": "Park Clean-up",
-    "description": "Clean up the city park",
-    "location": "Central Park",
-    "date": "2025-03-25T10:00:00.000Z",
-    "organizerId": "uuid-string",
-    "validated": false,
-    "createdAt": "2025-03-25T12:00:00.000Z"
-  },
-  ...
+    "validated": true
+  }
 ]
 ```
 
 ---
 
-### 📌 3. **Get Activity by ID**
+### 📌 4. **Get Activity by ID (Any)**
 
-* **Endpoint:** `GET /api/VolunteerOrg/activities/{id}`  
-* **Purpose:** Fetches one activity by its ID.  
-* **URL Param:** `id` (Activity UUID)  
-* **Response:** `200 OK`  
-* **Response Body:**
+* **Endpoint:** `GET /api/VolunteerOrg/activities/{id}`
 
-```json
-{
-  "id": "uuid-string",
-  "title": "Park Clean-up",
-  "description": "Clean up the city park",
-  "location": "Central Park",
-  "date": "2025-03-25T10:00:00.000Z",
-  "organizerId": "uuid-string",
-  "validated": false,
-  "createdAt": "2025-03-25T12:00:00.000Z"
-}
-```
+* **Response:** `200 OK` — includes both validated and unvalidated
 
 ---
 
-### 📌 4. **Update an Activity (Owner Only)**
+### 📌 5. **Update Activity (Owner Only)**
 
 * **Endpoint:** `PUT /api/VolunteerOrg/activities/{id}`  
-* **Purpose:** Allows the organizer to update their activity.  
 * **Request Body:**
 
 ```json
 {
-  "title": "Updated Park Clean-up",
-  "description": "Now includes tree planting",
-  "location": "Updated Park",
-  "date": "2025-03-27T14:00:00.000Z",
-  "organizerId": "uuid-string"
+  "title": "Updated Title",
+  "organizerId": "owner-id"
 }
 ```
 
 * **Response:** `200 OK`  
-* **Response Body:**
-
-```json
-{
-  "id": "uuid-string",
-  "title": "Updated Park Clean-up",
-  "description": "Now includes tree planting",
-  "location": "Updated Park",
-  "date": "2025-03-27T14:00:00.000Z",
-  "organizerId": "uuid-string",
-  "validated": false,
-  "createdAt": "2025-03-25T12:00:00.000Z"
-}
-```
+* **Error (Non-owner):** `403 Forbidden`
 
 ---
 
-### 📌 5. **Update Activity (Non-owner)**
-
-* **Endpoint:** `PUT /api/VolunteerOrg/activities/{id}`  
-* **Purpose:** Attempts to update by a non-owner user.  
-* **Response:** `403 Forbidden`  
-* **Response Body:**
-
-```json
-{
-  "error": "Forbidden"
-}
-```
-
----
-
-### 📌 6. **Delete Activity (Non-owner)**
+### 📌 6. **Delete Activity**
 
 * **Endpoint:** `DELETE /api/VolunteerOrg/activities/{id}`  
-* **Purpose:** Attempts to delete an activity by a user who is not the creator.  
-* **Response:** `403 Forbidden`  
-* **Response Body:**
+* **Behavior:**  
+  + ✅ Organizer can delete  
+  + ✅ Admin can delete  
+  + ❌ Others: `403 Forbidden`
 
-```json
-{
-  "error": "Forbidden"
-}
-```
-
----
-
-### 📌 7. **Delete Activity by Admin**
-
-* **Endpoint:** `DELETE /api/VolunteerOrg/activities/{id}`
-
-* **Purpose:** Allows an admin (user with email starting with `a-` ) to delete any activity.  
-* **Response:** `200 OK`  
-* **Response Body:**
+* **Response:** `200 OK`
 
 ```json
 {
@@ -312,27 +232,12 @@ This doc outlines the **required input data**, **HTTP methods**, **endpoints**, 
 
 ---
 
-### 📌 8. **Delete Activity by Creator**
+## 🙋 Application
 
-* **Endpoint:** `DELETE /api/VolunteerOrg/activities/{id}`
-
-* **Purpose:** Deletes the activity by its original organizer.  
-* **Response:** `200 OK`  
-* **Response Body:**
-
-```json
-{
-  "message": "Activity deleted successfully"
-}
-```
-
-## Application
-
-### 📌 1. **Apply to Volunteer Activity**
+### 📌 1. **Apply to Validated Activity**
 
 * **Endpoint:** `POST /api/VolunteerOrg/applications`  
-* **Purpose:** A volunteer submits an application to join a volunteer activity.  
-* **Request Body (JSON):**
+* **Request Body:**
 
 ```json
 {
@@ -342,31 +247,27 @@ This doc outlines the **required input data**, **HTTP methods**, **endpoints**, 
 }
 ```
 
-* **Response:** `201 Created`  
-* **Response Body:**
+* **Response:** `201 Created`
+
+---
+
+### 📌 2. **Apply to Non-Validated Activity**
+
+* **Response:** `404 Not Found`
 
 ```json
 {
-  "id": "uuid-string",
-  "userId": "uuid-string",
-  "activityId": "uuid-string",
-  "motivation": "I want to help!",
-  "status": "pending",
-  "createdAt": "2025-03-25T12:00:00.000Z"
+  "error": "Activity not yet validated"
 }
 ```
 
 ---
 
-### 📌 2. **Get All Applications for an Activity**
+### 📌 3. **Get Applications for Activity**
 
 * **Endpoint:** `GET /api/VolunteerOrg/activities/{activityId}/applications`
 
-* **Purpose:** Retrieves all volunteer applications submitted for a specific activity.  
-* **URL Param:** `activityId`
-
-* **Response:** `200 OK`  
-* **Response Body:**
+* **Response:** `200 OK`
 
 ```json
 [
@@ -374,13 +275,11 @@ This doc outlines the **required input data**, **HTTP methods**, **endpoints**, 
     "id": "uuid-string",
     "userId": "uuid-string",
     "activityId": "uuid-string",
-    "motivation": "I want to help!",
     "status": "pending",
-    "createdAt": "2025-03-25T12:00:00.000Z",
     "user": {
       "id": "uuid-string",
-      "name": "Volunteer User Approved",
-      "email": "volunteer@example.com"
+      "name": "Volunteer User",
+      "email": "user@example.com"
     }
   }
 ]
@@ -388,10 +287,9 @@ This doc outlines the **required input data**, **HTTP methods**, **endpoints**, 
 
 ---
 
-### 📌 3. **Confirm Volunteer Application**
+### 📌 4. **Update Application Status**
 
 * **Endpoint:** `PUT /api/VolunteerOrg/applications/{id}/status`  
-* **Purpose:** The organizer confirms a volunteer's application.  
 * **Request Body:**
 
 ```json
@@ -401,68 +299,10 @@ This doc outlines the **required input data**, **HTTP methods**, **endpoints**, 
 ```
 
 * **Response:** `200 OK`  
-* **Response Body:**
-
-```json
-{
-  "id": "uuid-string",
-  "userId": "uuid-string",
-  "activityId": "uuid-string",
-  "motivation": "I want to help!",
-  "status": "confirmed",
-  "createdAt": "2025-03-25T12:00:00.000Z"
-}
-```
-
----
-
-### 📌 4. **Reject Volunteer Application**
-
-* **Endpoint:** `PUT /api/VolunteerOrg/applications/{id}/status`  
-* **Purpose:** The organizer rejects a volunteer's application.  
-* **Request Body:**
-
-```json
-{
-  "status": "rejected"
-}
-```
-
-* **Response:** `200 OK`  
-* **Response Body:**
-
-```json
-{
-  "id": "uuid-string",
-  "userId": "uuid-string",
-  "activityId": "uuid-string",
-  "motivation": "I want to help!",
-  "status": "rejected",
-  "createdAt": "2025-03-25T12:00:00.000Z"
-}
-```
-
----
-
-### 📌 5. **Invalid Status Update**
-
-* **Endpoint:** `PUT /api/VolunteerOrg/applications/{id}/status`  
-* **Purpose:** Handles invalid status values like "maybe", "approved", etc.  
-* **Request Body:**
-
-```json
-{
-  "status": "maybe"
-}
-```
-
-* **Response:** `400 Bad Request`  
-* **Response Body:**
+* **Error (invalid):** `400 Bad Request`
 
 ```json
 {
   "error": "Invalid status"
 }
 ```
-
-##
