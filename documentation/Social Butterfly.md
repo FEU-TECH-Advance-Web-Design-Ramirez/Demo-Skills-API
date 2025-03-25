@@ -1,104 +1,226 @@
-# REST API Tests Documentation
+# 📘 SocialButterfly API Test Documentation
 
-## API Endpoints and Requirements
+This document summarizes tested API behavior, input/output expectations, and validation logic for the **SocialButterfly platform**, covering:
 
-### 1️⃣ User Authentication & Management
-
-#### POST /api/SocialButterfly/users
-
-**Description:** Registers a new community member.
-* **Required:** email, name, password  
-* **Response:** 201 Created with user object
-
-#### GET /api/SocialButterfly/users
-
-**Description:** Lists all users.
-* **Response:** 200 OK with user list
-
-#### GET /api/SocialButterfly/users/{id}
-
-**Description:** Retrieves a user by ID.
-* **Required:** id  
-* **Response:** 200 OK with user object
-
-#### PUT /api/SocialButterfly/users/{id}
-
-**Description:** Updates user information.
-* **Required:** name  
-* **Response:** 200 OK with updated user object
-
-#### DELETE /api/SocialButterfly/users/{id}
-
-**Description:** Removes or deactivates a user.
-* **Required:** userId  
-* **Response:** 200 OK with confirmation message
+* **Users**
+* **Events**
+* **Reviews**
+* **Admin Operations**
 
 ---
 
-### 2️⃣ Event Submission & Management
+## 👤 Users
 
-* **Submit New Event** → POST /api/SocialButterfly/events  
-  + **Required:** title, description, date, location, category, submittedBy  
-  + **Response:** 201 Created with event object
+### 📌 1. **Create a New User**
 
-* **Get All Events** → GET /api/SocialButterfly/events  
-  + **Response:** 200 OK with an array of events
+* **Endpoint:** `POST /api/SocialButterfly/users`
+* **Purpose:** Registers a new platform user.
+* **Request Body:**
 
-* **Get Event by ID** → GET /api/SocialButterfly/events/{id}  
-  + **Required:** id  
-  + **Response:** 200 OK with event object
+```json
+{
+  "email": "socialbutterfly_test@example.com",
+  "name": "Test User",
+  "password": "supersecure"
+}
+```
 
-* **Update Event** → PUT /api/SocialButterfly/events/{id}  
-  + **Required:** title, description, date, location  
-  + **Response:** 200 OK with updated event object
+* **Response:** `201 Created`
 
-* **Delete Event (Admin Only)** → DELETE /api/SocialButterfly/events/{id}  
-  + **Required:** id  
-  + **Response:** 200 OK with deletion confirmation
+```json
+{
+  "id": "uuid",
+  "email": "socialbutterfly_test@example.com",
+  "name": "Test User",
+  "password": "supersecure",
+  "createdAt": "timestamp"
+}
+```
+
+### 📌 2. **Get All Users**
+
+* **Endpoint:** `GET /api/SocialButterfly/users`
+* **Response:** `200 OK`
+
+```json
+[
+  { "id": "uuid", "email": "...", "name": "..." },
+  ...
+]
+```
+
+### 📌 3. **Get User by ID**
+
+* **Endpoint:** `GET /api/SocialButterfly/users/{id}`
+* **Response:** `200 OK`
+
+### 📌 4. **Update User**
+
+* **Endpoint:** `PUT /api/SocialButterfly/users/{id}`
+* **Request Body:**
+
+```json
+{ "name": "Updated Test User" }
+```
+
+* **Response:** `200 OK`
+
+### 📌 5. **Delete User**
+
+* **Endpoint:** `DELETE /api/SocialButterfly/users/{id}`
+
+* **Response:** `200 OK`
+
+```json
+{ "message": "User deleted successfully" }
+```
 
 ---
 
-### 3️⃣ Event & Review Validation
+## 📅 Events
 
-* **Validate Event (Admin Only)** → POST /api/SocialButterfly/admin/events/{id}/validate  
-  + **Required:** id  
-  + **Response:** 200 OK with validation status
+### 📌 1. **Create Event**
 
-* **Submit Event Review** → POST /api/SocialButterfly/reviews  
-  + **Required:** event_id, userId, rating, comment  
-  + **Response:** 201 Created with review object
+* **Endpoint:** `POST /api/SocialButterfly/events`
+* **Request Body:**
 
-* **Validate Review (Admin Only)** → POST /api/SocialButterfly/admin/reviews/{id}/validate  
-  + **Required:** id  
-  + **Response:** 200 OK with review status
+```json
+{
+  "title": "Test Event Valid",
+  "description": "Event that will be validated",
+  "date": "ISODate",
+  "location": "City",
+  "category": "Music",
+  "submittedBy": "creator-user-id"
+}
+```
 
-* **Delete Review (Admin Only)** → DELETE /api/SocialButterfly/admin/reviews/{id}  
-  + **Required:** review_id  
-  + **Response:** 200 OK with success message
+* **Response:** `201 Created`
+
+### 📌 2. **Validate Event (Admin Only)**
+
+* **Endpoint:** `POST /api/SocialButterfly/admin/events/{id}/validate`
+
+* **Headers:** `{ adminId: "uuid" }`
+
+* **Response:** `200 OK`
+
+```json
+{
+  "event": {
+    "id": "...",
+    "validated": true
+  }
+}
+```
+
+### 📌 3. **Get All Validated Events**
+
+* **Endpoint:** `GET /api/SocialButterfly/events`
+* **Behavior:** Only returns events with `validated = true`
+
+### 📌 4. **Get Event by ID**
+
+* **Endpoint:** `GET /api/SocialButterfly/events/{id}`
+
+### 📌 5. **Update Event**
+
+* **Endpoint:** `PUT /api/SocialButterfly/events/{id}`
+* **Request Body:**
+
+```json
+{ "title": "Updated", "description": "...", "date": "...", "location": "..." }
+```
+
+* **Response:** `200 OK`
+* **Note:** Only creator allowed to update
+
+### 📌 6. **Delete Event**
+
+* **Endpoint:** `DELETE /api/SocialButterfly/events/{id}`
+* **Behavior:**
+  + ✅ Creator can delete
+  + ✅ Admin can delete
+  + ❌ Others get `403 Forbidden`
 
 ---
 
-### 4️⃣ Reviews & Ratings
+## ✍️ Reviews
 
-* **Get Reviews for an Event** → GET /api/SocialButterfly/events/{event_id}/reviews  
-  + **Required:** event_id  
-  + **Response:** 200 OK with an array of reviews
+### 📌 1. **Create Review**
 
-* **Update a Review** → PUT /api/SocialButterfly/reviews/{review_id}  
-  + **Required:** rating, comment  
-  + **Response:** 200 OK with updated review object
+* **Endpoint:** `POST /api/SocialButterfly/reviews`
+* **Request Body:**
 
-* **Delete a Review** → DELETE /api/SocialButterfly/reviews/{review_id}  
-  + **Required:** review_id  
-  + **Response:** 200 OK with success message
+```json
+{
+  "event_id": "uuid",
+  "userId": "uuid",
+  "rating": 5,
+  "comment": "Excellent event!"
+}
+```
+
+* **Response:** `201 Created`
+
+### 📌 2. **Validate Review (Admin Only)**
+
+* **Endpoint:** `POST /api/SocialButterfly/admin/reviews/{id}/validate`
+
+* **Headers:** `{ adminId: "uuid" }`
+
+* **Response:** `200 OK`
+
+```json
+{
+  "review": {
+    "id": "...",
+    "validated": true
+  }
+}
+```
+
+### 📌 3. **Get Reviews for an Event**
+
+* **Endpoint:** `GET /api/SocialButterfly/events/{eventId}/reviews`
+
+### 📌 4. **Update Review (Creator Only)**
+
+* **Endpoint:** `PUT /api/SocialButterfly/reviews/{id}`
+* **Request Body:**
+
+```json
+{
+  "rating": 4,
+  "comment": "Updated"
+}
+```
+
+### 📌 5. **Delete Review**
+
+* **Endpoint:** `DELETE /api/SocialButterfly/reviews/{id}`
+* **Behavior:**
+  + ✅ Creator or admin can delete
+  + ❌ Others receive `403 Forbidden`
 
 ---
 
-### 5️⃣ Event Discovery & Filtering
+## 🛠️ Admin Operations
 
-* **Filter Events by Category, Date, or Location** → GET /api/SocialButterfly/events/filter  
-  + **Query Params:** category, date, location  
-  + **Response:** 200 OK with filtered event list
+### 📌 1. **Validate Event**
 
-* **Get Upcoming Featured Events** → GET /api/SocialButterfly/events/featured  
-  + **Response:** 200 OK with highlighted events
+* See Events section — Admin header required
+
+### 📌 2. **Validate Review**
+
+* See Reviews section — Admin header required
+
+### 📌 3. **Delete Event (Admin Only)**
+
+* **Endpoint:** `DELETE /api/SocialButterfly/admin/events/{id}`
+* **Headers:** `{ adminId: "uuid" }`
+
+### 📌 4. **Delete Review (Admin Only)**
+
+* **Endpoint:** `DELETE /api/SocialButterfly/admin/reviews/{id}`
+* **Headers:** `{ adminId: "uuid" }`
