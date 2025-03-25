@@ -23,11 +23,25 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(activity, { status: 201 })
   } catch (err) {
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
 }
 
 export async function GET() {
-  const activities = await prisma.volunteerActivity.findMany()
-  return NextResponse.json(activities)
+  try {
+    const activities = await prisma.volunteerActivity.findMany({
+      where: { validated: true },
+    })
+    return NextResponse.json(activities)
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
+  }
 }

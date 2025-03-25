@@ -4,31 +4,49 @@ import { PrismaClient as PostgresqlClient } from '@/../prisma/generated/postgres
 const prisma = new PostgresqlClient()
 
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  const { id } = params
-  const user = await prisma.userVolunteerOrg.findUnique({ where: { id } })
+  try {
 
-  if (!user) {
-    return NextResponse.json({ error: 'User not found' }, { status: 404 })
+    const { id } = params
+    const user = await prisma.userVolunteerOrg.findUnique({ where: { id } })
+
+    if (!user) {
+      return NextResponse.json({ error: 'User not found' }, { status: 404 })
+    }
+
+    return NextResponse.json(user)
+
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
-
-  return NextResponse.json(user)
 }
 
 export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
-  const { id } = params
-  const body = await req.json()
-  const { name } = body
+  try {
+    const { id } = params
+    const body = await req.json()
+    const { name } = body
 
-  if (!name) {
-    return NextResponse.json({ error: 'Missing name' }, { status: 400 })
+    if (!name) {
+      return NextResponse.json({ error: 'Missing name' }, { status: 400 })
+    }
+
+    const updated = await prisma.userVolunteerOrg.update({
+      where: { id },
+      data: { name },
+    })
+
+    return NextResponse.json(updated)
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
-
-  const updated = await prisma.userVolunteerOrg.update({
-    where: { id },
-    data: { name },
-  })
-
-  return NextResponse.json(updated)
 }
 
 export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
@@ -37,7 +55,11 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
   try {
     await prisma.userVolunteerOrg.delete({ where: { id } })
     return NextResponse.json({ message: 'User deleted successfully' })
-  } catch {
-    return NextResponse.json({ error: 'User not found or could not be deleted' }, { status: 404 })
+  } catch (err) {
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
 }

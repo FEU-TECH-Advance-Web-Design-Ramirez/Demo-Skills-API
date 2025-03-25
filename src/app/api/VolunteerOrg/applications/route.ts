@@ -11,12 +11,24 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
+    const validatedActivity = await prisma.volunteerActivity.findUnique({
+      where: { id: activityId, validated: true },
+    })
+
+    if (!validatedActivity) {
+      return NextResponse.json({ error: 'Activity not yet validated' }, { status: 404 })
+    }
+
     const application = await prisma.volunteerApplication.create({
       data: { userId, activityId, motivation },
     })
 
     return NextResponse.json(application, { status: 201 })
   } catch (err) {
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    let errMessage = 'Internal server error'
+    if (err instanceof Error) {
+      errMessage = err.message
+    }
+    return NextResponse.json({ error: errMessage }, { status: 500 })
   }
 }
