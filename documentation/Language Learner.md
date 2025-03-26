@@ -9,7 +9,7 @@
 #### `POST /api/LanguageLearner/users`
 
 **Description:** Creates a new user.
-* **Required:** `email`,     `name`,     `password`
+* **Required:** `email`,      `name`,      `password`
 * **Response:** `201 Created` with user object
 
 #### `GET /api/LanguageLearner/users`
@@ -17,10 +17,10 @@
 **Description:** Fetches all users.
 * **Response:** `200 OK` with an array of users
 
-#### `GET /api/LanguageLearner/users/{id}`
+#### `GET /api/LanguageLearner/users/login/{email}`
 
-**Description:** Fetches a single user by ID.
-* **Required:** `id` (in URL path)
+**Description:** Fetches a single user by Email.
+* **Required:** `email` (in URL path)
 * **Response:** `200 OK` with user object
 
 #### `PUT /api/LanguageLearner/users/{id}`
@@ -42,7 +42,7 @@
 #### `POST /api/LanguageLearner/platforms`
 
 **Description:** Submits a new language learning platform for review.  
-* **Required:** `name`,     `website`,     `languagesOffered`,     `description`,  `submittedBy`  
+* **Required:** `name`,      `website`,      `languagesOffered`,      `description`,  `submittedBy`  
 * **Response:** `201 Created` with platform object  
 
 #### `GET /api/LanguageLearner/platforms`
@@ -59,7 +59,7 @@
 #### `PUT /api/LanguageLearner/admin/platforms/{id}`
 
 **Description:** Updates platform information (Admin Only).  
-* **Required:** `name`,     `website`,     `languagesOffered`,  `description`  
+* **Required:** `name`,      `website`,      `languagesOffered`,  `description`  
 * **Response:** `200 OK` with updated platform object  
 
 #### `DELETE /api/LanguageLearner/admin/platforms/{id}`
@@ -75,7 +75,7 @@
 #### `POST /api/LanguageLearner/reviews`
 
 **Description:** Submits a personal review and rating for a language learning platform.  
-* **Required:** `platformId`,  `userId`,     `rating`,  `comment`  
+* **Required:** `platformId`,  `userId`,      `rating`,  `comment`  
 * **Response:** `201 Created` with review object  
 
 #### `GET /api/LanguageLearner/reviews`
@@ -87,7 +87,7 @@
 #### `PUT /api/LanguageLearner/reviews/{reviewId}`
 
 **Description:** Updates a submitted review.  
-* **Required:** `reviewId`,     `rating`,  `comment`  
+* **Required:** `reviewId`,      `rating`,  `comment`  
 * **Response:** `200 OK` with updated review object  
 
 #### `DELETE /api/LanguageLearner/reviews/{reviewId}`
@@ -108,7 +108,7 @@
 #### `GET /api/LanguageLearner/platforms/sort?order={orderBy}`
 
 **Description:** Retrieves language learning platforms sorted by criteria ( `rating` , `popularity` , etc.).  
-* **Required Query Params:** `orderBy` (e.g.,     `rating`,     `popularity`)  
+* **Required Query Params:** `orderBy` (e.g.,      `rating`,      `popularity`)  
 * **Response:** `200 OK` with sorted platform list  
 
 ---

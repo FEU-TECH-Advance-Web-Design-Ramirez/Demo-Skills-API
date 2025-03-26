@@ -49,9 +49,9 @@ This document summarizes tested API behavior, input/output expectations, and val
 ]
 ```
 
-### 📌 3. **Get User by ID**
+### 📌 3. **Get User by Email**
 
-* **Endpoint:** `GET /api/SocialButterfly/users/{id}`
+* **Endpoint:** `GET /api/SocialButterfly/users/login/{email}`
 * **Response:** `200 OK`
 
 ### 📌 4. **Update User**
@@ -218,9 +218,11 @@ This document summarizes tested API behavior, input/output expectations, and val
 ### 📌 3. **Delete Event (Admin Only)**
 
 * **Endpoint:** `DELETE /api/SocialButterfly/admin/events/{id}`
+
 * **Headers:** `{ adminId: "uuid" }`
 
 ### 📌 4. **Delete Review (Admin Only)**
 
 * **Endpoint:** `DELETE /api/SocialButterfly/admin/reviews/{id}`
+
 * **Headers:** `{ adminId: "uuid" }`

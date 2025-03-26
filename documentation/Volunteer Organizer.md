@@ -59,9 +59,9 @@ This document outlines the **input data**, **endpoints**, **expected outputs**, 
 
 ---
 
-### 📌 3. **Get User by ID**
+### 📌 3. **Get User by Email**
 
-* **Endpoint:** `GET /api/VolunteerOrg/users/{id}`  
+* **Endpoint:** `GET /api/VolunteerOrg/users/login/{email}`  
 * **Response:** `200 OK`
 
 ```json

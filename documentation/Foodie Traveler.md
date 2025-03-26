@@ -7,7 +7,7 @@
 #### `POST /api/FoodieTraveler/users`
 
 **Description:** Creates a new user.
-* **Required:** `email`,    `name`,    `password`
+* **Required:** `email`,     `name`,     `password`
 * **Response:** `201 Created` with user object
 
 #### `GET /api/FoodieTraveler/users`
@@ -15,10 +15,10 @@
 **Description:** Fetches all users.
 * **Response:** `200 OK` with an array of users
 
-#### `GET /api/FoodieTraveler/users/{id}`
+#### `GET /api/FoodieTraveler/users/login/{email}`
 
-**Description:** Fetches a single user by ID.
-* **Required:** `id` (in URL path)
+**Description:** Fetches a single user by Email.
+* **Required:** `email` (in URL path)
 * **Response:** `200 OK` with user object
 
 #### `PUT /api/FoodieTraveler/users/{id}`
@@ -38,11 +38,11 @@
 ### 2. Food Registration & Management
 
 * **Submit a Food Evaluation** → `POST /api/FoodieTraveler/foods`
-  + **Required:** `name`,    `cuisine`,    `origin`,    `description`,    `submittedBy`
+  + **Required:** `name`,     `cuisine`,     `origin`,     `description`,     `submittedBy`
   + **Response:** `201 Created` with food object
 
 * **Submit Where to Find a Dish** → `POST /api/FoodieTraveler/foods/{id}/locations`
-  + **Required:** `foodId`,    `locationName`,    `address`,    `submittedBy`
+  + **Required:** `foodId`,     `locationName`,     `address`,     `submittedBy`
   + **Response:** `201 Created` with location object
 
 * **Get All Foods** → `GET /api/FoodieTraveler/foods`
@@ -53,7 +53,7 @@
   + **Response:** `200 OK` with food object
 
 * **Update Food Info (Admin Only)** → `PUT /api/FoodieTraveler/admin/foods/{id}`
-  + **Required:** `name`,    `cuisine`,    `description`
+  + **Required:** `name`,     `cuisine`,     `description`
   + **Response:** `200 OK` with updated food object
 
 * **Delete Food (Admin Only)** → `DELETE /api/FoodieTraveler/admin/foods/{id}`
@@ -77,7 +77,7 @@
 ### 4. Reviews & Ratings
 
 * **Submit a Review & Rating** → `POST /api/FoodieTraveler/reviews`
-  + **Required:** `foodId`,  `userId`,    `rating`,    `comment`
+  + **Required:** `foodId`,  `userId`,     `rating`,     `comment`
   + **Response:** `201 Created` with review object
 
 * **Get Reviews for a Food Item** → `GET /api/FoodieTraveler/reviews`
@@ -85,7 +85,7 @@
   + **Response:** `200 OK` with an array of reviews
 
 * **Update a Review** → `PUT /api/FoodieTraveler/reviews/{reviewId}`
-  + **Required:** `reviewId`,    `rating`,    `comment`
+  + **Required:** `reviewId`,     `rating`,     `comment`
   + **Response:** `200 OK` with updated review object
 
 * **Delete a Review** → `DELETE /api/FoodieTraveler/reviews/{reviewId}`

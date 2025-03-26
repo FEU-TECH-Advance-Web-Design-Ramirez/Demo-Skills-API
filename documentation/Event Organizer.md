@@ -9,7 +9,7 @@
 #### `POST /api/EventOrganizer/users`
 
 **Description:** Creates a new user.
-* **Required:** `email`,     `name`,     `password`
+* **Required:** `email`,      `name`,      `password`
 * **Response:** `201 Created` with user object
 
 #### `GET /api/EventOrganizer/users`
@@ -17,10 +17,10 @@
 **Description:** Fetches all users.
 * **Response:** `200 OK` with an array of users
 
-#### `GET /api/EventOrganizer/users/{id}`
+#### `GET /api/EventOrganizer/users/login/{email}`
 
-**Description:** Fetches a single user by ID.
-* **Required:** `id` (in URL path)
+**Description:** Fetches a single user by Email.
+* **Required:** `email` (in URL path)
 * **Response:** `200 OK` with user object
 
 #### `PUT /api/EventOrganizer/users/{id}`
@@ -42,7 +42,7 @@
 #### `POST /api/EventOrganizer/tasks`
 
 **Description:** Creates a new event task.  
-* **Required:** `userId`,      `title`,      `description`,      `dueDate`,  `status`  
+* **Required:** `userId`,       `title`,       `description`,       `dueDate`,  `status`  
 * **Response:** `201 Created` with task object  
 
 #### `GET /api/EventOrganizer/tasks`
@@ -60,7 +60,7 @@
 #### `PUT /api/EventOrganizer/tasks/{id}`
 
 **Description:** Updates a task.  
-* **Required:** `title`,      `description`,      `dueDate`,  `status`  
+* **Required:** `title`,       `description`,       `dueDate`,  `status`  
 * **Response:** `200 OK` with updated task object  
 
 #### `DELETE /api/EventOrganizer/tasks/{id}`
@@ -76,7 +76,7 @@
 #### `POST /api/EventOrganizer/guests`
 
 **Description:** Adds a guest to an event.  
-* **Required:** `eventId`,     `name`,  `email`,      `phone`,  `status` (e.g.,      `confirmed`,      `pending`,      `declined`)  
+* **Required:** `eventId`,      `name`,  `email`,       `phone`,  `status` (e.g.,       `confirmed`,       `pending`,       `declined`)  
 * **Response:** `201 Created` with guest object  
 
 #### `GET /api/EventOrganizer/guests`
@@ -88,7 +88,7 @@
 #### `PUT /api/EventOrganizer/guests/{id}`
 
 **Description:** Updates guest details or status.  
-* **Required:** `name`,  `email`,      `phone`,  `status`  
+* **Required:** `name`,  `email`,       `phone`,  `status`  
 * **Response:** `200 OK` with updated guest object  
 
 #### `DELETE /api/EventOrganizer/guests/{id}`
@@ -104,7 +104,7 @@
 #### `POST /api/EventOrganizer/venues`
 
 **Description:** Submits a new event venue for listing.  
-* **Required:** `name`,      `location`,      `capacity`,      `amenities`,  `submittedBy`  
+* **Required:** `name`,       `location`,       `capacity`,       `amenities`,  `submittedBy`  
 * **Response:** `201 Created` with venue object  
 
 #### `GET /api/EventOrganizer/venues`
@@ -121,7 +121,7 @@
 #### `POST /api/EventOrganizer/providers`
 
 **Description:** Submits a new event service provider (e.g., catering, photography, decorations).  
-* **Required:** `name`,      `serviceType`,      `contactInfo`,  `submittedBy`  
+* **Required:** `name`,       `serviceType`,       `contactInfo`,  `submittedBy`  
 * **Response:** `201 Created` with provider object  
 
 #### `GET /api/EventOrganizer/providers`

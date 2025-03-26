@@ -10,10 +10,15 @@
 * **Required:** email, name, password  
 * **Response:** 201 Created with user object
 
-#### GET /api/HealthTracker/users/{id}
+#### GET /api/HealthTracker/users
 
-**Description:** Retrieves a user’s profile and medical preferences.  
-* **Required:** id  
+**Description:** Retrieves a all user’s profile.  
+* **Response:** 200 OK with user object
+
+#### GET /api/HealthTracker/users/login/{email}
+
+**Description:** Retrieves a user’s profile.  
+* **Required:** email  
 * **Response:** 200 OK with user object
 
 #### PUT /api/HealthTracker/users/{id}
