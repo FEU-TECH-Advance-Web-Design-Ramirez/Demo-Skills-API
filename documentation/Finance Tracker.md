@@ -10,10 +10,10 @@
 * **Required:** email, name, password  
 * **Response:** 201 Created with user object
 
-#### GET /api/FinanceManager/users/{id}
+#### GET /api/FinanceManager/users/login/{email}
 
 **Description:** Retrieves a specific user’s account.  
-* **Required:** id  
+* **Required:** email  
 * **Response:** 200 OK with user profile
 
 #### PUT /api/FinanceManager/users/{id}
