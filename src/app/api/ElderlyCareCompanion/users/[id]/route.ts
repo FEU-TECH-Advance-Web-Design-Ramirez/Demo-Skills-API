@@ -3,20 +3,6 @@ import { PrismaClient } from "@/../prisma/generated/postgresql";
 
 const prisma = new PrismaClient();
 
-// ✅ Get Single User (GET by ID)
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  try {
-    const user = await prisma.userElderlyCareCompanion.findUnique({ where: { id: params.id } });
-    if (!user) {
-      return NextResponse.json({ error: "User not found" }, { status: 404 });
-    }
-    return NextResponse.json(user, { status: 200 });
-  } catch (error) {
-    console.error("Error fetching user:", error);
-    return NextResponse.json({ error: "Failed to fetch user" }, { status: 500 });
-  }
-}
-
 // ✅ Update User (PUT)
 export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
   try {

@@ -10,10 +10,15 @@
 * **Required:** email, name, password  
 * **Response:** 201 Created with user object
 
-#### GET /api/GameHub/users/{id}
+#### GET /api/GameHub/users
+
+**Description:** Retrieves a all user profile.  
+* **Response:** 201 Created with user object
+
+#### GET /api/GameHub/users/login/{email}
 
 **Description:** Retrieves a specific user profile.  
-* **Required:** id  
+* **Required:** email  
 * **Response:** 200 OK with user object
 
 #### PUT /api/GameHub/users/{id}

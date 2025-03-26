@@ -15,10 +15,10 @@
 **Description:** Retrieves all users.  
 * **Response:** 200 OK with list of user objects
 
-#### GET /api/MusicLover/users/{id}
+#### GET /api/MusicLover/users/login/{email}
 
-**Description:** Retrieves a specific user by ID.  
-* **Required:** id  
+**Description:** Retrieves a specific user by Email.  
+* **Required:** email
 * **Response:** 200 OK with user object
 
 #### PUT /api/MusicLover/users/{id}

@@ -15,10 +15,10 @@
 **Description:** Fetches a list of all users.  
 * **Response:** 200 OK with user list
 
-#### GET /api/MentalWellness/users/{id}
+#### GET /api/MentalWellness/users/login/{email}
 
 **Description:** Gets details for a specific user.  
-* **Required:** id  
+* **Required:** email  
 * **Response:** 200 OK with user object
 
 #### PUT /api/MentalWellness/users/{id}

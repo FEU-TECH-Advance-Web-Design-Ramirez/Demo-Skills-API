@@ -15,10 +15,10 @@
 **Description:** Retrieves all registered users.
 * **Response:** 200 OK with an array of user objects
 
-#### GET /api/EduSeeker/users/{id}
+#### GET /api/EduSeeker/users/login/{email}
 
-**Description:** Fetches a specific user by ID.
-* **Required:** id (in URL path)
+**Description:** Fetches a specific user by Email.
+* **Required:** email (in URL path)
 * **Response:** 200 OK with user object
 
 #### PUT /api/EduSeeker/users/{id}
