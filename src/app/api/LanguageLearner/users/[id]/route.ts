@@ -3,28 +3,6 @@ import { PrismaClient as PostgresqlClient } from "@/../prisma/generated/postgres
 
 const prisma = new PostgresqlClient();
 
-// ✅ Get Single User (GET)
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  try {
-    const user = await prisma.languageLearnerUser.findUnique({
-      where: { id: params.id },
-      select: { id: true, email: true, name: true, role: true },
-    });
-
-    if (!user) {
-      return NextResponse.json({ error: "User not found" }, { status: 404 });
-    }
-
-    return NextResponse.json(user, { status: 200 });
-  } catch (error) {
-    let errorMessage = "Failed to fetch user";
-    if (error instanceof Error) {
-      errorMessage = error.message;
-    }
-    return NextResponse.json({ error: errorMessage }, { status: 500 });
-  }
-}
-
 // ✅ Update User (PUT)
 export async function PUT(req: NextRequest, { params }: { params: { id: string } }) {
   try {
