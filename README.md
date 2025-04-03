@@ -1,4 +1,4 @@
-<a name="readme-top">
+<a name="readme-top"></a>
 
 <br/>
 
@@ -7,19 +7,20 @@
   <a href="">
     <img src="./public/aits.png" alt="FEU-TECH AITS" width="130">
   </a>
-  <h3 align="center">Boilerplate for Tauri, NextJS & ShadCN</h3>
+  <h3 align="center">Advanced Web Design Final Project Backend Starter</h3>
 </div>
-<!-- Complete this-->
+
 <div align="center">
-    A starter template for building cross-platform desktop applications using Tauri, NextJS & ShadCN.
+  A minimal starter project with API routes using Next.js. ShadCN is installed and ready for optional frontend use.
+  <br />
+  <strong>For student groups enrolled in Advanced Web Design.</strong>
+  <br />
+  <strong>Made possible by AITS – Alliance of Information Technology Students, FEU Tech</strong>
 </div>
 
 <br />
 
 ---
-
-<br />
-<br />
 
 <details>
   <summary>Table of Contents</summary>
@@ -27,23 +28,14 @@
     <li>
       <a href="#overview">Overview</a>
       <ol>
-        <li>
-          <a href="#key-components">Key Components</a>
-        </li>
-        <li>
-          <a href="#technology">Technology</a>
-        </li>
+        <li><a href="#key-components">Key Components</a></li>
+        <li><a href="#technology">Technology Stack</a></li>
       </ol>
     </li>
-    <li>
-      <a href="#use-as-template">Use as Template</a>
-    </li>
-    <li>
-      <a href="#installation">Installation</a>
-    </li>
-    <li>
-      <a href="#contributor-list">Contributor List</a>
-    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#important-notes">Important Notes</a></li>
+    <li><a href="#contributor-list">Contributor List</a></li>
   </ol>
 </details>
 
@@ -51,125 +43,60 @@
 
 ## Overview
 
-This project provides a boilerplate for developing cross-platform desktop applications using Tauri, NextJS, and ShadCN. The purpose of this boilerplate is to offer a robust starting point that incorporates modern web development technologies, enabling developers to quickly create responsive and efficient desktop applications.
+This project is a **backend starter kit** for Advanced Web Design finals. It provides the foundation for building RESTful APIs using **Next.js API routes**, and includes **database connections** to Neon (PostgreSQL), MongoDB (optional), and Firebase (optional).
+
+There is **no user interface (UI) included**, but **ShadCN UI is installed and ready** in case you want to build frontend pages.
 
 ### Key Components
-- Develop Windows/Mac/Linux Applications: Utilize Tauri to create cross-platform desktop applications.
-- Utilize Web Development: Leverage the power of NextJS for fast and efficient web development.
-- Utilize Fast Design Framework: Implement ShadCN for a streamlined and cohesive UI design experience.
 
-### Technology
-- ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-- ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- ✅ Next.js API Routes preconfigured
+- ✅ Neon PostgreSQL connection
+- ✅ Optional MongoDB and Firebase setup
+- ✅ ShadCN UI pre-installed (but no UI created)
+- ❌ No frontend or layout components included
+- 🧪 API folder is where you build your group’s assigned logic
 
-Framework for Desktop
-- ![Tauri](https://img.shields.io/badge/Tauri-FFC131?style=for-the-badge&logo=tauri&logoColor=white)
+### Technology Stack
 
-Web Framework
 - ![NextJS](https://img.shields.io/badge/NextJS-000000?style=for-the-badge&logo=next.js&logoColor=white)
-
-Design Framework
-- ![TailWind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+- ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+- ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 - ![ShadCN](https://img.shields.io/badge/shadcn%2Fui-303030?style=for-the-badge&logo=shadcnui&logoColor=white)
 
-## Use as Template
-To use this project as a template, simply click the "Use this template" button on the GitHub repository page. This will create a new repository with the same directory structure and files. 
+---
 
-[Guide](https://scribehow.com/shared/Create_Repository_Based_on_Template_on_GitHub__uqrFu1o3T3iETD9bBMGFlQ?referrer=workspace)
+## Usage
+
+This is not a UI template. This repo is primarily for API development and backend logic as part of your finals. You are free to:
+
+- Add your own frontend using ShadCN and Tailwind
+- Focus only on APIs if your group is assigned backend routes
+- Expand this into a full-stack project
+
+[Click here to use this template](https://scribehow.com/shared/Create_Repository_Based_on_Template_on_GitHub__uqrFu1o3T3iETD9bBMGFlQ?referrer=workspace)
+
+---
 
 ## Installation
-Follow these steps to set up and run the project:
 
-> Note: make sure you install NodeJS and Rust. if not follow [here](https://github.com/zyx-0314/tauri-next-shadcn-template/wiki/Initialization-of-project).
-> 
-> Note: Make sure you are working under your directory files and using cmd/powershell/bash
+> Requirements:
+> - Node.js (LTS)
+> - PostgreSQL via [Neon](https://neon.tech)
+> - (Optional) MongoDB Atlas
+> - (Optional) Firebase project
 
-1. Install Dependencies
-```sh
-# for npm
-npm install
+```bash
+# Step 1: Install dependencies
+npm install         # or bun install / yarn install
 
-# for bun
-bun install
+# Step 2: Run dev server
+npm run dev         # or bun dev / yarn dev
 
-# for yarn
-yarn install
-```
+# Step 3: Build (optional for deployment)
+npm run build       # or bun build / yarn build
 
-2. Start the development server
-```sh
-# For npm
-npm run dev
-
-# for bun
-bun dev
-
-# For yarn
-yarn run dev
-```
-
-3. Package the application: Universal (optional)
-```sh
-# For npm
-npm run build
-
-# for bun
-bun build
-
-# For yarn
-yarn run build
-```
-   1. For Windows only
-```sh
-# For npm
-npm run build:win
-
-# for bun
-bun build:win
-
-# For yarn
-yarn run build:win
-```
-   2. For Linux only
-```sh
-# For npm
-npm run build:linux
-
-# for bun
-bun build:linux
-
-# For yarn
-yarn run build:linux
-```
-   3. For Mac only
-```sh
-# For npm
-npm run build:mac
-
-# for bun
-bun build:mac
-
-# For yarn
-yarn run build:mac
-```
-
-4. Preview the Application (optional, will only work with build)
-```sh
-# For npm
-npm run start
-
-# for bun
-bun start
-
-# For yarn
-yarn run start
-```
-
-## Contributor List
-<a href="https://github.com/zyx-0314">
-  <img src="./public/nyebe_white.png" width="80px;" alt="Ian Cedric Ramirez"/>
-</a>
-<a href="https://github.com/Hadeslokiama">
-  <img src="./public/Hadeslokiama.png" width="80px;" alt="Colins James Daradar"/>
-</a>
+# Step 4: Preview (for build preview)
+npm run start       # or bun start / yarn start
